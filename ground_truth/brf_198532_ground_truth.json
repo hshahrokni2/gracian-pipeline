@@ -1,0 +1,196 @@
+{
+  "_document": "brf_198532.pdf",
+  "_brf_name": "Bostadsrättsföreningen Björk och Plaza",
+  "_validation_date": "2025-10-06",
+  "_validator": "Manual inspection",
+  "_purpose": "Ground truth for accuracy validation (not just coverage)",
+
+  "governance_agent": {
+    "chairman": "Elvy Maria Löfvenberg",
+    "_verified_page": 2,
+    "_verification_method": "Page 2, 'Ordförande: Elvy Maria Löfvenberg'",
+
+    "board_members": [
+      "Torbjörn Andersson",
+      "Maria Annelie Eck Arvstrand",
+      "Mats Eskilson",
+      "Fredrik Linde"
+    ],
+    "_board_members_verified_page": 2,
+    "_board_members_note": "Verify exact spelling of each name from PDF",
+
+    "auditor_name": "Tobias Andersson",
+    "_auditor_verified_page": 7,
+
+    "audit_firm": "KPMG AB",
+    "_audit_firm_verified_page": 7,
+
+    "nomination_committee": [
+      "Victoria Blennborn",
+      "Mattias Lovén"
+    ],
+    "_nomination_verified_page": 2
+  },
+
+  "financial_agent": {
+    "revenue": 7451585,
+    "_revenue_verified_page": 8,
+    "_revenue_verification": "Page 8, 'Summa rörelseintäkter: 7 451 585' (Nettoomsättning 7,393,591 + Övriga rörelseintäkter 57,994)",
+    "_revenue_status": "VERIFIED",
+
+    "expenses": 6631400,
+    "_expenses_verified_page": 8,
+    "_expenses_verification": "Page 8, 'Summa rörelsekostnader: -6 631 400' (includes driftkostnader, externa kostnader, personal, avskrivningar)",
+    "_expenses_status": "VERIFIED",
+
+    "assets": 675294786,
+    "_assets_verified_page": 9,
+    "_assets_verification": "Page 9, 'SUMMA TILLGÅNGAR: 675 294 786' (Anläggningstillgångar 666,670,761 + Omsättningstillgångar 8,624,026)",
+    "_assets_status": "VERIFIED",
+
+    "liabilities": 115487111,
+    "_liabilities_verified_page": 10,
+    "_liabilities_verification": "Page 10, calculated from: Långfristiga skulder 85,980,000 + Kortfristiga skulder 29,507,111 = 115,487,111",
+    "_liabilities_status": "VERIFIED",
+
+    "equity": 559807676,
+    "_equity_verified_page": 10,
+    "_equity_verification": "Page 10, 'SUMMA EGET KAPITAL: 559 807 676' (assets 675,294,786 - liabilities 115,487,111 = 559,807,676)",
+    "_equity_calculation_verified": "675294786 - 115487111 = 559807675 (±1 SEK rounding)",
+    "_equity_status": "VERIFIED",
+
+    "surplus": -353810,
+    "_surplus_verified_page": 8,
+    "_surplus_verification": "Page 8, 'ÅRETS RESULTAT: -353 810' (negative = deficit)",
+    "_surplus_status": "VERIFIED",
+
+    "building_details": {
+    "ackumulerade_anskaffningsvarden": 682435875,
+    "_verified_page": 15,
+    "_verification": "Page 15, Note 8 BYGGNADER: 'Utgående anskaffningsvärde: 682 435 875'",
+    "_status": "VERIFIED",
+
+    "arets_avskrivningar": 3503359,
+    "_verified_page": 15,
+    "_verification": "Page 15, Note 8 BYGGNADER: 'Årets avskrivningar enligt plan: -3 503 359'",
+    "_status": "VERIFIED",
+
+    "planenligt_restvarde": 666670761,
+    "_verified_page": 15,
+    "_verification": "Page 15, Note 8 BYGGNADER: 'Planenligt restvärde vid årets slut: 666 670 761'",
+    "_status": "VERIFIED",
+
+    "taxeringsvarde_byggnad": 214200000,
+    "_verified_page": 15,
+    "_verification": "Page 15, Note 8 BYGGNADER: 'Taxeringsvärde byggnad: 214 200 000'",
+    "_status": "VERIFIED",
+
+    "taxeringsvarde_mark": 175000000,
+    "_verified_page": 15,
+    "_verification": "Page 15, Note 8 BYGGNADER: 'Taxeringsvärde mark: 175 000 000'",
+    "_status": "VERIFIED"
+    },
+
+    "receivables_breakdown": {
+    "skattekonto": 192990,
+    "_verified_page": 15,
+    "_verification": "Page 15, Note 9 ÖVRIGA FORDRINGAR: 'Skattekonto: 192 990'",
+    "_status": "VERIFIED",
+
+    "momsavrakning": 25293,
+    "_verified_page": 15,
+    "_verification": "Page 15, Note 9 ÖVRIGA FORDRINGAR: 'Momsavräkning: 25 293'",
+    "_status": "VERIFIED",
+
+    "klientmedel": 3297711,
+    "_verified_page": 15,
+    "_verification": "Page 15, Note 9 ÖVRIGA FORDRINGAR: 'Klientmedel hos SBC: 3 297 711'",
+    "_status": "VERIFIED",
+
+    "fordringar": 1911314,
+    "_verified_page": 15,
+    "_verification": "Page 15, Note 9 ÖVRIGA FORDRINGAR: 'Fordringar: 1 911 314'",
+    "_status": "VERIFIED",
+
+    "avrakning_ovrigt": 53100,
+    "_verified_page": 15,
+    "_verification": "Page 15, Note 9 ÖVRIGA FORDRINGAR: 'Avräkning övrigt: 53 100'",
+    "_status": "VERIFIED"
+    }
+  },
+
+  "property_agent": {
+    "property_designation": "Sonfjället 2",
+    "_property_designation_verified_page": 2,
+    "_property_designation_text": "Fastighetsbeteckning: Sonfjället 2",
+
+    "municipality": "Stockholm",
+    "_municipality_verified_page": 2,
+
+    "address": "NOT_IN_DOCUMENT",
+    "_address_note": "Specific street address not mentioned. Only property designation 'Sonfjället 2' given.",
+
+    "postal_code": "NOT_IN_DOCUMENT",
+    "_postal_code_note": "Postal code not found in pages 1-3. May not be in document.",
+
+    "apartment_breakdown": {
+      "_status": "PRESENT_IN_DOCUMENT_BUT_NOT_EXTRACTED",
+      "_verified_page": 2,
+      "_verification_text": "Lägenhetsfördelning: [bar chart showing counts]",
+      "1_rok": 10,
+      "2_rok": 24,
+      "3_rok": 23,
+      "4_rok": 36,
+      "5_rok": 1,
+      ">5_rok": 0,
+      "_extractor_result": {
+        "1_rok": null,
+        "2_rok": null,
+        "3_rok": null
+      },
+      "_extraction_status": "FAILED",
+      "_failure_reason": "Extractor returned null for all fields. Data is present in PDF as bar chart on page 2."
+    }
+  },
+
+  "fees_agent": {
+    "arsavgift_per_sqm": 582,
+    "_verified": "EXTRACTED_VALUE",
+    "_note": "Verify if this is actually in the PDF and if calculation is correct",
+
+    "monthly_fee": "NEED_TO_VERIFY",
+    "_monthly_fee_note": "Check if månadsavgift is mentioned anywhere",
+
+    "fee_calculation_basis": "NEED_TO_VERIFY",
+    "_fee_basis_note": "Check how fees are calculated (per sqm, per apartment, etc.)"
+  },
+
+  "energy_agent": {
+    "energy_class": "NEED_TO_VERIFY",
+    "_energy_class_note": "Check if energy performance certificate mentioned. May not exist in older reports.",
+
+    "energy_performance": "NEED_TO_VERIFY",
+    "_energy_performance_note": "Check for kWh/m²/year or similar energy metrics"
+  },
+
+  "_missing_fields_to_verify": [
+    "property_agent.address",
+    "property_agent.postal_code",
+    "property_agent.apartment_breakdown (1 rok, 2 rok, 3 rok counts)",
+    "energy_agent.energy_class",
+    "energy_agent.energy_performance",
+    "fees_agent.monthly_fee",
+    "fees_agent.fee_calculation_basis",
+    "cashflow_agent.operating_activities",
+    "cashflow_agent.investing_activities",
+    "cashflow_agent.financing_activities"
+  ],
+
+  "_validation_instructions": {
+    "step_1": "Open brf_198532.pdf",
+    "step_2": "Verify each field marked with NEED_TO_VERIFY",
+    "step_3": "Check if EXTRACTED_VALUE fields match PDF exactly",
+    "step_4": "Document page numbers for all verifications",
+    "step_5": "Mark fields as either: PRESENT (value), ABSENT (not in document), or EXTRACTION_FAILED (in document but not extracted)"
+  }
+}

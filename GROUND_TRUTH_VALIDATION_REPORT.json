@@ -1,0 +1,850 @@
+{
+  "total_fields": 186,
+  "correct": 23,
+  "correct_rounded": 0,
+  "incorrect": 0,
+  "missing": 7,
+  "expected_missing": 21,
+  "unexpected_extraction": 135,
+  "accuracy_percent": 76.66666666666667,
+  "coverage_percent": 13.939393939393941,
+  "errors": [],
+  "successes": [
+    {
+      "field": "fees_agent.arsavgift_per_sqm",
+      "value": 582,
+      "status": "correct"
+    },
+    {
+      "field": "financial_agent.assets",
+      "value": 675294786,
+      "status": "correct"
+    },
+    {
+      "field": "financial_agent.building_details.ackumulerade_anskaffningsvarden",
+      "value": 682435875,
+      "status": "correct"
+    },
+    {
+      "field": "financial_agent.building_details.arets_avskrivningar",
+      "value": 3503359,
+      "status": "correct"
+    },
+    {
+      "field": "financial_agent.building_details.planenligt_restvarde",
+      "value": 666670761,
+      "status": "correct"
+    },
+    {
+      "field": "financial_agent.building_details.taxeringsvarde_byggnad",
+      "value": 214200000,
+      "status": "correct"
+    },
+    {
+      "field": "financial_agent.building_details.taxeringsvarde_mark",
+      "value": 175000000,
+      "status": "correct"
+    },
+    {
+      "field": "financial_agent.equity",
+      "value": 559807676,
+      "status": "correct"
+    },
+    {
+      "field": "financial_agent.expenses",
+      "value": 6631400,
+      "status": "correct"
+    },
+    {
+      "field": "financial_agent.liabilities",
+      "value": 115487111,
+      "status": "correct"
+    },
+    {
+      "field": "financial_agent.receivables_breakdown.avrakning_ovrigt",
+      "value": 53100,
+      "status": "correct"
+    },
+    {
+      "field": "financial_agent.receivables_breakdown.fordringar",
+      "value": 1911314,
+      "status": "correct"
+    },
+    {
+      "field": "financial_agent.receivables_breakdown.klientmedel",
+      "value": 3297711,
+      "status": "correct"
+    },
+    {
+      "field": "financial_agent.receivables_breakdown.momsavrakning",
+      "value": 25293,
+      "status": "correct"
+    },
+    {
+      "field": "financial_agent.receivables_breakdown.skattekonto",
+      "value": 192990,
+      "status": "correct"
+    },
+    {
+      "field": "financial_agent.revenue",
+      "value": 7451585,
+      "status": "correct"
+    },
+    {
+      "field": "financial_agent.surplus",
+      "value": -353810,
+      "status": "correct"
+    },
+    {
+      "field": "governance_agent.audit_firm",
+      "value": "KPMG AB",
+      "status": "correct"
+    },
+    {
+      "field": "governance_agent.auditor_name",
+      "value": "Tobias Andersson",
+      "status": "correct"
+    },
+    {
+      "field": "governance_agent.board_members",
+      "value": "['Torbjörn Andersson', 'Maria Annelie Eck Arvstrand', 'Mats Eskilson', 'Fredrik Linde']",
+      "status": "correct"
+    },
+    {
+      "field": "governance_agent.chairman",
+      "value": "Elvy Maria Löfvenberg",
+      "status": "correct"
+    },
+    {
+      "field": "governance_agent.nomination_committee",
+      "value": "['Victoria Blennborn', 'Mattias Lovén']",
+      "status": "correct"
+    },
+    {
+      "field": "property_agent.municipality",
+      "value": "Stockholm",
+      "status": "correct"
+    }
+  ],
+  "missing_fields": [
+    {
+      "field": "property_agent.apartment_breakdown.1_rok",
+      "expected_value": 10,
+      "error": "extraction_failed",
+      "message": "Expected '10' but got null/empty"
+    },
+    {
+      "field": "property_agent.apartment_breakdown.2_rok",
+      "expected_value": 24,
+      "error": "extraction_failed",
+      "message": "Expected '24' but got null/empty"
+    },
+    {
+      "field": "property_agent.apartment_breakdown.3_rok",
+      "expected_value": 23,
+      "error": "extraction_failed",
+      "message": "Expected '23' but got null/empty"
+    },
+    {
+      "field": "property_agent.apartment_breakdown.4_rok",
+      "expected_value": 36,
+      "error": "extraction_failed",
+      "message": "Expected '36' but got null/empty"
+    },
+    {
+      "field": "property_agent.apartment_breakdown.5_rok",
+      "expected_value": 1,
+      "error": "extraction_failed",
+      "message": "Expected '1' but got null/empty"
+    },
+    {
+      "field": "property_agent.apartment_breakdown.>5_rok",
+      "expected_value": 0,
+      "error": "extraction_failed",
+      "message": "Expected '0' but got null/empty"
+    },
+    {
+      "field": "property_agent.property_designation",
+      "expected_value": "Sonfjället 2",
+      "error": "extraction_failed",
+      "message": "Expected 'Sonfjället 2' but got null/empty"
+    }
+  ],
+  "unexpected_fields": [
+    {
+      "field": "audit_agent.audit_location",
+      "extracted": "Stockholm",
+      "message": "Extracted 'Stockholm' but ground truth says field is missing"
+    },
+    {
+      "field": "audit_agent.auditor",
+      "extracted": "Tobias Andersson",
+      "message": "Extracted 'Tobias Andersson' but ground truth says field is missing"
+    },
+    {
+      "field": "audit_agent.clean_opinion",
+      "extracted": true,
+      "message": "Extracted 'True' but ground truth says field is missing"
+    },
+    {
+      "field": "audit_agent.evidence_pages",
+      "extracted": "[7, 8]",
+      "message": "Extracted '[7, 8]' but ground truth says field is missing"
+    },
+    {
+      "field": "audit_agent.opinion",
+      "extracted": "Årsredovisningen ger en rättvisande bild",
+      "message": "Extracted 'Årsredovisningen ger en rättvisande bild' but ground truth says field is missing"
+    },
+    {
+      "field": "cashflow_agent.cash_change",
+      "extracted": 1986840,
+      "message": "Extracted '1986840' but ground truth says field is missing"
+    },
+    {
+      "field": "cashflow_agent.cash_in",
+      "extracted": 7641623,
+      "message": "Extracted '7641623' but ground truth says field is missing"
+    },
+    {
+      "field": "cashflow_agent.cash_out",
+      "extracted": 5654782,
+      "message": "Extracted '5654782' but ground truth says field is missing"
+    },
+    {
+      "field": "cashflow_agent.evidence_pages",
+      "extracted": "[5]",
+      "message": "Extracted '[5]' but ground truth says field is missing"
+    },
+    {
+      "field": "coverage_metrics.coverage_percent",
+      "extracted": 71.0,
+      "message": "Extracted '71.0' but ground truth says field is missing"
+    },
+    {
+      "field": "coverage_metrics.extracted_fields",
+      "extracted": 76,
+      "message": "Extracted '76' but ground truth says field is missing"
+    },
+    {
+      "field": "coverage_metrics.total_fields",
+      "extracted": 107,
+      "message": "Extracted '107' but ground truth says field is missing"
+    },
+    {
+      "field": "docling_metadata.char_count",
+      "extracted": 45202,
+      "message": "Extracted '45202' but ground truth says field is missing"
+    },
+    {
+      "field": "docling_metadata.processing_method",
+      "extracted": "ultra_comprehensive_single_call",
+      "message": "Extracted 'ultra_comprehensive_single_call' but ground truth says field is missing"
+    },
+    {
+      "field": "docling_metadata.schema_version",
+      "extracted": "comprehensive_v1",
+      "message": "Extracted 'comprehensive_v1' but ground truth says field is missing"
+    },
+    {
+      "field": "docling_metadata.table_count",
+      "extracted": 17,
+      "message": "Extracted '17' but ground truth says field is missing"
+    },
+    {
+      "field": "docling_metadata.total_fields_target",
+      "extracted": 107,
+      "message": "Extracted '107' but ground truth says field is missing"
+    },
+    {
+      "field": "energy_agent.energy_source",
+      "extracted": "Fjärrvärme",
+      "message": "Extracted 'Fjärrvärme' but ground truth says field is missing"
+    },
+    {
+      "field": "energy_agent.evidence_pages",
+      "extracted": "[]",
+      "message": "Extracted '[]' but ground truth says field is missing"
+    },
+    {
+      "field": "events_agent.annual_meeting_date",
+      "extracted": "2021-06-08",
+      "message": "Extracted '2021-06-08' but ground truth says field is missing"
+    },
+    {
+      "field": "events_agent.evidence_pages",
+      "extracted": "[3, 4, 5]",
+      "message": "Extracted '[3, 4, 5]' but ground truth says field is missing"
+    },
+    {
+      "field": "events_agent.key_events",
+      "extracted": "['Arbetet med att hävda s.k A-anmärkningar från garantibesiktningen hösten 2019 har fortsatt.', 'Föreningens hyresgäst Puls & Träning är uppköpt av Svenska Nérgy AB.', 'Lån nr 41431520 hos SEB är villkorsändrat och löper på 3 år med 0,57 % ränta.', 'Antal andrahandsuthyrningar under år 2021 var 6 stycken.', 'Fastigheten är deklarerad för ny taxering 2022.']",
+      "message": "Extracted '['Arbetet med att hävda s.k A-anmärkningar från garantibesiktningen hösten 2019 har fortsatt.', 'Föreningens hyresgäst Puls & Träning är uppköpt av Svenska Nérgy AB.', 'Lån nr 41431520 hos SEB är villkorsändrat och löper på 3 år med 0,57 % ränta.', 'Antal andrahandsuthyrningar under år 2021 var 6 stycken.', 'Fastigheten är deklarerad för ny taxering 2022.']' but ground truth says field is missing"
+    },
+    {
+      "field": "events_agent.loan_restructuring",
+      "extracted": "Lån nr 41431520 hos SEB villkorsändrat",
+      "message": "Extracted 'Lån nr 41431520 hos SEB villkorsändrat' but ground truth says field is missing"
+    },
+    {
+      "field": "events_agent.rental_activity",
+      "extracted": "6 andrahandsuthyrningar",
+      "message": "Extracted '6 andrahandsuthyrningar' but ground truth says field is missing"
+    },
+    {
+      "field": "events_agent.tenant_changes",
+      "extracted": "Puls & Träning uppköpt av Svenska Nérgy AB",
+      "message": "Extracted 'Puls & Träning uppköpt av Svenska Nérgy AB' but ground truth says field is missing"
+    },
+    {
+      "field": "events_agent.warranty_claims",
+      "extracted": "A-anmärkningar från garantibesiktningen",
+      "message": "Extracted 'A-anmärkningar från garantibesiktningen' but ground truth says field is missing"
+    },
+    {
+      "field": "fees_agent.evidence_pages",
+      "extracted": "[2]",
+      "message": "Extracted '[2]' but ground truth says field is missing"
+    },
+    {
+      "field": "fees_agent.fee_per_sqm",
+      "extracted": 582,
+      "message": "Extracted '582' but ground truth says field is missing"
+    },
+    {
+      "field": "fees_agent.fee_policy",
+      "extracted": "Årsavgifterna planeras vara oförändrade",
+      "message": "Extracted 'Årsavgifterna planeras vara oförändrade' but ground truth says field is missing"
+    },
+    {
+      "field": "fees_agent.fee_unit",
+      "extracted": "m²",
+      "message": "Extracted 'm²' but ground truth says field is missing"
+    },
+    {
+      "field": "fees_agent.planned_fee_change",
+      "extracted": "Oförändrade närmaste året",
+      "message": "Extracted 'Oförändrade närmaste året' but ground truth says field is missing"
+    },
+    {
+      "field": "financial_agent.evidence_pages",
+      "extracted": "[4, 5, 6]",
+      "message": "Extracted '[4, 5, 6]' but ground truth says field is missing"
+    },
+    {
+      "field": "financial_agent.income_breakdown.avgift andrahandsuthyrning",
+      "extracted": 5553,
+      "message": "Extracted '5553' but ground truth says field is missing"
+    },
+    {
+      "field": "financial_agent.income_breakdown.elintäkter",
+      "extracted": 30000,
+      "message": "Extracted '30000' but ground truth says field is missing"
+    },
+    {
+      "field": "financial_agent.income_breakdown.elintäkter moms",
+      "extracted": 384102,
+      "message": "Extracted '384102' but ground truth says field is missing"
+    },
+    {
+      "field": "financial_agent.income_breakdown.hyror garage",
+      "extracted": 1105450,
+      "message": "Extracted '1105450' but ground truth says field is missing"
+    },
+    {
+      "field": "financial_agent.income_breakdown.hyror lokaler",
+      "extracted": 399439,
+      "message": "Extracted '399439' but ground truth says field is missing"
+    },
+    {
+      "field": "financial_agent.income_breakdown.hyror lokaler momspliktiga",
+      "extracted": 610566,
+      "message": "Extracted '610566' but ground truth says field is missing"
+    },
+    {
+      "field": "financial_agent.income_breakdown.kabel-TV intäkter",
+      "extracted": 247940,
+      "message": "Extracted '247940' but ground truth says field is missing"
+    },
+    {
+      "field": "financial_agent.income_breakdown.varmvattenintäkter",
+      "extracted": 213196,
+      "message": "Extracted '213196' but ground truth says field is missing"
+    },
+    {
+      "field": "financial_agent.income_breakdown.årsavgifter",
+      "extracted": 4383289,
+      "message": "Extracted '4383289' but ground truth says field is missing"
+    },
+    {
+      "field": "financial_agent.operating_costs_breakdown.Fastighetskostnader.items",
+      "extracted": "[{'name': 'Fastighetsskötsel entreprenad', '2021': 185600, '2020': 184529}, {'name': 'Fastighetsskötsel beställning', '2021': 15291, '2020': 10122}, {'name': 'Fastighetsskötsel gård beställning', '2021': 0, '2020': -10690}, {'name': 'Snöröjning/sandning', '2021': 0, '2020': 4762}, {'name': 'Städning entreprenad', '2021': 78417, '2020': 75999}, {'name': 'Städning enligt beställning', '2021': 16136, '2020': 17626}, {'name': 'Mattvätt/Hyrmattor', '2021': 15787, '2020': 16728}, {'name': 'OVK Obl. Ventilationskontroll', '2021': -6807, '2020': 134651}, {'name': 'Hissbesiktning', '2021': 7410, '2020': 4333}, {'name': 'Myndighetstillsyn', '2021': 2460, '2020': 7800}, {'name': 'Gemensamma utrymmen', '2021': 0, '2020': 1502}, {'name': 'Sophantering', '2021': 92096, '2020': 110211}, {'name': 'Gård', '2021': 667, '2020': 1604}, {'name': 'Serviceavtal', '2021': 42575, '2020': 59284}, {'name': 'Förbrukningsmateriel', '2021': 26629, '2020': 24477}, {'name': 'Störningsjour och larm', '2021': 0, '2020': 4953}, {'name': 'Brandskydd', '2021': 77330, '2020': 5300}]",
+      "message": "Extracted '[{'name': 'Fastighetsskötsel entreprenad', '2021': 185600, '2020': 184529}, {'name': 'Fastighetsskötsel beställning', '2021': 15291, '2020': 10122}, {'name': 'Fastighetsskötsel gård beställning', '2021': 0, '2020': -10690}, {'name': 'Snöröjning/sandning', '2021': 0, '2020': 4762}, {'name': 'Städning entreprenad', '2021': 78417, '2020': 75999}, {'name': 'Städning enligt beställning', '2021': 16136, '2020': 17626}, {'name': 'Mattvätt/Hyrmattor', '2021': 15787, '2020': 16728}, {'name': 'OVK Obl. Ventilationskontroll', '2021': -6807, '2020': 134651}, {'name': 'Hissbesiktning', '2021': 7410, '2020': 4333}, {'name': 'Myndighetstillsyn', '2021': 2460, '2020': 7800}, {'name': 'Gemensamma utrymmen', '2021': 0, '2020': 1502}, {'name': 'Sophantering', '2021': 92096, '2020': 110211}, {'name': 'Gård', '2021': 667, '2020': 1604}, {'name': 'Serviceavtal', '2021': 42575, '2020': 59284}, {'name': 'Förbrukningsmateriel', '2021': 26629, '2020': 24477}, {'name': 'Störningsjour och larm', '2021': 0, '2020': 4953}, {'name': 'Brandskydd', '2021': 77330, '2020': 5300}]' but ground truth says field is missing"
+    },
+    {
+      "field": "financial_agent.operating_costs_breakdown.Fastighetskostnader.subtotal.2020",
+      "extracted": 653192,
+      "message": "Extracted '653192' but ground truth says field is missing"
+    },
+    {
+      "field": "financial_agent.operating_costs_breakdown.Fastighetskostnader.subtotal.2021",
+      "extracted": 553590,
+      "message": "Extracted '553590' but ground truth says field is missing"
+    },
+    {
+      "field": "financial_agent.operating_costs_breakdown.Fastighetsskatt/Kommunal avgift.items",
+      "extracted": "[{'name': 'Fastighetsskatt/Kommunal avgift', '2021': 192000, '2020': 192000}]",
+      "message": "Extracted '[{'name': 'Fastighetsskatt/Kommunal avgift', '2021': 192000, '2020': 192000}]' but ground truth says field is missing"
+    },
+    {
+      "field": "financial_agent.operating_costs_breakdown.Fastighetsskatt/Kommunal avgift.subtotal.2020",
+      "extracted": 192000,
+      "message": "Extracted '192000' but ground truth says field is missing"
+    },
+    {
+      "field": "financial_agent.operating_costs_breakdown.Fastighetsskatt/Kommunal avgift.subtotal.2021",
+      "extracted": 192000,
+      "message": "Extracted '192000' but ground truth says field is missing"
+    },
+    {
+      "field": "financial_agent.operating_costs_breakdown.Periodiskt underhåll.items",
+      "extracted": "[{'name': 'Entré/trapphus', '2021': 27308, '2020': 0}, {'name': 'Lås', '2021': 21653, '2020': 0}]",
+      "message": "Extracted '[{'name': 'Entré/trapphus', '2021': 27308, '2020': 0}, {'name': 'Lås', '2021': 21653, '2020': 0}]' but ground truth says field is missing"
+    },
+    {
+      "field": "financial_agent.operating_costs_breakdown.Periodiskt underhåll.subtotal.2020",
+      "extracted": 0,
+      "message": "Extracted '0' but ground truth says field is missing"
+    },
+    {
+      "field": "financial_agent.operating_costs_breakdown.Periodiskt underhåll.subtotal.2021",
+      "extracted": 48961,
+      "message": "Extracted '48961' but ground truth says field is missing"
+    },
+    {
+      "field": "financial_agent.operating_costs_breakdown.Reparationer.items",
+      "extracted": "[{'name': 'Lokaler', '2021': 35731, '2020': 0}, {'name': 'Sophantering/återvinning', '2021': 4223, '2020': 29450}, {'name': 'Entré/trapphus', '2021': 54690, '2020': 38731}, {'name': 'Lås', '2021': 29722, '2020': 21923}, {'name': 'VVS', '2021': 84806, '2020': 22588}, {'name': 'Värmeanläggning/undercentral', '2021': 0, '2020': 13216}, {'name': 'Ventilation', '2021': 3892, '2020': 2198}, {'name': 'Elinstallationer', '2021': 16750, '2020': 0}, {'name': 'Tele/TV/Kabel-TV/porttelefon', '2021': 1130, '2020': 1757}, {'name': 'Hiss', '2021': 8361, '2020': 0}, {'name': 'Mark/gård/utemiljö', '2021': 14632, '2020': 0}, {'name': 'Garage/parkering', '2021': 1701, '2020': 0}, {'name': 'Skador/klotter/skadegörelse', '2021': 2366, '2020': 76468}]",
+      "message": "Extracted '[{'name': 'Lokaler', '2021': 35731, '2020': 0}, {'name': 'Sophantering/återvinning', '2021': 4223, '2020': 29450}, {'name': 'Entré/trapphus', '2021': 54690, '2020': 38731}, {'name': 'Lås', '2021': 29722, '2020': 21923}, {'name': 'VVS', '2021': 84806, '2020': 22588}, {'name': 'Värmeanläggning/undercentral', '2021': 0, '2020': 13216}, {'name': 'Ventilation', '2021': 3892, '2020': 2198}, {'name': 'Elinstallationer', '2021': 16750, '2020': 0}, {'name': 'Tele/TV/Kabel-TV/porttelefon', '2021': 1130, '2020': 1757}, {'name': 'Hiss', '2021': 8361, '2020': 0}, {'name': 'Mark/gård/utemiljö', '2021': 14632, '2020': 0}, {'name': 'Garage/parkering', '2021': 1701, '2020': 0}, {'name': 'Skador/klotter/skadegörelse', '2021': 2366, '2020': 76468}]' but ground truth says field is missing"
+    },
+    {
+      "field": "financial_agent.operating_costs_breakdown.Reparationer.subtotal.2020",
+      "extracted": 206330,
+      "message": "Extracted '206330' but ground truth says field is missing"
+    },
+    {
+      "field": "financial_agent.operating_costs_breakdown.Reparationer.subtotal.2021",
+      "extracted": 258004,
+      "message": "Extracted '258004' but ground truth says field is missing"
+    },
+    {
+      "field": "financial_agent.operating_costs_breakdown.Taxebundna kostnader.items",
+      "extracted": "[{'name': 'El', '2021': 698763, '2020': 363028}, {'name': 'Värme', '2021': 438246, '2020': 379651}, {'name': 'Vatten', '2021': 162487, '2020': 134655}, {'name': 'Sophämtning/renhållning', '2021': 60293, '2020': 47400}]",
+      "message": "Extracted '[{'name': 'El', '2021': 698763, '2020': 363028}, {'name': 'Värme', '2021': 438246, '2020': 379651}, {'name': 'Vatten', '2021': 162487, '2020': 134655}, {'name': 'Sophämtning/renhållning', '2021': 60293, '2020': 47400}]' but ground truth says field is missing"
+    },
+    {
+      "field": "financial_agent.operating_costs_breakdown.Taxebundna kostnader.subtotal.2020",
+      "extracted": 924735,
+      "message": "Extracted '924735' but ground truth says field is missing"
+    },
+    {
+      "field": "financial_agent.operating_costs_breakdown.Taxebundna kostnader.subtotal.2021",
+      "extracted": 1359788,
+      "message": "Extracted '1359788' but ground truth says field is missing"
+    },
+    {
+      "field": "financial_agent.operating_costs_breakdown.Övriga driftkostnader.items",
+      "extracted": "[{'name': 'Försäkring', '2021': 84068, '2020': 82597}, {'name': 'Sopsug', '2021': 21603, '2020': 0}, {'name': 'Samfällighetsavgift', '2021': 94000, '2020': 70500}, {'name': 'Bredband', '2021': 222785, '2020': 223023}]",
+      "message": "Extracted '[{'name': 'Försäkring', '2021': 84068, '2020': 82597}, {'name': 'Sopsug', '2021': 21603, '2020': 0}, {'name': 'Samfällighetsavgift', '2021': 94000, '2020': 70500}, {'name': 'Bredband', '2021': 222785, '2020': 223023}]' but ground truth says field is missing"
+    },
+    {
+      "field": "financial_agent.operating_costs_breakdown.Övriga driftkostnader.subtotal.2020",
+      "extracted": 376120,
+      "message": "Extracted '376120' but ground truth says field is missing"
+    },
+    {
+      "field": "financial_agent.operating_costs_breakdown.Övriga driftkostnader.subtotal.2021",
+      "extracted": 422455,
+      "message": "Extracted '422455' but ground truth says field is missing"
+    },
+    {
+      "field": "financial_agent.other_receivables.avgifts- och hyresfordringar",
+      "extracted": 429,
+      "message": "Extracted '429' but ground truth says field is missing"
+    },
+    {
+      "field": "financial_agent.other_receivables.övriga fordringar inkl SBC Klientmedel",
+      "extracted": 5480408,
+      "message": "Extracted '5480408' but ground truth says field is missing"
+    },
+    {
+      "field": "financial_agent.reserve_fund_movements.fond för yttre underhåll.reservering enligt stadgar",
+      "extracted": 226590,
+      "message": "Extracted '226590' but ground truth says field is missing"
+    },
+    {
+      "field": "financial_agent.reserve_fund_movements.fond för yttre underhåll.vid årets början",
+      "extracted": 800065,
+      "message": "Extracted '800065' but ground truth says field is missing"
+    },
+    {
+      "field": "financial_agent.reserve_fund_movements.fond för yttre underhåll.vid årets slut",
+      "extracted": 1026655,
+      "message": "Extracted '1026655' but ground truth says field is missing"
+    },
+    {
+      "field": "financial_agent.tax_details.fastighetsskatt/kommunal avgift",
+      "extracted": 192000,
+      "message": "Extracted '192000' but ground truth says field is missing"
+    },
+    {
+      "field": "governance_agent.alternate_board_members",
+      "extracted": "['Lisa Lind', 'Daniel Wetter']",
+      "message": "Extracted '['Lisa Lind', 'Daniel Wetter']' but ground truth says field is missing"
+    },
+    {
+      "field": "governance_agent.board_meeting_frequency",
+      "extracted": "14 protokollförda sammanträden",
+      "message": "Extracted '14 protokollförda sammanträden' but ground truth says field is missing"
+    },
+    {
+      "field": "governance_agent.evidence_pages",
+      "extracted": "[1, 2, 3]",
+      "message": "Extracted '[1, 2, 3]' but ground truth says field is missing"
+    },
+    {
+      "field": "governance_agent.internal_auditor",
+      "extracted": "Oskar Klenell",
+      "message": "Extracted 'Oskar Klenell' but ground truth says field is missing"
+    },
+    {
+      "field": "loans_agent.amortization_schedule",
+      "extracted": "Amorteras med 500.000 kr /kvartal",
+      "message": "Extracted 'Amorteras med 500.000 kr /kvartal' but ground truth says field is missing"
+    },
+    {
+      "field": "loans_agent.evidence_pages",
+      "extracted": "[6, 7]",
+      "message": "Extracted '[6, 7]' but ground truth says field is missing"
+    },
+    {
+      "field": "loans_agent.interest_rate",
+      "extracted": 0.57,
+      "message": "Extracted '0.57' but ground truth says field is missing"
+    },
+    {
+      "field": "loans_agent.loan_changes",
+      "extracted": "Villkorsändrat",
+      "message": "Extracted 'Villkorsändrat' but ground truth says field is missing"
+    },
+    {
+      "field": "loans_agent.loan_number",
+      "extracted": "41431520",
+      "message": "Extracted '41431520' but ground truth says field is missing"
+    },
+    {
+      "field": "loans_agent.loan_provider",
+      "extracted": "SEB",
+      "message": "Extracted 'SEB' but ground truth says field is missing"
+    },
+    {
+      "field": "loans_agent.loan_term",
+      "extracted": "3 år",
+      "message": "Extracted '3 år' but ground truth says field is missing"
+    },
+    {
+      "field": "loans_agent.outstanding_loans",
+      "extracted": 114480000,
+      "message": "Extracted '114480000' but ground truth says field is missing"
+    },
+    {
+      "field": "notes_depreciation_agent.depreciation_base",
+      "extracted": "ursprungliga anskaffningsvärdet",
+      "message": "Extracted 'ursprungliga anskaffningsvärdet' but ground truth says field is missing"
+    },
+    {
+      "field": "notes_depreciation_agent.depreciation_method",
+      "extracted": "Avskrivningar på anläggningstillgångar enligt plan",
+      "message": "Extracted 'Avskrivningar på anläggningstillgångar enligt plan' but ground truth says field is missing"
+    },
+    {
+      "field": "notes_depreciation_agent.evidence_pages",
+      "extracted": "[6, 7]",
+      "message": "Extracted '[6, 7]' but ground truth says field is missing"
+    },
+    {
+      "field": "notes_depreciation_agent.useful_life_years",
+      "extracted": "100 år",
+      "message": "Extracted '100 år' but ground truth says field is missing"
+    },
+    {
+      "field": "notes_maintenance_agent.evidence_pages",
+      "extracted": "[3, 4]",
+      "message": "Extracted '[3, 4]' but ground truth says field is missing"
+    },
+    {
+      "field": "notes_maintenance_agent.maintenance_plan",
+      "extracted": "Underhållsplan 2018-2043",
+      "message": "Extracted 'Underhållsplan 2018-2043' but ground truth says field is missing"
+    },
+    {
+      "field": "notes_maintenance_agent.planned_actions",
+      "extracted": "[{'action': 'Behandling av trädäcken', 'year': '2021', 'comment': 'Genomförs 2022/23'}, {'action': 'Behandling av träfasad', 'year': '2023', 'comment': None}]",
+      "message": "Extracted '[{'action': 'Behandling av trädäcken', 'year': '2021', 'comment': 'Genomförs 2022/23'}, {'action': 'Behandling av träfasad', 'year': '2023', 'comment': None}]' but ground truth says field is missing"
+    },
+    {
+      "field": "notes_maintenance_agent.service_contracts.SBA (Systematiskt brandskyddsarbete)",
+      "extracted": "Etcon Fastighetsteknik AB",
+      "message": "Extracted 'Etcon Fastighetsteknik AB' but ground truth says field is missing"
+    },
+    {
+      "field": "notes_maintenance_agent.service_contracts.avloppspump, tillsyn och service",
+      "extracted": "Xylem",
+      "message": "Extracted 'Xylem' but ground truth says field is missing"
+    },
+    {
+      "field": "notes_maintenance_agent.service_contracts.bredband, TV, telefoni",
+      "extracted": "Ownit Broadband AB",
+      "message": "Extracted 'Ownit Broadband AB' but ground truth says field is missing"
+    },
+    {
+      "field": "notes_maintenance_agent.service_contracts.debiteringsunderlag, felrapportering, MeView",
+      "extracted": "KTC",
+      "message": "Extracted 'KTC' but ground truth says field is missing"
+    },
+    {
+      "field": "notes_maintenance_agent.service_contracts.drift av central sopsugsanläggning elnät",
+      "extracted": "Stockholm stad genom BoDab Ellevio",
+      "message": "Extracted 'Stockholm stad genom BoDab Ellevio' but ground truth says field is missing"
+    },
+    {
+      "field": "notes_maintenance_agent.service_contracts.ekonomisk förvaltning",
+      "extracted": "SBC AB och SBC Betaltjänster AB",
+      "message": "Extracted 'SBC AB och SBC Betaltjänster AB' but ground truth says field is missing"
+    },
+    {
+      "field": "notes_maintenance_agent.service_contracts.elenergi",
+      "extracted": "Energiförsäljning Sverige",
+      "message": "Extracted 'Energiförsäljning Sverige' but ground truth says field is missing"
+    },
+    {
+      "field": "notes_maintenance_agent.service_contracts.fastighetsförsäkring",
+      "extracted": "Brandkontoret",
+      "message": "Extracted 'Brandkontoret' but ground truth says field is missing"
+    },
+    {
+      "field": "notes_maintenance_agent.service_contracts.fjärrvärme",
+      "extracted": "Stockholm Exergi",
+      "message": "Extracted 'Stockholm Exergi' but ground truth says field is missing"
+    },
+    {
+      "field": "notes_maintenance_agent.service_contracts.försäkringsrådgivare",
+      "extracted": "Bolander&Co",
+      "message": "Extracted 'Bolander&Co' but ground truth says field is missing"
+    },
+    {
+      "field": "notes_maintenance_agent.service_contracts.hissar",
+      "extracted": "Kone",
+      "message": "Extracted 'Kone' but ground truth says field is missing"
+    },
+    {
+      "field": "notes_maintenance_agent.service_contracts.hissar, besiktning",
+      "extracted": "Dekra Sweden AB",
+      "message": "Extracted 'Dekra Sweden AB' but ground truth says field is missing"
+    },
+    {
+      "field": "notes_maintenance_agent.service_contracts.miljörum och grovsopor",
+      "extracted": "Remondis",
+      "message": "Extracted 'Remondis' but ground truth says field is missing"
+    },
+    {
+      "field": "notes_maintenance_agent.service_contracts.portar, besiktning",
+      "extracted": "Dekra",
+      "message": "Extracted 'Dekra' but ground truth says field is missing"
+    },
+    {
+      "field": "notes_maintenance_agent.service_contracts.snöröjning, garagestädning",
+      "extracted": "JC Miljöstäd AB",
+      "message": "Extracted 'JC Miljöstäd AB' but ground truth says field is missing"
+    },
+    {
+      "field": "notes_maintenance_agent.service_contracts.sopsug, tillsyn och service i",
+      "extracted": "Envac Optibag AB",
+      "message": "Extracted 'Envac Optibag AB' but ground truth says field is missing"
+    },
+    {
+      "field": "notes_maintenance_agent.service_contracts.städning",
+      "extracted": "JC MIljöstäd AB",
+      "message": "Extracted 'JC MIljöstäd AB' but ground truth says field is missing"
+    },
+    {
+      "field": "notes_maintenance_agent.service_contracts.teknisk fastighetsförvaltning",
+      "extracted": "Etcon Fastighetsteknik AB",
+      "message": "Extracted 'Etcon Fastighetsteknik AB' but ground truth says field is missing"
+    },
+    {
+      "field": "notes_maintenance_agent.service_contracts.vatten och avlopp",
+      "extracted": "Stockholm Vatten och Avfall AB",
+      "message": "Extracted 'Stockholm Vatten och Avfall AB' but ground truth says field is missing"
+    },
+    {
+      "field": "notes_maintenance_agent.suppliers",
+      "extracted": "['SBC AB och SBC Betaltjänster AB', 'Etcon Fastighetsteknik AB', 'Ownit Broadband AB', 'Remondis', 'Kone', 'JC Miljöstäd AB', 'Envac Optibag AB', 'Dekra Sweden AB', 'Xylem', 'Dekra', 'KTC', 'Stockholm stad genom BoDab Ellevio', 'Energiförsäljning Sverige', 'Stockholm Exergi', 'Stockholm Vatten och Avfall AB', 'Bolander&Co', 'Brandkontoret']",
+      "message": "Extracted '['SBC AB och SBC Betaltjänster AB', 'Etcon Fastighetsteknik AB', 'Ownit Broadband AB', 'Remondis', 'Kone', 'JC Miljöstäd AB', 'Envac Optibag AB', 'Dekra Sweden AB', 'Xylem', 'Dekra', 'KTC', 'Stockholm stad genom BoDab Ellevio', 'Energiförsäljning Sverige', 'Stockholm Exergi', 'Stockholm Vatten och Avfall AB', 'Bolander&Co', 'Brandkontoret']' but ground truth says field is missing"
+    },
+    {
+      "field": "notes_maintenance_agent.technical_status",
+      "extracted": "Föreningen följer en underhållsplan",
+      "message": "Extracted 'Föreningen följer en underhållsplan' but ground truth says field is missing"
+    },
+    {
+      "field": "notes_tax_agent.current_tax",
+      "extracted": "0,3% av taxeringsvärdet för bostadshus",
+      "message": "Extracted '0,3% av taxeringsvärdet för bostadshus' but ground truth says field is missing"
+    },
+    {
+      "field": "notes_tax_agent.evidence_pages",
+      "extracted": "[5]",
+      "message": "Extracted '[5]' but ground truth says field is missing"
+    },
+    {
+      "field": "notes_tax_agent.tax_law_reference",
+      "extracted": "Inkomstskattelagen (1999:1229)",
+      "message": "Extracted 'Inkomstskattelagen (1999:1229)' but ground truth says field is missing"
+    },
+    {
+      "field": "notes_tax_agent.tax_policy",
+      "extracted": "Fastighetsavgiften för hyreshus",
+      "message": "Extracted 'Fastighetsavgiften för hyreshus' but ground truth says field is missing"
+    },
+    {
+      "field": "notes_tax_agent.tax_type",
+      "extracted": "Fastighetsavgift",
+      "message": "Extracted 'Fastighetsavgift' but ground truth says field is missing"
+    },
+    {
+      "field": "pdf_path",
+      "extracted": "SRS/brf_198532.pdf",
+      "message": "Extracted 'SRS/brf_198532.pdf' but ground truth says field is missing"
+    },
+    {
+      "field": "property_agent.acquisition_date",
+      "extracted": "2015",
+      "message": "Extracted '2015' but ground truth says field is missing"
+    },
+    {
+      "field": "property_agent.apartments",
+      "extracted": 94,
+      "message": "Extracted '94' but ground truth says field is missing"
+    },
+    {
+      "field": "property_agent.built_year",
+      "extracted": "2015",
+      "message": "Extracted '2015' but ground truth says field is missing"
+    },
+    {
+      "field": "property_agent.city",
+      "extracted": "Stockholm",
+      "message": "Extracted 'Stockholm' but ground truth says field is missing"
+    },
+    {
+      "field": "property_agent.commercial_tenants",
+      "extracted": "[{'tenant': 'Puls& Träning Sweden AB', 'area': '282 m²', 'lease_term': '2017-06-20 - 2022-06-19'}, {'tenant': 'Barnsjukhuset Martina i Stockholm AB', 'area': '197 m²', 'lease_term': '2020-06-22 - 2030-06-21'}]",
+      "message": "Extracted '[{'tenant': 'Puls& Träning Sweden AB', 'area': '282 m²', 'lease_term': '2017-06-20 - 2022-06-19'}, {'tenant': 'Barnsjukhuset Martina i Stockholm AB', 'area': '197 m²', 'lease_term': '2020-06-22 - 2030-06-21'}]' but ground truth says field is missing"
+    },
+    {
+      "field": "property_agent.common_areas",
+      "extracted": "['Två gemensamma terrasser', 'Två gemensamma entréer', 'Två gemensamhetslokaler']",
+      "message": "Extracted '['Två gemensamma terrasser', 'Två gemensamma entréer', 'Två gemensamhetslokaler']' but ground truth says field is missing"
+    },
+    {
+      "field": "property_agent.designation",
+      "extracted": "Bostadsrättsföreningen Björk och Plaza",
+      "message": "Extracted 'Bostadsrättsföreningen Björk och Plaza' but ground truth says field is missing"
+    },
+    {
+      "field": "property_agent.evidence_pages",
+      "extracted": "[2, 3, 4]",
+      "message": "Extracted '[2, 3, 4]' but ground truth says field is missing"
+    },
+    {
+      "field": "property_agent.heating_system",
+      "extracted": "Fjärrvärme",
+      "message": "Extracted 'Fjärrvärme' but ground truth says field is missing"
+    },
+    {
+      "field": "property_agent.insurance_details",
+      "extracted": "Fullvärdesförsäkring med kollektivt bostadsrättstillägg och ansvarsförsäkring för styrelsen",
+      "message": "Extracted 'Fullvärdesförsäkring med kollektivt bostadsrättstillägg och ansvarsförsäkring för styrelsen' but ground truth says field is missing"
+    },
+    {
+      "field": "property_agent.insurance_provider",
+      "extracted": "Brandkontoret",
+      "message": "Extracted 'Brandkontoret' but ground truth says field is missing"
+    },
+    {
+      "field": "property_agent.registration_dates.ekonomisk plan",
+      "extracted": "2016-11-22",
+      "message": "Extracted '2016-11-22' but ground truth says field is missing"
+    },
+    {
+      "field": "property_agent.registration_dates.förening",
+      "extracted": "2014-11-03",
+      "message": "Extracted '2014-11-03' but ground truth says field is missing"
+    },
+    {
+      "field": "property_agent.registration_dates.stadgar",
+      "extracted": "2016-11-14",
+      "message": "Extracted '2016-11-14' but ground truth says field is missing"
+    },
+    {
+      "field": "property_agent.samfallighet.managed_areas",
+      "extracted": "gård, garagefoajé och garageport",
+      "message": "Extracted 'gård, garagefoajé och garageport' but ground truth says field is missing"
+    },
+    {
+      "field": "property_agent.samfallighet.ownership_percentage",
+      "extracted": 47,
+      "message": "Extracted '47' but ground truth says field is missing"
+    },
+    {
+      "field": "property_agent.tax_assessment.bostäder",
+      "extracted": 370000000,
+      "message": "Extracted '370000000' but ground truth says field is missing"
+    },
+    {
+      "field": "property_agent.tax_assessment.lokaler",
+      "extracted": 19200000,
+      "message": "Extracted '19200000' but ground truth says field is missing"
+    },
+    {
+      "field": "reserves_agent.annual_allocation",
+      "extracted": 226590,
+      "message": "Extracted '226590' but ground truth says field is missing"
+    },
+    {
+      "field": "reserves_agent.evidence_pages",
+      "extracted": "[5, 6]",
+      "message": "Extracted '[5, 6]' but ground truth says field is missing"
+    },
+    {
+      "field": "reserves_agent.fund_name",
+      "extracted": "Fond för yttre underhåll",
+      "message": "Extracted 'Fond för yttre underhåll' but ground truth says field is missing"
+    },
+    {
+      "field": "reserves_agent.reserve_fund",
+      "extracted": 1026655,
+      "message": "Extracted '1026655' but ground truth says field is missing"
+    },
+    {
+      "field": "reserves_agent.reserve_policy",
+      "extracted": "Reservering till fond för yttre underhåll enligt stadgar",
+      "message": "Extracted 'Reservering till fond för yttre underhåll enligt stadgar' but ground truth says field is missing"
+    },
+    {
+      "field": "status",
+      "extracted": "success",
+      "message": "Extracted 'success' but ground truth says field is missing"
+    }
+  ]
+}
