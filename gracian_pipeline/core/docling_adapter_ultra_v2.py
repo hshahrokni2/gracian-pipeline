@@ -72,20 +72,43 @@ class RobustUltraComprehensiveExtractor:
             print("\nPass 2: Deep specialized extraction...")
             pass2_start = time.time()
 
-            # 2a. Hierarchical financial notes
+            # 2a. Hierarchical financial notes (4, 8, 9)
             if self.should_extract_financial_details(base_result):
-                print("  → Extracting hierarchical financial details...")
+                print("  → Extracting hierarchical financial details (Notes 4, 8, 9)...")
                 financial_details = self.financial_extractor.extract_all_notes(
                     pdf_path,
-                    notes=["note_4"]  # Start with Note 4, can add more later
+                    notes=["note_4", "note_8", "note_9"]
                 )
 
+                # Note 4: Operating costs breakdown
                 if "note_4" in financial_details and not financial_details["note_4"].get("_error"):
                     base_result["financial_agent"]["operating_costs_breakdown"] = financial_details["note_4"]
                     base_result["financial_agent"]["_detailed_extraction"] = True
-                    print(f"    ✓ Extracted {financial_details['note_4'].get('_validation', {}).get('total_items_extracted', 0)} financial items")
+                    print(f"    ✓ Note 4: Extracted {financial_details['note_4'].get('_validation', {}).get('total_items_extracted', 0)} line items")
                 else:
-                    print("    ⚠ Financial detail extraction failed, using base data")
+                    print("    ⚠ Note 4 extraction failed, using base data")
+
+                # Note 8: Building details
+                if "note_8" in financial_details and not financial_details["note_8"].get("_error"):
+                    note8_data = financial_details["note_8"]
+                    base_result["financial_agent"]["building_details"] = {
+                        k: v for k, v in note8_data.items() if not k.startswith("_")
+                    }
+                    base_result["financial_agent"]["_note_8_extracted"] = True
+                    print(f"    ✓ Note 8: Extracted {note8_data.get('_validation', {}).get('fields_extracted', 0)}/5 building fields")
+                else:
+                    print("    ⚠ Note 8 extraction failed")
+
+                # Note 9: Receivables breakdown
+                if "note_9" in financial_details and not financial_details["note_9"].get("_error"):
+                    note9_data = financial_details["note_9"]
+                    base_result["financial_agent"]["receivables_breakdown"] = {
+                        k: v for k, v in note9_data.items() if not k.startswith("_")
+                    }
+                    base_result["financial_agent"]["_note_9_extracted"] = True
+                    print(f"    ✓ Note 9: Extracted {note9_data.get('_validation', {}).get('fields_extracted', 0)}/5 receivables fields")
+                else:
+                    print("    ⚠ Note 9 extraction failed")
 
             # 2b. Detailed apartment breakdown (if summary detected)
             apt_granularity = base_result.get("property_agent", {}).get("_apartment_breakdown_granularity")
@@ -231,12 +254,14 @@ class RobustUltraComprehensiveExtractor:
             Extraction with _quality_metrics added
         """
         metrics = {
-            "total_fields": 107,  # Ultra-comprehensive schema
+            "total_fields": 117,  # Ultra-comprehensive schema (107 base + 5 Note 8 + 5 Note 9)
             "extracted_fields": self.count_extracted_fields(extraction),
             "coverage_percent": 0,
             "quality_grade": "C",
             "warnings_count": len(extraction.get("_validation_warnings", [])),
             "detailed_extraction_applied": extraction.get("financial_agent", {}).get("_detailed_extraction", False),
+            "note_8_extracted": extraction.get("financial_agent", {}).get("_note_8_extracted", False),
+            "note_9_extracted": extraction.get("financial_agent", {}).get("_note_9_extracted", False),
             "apartment_granularity": extraction.get("property_agent", {}).get("_apartment_breakdown_granularity", "none"),
             "fee_schema_version": "v2" if any(
                 k.startswith("arsavgift_") for k in extraction.get("fees_agent", {}).keys()
@@ -298,7 +323,9 @@ class RobustUltraComprehensiveExtractor:
         print(f"   Warnings: {metrics.get('warnings_count', 0)}")
 
         print(f"\n🔧 Enhancements Applied:")
-        print(f"   Detailed financial: {'✓' if metrics.get('detailed_extraction_applied') else '✗'}")
+        print(f"   Note 4 (detailed financial): {'✓' if metrics.get('detailed_extraction_applied') else '✗'}")
+        print(f"   Note 8 (building details): {'✓' if metrics.get('note_8_extracted') else '✗'}")
+        print(f"   Note 9 (receivables): {'✓' if metrics.get('note_9_extracted') else '✗'}")
         print(f"   Apartment granularity: {metrics.get('apartment_granularity', 'none')}")
         print(f"   Fee schema: {metrics.get('fee_schema_version', 'v1')}")
 

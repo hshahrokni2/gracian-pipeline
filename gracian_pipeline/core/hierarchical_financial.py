@@ -39,25 +39,34 @@ class HierarchicalFinancialExtractor:
                     "Övriga driftkostnader"
                 ],
                 "expected_items": 50,
-                "page_hint": "typically pages 7-9"
+                "page_hint": "typically pages 7-9",
+                "extraction_type": "hierarchical"
             },
             "note_8": {
                 "name": "BYGGNADER",
-                "structure": "depreciation_schedule",
+                "fields": [
+                    "ackumulerade_anskaffningsvarden",
+                    "arets_avskrivningar",
+                    "planenligt_restvarde",
+                    "taxeringsvarde_byggnad",
+                    "taxeringsvarde_mark"
+                ],
                 "expected_items": 5,
-                "page_hint": "typically page 10"
+                "page_hint": "typically pages 8-10",
+                "extraction_type": "building_details"
             },
             "note_9": {
-                "name": "MARKANLÄGGNINGAR",
-                "structure": "depreciation_schedule",
-                "expected_items": 3,
-                "page_hint": "typically page 10"
-            },
-            "note_10": {
-                "name": "INVENTARIER OCH MASKINER",
-                "structure": "depreciation_schedule",
-                "expected_items": 3,
-                "page_hint": "typically page 10"
+                "name": "ÖVRIGA FORDRINGAR",
+                "fields": [
+                    "skattekonto",
+                    "momsavrakning",
+                    "klientmedel",
+                    "fordringar",
+                    "avrakning_ovrigt"
+                ],
+                "expected_items": 5,
+                "page_hint": "typically pages 10-12",
+                "extraction_type": "receivables_breakdown"
             }
         }
 
@@ -105,6 +114,155 @@ class HierarchicalFinancialExtractor:
         )
 
         return validated
+
+    def extract_note_8_detailed(self, pdf_path: str, note_pages: List[int]) -> Dict[str, Any]:
+        """
+        Extract Note 8 (BYGGNADER - Building Details).
+
+        Extracts building depreciation schedule with 5 key fields:
+        - Accumulated acquisition values
+        - Annual depreciation
+        - Planned residual value
+        - Tax assessment (building)
+        - Tax assessment (land)
+
+        Args:
+            pdf_path: Path to PDF document
+            note_pages: List of page indices containing Note 8 (0-based)
+
+        Returns:
+            Dictionary with building details and validation metadata
+        """
+        note_markdown, note_tables = self.extract_note_section(pdf_path, note_pages)
+
+        pattern = self.note_patterns["note_8"]
+
+        prompt = f"""
+Extract COMPLETE building details from Note 8 ({pattern["name"]}).
+
+CRITICAL FIELDS TO EXTRACT (all 5 required):
+1. ackumulerade_anskaffningsvarden - Accumulated acquisition values (SEK)
+2. arets_avskrivningar - Annual depreciation for current year (SEK)
+3. planenligt_restvarde - Planned residual value (SEK)
+4. taxeringsvarde_byggnad - Tax assessment value for building (SEK)
+5. taxeringsvarde_mark - Tax assessment value for land (SEK)
+
+OUTPUT SCHEMA:
+{{
+  "ackumulerade_anskaffningsvarden": number,
+  "arets_avskrivningar": number,
+  "planenligt_restvarde": number,
+  "taxeringsvarde_byggnad": number,
+  "taxeringsvarde_mark": number,
+  "_source_note": "note_8",
+  "_fields_found": list_of_field_names
+}}
+
+DOCUMENT TEXT (pages {note_pages}):
+{note_markdown}
+
+TABLES:
+{self.format_tables_hierarchical(note_tables)}
+
+INSTRUCTIONS:
+- Extract ALL 5 fields if present
+- Return numbers without spaces or formatting (e.g., 12500000 not "12 500 000")
+- If a field is missing, set to null
+- Swedish terms may vary (e.g., "Ackumulerade anskaffningsvärden", "Ingående anskaffningsvärde")
+"""
+
+        result = self.call_gpt4o_extended(prompt=prompt, max_tokens=4000, temperature=0)
+
+        # Validate presence of required fields
+        validation = {
+            "fields_extracted": len([k for k, v in result.items() if not k.startswith("_") and v is not None]),
+            "fields_expected": len(pattern["fields"]),
+            "all_fields_present": True,
+            "missing_fields": []
+        }
+
+        for field in pattern["fields"]:
+            if field not in result or result[field] is None:
+                validation["all_fields_present"] = False
+                validation["missing_fields"].append(field)
+
+        result["_validation"] = validation
+        return result
+
+    def extract_note_9_detailed(self, pdf_path: str, note_pages: List[int]) -> Dict[str, Any]:
+        """
+        Extract Note 9 (ÖVRIGA FORDRINGAR - Other Receivables).
+
+        Extracts detailed receivables breakdown with 5 key fields:
+        - Tax account balance
+        - VAT settlement
+        - Client funds
+        - General receivables
+        - Other settlements
+
+        Args:
+            pdf_path: Path to PDF document
+            note_pages: List of page indices containing Note 9 (0-based)
+
+        Returns:
+            Dictionary with receivables details and validation metadata
+        """
+        note_markdown, note_tables = self.extract_note_section(pdf_path, note_pages)
+
+        pattern = self.note_patterns["note_9"]
+
+        prompt = f"""
+Extract COMPLETE receivables breakdown from Note 9 ({pattern["name"]}).
+
+CRITICAL FIELDS TO EXTRACT (all 5 required):
+1. skattekonto - Tax account balance (SEK)
+2. momsavrakning - VAT settlement amount (SEK)
+3. klientmedel - Client funds held (SEK)
+4. fordringar - General receivables (SEK)
+5. avrakning_ovrigt - Other settlements/clearing amounts (SEK)
+
+OUTPUT SCHEMA:
+{{
+  "skattekonto": number,
+  "momsavrakning": number,
+  "klientmedel": number,
+  "fordringar": number,
+  "avrakning_ovrigt": number,
+  "_source_note": "note_9",
+  "_fields_found": list_of_field_names
+}}
+
+DOCUMENT TEXT (pages {note_pages}):
+{note_markdown}
+
+TABLES:
+{self.format_tables_hierarchical(note_tables)}
+
+INSTRUCTIONS:
+- Extract ALL 5 fields if present in the document
+- Return numbers without spaces or formatting (e.g., 125000 not "125 000")
+- If a field is missing, set to null
+- Swedish terms may vary (e.g., "Momsavräkning", "Moms", "Skattekonto", "Kortfristiga fordringar")
+- This section may be called "Övriga kortfristiga fordringar" or similar
+"""
+
+        result = self.call_gpt4o_extended(prompt=prompt, max_tokens=4000, temperature=0)
+
+        # Validate presence of required fields
+        validation = {
+            "fields_extracted": len([k for k, v in result.items() if not k.startswith("_") and v is not None]),
+            "fields_expected": len(pattern["fields"]),
+            "all_fields_present": True,
+            "missing_fields": []
+        }
+
+        for field in pattern["fields"]:
+            if field not in result or result[field] is None:
+                validation["all_fields_present"] = False
+                validation["missing_fields"].append(field)
+
+        result["_validation"] = validation
+        return result
 
     def build_hierarchical_prompt(
         self,
@@ -356,17 +514,28 @@ REMEMBER: Extract EVERY line item, not summaries. This is for detailed financial
 
             print(f"Extracting {note_id}: {self.note_patterns[note_id]['name']}...")
 
-            # For now, we'll use heuristic page ranges
-            # In production, use vision sectionizer to find exact pages
+            # Determine page ranges (heuristic - in production use sectionizer)
             if note_id == "note_4":
                 page_range = [6, 7, 8]  # Typical Note 4 pages (0-based)
-            elif note_id in ["note_8", "note_9", "note_10"]:
-                page_range = [9, 10]  # Typical depreciation notes pages
+            elif note_id == "note_8":
+                page_range = [7, 8, 9]  # Typical Note 8 pages
+            elif note_id == "note_9":
+                page_range = [9, 10, 11]  # Typical Note 9 pages
             else:
-                page_range = [6, 7, 8, 9, 10]  # Wide range as fallback
+                page_range = [6, 7, 8, 9, 10, 11]  # Wide range as fallback
 
             try:
-                extracted = self.extract_note_4_detailed(pdf_path, page_range)
+                # Call appropriate extraction method based on note type
+                if note_id == "note_4":
+                    extracted = self.extract_note_4_detailed(pdf_path, page_range)
+                elif note_id == "note_8":
+                    extracted = self.extract_note_8_detailed(pdf_path, page_range)
+                elif note_id == "note_9":
+                    extracted = self.extract_note_9_detailed(pdf_path, page_range)
+                else:
+                    # Fallback to Note 4 method for unknown notes
+                    extracted = self.extract_note_4_detailed(pdf_path, page_range)
+
                 results[note_id] = extracted
             except Exception as e:
                 print(f"Error extracting {note_id}: {e}")

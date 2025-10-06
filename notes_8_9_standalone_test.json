@@ -1,0 +1,44 @@
+{
+  "note_8": {
+    "ackumulerade_anskaffningsvarden": 682435875,
+    "arets_avskrivningar": 3503359,
+    "planenligt_restvarde": 666670761,
+    "taxeringsvarde_byggnad": 214200000,
+    "taxeringsvarde_mark": 175000000,
+    "_source_note": "note_8",
+    "_fields_found": [
+      "ackumulerade_anskaffningsvarden",
+      "arets_avskrivningar",
+      "planenligt_restvarde",
+      "taxeringsvarde_byggnad",
+      "taxeringsvarde_mark"
+    ],
+    "_validation": {
+      "fields_extracted": 5,
+      "fields_expected": 5,
+      "all_fields_present": true,
+      "missing_fields": []
+    }
+  },
+  "note_9": {
+    "skattekonto": 192990,
+    "momsavrakning": 25293,
+    "klientmedel": 3297711,
+    "fordringar": 1911314,
+    "avrakning_ovrigt": 53100,
+    "_source_note": "note_9",
+    "_fields_found": [
+      "skattekonto",
+      "momsavrakning",
+      "klientmedel",
+      "fordringar",
+      "avrakning_ovrigt"
+    ],
+    "_validation": {
+      "fields_extracted": 5,
+      "fields_expected": 5,
+      "all_fields_present": true,
+      "missing_fields": []
+    }
+  }
+}
