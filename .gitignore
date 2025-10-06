@@ -1,0 +1,67 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+venv/
+ENV/
+env/
+
+# API Keys and Secrets
+.env
+.env.local
+.env.*.local
+*.key
+*_key.txt
+secrets/
+
+# Test outputs and artifacts
+data/raw_pdfs/outputs/
+data/raw_pdfs/extraction_results.json
+test_gracian_output/
+*.log
+*.jsonl
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Cache and temporary files
+.cache/
+*.tmp
+*.temp
+.grok/settings.json
+
+# Large PDF files (keep structure, ignore actual PDFs for initial commit)
+*.pdf
+!data/raw_pdfs/.gitkeep
+!Hjorthagen/.gitkeep
+!SRS/.gitkeep
+
+# Model outputs
+data/raw_pdfs/outputs/agent_debug/
+data/raw_pdfs/outputs/sections/
+data/raw_pdfs/outputs/schema_proposals/
+data/raw_pdfs/outputs/coach_history/
+data/raw_pdfs/outputs/summary.json
