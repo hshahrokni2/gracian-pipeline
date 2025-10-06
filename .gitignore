@@ -65,3 +65,4 @@ data/raw_pdfs/outputs/sections/
 data/raw_pdfs/outputs/schema_proposals/
 data/raw_pdfs/outputs/coach_history/
 data/raw_pdfs/outputs/summary.json
+*.db
