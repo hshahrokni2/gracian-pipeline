@@ -205,10 +205,12 @@ def generate_markdown_report(results: Dict[str, Any], output_path: str):
             f.write("❌ **NEEDS IMPROVEMENT** - Accuracy below 90%, significant fixes required\n")
 
 if __name__ == "__main__":
-    # File paths
-    extraction_file = "deep_mode_full_test_notes_4_8_9.json"
-    ground_truth_file = "ground_truth/brf_198532_ground_truth.json"
-    output_report = "GROUND_TRUTH_VALIDATION_REPORT.md"
+    import sys
+
+    # File paths (support command line args)
+    extraction_file = sys.argv[1] if len(sys.argv) > 1 else "deep_mode_full_test_vision_complete.json"
+    ground_truth_file = sys.argv[2] if len(sys.argv) > 2 else "ground_truth/brf_198532_ground_truth.json"
+    output_report = sys.argv[3] if len(sys.argv) > 3 else "GROUND_TRUTH_VALIDATION_REPORT.md"
 
     print("🔍 Validating extraction against ground truth...")
     print(f"   Extraction: {extraction_file}")

@@ -1,53 +1,23 @@
 # Ground Truth Validation Report
 
-**Date**: 1759765701.1084194
+**Date**: 1759768429.0153482
 
 ## Executive Summary
 
-- **Total Fields Validated**: 186
-- **Accuracy**: 76.7% (23/165 fields correct)
-- **Coverage**: 13.9% (23/165 fields extracted)
+- **Total Fields Validated**: 180
+- **Accuracy**: 96.7% (29/162 fields correct)
+- **Coverage**: 17.9% (29/162 fields extracted)
 
 ### Breakdown
 
-- ✅ **Correct**: 23 fields
+- ✅ **Correct**: 29 fields
 - ≈ **Correct (rounded)**: 0 fields
 - ❌ **Incorrect**: 0 fields
-- ⚠️ **Missing**: 7 fields (present in PDF but not extracted)
-- ℹ️ **Expected Missing**: 21 fields (not in PDF)
-- 🔍 **Unexpected**: 135 fields (extracted but shouldn't be)
+- ⚠️ **Missing**: 1 fields (present in PDF but not extracted)
+- ℹ️ **Expected Missing**: 18 fields (not in PDF)
+- 🔍 **Unexpected**: 132 fields (extracted but shouldn't be)
 
 ## ⚠️ Missing Extractions (Data Present in PDF)
-
-### property_agent.apartment_breakdown.1_rok
-- **Expected Value**: `10`
-- **Status**: extraction_failed
-- **Message**: Expected '10' but got null/empty
-
-### property_agent.apartment_breakdown.2_rok
-- **Expected Value**: `24`
-- **Status**: extraction_failed
-- **Message**: Expected '24' but got null/empty
-
-### property_agent.apartment_breakdown.3_rok
-- **Expected Value**: `23`
-- **Status**: extraction_failed
-- **Message**: Expected '23' but got null/empty
-
-### property_agent.apartment_breakdown.4_rok
-- **Expected Value**: `36`
-- **Status**: extraction_failed
-- **Message**: Expected '36' but got null/empty
-
-### property_agent.apartment_breakdown.5_rok
-- **Expected Value**: `1`
-- **Status**: extraction_failed
-- **Message**: Expected '1' but got null/empty
-
-### property_agent.apartment_breakdown.>5_rok
-- **Expected Value**: `0`
-- **Status**: extraction_failed
-- **Message**: Expected '0' but got null/empty
 
 ### property_agent.property_designation
 - **Expected Value**: `Sonfjället 2`
@@ -79,4 +49,4 @@
 
 ---
 
-**Conclusion**: ❌ **NEEDS IMPROVEMENT** - Accuracy below 90%, significant fixes required
+**Conclusion**: ✅ **PRODUCTION READY** - Accuracy meets 95% target

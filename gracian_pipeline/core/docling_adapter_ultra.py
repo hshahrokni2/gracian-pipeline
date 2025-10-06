@@ -298,6 +298,10 @@ IMPORTANT: Return ONLY valid JSON. Extract EVERYTHING visible in the document.""
         result['status'] = 'success'
         result['pdf_path'] = pdf_path
 
+        # Store docling markdown and tables for downstream processing (e.g., vision extraction)
+        result['_docling_markdown'] = docling_result['markdown']
+        result['_docling_tables'] = docling_result['tables']
+
         return result
 
 

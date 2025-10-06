@@ -119,7 +119,7 @@ class RobustUltraComprehensiveExtractor:
                 markdown = base_result.get("_docling_markdown", "")
                 tables = base_result.get("_docling_tables", [])
 
-                detailed_apt_result = self.apartment_extractor.extract_apartment_breakdown(markdown, tables)
+                detailed_apt_result = self.apartment_extractor.extract_apartment_breakdown(markdown, tables, pdf_path=pdf_path)
 
                 if detailed_apt_result["granularity"] == "detailed":
                     base_result["property_agent"]["apartment_breakdown"] = detailed_apt_result["breakdown"]

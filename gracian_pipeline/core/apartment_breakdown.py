@@ -24,18 +24,20 @@ class ApartmentBreakdownExtractor:
     def __init__(self):
         self.openai_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-    def extract_apartment_breakdown(self, markdown: str, tables: List[Dict]) -> Dict[str, Any]:
+    def extract_apartment_breakdown(self, markdown: str, tables: List[Dict], pdf_path: str = None) -> Dict[str, Any]:
         """
         Extract apartment breakdown with progressive detail levels.
 
         Priority:
         1. Detailed table (1 rok, 2 rok, etc.) - BEST
-        2. Summary counts (total lägenheter, lokaler) - ACCEPTABLE
-        3. Null with warning - DOCUMENTED FAILURE
+        2. Vision-based chart extraction - VERY GOOD
+        3. Summary counts (total lägenheter, lokaler) - ACCEPTABLE
+        4. Null with warning - DOCUMENTED FAILURE
 
         Args:
             markdown: Docling markdown of document
             tables: List of docling table structures
+            pdf_path: Path to PDF (required for vision extraction)
 
         Returns:
             Dictionary with breakdown, granularity, and source metadata
@@ -50,7 +52,21 @@ class ApartmentBreakdownExtractor:
                 "source": "table_extraction"
             }
 
-        # Try Level 2: Summary extraction
+        # Try Level 2: Vision-based chart extraction
+        if pdf_path and "<!-- image -->" in markdown and "Lägenhetsfördelning" in markdown:
+            print("  → Detected chart placeholder, attempting vision extraction...")
+            vision_result = self.try_extract_chart_with_vision(pdf_path, markdown)
+            if vision_result:
+                print(f"    ✓ Vision extraction successful: {len(vision_result)} fields")
+                return {
+                    "granularity": "detailed",
+                    "breakdown": vision_result,
+                    "source": "vision_chart_extraction"
+                }
+            else:
+                print("    ⚠ Vision extraction returned no results")
+
+        # Try Level 3: Summary extraction
         summary = self.try_extract_summary_breakdown(markdown)
         if summary:
             return {
@@ -60,7 +76,7 @@ class ApartmentBreakdownExtractor:
                 "_warning": "Detailed breakdown table not found, using summary counts"
             }
 
-        # Level 3: Failed extraction
+        # Level 4: Failed extraction
         return {
             "granularity": "none",
             "breakdown": None,
@@ -122,6 +138,122 @@ TABLES:
             rok_keys = [k for k in result.keys() if "rok" in k]
             if len(rok_keys) >= 3:  # At least 3 room types
                 return result
+
+        return None
+
+    def try_extract_chart_with_vision(self, pdf_path: str, markdown: str) -> Optional[Dict[str, int]]:
+        """
+        Extract apartment breakdown from bar chart/image using GPT-4o Vision.
+
+        Args:
+            pdf_path: Path to PDF file
+            markdown: Document markdown (used to find page with chart)
+
+        Returns:
+            Dict mapping room types to counts, or None if extraction fails
+        """
+        try:
+            import fitz  # PyMuPDF
+            import base64
+            from io import BytesIO
+            from PIL import Image
+
+            # Find the page containing "Lägenhetsfördelning" by searching the PDF
+            doc = fitz.open(pdf_path)
+            target_page = None
+
+            # Look specifically for "Lägenhetsfördelning" (the section header)
+            for page_num in range(min(10, len(doc))):  # Check first 10 pages
+                page = doc[page_num]
+                text = page.get_text()
+                # Be specific - look for the section header, not just mentions of apartments
+                if "Lägenhetsfördelning" in text:
+                    target_page = page_num
+                    print(f"    → Found 'Lägenhetsfördelning' on page {page_num + 1}")
+                    break
+
+            if target_page is None:
+                # Fallback: search markdown for page hint
+                print("    → 'Lägenhetsfördelning' not found in PDF text, defaulting to page 2")
+                target_page = 1  # Default to page 2 (index 1)
+
+            # Render the page to image (high DPI for chart readability)
+            page = doc[target_page]
+            pix = page.get_pixmap(dpi=200)
+            img_bytes = pix.tobytes("png")
+
+            # Convert to base64
+            img_b64 = base64.b64encode(img_bytes).decode('utf-8')
+
+            doc.close()
+
+            # Call GPT-4o Vision
+            vision_prompt = """
+Extract apartment distribution data from this Swedish BRF document page.
+
+Look for a bar chart or table showing "Lägenhetsfördelning" (apartment distribution by room count).
+
+EXPECTED DATA FORMAT:
+- 1 rok (1 room): [count]
+- 2 rok (2 rooms): [count]
+- 3 rok (3 rooms): [count]
+- 4 rok (4 rooms): [count]
+- 5 rok (5 rooms): [count]
+- >5 rok (more than 5 rooms): [count]
+
+Return ONLY valid JSON in this exact format:
+{
+  "1_rok": <number>,
+  "2_rok": <number>,
+  "3_rok": <number>,
+  "4_rok": <number>,
+  "5_rok": <number>,
+  ">5_rok": <number>
+}
+
+If you cannot find apartment distribution data, return: {"_not_found": true}
+"""
+
+            print(f"    → Calling GPT-4o Vision on page {target_page + 1}...")
+            response = self.openai_client.chat.completions.create(
+                model="gpt-4o",
+                messages=[
+                    {
+                        "role": "user",
+                        "content": [
+                            {"type": "text", "text": vision_prompt},
+                            {
+                                "type": "image_url",
+                                "image_url": {
+                                    "url": f"data:image/png;base64,{img_b64}",
+                                    "detail": "high"
+                                }
+                            }
+                        ]
+                    }
+                ],
+                temperature=0,
+                max_tokens=500,
+                response_format={"type": "json_object"}
+            )
+
+            content = response.choices[0].message.content
+            result = json.loads(content)
+            print(f"    → GPT-4o returned: {result}")
+
+            # Validate result
+            if result and not result.get("_not_found"):
+                rok_keys = [k for k in result.keys() if "rok" in k]
+                if len(rok_keys) >= 3:  # At least 3 room types
+                    print(f"    ✓ Valid detailed breakdown with {len(rok_keys)} room types")
+                    return result
+                else:
+                    print(f"    ⚠ Only found {len(rok_keys)} room types, need at least 3")
+
+        except Exception as e:
+            print(f"    ✗ Vision extraction error: {e}")
+            import traceback
+            traceback.print_exc()
 
         return None
 
@@ -239,6 +371,10 @@ if __name__ == "__main__":
     from pathlib import Path
     from docling.document_converter import DocumentConverter
 
+    # Load environment variables
+    from dotenv import load_dotenv
+    load_dotenv()
+
     # Test on brf_198532.pdf
     test_pdf = "SRS/brf_198532.pdf"
 
@@ -268,7 +404,7 @@ if __name__ == "__main__":
     # Test apartment breakdown extraction
     print(f"\nTesting apartment breakdown extraction...")
     extractor = ApartmentBreakdownExtractor()
-    result = extractor.extract_apartment_breakdown(markdown, tables)
+    result = extractor.extract_apartment_breakdown(markdown, tables, pdf_path=test_pdf)
 
     # Print results
     print(f"\n✅ EXTRACTION RESULTS:")

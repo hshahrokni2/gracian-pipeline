@@ -1,9 +1,12 @@
 {
-  "granularity": "summary",
+  "granularity": "detailed",
   "breakdown": {
-    "total_apartments": 94,
-    "commercial_units": 2
+    "1_rok": 10,
+    "2_rok": 24,
+    "3_rok": 23,
+    "4_rok": 36,
+    "5_rok": 1,
+    ">5_rok": 0
   },
-  "source": "text_extraction",
-  "_warning": "Detailed breakdown table not found, using summary counts"
+  "source": "vision_chart_extraction"
 }
