@@ -18,6 +18,28 @@ Please read @PROJECT_INDEX.json to understand the codebase architecture
 
 **Current Status**: 🚧 Foundation complete (2,019 lines core code), extraction quality needs improvement (15.4% coverage vs 95% target)
 
+## 🗄️ **CRITICAL: PDF Corpus Locations**
+
+### Total Corpus: **89,955 PDFs** (194GB)
+**Location**: `~/Dropbox/zeldadb/zeldabot/pdf_docs/`
+
+| Document Type | PDFs | Size | Path |
+|---------------|------|------|------|
+| **Årsredovisning** | **26,342** | **91GB** | `~/Dropbox/zeldadb/zeldabot/pdf_docs/Årsredovisning/` |
+| **Stadgar** | ~27,000 | 75GB | `~/Dropbox/zeldadb/zeldabot/pdf_docs/Stadgar/` |
+| **Ekonomisk plan** | ~6,500 | 18GB | `~/Dropbox/zeldadb/zeldabot/pdf_docs/Ekonomisk plan/` |
+| **Energideklaration** | ~3,500 | 9.8GB | `~/Dropbox/zeldadb/zeldabot/pdf_docs/Energideklaration/` |
+
+### PDF Topology (from 221-doc sample):
+- **48.4%** Machine-Readable (text extraction, fast, free)
+- **49.3%** Scanned/Image (vision LLMs, slow, costly ~$0.10/doc)
+- **2.3%** Hybrid (adaptive approach)
+
+### Estimated Processing (26,342 årsredovisning):
+- **Machine-Readable** (12,750): ~3.5 hours, $0
+- **Scanned** (13,000): ~72 hours API / 7 hours H100, $1,300 API / $200 H100
+- **Total**: ~75 hours, ~$1,300 (or 10 hours, $200 with H100 optimization)
+
 ---
 
 ## 📍 Key Files & Locations
@@ -94,6 +116,35 @@ python run_gracian.py --input-dir ./data/raw_pdfs --batch-size 1
 export AUTO_VISION_IF_LOW_TEXT=true
 python run_gracian.py --input-dir ./data/raw_pdfs --batch-size 1
 ```
+
+### Mass PDF Scanning (89,955 Corpus)
+
+**Resume-capable mass scanning with checkpointing**:
+```bash
+# Scan all document types (Årsredovisning, Stadgar, Ekonomisk plan, Energideklaration)
+python mass_scan_pdfs.py --all
+
+# Scan specific document type
+python mass_scan_pdfs.py --type arsredovisning --batch-size 5000
+
+# Resume from checkpoint (automatic if scan_progress.db exists)
+python mass_scan_pdfs.py --resume --type arsredovisning
+
+# Custom base directory
+python mass_scan_pdfs.py --all --base-dir ~/custom/path/to/pdfs
+```
+
+**Features**:
+- SQLite checkpointing (resumes from last processed file)
+- Progress tracking with ETA
+- Incremental JSON saves every 1000 PDFs
+- Memory-efficient sampling for large PDFs
+- Categorizes: machine-readable (>800 chars/page), scanned (<200), hybrid (200-800)
+
+**Output**:
+- `scan_progress.db` - SQLite checkpoint database
+- `mass_scan_{type}_final.json` - Complete results
+- `mass_scan_{type}_checkpoint_*.json` - Intermediate saves
 
 ### Debugging
 
