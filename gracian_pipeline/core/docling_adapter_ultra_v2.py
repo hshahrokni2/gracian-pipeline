@@ -289,6 +289,10 @@ class RobustUltraComprehensiveExtractor:
         """
         Count non-null fields across all agents.
 
+        Special handling for nested Note 8 & 9 fields to ensure
+        accurate coverage calculation (counts individual fields within
+        building_details and receivables_breakdown).
+
         Args:
             extraction: Full extraction result
 
@@ -300,7 +304,12 @@ class RobustUltraComprehensiveExtractor:
             if isinstance(agent_data, dict) and not agent_key.startswith("_"):
                 for field_key, value in agent_data.items():
                     if not field_key.startswith("_"):  # Skip metadata
-                        if value not in [None, [], {}, ""]:
+                        # Special handling for nested Note 8 & 9 fields
+                        if field_key in ["building_details", "receivables_breakdown"] and isinstance(value, dict):
+                            # Count individual fields within these nested structures
+                            nested_count = len([k for k in value.keys() if not k.startswith("_")])
+                            count += nested_count
+                        elif value not in [None, [], {}, ""]:
                             count += 1
         return count
 
