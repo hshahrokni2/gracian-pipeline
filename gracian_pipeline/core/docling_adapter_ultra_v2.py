@@ -22,6 +22,7 @@ from gracian_pipeline.core.docling_adapter_ultra import UltraComprehensiveDoclin
 from gracian_pipeline.core.hierarchical_financial import HierarchicalFinancialExtractor
 from gracian_pipeline.core.apartment_breakdown import ApartmentBreakdownExtractor
 from gracian_pipeline.core.fee_field_migrator import FeeFieldMigrator
+from gracian_pipeline.core.property_designation import PropertyDesignationExtractor
 
 
 class RobustUltraComprehensiveExtractor:
@@ -35,6 +36,7 @@ class RobustUltraComprehensiveExtractor:
         self.financial_extractor = HierarchicalFinancialExtractor()
         self.apartment_extractor = ApartmentBreakdownExtractor()
         self.fee_migrator = FeeFieldMigrator()
+        self.property_extractor = PropertyDesignationExtractor()
 
     def extract_brf_document(self, pdf_path: str, mode: str = "auto") -> Dict[str, Any]:
         """
@@ -132,6 +134,24 @@ class RobustUltraComprehensiveExtractor:
                         base_result["property_agent"]["apartment_breakdown"] = detailed_apt_result["breakdown"]
                         base_result["property_agent"]["_apartment_breakdown_granularity"] = detailed_apt_result["granularity"]
                     print(f"    ⚠ Using {detailed_apt_result['granularity']} breakdown")
+
+            # 2c. Property designation extraction (if missing)
+            if not base_result.get("property_agent", {}).get("property_designation"):
+                print("  → Attempting property designation extraction...")
+
+                # Get docling markdown
+                markdown = base_result.get("_docling_markdown", "")
+
+                property_designation = self.property_extractor.extract_property_designation(markdown)
+
+                if property_designation:
+                    if "property_agent" not in base_result:
+                        base_result["property_agent"] = {}
+                    base_result["property_agent"]["property_designation"] = property_designation
+                    base_result["property_agent"]["_property_designation_extracted"] = True
+                    print(f"    ✓ Extracted property designation: {property_designation}")
+                else:
+                    print("    ⚠ Property designation not found")
 
             pass2_time = time.time() - pass2_start
             print(f"  ✓ Deep extraction complete in {pass2_time:.1f}s")
