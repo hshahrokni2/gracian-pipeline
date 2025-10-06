@@ -1,0 +1,251 @@
+{
+  "Fastighetskostnader": {
+    "items": [
+      {
+        "name": "Fastighetsskötsel entreprenad",
+        "2021": 185600,
+        "2020": 184529
+      },
+      {
+        "name": "Fastighetsskötsel beställning",
+        "2021": 15291,
+        "2020": 10122
+      },
+      {
+        "name": "Fastighetsskötsel gård beställning",
+        "2021": 0,
+        "2020": -10690
+      },
+      {
+        "name": "Snöröjning/sandning",
+        "2021": 0,
+        "2020": 4762
+      },
+      {
+        "name": "Städning entreprenad",
+        "2021": 78417,
+        "2020": 75999
+      },
+      {
+        "name": "Städning enligt beställning",
+        "2021": 16136,
+        "2020": 17626
+      },
+      {
+        "name": "Mattvätt/Hyrmattor",
+        "2021": 15787,
+        "2020": 16728
+      },
+      {
+        "name": "OVK Obl. Ventilationskontroll",
+        "2021": -6807,
+        "2020": 134651
+      },
+      {
+        "name": "Hissbesiktning",
+        "2021": 7410,
+        "2020": 4333
+      },
+      {
+        "name": "Myndighetstillsyn",
+        "2021": 2460,
+        "2020": 7800
+      },
+      {
+        "name": "Gemensamma utrymmen",
+        "2021": 0,
+        "2020": 1502
+      },
+      {
+        "name": "Sophantering",
+        "2021": 92096,
+        "2020": 110211
+      },
+      {
+        "name": "Gård",
+        "2021": 667,
+        "2020": 1604
+      },
+      {
+        "name": "Serviceavtal",
+        "2021": 42575,
+        "2020": 59284
+      },
+      {
+        "name": "Förbrukningsmateriel",
+        "2021": 26629,
+        "2020": 24477
+      },
+      {
+        "name": "Störningsjour och larm",
+        "2021": 0,
+        "2020": 4953
+      },
+      {
+        "name": "Brandskydd",
+        "2021": 77330,
+        "2020": 5300
+      }
+    ],
+    "subtotal": {
+      "2021": 553590,
+      "2020": 653192
+    }
+  },
+  "Reparationer": {
+    "items": [
+      {
+        "name": "Lokaler",
+        "2021": 35731,
+        "2020": 0
+      },
+      {
+        "name": "Sophantering/återvinning",
+        "2021": 4223,
+        "2020": 29450
+      },
+      {
+        "name": "Entré/trapphus",
+        "2021": 54690,
+        "2020": 38731
+      },
+      {
+        "name": "Lås",
+        "2021": 29722,
+        "2020": 21923
+      },
+      {
+        "name": "VVS",
+        "2021": 84806,
+        "2020": 22588
+      },
+      {
+        "name": "Värmeanläggning/undercentral",
+        "2021": 0,
+        "2020": 13216
+      },
+      {
+        "name": "Ventilation",
+        "2021": 3892,
+        "2020": 2198
+      },
+      {
+        "name": "Elinstallationer",
+        "2021": 16750,
+        "2020": 0
+      },
+      {
+        "name": "Tele/TV/Kabel-TV/porttelefon",
+        "2021": 1130,
+        "2020": 1757
+      },
+      {
+        "name": "Hiss",
+        "2021": 8361,
+        "2020": 0
+      },
+      {
+        "name": "Mark/gård/utemiljö",
+        "2021": 14632,
+        "2020": 0
+      },
+      {
+        "name": "Garage/parkering",
+        "2021": 1701,
+        "2020": 0
+      },
+      {
+        "name": "Skador/klotter/skadegörelse",
+        "2021": 2366,
+        "2020": 76468
+      }
+    ],
+    "subtotal": {
+      "2021": 258004,
+      "2020": 206330
+    }
+  },
+  "Periodiskt underhåll": {
+    "items": [
+      {
+        "name": "Entré/trapphus",
+        "2021": 27308,
+        "2020": 0
+      },
+      {
+        "name": "Lås",
+        "2021": 21653,
+        "2020": 0
+      }
+    ],
+    "subtotal": {
+      "2021": 48961,
+      "2020": 0
+    }
+  },
+  "Taxebundna kostnader": {
+    "items": [
+      {
+        "name": "El",
+        "2021": 698763,
+        "2020": 363028
+      },
+      {
+        "name": "Värme",
+        "2021": 438246,
+        "2020": 379651
+      },
+      {
+        "name": "Vatten",
+        "2021": 162487,
+        "2020": 134655
+      },
+      {
+        "name": "Sophämtning/renhållning",
+        "2021": 60293,
+        "2020": 47400
+      }
+    ],
+    "subtotal": {
+      "2021": 1359788,
+      "2020": 924735
+    }
+  },
+  "Övriga driftkostnader": {
+    "items": [
+      {
+        "name": "Försäkring",
+        "2021": 84068,
+        "2020": 82597
+      },
+      {
+        "name": "Sopsug",
+        "2021": 21603,
+        "2020": 0
+      },
+      {
+        "name": "Samfällighetsavgift",
+        "2021": 94000,
+        "2020": 70500
+      },
+      {
+        "name": "Bredband",
+        "2021": 222785,
+        "2020": 223023
+      }
+    ],
+    "subtotal": {
+      "2021": 422455,
+      "2020": 376120
+    }
+  },
+  "_validation": {
+    "categories_found": 5,
+    "categories_expected": 5,
+    "total_items_extracted": 40,
+    "subtotals_validated": true,
+    "warnings": [
+      "Low item count: 40 < 50 expected"
+    ]
+  }
+}

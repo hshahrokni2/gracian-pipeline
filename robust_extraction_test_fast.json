@@ -1,0 +1,350 @@
+{
+  "governance_agent": {
+    "chairman": "Elvy Maria Löfvenberg",
+    "board_members": [
+      "Torbjörn Andersson",
+      "Maria Annelie Eck Arvstrand",
+      "Mats Eskilson",
+      "Fredrik Linde"
+    ],
+    "auditor_name": "Tobias Andersson",
+    "audit_firm": "KPMG AB",
+    "nomination_committee": [
+      "Victoria Blennborn",
+      "Mattias Lovén"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3
+    ],
+    "alternate_board_members": [
+      "Lisa Lind",
+      "Daniel Wetter"
+    ],
+    "internal_auditor": "Oskar Klenell",
+    "board_meeting_frequency": "14 protokollförda sammanträden"
+  },
+  "financial_agent": {
+    "revenue": 7451585,
+    "expenses": 6631400,
+    "assets": 675294786,
+    "liabilities": 115487111,
+    "equity": 559807676,
+    "surplus": -353810,
+    "evidence_pages": [
+      4,
+      5,
+      6
+    ],
+    "operating_costs_breakdown": {
+      "driftkostnader": 2834798,
+      "övriga externa kostnader": 229331,
+      "personalkostnader": 63912,
+      "avskrivningar": 3503359
+    },
+    "building_details": {
+      "byggnader": 666670761
+    },
+    "other_receivables": {
+      "avgifts- och hyresfordringar": 429,
+      "övriga fordringar inkl SBC Klientmedel": 5480408
+    },
+    "reserve_fund_movements": {
+      "fond för yttre underhåll": {
+        "vid årets början": 800065,
+        "reservering enligt stadgar": 226590,
+        "vid årets slut": 1026655
+      }
+    },
+    "income_breakdown": {
+      "årsavgifter": 4383289,
+      "hyror lokaler momspliktiga": 610566,
+      "hyror lokaler": 399439,
+      "hyror garage": 1105450,
+      "kabel-TV intäkter": 247940,
+      "varmvattenintäkter": 213196,
+      "elintäkter": 30000,
+      "elintäkter moms": 384102,
+      "avgift andrahandsuthyrning": 5553
+    },
+    "tax_details": {
+      "fastighetsskatt/kommunal avgift": 192000
+    }
+  },
+  "property_agent": {
+    "designation": "Bostadsrättsföreningen Björk och Plaza",
+    "address": null,
+    "postal_code": null,
+    "city": "Stockholm",
+    "built_year": "2015",
+    "apartments": 94,
+    "energy_class": null,
+    "evidence_pages": [
+      2,
+      3,
+      4
+    ],
+    "acquisition_date": "2015",
+    "municipality": "Stockholm",
+    "heating_system": "Fjärrvärme",
+    "insurance_provider": "Brandkontoret",
+    "insurance_details": "Fullvärdesförsäkring med kollektivt bostadsrättstillägg och ansvarsförsäkring för styrelsen",
+    "apartment_breakdown": {
+      "1 rok": null,
+      "2 rok": null,
+      "3 rok": null
+    },
+    "commercial_tenants": [
+      {
+        "tenant": "Puls& Träning Sweden AB",
+        "area": "282 m²",
+        "lease_term": "2017-06-20 - 2022-06-19"
+      },
+      {
+        "tenant": "Barnsjukhuset Martina i Stockholm AB",
+        "area": "197 m²",
+        "lease_term": "2020-06-22 - 2030-06-21"
+      }
+    ],
+    "common_areas": [
+      "Två gemensamma terrasser",
+      "Två gemensamma entréer",
+      "Två gemensamhetslokaler"
+    ],
+    "samfallighet": {
+      "name": "Sonfjällets samfällighetsförening",
+      "ownership_percentage": 47,
+      "managed_areas": [
+        "gård",
+        "garagefoajé",
+        "garageport"
+      ]
+    },
+    "registration_dates": {
+      "förening": "2014-11-03",
+      "ekonomisk plan": "2016-11-22",
+      "stadgar": "2016-11-14"
+    },
+    "tax_assessment": {
+      "bostäder": 370000000,
+      "lokaler": 19200000
+    }
+  },
+  "notes_depreciation_agent": {
+    "depreciation_method": "Avskrivningar på anläggningstillgångar enligt plan",
+    "useful_life_years": "100 år",
+    "depreciation_base": "ursprungliga anskaffningsvärdet",
+    "evidence_pages": [
+      6,
+      7
+    ]
+  },
+  "notes_maintenance_agent": {
+    "maintenance_plan": "Underhållsplan 2018-2043",
+    "maintenance_budget": null,
+    "evidence_pages": [
+      3,
+      4
+    ],
+    "planned_actions": [
+      {
+        "action": "Behandling av trädäcken",
+        "year": "2021",
+        "comment": "Genomförs 2022/23"
+      },
+      {
+        "action": "Behandling av träfasad",
+        "year": "2023",
+        "comment": null
+      }
+    ],
+    "technical_status": "Föreningen följer en underhållsplan",
+    "suppliers": [
+      "SBC AB och SBC Betaltjänster AB",
+      "Etcon Fastighetsteknik AB",
+      "Ownit Broadband AB",
+      "Remondis",
+      "Kone",
+      "JC Miljöstäd AB",
+      "Envac Optibag AB",
+      "Dekra Sweden AB",
+      "Xylem",
+      "Dekra",
+      "KTC",
+      "Stockholm stad genom BoDab Ellevio",
+      "Energiförsäljning Sverige",
+      "Stockholm Exergi",
+      "Stockholm Vatten och Avfall AB",
+      "Bolander&Co",
+      "Brandkontoret"
+    ],
+    "service_contracts": {
+      "Ekonomisk förvaltning": "SBC AB och SBC Betaltjänster AB",
+      "Teknisk Fastighetsförvaltning": "Etcon Fastighetsteknik AB",
+      "Bredband, TV, Telefoni": "Ownit Broadband AB",
+      "Miljörum och grovsopor": "Remondis",
+      "Hissar": "Kone",
+      "Snöröjning, garagestädning": "JC Miljöstäd AB",
+      "Sopsug, tillsyn och service i": "Envac Optibag AB",
+      "Städning": "JC MIljöstäd AB",
+      "Hissar, besiktning": "Dekra Sweden AB",
+      "Avloppspump, tillsyn och service": "Xylem",
+      "Portar, besiktning": "Dekra",
+      "Debiteringsunderlag, felrapportering, MeView": "KTC",
+      "SBA (Systematiskt brandskyddsarbete)": "Etcon Fastighetsteknik AB",
+      "Drift av central sopsugsanläggning Elnät": "Stockholm stad genom BoDab Ellevio",
+      "Elenergi": "Energiförsäljning Sverige",
+      "Fjärrvärme": "Stockholm Exergi",
+      "Vatten och avlopp": "Stockholm Vatten och Avfall AB",
+      "Försäkringsrådgivare": "Bolander&Co",
+      "Fastighetsförsäkring": "Brandkontoret"
+    }
+  },
+  "notes_tax_agent": {
+    "current_tax": "0,3% av taxeringsvärdet för bostadshus",
+    "deferred_tax": null,
+    "tax_policy": "Fastighetsavgiften för hyreshus",
+    "evidence_pages": [
+      5
+    ],
+    "tax_type": "Fastighetsavgift",
+    "tax_law_reference": "Inkomstskattelagen (1999:1229)"
+  },
+  "events_agent": {
+    "key_events": [
+      "Arbetet med att hävda s.k A-anmärkningar från garantibesiktningen hösten 2019 har fortsatt.",
+      "Föreningens hyresgäst Puls & Träning är uppköpt av Svenska Nérgy AB.",
+      "Lån nr 41431520 hos SEB är villkorsändrat och löper på 3 år med 0,57 % ränta.",
+      "Antal andrahandsuthyrningar under år 2021 var 6 stycken.",
+      "Ett nytt avtal är tecknat med SBC, föreningens ekonomiska förvaltare.",
+      "Fastigheten är deklarerad för ny taxering 2022.",
+      "Offerter är framtagna för underhållsarbete av terrassgolven och Björks fasadpanel.",
+      "Plazas fasad är lagad.",
+      "Skalskyddet på entréer och källardörrar har förbättrats.",
+      "Beslutsunderlag för installation av laddstolpar finns framtaget.",
+      "Obligatorisk ventilationskontroll är genomförd och alla aggregat (3 st) är godkända.",
+      "Hissarna är säkerhetsbesiktigade och godkända."
+    ],
+    "maintenance_budget": null,
+    "annual_meeting_date": "2021-06-08",
+    "evidence_pages": [
+      3,
+      4,
+      5
+    ],
+    "warranty_claims": "Arbetet med att hävda s.k A-anmärkningar från garantibesiktningen hösten 2019 har fortsatt.",
+    "tenant_changes": "Föreningens hyresgäst Puls & Träning är uppköpt av Svenska Nérgy AB.",
+    "loan_restructuring": "Lån nr 41431520 hos SEB är villkorsändrat och löper på 3 år med 0,57 % ränta.",
+    "rental_activity": "Antal andrahandsuthyrningar under år 2021 var 6 stycken."
+  },
+  "audit_agent": {
+    "auditor": "Tobias Andersson",
+    "opinion": "Årsredovisningen ger en rättvisande bild av föreningens finansiella ställning.",
+    "clean_opinion": true,
+    "evidence_pages": [
+      7,
+      8
+    ],
+    "audit_date": null,
+    "audit_location": "Stockholm",
+    "qualifications": null
+  },
+  "loans_agent": {
+    "outstanding_loans": 114480000,
+    "interest_rate": 0.57,
+    "amortization": null,
+    "evidence_pages": [
+      6,
+      7
+    ],
+    "loan_provider": "SEB",
+    "loan_number": "41431520",
+    "loan_term": "3 år",
+    "amortization_schedule": "Amorteras med 500.000 kr /kvartal",
+    "loan_changes": "Villkorsändrat och löper på 3 år med 0,57 % ränta"
+  },
+  "reserves_agent": {
+    "reserve_fund": 1026655,
+    "monthly_fee": null,
+    "evidence_pages": [
+      5,
+      6
+    ],
+    "reserve_policy": "Reservering till fond för yttre underhåll enligt stadgar",
+    "fund_name": "Fond för yttre underhåll",
+    "annual_allocation": 226590
+  },
+  "energy_agent": {
+    "energy_class": null,
+    "energy_performance": null,
+    "inspection_date": null,
+    "evidence_pages": [],
+    "energy_source": "Fjärrvärme"
+  },
+  "fees_agent": {
+    "monthly_fee": null,
+    "planned_fee_change": "Årsavgifterna planeras vara oförändrade närmaste året.",
+    "fee_policy": "Föreningen ska verka enligt självkostnadsprincipen",
+    "evidence_pages": [
+      2,
+      3
+    ],
+    "fee_calculation_basis": null,
+    "fee_per_sqm": 582,
+    "fee_unit": "m²",
+    "arsavgift_per_sqm": 582,
+    "_fee_unit_verified": "per_sqm",
+    "_fee_period_verified": "annual",
+    "_migration_applied": true,
+    "_migration_log": [
+      "fee_per_sqm → arsavgift_per_sqm (time unit assumed annual)"
+    ]
+  },
+  "cashflow_agent": {
+    "cash_in": 7641623,
+    "cash_out": 5654782,
+    "cash_change": 1986840,
+    "evidence_pages": [
+      5
+    ],
+    "operating_activities": null,
+    "investing_activities": null,
+    "financing_activities": null
+  },
+  "docling_metadata": {
+    "char_count": 45202,
+    "table_count": 17,
+    "processing_method": "ultra_comprehensive_single_call",
+    "schema_version": "comprehensive_v1",
+    "total_fields_target": 107
+  },
+  "coverage_metrics": {
+    "total_fields": 107,
+    "extracted_fields": 76,
+    "coverage_percent": 71.0
+  },
+  "status": "success",
+  "pdf_path": "SRS/brf_198532.pdf",
+  "_validation_warnings": [
+    "arsavgift_per_sqm populated but no _fee_terminology_found - verify extraction"
+  ],
+  "_quality_metrics": {
+    "total_fields": 107,
+    "extracted_fields": 97,
+    "coverage_percent": 90.7,
+    "quality_grade": "A",
+    "warnings_count": 1,
+    "detailed_extraction_applied": false,
+    "apartment_granularity": "none",
+    "fee_schema_version": "v2"
+  },
+  "_processing_metadata": {
+    "total_time_seconds": 137.77,
+    "pass1_base_time": 137.77,
+    "pass2_deep_time": 0,
+    "pass3_validation_time": 0.0,
+    "pass4_quality_time": 0.0,
+    "extraction_mode": "fast"
+  }
+}

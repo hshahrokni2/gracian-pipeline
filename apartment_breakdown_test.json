@@ -1,0 +1,9 @@
+{
+  "granularity": "summary",
+  "breakdown": {
+    "total_apartments": 94,
+    "commercial_units": 2
+  },
+  "source": "text_extraction",
+  "_warning": "Detailed breakdown table not found, using summary counts"
+}
