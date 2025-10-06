@@ -1,0 +1,109 @@
+{
+  "timestamp": "20251006_125351",
+  "pdf": "SRS/brf_198532.pdf",
+  "elapsed_seconds": 69.7,
+  "coverage": {
+    "total_fields": 46,
+    "extracted_fields": 0,
+    "coverage_percent": 0.0
+  },
+  "results": {
+    "status": "success",
+    "method": "docling_comprehensive_13_agents",
+    "governance_agent": {
+      "chairman": null,
+      "board_members": [],
+      "auditor_name": null,
+      "audit_firm": null,
+      "nomination_committee": [],
+      "evidence_pages": []
+    },
+    "financial_agent": {
+      "revenue": null,
+      "expenses": null,
+      "assets": null,
+      "liabilities": null,
+      "equity": null,
+      "surplus": null,
+      "evidence_pages": []
+    },
+    "property_agent": {
+      "designation": null,
+      "address": null,
+      "postal_code": null,
+      "city": null,
+      "built_year": null,
+      "apartments": null,
+      "energy_class": null,
+      "evidence_pages": []
+    },
+    "notes_depreciation_agent": {
+      "depreciation_method": null,
+      "useful_life_years": null,
+      "depreciation_base": null,
+      "evidence_pages": []
+    },
+    "notes_maintenance_agent": {
+      "maintenance_plan": null,
+      "maintenance_budget": null,
+      "evidence_pages": []
+    },
+    "notes_tax_agent": {
+      "current_tax": null,
+      "deferred_tax": null,
+      "tax_policy": null,
+      "evidence_pages": []
+    },
+    "events_agent": {
+      "key_events": [],
+      "maintenance_budget": null,
+      "annual_meeting_date": null,
+      "evidence_pages": []
+    },
+    "audit_agent": {
+      "auditor": null,
+      "opinion": null,
+      "clean_opinion": null,
+      "evidence_pages": []
+    },
+    "loans_agent": {
+      "outstanding_loans": null,
+      "interest_rate": null,
+      "amortization": null,
+      "evidence_pages": []
+    },
+    "reserves_agent": {
+      "reserve_fund": null,
+      "monthly_fee": null,
+      "evidence_pages": []
+    },
+    "energy_agent": {
+      "energy_class": null,
+      "energy_performance": null,
+      "inspection_date": null,
+      "evidence_pages": []
+    },
+    "fees_agent": {
+      "monthly_fee": null,
+      "planned_fee_change": null,
+      "fee_policy": null,
+      "evidence_pages": []
+    },
+    "cashflow_agent": {
+      "cash_in": null,
+      "cash_out": null,
+      "cash_change": null,
+      "evidence_pages": []
+    },
+    "docling_metadata": {
+      "char_count": 45202,
+      "table_count": 17,
+      "processing_method": "comprehensive_single_call"
+    },
+    "coverage_metrics": {
+      "total_fields": 46,
+      "extracted_fields": 0,
+      "coverage_percent": 0.0
+    }
+  }
+}

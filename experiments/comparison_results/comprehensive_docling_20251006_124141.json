@@ -1,0 +1,161 @@
+{
+  "timestamp": "20251006_124141",
+  "pdf": "SRS/brf_198532.pdf",
+  "elapsed_seconds": 78.9,
+  "coverage": {
+    "total_fields": 46,
+    "extracted_fields": 34,
+    "coverage_percent": 73.9
+  },
+  "results": {
+    "status": "success",
+    "method": "docling_comprehensive_13_agents",
+    "governance_agent": {
+      "chairman": "Elvy Maria Löfvenberg",
+      "board_members": [
+        "Elvy Maria Löfvenberg",
+        "Torbjörn Andersson",
+        "Maria Annelie Eck Arvstrand",
+        "Mats Eskilson",
+        "Fredrik Linde",
+        "Lisa Lind",
+        "Daniel Wetter"
+      ],
+      "auditor_name": "Tobias Andersson",
+      "audit_firm": "KPMG AB",
+      "nomination_committee": [
+        "Victoria Blennborn",
+        "Mattias Lovén"
+      ],
+      "evidence_pages": [
+        1,
+        2,
+        3
+      ]
+    },
+    "financial_agent": {
+      "revenue": 7451585,
+      "expenses": 6631400,
+      "assets": 675294786,
+      "liabilities": 115487111,
+      "equity": 559807676,
+      "surplus": -353810,
+      "evidence_pages": [
+        4,
+        5,
+        6
+      ]
+    },
+    "property_agent": {
+      "designation": "Sonfjället 2",
+      "address": null,
+      "postal_code": null,
+      "city": "Stockholm",
+      "built_year": 2015,
+      "apartments": 94,
+      "energy_class": null,
+      "evidence_pages": [
+        1,
+        2
+      ]
+    },
+    "notes_depreciation_agent": {
+      "depreciation_method": "Linjär avskrivning",
+      "useful_life_years": "100 år",
+      "depreciation_base": "Byggnader",
+      "evidence_pages": [
+        7,
+        8
+      ]
+    },
+    "notes_maintenance_agent": {
+      "maintenance_plan": "Underhållsplan 2018-2043",
+      "maintenance_budget": null,
+      "evidence_pages": [
+        9
+      ]
+    },
+    "notes_tax_agent": {
+      "current_tax": null,
+      "deferred_tax": null,
+      "tax_policy": "Fastighetsavgift och lokalbeskattning",
+      "evidence_pages": [
+        10
+      ]
+    },
+    "events_agent": {
+      "key_events": [
+        "Arbetet med att hävda A-anmärkningar från garantibesiktningen",
+        "Hyresgäst Puls & Träning uppköpt av Svenska Nérgy AB",
+        "Lån nr 41431520 hos SEB villkorsändrat",
+        "Antal andrahandsuthyrningar under år 2021 var 6 stycken",
+        "Nytt avtal med SBC tecknat"
+      ],
+      "maintenance_budget": null,
+      "annual_meeting_date": "2021-06-08",
+      "evidence_pages": [
+        2,
+        3
+      ]
+    },
+    "audit_agent": {
+      "auditor": "Tobias Andersson",
+      "opinion": "Clean",
+      "clean_opinion": true,
+      "evidence_pages": [
+        15,
+        16
+      ]
+    },
+    "loans_agent": {
+      "outstanding_loans": 114480000,
+      "interest_rate": 0.57,
+      "amortization": 500000,
+      "evidence_pages": [
+        11
+      ]
+    },
+    "reserves_agent": {
+      "reserve_fund": 1026655,
+      "monthly_fee": null,
+      "evidence_pages": [
+        12
+      ]
+    },
+    "energy_agent": {
+      "energy_class": null,
+      "energy_performance": null,
+      "inspection_date": null,
+      "evidence_pages": [
+        13
+      ]
+    },
+    "fees_agent": {
+      "monthly_fee": null,
+      "planned_fee_change": "Oförändrade närmaste året",
+      "fee_policy": "Självkostnadsprincipen",
+      "evidence_pages": [
+        14
+      ]
+    },
+    "cashflow_agent": {
+      "cash_in": 7641623,
+      "cash_out": 5654782,
+      "cash_change": 1986840,
+      "evidence_pages": [
+        6,
+        7
+      ]
+    },
+    "docling_metadata": {
+      "char_count": 45202,
+      "table_count": 17,
+      "processing_method": "comprehensive_single_call"
+    },
+    "coverage_metrics": {
+      "total_fields": 46,
+      "extracted_fields": 34,
+      "coverage_percent": 73.9
+    }
+  }
+}
