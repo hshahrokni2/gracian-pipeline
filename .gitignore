@@ -66,3 +66,7 @@ data/raw_pdfs/outputs/schema_proposals/
 data/raw_pdfs/outputs/coach_history/
 data/raw_pdfs/outputs/summary.json
 *.db
+
+# Mass scanning checkpoints (intermediate files)
+mass_scan_*_checkpoint_*.json
+scan_progress.db

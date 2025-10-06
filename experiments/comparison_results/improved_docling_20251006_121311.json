@@ -1,0 +1,64 @@
+{
+  "timestamp": "2025-10-06T12:13:11.832535",
+  "pdf": "brf_198532.pdf",
+  "elapsed_seconds": 50.176642656326294,
+  "coverage_percent": 100.0,
+  "fields_extracted": 15,
+  "total_fields": 15,
+  "results": {
+    "status": "success",
+    "method": "docling_improved",
+    "governance_agent": {
+      "chairman": "Elvy Maria Löfvenberg",
+      "board_members": [
+        "Elvy Maria Löfvenberg",
+        "Torbjörn Andersson",
+        "Maria Annelie Eck Arvstrand",
+        "Mats Eskilson",
+        "Fredrik Linde",
+        "Lisa Lind",
+        "Daniel Wetter"
+      ],
+      "auditor_name": "Tobias Andersson",
+      "audit_firm": "KPMG AB",
+      "nomination_committee": [
+        "Victoria Blennborn",
+        "Mattias Lovén"
+      ],
+      "evidence_pages": [
+        1,
+        2,
+        3
+      ]
+    },
+    "financial_agent": {
+      "revenue": 7451585,
+      "expenses": 6631400,
+      "assets": 675294786,
+      "liabilities": 115487111,
+      "equity": 559807676,
+      "surplus": -353810,
+      "evidence_pages": [
+        4,
+        5,
+        6
+      ]
+    },
+    "property_agent": {
+      "address": "Sonfjället 2, Stockholm",
+      "construction_year": 2015,
+      "num_apartments": 94,
+      "area_sqm": 8009,
+      "evidence_pages": [
+        1,
+        2
+      ]
+    },
+    "notes_agent": {},
+    "docling_metadata": {
+      "char_count": 45202,
+      "table_count": 17,
+      "processing_method": "docling_combined_extraction"
+    }
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "session_id": 2,
+  "document_type": "arsredovisning",
+  "timestamp": "20251006_114116",
+  "total_processed": 26342,
+  "summary": {
+    "hybrid": 1786,
+    "machine_readable": 12454,
+    "scanned": 12101,
+    "locked": 0,
+    "corrupted": 1
+  },
+  "sample_results": {
+    "machine_readable": [
+      {
+        "path": "/Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Årsredovisning/146127_årsredovisning_göteborg_brf_västerberget.pdf",
+        "filename": "146127_årsredovisning_göteborg_brf_västerberget.pdf",
+        "size_mb": 0.62,
+        "pages": 19,
+        "text_chars": 33898,
+        "avg_chars_per_page": 1784.1052631578948,
+        "is_encrypted": false,
+        "is_locked": 0,
+        "category": "machine_readable",
+        "error": null
+      },
+      {
+        "path": "/Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Årsredovisning/277252_årsredovisning_stockholm_brf_klubbhöjden.pdf",
+        "filename": "277252_årsredovisning_stockholm_brf_klubbhöjden.pdf",
+        "size_mb": 2.36,
+        "pages": 17,
+        "text_chars": 17878,
+        "avg_chars_per_page": 1051.6470588235295,
+        "is_encrypted": false,
+        "is_locked": 0,
+        "category": "machine_readable",
+        "error": null
+      },
+      {
+        "path": "/Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Årsredovisning/267381_årsredovisning_stockholm_brf_hyllan_i_stockholm.pdf",
+        "filename": "267381_årsredovisning_stockholm_brf_hyllan_i_stockholm.pdf",
+        "size_mb": 0.99,
+        "pages": 16,
+        "text_chars": 26588,
+        "avg_chars_per_page": 1661.75,
+        "is_encrypted": false,
+        "is_locked": 0,
+        "category": "machine_readable",
+        "error": null
+      },
+      {
+        "path": "/Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Årsredovisning/282237_årsredovisning_trosa_brf_boklok_backsippan.pdf",
+        "filename": "282237_årsredovisning_trosa_brf_boklok_backsippan.pdf",
+        "size_mb": 0.39,
+        "pages": 13,
+        "text_chars": 21853,
+        "avg_chars_per_page": 1681.0,
+        "is_encrypted": false,
+        "is_locked": 0,
+        "category": "machine_readable",
+        "error": null
+      },
+      {
+        "path": "/Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Årsredovisning/81821_årsredovisning_varberg_hsb_brf_turebo_i_varberg.pdf",
+        "filename": "81821_årsredovisning_varberg_hsb_brf_turebo_i_varberg.pdf",
+        "size_mb": 2.91,
+        "pages": 19,
+        "text_chars": 40408,
+        "avg_chars_per_page": 2126.7368421052633,
+        "is_encrypted": false,
+        "is_locked": 0,
+        "category": "machine_readable",
+        "error": null
+      }
+    ],
+    "scanned": [
+      {
+        "path": "/Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Årsredovisning/267751_årsredovisning__brf_strandparken_dalénum.pdf",
+        "filename": "267751_årsredovisning__brf_strandparken_dalénum.pdf",
+        "size_mb": 0.41,
+        "pages": 17,
+        "text_chars": 0,
+        "avg_chars_per_page": 0.0,
+        "is_encrypted": false,
+        "is_locked": 0,
+        "category": "scanned",
+        "error": null
+      },
+      {
+        "path": "/Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Årsredovisning/55743_årsredovisning_jönköping_brf_munksjöpromenaden.pdf",
+        "filename": "55743_årsredovisning_jönköping_brf_munksjöpromenaden.pdf",
+        "size_mb": 10.89,
+        "pages": 24,
+        "text_chars": 0,
+        "avg_chars_per_page": 0.0,
+        "is_encrypted": false,
+        "is_locked": 0,
+        "category": "scanned",
+        "error": null
+      },
+      {
+        "path": "/Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Årsredovisning/80968_årsredovisning__brf_regattan_2.pdf",
+        "filename": "80968_årsredovisning__brf_regattan_2.pdf",
+        "size_mb": 2.49,
+        "pages": 15,
+        "text_chars": 0,
+        "avg_chars_per_page": 0.0,
+        "is_encrypted": false,
+        "is_locked": 0,
+        "category": "scanned",
+        "error": null
+      },
+      {
+        "path": "/Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Årsredovisning/276228_årsredovisning_göteborg_brf_foldern.pdf",
+        "filename": "276228_årsredovisning_göteborg_brf_foldern.pdf",
+        "size_mb": 7.07,
+        "pages": 19,
+        "text_chars": 1080,
+        "avg_chars_per_page": 56.8421052631579,
+        "is_encrypted": false,
+        "is_locked": 0,
+        "category": "scanned",
+        "error": null
+      },
+      {
+        "path": "/Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Årsredovisning/78285_årsredovisning_helsingborg_brf_hilltorp_norra_nr_2.pdf",
+        "filename": "78285_årsredovisning_helsingborg_brf_hilltorp_norra_nr_2.pdf",
+        "size_mb": 3.77,
+        "pages": 22,
+        "text_chars": 193,
+        "avg_chars_per_page": 8.772727272727273,
+        "is_encrypted": false,
+        "is_locked": 0,
+        "category": "scanned",
+        "error": null
+      }
+    ],
+    "hybrid": [
+      {
+        "path": "/Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Årsredovisning/81060_årsredovisning_malmö_brf_reval.pdf",
+        "filename": "81060_årsredovisning_malmö_brf_reval.pdf",
+        "size_mb": 4.86,
+        "pages": 21,
+        "text_chars": 13423,
+        "avg_chars_per_page": 639.1904761904761,
+        "is_encrypted": false,
+        "is_locked": 0,
+        "category": "hybrid",
+        "error": null
+      },
+      {
+        "path": "/Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Årsredovisning/79807_årsredovisning_luleå_hsb_brf_strandängen.pdf",
+        "filename": "79807_årsredovisning_luleå_hsb_brf_strandängen.pdf",
+        "size_mb": 2.52,
+        "pages": 21,
+        "text_chars": 5880,
+        "avg_chars_per_page": 280.0,
+        "is_encrypted": false,
+        "is_locked": 0,
+        "category": "hybrid",
+        "error": null
+      },
+      {
+        "path": "/Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Årsredovisning/278014_årsredovisning_luleå_brf_hällbacken_i_luleå.pdf",
+        "filename": "278014_årsredovisning_luleå_brf_hällbacken_i_luleå.pdf",
+        "size_mb": 8.48,
+        "pages": 17,
+        "text_chars": 13407,
+        "avg_chars_per_page": 788.6470588235294,
+        "is_encrypted": false,
+        "is_locked": 0,
+        "category": "hybrid",
+        "error": null
+      },
+      {
+        "path": "/Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Årsredovisning/272202_årsredovisning_stenungsund_brf_västeräng_2.pdf",
+        "filename": "272202_årsredovisning_stenungsund_brf_västeräng_2.pdf",
+        "size_mb": 1.98,
+        "pages": 21,
+        "text_chars": 10147,
+        "avg_chars_per_page": 483.1904761904762,
+        "is_encrypted": false,
+        "is_locked": 0,
+        "category": "hybrid",
+        "error": null
+      },
+      {
+        "path": "/Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Årsredovisning/280682_årsredovisning_linköping_brf_körsbäret.pdf",
+        "filename": "280682_årsredovisning_linköping_brf_körsbäret.pdf",
+        "size_mb": 12.97,
+        "pages": 19,
+        "text_chars": 7318,
+        "avg_chars_per_page": 385.1578947368421,
+        "is_encrypted": false,
+        "is_locked": 0,
+        "category": "hybrid",
+        "error": null
+      }
+    ],
+    "locked": [],
+    "corrupted": [
+      {
+        "path": "/Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Årsredovisning/59903_årsredovisning__brf_tobakslandet_9.pdf",
+        "filename": "59903_årsredovisning__brf_tobakslandet_9.pdf",
+        "size_mb": 0.06,
+        "pages": 0,
+        "text_chars": 0,
+        "avg_chars_per_page": 0,
+        "is_encrypted": false,
+        "is_locked": false,
+        "category": "corrupted",
+        "error": "Failed to open file '/Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Årsredovisning/59903_årsredovisning__brf_tobakslandet_9.pdf'."
+      }
+    ]
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "pdf": "brf_198532.pdf",
+  "timestamp": "2025-10-06T12:06:25.522935",
+  "performance": {
+    "docling": {
+      "elapsed_seconds": 54.80116891860962,
+      "status": "success"
+    },
+    "standard": {
+      "elapsed_seconds": 30.262506008148193,
+      "status": "success"
+    },
+    "speedup": 0.5522237318166314
+  },
+  "governance": {
+    "chairman": {
+      "docling": "Elvy Maria Löfvenberg",
+      "standard": "Elvy Maria Löfvenberg",
+      "match": true
+    },
+    "board_members": {
+      "docling_count": 7,
+      "standard_count": 4,
+      "docling_names": [
+        "Elvy Maria Löfvenberg",
+        "Torbjörn Andersson",
+        "Maria Annelie Eck Arvstrand",
+        "Mats Eskilson",
+        "Fredrik Linde",
+        "Lisa Lind",
+        "Daniel Wetter"
+      ],
+      "standard_names": [
+        "Torbjörn Andersson",
+        "Maria Annelie Eck Arvstrand",
+        "Mats Eskilson",
+        "Fredrik Linde"
+      ]
+    },
+    "auditor_name": {
+      "docling": "Tobias Andersson",
+      "standard": "Tobias Andersson",
+      "match": true
+    },
+    "audit_firm": {
+      "docling": "KPMG AB",
+      "standard": "KPMG AB",
+      "match": true
+    }
+  },
+  "financial": {
+    "docling_assets": null,
+    "docling_revenue": null,
+    "note": "Financial comparison limited - standard pipeline only runs governance"
+  },
+  "full_results": {
+    "docling": {
+      "status": "success",
+      "method": "docling",
+      "governance_agent": {
+        "chairman": "Elvy Maria Löfvenberg",
+        "board_members": [
+          "Elvy Maria Löfvenberg",
+          "Torbjörn Andersson",
+          "Maria Annelie Eck Arvstrand",
+          "Mats Eskilson",
+          "Fredrik Linde",
+          "Lisa Lind",
+          "Daniel Wetter"
+        ],
+        "auditor_name": "Tobias Andersson",
+        "audit_firm": "KPMG AB",
+        "nomination_committee": [
+          "Victoria Blennborn",
+          "Mattias Lovén"
+        ],
+        "evidence_pages": [
+          1,
+          2,
+          3
+        ]
+      },
+      "financial_agent": {
+        "revenue": null,
+        "expenses": null,
+        "assets": null,
+        "liabilities": null,
+        "equity": null,
+        "surplus": null,
+        "evidence_pages": [
+          2,
+          3,
+          4,
+          6,
+          8,
+          9
+        ]
+      },
+      "property_agent": {
+        "address": null,
+        "construction_year": 2015,
+        "num_apartments": 94,
+        "area_sqm": 8009,
+        "evidence_pages": [
+          1,
+          2
+        ]
+      },
+      "notes_agent": {},
+      "docling_metadata": {
+        "char_count": 45202,
+        "table_count": 17,
+        "processing_method": "docling_markdown_tables"
+      }
+    },
+    "standard": {
+      "status": "success",
+      "method": "standard_vision",
+      "governance_agent": {
+        "chairman": "Elvy Maria Löfvenberg",
+        "board_members": [
+          "Torbjörn Andersson",
+          "Maria Annelie Eck Arvstrand",
+          "Mats Eskilson",
+          "Fredrik Linde"
+        ],
+        "auditor_name": "Tobias Andersson",
+        "audit_firm": "KPMG AB",
+        "nomination_committee": [
+          "Victoria Blennborn",
+          "Mattias Lovén"
+        ],
+        "evidence_pages": [
+          1,
+          2
+        ]
+      },
+      "financial_agent": {},
+      "property_agent": {},
+      "notes_agent": {},
+      "metadata": {
+        "model": "multi",
+        "grok_ok": false,
+        "gemini_ok": false,
+        "qwen_ok": false,
+        "disagreement": false,
+        "openai_ok": true,
+        "openai_out": {
+          "chairman": "Elvy Maria Löfvenberg",
+          "board_members": [
+            "Torbjörn Andersson",
+            "Maria Annelie Eck Arvstrand",
+            "Mats Eskilson",
+            "Fredrik Linde"
+          ],
+          "auditor_name": "Tobias Andersson",
+          "audit_firm": "KPMG AB",
+          "nomination_committee": [
+            "Victoria Blennborn",
+            "Mattias Lovén"
+          ],
+          "evidence_pages": [
+            1,
+            2
+          ]
+        }
+      }
+    }
+  }
+}

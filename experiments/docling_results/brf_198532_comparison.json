@@ -1,0 +1,35 @@
+{
+  "pdf": "brf_198532.pdf",
+  "timestamp": "2025-10-06T11:57:24.993207",
+  "docling_postprocessed": {
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "governance_agent": {},
+    "financial_agent": {},
+    "property_agent": {},
+    "notes_agent": {}
+  },
+  "gracian_pipeline": {
+    "governance_agent": {
+      "chairman": "Elvy Maria Löfvenberg",
+      "board_members": [
+        "Torbjörn Andersson",
+        "Maria Annelie Eck Arvstrand",
+        "Mats Eskilson",
+        "Fredrik Linde"
+      ],
+      "auditor_name": "Tobias Andersson",
+      "audit_firm": "KPMG AB",
+      "nomination_committee": [
+        "Victoria Blennborn",
+        "Mattias Lovén"
+      ],
+      "evidence_pages": [
+        1,
+        2
+      ]
+    }
+  },
+  "openai_direct": {
+    "raw": ""
+  }
+}
