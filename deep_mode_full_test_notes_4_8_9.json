@@ -1,0 +1,611 @@
+{
+  "governance_agent": {
+    "chairman": "Elvy Maria Löfvenberg",
+    "board_members": [
+      "Torbjörn Andersson",
+      "Maria Annelie Eck Arvstrand",
+      "Mats Eskilson",
+      "Fredrik Linde"
+    ],
+    "auditor_name": "Tobias Andersson",
+    "audit_firm": "KPMG AB",
+    "nomination_committee": [
+      "Victoria Blennborn",
+      "Mattias Lovén"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3
+    ],
+    "alternate_board_members": [
+      "Lisa Lind",
+      "Daniel Wetter"
+    ],
+    "internal_auditor": "Oskar Klenell",
+    "board_meeting_frequency": "14 protokollförda sammanträden"
+  },
+  "financial_agent": {
+    "revenue": 7451585,
+    "expenses": 6631400,
+    "assets": 675294786,
+    "liabilities": 115487111,
+    "equity": 559807676,
+    "surplus": -353810,
+    "evidence_pages": [
+      4,
+      5,
+      6
+    ],
+    "operating_costs_breakdown": {
+      "Fastighetskostnader": {
+        "items": [
+          {
+            "name": "Fastighetsskötsel entreprenad",
+            "2021": 185600,
+            "2020": 184529
+          },
+          {
+            "name": "Fastighetsskötsel beställning",
+            "2021": 15291,
+            "2020": 10122
+          },
+          {
+            "name": "Fastighetsskötsel gård beställning",
+            "2021": 0,
+            "2020": -10690
+          },
+          {
+            "name": "Snöröjning/sandning",
+            "2021": 0,
+            "2020": 4762
+          },
+          {
+            "name": "Städning entreprenad",
+            "2021": 78417,
+            "2020": 75999
+          },
+          {
+            "name": "Städning enligt beställning",
+            "2021": 16136,
+            "2020": 17626
+          },
+          {
+            "name": "Mattvätt/Hyrmattor",
+            "2021": 15787,
+            "2020": 16728
+          },
+          {
+            "name": "OVK Obl. Ventilationskontroll",
+            "2021": -6807,
+            "2020": 134651
+          },
+          {
+            "name": "Hissbesiktning",
+            "2021": 7410,
+            "2020": 4333
+          },
+          {
+            "name": "Myndighetstillsyn",
+            "2021": 2460,
+            "2020": 7800
+          },
+          {
+            "name": "Gemensamma utrymmen",
+            "2021": 0,
+            "2020": 1502
+          },
+          {
+            "name": "Sophantering",
+            "2021": 92096,
+            "2020": 110211
+          },
+          {
+            "name": "Gård",
+            "2021": 667,
+            "2020": 1604
+          },
+          {
+            "name": "Serviceavtal",
+            "2021": 42575,
+            "2020": 59284
+          },
+          {
+            "name": "Förbrukningsmateriel",
+            "2021": 26629,
+            "2020": 24477
+          },
+          {
+            "name": "Störningsjour och larm",
+            "2021": 0,
+            "2020": 4953
+          },
+          {
+            "name": "Brandskydd",
+            "2021": 77330,
+            "2020": 5300
+          }
+        ],
+        "subtotal": {
+          "2021": 553590,
+          "2020": 653192
+        }
+      },
+      "Reparationer": {
+        "items": [
+          {
+            "name": "Lokaler",
+            "2021": 35731,
+            "2020": 0
+          },
+          {
+            "name": "Sophantering/återvinning",
+            "2021": 4223,
+            "2020": 29450
+          },
+          {
+            "name": "Entré/trapphus",
+            "2021": 54690,
+            "2020": 38731
+          },
+          {
+            "name": "Lås",
+            "2021": 29722,
+            "2020": 21923
+          },
+          {
+            "name": "VVS",
+            "2021": 84806,
+            "2020": 22588
+          },
+          {
+            "name": "Värmeanläggning/undercentral",
+            "2021": 0,
+            "2020": 13216
+          },
+          {
+            "name": "Ventilation",
+            "2021": 3892,
+            "2020": 2198
+          },
+          {
+            "name": "Elinstallationer",
+            "2021": 16750,
+            "2020": 0
+          },
+          {
+            "name": "Tele/TV/Kabel-TV/porttelefon",
+            "2021": 1130,
+            "2020": 1757
+          },
+          {
+            "name": "Hiss",
+            "2021": 8361,
+            "2020": 0
+          },
+          {
+            "name": "Mark/gård/utemiljö",
+            "2021": 14632,
+            "2020": 0
+          },
+          {
+            "name": "Garage/parkering",
+            "2021": 1701,
+            "2020": 0
+          },
+          {
+            "name": "Skador/klotter/skadegörelse",
+            "2021": 2366,
+            "2020": 76468
+          }
+        ],
+        "subtotal": {
+          "2021": 258004,
+          "2020": 206330
+        }
+      },
+      "Periodiskt underhåll": {
+        "items": [
+          {
+            "name": "Entré/trapphus",
+            "2021": 27308,
+            "2020": 0
+          },
+          {
+            "name": "Lås",
+            "2021": 21653,
+            "2020": 0
+          }
+        ],
+        "subtotal": {
+          "2021": 48961,
+          "2020": 0
+        }
+      },
+      "Taxebundna kostnader": {
+        "items": [
+          {
+            "name": "El",
+            "2021": 698763,
+            "2020": 363028
+          },
+          {
+            "name": "Värme",
+            "2021": 438246,
+            "2020": 379651
+          },
+          {
+            "name": "Vatten",
+            "2021": 162487,
+            "2020": 134655
+          },
+          {
+            "name": "Sophämtning/renhållning",
+            "2021": 60293,
+            "2020": 47400
+          }
+        ],
+        "subtotal": {
+          "2021": 1359788,
+          "2020": 924735
+        }
+      },
+      "Övriga driftkostnader": {
+        "items": [
+          {
+            "name": "Försäkring",
+            "2021": 84068,
+            "2020": 82597
+          },
+          {
+            "name": "Sopsug",
+            "2021": 21603,
+            "2020": 0
+          },
+          {
+            "name": "Samfällighetsavgift",
+            "2021": 94000,
+            "2020": 70500
+          },
+          {
+            "name": "Bredband",
+            "2021": 222785,
+            "2020": 223023
+          }
+        ],
+        "subtotal": {
+          "2021": 422455,
+          "2020": 376120
+        }
+      },
+      "Fastighetsskatt/Kommunal avgift": {
+        "items": [
+          {
+            "name": "Fastighetsskatt/Kommunal avgift",
+            "2021": 192000,
+            "2020": 192000
+          }
+        ],
+        "subtotal": {
+          "2021": 192000,
+          "2020": 192000
+        }
+      },
+      "_validation": {
+        "categories_found": 6,
+        "categories_expected": 5,
+        "total_items_extracted": 41,
+        "subtotals_validated": true,
+        "warnings": [
+          "Low item count: 41 < 50 expected"
+        ]
+      }
+    },
+    "building_details": {
+      "ackumulerade_anskaffningsvarden": 682435875,
+      "arets_avskrivningar": 3503359,
+      "planenligt_restvarde": 666670761,
+      "taxeringsvarde_byggnad": 214200000,
+      "taxeringsvarde_mark": 175000000
+    },
+    "other_receivables": {
+      "avgifts- och hyresfordringar": 429,
+      "övriga fordringar inkl SBC Klientmedel": 5480408
+    },
+    "reserve_fund_movements": {
+      "fond för yttre underhåll": {
+        "vid årets början": 800065,
+        "reservering enligt stadgar": 226590,
+        "vid årets slut": 1026655
+      }
+    },
+    "income_breakdown": {
+      "årsavgifter": 4383289,
+      "hyror lokaler momspliktiga": 610566,
+      "hyror lokaler": 399439,
+      "hyror garage": 1105450,
+      "kabel-TV intäkter": 247940,
+      "varmvattenintäkter": 213196,
+      "elintäkter": 30000,
+      "elintäkter moms": 384102,
+      "avgift andrahandsuthyrning": 5553
+    },
+    "tax_details": {
+      "fastighetsskatt/kommunal avgift": 192000
+    },
+    "_detailed_extraction": true,
+    "_note_8_extracted": true,
+    "receivables_breakdown": {
+      "skattekonto": 192990,
+      "momsavrakning": 25293,
+      "klientmedel": 3297711,
+      "fordringar": 1911314,
+      "avrakning_ovrigt": 53100
+    },
+    "_note_9_extracted": true
+  },
+  "property_agent": {
+    "designation": "Bostadsrättsföreningen Björk och Plaza",
+    "address": null,
+    "postal_code": null,
+    "city": "Stockholm",
+    "built_year": "2015",
+    "apartments": 94,
+    "energy_class": null,
+    "evidence_pages": [
+      2,
+      3,
+      4
+    ],
+    "acquisition_date": "2015",
+    "municipality": "Stockholm",
+    "heating_system": "Fjärrvärme",
+    "insurance_provider": "Brandkontoret",
+    "insurance_details": "Fullvärdesförsäkring med kollektivt bostadsrättstillägg och ansvarsförsäkring för styrelsen",
+    "apartment_breakdown": {
+      "1 rok": null,
+      "2 rok": null,
+      "3 rok": null
+    },
+    "commercial_tenants": [
+      {
+        "tenant": "Puls& Träning Sweden AB",
+        "area": "282 m²",
+        "lease_term": "2017-06-20 - 2022-06-19"
+      },
+      {
+        "tenant": "Barnsjukhuset Martina i Stockholm AB",
+        "area": "197 m²",
+        "lease_term": "2020-06-22 - 2030-06-21"
+      }
+    ],
+    "common_areas": [
+      "Två gemensamma terrasser",
+      "Två gemensamma entréer",
+      "Två gemensamhetslokaler"
+    ],
+    "samfallighet": {
+      "ownership_percentage": 47,
+      "managed_areas": "gård, garagefoajé och garageport"
+    },
+    "registration_dates": {
+      "förening": "2014-11-03",
+      "ekonomisk plan": "2016-11-22",
+      "stadgar": "2016-11-14"
+    },
+    "tax_assessment": {
+      "bostäder": 370000000,
+      "lokaler": 19200000
+    }
+  },
+  "notes_depreciation_agent": {
+    "depreciation_method": "Avskrivningar på anläggningstillgångar enligt plan",
+    "useful_life_years": "100 år",
+    "depreciation_base": "ursprungliga anskaffningsvärdet",
+    "evidence_pages": [
+      6,
+      7
+    ]
+  },
+  "notes_maintenance_agent": {
+    "maintenance_plan": "Underhållsplan 2018-2043",
+    "maintenance_budget": null,
+    "evidence_pages": [
+      3,
+      4
+    ],
+    "planned_actions": [
+      {
+        "action": "Behandling av trädäcken",
+        "year": "2021",
+        "comment": "Genomförs 2022/23"
+      },
+      {
+        "action": "Behandling av träfasad",
+        "year": "2023",
+        "comment": null
+      }
+    ],
+    "technical_status": "Föreningen följer en underhållsplan",
+    "suppliers": [
+      "SBC AB och SBC Betaltjänster AB",
+      "Etcon Fastighetsteknik AB",
+      "Ownit Broadband AB",
+      "Remondis",
+      "Kone",
+      "JC Miljöstäd AB",
+      "Envac Optibag AB",
+      "Dekra Sweden AB",
+      "Xylem",
+      "Dekra",
+      "KTC",
+      "Stockholm stad genom BoDab Ellevio",
+      "Energiförsäljning Sverige",
+      "Stockholm Exergi",
+      "Stockholm Vatten och Avfall AB",
+      "Bolander&Co",
+      "Brandkontoret"
+    ],
+    "service_contracts": {
+      "ekonomisk förvaltning": "SBC AB och SBC Betaltjänster AB",
+      "teknisk fastighetsförvaltning": "Etcon Fastighetsteknik AB",
+      "bredband, TV, telefoni": "Ownit Broadband AB",
+      "miljörum och grovsopor": "Remondis",
+      "hissar": "Kone",
+      "snöröjning, garagestädning": "JC Miljöstäd AB",
+      "sopsug, tillsyn och service i": "Envac Optibag AB",
+      "städning": "JC MIljöstäd AB",
+      "hissar, besiktning": "Dekra Sweden AB",
+      "avloppspump, tillsyn och service": "Xylem",
+      "portar, besiktning": "Dekra",
+      "debiteringsunderlag, felrapportering, MeView": "KTC",
+      "SBA (Systematiskt brandskyddsarbete)": "Etcon Fastighetsteknik AB",
+      "drift av central sopsugsanläggning elnät": "Stockholm stad genom BoDab Ellevio",
+      "elenergi": "Energiförsäljning Sverige",
+      "fjärrvärme": "Stockholm Exergi",
+      "vatten och avlopp": "Stockholm Vatten och Avfall AB",
+      "försäkringsrådgivare": "Bolander&Co",
+      "fastighetsförsäkring": "Brandkontoret"
+    }
+  },
+  "notes_tax_agent": {
+    "current_tax": "0,3% av taxeringsvärdet för bostadshus",
+    "deferred_tax": null,
+    "tax_policy": "Fastighetsavgiften för hyreshus",
+    "evidence_pages": [
+      5
+    ],
+    "tax_type": "Fastighetsavgift",
+    "tax_law_reference": "Inkomstskattelagen (1999:1229)"
+  },
+  "events_agent": {
+    "key_events": [
+      "Arbetet med att hävda s.k A-anmärkningar från garantibesiktningen hösten 2019 har fortsatt.",
+      "Föreningens hyresgäst Puls & Träning är uppköpt av Svenska Nérgy AB.",
+      "Lån nr 41431520 hos SEB är villkorsändrat och löper på 3 år med 0,57 % ränta.",
+      "Antal andrahandsuthyrningar under år 2021 var 6 stycken.",
+      "Fastigheten är deklarerad för ny taxering 2022."
+    ],
+    "maintenance_budget": null,
+    "annual_meeting_date": "2021-06-08",
+    "evidence_pages": [
+      3,
+      4,
+      5
+    ],
+    "warranty_claims": "A-anmärkningar från garantibesiktningen",
+    "tenant_changes": "Puls & Träning uppköpt av Svenska Nérgy AB",
+    "loan_restructuring": "Lån nr 41431520 hos SEB villkorsändrat",
+    "rental_activity": "6 andrahandsuthyrningar"
+  },
+  "audit_agent": {
+    "auditor": "Tobias Andersson",
+    "opinion": "Årsredovisningen ger en rättvisande bild",
+    "clean_opinion": true,
+    "evidence_pages": [
+      7,
+      8
+    ],
+    "audit_date": null,
+    "audit_location": "Stockholm",
+    "qualifications": null
+  },
+  "loans_agent": {
+    "outstanding_loans": 114480000,
+    "interest_rate": 0.57,
+    "amortization": null,
+    "evidence_pages": [
+      6,
+      7
+    ],
+    "loan_provider": "SEB",
+    "loan_number": "41431520",
+    "loan_term": "3 år",
+    "amortization_schedule": "Amorteras med 500.000 kr /kvartal",
+    "loan_changes": "Villkorsändrat"
+  },
+  "reserves_agent": {
+    "reserve_fund": 1026655,
+    "monthly_fee": null,
+    "evidence_pages": [
+      5,
+      6
+    ],
+    "reserve_policy": "Reservering till fond för yttre underhåll enligt stadgar",
+    "fund_name": "Fond för yttre underhåll",
+    "annual_allocation": 226590
+  },
+  "energy_agent": {
+    "energy_class": null,
+    "energy_performance": null,
+    "inspection_date": null,
+    "evidence_pages": [],
+    "energy_source": "Fjärrvärme"
+  },
+  "fees_agent": {
+    "monthly_fee": null,
+    "planned_fee_change": "Oförändrade närmaste året",
+    "fee_policy": "Årsavgifterna planeras vara oförändrade",
+    "evidence_pages": [
+      2
+    ],
+    "fee_calculation_basis": null,
+    "fee_per_sqm": 582,
+    "fee_unit": "m²",
+    "arsavgift_per_sqm": 582,
+    "_fee_unit_verified": "per_sqm",
+    "_fee_period_verified": "annual",
+    "_migration_applied": true,
+    "_migration_log": [
+      "fee_per_sqm → arsavgift_per_sqm (time unit assumed annual)"
+    ]
+  },
+  "cashflow_agent": {
+    "cash_in": 7641623,
+    "cash_out": 5654782,
+    "cash_change": 1986840,
+    "evidence_pages": [
+      5
+    ],
+    "operating_activities": null,
+    "investing_activities": null,
+    "financing_activities": null
+  },
+  "docling_metadata": {
+    "char_count": 45202,
+    "table_count": 17,
+    "processing_method": "ultra_comprehensive_single_call",
+    "schema_version": "comprehensive_v1",
+    "total_fields_target": 107
+  },
+  "coverage_metrics": {
+    "total_fields": 107,
+    "extracted_fields": 76,
+    "coverage_percent": 71.0
+  },
+  "status": "success",
+  "pdf_path": "SRS/brf_198532.pdf",
+  "_validation_warnings": [
+    "arsavgift_per_sqm populated but no _fee_terminology_found - verify extraction"
+  ],
+  "_quality_metrics": {
+    "total_fields": 117,
+    "extracted_fields": 106,
+    "coverage_percent": 90.6,
+    "quality_grade": "A",
+    "warnings_count": 1,
+    "detailed_extraction_applied": true,
+    "note_8_extracted": true,
+    "note_9_extracted": true,
+    "apartment_granularity": "none",
+    "fee_schema_version": "v2"
+  },
+  "_processing_metadata": {
+    "total_time_seconds": 461.36,
+    "pass1_base_time": 260.82,
+    "pass2_deep_time": 200.54,
+    "pass3_validation_time": 0.0,
+    "pass4_quality_time": 0.0,
+    "extraction_mode": "deep"
+  }
+}
