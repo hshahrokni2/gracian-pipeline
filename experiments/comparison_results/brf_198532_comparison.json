@@ -1,16 +1,16 @@
 {
   "pdf": "brf_198532.pdf",
-  "timestamp": "2025-10-06T12:06:25.522935",
+  "timestamp": "2025-10-06T12:28:49.537897",
   "performance": {
     "docling": {
-      "elapsed_seconds": 54.80116891860962,
+      "elapsed_seconds": 47.21030378341675,
       "status": "success"
     },
     "standard": {
-      "elapsed_seconds": 30.262506008148193,
+      "elapsed_seconds": 20.310481786727905,
       "status": "success"
     },
-    "speedup": 0.5522237318166314
+    "speedup": 0.430212901825517
   },
   "governance": {
     "chairman": {
@@ -49,14 +49,14 @@
     }
   },
   "financial": {
-    "docling_assets": null,
-    "docling_revenue": null,
+    "docling_assets": 675294786,
+    "docling_revenue": 7451585,
     "note": "Financial comparison limited - standard pipeline only runs governance"
   },
   "full_results": {
     "docling": {
       "status": "success",
-      "method": "docling",
+      "method": "docling_improved",
       "governance_agent": {
         "chairman": "Elvy Maria Löfvenberg",
         "board_members": [
@@ -81,23 +81,20 @@
         ]
       },
       "financial_agent": {
-        "revenue": null,
-        "expenses": null,
-        "assets": null,
-        "liabilities": null,
-        "equity": null,
-        "surplus": null,
+        "revenue": 7451585,
+        "expenses": 6631400,
+        "assets": 675294786,
+        "liabilities": 115487111,
+        "equity": 559807676,
+        "surplus": -353810,
         "evidence_pages": [
-          2,
-          3,
           4,
-          6,
-          8,
-          9
+          5,
+          6
         ]
       },
       "property_agent": {
-        "address": null,
+        "address": "Sonfjället 2, Stockholm",
         "construction_year": 2015,
         "num_apartments": 94,
         "area_sqm": 8009,
@@ -110,7 +107,7 @@
       "docling_metadata": {
         "char_count": 45202,
         "table_count": 17,
-        "processing_method": "docling_markdown_tables"
+        "processing_method": "docling_combined_extraction"
       }
     },
     "standard": {
