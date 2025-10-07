@@ -1,0 +1,138 @@
+{
+  "test_date": "2025-10-07T14:41:10.952249",
+  "pdf": "test_pdfs/brf_268882.pdf",
+  "pages_tested": 3,
+  "results": [
+    {
+      "method": "Granite-Docling VLM",
+      "elapsed_seconds": 29.98770523071289,
+      "char_count": 574,
+      "word_count": 108,
+      "swedish_chars": 0,
+      "swedish_char_ratio": 0.0,
+      "brf_terms_found": 0,
+      "brf_terms_total": 14,
+      "table_count": 17,
+      "tables": [
+        {
+          "error": "'DataFrame' object has no attribute 'str'"
+        },
+        {
+          "error": "'DataFrame' object has no attribute 'str'"
+        },
+        {
+          "error": "'DataFrame' object has no attribute 'str'"
+        },
+        {
+          "error": "'DataFrame' object has no attribute 'str'"
+        },
+        {
+          "error": "'DataFrame' object has no attribute 'str'"
+        },
+        {
+          "error": "'DataFrame' object has no attribute 'str'"
+        },
+        {
+          "error": "'DataFrame' object has no attribute 'str'"
+        },
+        {
+          "error": "'DataFrame' object has no attribute 'str'"
+        },
+        {
+          "error": "'DataFrame' object has no attribute 'str'"
+        },
+        {
+          "error": "'DataFrame' object has no attribute 'str'"
+        },
+        {
+          "error": "'DataFrame' object has no attribute 'str'"
+        },
+        {
+          "error": "'DataFrame' object has no attribute 'str'"
+        },
+        {
+          "error": "'DataFrame' object has no attribute 'str'"
+        },
+        {
+          "error": "'DataFrame' object has no attribute 'str'"
+        },
+        {
+          "error": "'DataFrame' object has no attribute 'str'"
+        },
+        {
+          "error": "'DataFrame' object has no attribute 'str'"
+        },
+        {
+          "error": "'DataFrame' object has no attribute 'str'"
+        }
+      ],
+      "markdown_sample": "<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->"
+    },
+    {
+      "method": "RapidOCR",
+      "error": "RapidOCR is not installed. Please install it via `pip install rapidocr onnxruntime` to use this OCR engine. Alternatively, Docling has support for other OCR engines. See the documentation."
+    },
+    {
+      "method": "EasyOCR",
+      "elapsed_seconds": 107.2991669178009,
+      "char_count": 43494,
+      "word_count": 5465,
+      "swedish_chars": 1184,
+      "swedish_char_ratio": 0.027222145583298846,
+      "brf_terms_found": 12,
+      "brf_terms_total": 14,
+      "table_count": 16,
+      "tables": [
+        {
+          "error": "'DataFrame' object has no attribute 'str'"
+        },
+        {
+          "error": "'DataFrame' object has no attribute 'str'"
+        },
+        {
+          "error": "'DataFrame' object has no attribute 'str'"
+        },
+        {
+          "error": "'DataFrame' object has no attribute 'str'"
+        },
+        {
+          "error": "'DataFrame' object has no attribute 'str'"
+        },
+        {
+          "error": "'DataFrame' object has no attribute 'str'"
+        },
+        {
+          "error": "'DataFrame' object has no attribute 'str'"
+        },
+        {
+          "error": "'DataFrame' object has no attribute 'str'"
+        },
+        {
+          "error": "'DataFrame' object has no attribute 'str'"
+        },
+        {
+          "error": "'DataFrame' object has no attribute 'str'"
+        },
+        {
+          "error": "'DataFrame' object has no attribute 'str'"
+        },
+        {
+          "error": "'DataFrame' object has no attribute 'str'"
+        },
+        {
+          "error": "'DataFrame' object has no attribute 'str'"
+        },
+        {
+          "error": "'DataFrame' object has no attribute 'str'"
+        },
+        {
+          "error": "'DataFrame' object has no attribute 'str'"
+        },
+        {
+          "error": "'DataFrame' object has no attribute 'str'"
+        }
+      ],
+      "markdown_sample": "<!-- image -->\n\n## Välkommen till årsredovisningen för Brf Hagelbössan 1 1 Hjorthagen\n\nStyrelsen upprättar härmed följande årsredovisning för räkenskapsåret 2023-01-01 2023-12-31, Om inte annat särskilt anges redovisas alla belopp kronor (SEK)\n\nInnehåll\n\n<!-- image -->\n\n| Kort guide till läsning av årsredovisningen 5.   |\n|--------------------------------------------------|\n| Förvaltningsberättelse                           |\n| Resultaträkning                                  |\n| Balansräkning                                    |\n| Kassaflödesanalys 5.                             |\n| Noter                                            |\n| Giltighet 5.                                     |\n| Förvaltningsberättelse s. 2                      |\n| Verksamheten 5. 2                                |"
+    }
+  ]
+}

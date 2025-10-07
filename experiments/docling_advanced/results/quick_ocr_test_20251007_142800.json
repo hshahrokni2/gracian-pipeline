@@ -1,0 +1,23 @@
+{
+  "test_date": "2025-10-07T14:28:00.674957",
+  "pdf": "test_pdfs/brf_268882.pdf",
+  "results": [
+    {
+      "engine": "EasyOCR",
+      "languages": [
+        "sv",
+        "en"
+      ],
+      "elapsed_seconds": 93.042389,
+      "char_count": 43494,
+      "word_count": 5465,
+      "swedish_chars": 1184,
+      "brf_terms_found": 7,
+      "markdown_sample": "<!-- image -->\n\n## Välkommen till årsredovisningen för Brf Hagelbössan 1 1 Hjorthagen\n\nStyrelsen upprättar härmed följande årsredovisning för räkenskapsåret 2023-01-01 2023-12-31, Om inte annat särskilt anges redovisas alla belopp kronor (SEK)\n\nInnehåll\n\n<!-- image -->\n\n| Kort guide till läsning av årsredovisningen 5.   |\n|--------------------------------------------------|\n| Förvaltningsberättelse                           |\n| Resultaträkning                                  |\n| Balansräkning  "
+    },
+    {
+      "engine": "Tesseract",
+      "error": "tesserocr is not correctly installed. Please install it via `pip install tesserocr` to use this OCR engine. Note that tesserocr might have to be manually compiled for working with your Tesseract installation. The Docling documentation provides examples for it. Alternatively, Docling has support for other OCR engines. See the documentation: https://docling-project.github.io/docling/installation/"
+    }
+  ]
+}

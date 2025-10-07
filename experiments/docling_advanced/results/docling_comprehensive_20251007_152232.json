@@ -1,0 +1,60 @@
+{
+  "test_date": "2025-10-07T15:22:32.055325",
+  "pdf": "test_pdfs/brf_268882.pdf",
+  "pages_tested": 3,
+  "results": [
+    {
+      "method": "Default Docling (no options)",
+      "elapsed_seconds": 92.04,
+      "char_count": 38646,
+      "word_count": 4850,
+      "swedish_chars": 808,
+      "swedish_char_ratio": 0.0209,
+      "brf_terms_found": 10,
+      "brf_terms_total": 15,
+      "brf_coverage": 66.7,
+      "has_financial_numbers": true,
+      "image_placeholders": 36,
+      "is_text_extracted": false,
+      "markdown_sample": "<!-- image -->\n\n## Välkommen till &amp;rsredovisningen för Brf Hagelbössan 1 1 Hjorthagen\n\nStyrelsen upprättar härmed följande frsredovisning för räkenskaps ret 2023-01-01 2023-12-31, Om inte annat särskilt anges redovisas alla belopp kronor (SEK)\n\n| 5.                          |\n|-----------------------------|\n| Förvaltningsberättelse      |\n| Resultaträkning             |\n| Balansräkning               |\n| Kassaflödesanalys 5.        |\n| Noter                       |\n| Giltighet 5.                |\n| Förvaltningsberättelse s. 2 |\n| Verksamheten 5. 2           |\n| Medlemsinformation 5.4      |"
+    },
+    {
+      "method": "Default Pipeline + OCR",
+      "elapsed_seconds": 88.4,
+      "char_count": 38646,
+      "word_count": 4850,
+      "swedish_chars": 808,
+      "swedish_char_ratio": 0.0209,
+      "brf_terms_found": 10,
+      "brf_terms_total": 15,
+      "brf_coverage": 66.7,
+      "has_financial_numbers": true,
+      "image_placeholders": 36,
+      "is_text_extracted": false,
+      "markdown_sample": "<!-- image -->\n\n## Välkommen till &amp;rsredovisningen för Brf Hagelbössan 1 1 Hjorthagen\n\nStyrelsen upprättar härmed följande frsredovisning för räkenskaps ret 2023-01-01 2023-12-31, Om inte annat särskilt anges redovisas alla belopp kronor (SEK)\n\n| 5.                          |\n|-----------------------------|\n| Förvaltningsberättelse      |\n| Resultaträkning             |\n| Balansräkning               |\n| Kassaflödesanalys 5.        |\n| Noter                       |\n| Giltighet 5.                |\n| Förvaltningsberättelse s. 2 |\n| Verksamheten 5. 2           |\n| Medlemsinformation 5.4      |"
+    },
+    {
+      "method": "EasyOCR (Swedish)",
+      "elapsed_seconds": 90.8,
+      "char_count": 43494,
+      "word_count": 5465,
+      "swedish_chars": 1184,
+      "swedish_char_ratio": 0.0272,
+      "brf_terms_found": 13,
+      "brf_terms_total": 15,
+      "brf_coverage": 86.7,
+      "has_financial_numbers": true,
+      "image_placeholders": 36,
+      "is_text_extracted": false,
+      "markdown_sample": "<!-- image -->\n\n## Välkommen till årsredovisningen för Brf Hagelbössan 1 1 Hjorthagen\n\nStyrelsen upprättar härmed följande årsredovisning för räkenskapsåret 2023-01-01 2023-12-31, Om inte annat särskilt anges redovisas alla belopp kronor (SEK)\n\nInnehåll\n\n<!-- image -->\n\n| Kort guide till läsning av årsredovisningen 5.   |\n|--------------------------------------------------|\n| Förvaltningsberättelse                           |\n| Resultaträkning                                  |\n| Balansräkning                                    |\n| Kassaflödesanalys 5.                             |\n| Noter    "
+    },
+    {
+      "method": "RapidOCR",
+      "error": "RapidOCR is not installed. Please install it via `pip install rapidocr onnxruntime` to use this OCR engine. Alternatively, Docling has support for other OCR engines. See the documentation."
+    },
+    {
+      "method": "Tesseract",
+      "error": "tesserocr is not correctly installed. Please install it via `pip install tesserocr` to use this OCR engine. Note that tesserocr might have to be manually compiled for working with your Tesseract installation. The Docling documentation provides examples for it. Alternatively, Docling has support for other OCR engines. See the documentation: https://docling-project.github.io/docling/installation/"
+    }
+  ]
+}

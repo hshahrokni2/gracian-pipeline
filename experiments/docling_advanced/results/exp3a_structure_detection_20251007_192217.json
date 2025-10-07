@@ -1,0 +1,367 @@
+{
+  "experiment": "Experiment 3A: Structure Detection Validation",
+  "test_date": "2025-10-07T19:22:17.579948",
+  "pdf": "test_pdfs/brf_268882.pdf",
+  "structure_data": {
+    "extraction_time": 126.29263401031494,
+    "num_sections": 50,
+    "sections": [
+      {
+        "heading": "Välkommen till årsredovisningen för Brf Hagelbössan 1 1 Hjorthagen",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Kort till läsning av årsredovisningen guide",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Förvaltningsberättelse",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Resultaträkning",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Balansräkning",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Kassaflödesanalys",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Noter",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Giltighet",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Förvaltningsberättelse",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Verksamheten",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Allmänt om verksamheten",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Registreringsdatum",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Äkta förening",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Fastigheten",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Byggnadsår och ytor",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Styrelsens sammansättning",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Revisorer",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Avtal med leverantörer",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Ekonomi",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Medlemsinformation",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Flerårsöversikt",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Upplysning vid förlust",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Förändringar i eget kapital",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Resultatdisposition",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Resultaträkning",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Balansräkning",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Balansräkning",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Kassaflödesanalys",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Noter",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "NOT 1 REDOVISNINGS- OCH VÄRDERINGSPRINCIPER",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Redovisning av intäkter",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "ångar",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Omsättningstillgångar",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Föreningens fond för yttre underhåll",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Skatter och avgifter",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Fastighetslån",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Kassaflödesanalys",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Underskrifter",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Underskrifter",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "REVISIONSBERÄTTELSE",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Rapport om årsredovisningen",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Uttalanden",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Grund för uttalanden",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Styrelsens ansvar",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Revisorns ansvar",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Rapport om andra krav enligt och andra författningar lagar",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Uttalanden",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Grund för uttalanden",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Styrelsens ansvar",
+        "level": 1,
+        "page": null
+      },
+      {
+        "heading": "Revisorns ansvar",
+        "level": 1,
+        "page": null
+      }
+    ],
+    "markdown": "<!-- image -->\n\n## Välkommen till årsredovisningen för Brf Hagelbössan 1 1 Hjorthagen\n\nStyrelsen upprättar härmed följande årsredovisning för räkenskapsåret 2023-01-01 2023-12-31, Om inte annat särskilt anges redovisas alla belopp kronor (SEK)\n\nInnehåll\n\n<!-- image -->\n\n| Kort guide till läsning av årsredovisningen 5.   |\n|--------------------------------------------------|\n| Förvaltningsberättelse                           |\n| Resultaträkning                                  |\n| Balansräkning                                    |\n| Kassaflödesanalys 5.                             |\n| Noter                                            |\n| Giltighet 5.                                     |\n| Förvaltningsberättelse s. 2                      |\n| Verksamheten 5. 2                                |\n| Medlemsinformation 5.4                           |\n| Flerársoversikt 5. 5                             |\n| Upplysning vid förlust 5. 6                      |\n| Förändringar eget kapital                        |\n| Resultatdisposition 5. 6                         |\n| Resultaträkning 5.7                              |\n| Balansräkning 5.8                                |\n| Kassaflödesanalys 5. 10                          |\n| Noter 5.11                                       |\n| Underskrifter 5. 16 W                            |\n\n## Kort till läsning av årsredovisningen guide\n\n## Förvaltningsberättelse\n\nFörvaltningsberättelsen innehåller bland annat en allmän beskrivning av bostadsrättsföreningen och fastigheten: Du hittar också styrelsens beskrivning med viktig information från det gångna räkenskapsåret samt ett förslag på hur årets vinst eller förlust ska behandlas, som föreningsstämman beslutar om. En viktig uppgift som ska framgå i förvaltningsberättelsen är om bostadsrättsföreningen är äkta eller oäkta eftersom det senare medför skattekonsekvenser för den som en bostadsrätt äger\n\n## Resultaträkning\n\nresultaträkningen kan du se om föreningen har gått med vinst eller förlust under r"
+  },
+  "evaluation": {
+    "expected_sections": [
+      "Förvaltningsberättelse",
+      "Styrelse",
+      "Resultaträkning",
+      "Balansräkning",
+      "Kassaflödesanalys",
+      "Noter",
+      "Revisionsberättelse"
+    ],
+    "matches": [
+      {
+        "expected": "Förvaltningsberättelse",
+        "found": true,
+        "matched_heading": "Förvaltningsberättelse"
+      },
+      {
+        "expected": "Styrelse",
+        "found": true,
+        "matched_heading": "Styrelsens sammansättning"
+      },
+      {
+        "expected": "Resultaträkning",
+        "found": true,
+        "matched_heading": "Resultaträkning"
+      },
+      {
+        "expected": "Balansräkning",
+        "found": true,
+        "matched_heading": "Balansräkning"
+      },
+      {
+        "expected": "Kassaflödesanalys",
+        "found": true,
+        "matched_heading": "Kassaflödesanalys"
+      },
+      {
+        "expected": "Noter",
+        "found": true,
+        "matched_heading": "Noter"
+      },
+      {
+        "expected": "Revisionsberättelse",
+        "found": true,
+        "matched_heading": "REVISIONSBERÄTTELSE"
+      }
+    ],
+    "detection_rate": 1.0,
+    "success": true
+  },
+  "agent_routing_map": {
+    "governance_agent": [
+      3,
+      4,
+      5,
+      16,
+      17,
+      18,
+      40,
+      41,
+      42,
+      44,
+      45,
+      46
+    ],
+    "financial_agent": [
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "notes_agent": [
+      7,
+      8,
+      9,
+      30,
+      31,
+      32
+    ],
+    "property_agent": [
+      14,
+      15,
+      16,
+      36,
+      37,
+      38
+    ],
+    "fees_agent": [
+      35,
+      36,
+      37
+    ]
+  },
+  "cost_analysis": {
+    "naive_cost": 1.3,
+    "section_aware_cost": 0.36,
+    "savings_usd": 0.9400000000000001,
+    "savings_percent": 72.3076923076923
+  },
+  "recommendation": {
+    "use_section_routing": true,
+    "expected_savings": 72.3076923076923,
+    "confidence": "high"
+  }
+}
