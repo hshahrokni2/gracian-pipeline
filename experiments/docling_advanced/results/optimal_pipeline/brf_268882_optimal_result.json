@@ -1,0 +1,49 @@
+{
+  "pdf": "test_pdfs/brf_268882.pdf",
+  "topology": {
+    "pdf_path": "test_pdfs/brf_268882.pdf",
+    "total_pages": 28,
+    "avg_chars_per_page": 0.0,
+    "classification": "scanned",
+    "sample_pages": [
+      0,
+      9,
+      18
+    ],
+    "analysis_time": 0.0501561164855957
+  },
+  "structure": {
+    "num_sections": 50,
+    "method": "ocr",
+    "cached": false,
+    "extraction_time": 94.31217813491821
+  },
+  "routing": {
+    "main_sections": {
+      "governance_agent": 1,
+      "financial_agent": 3,
+      "property_agent": 0,
+      "operations_agent": 0,
+      "notes_collection": 2
+    },
+    "note_sections": {
+      "notes_accounting_agent": 1,
+      "notes_other_agent": 1,
+      "notes_receivables_agent": 1,
+      "notes_reserves_agent": 1,
+      "notes_tax_agent": 1,
+      "notes_loans_agent": 1
+    },
+    "routing_time": 0.0005347728729248047
+  },
+  "quality_metrics": {
+    "coverage": 1.0,
+    "numeric_qc_pass": true,
+    "evidence_ratio": 0.125,
+    "overall_score": 0.5625,
+    "needs_coaching": true,
+    "validation_time": 8.106231689453125e-06
+  },
+  "total_time": 180.40795493125916,
+  "total_cost": 0.0
+}

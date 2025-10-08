@@ -1,0 +1,78 @@
+{
+  "timestamp": "2025-10-07T11:06:11.926017",
+  "total_documents": 5,
+  "passed": 5,
+  "failed": 0,
+  "results": [
+    {
+      "pdf": "Hjorthagen/brf_266956.pdf",
+      "status": "SUCCESS",
+      "tests": {
+        "metadata": "PASS",
+        "governance": "PASS",
+        "financial": "PASS",
+        "balance_validation": "PASS",
+        "multi_year": "PASS",
+        "property": "PASS",
+        "evidence_tracking": "PASS",
+        "confidence_tracking": "PASS"
+      }
+    },
+    {
+      "pdf": "Hjorthagen/brf_268411.pdf",
+      "status": "SUCCESS",
+      "tests": {
+        "metadata": "PASS",
+        "governance": "PASS",
+        "financial": "PASS",
+        "balance_validation": "PASS",
+        "multi_year": "PASS",
+        "property": "PASS",
+        "evidence_tracking": "PASS",
+        "confidence_tracking": "PASS"
+      }
+    },
+    {
+      "pdf": "Hjorthagen/brf_268882.pdf",
+      "status": "SUCCESS",
+      "tests": {
+        "metadata": "PASS",
+        "governance": "PASS",
+        "financial": "PASS",
+        "balance_validation": "PASS",
+        "multi_year": "PASS",
+        "property": "PASS",
+        "evidence_tracking": "PASS",
+        "confidence_tracking": "PASS"
+      }
+    },
+    {
+      "pdf": "SRS/brf_198532.pdf",
+      "status": "SUCCESS",
+      "tests": {
+        "metadata": "PASS",
+        "governance": "PASS",
+        "financial": "PASS",
+        "balance_validation": "PASS",
+        "multi_year": "PASS",
+        "property": "PASS",
+        "evidence_tracking": "PASS",
+        "confidence_tracking": "PASS"
+      }
+    },
+    {
+      "pdf": "SRS/brf_275608.pdf",
+      "status": "SUCCESS",
+      "tests": {
+        "metadata": "PASS",
+        "governance": "PASS",
+        "financial": "PASS",
+        "balance_validation": "PASS",
+        "multi_year": "PASS",
+        "property": "PASS",
+        "evidence_tracking": "PASS",
+        "confidence_tracking": "PASS"
+      }
+    }
+  ]
+}

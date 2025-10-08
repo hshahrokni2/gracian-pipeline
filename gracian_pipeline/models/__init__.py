@@ -2,6 +2,25 @@
 Pydantic models for ultra-comprehensive BRF data extraction.
 """
 
+from .base_fields import (
+    # Base field types with confidence tracking
+    ExtractionField,
+    StringField,
+    NumberField,
+    ListField,
+    BooleanField,
+    DateField,
+    DictField,
+
+    # Convenience aliases
+    TextField,
+    IntegerField,
+    FloatField,
+    DecimalField,
+    ArrayField,
+    ObjectField,
+)
+
 from .brf_schema import (
     # Master model
     BRFAnnualReport,
@@ -51,6 +70,22 @@ from .brf_schema import (
 )
 
 __all__ = [
+    # Base field types
+    'ExtractionField',
+    'StringField',
+    'NumberField',
+    'ListField',
+    'BooleanField',
+    'DateField',
+    'DictField',
+    'TextField',
+    'IntegerField',
+    'FloatField',
+    'DecimalField',
+    'ArrayField',
+    'ObjectField',
+
+    # Schema models
     'BRFAnnualReport',
     'DocumentMetadata',
     'GovernanceStructure',

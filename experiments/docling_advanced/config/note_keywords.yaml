@@ -1,0 +1,192 @@
+version: "1.0.0"
+updated: "2025-10-07"
+description: "Swedish BRF note heading to agent semantic mapping"
+
+changelog:
+  - "1.0.0: Initial comprehensive keyword mapping (7 agent types)"
+
+agents:
+  notes_accounting_agent:
+    display_name: "Notes: Accounting Principles"
+    description: "Redovisnings- och värderingsprinciper"
+    keywords:
+      primary:
+        - redovisningsprinciper
+        - värderingsprinciper
+        - accounting principles
+        - bokföringsprinciper
+      secondary:
+        - intäktsredovisning
+        - kostnadsredovisning
+        - periodisering
+        - allmänna principer
+        - revenue recognition
+      related:
+        - k2
+        - k3
+        - årl
+        - bfnar
+    examples:
+      - "NOT 1 REDOVISNINGS- OCH VÄRDERINGSPRINCIPER"
+      - "Accounting principles and valuation"
+      - "Redovisning av intäkter"
+
+  notes_loans_agent:
+    display_name: "Notes: Loans & Debt"
+    description: "Fastighetslån, skulder, krediter"
+    keywords:
+      primary:
+        - lån
+        - fastighetslån
+        - skulder
+        - krediter
+        - loans
+        - debt
+      secondary:
+        - långfristiga skulder
+        - kortfristiga skulder
+        - amortering
+        - ränta
+        - lånevillkor
+      related:
+        - banklån
+        - obligationslån
+        - räntebindning
+      ocr_errors:
+        - ångar  # Common OCR error
+        - 1ån
+    examples:
+      - "Fastighetslån"
+      - "Långfristiga skulder"
+      - "NOT 2 Lån"
+
+  notes_depreciation_agent:
+    display_name: "Notes: Depreciation"
+    description: "Avskrivningar, värdeminskning"
+    keywords:
+      primary:
+        - avskrivningar
+        - depreciation
+        - värdeminskning
+      secondary:
+        - avskrivningsplan
+        - nyttjandeperiod
+        - restvärde
+        - bokfört värde
+      related:
+        - komponentavskrivning
+        - linjär avskrivning
+    examples:
+      - "Avskrivningar"
+      - "NOT 4 Depreciation"
+
+  notes_maintenance_agent:
+    display_name: "Notes: Building Details & Maintenance"
+    description: "Byggnader, mark, fastighet, underhåll"
+    keywords:
+      primary:
+        - byggnader
+        - mark
+        - fastighet
+        - buildings
+        - property
+        - land
+      secondary:
+        - underhåll
+        - renovering
+        - reparation
+        - stambyten
+        - maintenance
+      related:
+        - fasadrenov
+        - takrenovering
+        - stamrenovering
+        - fönsterbyte
+    examples:
+      - "Byggnader och mark"
+      - "NOT 8 Building details"
+      - "Fastighet"
+
+  notes_receivables_agent:
+    display_name: "Notes: Receivables & Current Assets"
+    description: "Fordringar, omsättningstillgångar"
+    keywords:
+      primary:
+        - fordringar
+        - receivables
+        - omsättningstillgångar
+        - current assets
+      secondary:
+        - kundfordringar
+        - upplupna intäkter
+        - förutbetalda kostnader
+        - accounts receivable
+      related:
+        - likvida medel
+        - banktillgodohavanden
+        - cash
+    examples:
+      - "Omsättningstillgångar"
+      - "NOT 9 Fordringar"
+      - "Kortfristiga fordringar"
+
+  notes_reserves_agent:
+    display_name: "Notes: Reserve Funds"
+    description: "Fond för yttre underhåll, reserver"
+    keywords:
+      primary:
+        - fond
+        - yttre underhåll
+        - reserv
+        - reserve fund
+        - maintenance fund
+      secondary:
+        - avsättning
+        - underhållsplan
+        - långsiktig plan
+        - provisions
+      related:
+        - framtida underhåll
+        - underhållsbudget
+    examples:
+      - "Föreningens fond för yttre underhåll"
+      - "NOT 3 Reserve fund"
+      - "Fond"
+
+  notes_tax_agent:
+    display_name: "Notes: Tax & Fees"
+    description: "Skatter, avgifter, moms"
+    keywords:
+      primary:
+        - skatter
+        - avgifter
+        - tax
+        - moms
+        - vat
+      secondary:
+        - fastighetsskatt
+        - inkomstskatt
+        - skatteskuld
+        - property tax
+      related:
+        - uppskjuten skatt
+        - skattemässigt värde
+        - deferred tax
+    examples:
+      - "Skatter och avgifter"
+      - "NOT 5 Tax"
+      - "Fastighetsskatt"
+
+# Fallback configuration
+fallback:
+  default_agent: "notes_other_agent"
+  confidence_threshold: 0.7
+  llm_retry_attempts: 3
+  llm_retry_delay: 2
+
+# LLM configuration
+llm:
+  model: "grok-beta"
+  temperature: 0
+  max_tokens: 500
+  batch_enabled: true

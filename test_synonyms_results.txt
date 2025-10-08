@@ -1,0 +1,233 @@
+
+======================================================================
+WEEK 2 DAY 2-3: SYNONYM MAPPING TEST SUITE
+======================================================================
+
+======================================================================
+TEST 1: Financial Metrics Synonyms
+======================================================================
+
+✅ Revenue synonym: 'nettoomsättning' → 'net_revenue_tkr'
+✅ Total operating income: 'summa rörelseintäkter' → 'net_revenue_tkr'
+✅ Net income: 'årets resultat' → 'net_income_tkr'
+✅ Operating result: 'rörelseresultat' → 'operating_surplus_tkr'
+✅ Total assets: 'summa tillgångar' → 'total_assets_tkr'
+✅ Equity: 'eget kapital' → 'equity_tkr'
+✅ Solidarity: 'soliditet' → 'solidarity_percent'
+✅ Debt per sqm: 'lån, kr/m²' → 'debt_per_sqm'
+✅ Cash and bank: 'kassa och bank' → 'cash_tkr'
+✅ Long-term debt: 'långfristiga skulder' → 'long_term_debt'
+
+Financial synonyms: 10/10 passed
+
+======================================================================
+TEST 2: Governance Role Synonyms
+======================================================================
+
+✅ Chairman: 'ordförande' → 'chairman'
+✅ Chairman abbreviation: 'ordf' → 'chairman'
+✅ Vice chairman: 'vice ordförande' → 'vice_chairman'
+✅ Treasurer: 'kassör' → 'treasurer'
+✅ Secretary: 'sekreterare' → 'secretary'
+✅ Board member: 'styrelseledamot' → 'board_member'
+✅ Deputy: 'suppleant' → 'deputy'
+✅ Auditor: 'revisor' → 'auditor'
+✅ Authorized auditor: 'auktoriserad revisor' → 'authorized_auditor'
+✅ Nomination committee: 'valberedning' → 'nomination_committee'
+
+Governance synonyms: 10/10 passed
+
+======================================================================
+TEST 3: Property Detail Synonyms
+======================================================================
+
+✅ Property designation: 'fastighetsbeteckning' → 'property_designation'
+✅ Built year: 'byggår' → 'built_year'
+✅ Building was built: 'byggnaden uppfördes' → 'built_year'
+✅ Residential area: 'total bostadsarea' → 'residential_area_sqm'
+✅ Living area: 'boarea' → 'residential_area_sqm'
+✅ Total apartments: 'antal lägenheter' → 'total_apartments'
+✅ Commercial units: 'antal lokaler' → 'number_of_commercial_units'
+✅ Tax value: 'taxeringsvärde' → 'tax_value'
+✅ Freehold: 'friköpt tomt' → 'property_tenure_freehold'
+✅ Leasehold: 'tomträtt' → 'property_tenure_leasehold'
+
+Property synonyms: 10/10 passed
+
+======================================================================
+TEST 4: Fee-Related Synonyms
+======================================================================
+
+✅ Monthly fee: 'månadsavgift' → 'monthly_fee'
+✅ Fee per month: 'avgift per månad' → 'monthly_fee'
+✅ Annual fee: 'årsavgift' → 'annual_fee'
+✅ Fee per sqm: 'avgift per m²' → 'fee_per_sqm'
+✅ Fee kr/sqm: 'avgift kr/kvm' → 'fee_per_sqm'
+✅ Annual fee per sqm: 'årsavgift per m²' → 'annual_fee_per_sqm'
+
+Fee synonyms: 6/6 passed
+
+======================================================================
+TEST 5: Loan-Related Synonyms
+======================================================================
+
+✅ Lender: 'långivare' → 'loan_lender'
+✅ Credit institution: 'kreditinstitut' → 'loan_lender'
+✅ Loan amount: 'lånebelopp' → 'loan_amount'
+✅ Current year debt: 'utgående skuld' → 'loan_amount_current_year'
+✅ Previous year debt: 'ingående skuld' → 'loan_amount_previous_year'
+✅ Interest rate: 'räntesats' → 'loan_interest_rate'
+✅ Interest %: 'ränta %' → 'loan_interest_rate'
+✅ Maturity date: 'förfallodag' → 'loan_maturity_date'
+✅ Amortization: 'amortering' → 'loan_amortization'
+
+Loan synonyms: 9/9 passed
+
+======================================================================
+TEST 6: Organization-Related Synonyms
+======================================================================
+
+✅ Organization number: 'organisationsnummer' → 'organization_number'
+✅ Org number abbreviation: 'org.nr' → 'organization_number'
+✅ BRF name: 'föreningens namn' → 'brf_name'
+✅ Housing cooperative: 'bostadsrättsförening' → 'brf_name'
+✅ Registered office: 'säte' → 'registered_office'
+✅ Number of members: 'antal medlemmar' → 'number_of_members'
+✅ Number of employees: 'antal anställda' → 'number_of_employees'
+✅ AGM date: 'årsstämma' → 'agm_date'
+
+Organization synonyms: 8/8 passed
+
+======================================================================
+TEST 7: Term Normalization
+======================================================================
+
+✅ Remove units and whitespace: '  Nettoomsättning (tkr)  ' → 'nettoomsättning'
+✅ Remove periods: 'Ordf.' → 'ordf'
+❌ Remove percentage sign: 'Soliditet %' → Expected 'soliditet', got 'soliditet %'
+✅ Preserve kr/m² notation: 'Lån, kr/m²' → 'lån, kr/m²'
+✅ Uppercase and units: 'SUMMA TILLGÅNGAR (tkr)' → 'summa tillgångar'
+
+Normalization: 4/5 passed
+
+======================================================================
+TEST 8: Fuzzy Matching
+======================================================================
+
+✅ With units: 'Nettoomsättning (tkr)' → 'net_revenue_tkr'
+✅ Uppercase: 'NETTOOMSÄTTNING' → 'net_revenue_tkr'
+✅ Extra whitespace: '  nettoomsättning  ' → 'net_revenue_tkr'
+✅ With period: 'Ordf.' → 'chairman'
+✅ Without period: 'ordf' → 'chairman'
+✅ With % sign: 'Soliditet %' → 'solidarity_percent'
+
+Fuzzy matching: 6/6 passed
+
+======================================================================
+TEST 9: Reverse Lookup
+======================================================================
+
+✅ chairman: Found 3 synonyms (including ordförande)
+✅ net_revenue_tkr: Found 7 synonyms (including nettoomsättning)
+✅ solidarity_percent: Found 3 synonyms (including soliditet)
+
+Reverse lookup: 3/3 passed
+
+======================================================================
+TEST 10: Search Functionality
+======================================================================
+
+✅ Search for 'resultat': Found 6 results
+   - 'årets resultat' → 'net_income_tkr'
+   - 'resultat' → 'net_income_tkr'
+   - 'resultat efter finansiella poster' → 'net_income_tkr'
+✅ Search for 'avgift': Found 11 results
+   - 'månadsavgift' → 'monthly_fee'
+   - 'avgift per månad' → 'monthly_fee'
+   - 'månatlig avgift' → 'monthly_fee'
+✅ Search for 'skuld': Found 16 results
+   - 'summa skulder' → 'total_liabilities_tkr'
+   - 'skulder' → 'total_liabilities_tkr'
+   - 'summa eget kapital och skulder' → 'total_equity_and_liabilities'
+
+Search functionality: 3/3 passed
+
+======================================================================
+TEST 11: Statistics and Coverage
+======================================================================
+
+Total synonyms: 155
+Financial synonyms: 48
+Governance synonyms: 23
+Property synonyms: 29
+Fee synonyms: 13
+Loan synonyms: 24
+Organization synonyms: 18
+Unique canonical fields: 57
+✅ Total synonyms >= 150
+✅ Financial synonyms >= 40
+✅ Governance synonyms >= 15
+✅ Property synonyms >= 20
+✅ Fee synonyms >= 5
+✅ Loan synonyms >= 15
+✅ Organization synonyms >= 10
+✅ Unique fields >= 50
+
+Statistics checks: 8/8 passed
+
+======================================================================
+TEST 12: Category Organization
+======================================================================
+
+✅ financial: 15 unique canonical fields
+   Examples: ['cash_tkr', 'total_assets_tkr', 'net_income_tkr']
+✅ governance: 12 unique canonical fields
+   Examples: ['board_member', 'treasurer', 'vice_chairman']
+✅ property: 11 unique canonical fields
+   Examples: ['property_designation', 'property_tenure_freehold', 'total_apartments']
+✅ fees: 4 unique canonical fields
+   Examples: ['fee_per_sqm', 'monthly_fee', 'annual_fee_per_sqm']
+✅ loans: 9 unique canonical fields
+   Examples: ['loan_amount_current_year', 'loan_amount_previous_year', 'loan_lender']
+✅ organization: 6 unique canonical fields
+   Examples: ['number_of_members', 'agm_date', 'organization_number']
+
+Category organization: 6/6 passed
+
+======================================================================
+TEST 13: Edge Cases
+======================================================================
+
+✅ None input: 'None' → None
+✅ Empty string: '' → None
+✅ Unknown term: 'unknown_term_xyz' → None
+✅ Whitespace only: '   ' → None
+✅ None normalization: 'None' → ''
+✅ Empty normalization: '' → ''
+
+Edge cases: 6/6 passed
+
+======================================================================
+TEST SUMMARY
+======================================================================
+
+✅ PASSED: test_financial_synonyms
+✅ PASSED: test_governance_synonyms
+✅ PASSED: test_property_synonyms
+✅ PASSED: test_fee_synonyms
+✅ PASSED: test_loan_synonyms
+✅ PASSED: test_organization_synonyms
+❌ FAILED: test_normalization
+✅ PASSED: test_fuzzy_matching
+✅ PASSED: test_reverse_lookup
+✅ PASSED: test_search_functionality
+✅ PASSED: test_statistics
+✅ PASSED: test_category_organization
+✅ PASSED: test_edge_cases
+
+======================================================================
+TOTAL: 12/13 tests passed (92.3%)
+======================================================================
+
+⚠️  1 test(s) failed. Review output above.
+

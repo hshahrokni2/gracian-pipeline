@@ -1,0 +1,158 @@
+{
+  "test_date": "2025-10-07T19:32:04.706138",
+  "sample_size": 5,
+  "successful": 5,
+  "failed": 0,
+  "results": [
+    {
+      "dataset": "Hjorthagen",
+      "pdf_name": "brf_46160.pdf",
+      "pdf_path": "Hjorthagen/brf_46160.pdf",
+      "success": true,
+      "coverage": 0.0,
+      "confidence": 0.0,
+      "extraction_time": 317.3226339817047,
+      "tests": {
+        "extraction_field": {
+          "confidence_scores": true,
+          "source_pages_tracked": true,
+          "coverage_calculation": true
+        },
+        "synonym_mapping": {
+          "swedish_governance": true,
+          "swedish_financial": true
+        },
+        "swedish_first": {
+          "fee_structure": true,
+          "financial_data": true
+        },
+        "calculated_metrics": {
+          "calculated_metrics_present": false,
+          "validation_applied": false,
+          "tolerant_validation": false
+        }
+      },
+      "error": null
+    },
+    {
+      "dataset": "Hjorthagen",
+      "pdf_name": "brf_266956.pdf",
+      "pdf_path": "Hjorthagen/brf_266956.pdf",
+      "success": true,
+      "coverage": 0.0,
+      "confidence": 0.0,
+      "extraction_time": 480.5347499847412,
+      "tests": {
+        "extraction_field": {
+          "confidence_scores": true,
+          "source_pages_tracked": true,
+          "coverage_calculation": true
+        },
+        "synonym_mapping": {
+          "swedish_governance": true,
+          "swedish_financial": true
+        },
+        "swedish_first": {
+          "fee_structure": true,
+          "financial_data": true
+        },
+        "calculated_metrics": {
+          "calculated_metrics_present": false,
+          "validation_applied": false,
+          "tolerant_validation": false
+        }
+      },
+      "error": null
+    },
+    {
+      "dataset": "SRS",
+      "pdf_name": "brf_198532.pdf",
+      "pdf_path": "SRS/brf_198532.pdf",
+      "success": true,
+      "coverage": 0.0,
+      "confidence": 0.0,
+      "extraction_time": 355.74433422088623,
+      "tests": {
+        "extraction_field": {
+          "confidence_scores": true,
+          "source_pages_tracked": true,
+          "coverage_calculation": true
+        },
+        "synonym_mapping": {
+          "swedish_governance": true,
+          "swedish_financial": true
+        },
+        "swedish_first": {
+          "fee_structure": true,
+          "financial_data": true
+        },
+        "calculated_metrics": {
+          "calculated_metrics_present": false,
+          "validation_applied": false,
+          "tolerant_validation": false
+        }
+      },
+      "error": null
+    },
+    {
+      "dataset": "SRS",
+      "pdf_name": "brf_52576.pdf",
+      "pdf_path": "SRS/brf_52576.pdf",
+      "success": true,
+      "coverage": 0.0,
+      "confidence": 0.0,
+      "extraction_time": 307.92990827560425,
+      "tests": {
+        "extraction_field": {
+          "confidence_scores": true,
+          "source_pages_tracked": true,
+          "coverage_calculation": true
+        },
+        "synonym_mapping": {
+          "swedish_governance": true,
+          "swedish_financial": true
+        },
+        "swedish_first": {
+          "fee_structure": true,
+          "financial_data": true
+        },
+        "calculated_metrics": {
+          "calculated_metrics_present": false,
+          "validation_applied": false,
+          "tolerant_validation": false
+        }
+      },
+      "error": null
+    },
+    {
+      "dataset": "SRS",
+      "pdf_name": "brf_276507.pdf",
+      "pdf_path": "SRS/brf_276507.pdf",
+      "success": true,
+      "coverage": 0.0,
+      "confidence": 0.0,
+      "extraction_time": 331.3516118526459,
+      "tests": {
+        "extraction_field": {
+          "confidence_scores": true,
+          "source_pages_tracked": true,
+          "coverage_calculation": true
+        },
+        "synonym_mapping": {
+          "swedish_governance": true,
+          "swedish_financial": true
+        },
+        "swedish_first": {
+          "fee_structure": true,
+          "financial_data": true
+        },
+        "calculated_metrics": {
+          "calculated_metrics_present": false,
+          "validation_applied": false,
+          "tolerant_validation": false
+        }
+      },
+      "error": null
+    }
+  ]
+}
