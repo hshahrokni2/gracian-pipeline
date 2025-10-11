@@ -1,5 +1,5 @@
 {
-  "pdf": "test_pdfs/brf_268882.pdf",
+  "pdf": "../../data/raw_pdfs/Hjorthagen/brf_268882.pdf",
   "topology": {
     "pdf_path": "test_pdfs/brf_268882.pdf",
     "total_pages": 28,
@@ -10,20 +10,20 @@
       9,
       18
     ],
-    "analysis_time": 0.06149768829345703
+    "analysis_time": 0.004014015197753906
   },
   "structure": {
     "num_sections": 50,
     "method": "ocr",
     "cached": false,
-    "extraction_time": 103.98734331130981
+    "extraction_time": 95.71463990211487
   },
   "routing": {
     "main_sections": {
-      "governance_agent": 1,
-      "financial_agent": 3,
-      "property_agent": 0,
-      "operations_agent": 0,
+      "governance_agent": 8,
+      "financial_agent": 12,
+      "property_agent": 2,
+      "operations_agent": 3,
       "notes_collection": 2
     },
     "note_sections": {
@@ -34,16 +34,269 @@
       "notes_tax_agent": 1,
       "notes_loans_agent": 1
     },
-    "routing_time": 0.00061798095703125
+    "routing_time": 0.0013172626495361328
+  },
+  "agent_results": {
+    "governance_agent": {
+      "agent_id": "governance_agent",
+      "status": "success",
+      "data": {
+        "chairman": "",
+        "board_members": [],
+        "auditor_name": "",
+        "audit_firm": "",
+        "nomination_committee": [],
+        "evidence_pages": []
+      },
+      "section_headings": [
+        "Förvaltningsberättelse",
+        "Giltighet",
+        "Förvaltningsberättelse",
+        "Registreringsdatum",
+        "Äkta förening",
+        "Styrelsens sammansättning",
+        "Revisorer",
+        "Medlemsinformation"
+      ],
+      "pages_rendered": [
+        3,
+        6,
+        9,
+        12
+      ],
+      "num_images": 4,
+      "evidence_pages": [],
+      "extraction_time": 10.002869844436646,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 4797
+    },
+    "property_agent": {
+      "agent_id": "property_agent",
+      "status": "success",
+      "data": {
+        "designation": "Hagelbössan 1",
+        "address": "Artemisgatan 3A, 3B, 5A, 5B och 7",
+        "postal_code": "",
+        "city": "Stockholm",
+        "built_year": "1965",
+        "apartments": "29",
+        "energy_class": "",
+        "evidence_pages": [
+          4
+        ]
+      },
+      "section_headings": [
+        "Fastigheten",
+        "Byggnadsår och ytor"
+      ],
+      "pages_rendered": [
+        4,
+        5,
+        7,
+        8
+      ],
+      "num_images": 4,
+      "evidence_pages": [
+        4
+      ],
+      "extraction_time": 10.445759773254395,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 4793
+    },
+    "financial_agent": {
+      "agent_id": "financial_agent",
+      "status": "success",
+      "data": {
+        "revenue": "",
+        "expenses": "",
+        "assets": "66814325",
+        "liabilities": "19514381",
+        "equity": "",
+        "surplus": "",
+        "evidence_pages": [
+          10,
+          17
+        ]
+      },
+      "section_headings": [
+        "Resultaträkning",
+        "Balansräkning",
+        "Kassaflödesanalys",
+        "Ekonomi",
+        "Flerårsöversikt",
+        "Upplysning vid förlust",
+        "Förändringar i eget kapital",
+        "Resultatdisposition",
+        "Resultaträkning",
+        "Balansräkning",
+        "Balansräkning",
+        "Kassaflödesanalys"
+      ],
+      "pages_rendered": [
+        3,
+        10,
+        17,
+        23
+      ],
+      "num_images": 4,
+      "evidence_pages": [
+        10,
+        17
+      ],
+      "extraction_time": 8.958627939224243,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 5307
+    },
+    "notes_accounting_agent": {
+      "agent_id": "notes_accounting_agent",
+      "status": "success",
+      "data": {
+        "accounting_principles": "Årsredovisningen har upprättats enligt Årsredovisningslagen och Bokföringsnämndens allmänna råd 2016:10 (K2), årsredovisning i mindre företag och 2023:1, kompletterande upplysningar m.m. i bostadsrättsföreningars årsredovisningar.",
+        "valuation_methods": "Materiella anläggningstillgångar redovisas till anskaffningsvärde minskat med avskrivningar. Byggnader och inventarier skrivs av linjärt över den bedömda ekonomiska livslängden. Avskrivningstiden grundar sig på bedömd ekonomisk livslängd av tillgången. Markvärdet är inte föremål för avskrivning. Bestående värdenedgång hanteras genom nedskrivning. Föreningens finansiella anläggningstillgångar värderas till anskaffningsvärde. I de fall tillgången på balansdagen har ett lägre värde än anskaffningsvärdet sker nedskrivning till det lägre värdet.",
+        "revenue_recognition": "Intäkter bokförs i den period de avser oavsett när betalning eller avisering skett. I årsavgiften ingår kostnader för bredband, kabel-tv, vatten och värme.",
+        "evidence_pages": [
+          13
+        ]
+      },
+      "section_headings": [
+        "NOT 1 REDOVISNINGS- OCH VÄRDERINGSPRINCIPER"
+      ],
+      "pages_rendered": [
+        13
+      ],
+      "num_images": 1,
+      "evidence_pages": [
+        13
+      ],
+      "extraction_time": 8.394161939620972,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 2399
+    },
+    "notes_other_agent": {
+      "agent_id": "notes_other_agent",
+      "status": "success",
+      "data": {
+        "other_notes": "",
+        "evidence_pages": []
+      },
+      "section_headings": [
+        "Redovisning av intäkter"
+      ],
+      "pages_rendered": [
+        13
+      ],
+      "num_images": 1,
+      "evidence_pages": [],
+      "extraction_time": 2.1862239837646484,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 2519
+    },
+    "notes_receivables_agent": {
+      "agent_id": "notes_receivables_agent",
+      "status": "success",
+      "data": {
+        "current_receivables": "",
+        "long_term_receivables": "",
+        "allowances": "",
+        "evidence_pages": []
+      },
+      "section_headings": [
+        "Omsättningstillgångar"
+      ],
+      "pages_rendered": [
+        13
+      ],
+      "num_images": 1,
+      "evidence_pages": [],
+      "extraction_time": 29.59645390510559,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 2685
+    },
+    "notes_reserves_agent": {
+      "agent_id": "notes_reserves_agent",
+      "status": "success",
+      "data": {
+        "reserve_fund": "Föreningens fond för yttre underhåll",
+        "annual_contribution": "Överföring från balanserat resultat till fond för yttre underhåll sker efter beslut av föreningsstämma.",
+        "fund_purpose": "Reservering till föreningens fond för yttre underhåll ingår i styrelsens förslag till resultatdisposition.",
+        "evidence_pages": [
+          13
+        ]
+      },
+      "section_headings": [
+        "Föreningens fond för yttre underhåll"
+      ],
+      "pages_rendered": [
+        13
+      ],
+      "num_images": 1,
+      "evidence_pages": [
+        13
+      ],
+      "extraction_time": 17.30852198600769,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 2916
+    },
+    "notes_tax_agent": {
+      "agent_id": "notes_tax_agent",
+      "status": "success",
+      "data": {
+        "current_tax": "",
+        "deferred_tax": "",
+        "tax_policy": "Fastighetsavgiften för hyreshus är 1 589 kr per bostadslägenhet, dock blir avgiften högst 0,30 % av taxeringsvärdet för bostadshus med tillhörande tomtmark.",
+        "evidence_pages": [
+          13
+        ]
+      },
+      "section_headings": [
+        "Skatter och avgifter"
+      ],
+      "pages_rendered": [
+        13
+      ],
+      "num_images": 1,
+      "evidence_pages": [
+        13
+      ],
+      "extraction_time": 3.6612370014190674,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 3121
+    },
+    "notes_loans_agent": {
+      "agent_id": "notes_loans_agent",
+      "status": "success",
+      "data": {
+        "outstanding_loans": "",
+        "interest_rate": "",
+        "amortization": "",
+        "loan_terms": "Lån med en bindningstid på ett år eller mindre tas i årsredovisningen upp som kortfristiga skulder.",
+        "evidence_pages": [
+          13
+        ]
+      },
+      "section_headings": [
+        "Fastighetslån"
+      ],
+      "pages_rendered": [
+        13
+      ],
+      "num_images": 1,
+      "evidence_pages": [
+        13
+      ],
+      "extraction_time": 15.800167083740234,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 3328
+    }
   },
   "quality_metrics": {
     "coverage": 1.0,
     "numeric_qc_pass": true,
-    "evidence_ratio": 0.75,
-    "overall_score": 0.875,
+    "evidence_ratio": 0.6666666666666666,
+    "overall_score": 0.8333333333333333,
     "needs_coaching": true,
-    "validation_time": 7.867813110351562e-06
+    "validation_time": 1.0967254638671875e-05
   },
-  "total_time": 153.7600598335266,
+  "total_time": 192.0906629562378,
   "total_cost": 0.0
 }

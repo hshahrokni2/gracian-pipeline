@@ -222,22 +222,28 @@ class OptimalBRFPipeline(BaseExtractor):
         )
         self.docling_text_options = PdfPipelineOptions(do_ocr=False)
 
-        # Main section routing map (simple keyword-based)
+        # Main section routing map (P1 FIX: Expanded keyword coverage)
         self.main_section_keywords = {
             "governance_agent": [
                 "förvaltningsberättelse", "styrelse", "board", "governance",
-                "föreningsstämma", "annual meeting", "giltighet", "validity"
+                "föreningsstämma", "annual meeting", "giltighet", "validity",
+                # P1: Add missing governance terms from diagnostic
+                "medlemsinformation", "medlemmar", "registrering",
+                "äkta förening", "förening", "sammansättning", "revisorer"
             ],
             "financial_agent": [
                 "resultaträkning", "income statement", "balansräkning", "balance sheet",
-                "kassaflödesanalys", "cash flow", "ekonomi", "financial"
+                "kassaflödesanalys", "cash flow", "ekonomi", "financial",
+                # P1: Add missing financial terms from diagnostic
+                "flerårsöversikt", "förändringar", "eget kapital",
+                "resultatdisposition", "förlust", "kapital", "upplysning"
             ],
             "property_agent": [
                 "fastighet", "property", "building", "byggnadsår", "construction year",
                 "ytor", "area", "lokaler", "premises"
             ],
             "operations_agent": [
-                "verksamhet", "operations", "avtaö", "contracts", "leverantörer", "suppliers"
+                "verksamhet", "operations", "avtal", "contracts", "leverantörer", "suppliers"
             ]
         }
 
@@ -445,16 +451,19 @@ class OptimalBRFPipeline(BaseExtractor):
             heading = section['heading']
             heading_lower = heading.lower()
 
-            # Detect main "Noter" section
-            if "noter" in heading_lower and len(heading) < 20:
-                main_sections['notes_collection'].append(heading)
-                in_notes_subsection = True  # Start collecting note subsections
-                continue
-
-            # Start of note subsections (first "NOT X" section)
-            if heading.startswith("NOT "):
+            # P0 FIX: More specific note detection to prevent premature state machine transition
+            # Only switch to notes mode on actual note subsections (NOT 1, NOT 2, etc.)
+            if heading.startswith("NOT ") and re.match(r"NOT \d+", heading):
+                # Real note subsection detected
                 in_notes_subsection = True
                 note_headings.append(heading)
+                continue
+
+            # Detect main "Noter" section (TOC entry on page 2)
+            # Keep for collection, but DON'T switch to notes mode yet
+            if "noter" in heading_lower and len(heading) < 20:
+                main_sections['notes_collection'].append(heading)
+                # Don't set in_notes_subsection = True here - wait for actual note subsections
                 continue
 
             # Stop at end markers
