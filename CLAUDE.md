@@ -17,9 +17,18 @@ Read experiments/docling_advanced/DOCLING_ARCHITECTURE_OVERVIEW.md for current s
 #### **Branch A: Multi-Agent Parallel Orchestrator** (More LLMs)
 - **Location**: `gracian_pipeline/core/parallel_orchestrator.py` (511 lines)
 - **Philosophy**: Docling for structure → Heavy LLM extraction with specialized agents
-- **Status**: 🚧 **IN DEVELOPMENT** - Governance agents returning empty results (Oct 11)
+- **Status**: ✅ **VALIDATED** - 42-PDF comprehensive test complete (Oct 11)
+- **Performance**: 88.1% success rate, 56.1% avg coverage, 0.64 confidence
 - **Cost**: ~$0.05/PDF
 - **Best for**: Complex narratives, nuanced extraction, high-quality requirements
+
+**Latest Test Results** (Week 3 Day 3 - Oct 11, 2025):
+- **42 PDFs tested**: 37 successful (88.1%), 5 connection errors
+- **Hjorthagen dataset**: 15/15 (100% success), 66.9% avg coverage
+- **SRS dataset**: 22/27 (81.5% success), 48.8% avg coverage
+- **Top performer**: brf_81563.pdf with 98.3% coverage 🎯
+- **Swedish term mapping**: 97.3% success rate
+- **Test artifacts**: `data/week3_comprehensive_test_results/`
 
 #### **Branch B: Optimal Docling-Heavy Pipeline** (Less LLMs, Save Money)
 - **Location**: `experiments/docling_advanced/code/optimal_brf_pipeline.py` (1,042 lines)
@@ -252,40 +261,60 @@ Result validation + evidence tracking
 
 ## 🎯 Current Focus Areas
 
-### **P0 - CRITICAL BLOCKERS** (Fix ASAP)
+### **P0 - CRITICAL PRIORITIES** (Based on Week 3 Day 3 Results)
 
-#### **Branch B: Dictionary Routing Bug**
-- **Symptom**: 0% section-to-agent routing success (0/149 sections matched)
-- **Impact**: Blocks ALL extraction in Branch B
-- **Location**: `experiments/docling_advanced/code/swedish_financial_dictionary.py`
-- **Root Cause**: Docling section names don't match dictionary expectations
-- **Fix**: Debug actual Docling section names, update dictionary mappings
-- **Priority**: **CRITICAL** - Blocks 35.7% → 75% validation
+#### **1. SRS Dataset Coverage Gap** (48.8% vs 66.9% Hjorthagen)
+- **Symptom**: 18 percentage point coverage drop on SRS dataset
+- **Impact**: Won't hit 75% target for citywide corpus
+- **Root Cause**: SRS PDFs more diverse/complex than Hjorthagen
+- **Analysis Needed**:
+  - Compare extraction patterns between datasets
+  - Identify specific field failures in SRS documents
+  - Check if document structure differs significantly
+- **Priority**: **CRITICAL** - Affects 26,342 PDF corpus scalability
 
-#### **Branch A: Governance Empty Results**
-- **Symptom**: Agents execute but return `{'chairman': None, 'evidence_pages': []}`
-- **Impact**: Can't validate multi-agent architecture
-- **Location**: `gracian_pipeline/core/parallel_orchestrator.py:534-610`
-- **Root Cause**: Context routing passing wrong pages (data not where agents look)
-- **Fix**: Debug `_get_pages_for_sections()` and `_find_pages_by_keywords()`
-- **Priority**: **HIGH** - Blocks Branch A validation
+#### **2. Connection Error Recovery** (5 failed PDFs)
+- **Symptom**: 5 PDFs failed with "Connection error" during extraction
+- **Impact**: 11.9% failure rate unacceptable for production
+- **Failed PDFs**: brf_47809, brf_47903, brf_48663, brf_52576, brf_53107
+- **Fix Required**:
+  - Implement exponential backoff retry logic
+  - Add timeout handling and graceful degradation
+  - Log detailed error context for debugging
+- **Priority**: **HIGH** - Must reach 95%+ success rate
 
-### **P1 - HIGH PRIORITY**
+#### **3. Low Coverage Outliers** (9 PDFs <50%)
+- **Symptom**: 24.3% of test corpus achieved <50% coverage
+- **Impact**: Prevents hitting 75% average target
+- **Examples**: brf_78906 (6.0%), brf_43334 (6.8%), brf_76536 (0.0%)
+- **Investigation**:
+  - Manual review of low-performing PDFs
+  - Check if scanned vs machine-readable correlation
+  - Verify agent routing and context passing
+- **Priority**: **HIGH** - Quality improvement blocker
 
-1. **Validate 35.7% → 75% improvement** (Branch B)
-   - Requires: Dictionary routing fix
-   - Test: Measure field extraction after table structure extraction
-   - Target: ≥21/28 fields extracted
+### **P1 - HIGH PRIORITY** (Week 3 Day 4+ Action Items)
 
-2. **Create ground truth for test documents**
-   - Manually extract all 28 fields from 2-3 test PDFs
-   - Use for validation accuracy measurement
-   - Implement automated validation tests
+1. **Implement Missing Validation Features**
+   - **Multi-source aggregation**: 0% → 80% (combine data from multiple sections)
+   - **Validation thresholds**: 0% → 100% (implement tolerant validation)
+   - **Swedish-first fields**: Fee terminology 0% → 95%
+   - **Calculated metrics**: Enable metrics like debt-to-equity ratio
+   - **Impact**: Could boost coverage from 56.1% → 70%+
 
-3. **Test at scale (100 PDFs)**
-   - Validate caching performance (150,000x claim)
-   - Measure actual cost savings (Branch B vs Branch A)
-   - Identify edge cases and failure modes
+2. **Analyze and Fix Low Performers** (24.3% of corpus)
+   - Deep-dive analysis on 9 PDFs with <50% coverage
+   - Check correlation with scanned vs machine-readable
+   - Verify Docling OCR quality on problematic documents
+   - Test Branch B (Docling-heavy) on same PDFs for comparison
+   - **Target**: Bring average up from 56.1% to 65%+
+
+3. **Scale Testing to 100 PDFs**
+   - Validate performance on larger, more diverse sample
+   - Measure cost per PDF for budget planning
+   - Test parallel processing capability
+   - Identify edge cases for robust error handling
+   - **Outcome**: Production readiness validation
 
 ### **P2 - MEDIUM PRIORITY**
 
@@ -317,10 +346,12 @@ Result validation + evidence tracking
 
 | Metric | Current | Target | Status |
 |--------|---------|--------|--------|
-| **Overall Coverage** | 56% | 80% | 🟡 Regression from 98.3% |
-| **Agent Success Rate** | 100% exec | 100% data | 🔴 Empty results bug |
-| **Parallel Speedup** | Untested | 4x | 🟡 Needs validation |
-| **Token Usage** | Baseline | 50% reduction | 🟡 Smart context pending |
+| **Overall Coverage** | 56.1% | 80% | 🟡 Validated on 42 PDFs |
+| **Success Rate** | 88.1% | 95% | 🟢 Connection errors only |
+| **Swedish Terms** | 97.3% | 95% | ✅ **Exceeds target** |
+| **Processing Time** | 43-211s | 90s | 🟡 Needs optimization |
+| **Hjorthagen Coverage** | 66.9% | 75% | 🟢 Close to target |
+| **SRS Coverage** | 48.8% | 75% | 🔴 Needs investigation |
 
 ---
 
@@ -521,9 +552,26 @@ python -c "from core.parallel_orchestrator import extract_all_agents_parallel; .
 
 | Date | Change | Updated By |
 |------|--------|------------|
-| 2025-10-11 | **MAJOR UPDATE**: Corrected to Docling+Granite architecture, two-branch approach | Claude Code |
+| 2025-10-11 PM | **Week 3 Day 3 Complete**: 42-PDF comprehensive test validated Branch A (88.1% success, 56.1% coverage). Updated priorities based on SRS dataset gap, connection errors, and low performers. | Claude Code |
+| 2025-10-11 AM | **MAJOR UPDATE**: Corrected to Docling+Granite architecture, two-branch approach | Claude Code |
 | 2025-10-06 | Initial CLAUDE.md creation | Claude Code |
 
 ---
 
-**Remember**: We have TWO branches now. Branch B (Docling-heavy) is production-ready but blocked by dictionary routing bug. Branch A (Multi-agent LLM) has governance empty results bug. Fix Branch B first for maximum impact!
+## 🎯 **Current Status Summary** (After Week 3 Day 3)
+
+**Branch A (Multi-Agent)**: ✅ **VALIDATED** with real data
+- 42-PDF test: 88.1% success rate, 56.1% average coverage
+- Swedish term mapping: 97.3% (exceeds 95% target)
+- Hjorthagen: Strong performance (66.9% coverage, 100% success)
+- SRS: Needs improvement (48.8% coverage, 81.5% success)
+
+**Branch B (Docling-Heavy)**: 🔴 **BLOCKED** by dictionary routing
+- Still needs P0 fix before testing
+- Potential for higher coverage via table extraction
+- Lower cost target ($0.02 vs $0.05 per PDF)
+
+**Next Milestone**: Week 3 Day 4-5
+- Fix SRS dataset coverage gap (48.8% → 65%+)
+- Implement missing validation features (multi-source aggregation, thresholds)
+- Scale to 100-PDF test for production readiness
