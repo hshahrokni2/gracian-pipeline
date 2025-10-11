@@ -1,0 +1,65 @@
+{
+  "pdf": "test_pdfs/brf_268882.pdf",
+  "mode": "deep",
+  "topology": {
+    "pdf_path": "test_pdfs/brf_268882.pdf",
+    "total_pages": 28,
+    "classification": "scanned"
+  },
+  "structure": {
+    "sections": 49,
+    "tables": 11,
+    "time": 0.0031919479370117188
+  },
+  "routing": {
+    "agents": [
+      "governance_agent",
+      "financial_agent",
+      "property_agent",
+      "operations_agent",
+      "notes_collection"
+    ],
+    "time": 0.18091106414794922
+  },
+  "extraction": {
+    "agents": [
+      "governance_agent",
+      "financial_agent",
+      "property_agent",
+      "operations_agent",
+      "notes_collection"
+    ],
+    "time": 4.029273986816406e-05
+  },
+  "quality_metrics": {
+    "coverage": 0.09090909090909091,
+    "numeric_qc_pass": false,
+    "evidence_ratio": 0.0,
+    "overall_score": 0.03636363636363637,
+    "needs_coaching": true,
+    "component_scores": {
+      "validation": {
+        "pass_rate": 0.0,
+        "errors": 6,
+        "warnings": 0
+      },
+      "data_linking": {
+        "matched_links": 0,
+        "conflicts": 0,
+        "ocr_corrections": 0
+      }
+    },
+    "pass_rate": 0.0
+  },
+  "integration_metrics": {
+    "structure_detection_success": true,
+    "context_manager_success": false,
+    "data_linking_success": true,
+    "validation_success": true,
+    "pass_rate": 0.0,
+    "errors": 6,
+    "warnings": 0
+  },
+  "total_time": 0.18619084358215332,
+  "total_cost": 0.0
+}

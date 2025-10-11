@@ -1,0 +1,29 @@
+{
+  "total_validations": 2,
+  "pass_rate": 1.0,
+  "is_critical": false,
+  "summary": "100.0% pass rate (0 errors, 0 warnings, 2 infos)",
+  "errors": [],
+  "warnings": [],
+  "infos": [
+    {
+      "field_name": "financial_agent.balance_sheet",
+      "severity": "INFO",
+      "rule_name": "accounting_identity_valid",
+      "message": "Balance sheet valid: Assets = Liabilities + Equity (diff: 0.00%)",
+      "expected_value": "65,198,856",
+      "actual_value": "65,198,856",
+      "confidence": 1.0
+    },
+    {
+      "field_name": "financial_agent.income_statement",
+      "severity": "INFO",
+      "rule_name": "surplus_calculation_valid",
+      "message": "Income statement valid: Revenue - Expenses = Surplus (diff: 0.00%)",
+      "expected_value": "65,198",
+      "actual_value": "65,198",
+      "confidence": 1.0
+    }
+  ],
+  "flags_for_review": []
+}

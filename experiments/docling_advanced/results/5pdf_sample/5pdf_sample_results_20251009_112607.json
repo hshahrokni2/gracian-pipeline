@@ -1,0 +1,25 @@
+{
+  "timestamp": "20251009_112607",
+  "mode": "fast",
+  "total_pdfs": 3,
+  "successful": 0,
+  "failed": 3,
+  "total_time": 191.19801902770996,
+  "results": [
+    {
+      "pdf": "brf_268882.pdf",
+      "success": false,
+      "error": "'EnhancedExtractionResult' object has no attribute 'structure'"
+    },
+    {
+      "pdf": "brf_271852.pdf",
+      "success": false,
+      "error": "'EnhancedExtractionResult' object has no attribute 'structure'"
+    },
+    {
+      "pdf": "brf_276507.pdf",
+      "success": false,
+      "error": "'EnhancedExtractionResult' object has no attribute 'structure'"
+    }
+  ]
+}

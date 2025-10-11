@@ -1,0 +1,51 @@
+{
+  "pdf": "test_pdfs/brf_271852.pdf",
+  "mode": "fast",
+  "topology": {
+    "pdf_path": "test_pdfs/brf_271852.pdf",
+    "total_pages": 18,
+    "classification": "hybrid"
+  },
+  "structure": {
+    "sections": 45,
+    "tables": 8,
+    "time": 30.12994360923767
+  },
+  "routing": {
+    "agents": [
+      "governance_agent",
+      "financial_agent",
+      "property_agent",
+      "operations_agent",
+      "notes_collection"
+    ],
+    "time": 0.04825019836425781
+  },
+  "extraction": {
+    "agents": [
+      "governance_agent",
+      "financial_agent",
+      "property_agent"
+    ],
+    "time": 9.5367431640625e-07
+  },
+  "quality_metrics": {
+    "coverage": 0.0,
+    "numeric_qc_pass": true,
+    "evidence_ratio": 0.0,
+    "overall_score": 0.0,
+    "needs_coaching": true,
+    "component_scores": {}
+  },
+  "integration_metrics": {
+    "structure_detection_success": true,
+    "context_manager_success": false,
+    "data_linking_success": false,
+    "validation_success": false,
+    "pass_rate": 0.0,
+    "errors": 0,
+    "warnings": 0
+  },
+  "total_time": 30.181092023849487,
+  "total_cost": 0.0
+}

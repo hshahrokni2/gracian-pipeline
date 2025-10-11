@@ -1,0 +1,412 @@
+# Swedish Financial Terms Dictionary
+# Purpose: Map Swedish BRF terminology to canonical field names for extraction
+# Structure: category → field → canonical term + synonyms
+
+version: "1.0.0"
+updated: "2025-10-09"
+
+# =============================================================================
+# BALANCE SHEET (Balansräkning)
+# =============================================================================
+balance_sheet:
+  # Assets (Tillgångar)
+  assets:
+    canonical: "tillgångar"
+    english: "assets"
+    synonyms:
+      - "tillgangar"  # No Swedish chars
+      - "summa tillgångar"
+      - "totala tillgångar"
+      - "balansomslutning"
+      - "summa balansomslutning"
+    context: ["balansräkning", "balans"]
+
+  fixed_assets:
+    canonical: "anläggningstillgångar"
+    english: "fixed_assets"
+    synonyms:
+      - "anlaggningstillgangar"
+      - "anläggningstillgångar"
+      - "fasta tillgangar"
+    context: ["balansräkning"]
+
+  current_assets:
+    canonical: "omsättningstillgångar"
+    english: "current_assets"
+    synonyms:
+      - "omsattningstillgangar"
+      - "omsättningstillgångar"
+      - "kortfristiga tillgangar"
+    context: ["balansräkning"]
+
+  # Liabilities (Skulder)
+  liabilities:
+    canonical: "skulder"
+    english: "liabilities"
+    synonyms:
+      - "summa skulder"
+      - "totala skulder"
+      - "skulder och eget kapital"
+    context: ["balansräkning"]
+
+  long_term_liabilities:
+    canonical: "långfristiga skulder"
+    english: "long_term_liabilities"
+    synonyms:
+      - "langfristiga skulder"
+      - "langfristiga lan"
+      - "långfristiga lån"
+    context: ["balansräkning"]
+
+  short_term_liabilities:
+    canonical: "kortfristiga skulder"
+    english: "short_term_liabilities"
+    synonyms:
+      - "kortfristiga skulder"
+      - "kortfristiga lan"
+    context: ["balansräkning"]
+
+  # Equity (Eget kapital)
+  equity:
+    canonical: "eget kapital"
+    english: "equity"
+    synonyms:
+      - "eget kapital"
+      - "summa eget kapital"
+      - "totalt eget kapital"
+      - "foreningens formogenhet"
+      - "föreningens förmögenhet"
+    context: ["balansräkning"]
+
+  reserves:
+    canonical: "reserver"
+    english: "reserves"
+    synonyms:
+      - "reserverade medel"
+      - "reservfond"
+      - "upprustningsfond"
+    context: ["balansräkning", "noter"]
+
+# =============================================================================
+# INCOME STATEMENT (Resultaträkning)
+# =============================================================================
+income_statement:
+  # Revenue (Intäkter)
+  revenue:
+    canonical: "intäkter"
+    english: "revenue"
+    synonyms:
+      - "intakter"
+      - "summa intäkter"
+      - "totala intäkter"
+      - "årsavgifter"
+      - "arsavgifter"
+    context: ["resultaträkning", "resultat"]
+
+  annual_fees:
+    canonical: "årsavgifter"
+    english: "annual_fees"
+    synonyms:
+      - "arsavgifter"
+      - "årsavgift"
+      - "avgifter"
+      - "bostadsrättsavgifter"
+    context: ["resultaträkning"]
+
+  # Expenses (Kostnader)
+  expenses:
+    canonical: "kostnader"
+    english: "expenses"
+    synonyms:
+      - "summa kostnader"
+      - "totala kostnader"
+      - "driftskostnader"
+      - "rorelsekostnader"
+      - "rörelsekostnader"
+    context: ["resultaträkning"]
+
+  operating_expenses:
+    canonical: "rörelsekostnader"
+    english: "operating_expenses"
+    synonyms:
+      - "rorelsekostnader"
+      - "driftskostnader"
+      - "driftskostnad"
+    context: ["resultaträkning"]
+
+  maintenance_expenses:
+    canonical: "underhållskostnader"
+    english: "maintenance_expenses"
+    synonyms:
+      - "underhallskostnader"
+      - "underhåll"
+      - "reparationer"
+      - "reparation och underhall"
+    context: ["resultaträkning", "noter"]
+
+  # Result (Resultat)
+  surplus:
+    canonical: "årets resultat"
+    english: "surplus"
+    synonyms:
+      - "arets resultat"
+      - "årets överskott"
+      - "överskott"
+      - "overskott"
+      - "årets underskott"
+      - "underskott"
+    context: ["resultaträkning"]
+
+# =============================================================================
+# NOTES (Noter)
+# =============================================================================
+notes:
+  # Note categories
+  depreciation:
+    canonical: "avskrivningar"
+    english: "depreciation"
+    synonyms:
+      - "avskrivning"
+      - "avskrivningar av materiella anläggningstillgångar"
+      - "avskrivning byggnader"
+    context: ["not", "noter"]
+    note_numbers: [4, 5, 6]
+
+  building_details:
+    canonical: "byggnad"
+    english: "building_details"
+    synonyms:
+      - "byggnader"
+      - "byggnad och mark"
+      - "fastighet"
+      - "byggnadsår"
+      - "byggnadsår"
+    context: ["not 8", "noter"]
+    note_numbers: [8]
+
+  receivables:
+    canonical: "fordringar"
+    english: "receivables"
+    synonyms:
+      - "förutbetalda kostnader och upplupna intäkter"
+      - "forutbetalda kostnader"
+      - "upplupna intakter"
+    context: ["not 9", "noter"]
+    note_numbers: [9]
+
+  loans:
+    canonical: "lån"
+    english: "loans"
+    synonyms:
+      - "lan"
+      - "låneavtal"
+      - "lånförfall"
+      - "lanforfall"
+      - "långivare"
+      - "långfristig skuld"
+    context: ["not", "noter"]
+    note_numbers: [10, 11, 12]
+
+  collateral:
+    canonical: "säkerheter"
+    english: "collateral"
+    synonyms:
+      - "sakerheter"
+      - "pantsatta tillgangar"
+      - "pantsatta tillgångar"
+      - "fastighetsinteckning"
+    context: ["not", "noter"]
+    note_numbers: [11]
+
+# =============================================================================
+# GOVERNANCE (Förvaltning)
+# =============================================================================
+governance:
+  chairman:
+    canonical: "styrelseordförande"
+    english: "chairman"
+    synonyms:
+      - "styrelseordforande"
+      - "ordförande"
+      - "ordforande"
+      - "styrelsens ordförande"
+    context: ["förvaltningsberättelse", "styrelse"]
+
+  board_members:
+    canonical: "styrelseledamöter"
+    english: "board_members"
+    synonyms:
+      - "styrelseledam"
+      - "ledamot"
+      - "ledamoter"
+      - "styrelsen"
+      - "styrelsemedlemmar"
+    context: ["förvaltningsberättelse", "styrelse"]
+
+  auditor:
+    canonical: "revisor"
+    english: "auditor"
+    synonyms:
+      - "auktoriserad revisor"
+      - "godkänd revisor"
+      - "godkand revisor"
+      - "revisorer"
+    context: ["förvaltningsberättelse", "revisionsberättelse"]
+
+  audit_firm:
+    canonical: "revisionsbyrå"
+    english: "audit_firm"
+    synonyms:
+      - "revisionsbyra"
+      - "revisionsfirma"
+      - "byrå"
+      - "byra"
+    context: ["förvaltningsberättelse"]
+
+  nomination_committee:
+    canonical: "valberedning"
+    english: "nomination_committee"
+    synonyms:
+      - "valberedningen"
+      - "nominering"
+    context: ["förvaltningsberättelse"]
+
+# =============================================================================
+# PROPERTY (Fastighet)
+# =============================================================================
+property:
+  property_designation:
+    canonical: "fastighetsbeteckning"
+    english: "property_designation"
+    synonyms:
+      - "fastighetsbeteckning"
+      - "fastighetsbetäckning"
+      - "fastighet"
+      - "beteckning"
+    context: ["förvaltningsberättelse", "fastighet"]
+
+  total_area:
+    canonical: "total bostadsarea"
+    english: "total_area_sqm"
+    synonyms:
+      - "bostadsarea"
+      - "bostadsyta"
+      - "total yta"
+      - "totalyta"
+      - "area kvm"
+      - "yta m2"
+    context: ["förvaltningsberättelse", "fastighet"]
+
+  building_year:
+    canonical: "byggnadsår"
+    english: "building_year"
+    synonyms:
+      - "byggnadsår"
+      - "byggår"
+      - "byggnadsar"
+      - "ar for byggnad"
+      - "år för byggnad"
+    context: ["förvaltningsberättelse", "not 8"]
+
+  apartments:
+    canonical: "antal lägenheter"
+    english: "apartments"
+    synonyms:
+      - "lagenheter"
+      - "bostadsrätter"
+      - "bostadsratter"
+      - "antal bostäder"
+    context: ["förvaltningsberättelse"]
+
+  commercial_premises:
+    canonical: "lokaler"
+    english: "commercial_premises"
+    synonyms:
+      - "kommersiella lokaler"
+      - "affärslokaler"
+      - "affarslokaler"
+      - "butikslokaler"
+    context: ["förvaltningsberättelse"]
+
+  common_areas:
+    canonical: "gemensamma utrymmen"
+    english: "common_areas"
+    synonyms:
+      - "gemensamma utrymmen"
+      - "gemensamma lokaler"
+      - "gemensamhetsutrymmen"
+    context: ["förvaltningsberättelse"]
+
+  joint_property:
+    canonical: "samfällighet"
+    english: "joint_property"
+    synonyms:
+      - "samfallighet"
+      - "gemensamhetsanläggning"
+      - "gemensam anlaggning"
+    context: ["förvaltningsberättelse"]
+
+# =============================================================================
+# UNITS (Enheter)
+# =============================================================================
+units:
+  thousands:
+    canonical: "tkr"
+    multiplier: 1000
+    synonyms:
+      - "tkr"
+      - "kkr"
+      - "tusental"
+      - "tusental kronor"
+
+  millions:
+    canonical: "mkr"
+    multiplier: 1000000
+    synonyms:
+      - "mkr"
+      - "miljoner"
+      - "miljoner kronor"
+
+  kronor:
+    canonical: "kr"
+    multiplier: 1
+    synonyms:
+      - "kr"
+      - "kronor"
+      - "sek"
+
+# =============================================================================
+# SPECIAL PATTERNS
+# =============================================================================
+special_patterns:
+  # Section headers
+  section_headers:
+    balance_sheet:
+      - "balansräkning"
+      - "balansrakning"
+      - "balans"
+    income_statement:
+      - "resultaträkning"
+      - "resultatrakning"
+      - "resultat"
+    notes:
+      - "noter"
+      - "not"
+      - "tilläggsupplysningar"
+      - "tillaggsupplysningar"
+    governance:
+      - "förvaltningsberättelse"
+      - "forvaltningsberattelse"
+      - "styrelse"
+    audit:
+      - "revisionsberättelse"
+      - "revisionsberattelse"
+      - "revision"
+
+  # Date patterns
+  fiscal_year:
+    - "räkenskapsår"
+    - "rakenskapsår"
+    - "verksamhetsår"
+    - "år"
+    - "period"

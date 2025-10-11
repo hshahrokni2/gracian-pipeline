@@ -1,0 +1,598 @@
+{
+  "summary": {
+    "total_gt_fields": 39,
+    "extracted_fields": 2,
+    "correct_fields": 0,
+    "incorrect_fields": 2,
+    "missing_fields": 41,
+    "coverage_percent": 5.13,
+    "accuracy_percent": 0.0
+  },
+  "by_section": {
+    "governance": {
+      "extracted": 2,
+      "correct": 0,
+      "incorrect": 2,
+      "missing": 6,
+      "details": [
+        {
+          "field": "board_members",
+          "extracted": [
+            "Torbjörn Andersson",
+            "Maria Annelie Eck Arvstrand",
+            "Mats Eskilson",
+            "Fredrik Linde",
+            "Lisa Lind",
+            "Daniel Wetter"
+          ],
+          "ground_truth": [
+            {
+              "name": "Elvy Maria Löfvenberg",
+              "role": "Ordförande",
+              "term_expires_at_next_meeting": true
+            },
+            {
+              "name": "Torbjörn Andersson",
+              "role": "Ledamot",
+              "term_expires_at_next_meeting": true
+            },
+            {
+              "name": "Maria Annelie Eck Arvstrand",
+              "role": "Ledamot",
+              "term_expires_at_next_meeting": true
+            },
+            {
+              "name": "Mats Eskilson",
+              "role": "Ledamot",
+              "term_expires_at_next_meeting": true
+            },
+            {
+              "name": "Fredrik Linde",
+              "role": "Ledamot",
+              "term_expires_at_next_meeting": true
+            },
+            {
+              "name": "Lisa Lind",
+              "role": "Suppleant",
+              "term_expires_at_next_meeting": true
+            },
+            {
+              "name": "Daniel Wetter",
+              "role": "Suppleant",
+              "term_expires_at_next_meeting": true
+            }
+          ],
+          "correct": false,
+          "reason": "list_length_mismatch: 6 vs 7"
+        },
+        {
+          "field": "board_meetings_count",
+          "extracted": null,
+          "ground_truth": 14,
+          "correct": false,
+          "reason": "not_extracted"
+        },
+        {
+          "field": "auditors",
+          "extracted": null,
+          "ground_truth": [
+            {
+              "name": "Tobias Andersson",
+              "type": "Ordinarie Extern",
+              "firm": "KPMG AB"
+            },
+            {
+              "name": "Oskar Klenell",
+              "type": "Ordinarie Intern",
+              "firm": "Internrevisor Brf"
+            }
+          ],
+          "correct": false,
+          "reason": "not_extracted"
+        },
+        {
+          "field": "nomination_committee",
+          "extracted": [],
+          "ground_truth": [
+            {
+              "name": "Victoria Blennborn",
+              "role": "Sammankallande"
+            },
+            {
+              "name": "Mattias Lovén",
+              "role": "Member"
+            }
+          ],
+          "correct": false,
+          "reason": "missing_extraction"
+        },
+        {
+          "field": "annual_meeting_date",
+          "extracted": null,
+          "ground_truth": "2021-06-08",
+          "correct": false,
+          "reason": "not_extracted"
+        },
+        {
+          "field": "samf_membership.name",
+          "extracted": null,
+          "ground_truth": "Sonfjällets samfällighetsförening",
+          "correct": false,
+          "reason": "not_extracted"
+        },
+        {
+          "field": "samf_membership.ownership_share",
+          "extracted": null,
+          "ground_truth": 0.47,
+          "correct": false,
+          "reason": "not_extracted"
+        },
+        {
+          "field": "samf_membership.purpose",
+          "extracted": null,
+          "ground_truth": "Förvaltar gård, garagefoajé och garageport",
+          "correct": false,
+          "reason": "not_extracted"
+        }
+      ]
+    },
+    "financial": {
+      "extracted": 0,
+      "correct": 0,
+      "incorrect": 0,
+      "missing": 2,
+      "details": [
+        {
+          "field": "income_statement",
+          "extracted": null,
+          "ground_truth": {
+            "2021": {
+              "revenue": {
+                "net_sales": 7393591,
+                "other_operating_income": 57994,
+                "total": 7451585
+              },
+              "operating_expenses": {
+                "operating_costs": -2834798,
+                "other_external_costs": -229331,
+                "personnel_costs": -63912,
+                "depreciation": -3503359,
+                "total": -6631400
+              },
+              "operating_result": 820184,
+              "financial_items": {
+                "interest_income": 190038,
+                "interest_expenses": -1364032,
+                "total": -1173994
+              },
+              "result_after_financial": -353810,
+              "year_result": -353810
+            },
+            "2020": {
+              "revenue": {
+                "net_sales": 6644985,
+                "other_operating_income": 172885,
+                "total": 6817870
+              },
+              "operating_expenses": {
+                "operating_costs": -2352377,
+                "other_external_costs": -244541,
+                "personnel_costs": -112486,
+                "depreciation": -3503359,
+                "total": -6212763
+              },
+              "operating_result": 605108,
+              "financial_items": {
+                "interest_income": 551,
+                "interest_expenses": -1468068,
+                "total": -1467517
+              },
+              "result_after_financial": -862409,
+              "year_result": -862409
+            }
+          },
+          "correct": false,
+          "reason": "not_extracted"
+        },
+        {
+          "field": "balance_sheet",
+          "extracted": null,
+          "ground_truth": {
+            "2021": {
+              "assets": {
+                "fixed_assets": {
+                  "buildings": 666670761,
+                  "total": 666670761
+                },
+                "current_assets": {
+                  "receivables": 5480836,
+                  "cash_bank": 3143189,
+                  "total": 8624026
+                },
+                "total_assets": 675294786
+              },
+              "equity_liabilities": {
+                "equity": {
+                  "bound": {
+                    "member_deposits": 563055875,
+                    "maintenance_fund": 1026655,
+                    "total": 564082530
+                  },
+                  "accumulated_loss": {
+                    "retained_earnings": -3921044,
+                    "year_result": -353810,
+                    "total": -4274854
+                  },
+                  "total_equity": 559807676
+                },
+                "long_term_liabilities": {
+                  "bank_loans": 85980000,
+                  "total": 85980000
+                },
+                "short_term_liabilities": {
+                  "short_term_bank_loans": 28500000,
+                  "accounts_payable": 161253,
+                  "tax_liabilities": 384000,
+                  "accrued_expenses": 461858,
+                  "total": 29507111
+                },
+                "total_equity_liabilities": 675294786
+              }
+            },
+            "2020": {
+              "assets": {
+                "fixed_assets": {
+                  "buildings": 670174119,
+                  "total": 670174119
+                },
+                "current_assets": {
+                  "receivables": 1262513,
+                  "cash_bank": 4454060,
+                  "total": 5716572
+                },
+                "total_assets": 675890692
+              },
+              "equity_liabilities": {
+                "equity": {
+                  "bound": {
+                    "member_deposits": 563055875,
+                    "maintenance_fund": 800065,
+                    "total": 563855940
+                  },
+                  "accumulated_loss": {
+                    "retained_earnings": -2832045,
+                    "year_result": -862409,
+                    "total": -3694454
+                  },
+                  "total_equity": 560161486
+                },
+                "long_term_liabilities": {
+                  "bank_loans": 82630000,
+                  "total": 82630000
+                },
+                "short_term_liabilities": {
+                  "short_term_bank_loans": 31850000,
+                  "accounts_payable": 273779,
+                  "tax_liabilities": 384000,
+                  "accrued_expenses": 591427,
+                  "total": 33099206
+                },
+                "total_equity_liabilities": 675890692
+              }
+            }
+          },
+          "correct": false,
+          "reason": "not_extracted"
+        }
+      ]
+    },
+    "property": {
+      "extracted": 0,
+      "correct": 0,
+      "incorrect": 0,
+      "missing": 13,
+      "details": [
+        {
+          "field": "properties",
+          "extracted": null,
+          "ground_truth": [
+            {
+              "designation": "Sonfjället 2",
+              "acquisition_year": 2015,
+              "municipality": "Stockholm"
+            }
+          ],
+          "correct": false,
+          "reason": "not_extracted"
+        },
+        {
+          "field": "construction_year",
+          "extracted": null,
+          "ground_truth": 2015,
+          "correct": false,
+          "reason": "not_extracted"
+        },
+        {
+          "field": "building_count",
+          "extracted": null,
+          "ground_truth": 2,
+          "correct": false,
+          "reason": "not_extracted"
+        },
+        {
+          "field": "building_type",
+          "extracted": null,
+          "ground_truth": "Flerbostadshus",
+          "correct": false,
+          "reason": "not_extracted"
+        },
+        {
+          "field": "tax_value_year",
+          "extracted": null,
+          "ground_truth": 2017,
+          "correct": false,
+          "reason": "not_extracted"
+        },
+        {
+          "field": "total_area_sqm",
+          "extracted": null,
+          "ground_truth": 8009,
+          "correct": false,
+          "reason": "not_extracted"
+        },
+        {
+          "field": "residential_area_sqm",
+          "extracted": null,
+          "ground_truth": 7531,
+          "correct": false,
+          "reason": "not_extracted"
+        },
+        {
+          "field": "commercial_area_sqm",
+          "extracted": null,
+          "ground_truth": 478,
+          "correct": false,
+          "reason": "not_extracted"
+        },
+        {
+          "field": "heating_type",
+          "extracted": null,
+          "ground_truth": "Fjärrvärme",
+          "correct": false,
+          "reason": "not_extracted"
+        },
+        {
+          "field": "insurance.provider",
+          "extracted": null,
+          "ground_truth": "Brandkontoret",
+          "correct": false,
+          "reason": "not_extracted"
+        },
+        {
+          "field": "insurance.type",
+          "extracted": null,
+          "ground_truth": "Fullvärdesförsäkring",
+          "correct": false,
+          "reason": "not_extracted"
+        },
+        {
+          "field": "insurance.includes_member_supplement",
+          "extracted": null,
+          "ground_truth": true,
+          "correct": false,
+          "reason": "not_extracted"
+        },
+        {
+          "field": "insurance.includes_board_liability",
+          "extracted": null,
+          "ground_truth": true,
+          "correct": false,
+          "reason": "not_extracted"
+        }
+      ]
+    },
+    "apartments": {
+      "extracted": 0,
+      "correct": 0,
+      "incorrect": 0,
+      "missing": 10,
+      "details": [
+        {
+          "field": "total_count",
+          "extracted": null,
+          "ground_truth": 94,
+          "correct": false,
+          "reason": "not_extracted"
+        },
+        {
+          "field": "breakdown.1_rok",
+          "extracted": null,
+          "ground_truth": 10,
+          "correct": false,
+          "reason": "not_extracted"
+        },
+        {
+          "field": "breakdown.2_rok",
+          "extracted": null,
+          "ground_truth": 24,
+          "correct": false,
+          "reason": "not_extracted"
+        },
+        {
+          "field": "breakdown.3_rok",
+          "extracted": null,
+          "ground_truth": 23,
+          "correct": false,
+          "reason": "not_extracted"
+        },
+        {
+          "field": "breakdown.4_rok",
+          "extracted": null,
+          "ground_truth": 36,
+          "correct": false,
+          "reason": "not_extracted"
+        },
+        {
+          "field": "breakdown.5_rok",
+          "extracted": null,
+          "ground_truth": 1,
+          "correct": false,
+          "reason": "not_extracted"
+        },
+        {
+          "field": "breakdown.over_5_rok",
+          "extracted": null,
+          "ground_truth": 0,
+          "correct": false,
+          "reason": "not_extracted"
+        },
+        {
+          "field": "transfers_during_year",
+          "extracted": null,
+          "ground_truth": 14,
+          "correct": false,
+          "reason": "not_extracted"
+        },
+        {
+          "field": "secondhand_rentals_approved",
+          "extracted": null,
+          "ground_truth": 6,
+          "correct": false,
+          "reason": "not_extracted"
+        },
+        {
+          "field": "secondhand_rental_reasons",
+          "extracted": null,
+          "ground_truth": [
+            "Utlandstjänstgöring",
+            "Studier på annan ort"
+          ],
+          "correct": false,
+          "reason": "not_extracted"
+        }
+      ]
+    },
+    "loans": {
+      "extracted": 0,
+      "correct": 0,
+      "incorrect": 0,
+      "missing": 1,
+      "details": [
+        {
+          "field": "",
+          "extracted": null,
+          "ground_truth": [
+            {
+              "lender": "SEB",
+              "loan_number": "41431520",
+              "amount_2021": 30000000,
+              "amount_2020": 30000000,
+              "interest_rate": 0.0057,
+              "maturity_date": "2024-09-28",
+              "amortization_free": true,
+              "notes": "Villkorsändrat, löper på 3 år"
+            },
+            {
+              "lender": "SEB",
+              "amount_2021": 30000000,
+              "amount_2020": 30000000,
+              "interest_rate": 0.0059,
+              "maturity_date": "2023-09-28",
+              "amortization_free": true
+            },
+            {
+              "lender": "SEB",
+              "amount_2021": 28500000,
+              "amount_2020": 28500000,
+              "interest_rate": 0.0142,
+              "maturity_date": "2022-09-28",
+              "amortization_free": false,
+              "notes": "Amorteras med 500.000 kr/kvartal (lån med högst ränta)"
+            },
+            {
+              "lender": "SEB",
+              "amount_2021": 25980000,
+              "amount_2020": 25980000,
+              "interest_rate": 0.0236,
+              "maturity_date": "2025-09-28",
+              "amortization_free": true
+            }
+          ],
+          "correct": false,
+          "reason": "not_extracted"
+        }
+      ]
+    },
+    "fees": {
+      "extracted": 0,
+      "correct": 0,
+      "incorrect": 0,
+      "missing": 9,
+      "details": [
+        {
+          "field": "annual_fee_per_sqm_2021",
+          "extracted": null,
+          "ground_truth": 582,
+          "correct": false,
+          "reason": "not_extracted"
+        },
+        {
+          "field": "annual_fee_per_sqm_2020",
+          "extracted": null,
+          "ground_truth": 582,
+          "correct": false,
+          "reason": "not_extracted"
+        },
+        {
+          "field": "annual_fee_per_sqm_2019",
+          "extracted": null,
+          "ground_truth": 582,
+          "correct": false,
+          "reason": "not_extracted"
+        },
+        {
+          "field": "annual_fee_per_sqm_2018",
+          "extracted": null,
+          "ground_truth": 582,
+          "correct": false,
+          "reason": "not_extracted"
+        },
+        {
+          "field": "annual_fee_planned_change",
+          "extracted": null,
+          "ground_truth": "Oförändrade närmaste året",
+          "correct": false,
+          "reason": "not_extracted"
+        },
+        {
+          "field": "rent_per_sqm_2021",
+          "extracted": null,
+          "ground_truth": 2113,
+          "correct": false,
+          "reason": "not_extracted"
+        },
+        {
+          "field": "rent_per_sqm_2020",
+          "extracted": null,
+          "ground_truth": 1274,
+          "correct": false,
+          "reason": "not_extracted"
+        },
+        {
+          "field": "rent_per_sqm_2019",
+          "extracted": null,
+          "ground_truth": 1256,
+          "correct": false,
+          "reason": "not_extracted"
+        },
+        {
+          "field": "rent_per_sqm_2018",
+          "extracted": null,
+          "ground_truth": 1231,
+          "correct": false,
+          "reason": "not_extracted"
+        }
+      ]
+    }
+  }
+}

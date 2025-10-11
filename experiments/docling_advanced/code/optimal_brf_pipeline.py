@@ -40,6 +40,7 @@ from gracian_pipeline.core.vision_qc import call_grok_vision, call_openai_vision
 
 # Local imports
 from note_semantic_router import NoteSemanticRouter
+from base_brf_extractor import BaseExtractor
 
 # LLM clients
 from openai import OpenAI
@@ -178,9 +179,11 @@ class CacheManager:
             conn.commit()
 
 
-class OptimalBRFPipeline:
+class OptimalBRFPipeline(BaseExtractor):
     """
     Optimal BRF extraction pipeline combining all validated components.
+
+    Inherits from BaseExtractor to get shared extraction methods.
 
     Architecture:
     1. Adaptive PDF processing (topology-aware)
@@ -196,6 +199,9 @@ class OptimalBRFPipeline:
         output_dir: str = "results/optimal_pipeline",
         enable_caching: bool = True
     ):
+        # Initialize base extractor
+        BaseExtractor.__init__(self)
+
         self.cache_dir = Path(cache_dir)
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
@@ -373,14 +379,20 @@ class OptimalBRFPipeline:
                 # CRITICAL: Extract page from provenance metadata (not attributes!)
                 page_no = None
                 if hasattr(item, 'prov') and item.prov and len(item.prov) > 0:
-                    page_no = getattr(item.prov[0], 'page_no', None)
-                    if page_no is not None:
+                    docling_page = getattr(item.prov[0], 'page_no', None)
+                    if docling_page is not None:
+                        # CRITICAL FIX: Docling is 1-indexed, PyMuPDF is 0-indexed
+                        page_no = docling_page - 1
                         provenance_pages_found += 1
+
+                        # Diagnostic logging (first 5 sections only)
+                        if provenance_pages_found <= 5:
+                            print(f"      🔍 '{item.text[:40]}...' → Docling page {docling_page} → PyMuPDF index {page_no}")
 
                 section_info = {
                     "heading": item.text,
                     "level": level,
-                    "page": page_no,  # ✅ Now from provenance, not attributes
+                    "page": page_no,  # ✅ Now from provenance (0-indexed for PyMuPDF)
                 }
                 sections.append(section_info)
 
@@ -403,7 +415,10 @@ class OptimalBRFPipeline:
         self.structure_cache = structure_result
 
         print(f"   ✅ Structure detected ({len(sections)} sections, {elapsed:.1f}s)")
-        print(f"      Provenance pages: {provenance_pages_found}/{len(sections)} ({100*provenance_pages_found//len(sections) if sections else 0}%)")
+        if provenance_pages_found > 0:
+            print(f"      ✅ Provenance pages: {provenance_pages_found}/{len(sections)} ({100*provenance_pages_found//len(sections) if sections else 0}%)")
+        else:
+            print(f"      ⚠️ No provenance pages found (cache might be old or OCR disabled)")
         return structure_result
 
     def route_sections(
@@ -542,14 +557,33 @@ class OptimalBRFPipeline:
                         page = section['page']
                         pages.append(page)
 
-                        # ENHANCEMENT: Add nearby pages for context
-                        # Financial sections often span 2-3 pages
-                        if agent_id == 'financial_agent':
-                            total_pages = self._get_pdf_page_count(pdf_path)
-                            if page + 1 < total_pages:
-                                pages.append(page + 1)
-                            if page + 2 < total_pages:
-                                pages.append(page + 2)
+                        # CRITICAL FIX (Phase 2F): Provenance gives HEADER page, not CONTENT pages
+                        # Main sections (governance, financial) have headers on page 3 but content on pages 4-20
+                        # Notes sections have header and content on SAME page
+
+                        total_pages = self._get_pdf_page_count(pdf_path)
+
+                        # Strategy: Expand context window based on section type
+                        if agent_id == 'governance_agent':
+                            # Governance narrative typically spans 3-6 pages after header
+                            for i in range(1, 7):
+                                if page + i < total_pages:
+                                    pages.append(page + i)
+
+                        elif agent_id == 'financial_agent':
+                            # Financial statements + notes span 5-15 pages
+                            for i in range(1, 16):
+                                if page + i < total_pages:
+                                    pages.append(page + i)
+
+                        elif agent_id == 'property_agent':
+                            # Property details typically 2-4 pages
+                            for i in range(1, 5):
+                                if page + i < total_pages:
+                                    pages.append(page + i)
+
+                        # Note agents: header and content usually on same page, minimal expansion
+                        # (no explicit elif needed, just keep the provenance page)
 
                         break
                 else:
@@ -652,35 +686,7 @@ class OptimalBRFPipeline:
 
         return []
 
-    def _render_pdf_pages(
-        self,
-        pdf_path: str,
-        page_numbers: List[int],
-        dpi: int = 200
-    ) -> Tuple[List[bytes], List[str]]:
-        """
-        Render specific PDF pages to PNG bytes.
-
-        Returns:
-            (images, page_labels) tuple for OpenAI API
-        """
-        import fitz
-
-        doc = fitz.open(pdf_path)
-        images = []
-        labels = []
-
-        for page_num in page_numbers:
-            if page_num >= doc.page_count:
-                continue
-
-            page = doc[page_num]
-            pix = page.get_pixmap(dpi=dpi)
-            images.append(pix.tobytes("png"))
-            labels.append(f"Page {page_num + 1}")  # 1-based for LLM
-
-        doc.close()
-        return images, labels
+    # _render_pdf_pages() is now inherited from BaseExtractor
 
     def _build_selective_context(
         self,
@@ -718,233 +724,11 @@ class OptimalBRFPipeline:
 
         return "\n\nContext from previous extraction:\n" + "\n".join(context_fields)
 
-    def _parse_json_with_fallback(self, text: str) -> Optional[Dict[str, Any]]:
-        """
-        Parse JSON from LLM response with fallback strategies.
-        Handles markdown code fences, extra text, etc.
-        """
-        import re
+    # _parse_json_with_fallback() is now inherited from BaseExtractor
 
-        # Strategy 1: Try direct JSON parse
-        try:
-            return json.loads(text)
-        except json.JSONDecodeError:
-            pass
-
-        # Strategy 2: Extract from markdown code fence
-        fence_patterns = [
-            r'```json\s*\n(.*?)\n```',
-            r'```\s*\n(.*?)\n```',
-        ]
-
-        for pattern in fence_patterns:
-            match = re.search(pattern, text, re.DOTALL)
-            if match:
-                try:
-                    return json.loads(match.group(1))
-                except json.JSONDecodeError:
-                    continue
-
-        # Strategy 3: Find first JSON object (look for {...})
-        match = re.search(r'\{.*\}', text, re.DOTALL)
-        if match:
-            try:
-                return json.loads(match.group(0))
-            except json.JSONDecodeError:
-                pass
-
-        # All strategies failed
-        return None
-
-    def _extract_agent(
-        self,
-        pdf_path: str,
-        agent_id: str,
-        section_headings: List[str],
-        context: Dict[str, Any] = None
-    ) -> Dict[str, Any]:
-        """
-        Extract data for a single agent using GPT-4o.
-
-        Args:
-            pdf_path: Path to PDF
-            agent_id: Agent identifier (e.g., 'governance_agent')
-            section_headings: Relevant section headings to extract from
-            context: Optional hierarchical context from previous passes
-
-        Returns:
-            Extracted data dictionary
-        """
-        start_time = time.time()
-
-        # Load agent prompts from Gracian Pipeline
-        AGENT_PROMPTS = {
-            'governance_agent': """You are GovernanceAgent for Swedish BRF annual/economic plans. From the input text/images, extract ONLY board/auditor data in JSON: {chairman: '', board_members: [], auditor_name: '', audit_firm: '', nomination_committee: []}. Focus on roles like 'Ordförande' (chairman), 'Ledamot' (member), 'Revisor' (auditor). Use NLP synonyms {'Ordförande': 'chairman'}. Ignore financials/property. Multimodal: Analyze images for signatures/tables. Include evidence_pages: [] with 1-based page numbers used. Return ONLY minified JSON.""",
-            'financial_agent': """You are FinancialAgent for Swedish BRF reports. Extract ONLY income/balance data with EXACT keys: {revenue:'', expenses:'', assets:'', liabilities:'', equity:'', surplus:'', evidence_pages: []}. Parse SEK numbers (e.g., 1 234 567 → 1234567). Focus on 'Resultaträkning'/'Balansräkning'. Do NOT invent; if not clearly visible on provided pages leave empty. Evidence: evidence_pages must list 1-based GLOBAL page numbers matching image labels (keep ≤ 3 items). Return STRICT VALID JSON object; no extra text.""",
-            'property_agent': """You are PropertyAgent for BRF plans. Extract ONLY property details with EXACT keys: {designation:'', address:'', postal_code:'', city:'', built_year:'', apartments:'', energy_class:'', evidence_pages: []}. Use Swedish cues: 'Fastighetsbeteckning', 'Adress', 'Byggår', 'Lägenheter', 'Energiklass'. Evidence: evidence_pages must be 1-based GLOBAL page numbers matching image labels. If a field is not visible, return an empty string ''. Return STRICT VALID JSON object with ONLY these keys (no comments, no trailing text).""",
-            'notes_accounting_agent': """You are NotesAccountingAgent for BRF notes. Extract ONLY accounting policy info: {accounting_principles: '', valuation_methods: '', revenue_recognition: ''}. Focus on 'Redovisningsprinciper', 'Värderingsprinciper'. Use only visible values. Include evidence_pages: [] (1-based). Return STRICT minified JSON.""",
-            'notes_loans_agent': """You are NotesLoansAgent for BRF notes. Extract ONLY loan details: {outstanding_loans: '', interest_rate: '', amortization: '', loan_terms: ''}. Focus on 'Fastighetslån', 'Skulder'. Parse SEK numbers. Include evidence_pages: [] (1-based). Return STRICT minified JSON.""",
-            'notes_buildings_agent': """You are NotesBuildingsAgent for BRF notes. Extract ONLY building info: {buildings_description: '', building_value: '', depreciation_schedule: ''}. Focus on 'Byggnader och mark'. Include evidence_pages: [] (1-based). Return STRICT minified JSON.""",
-            'notes_receivables_agent': """You are NotesReceivablesAgent for BRF notes. Extract ONLY receivables: {current_receivables: '', long_term_receivables: '', allowances: ''}. Focus on 'Fordringar'. Include evidence_pages: [] (1-based). Return STRICT minified JSON.""",
-            'notes_reserves_agent': """You are NotesReservesAgent for BRF notes. Extract ONLY reserve fund info: {reserve_fund: '', annual_contribution: '', fund_purpose: ''}. Focus on 'Fond för yttre underhåll'. Include evidence_pages: [] (1-based). Return STRICT minified JSON.""",
-            'notes_tax_agent': """You are NotesTaxAgent for BRF notes. Extract ONLY tax info: {current_tax: '', deferred_tax: '', tax_policy: ''}. Focus on 'Skatter', 'Avgifter'. Include evidence_pages: [] (1-based). Return STRICT minified JSON.""",
-            'notes_other_agent': """You are NotesOtherAgent for BRF notes. Extract ONLY other note information not covered by specific agents: {other_notes: ''}. Include evidence_pages: [] (1-based). Return STRICT minified JSON."""
-        }
-
-        base_prompt = AGENT_PROMPTS.get(agent_id, f"Extract data for {agent_id} in JSON format.")
-
-        # Build context-aware prompt
-        prompt = f"""Document sections detected:
-{json.dumps(section_headings, indent=2, ensure_ascii=False)}
-
-{base_prompt}
-
-Focus on the sections listed above. Extract only information visible in those sections.
-"""
-
-        if context:
-            prompt += f"\n\nContext from previous extraction:\n{json.dumps(context, indent=2, ensure_ascii=False)}\n"
-
-        # Add mandatory evidence instruction (Fix #2 from ULTRATHINKING)
-        prompt += """
-⚠️ MANDATORY REQUIREMENT:
-Your JSON response MUST include 'evidence_pages': [page_numbers].
-List ALL page numbers (1-based, from image labels below) used for extraction.
-If you used images labeled "Page 5", "Page 7", "Page 8", return: 'evidence_pages': [5, 7, 8]
-If no relevant information found, return 'evidence_pages': []
-"""
-
-        # Step 1: Get pages for sections (enhanced hybrid strategy: Docling → text search → content keywords → fallback)
-        pages = self._get_pages_for_sections(pdf_path, section_headings, fallback_pages=5, agent_id=agent_id)
-
-        # Step 2: Adaptive page selection (max 4 pages to prevent token overflow)
-        if len(pages) > 4:
-            # For large sections, sample strategically (first, middle, last + one more)
-            selected_pages = [
-                pages[0],                           # Start
-                pages[len(pages)//3],               # Early-middle
-                pages[2*len(pages)//3],             # Late-middle
-                pages[-1]                           # End
-            ]
-            pages = sorted(set(selected_pages))
-
-        # Step 3: Render pages to images
-        images, page_labels = self._render_pdf_pages(pdf_path, pages, dpi=200)
-
-        if not images:
-            return {
-                "agent_id": agent_id,
-                "status": "error",
-                "error": "No images rendered",
-                "extraction_time": time.time() - start_time
-            }
-
-        # Step 4: Build multimodal message
-        from openai import OpenAI
-        client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
-
-        # Fix #1 from ULTRATHINKING: Interleave page labels with images
-        # Build content array with text labels between images so LLM knows which page is which
-        content = [{"type": "text", "text": prompt}]
-
-        for img_bytes, label in zip(images, page_labels):
-            img_b64 = base64.b64encode(img_bytes).decode('utf-8')
-            # Add text label before each image
-            content.append({"type": "text", "text": f"\n--- {label} ---"})
-            # Add the image
-            content.append({
-                "type": "image_url",
-                "image_url": {
-                    "url": f"data:image/png;base64,{img_b64}",
-                    "detail": "high"
-                }
-            })
-
-        # Construct messages with interleaved content
-        messages = [{"role": "user", "content": content}]
-
-        # Experiment: Log content array structure to verify labels reach LLM
-        print(f"\n🔬 EXPERIMENT: {agent_id} content array structure:")
-        for i, item in enumerate(content):
-            if item['type'] == 'text':
-                text_preview = item['text'][:80].replace('\n', ' ')
-                print(f"  [{i}] TEXT: {text_preview}...")
-            else:
-                print(f"  [{i}] IMAGE: base64 data")
-
-        # Step 5: Call OpenAI API with retry logic (from Gracian vision_qc.py)
-        max_attempts = 3
-        last_error = None
-
-        for attempt in range(max_attempts):
-            try:
-                response = client.chat.completions.create(
-                    model="gpt-4o-2024-11-20",
-                    messages=messages,
-                    max_tokens=2000,
-                    temperature=0
-                )
-
-                raw_content = response.choices[0].message.content
-
-                # Experiment: Log raw response to see what LLM actually returns
-                print(f"\n📄 {agent_id} RAW RESPONSE (first 500 chars):")
-                print(raw_content[:500])
-                print(f"\n🔍 Checking for 'evidence_pages' in raw response...")
-                if 'evidence_pages' in raw_content.lower():
-                    print(f"✅ FOUND 'evidence_pages' in raw response!")
-                else:
-                    print(f"❌ NOT FOUND 'evidence_pages' in raw response!")
-
-                # Step 6: Parse JSON with fallback (json_guard from Gracian)
-                extracted_data = self._parse_json_with_fallback(raw_content)
-
-                if extracted_data is None:
-                    raise ValueError(f"Failed to parse JSON from response: {raw_content[:200]}")
-
-                # Diagnostic: Log what keys the LLM actually returned
-                print(f"   🔍 {agent_id} extracted keys: {list(extracted_data.keys())}")
-                if 'evidence_pages' in extracted_data:
-                    print(f"   ✅ {agent_id} evidence_pages: {extracted_data['evidence_pages']}")
-                else:
-                    print(f"   ❌ {agent_id} MISSING evidence_pages!")
-
-                # Step 7: Evidence verification
-                rendered_pages = [p + 1 for p in pages]  # Convert to 1-based
-                evidence_pages = extracted_data.get('evidence_pages', [])
-                evidence_verified = all(pg in rendered_pages for pg in evidence_pages) if evidence_pages else False
-
-                # Step 8: Add metadata
-                result = {
-                    "agent_id": agent_id,
-                    "status": "success",
-                    "data": extracted_data,
-                    "section_headings": section_headings,
-                    "pages_rendered": rendered_pages,
-                    "num_images": len(images),
-                    "evidence_pages": evidence_pages,
-                    "evidence_verified": evidence_verified,
-                    "extraction_time": time.time() - start_time,
-                    "model": "gpt-4o-2024-11-20",
-                    "tokens_used": response.usage.total_tokens if hasattr(response, 'usage') else 0
-                }
-
-                return result
-
-            except Exception as e:
-                last_error = e
-                if attempt < max_attempts - 1:
-                    wait_time = (2 ** attempt)  # Exponential backoff: 1s, 2s
-                    time.sleep(wait_time)
-                continue
-
-        # All retries failed
-        return {
-            "agent_id": agent_id,
-            "status": "error",
-            "error": str(last_error),
-            "extraction_time": time.time() - start_time
-        }
+    # _extract_agent() is now inherited from BaseExtractor
+    # Note: BaseExtractor includes all agent prompts, extraction logic, retry handling,
+    # and evidence tracking. The optimal pipeline uses the shared implementation.
 
     def extract_pass1(
         self,
@@ -1186,6 +970,13 @@ If no relevant information found, return 'evidence_pages': []
 
         # Save results
         output_file = self.output_dir / f"{Path(pdf_path).stem}_optimal_result.json"
+
+        # Combine all agent results
+        agent_results = {}
+        agent_results.update(pass1_result)
+        agent_results.update(pass2_result)
+        agent_results.update(pass3_result)
+
         with open(output_file, 'w', encoding='utf-8') as f:
             json.dump({
                 'pdf': pdf_path,
@@ -1201,6 +992,7 @@ If no relevant information found, return 'evidence_pages': []
                     'note_sections': {k: len(v) for k, v in routing.note_sections.items()},
                     'routing_time': routing.routing_time
                 },
+                'agent_results': agent_results,  # ADD: Actual extraction data
                 'quality_metrics': quality_metrics,
                 'total_time': total_time,
                 'total_cost': total_cost

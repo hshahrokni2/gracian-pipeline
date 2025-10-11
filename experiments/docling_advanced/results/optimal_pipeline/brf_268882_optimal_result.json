@@ -10,13 +10,13 @@
       9,
       18
     ],
-    "analysis_time": 0.0501561164855957
+    "analysis_time": 0.06149768829345703
   },
   "structure": {
     "num_sections": 50,
     "method": "ocr",
     "cached": false,
-    "extraction_time": 94.31217813491821
+    "extraction_time": 103.98734331130981
   },
   "routing": {
     "main_sections": {
@@ -34,16 +34,16 @@
       "notes_tax_agent": 1,
       "notes_loans_agent": 1
     },
-    "routing_time": 0.0005347728729248047
+    "routing_time": 0.00061798095703125
   },
   "quality_metrics": {
     "coverage": 1.0,
     "numeric_qc_pass": true,
-    "evidence_ratio": 0.125,
-    "overall_score": 0.5625,
+    "evidence_ratio": 0.75,
+    "overall_score": 0.875,
     "needs_coaching": true,
-    "validation_time": 8.106231689453125e-06
+    "validation_time": 7.867813110351562e-06
   },
-  "total_time": 180.40795493125916,
+  "total_time": 153.7600598335266,
   "total_cost": 0.0
 }

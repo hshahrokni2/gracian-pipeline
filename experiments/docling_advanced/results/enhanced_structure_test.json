@@ -1,0 +1,390 @@
+{
+  "pdf_path": "/Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Gracian Pipeline/experiments/docling_advanced/test_pdfs/brf_268882.pdf",
+  "pdf_hash": "34e84d44deb5addb1263aa6eee2e201a55d173b594d79d51761eb1691e217ac8",
+  "sections_count": 49,
+  "tables": {
+    "unknown": {
+      "type": "unknown",
+      "page": 7,
+      "rows": 6,
+      "confidence": 0.9,
+      "sample_rows": [
+        {
+          "label": "Insatser",
+          "2022-12-31": 42351932.0,
+          "DISPONERING AV FÖREGAENDE ARS RESULTAT": "",
+          "DISPONERING AV ÖVRIGA POSTER": "",
+          "2023-12-31": 42351932.0
+        },
+        {
+          "label": "Upplätelseavgifter",
+          "2022-12-31": 10180536.0,
+          "DISPONERING AV FÖREGAENDE ARS RESULTAT": "",
+          "DISPONERING AV ÖVRIGA POSTER": "",
+          "2023-12-31": 10180536.0
+        },
+        {
+          "label": "Fond, underhäll yttre",
+          "2022-12-31": 1850150.0,
+          "DISPONERING AV FÖREGAENDE ARS RESULTAT": "",
+          "DISPONERING AV ÖVRIGA POSTER": 78012.0,
+          "2023-12-31": 928162.0
+        }
+      ]
+    },
+    "income_statement": {
+      "type": "income_statement",
+      "page": 8,
+      "rows": 17,
+      "confidence": 0.9,
+      "sample_rows": [
+        {
+          "label": "Rörelseintäkter",
+          "NOT": "",
+          "2023": "",
+          "2022": ""
+        },
+        {
+          "label": "Nettoomsättning",
+          "NOT": 2.0,
+          "2023": 2183255.0,
+          "2022": 2019206.0
+        },
+        {
+          "label": "Övriga rörelseintäkter",
+          "NOT": 3.0,
+          "2023": 20764.0,
+          "2022": 6077.0
+        }
+      ]
+    },
+    "balance_sheet_assets": {
+      "type": "balance_sheet_assets",
+      "page": 9,
+      "rows": 17,
+      "confidence": 0.9,
+      "sample_rows": [
+        {
+          "label": "ANLÄGGNINGSTILLGANGAR",
+          "NOT": "",
+          "2023-12-31": "",
+          "2022-12-31": ""
+        },
+        {
+          "label": "Materiella anläggningstillgängar",
+          "NOT": "",
+          "2023-12-31": "",
+          "2022-12-31": ""
+        },
+        {
+          "label": "Byggnad och mark",
+          "NOT": 11.0,
+          "2023-12-31": 65198856.0,
+          "2022-12-31": 65578692.0
+        }
+      ]
+    },
+    "balance_sheet_equity_liabilities": {
+      "type": "balance_sheet_equity_liabilities",
+      "page": 10,
+      "rows": 20,
+      "confidence": 0.9,
+      "sample_rows": [
+        {
+          "label": "EGET KAPITAL",
+          "NOT": "",
+          "2023-12-31": "",
+          "2022-12-31": ""
+        },
+        {
+          "label": "Bundet eget kapital",
+          "NOT": "",
+          "2023-12-31": "",
+          "2022-12-31": ""
+        },
+        {
+          "label": "Medlemsinsatser",
+          "NOT": "",
+          "2023-12-31": 52532468.0,
+          "2022-12-31": 52532468.0
+        }
+      ]
+    },
+    "cash_flow": {
+      "type": "cash_flow",
+      "page": 11,
+      "rows": 18,
+      "confidence": 0.9,
+      "sample_rows": [
+        {
+          "label": "Den löpande verksamheten",
+          "2023": "",
+          "2022": ""
+        },
+        {
+          "label": "Rörelseresultat",
+          "2023": 458055.0,
+          "2022": 158263.0
+        },
+        {
+          "label": "Justering av poster som inte ingfr kassaflödet",
+          "2023": "",
+          "2022": ""
+        }
+      ]
+    },
+    "note_2": {
+      "type": "note_2",
+      "page": 13,
+      "rows": 26,
+      "confidence": 0.9,
+      "sample_rows": [
+        {
+          "label": "Ärsavgifter , bostäder",
+          "2023": 330428.0,
+          "2022": 209588.0
+        },
+        {
+          "label": "Hyresintäkter, bostäder",
+          "2023": 822265.0,
+          "2022": 786794.0
+        },
+        {
+          "label": "intäkter Övriga",
+          "2023": 30562.0,
+          "2022": 22824.0
+        }
+      ]
+    },
+    "note_7": {
+      "type": "note_7",
+      "page": 14,
+      "rows": 21,
+      "confidence": 0.9,
+      "sample_rows": [
+        {
+          "label": "Fastighetsförsäkringar",
+          "2023": 44426.0,
+          "2022": 42410.0
+        },
+        {
+          "label": "Kabel-TV",
+          "2023": 11950.0,
+          "2022": 10689.0
+        },
+        {
+          "label": "Bredband",
+          "2023": 78878.0,
+          "2022": 74192.0
+        }
+      ]
+    },
+    "note_11": {
+      "type": "note_11",
+      "page": 15,
+      "rows": 24,
+      "confidence": 0.9,
+      "sample_rows": [
+        {
+          "label": "Ackumulerat anskaffningsvärde",
+          "2023-12-31": "",
+          "2022-12-31": ""
+        },
+        {
+          "label": "Ingäende",
+          "2023-12-31": 69050408.0,
+          "2022-12-31": 69050408.0
+        },
+        {
+          "label": "Utgäende ackumulerat anskaffningsvärde",
+          "2023-12-31": 69050408.0,
+          "2022-12-31": 69050408.0
+        }
+      ]
+    },
+    "note_14": {
+      "type": "note_14",
+      "page": 16,
+      "rows": 8,
+      "confidence": 0.9,
+      "sample_rows": [
+        {
+          "label": "Övriga förutbetalda kostnader och upplupna intäkter",
+          "2023-12-31": 3535.0,
+          "2022-12-31": 3210.0
+        },
+        {
+          "label": "Fastighetsskötsel",
+          "2023-12-31": 5203.0,
+          "2022-12-31": 4884.0
+        },
+        {
+          "label": "El",
+          "2023-12-31": 11269.0,
+          "2022-12-31": 985.0
+        }
+      ]
+    },
+    "note_16": {
+      "type": "note_16",
+      "page": 16,
+      "rows": 5,
+      "confidence": 0.9,
+      "sample_rows": [
+        {
+          "label": "Övriga upplupna kostnader och förutbetalda intäkter",
+          "2023-12-31": 9411.0,
+          "2022-12-31": 23722.0
+        },
+        {
+          "label": "Uppvärmning",
+          "2023-12-31": 62764.0,
+          "2022-12-31": 57657.0
+        },
+        {
+          "label": "Vatten",
+          "2023-12-31": 24757.0,
+          "2022-12-31": 21470.0
+        }
+      ]
+    },
+    "note_17": {
+      "type": "note_17",
+      "page": 16,
+      "rows": 1,
+      "confidence": 0.9,
+      "sample_rows": [
+        {
+          "label": "Fastighetsinteckning",
+          "2023-12-31": 27200000.0,
+          "2022-12-31": 27200000.0
+        }
+      ]
+    }
+  },
+  "term_index_count": 29,
+  "term_index_sample": {
+    "short_term_debt": {
+      "term": "kortfristiga skulder",
+      "page": 0,
+      "value": 13229714.0,
+      "confidence": 0.9
+    },
+    "solidarity_percent": {
+      "term": "soliditet",
+      "page": 0,
+      "value": null,
+      "confidence": 0.7
+    },
+    "cash_tkr": {
+      "term": "kassa och bank",
+      "page": 0,
+      "value": 320445.0,
+      "confidence": 0.9
+    },
+    "total_liabilities_tkr": {
+      "term": "skulder",
+      "page": 0,
+      "value": 15.0,
+      "confidence": 0.9
+    },
+    "pledged_assets_amount": {
+      "term": "fastighetsinteckning",
+      "page": 0,
+      "value": 27200000.0,
+      "confidence": 0.9
+    },
+    "total_equity_and_liabilities": {
+      "term": "summa eget kapital och skulder",
+      "page": 0,
+      "value": 66814325.0,
+      "confidence": 0.9
+    },
+    "operating_expenses_tkr": {
+      "term": "rörelsekostnader",
+      "page": 0,
+      "value": 745964.0,
+      "confidence": 0.9
+    },
+    "net_income_tkr": {
+      "term": "resultat",
+      "page": 0,
+      "value": -7220820.0,
+      "confidence": 0.9
+    },
+    "operating_surplus_tkr": {
+      "term": "rörelseresultat",
+      "page": 0,
+      "value": 458055.0,
+      "confidence": 0.9
+    },
+    "equity_tkr": {
+      "term": "summa eget kapital",
+      "page": 0,
+      "value": 46872029.0,
+      "confidence": 0.9
+    },
+    "net_revenue_tkr": {
+      "term": "nettoomsättning",
+      "page": 0,
+      "value": 2.0,
+      "confidence": 0.9
+    },
+    "board_member": {
+      "term": "ledamot",
+      "page": 0,
+      "value": null,
+      "confidence": 0.7
+    },
+    "nomination_committee": {
+      "term": "valberedning",
+      "page": 0,
+      "value": null,
+      "confidence": 0.7
+    },
+    "deputy": {
+      "term": "suppleant",
+      "page": 0,
+      "value": null,
+      "confidence": 0.7
+    },
+    "chairman": {
+      "term": "ordförande",
+      "page": 0,
+      "value": null,
+      "confidence": 0.7
+    },
+    "auditor": {
+      "term": "revisor",
+      "page": 0,
+      "value": null,
+      "confidence": 0.7
+    },
+    "authorized_auditor": {
+      "term": "godkänd revisor",
+      "page": 0,
+      "value": null,
+      "confidence": 0.7
+    },
+    "deputy_auditor": {
+      "term": "revisorssuppleant",
+      "page": 0,
+      "value": null,
+      "confidence": 0.7
+    },
+    "tax_value": {
+      "term": "taxeringsvärde",
+      "page": 0,
+      "value": null,
+      "confidence": 0.7
+    },
+    "property_designation": {
+      "term": "fastighet",
+      "page": 0,
+      "value": 2023.0,
+      "confidence": 0.9
+    }
+  },
+  "cross_references_count": 4,
+  "extraction_time": 95.37393093109131
+}

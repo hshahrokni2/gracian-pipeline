@@ -1,0 +1,142 @@
+2025-10-09 11:48:35,051 - INFO - detected formats: [<InputFormat.PDF: 'pdf'>]
+2025-10-09 11:48:35,084 - INFO - Going to convert document batch...
+2025-10-09 11:48:35,084 - INFO - Initializing pipeline for StandardPdfPipeline with options hash e647edf348883bed75367b22fbe60347
+2025-10-09 11:48:35,088 - INFO - Loading plugin 'docling_defaults'
+2025-10-09 11:48:35,089 - INFO - Registered picture descriptions: ['vlm', 'api']
+2025-10-09 11:48:35,093 - INFO - Loading plugin 'docling_defaults'
+2025-10-09 11:48:35,095 - INFO - Registered ocr engines: ['easyocr', 'ocrmac', 'rapidocr', 'tesserocr', 'tesseract']
+2025-10-09 11:48:35,258 - INFO - Accelerator device: 'mps'
+2025-10-09 11:48:38,183 - INFO - Accelerator device: 'mps'
+2025-10-09 11:48:39,609 - INFO - Accelerator device: 'mps'
+2025-10-09 11:48:40,113 - INFO - Processing document brf_268882.pdf
+2025-10-09 11:50:33,003 - INFO - Finished converting document brf_268882.pdf in 117.95 sec.
+================================================================================
+DIAGNOSTIC: Docling Sections vs Dictionary Terms
+================================================================================
+
+📄 Extracting sections from brf_268882.pdf...
+
+✅ Docling detected 49 sections
+✅ Docling detected 11 tables
+
+================================================================================
+SAMPLE SECTION TITLES (First 20)
+================================================================================
+ 1. [  1-1] Välkommen till &rsredovisningen för Brf Hagelbössan 1 1 Hjorthagen
+ 2. [  2-2] Kort till guide
+ 3. [  2-2] Förvaltningsberättelse
+ 4. [  2-2] Resultaträkning
+ 5. [  2-2] Balansräkning
+ 6. [  2-2] Kassaflödesanalys
+ 7. [  2-2] Noter
+ 8. [  2-2] Giltighet
+ 9. [  3-3] Förvaltningsberättelse
+10. [  3-3] Verksamheten
+11. [  3-3] Allmänt om verksamheten
+12. [  3-3] Registreringsdatum
+13. [  3-3] Äkta förening
+14. [  3-3] Fastigheten
+15. [  3-3] Byggnadsär och ytor
+16. [  3-3] Styrelsens sammansättning
+17. [  4-4] Revisorer
+18. [  4-4] Avtal med leverantörer
+19. [  4-4] Ekonomi
+20. [  5-5] Medlemsinformation
+
+================================================================================
+DICTIONARY CONFIGURATION
+================================================================================
+
+📚 Dictionary loaded: 31 terms across {'balance_sheet': {'terms': 8, 'synonyms': 27}, 'income_statement': {'terms': 6, 'synonyms': 27}, 'notes': {'terms': 5, 'synonyms': 21}, 'governance': {'terms': 5, 'synonyms': 19}, 'property': {'terms': 7, 'synonyms': 29}} categories
+
+================================================================================
+DICTIONARY EXPECTS (Sample Terms by Category)
+================================================================================
+
+BALANCE SHEET (8 terms):
+  • N/A                                 (field: N/A)
+    Synonyms: tillgangar, summa tillgångar, totala tillgångar
+  • N/A                                 (field: N/A)
+    Synonyms: anlaggningstillgangar, anläggningstillgångar, fasta tillgangar
+  • N/A                                 (field: N/A)
+    Synonyms: omsattningstillgangar, omsättningstillgångar, kortfristiga tillgangar
+  • N/A                                 (field: N/A)
+    Synonyms: summa skulder, totala skulder, skulder och eget kapital
+  • N/A                                 (field: N/A)
+    Synonyms: langfristiga skulder, langfristiga lan, långfristiga lån
+
+INCOME STATEMENT (6 terms):
+  • N/A                                 (field: N/A)
+    Synonyms: intakter, summa intäkter, totala intäkter
+  • N/A                                 (field: N/A)
+    Synonyms: arsavgifter, årsavgift, avgifter
+  • N/A                                 (field: N/A)
+    Synonyms: summa kostnader, totala kostnader, driftskostnader
+  • N/A                                 (field: N/A)
+    Synonyms: rorelsekostnader, driftskostnader, driftskostnad
+  • N/A                                 (field: N/A)
+    Synonyms: underhallskostnader, underhåll, reparationer
+
+GOVERNANCE (5 terms):
+  • N/A                                 (field: N/A)
+    Synonyms: styrelseordforande, ordförande, ordforande
+  • N/A                                 (field: N/A)
+    Synonyms: styrelseledam, ledamot, ledamoter
+  • N/A                                 (field: N/A)
+    Synonyms: auktoriserad revisor, godkänd revisor, godkand revisor
+  • N/A                                 (field: N/A)
+    Synonyms: revisionsbyra, revisionsfirma, byrå
+  • N/A                                 (field: N/A)
+    Synonyms: valberedningen, nominering
+
+NOTES (5 terms):
+  • N/A                                 (field: N/A)
+    Synonyms: avskrivning, avskrivningar av materiella anläggningstillgångar, avskrivning byggnader
+  • N/A                                 (field: N/A)
+    Synonyms: byggnader, byggnad och mark, fastighet
+  • N/A                                 (field: N/A)
+    Synonyms: förutbetalda kostnader och upplupna intäkter, forutbetalda kostnader, upplupna intakter
+  • N/A                                 (field: N/A)
+    Synonyms: lan, låneavtal, lånförfall
+  • N/A                                 (field: N/A)
+    Synonyms: sakerheter, pantsatta tillgangar, pantsatta tillgångar
+
+================================================================================
+MATCH TESTING: Actual Docling Sections -> Dictionary
+================================================================================
+
+❌ MISS #1: 'Välkommen till &rsredovisningen för Brf Hagelbössan 1 1 Hjorthagen' [1-1] -> NO MATCH
+
+❌ MISS #2: 'Kort till guide' [2-2] -> NO MATCH
+
+❌ MISS #3: 'Förvaltningsberättelse' [2-2] -> NO MATCH
+
+❌ MISS #4: 'Resultaträkning' [2-2] -> NO MATCH
+
+❌ MISS #5: 'Balansräkning' [2-2] -> NO MATCH
+
+❌ MISS #6: 'Kassaflödesanalys' [2-2] -> NO MATCH
+
+❌ MISS #7: 'Noter' [2-2] -> NO MATCH
+
+❌ MISS #8: 'Giltighet' [2-2] -> NO MATCH
+
+❌ MISS #9: 'Förvaltningsberättelse' [3-3] -> NO MATCH
+
+❌ MISS #10: 'Verksamheten' [3-3] -> NO MATCH
+
+❌ MISS #11: 'Allmänt om verksamheten' [3-3] -> NO MATCH
+
+❌ MISS #12: 'Registreringsdatum' [3-3] -> NO MATCH
+
+❌ MISS #13: 'Äkta förening' [3-3] -> NO MATCH
+
+✅ MATCH #1
+   Section: 'Fastigheten' [3-3]
+Traceback (most recent call last):
+  File "/Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Gracian Pipeline/experiments/docling_advanced/code/debug_dictionary_matching.py", line 190, in <module>
+    main()
+  File "/Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Gracian Pipeline/experiments/docling_advanced/code/debug_dictionary_matching.py", line 88, in main
+    print(f"   -> Category: {match.category}, Field: {match.canonical_field}")
+                                                      ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TermMatch' object has no attribute 'canonical_field'. Did you mean: 'canonical_term'?

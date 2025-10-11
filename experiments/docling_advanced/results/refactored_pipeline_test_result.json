@@ -1,0 +1,91 @@
+{
+  "pdf": "test_pdfs/brf_198532.pdf",
+  "elapsed_time": 140.6629810333252,
+  "mode": "fast",
+  "topology": {
+    "pdf_path": "test_pdfs/brf_198532.pdf",
+    "total_pages": 19,
+    "avg_chars_per_page": 2157.3333333333335,
+    "classification": "machine_readable",
+    "sample_pages": [
+      0,
+      6,
+      12
+    ],
+    "analysis_time": 0.023077964782714844
+  },
+  "agent_results": {
+    "governance_agent": {
+      "chairman": "Elvy Maria Löfvenberg",
+      "board_members": [
+        "Torbjörn Andersson",
+        "Maria Annelie Eck Arvstrand",
+        "Mats Eskilson",
+        "Fredrik Linde"
+      ],
+      "auditor_name": "",
+      "audit_firm": "",
+      "nomination_committee": [],
+      "evidence_pages": [
+        1
+      ]
+    },
+    "financial_agent": {
+      "revenue": "",
+      "expenses": "",
+      "assets": "",
+      "liabilities": "",
+      "equity": "",
+      "surplus": "",
+      "evidence_pages": []
+    },
+    "property_agent": {
+      "designation": "Sönfjället 2",
+      "address": "",
+      "postal_code": "",
+      "city": "Stockholm",
+      "built_year": "2015",
+      "apartments": "94",
+      "energy_class": "",
+      "evidence_pages": [
+        2
+      ]
+    },
+    "operations_agent": {
+      "maintenance_summary": "Föreningen följer en underhållsplan som sträcker sig mellan 2018 och 2043. Planerat underhåll inkluderar behandling av trädäcken (genomfört 2021) och behandling av träfasad (planerat för 2023).",
+      "energy_usage": "El: 698,763 SEK, Värme: 438,246 SEK, Vatten: 162,487 SEK, Fjärrvärme används för uppvärmning.",
+      "insurance": "Fullvärdesförsäkring finns via Brandkontoret. Försäkringen inkluderar kollektivt bostadsrättstillägg för medlemmarna samt ansvarsförsäkring för styrelsen.",
+      "contracts": "Ekonomisk förvaltning: SBC AB och SBC Betaltjänster AB, Teknisk fastighetsförvaltning: Etcon Fastighetsteknik AB, Bredband/TV/Telefoni: Ownit Broadband AB, Hissar: Kone, Städning: JC Miljöstäd AB, Elenergi: Ellevio, Fjärrvärme: Stockholm Exergi, Vatten och avlopp: Stockholm Vatten och Avfall AB, Fastighetsförsäkring: Brandkontoret.",
+      "evidence_pages": [
+        1,
+        2,
+        3,
+        13
+      ]
+    },
+    "notes_collection": {
+      "notes_overview": "The 'Valberedning' section lists Victoria Blennborn as the convener and Mattias Lovén as a member. The 'Teknisk status' section outlines the association's maintenance plan extending to 2043, with specific maintenance tasks such as treatment of wooden decking in 2021 and wooden facade in 2023. It also details various management agreements with service providers for economic management, technical property management, and other services.",
+      "total_sections": 2,
+      "evidence_pages": [
+        2,
+        3
+      ]
+    }
+  },
+  "quality_metrics": {
+    "coverage": 0.7272727272727273,
+    "numeric_qc_pass": true,
+    "evidence_ratio": 0.8,
+    "overall_score": 0.530909090909091,
+    "needs_coaching": true,
+    "component_scores": {}
+  },
+  "integration_metrics": {
+    "structure_detection_success": true,
+    "data_linking_success": false,
+    "validation_success": false,
+    "pass_rate": 0.0,
+    "errors": 0,
+    "warnings": 0
+  }
+}
