@@ -1,0 +1,185 @@
+2025-10-11 16:52:08,948 - INFO - detected formats: [<InputFormat.PDF: 'pdf'>]
+2025-10-11 16:52:08,978 - INFO - Going to convert document batch...
+2025-10-11 16:52:08,978 - INFO - Initializing pipeline for StandardPdfPipeline with options hash 89360827c54c632ffd3869eb23c81de0
+2025-10-11 16:52:08,982 - INFO - Loading plugin 'docling_defaults'
+2025-10-11 16:52:08,983 - INFO - Registered picture descriptions: ['vlm', 'api']
+2025-10-11 16:52:08,986 - INFO - Loading plugin 'docling_defaults'
+2025-10-11 16:52:08,988 - INFO - Registered ocr engines: ['easyocr', 'ocrmac', 'rapidocr', 'tesserocr', 'tesseract']
+2025-10-11 16:52:09,102 - INFO - Accelerator device: 'mps'
+2025-10-11 16:52:11,449 - INFO - Accelerator device: 'mps'
+2025-10-11 16:52:12,399 - INFO - Accelerator device: 'mps'
+2025-10-11 16:52:12,683 - INFO - Processing document brf_268882.pdf
+2025-10-11 16:53:44,867 - INFO - Finished converting document brf_268882.pdf in 95.92 sec.
+================================================================================
+DICTIONARY MATCHING DIAGNOSTIC
+================================================================================
+
+🔍 Extracting sections from Docling...
+   Found 50 sections
+
+================================================================================
+STEP 1: RAW SECTION HEADINGS FROM DOCLING
+================================================================================
+
+Total sections: 50
+
+First 10 section headings:
+ 1. Page  1 | Level 1 | Välkommen till årsredovisningen för Brf Hagelbössan 1 1 Hjorthagen
+ 2. Page  2 | Level 1 | Kort till läsning av årsredovisningen guide
+ 3. Page  2 | Level 1 | Förvaltningsberättelse
+ 4. Page  2 | Level 1 | Resultaträkning
+ 5. Page  2 | Level 1 | Balansräkning
+ 6. Page  2 | Level 1 | Kassaflödesanalys
+ 7. Page  2 | Level 1 | Noter
+ 8. Page  2 | Level 1 | Giltighet
+ 9. Page  3 | Level 1 | Förvaltningsberättelse
+10. Page  3 | Level 1 | Verksamheten
+
+================================================================================
+STEP 2: ROUTING CONFIGURATIONS LOADED
+================================================================================
+
+Main section keywords: 4 agent types
+   • governance_agent: 8 keywords
+   • financial_agent: 8 keywords
+   • property_agent: 9 keywords
+   • operations_agent: 6 keywords
+
+Dictionary patterns: 5 categories
+   • balance_sheet: 3 patterns
+   • income_statement: 3 patterns
+   • notes: 4 patterns
+   • governance: 3 patterns
+   • audit: 3 patterns
+
+================================================================================
+STEP 3: MULTI-LAYER MATCHING ANALYSIS
+================================================================================
+
+📊 MATCHING STATISTICS:
+
+   Total sections: 50
+   Matched sections: 25 (50%)
+   Unmatched sections: 25
+
+   Layer Performance:
+      Layer 1 (substring): 21 matches
+      Layer 2 (preprocessed): 0 matches
+      Layer 3 (fuzzy): 12 matches
+
+================================================================================
+STEP 4: SAMPLE MATCHES
+================================================================================
+
+✅ 'Förvaltningsberättelse'
+   → substring match
+   → Agent/Category: governance_agent
+   → Score: 1.00
+
+✅ 'Resultaträkning'
+   → substring match
+   → Agent/Category: financial_agent
+   → Score: 1.00
+
+✅ 'Balansräkning'
+   → substring match
+   → Agent/Category: financial_agent
+   → Score: 1.00
+
+✅ 'Kassaflödesanalys'
+   → substring match
+   → Agent/Category: financial_agent
+   → Score: 1.00
+
+✅ 'Noter'
+   → fuzzy match
+   → Agent/Category: notes
+   → Score: 1.00
+
+✅ 'Giltighet'
+   → substring match
+   → Agent/Category: governance_agent
+   → Score: 1.00
+
+✅ 'Förvaltningsberättelse'
+   → substring match
+   → Agent/Category: governance_agent
+   → Score: 1.00
+
+✅ 'Verksamheten'
+   → substring match
+   → Agent/Category: operations_agent
+   → Score: 0.83
+
+✅ 'Allmänt om verksamheten'
+   → substring match
+   → Agent/Category: operations_agent
+   → Score: 0.43
+
+✅ 'Fastigheten'
+   → substring match
+   → Agent/Category: property_agent
+   → Score: 0.82
+
+================================================================================
+STEP 5: SAMPLE MISMATCHES (First 10)
+================================================================================
+
+❌ Page  1 | Välkommen till årsredovisningen för Brf Hagelbössan 1 1 Hjorthagen
+   Preprocessed (final): 'valkommen till arsredovisningen for brf hagelbossan 1 1 hjor'
+
+❌ Page  2 | Kort till läsning av årsredovisningen guide
+   Preprocessed (final): 'kort till lasning av arsredovisningen guide'
+
+❌ Page  3 | Registreringsdatum
+   Preprocessed (final): 'registreringsdatum'
+
+❌ Page  3 | Äkta förening
+   Preprocessed (final): 'akta forening'
+
+❌ Page  5 | Medlemsinformation
+   Preprocessed (final): 'medlemsinformation'
+
+❌ Page  6 | Flerårsöversikt
+   Preprocessed (final): 'flerarsoversikt'
+
+❌ Page  7 | Upplysning vid förlust
+   Preprocessed (final): 'upplysning vid forlust'
+
+❌ Page  7 | Förändringar i eget kapital
+   Preprocessed (final): 'forandringar i eget kapital'
+
+❌ Page  7 | Resultatdisposition
+   Preprocessed (final): 'resultatdisposition'
+
+❌ Page 12 | NOT 1 REDOVISNINGS- OCH VÄRDERINGSPRINCIPER
+   Preprocessed (final): '1 redovisnings- och varderingsprinciper'
+
+================================================================================
+STEP 6: PATTERN ANALYSIS
+================================================================================
+
+Patterns identified:
+   • Uppercase: 2/50 (4%)
+      → Sections in ALL CAPS
+      → Fix: Preprocessing normalizes case
+
+   • Swedish Characters: 31/50 (62%)
+      → Sections contain Swedish characters (å, ä, ö)
+      → Fix: Preprocessing normalizes to ASCII
+
+================================================================================
+STEP 7: RECOMMENDATIONS
+================================================================================
+
+1. ✅ Fuzzy matching catching edge cases - keep Layer 3
+2. 🔄 Add LLM classification fallback (Layer 4) for remaining sections
+3.    → ~$0.03 cost for LLM classification
+
+================================================================================
+DIAGNOSTIC COMPLETE
+================================================================================
+
+📁 Detailed results saved to:
+   • results/dictionary_diagnostic.json
+   • results/dictionary_diagnostic.txt

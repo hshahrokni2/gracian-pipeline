@@ -1,0 +1,1057 @@
+{
+  "pdf": "../../data/raw_pdfs/Hjorthagen/brf_268882.pdf",
+  "total_sections": 50,
+  "matched_sections": 25,
+  "match_rate": 0.5,
+  "layer_stats": {
+    "layer1": 21,
+    "layer3": 12,
+    "layer2": 0
+  },
+  "patterns": [
+    {
+      "type": "Uppercase",
+      "count": 2,
+      "percentage": 4,
+      "description": "Sections in ALL CAPS",
+      "fix": "Preprocessing normalizes case"
+    },
+    {
+      "type": "Swedish Characters",
+      "count": 31,
+      "percentage": 62,
+      "description": "Sections contain Swedish characters (å, ä, ö)",
+      "fix": "Preprocessing normalizes to ASCII"
+    }
+  ],
+  "recommendations": [
+    "✅ Fuzzy matching catching edge cases - keep Layer 3",
+    "🔄 Add LLM classification fallback (Layer 4) for remaining sections",
+    "   → ~$0.03 cost for LLM classification"
+  ],
+  "results": [
+    {
+      "heading": "Välkommen till årsredovisningen för Brf Hagelbössan 1 1 Hjorthagen",
+      "page": 1,
+      "level": 1,
+      "preprocessed": {
+        "original": "Välkommen till årsredovisningen för Brf Hagelbössan 1 1 Hjorthagen",
+        "stripped": "Välkommen till årsredovisningen för Brf Hagelbössan 1 1 Hjorthagen",
+        "lowercase": "välkommen till årsredovisningen för brf hagelbössan 1 1 hjorthagen",
+        "no_numbering": "Välkommen till årsredovisningen för Brf Hagelbössan 1 1 Hjorthagen",
+        "no_labels": "Välkommen till årsredovisningen för Brf Hagelbössan 1 1 Hjorthagen",
+        "no_special_chars": "Välkommen till årsredovisningen för Brf Hagelbössan 1 1 Hjorthagen",
+        "normalized_swedish": "valkommen till arsredovisningen for brf hagelbossan 1 1 hjorthagen",
+        "final": "valkommen till arsredovisningen for brf hagelbossan 1 1 hjorthagen"
+      },
+      "matches": {}
+    },
+    {
+      "heading": "Kort till läsning av årsredovisningen guide",
+      "page": 2,
+      "level": 1,
+      "preprocessed": {
+        "original": "Kort till läsning av årsredovisningen guide",
+        "stripped": "Kort till läsning av årsredovisningen guide",
+        "lowercase": "kort till läsning av årsredovisningen guide",
+        "no_numbering": "Kort till läsning av årsredovisningen guide",
+        "no_labels": "Kort till läsning av årsredovisningen guide",
+        "no_special_chars": "Kort till läsning av årsredovisningen guide",
+        "normalized_swedish": "kort till lasning av arsredovisningen guide",
+        "final": "kort till lasning av arsredovisningen guide"
+      },
+      "matches": {}
+    },
+    {
+      "heading": "Förvaltningsberättelse",
+      "page": 2,
+      "level": 1,
+      "preprocessed": {
+        "original": "Förvaltningsberättelse",
+        "stripped": "Förvaltningsberättelse",
+        "lowercase": "förvaltningsberättelse",
+        "no_numbering": "Förvaltningsberättelse",
+        "no_labels": "Förvaltningsberättelse",
+        "no_special_chars": "Förvaltningsberättelse",
+        "normalized_swedish": "forvaltningsberattelse",
+        "final": "forvaltningsberattelse"
+      },
+      "matches": {
+        "layer1_governance_agent": {
+          "layer": 1,
+          "agent": "governance_agent",
+          "score": 1.0,
+          "method": "substring"
+        },
+        "layer3_governance": {
+          "layer": 3,
+          "category": "governance",
+          "score": 1.0,
+          "method": "fuzzy"
+        }
+      }
+    },
+    {
+      "heading": "Resultaträkning",
+      "page": 2,
+      "level": 1,
+      "preprocessed": {
+        "original": "Resultaträkning",
+        "stripped": "Resultaträkning",
+        "lowercase": "resultaträkning",
+        "no_numbering": "Resultaträkning",
+        "no_labels": "Resultaträkning",
+        "no_special_chars": "Resultaträkning",
+        "normalized_swedish": "resultatrakning",
+        "final": "resultatrakning"
+      },
+      "matches": {
+        "layer1_financial_agent": {
+          "layer": 1,
+          "agent": "financial_agent",
+          "score": 1.0,
+          "method": "substring"
+        },
+        "layer3_income_statement": {
+          "layer": 3,
+          "category": "income_statement",
+          "score": 1.0,
+          "method": "fuzzy"
+        }
+      }
+    },
+    {
+      "heading": "Balansräkning",
+      "page": 2,
+      "level": 1,
+      "preprocessed": {
+        "original": "Balansräkning",
+        "stripped": "Balansräkning",
+        "lowercase": "balansräkning",
+        "no_numbering": "Balansräkning",
+        "no_labels": "Balansräkning",
+        "no_special_chars": "Balansräkning",
+        "normalized_swedish": "balansrakning",
+        "final": "balansrakning"
+      },
+      "matches": {
+        "layer1_financial_agent": {
+          "layer": 1,
+          "agent": "financial_agent",
+          "score": 1.0,
+          "method": "substring"
+        },
+        "layer3_balance_sheet": {
+          "layer": 3,
+          "category": "balance_sheet",
+          "score": 1.0,
+          "method": "fuzzy"
+        }
+      }
+    },
+    {
+      "heading": "Kassaflödesanalys",
+      "page": 2,
+      "level": 1,
+      "preprocessed": {
+        "original": "Kassaflödesanalys",
+        "stripped": "Kassaflödesanalys",
+        "lowercase": "kassaflödesanalys",
+        "no_numbering": "Kassaflödesanalys",
+        "no_labels": "Kassaflödesanalys",
+        "no_special_chars": "Kassaflödesanalys",
+        "normalized_swedish": "kassaflodesanalys",
+        "final": "kassaflodesanalys"
+      },
+      "matches": {
+        "layer1_financial_agent": {
+          "layer": 1,
+          "agent": "financial_agent",
+          "score": 1.0,
+          "method": "substring"
+        }
+      }
+    },
+    {
+      "heading": "Noter",
+      "page": 2,
+      "level": 1,
+      "preprocessed": {
+        "original": "Noter",
+        "stripped": "Noter",
+        "lowercase": "noter",
+        "no_numbering": "Noter",
+        "no_labels": "er",
+        "no_special_chars": "er",
+        "normalized_swedish": "er",
+        "final": "er"
+      },
+      "matches": {
+        "layer3_notes": {
+          "layer": 3,
+          "category": "notes",
+          "score": 1.0,
+          "method": "fuzzy"
+        }
+      }
+    },
+    {
+      "heading": "Giltighet",
+      "page": 2,
+      "level": 1,
+      "preprocessed": {
+        "original": "Giltighet",
+        "stripped": "Giltighet",
+        "lowercase": "giltighet",
+        "no_numbering": "Giltighet",
+        "no_labels": "Giltighet",
+        "no_special_chars": "Giltighet",
+        "normalized_swedish": "giltighet",
+        "final": "giltighet"
+      },
+      "matches": {
+        "layer1_governance_agent": {
+          "layer": 1,
+          "agent": "governance_agent",
+          "score": 1.0,
+          "method": "substring"
+        }
+      }
+    },
+    {
+      "heading": "Förvaltningsberättelse",
+      "page": 3,
+      "level": 1,
+      "preprocessed": {
+        "original": "Förvaltningsberättelse",
+        "stripped": "Förvaltningsberättelse",
+        "lowercase": "förvaltningsberättelse",
+        "no_numbering": "Förvaltningsberättelse",
+        "no_labels": "Förvaltningsberättelse",
+        "no_special_chars": "Förvaltningsberättelse",
+        "normalized_swedish": "forvaltningsberattelse",
+        "final": "forvaltningsberattelse"
+      },
+      "matches": {
+        "layer1_governance_agent": {
+          "layer": 1,
+          "agent": "governance_agent",
+          "score": 1.0,
+          "method": "substring"
+        },
+        "layer3_governance": {
+          "layer": 3,
+          "category": "governance",
+          "score": 1.0,
+          "method": "fuzzy"
+        }
+      }
+    },
+    {
+      "heading": "Verksamheten",
+      "page": 3,
+      "level": 1,
+      "preprocessed": {
+        "original": "Verksamheten",
+        "stripped": "Verksamheten",
+        "lowercase": "verksamheten",
+        "no_numbering": "Verksamheten",
+        "no_labels": "Verksamheten",
+        "no_special_chars": "Verksamheten",
+        "normalized_swedish": "verksamheten",
+        "final": "verksamheten"
+      },
+      "matches": {
+        "layer1_operations_agent": {
+          "layer": 1,
+          "agent": "operations_agent",
+          "score": 0.8333333333333334,
+          "method": "substring"
+        }
+      }
+    },
+    {
+      "heading": "Allmänt om verksamheten",
+      "page": 3,
+      "level": 1,
+      "preprocessed": {
+        "original": "Allmänt om verksamheten",
+        "stripped": "Allmänt om verksamheten",
+        "lowercase": "allmänt om verksamheten",
+        "no_numbering": "Allmänt om verksamheten",
+        "no_labels": "Allmänt om verksamheten",
+        "no_special_chars": "Allmänt om verksamheten",
+        "normalized_swedish": "allmant om verksamheten",
+        "final": "allmant om verksamheten"
+      },
+      "matches": {
+        "layer1_operations_agent": {
+          "layer": 1,
+          "agent": "operations_agent",
+          "score": 0.43478260869565216,
+          "method": "substring"
+        }
+      }
+    },
+    {
+      "heading": "Registreringsdatum",
+      "page": 3,
+      "level": 1,
+      "preprocessed": {
+        "original": "Registreringsdatum",
+        "stripped": "Registreringsdatum",
+        "lowercase": "registreringsdatum",
+        "no_numbering": "Registreringsdatum",
+        "no_labels": "Registreringsdatum",
+        "no_special_chars": "Registreringsdatum",
+        "normalized_swedish": "registreringsdatum",
+        "final": "registreringsdatum"
+      },
+      "matches": {}
+    },
+    {
+      "heading": "Äkta förening",
+      "page": 3,
+      "level": 1,
+      "preprocessed": {
+        "original": "Äkta förening",
+        "stripped": "Äkta förening",
+        "lowercase": "äkta förening",
+        "no_numbering": "Äkta förening",
+        "no_labels": "Äkta förening",
+        "no_special_chars": "Äkta förening",
+        "normalized_swedish": "akta forening",
+        "final": "akta forening"
+      },
+      "matches": {}
+    },
+    {
+      "heading": "Fastigheten",
+      "page": 3,
+      "level": 1,
+      "preprocessed": {
+        "original": "Fastigheten",
+        "stripped": "Fastigheten",
+        "lowercase": "fastigheten",
+        "no_numbering": "Fastigheten",
+        "no_labels": "Fastigheten",
+        "no_special_chars": "Fastigheten",
+        "normalized_swedish": "fastigheten",
+        "final": "fastigheten"
+      },
+      "matches": {
+        "layer1_property_agent": {
+          "layer": 1,
+          "agent": "property_agent",
+          "score": 0.8181818181818182,
+          "method": "substring"
+        }
+      }
+    },
+    {
+      "heading": "Byggnadsår och ytor",
+      "page": 3,
+      "level": 1,
+      "preprocessed": {
+        "original": "Byggnadsår och ytor",
+        "stripped": "Byggnadsår och ytor",
+        "lowercase": "byggnadsår och ytor",
+        "no_numbering": "Byggnadsår och ytor",
+        "no_labels": "Byggnadsår och ytor",
+        "no_special_chars": "Byggnadsår och ytor",
+        "normalized_swedish": "byggnadsar och ytor",
+        "final": "byggnadsar och ytor"
+      },
+      "matches": {
+        "layer1_property_agent": {
+          "layer": 1,
+          "agent": "property_agent",
+          "score": 0.5263157894736842,
+          "method": "substring"
+        }
+      }
+    },
+    {
+      "heading": "Styrelsens sammansättning",
+      "page": 3,
+      "level": 1,
+      "preprocessed": {
+        "original": "Styrelsens sammansättning",
+        "stripped": "Styrelsens sammansättning",
+        "lowercase": "styrelsens sammansättning",
+        "no_numbering": "Styrelsens sammansättning",
+        "no_labels": "Styrelsens sammansättning",
+        "no_special_chars": "Styrelsens sammansättning",
+        "normalized_swedish": "styrelsens sammansattning",
+        "final": "styrelsens sammansattning"
+      },
+      "matches": {
+        "layer1_governance_agent": {
+          "layer": 1,
+          "agent": "governance_agent",
+          "score": 0.32,
+          "method": "substring"
+        }
+      }
+    },
+    {
+      "heading": "Revisorer",
+      "page": 4,
+      "level": 1,
+      "preprocessed": {
+        "original": "Revisorer",
+        "stripped": "Revisorer",
+        "lowercase": "revisorer",
+        "no_numbering": "Revisorer",
+        "no_labels": "Revisorer",
+        "no_special_chars": "Revisorer",
+        "normalized_swedish": "revisorer",
+        "final": "revisorer"
+      },
+      "matches": {
+        "layer3_audit": {
+          "layer": 3,
+          "category": "audit",
+          "score": 0.7058823529411765,
+          "method": "fuzzy"
+        }
+      }
+    },
+    {
+      "heading": "Avtal med leverantörer",
+      "page": 4,
+      "level": 1,
+      "preprocessed": {
+        "original": "Avtal med leverantörer",
+        "stripped": "Avtal med leverantörer",
+        "lowercase": "avtal med leverantörer",
+        "no_numbering": "Avtal med leverantörer",
+        "no_labels": "Avtal med leverantörer",
+        "no_special_chars": "Avtal med leverantörer",
+        "normalized_swedish": "avtal med leverantorer",
+        "final": "avtal med leverantorer"
+      },
+      "matches": {
+        "layer1_operations_agent": {
+          "layer": 1,
+          "agent": "operations_agent",
+          "score": 0.22727272727272727,
+          "method": "substring"
+        }
+      }
+    },
+    {
+      "heading": "Ekonomi",
+      "page": 4,
+      "level": 1,
+      "preprocessed": {
+        "original": "Ekonomi",
+        "stripped": "Ekonomi",
+        "lowercase": "ekonomi",
+        "no_numbering": "Ekonomi",
+        "no_labels": "Ekonomi",
+        "no_special_chars": "Ekonomi",
+        "normalized_swedish": "ekonomi",
+        "final": "ekonomi"
+      },
+      "matches": {
+        "layer1_financial_agent": {
+          "layer": 1,
+          "agent": "financial_agent",
+          "score": 1.0,
+          "method": "substring"
+        }
+      }
+    },
+    {
+      "heading": "Medlemsinformation",
+      "page": 5,
+      "level": 1,
+      "preprocessed": {
+        "original": "Medlemsinformation",
+        "stripped": "Medlemsinformation",
+        "lowercase": "medlemsinformation",
+        "no_numbering": "Medlemsinformation",
+        "no_labels": "Medlemsinformation",
+        "no_special_chars": "Medlemsinformation",
+        "normalized_swedish": "medlemsinformation",
+        "final": "medlemsinformation"
+      },
+      "matches": {}
+    },
+    {
+      "heading": "Flerårsöversikt",
+      "page": 6,
+      "level": 1,
+      "preprocessed": {
+        "original": "Flerårsöversikt",
+        "stripped": "Flerårsöversikt",
+        "lowercase": "flerårsöversikt",
+        "no_numbering": "Flerårsöversikt",
+        "no_labels": "Flerårsöversikt",
+        "no_special_chars": "Flerårsöversikt",
+        "normalized_swedish": "flerarsoversikt",
+        "final": "flerarsoversikt"
+      },
+      "matches": {}
+    },
+    {
+      "heading": "Upplysning vid förlust",
+      "page": 7,
+      "level": 1,
+      "preprocessed": {
+        "original": "Upplysning vid förlust",
+        "stripped": "Upplysning vid förlust",
+        "lowercase": "upplysning vid förlust",
+        "no_numbering": "Upplysning vid förlust",
+        "no_labels": "Upplysning vid förlust",
+        "no_special_chars": "Upplysning vid förlust",
+        "normalized_swedish": "upplysning vid forlust",
+        "final": "upplysning vid forlust"
+      },
+      "matches": {}
+    },
+    {
+      "heading": "Förändringar i eget kapital",
+      "page": 7,
+      "level": 1,
+      "preprocessed": {
+        "original": "Förändringar i eget kapital",
+        "stripped": "Förändringar i eget kapital",
+        "lowercase": "förändringar i eget kapital",
+        "no_numbering": "Förändringar i eget kapital",
+        "no_labels": "Förändringar i eget kapital",
+        "no_special_chars": "Förändringar i eget kapital",
+        "normalized_swedish": "forandringar i eget kapital",
+        "final": "forandringar i eget kapital"
+      },
+      "matches": {}
+    },
+    {
+      "heading": "Resultatdisposition",
+      "page": 7,
+      "level": 1,
+      "preprocessed": {
+        "original": "Resultatdisposition",
+        "stripped": "Resultatdisposition",
+        "lowercase": "resultatdisposition",
+        "no_numbering": "Resultatdisposition",
+        "no_labels": "Resultatdisposition",
+        "no_special_chars": "Resultatdisposition",
+        "normalized_swedish": "resultatdisposition",
+        "final": "resultatdisposition"
+      },
+      "matches": {}
+    },
+    {
+      "heading": "Resultaträkning",
+      "page": 8,
+      "level": 1,
+      "preprocessed": {
+        "original": "Resultaträkning",
+        "stripped": "Resultaträkning",
+        "lowercase": "resultaträkning",
+        "no_numbering": "Resultaträkning",
+        "no_labels": "Resultaträkning",
+        "no_special_chars": "Resultaträkning",
+        "normalized_swedish": "resultatrakning",
+        "final": "resultatrakning"
+      },
+      "matches": {
+        "layer1_financial_agent": {
+          "layer": 1,
+          "agent": "financial_agent",
+          "score": 1.0,
+          "method": "substring"
+        },
+        "layer3_income_statement": {
+          "layer": 3,
+          "category": "income_statement",
+          "score": 1.0,
+          "method": "fuzzy"
+        }
+      }
+    },
+    {
+      "heading": "Balansräkning",
+      "page": 9,
+      "level": 1,
+      "preprocessed": {
+        "original": "Balansräkning",
+        "stripped": "Balansräkning",
+        "lowercase": "balansräkning",
+        "no_numbering": "Balansräkning",
+        "no_labels": "Balansräkning",
+        "no_special_chars": "Balansräkning",
+        "normalized_swedish": "balansrakning",
+        "final": "balansrakning"
+      },
+      "matches": {
+        "layer1_financial_agent": {
+          "layer": 1,
+          "agent": "financial_agent",
+          "score": 1.0,
+          "method": "substring"
+        },
+        "layer3_balance_sheet": {
+          "layer": 3,
+          "category": "balance_sheet",
+          "score": 1.0,
+          "method": "fuzzy"
+        }
+      }
+    },
+    {
+      "heading": "Balansräkning",
+      "page": 10,
+      "level": 1,
+      "preprocessed": {
+        "original": "Balansräkning",
+        "stripped": "Balansräkning",
+        "lowercase": "balansräkning",
+        "no_numbering": "Balansräkning",
+        "no_labels": "Balansräkning",
+        "no_special_chars": "Balansräkning",
+        "normalized_swedish": "balansrakning",
+        "final": "balansrakning"
+      },
+      "matches": {
+        "layer1_financial_agent": {
+          "layer": 1,
+          "agent": "financial_agent",
+          "score": 1.0,
+          "method": "substring"
+        },
+        "layer3_balance_sheet": {
+          "layer": 3,
+          "category": "balance_sheet",
+          "score": 1.0,
+          "method": "fuzzy"
+        }
+      }
+    },
+    {
+      "heading": "Kassaflödesanalys",
+      "page": 11,
+      "level": 1,
+      "preprocessed": {
+        "original": "Kassaflödesanalys",
+        "stripped": "Kassaflödesanalys",
+        "lowercase": "kassaflödesanalys",
+        "no_numbering": "Kassaflödesanalys",
+        "no_labels": "Kassaflödesanalys",
+        "no_special_chars": "Kassaflödesanalys",
+        "normalized_swedish": "kassaflodesanalys",
+        "final": "kassaflodesanalys"
+      },
+      "matches": {
+        "layer1_financial_agent": {
+          "layer": 1,
+          "agent": "financial_agent",
+          "score": 1.0,
+          "method": "substring"
+        }
+      }
+    },
+    {
+      "heading": "Noter",
+      "page": 12,
+      "level": 1,
+      "preprocessed": {
+        "original": "Noter",
+        "stripped": "Noter",
+        "lowercase": "noter",
+        "no_numbering": "Noter",
+        "no_labels": "er",
+        "no_special_chars": "er",
+        "normalized_swedish": "er",
+        "final": "er"
+      },
+      "matches": {
+        "layer3_notes": {
+          "layer": 3,
+          "category": "notes",
+          "score": 1.0,
+          "method": "fuzzy"
+        }
+      }
+    },
+    {
+      "heading": "NOT 1 REDOVISNINGS- OCH VÄRDERINGSPRINCIPER",
+      "page": 12,
+      "level": 1,
+      "preprocessed": {
+        "original": "NOT 1 REDOVISNINGS- OCH VÄRDERINGSPRINCIPER",
+        "stripped": "NOT 1 REDOVISNINGS- OCH VÄRDERINGSPRINCIPER",
+        "lowercase": "not 1 redovisnings- och värderingsprinciper",
+        "no_numbering": "NOT 1 REDOVISNINGS- OCH VÄRDERINGSPRINCIPER",
+        "no_labels": "1 REDOVISNINGS- OCH VÄRDERINGSPRINCIPER",
+        "no_special_chars": "1 REDOVISNINGS- OCH VÄRDERINGSPRINCIPER",
+        "normalized_swedish": "1 redovisnings- och varderingsprinciper",
+        "final": "1 redovisnings- och varderingsprinciper"
+      },
+      "matches": {}
+    },
+    {
+      "heading": "Redovisning av intäkter",
+      "page": 12,
+      "level": 1,
+      "preprocessed": {
+        "original": "Redovisning av intäkter",
+        "stripped": "Redovisning av intäkter",
+        "lowercase": "redovisning av intäkter",
+        "no_numbering": "Redovisning av intäkter",
+        "no_labels": "Redovisning av intäkter",
+        "no_special_chars": "Redovisning av intäkter",
+        "normalized_swedish": "redovisning av intakter",
+        "final": "redovisning av intakter"
+      },
+      "matches": {}
+    },
+    {
+      "heading": "ångar",
+      "page": 12,
+      "level": 1,
+      "preprocessed": {
+        "original": "ångar",
+        "stripped": "ångar",
+        "lowercase": "ångar",
+        "no_numbering": "ångar",
+        "no_labels": "ångar",
+        "no_special_chars": "ångar",
+        "normalized_swedish": "angar",
+        "final": "angar"
+      },
+      "matches": {}
+    },
+    {
+      "heading": "Omsättningstillgångar",
+      "page": 12,
+      "level": 1,
+      "preprocessed": {
+        "original": "Omsättningstillgångar",
+        "stripped": "Omsättningstillgångar",
+        "lowercase": "omsättningstillgångar",
+        "no_numbering": "Omsättningstillgångar",
+        "no_labels": "Omsättningstillgångar",
+        "no_special_chars": "Omsättningstillgångar",
+        "normalized_swedish": "omsattningstillgangar",
+        "final": "omsattningstillgangar"
+      },
+      "matches": {}
+    },
+    {
+      "heading": "Föreningens fond för yttre underhåll",
+      "page": 12,
+      "level": 1,
+      "preprocessed": {
+        "original": "Föreningens fond för yttre underhåll",
+        "stripped": "Föreningens fond för yttre underhåll",
+        "lowercase": "föreningens fond för yttre underhåll",
+        "no_numbering": "Föreningens fond för yttre underhåll",
+        "no_labels": "Föreningens fond för yttre underhåll",
+        "no_special_chars": "Föreningens fond för yttre underhåll",
+        "normalized_swedish": "foreningens fond for yttre underhall",
+        "final": "foreningens fond for yttre underhall"
+      },
+      "matches": {}
+    },
+    {
+      "heading": "Skatter och avgifter",
+      "page": 12,
+      "level": 1,
+      "preprocessed": {
+        "original": "Skatter och avgifter",
+        "stripped": "Skatter och avgifter",
+        "lowercase": "skatter och avgifter",
+        "no_numbering": "Skatter och avgifter",
+        "no_labels": "Skatter och avgifter",
+        "no_special_chars": "Skatter och avgifter",
+        "normalized_swedish": "skatter och avgifter",
+        "final": "skatter och avgifter"
+      },
+      "matches": {}
+    },
+    {
+      "heading": "Fastighetslån",
+      "page": 12,
+      "level": 1,
+      "preprocessed": {
+        "original": "Fastighetslån",
+        "stripped": "Fastighetslån",
+        "lowercase": "fastighetslån",
+        "no_numbering": "Fastighetslån",
+        "no_labels": "Fastighetslån",
+        "no_special_chars": "Fastighetslån",
+        "normalized_swedish": "fastighetslan",
+        "final": "fastighetslan"
+      },
+      "matches": {
+        "layer1_property_agent": {
+          "layer": 1,
+          "agent": "property_agent",
+          "score": 0.6923076923076923,
+          "method": "substring"
+        }
+      }
+    },
+    {
+      "heading": "Kassaflödesanalys",
+      "page": 12,
+      "level": 1,
+      "preprocessed": {
+        "original": "Kassaflödesanalys",
+        "stripped": "Kassaflödesanalys",
+        "lowercase": "kassaflödesanalys",
+        "no_numbering": "Kassaflödesanalys",
+        "no_labels": "Kassaflödesanalys",
+        "no_special_chars": "Kassaflödesanalys",
+        "normalized_swedish": "kassaflodesanalys",
+        "final": "kassaflodesanalys"
+      },
+      "matches": {
+        "layer1_financial_agent": {
+          "layer": 1,
+          "agent": "financial_agent",
+          "score": 1.0,
+          "method": "substring"
+        }
+      }
+    },
+    {
+      "heading": "Underskrifter",
+      "page": 17,
+      "level": 1,
+      "preprocessed": {
+        "original": "Underskrifter",
+        "stripped": "Underskrifter",
+        "lowercase": "underskrifter",
+        "no_numbering": "Underskrifter",
+        "no_labels": "Underskrifter",
+        "no_special_chars": "Underskrifter",
+        "normalized_swedish": "underskrifter",
+        "final": "underskrifter"
+      },
+      "matches": {}
+    },
+    {
+      "heading": "Underskrifter",
+      "page": 18,
+      "level": 1,
+      "preprocessed": {
+        "original": "Underskrifter",
+        "stripped": "Underskrifter",
+        "lowercase": "underskrifter",
+        "no_numbering": "Underskrifter",
+        "no_labels": "Underskrifter",
+        "no_special_chars": "Underskrifter",
+        "normalized_swedish": "underskrifter",
+        "final": "underskrifter"
+      },
+      "matches": {}
+    },
+    {
+      "heading": "REVISIONSBERÄTTELSE",
+      "page": 20,
+      "level": 1,
+      "preprocessed": {
+        "original": "REVISIONSBERÄTTELSE",
+        "stripped": "REVISIONSBERÄTTELSE",
+        "lowercase": "revisionsberättelse",
+        "no_numbering": "REVISIONSBERÄTTELSE",
+        "no_labels": "REVISIONSBERÄTTELSE",
+        "no_special_chars": "REVISIONSBERÄTTELSE",
+        "normalized_swedish": "revisionsberattelse",
+        "final": "revisionsberattelse"
+      },
+      "matches": {
+        "layer3_governance": {
+          "layer": 3,
+          "category": "governance",
+          "score": 0.7317073170731707,
+          "method": "fuzzy"
+        },
+        "layer3_audit": {
+          "layer": 3,
+          "category": "audit",
+          "score": 1.0,
+          "method": "fuzzy"
+        }
+      }
+    },
+    {
+      "heading": "Rapport om årsredovisningen",
+      "page": 20,
+      "level": 1,
+      "preprocessed": {
+        "original": "Rapport om årsredovisningen",
+        "stripped": "Rapport om årsredovisningen",
+        "lowercase": "rapport om årsredovisningen",
+        "no_numbering": "Rapport om årsredovisningen",
+        "no_labels": "Rapport om årsredovisningen",
+        "no_special_chars": "Rapport om årsredovisningen",
+        "normalized_swedish": "rapport om arsredovisningen",
+        "final": "rapport om arsredovisningen"
+      },
+      "matches": {}
+    },
+    {
+      "heading": "Uttalanden",
+      "page": 20,
+      "level": 1,
+      "preprocessed": {
+        "original": "Uttalanden",
+        "stripped": "Uttalanden",
+        "lowercase": "uttalanden",
+        "no_numbering": "Uttalanden",
+        "no_labels": "Uttalanden",
+        "no_special_chars": "Uttalanden",
+        "normalized_swedish": "uttalanden",
+        "final": "uttalanden"
+      },
+      "matches": {}
+    },
+    {
+      "heading": "Grund för uttalanden",
+      "page": 20,
+      "level": 1,
+      "preprocessed": {
+        "original": "Grund för uttalanden",
+        "stripped": "Grund för uttalanden",
+        "lowercase": "grund för uttalanden",
+        "no_numbering": "Grund för uttalanden",
+        "no_labels": "Grund för uttalanden",
+        "no_special_chars": "Grund för uttalanden",
+        "normalized_swedish": "grund for uttalanden",
+        "final": "grund for uttalanden"
+      },
+      "matches": {}
+    },
+    {
+      "heading": "Styrelsens ansvar",
+      "page": 20,
+      "level": 1,
+      "preprocessed": {
+        "original": "Styrelsens ansvar",
+        "stripped": "Styrelsens ansvar",
+        "lowercase": "styrelsens ansvar",
+        "no_numbering": "Styrelsens ansvar",
+        "no_labels": "Styrelsens ansvar",
+        "no_special_chars": "Styrelsens ansvar",
+        "normalized_swedish": "styrelsens ansvar",
+        "final": "styrelsens ansvar"
+      },
+      "matches": {
+        "layer1_governance_agent": {
+          "layer": 1,
+          "agent": "governance_agent",
+          "score": 0.47058823529411764,
+          "method": "substring"
+        }
+      }
+    },
+    {
+      "heading": "Revisorns ansvar",
+      "page": 20,
+      "level": 1,
+      "preprocessed": {
+        "original": "Revisorns ansvar",
+        "stripped": "Revisorns ansvar",
+        "lowercase": "revisorns ansvar",
+        "no_numbering": "Revisorns ansvar",
+        "no_labels": "Revisorns ansvar",
+        "no_special_chars": "Revisorns ansvar",
+        "normalized_swedish": "revisorns ansvar",
+        "final": "revisorns ansvar"
+      },
+      "matches": {}
+    },
+    {
+      "heading": "Rapport om andra krav enligt och andra författningar lagar",
+      "page": 24,
+      "level": 1,
+      "preprocessed": {
+        "original": "Rapport om andra krav enligt och andra författningar lagar",
+        "stripped": "Rapport om andra krav enligt och andra författningar lagar",
+        "lowercase": "rapport om andra krav enligt och andra författningar lagar",
+        "no_numbering": "Rapport om andra krav enligt och andra författningar lagar",
+        "no_labels": "Rapport om andra krav enligt och andra författningar lagar",
+        "no_special_chars": "Rapport om andra krav enligt och andra författningar lagar",
+        "normalized_swedish": "rapport om andra krav enligt och andra forfattningar lagar",
+        "final": "rapport om andra krav enligt och andra forfattningar lagar"
+      },
+      "matches": {}
+    },
+    {
+      "heading": "Uttalanden",
+      "page": 24,
+      "level": 1,
+      "preprocessed": {
+        "original": "Uttalanden",
+        "stripped": "Uttalanden",
+        "lowercase": "uttalanden",
+        "no_numbering": "Uttalanden",
+        "no_labels": "Uttalanden",
+        "no_special_chars": "Uttalanden",
+        "normalized_swedish": "uttalanden",
+        "final": "uttalanden"
+      },
+      "matches": {}
+    },
+    {
+      "heading": "Grund för uttalanden",
+      "page": 24,
+      "level": 1,
+      "preprocessed": {
+        "original": "Grund för uttalanden",
+        "stripped": "Grund för uttalanden",
+        "lowercase": "grund för uttalanden",
+        "no_numbering": "Grund för uttalanden",
+        "no_labels": "Grund för uttalanden",
+        "no_special_chars": "Grund för uttalanden",
+        "normalized_swedish": "grund for uttalanden",
+        "final": "grund for uttalanden"
+      },
+      "matches": {}
+    },
+    {
+      "heading": "Styrelsens ansvar",
+      "page": 24,
+      "level": 1,
+      "preprocessed": {
+        "original": "Styrelsens ansvar",
+        "stripped": "Styrelsens ansvar",
+        "lowercase": "styrelsens ansvar",
+        "no_numbering": "Styrelsens ansvar",
+        "no_labels": "Styrelsens ansvar",
+        "no_special_chars": "Styrelsens ansvar",
+        "normalized_swedish": "styrelsens ansvar",
+        "final": "styrelsens ansvar"
+      },
+      "matches": {
+        "layer1_governance_agent": {
+          "layer": 1,
+          "agent": "governance_agent",
+          "score": 0.47058823529411764,
+          "method": "substring"
+        }
+      }
+    },
+    {
+      "heading": "Revisorns ansvar",
+      "page": 24,
+      "level": 1,
+      "preprocessed": {
+        "original": "Revisorns ansvar",
+        "stripped": "Revisorns ansvar",
+        "lowercase": "revisorns ansvar",
+        "no_numbering": "Revisorns ansvar",
+        "no_labels": "Revisorns ansvar",
+        "no_special_chars": "Revisorns ansvar",
+        "normalized_swedish": "revisorns ansvar",
+        "final": "revisorns ansvar"
+      },
+      "matches": {}
+    }
+  ]
+}
