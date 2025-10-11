@@ -41,6 +41,7 @@ from gracian_pipeline.core.vision_qc import call_grok_vision, call_openai_vision
 # Local imports
 from note_semantic_router import NoteSemanticRouter
 from base_brf_extractor import BaseExtractor
+from swedish_financial_dictionary import SwedishFinancialDictionary
 
 # LLM clients
 from openai import OpenAI
@@ -215,6 +216,11 @@ class OptimalBRFPipeline(BaseExtractor):
         )
         self.structure_cache = None  # Will be set by detect_structure()
 
+        # OPTION B: Initialize Swedish Financial Dictionary for fuzzy matching
+        self.dictionary = SwedishFinancialDictionary(
+            config_path="config/swedish_financial_terms.yaml"
+        )
+
         # Docling pipeline options
         self.docling_ocr_options = PdfPipelineOptions(
             do_ocr=True,
@@ -257,6 +263,89 @@ class OptimalBRFPipeline(BaseExtractor):
         print(f"✅ OptimalBRFPipeline initialized")
         print(f"   Cache: {'enabled' if enable_caching else 'disabled'}")
         print(f"   Output: {self.output_dir}")
+
+    def _normalize_swedish(self, text: str) -> str:
+        """
+        Normalize Swedish characters for matching (Option A).
+
+        Swedish → ASCII mapping:
+        - å, Å → a
+        - ä, Ä → a
+        - ö, Ö → o
+
+        This allows keyword matching to work regardless of Swedish character encoding.
+        Example: "Förändringar" → "forandringar" matches keyword "förändringar"
+        """
+        return (text.lower()
+                .replace('å', 'a').replace('Å', 'a')
+                .replace('ä', 'a').replace('Ä', 'a')
+                .replace('ö', 'o').replace('Ö', 'o'))
+
+    def _classify_sections_llm(self, section_headings: List[str]) -> Dict[str, str]:
+        """
+        Classify unmatched sections using GPT-4o-mini (Option C).
+
+        This is a fallback for sections that couldn't be matched by:
+        - Option A: Swedish character normalization
+        - Option B: Fuzzy matching with dictionary
+
+        Args:
+            section_headings: List of section headings to classify
+
+        Returns:
+            Dict mapping section_heading → agent_id (or "unclassifiable")
+        """
+        if not section_headings:
+            return {}
+
+        # Build classification prompt
+        prompt = f"""You are a Swedish BRF (housing cooperative) document expert.
+
+Classify these section headings into the most appropriate agent category:
+
+Available agents:
+- governance_agent: Board, auditors, governance, membership, annual meeting, registration
+- financial_agent: Financial statements, balance sheet, income statement, cash flow, multi-year overview
+- property_agent: Property details, address, building year, energy, apartments
+- operations_agent: Operations, maintenance, suppliers, contracts, activities
+- notes_collection: Notes section headers (main "Noter" sections)
+- unclassifiable: Cover pages, table of contents, welcome pages
+
+Section headings to classify:
+{json.dumps(section_headings, ensure_ascii=False, indent=2)}
+
+Return JSON mapping each heading to agent_id:
+{{"heading1": "agent_id", "heading2": "agent_id", ...}}
+
+Swedish BRF context:
+- Förvaltningsberättelse = Management report → governance_agent
+- Medlemsinformation = Member information → governance_agent
+- Flerårsöversikt = Multi-year overview → financial_agent
+- Välkommen = Welcome page → unclassifiable
+- Kort till läsning = Reading guide → unclassifiable
+
+Only classify if confidence > 70%. If unsure, return "unclassifiable".
+Return ONLY valid JSON, no other text."""
+
+        try:
+            response = self.openai_client.chat.completions.create(
+                model="gpt-4o-mini",
+                messages=[
+                    {"role": "system", "content": "You are a Swedish BRF document classification expert. Return only valid JSON."},
+                    {"role": "user", "content": prompt}
+                ],
+                temperature=0.0,
+                response_format={"type": "json_object"}
+            )
+
+            result = json.loads(response.choices[0].message.content)
+
+            # Filter out unclassifiable
+            return {k: v for k, v in result.items() if v != "unclassifiable"}
+
+        except Exception as e:
+            print(f"   ⚠️ LLM classification failed: {e}")
+            return {}
 
     def compute_pdf_hash(self, pdf_path: str) -> str:
         """Compute SHA256 hash of PDF for caching"""
@@ -443,6 +532,9 @@ class OptimalBRFPipeline(BaseExtractor):
         main_sections['notes_collection'] = []  # For Noter main section
         note_sections = {}
 
+        # OPTION C: Track unrouted sections for LLM classification fallback
+        unrouted_sections = []
+
         # Extract note headings first (same logic as test_note_semantic_routing.py)
         note_headings = []
         in_notes_subsection = False
@@ -491,15 +583,60 @@ class OptimalBRFPipeline(BaseExtractor):
             # Route main sections (before notes section)
             if not in_notes_subsection:
                 routed = False
+
+                # OPTION A: Normalize Swedish characters for matching
+                heading_normalized = self._normalize_swedish(heading)
+
                 for agent_id, keywords in self.main_section_keywords.items():
-                    if any(keyword in heading_lower for keyword in keywords):
-                        main_sections[agent_id].append(heading)
-                        routed = True
+                    # Normalize keywords for matching
+                    for keyword in keywords:
+                        keyword_normalized = self._normalize_swedish(keyword)
+                        if keyword_normalized in heading_normalized:
+                            main_sections[agent_id].append(heading)
+                            routed = True
+                            break
+                    if routed:
                         break
+
+                # OPTION B: If still not routed, try fuzzy matching with dictionary
+                if not routed:
+                    match = self.dictionary.match_term(heading, fuzzy_threshold=0.70)
+                    if match and match.confidence >= 0.70:
+                        # Map dictionary categories to agent IDs
+                        category_to_agent = {
+                            'balance_sheet': 'financial_agent',
+                            'income_statement': 'financial_agent',
+                            'cash_flow': 'financial_agent',
+                            'notes': 'notes_collection',
+                            'governance': 'governance_agent',
+                            'board': 'governance_agent',
+                            'audit': 'governance_agent',
+                            'management_report': 'governance_agent',
+                            'property': 'property_agent',
+                            'operations': 'operations_agent'
+                        }
+
+                        agent_id = category_to_agent.get(match.category)
+                        if agent_id and agent_id in main_sections:
+                            main_sections[agent_id].append(heading)
+                            routed = True
+
+                # OPTION C: Track unrouted sections for LLM classification
+                if not routed:
+                    unrouted_sections.append(heading)
 
         # Route note subsections using NoteSemanticRouter
         if note_headings:
             note_sections = self.note_router.route_headings(note_headings)
+
+        # OPTION C: LLM classification fallback for remaining unrouted sections
+        if unrouted_sections:
+            print(f"   🤖 LLM fallback: Classifying {len(unrouted_sections)} unrouted sections...")
+            llm_routes = self._classify_sections_llm(unrouted_sections)
+
+            for heading, agent_id in llm_routes.items():
+                if agent_id in main_sections:
+                    main_sections[agent_id].append(heading)
 
         elapsed = time.time() - start_time
 
