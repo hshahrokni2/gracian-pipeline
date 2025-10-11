@@ -23,6 +23,8 @@ from gracian_pipeline.core.hierarchical_financial import HierarchicalFinancialEx
 from gracian_pipeline.core.apartment_breakdown import ApartmentBreakdownExtractor
 from gracian_pipeline.core.fee_field_migrator import FeeFieldMigrator
 from gracian_pipeline.core.property_designation import PropertyDesignationExtractor
+from gracian_pipeline.core.validation_engine import ValidationEngine
+from gracian_pipeline.core.targeted_vision import TargetedVisionExtractor
 
 
 class RobustUltraComprehensiveExtractor:
@@ -37,6 +39,8 @@ class RobustUltraComprehensiveExtractor:
         self.apartment_extractor = ApartmentBreakdownExtractor()
         self.fee_migrator = FeeFieldMigrator()
         self.property_extractor = PropertyDesignationExtractor()
+        self.validation_engine = ValidationEngine()
+        self.targeted_vision = TargetedVisionExtractor()
 
     def extract_brf_document(self, pdf_path: str, mode: str = "auto") -> Dict[str, Any]:
         """
@@ -74,12 +78,12 @@ class RobustUltraComprehensiveExtractor:
             print("\nPass 2: Deep specialized extraction...")
             pass2_start = time.time()
 
-            # 2a. Hierarchical financial notes (4, 8, 9)
+            # 2a. Hierarchical financial notes (4, 5, 8, 9) - NOTE 5 ADDED FOR LOANS
             if self.should_extract_financial_details(base_result):
-                print("  → Extracting hierarchical financial details (Notes 4, 8, 9)...")
+                print("  → Extracting hierarchical financial details (Notes 4, 5, 8, 9)...")
                 financial_details = self.financial_extractor.extract_all_notes(
                     pdf_path,
-                    notes=["note_4", "note_8", "note_9"]
+                    notes=["note_4", "note_5", "note_8", "note_9"]
                 )
 
                 # Note 4: Operating costs breakdown
@@ -111,6 +115,25 @@ class RobustUltraComprehensiveExtractor:
                     print(f"    ✓ Note 9: Extracted {note9_data.get('_validation', {}).get('fields_extracted', 0)}/5 receivables fields")
                 else:
                     print("    ⚠ Note 9 extraction failed")
+
+                # Note 5: Loan details (CRITICAL FIX FOR 0% LOAN EXTRACTION)
+                if "note_5" in financial_details and not financial_details["note_5"].get("_error"):
+                    note5_data = financial_details["note_5"]
+                    loans_array = note5_data.get("loans", [])
+
+                    # Store loans in financial_agent (not in separate loans_agent)
+                    base_result["financial_agent"]["loans"] = loans_array
+                    base_result["financial_agent"]["_note_5_extracted"] = True
+
+                    loans_count = len(loans_array)
+                    print(f"    ✓ Note 5: Extracted {loans_count} loan(s) - CRITICAL FIX APPLIED")
+
+                    # Validation feedback
+                    validation = note5_data.get("_validation", {})
+                    if validation.get("missing_loan_fields"):
+                        print(f"      ⚠ Missing fields: {', '.join(validation['missing_loan_fields'][:3])}")
+                else:
+                    print("    ⚠ Note 5 extraction failed - loans remain at 0%")
 
             # 2b. Detailed apartment breakdown (if summary detected)
             apt_granularity = base_result.get("property_agent", {}).get("_apartment_breakdown_granularity")
@@ -163,6 +186,65 @@ class RobustUltraComprehensiveExtractor:
         pass3_time = time.time() - pass3_start
         print(f"  ✓ Complete in {pass3_time:.1f}s")
 
+        # PASS 3.5: Validation Engine (Critical error detection)
+        print("\nPass 3.5: Validation engine...")
+        pass3_5_start = time.time()
+        validation_report = self.validation_engine.validate_extraction(validated_result, pdf_path)
+        pass3_5_time = time.time() - pass3_5_start
+
+        if validation_report.has_errors():
+            print(f"  ⚠️  {validation_report.error_count()} validation error(s) found")
+            for issue in validation_report.issues[:5]:  # Show first 5
+                from gracian_pipeline.core.validation_engine import ValidationSeverity
+                icon = "❌" if issue.severity == ValidationSeverity.ERROR else "⚠️"
+                print(f"    {icon} {issue.field}: {issue.message}")
+        else:
+            print(f"  ✅ No critical errors detected")
+
+        # Store validation report in result
+        validated_result["_validation_report"] = validation_report.to_dict()
+        print(f"  ✓ Complete in {pass3_5_time:.1f}s")
+
+        # PASS 3.6: Targeted Vision Recovery (for validation errors)
+        pass3_6_time = 0
+        if mode in ["deep", "auto"] and validation_report.has_errors():
+            print("\nPass 3.6: Targeted vision recovery...")
+            pass3_6_start = time.time()
+
+            # Get ERROR-level issues only (skip warnings)
+            from gracian_pipeline.core.validation_engine import ValidationSeverity
+            error_issues = [
+                issue.to_dict() for issue in validation_report.issues
+                if issue.severity == ValidationSeverity.ERROR
+            ]
+
+            if error_issues:
+                # Attempt recovery with targeted vision extraction
+                validated_result = self.targeted_vision.extract_missing_fields(
+                    pdf_path,
+                    validated_result,
+                    error_issues
+                )
+
+                # Re-validate after recovery
+                recovery_validation = self.validation_engine.validate_extraction(validated_result, pdf_path)
+
+                # Compare before/after
+                errors_fixed = validation_report.error_count() - recovery_validation.error_count()
+
+                if errors_fixed > 0:
+                    print(f"    ✓ Fixed {errors_fixed}/{validation_report.error_count()} errors")
+                    validated_result["_vision_recovery_applied"] = True
+                    validated_result["_errors_fixed"] = errors_fixed
+                else:
+                    print(f"    ⚠️  Recovery did not reduce errors")
+
+                # Update validation report with recovery results
+                validated_result["_validation_report_post_recovery"] = recovery_validation.to_dict()
+
+            pass3_6_time = time.time() - pass3_6_start
+            print(f"  ✓ Complete in {pass3_6_time:.1f}s")
+
         # PASS 4: Quality scoring
         print("\nPass 4: Quality assessment...")
         pass4_start = time.time()
@@ -177,8 +259,12 @@ class RobustUltraComprehensiveExtractor:
             "pass1_base_time": round(pass1_time, 2),
             "pass2_deep_time": round(pass2_time, 2) if mode in ["deep", "auto"] else 0,
             "pass3_validation_time": round(pass3_time, 2),
+            "pass3_5_validation_engine_time": round(pass3_5_time, 2),
+            "pass3_6_targeted_vision_time": round(pass3_6_time, 2),
             "pass4_quality_time": round(pass4_time, 2),
-            "extraction_mode": mode
+            "extraction_mode": mode,
+            "vision_recovery_applied": final_result.get("_vision_recovery_applied", False),
+            "errors_fixed_by_recovery": final_result.get("_errors_fixed", 0)
         }
 
         # Print summary
@@ -226,9 +312,10 @@ class RobustUltraComprehensiveExtractor:
         if fee_warnings:
             extraction.setdefault("_validation_warnings", []).extend(fee_warnings)
 
-        # Validate financial details
-        if extraction.get("financial_agent", {}).get("_detailed_extraction"):
-            fin_validation = self.validate_financial_details(extraction["financial_agent"])
+        # Validate financial details (PHASE 1 FIX: None-safety check)
+        financial = extraction.get("financial_agent") or {}
+        if financial.get("_detailed_extraction"):
+            fin_validation = self.validate_financial_details(financial)
             if fin_validation.get("warnings"):
                 extraction.setdefault("_validation_warnings", []).extend(fin_validation["warnings"])
 
@@ -366,6 +453,29 @@ class RobustUltraComprehensiveExtractor:
             print(f"\n⚠️  Validation Warnings:")
             for warning in result["_validation_warnings"][:5]:  # Show first 5
                 print(f"   - {warning}")
+
+        # Validation Engine Report
+        validation_report = result.get("_validation_report", {})
+        if validation_report:
+            error_count = validation_report.get("error_count", 0)
+            warning_count = validation_report.get("warning_count", 0)
+
+            if error_count > 0 or warning_count > 0:
+                print(f"\n🔍 Validation Engine Report:")
+                if error_count > 0:
+                    print(f"   ❌ Errors: {error_count}")
+                if warning_count > 0:
+                    print(f"   ⚠️  Warnings: {warning_count}")
+
+                # Show top issues
+                issues = validation_report.get("issues", [])
+                if issues:
+                    print(f"\n   Top Issues:")
+                    for issue in issues[:3]:  # Show first 3
+                        severity_icon = "❌" if issue.get("severity") == "ERROR" else "⚠️"
+                        field = issue.get("field", "unknown")
+                        message = issue.get("message", "")
+                        print(f"   {severity_icon} {field}: {message}")
 
         print(f"\n{'='*60}\n")
 

@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "document_id": "769622-7110_2023",
+    "document_type": "arsredovisning",
+    "fiscal_year": {
+      "value": 2023,
+      "confidence": 0.9,
+      "source": "pattern_extraction",
+      "evidence_pages": [
+        1
+      ],
+      "extraction_method": null,
+      "model_used": null,
+      "validation_status": null,
+      "alternative_values": [],
+      "extraction_timestamp": null,
+      "original_string": null
+    },
+    "report_date": null,
+    "brf_name": {
+      "value": "Unknown BRF",
+      "confidence": 0.5,
+      "source": "default",
+      "evidence_pages": [],
+      "extraction_method": null,
+      "model_used": null,
+      "validation_status": null,
+      "alternative_values": [],
+      "extraction_timestamp": null
+    },
+    "organization_number": {
+      "value": "769622-7110",
+      "confidence": 0.9,
+      "source": "pattern_extraction",
+      "evidence_pages": [
+        1
+      ],
+      "extraction_method": null,
+      "model_used": null,
+      "validation_status": null,
+      "alternative_values": [],
+      "extraction_timestamp": null
+    },
+    "pages_total": 19,
+    "is_machine_readable": true,
+    "ocr_confidence": null,
+    "extraction_date": "2025-10-10T16:13:44.698624",
+    "extraction_mode": "deep",
+    "extraction_version": "v2.0",
+    "file_path": "/Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Gracian Pipeline/SRS/brf_43334.pdf",
+    "file_size_bytes": 5058857,
+    "file_hash_sha256": "6a555c1e5df8a01316d184e13ad21ac329fb9cf1c72c7b864debb3751d0c3b3b"
+  },
+  "governance": null,
+  "financial": null,
+  "multi_year_overview": null,
+  "notes": null,
+  "property": null,
+  "fees": null,
+  "loans": [],
+  "reserves": [],
+  "operations": null,
+  "events": [],
+  "policies": [],
+  "environmental": null,
+  "chairman_statement": null,
+  "board_report": null,
+  "auditor_report": null,
+  "extraction_quality": {
+    "coverage_percentage": 6.8,
+    "confidence_score": 0.5,
+    "total_fields": 117.0,
+    "evidence_ratio": 0.06837606837606838
+  },
+  "coverage_percentage": 6.8,
+  "confidence_score": 0.5,
+  "all_source_pages": []
+}

@@ -22,6 +22,7 @@ from .schema_comprehensive import (
     schema_comprehensive_prompt_block,
     get_field_counts
 )
+from .vision_qc import render_pdf_pages_subset
 
 
 class UltraComprehensiveDoclingAdapter:
@@ -159,8 +160,14 @@ CRITICAL INSTRUCTIONS:
 
 AGENT SCHEMAS (with comprehensive fields):
 
-**GOVERNANCE AGENT**
-{schema_comprehensive_prompt_block('governance_agent')}
+**CHAIRMAN AGENT**
+{schema_comprehensive_prompt_block('chairman_agent')}
+
+**BOARD MEMBERS AGENT**
+{schema_comprehensive_prompt_block('board_members_agent')}
+
+**AUDITOR AGENT**
+{schema_comprehensive_prompt_block('auditor_agent')}
 
 **FINANCIAL AGENT** (CRITICAL - Extract detailed breakdowns from notes)
 {schema_comprehensive_prompt_block('financial_agent')}
@@ -200,7 +207,9 @@ AGENT SCHEMAS (with comprehensive fields):
 
 RETURN FORMAT:
 {{
-  "governance_agent": {{...all fields...}},
+  "chairman_agent": {{...all fields...}},
+  "board_members_agent": {{...all fields...}},
+  "auditor_agent": {{...all fields...}},
   "financial_agent": {{...all fields including detailed breakdowns...}},
   "property_agent": {{...all fields including apartment_breakdown, commercial_tenants, common_areas, samfällighet...}},
   "notes_depreciation_agent": {{...all fields...}},
@@ -270,6 +279,165 @@ IMPORTANT: Return ONLY valid JSON. Extract EVERYTHING visible in the document.""
 
         return result
 
+    def _extract_with_vision_ultra(self, pdf_path: str, docling_result: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Extract scanned PDF using GPT-4o vision model.
+
+        Args:
+            pdf_path: Path to the scanned PDF
+            docling_result: Result from docling (contains char_count, status)
+
+        Returns:
+            Dictionary with same structure as text-based extraction
+        """
+        import fitz  # PyMuPDF for getting page count
+        import base64
+
+        # Get page count
+        doc = fitz.open(pdf_path)
+        page_count = len(doc)
+        doc.close()
+
+        print(f"  Extracting {page_count} pages from scanned PDF using vision model...")
+
+        # Render first 3 pages (or all pages if fewer than 3) for sampling
+        # Note: Reduced from 5 to 3 to avoid API request size limits
+        max_pages = min(page_count, 3)
+        page_indices = list(range(max_pages))
+
+        try:
+            # Render pages to images (150 DPI - balance between quality and size)
+            images = render_pdf_pages_subset(pdf_path, page_indices, dpi=150)
+            print(f"  Rendered {len(images)} pages as images")
+
+            # Build simplified vision extraction prompt (focus on key agents)
+            prompt = """You are analyzing a Swedish BRF (housing cooperative) annual report.
+Extract structured information from the document pages shown below.
+
+Extract the following data and return ONLY a JSON object with these keys:
+- governance_agent: {chairman, board_members: [{name, role}], auditor_name, audit_firm}
+- financial_agent: {revenue, expenses, assets, liabilities, equity, surplus}
+- property_agent: {property_designation, address, built_year}
+- fees_agent: {monthly_fee_range_min, monthly_fee_range_max, annual_fee}
+- loans_agent: [{lender, amount, rate}]
+
+Return ONLY valid JSON (no markdown, no explanations). Use null for missing data."""
+
+            # Call GPT-4o vision API
+            client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+            # Convert images to base64
+            messages_content = [{"type": "text", "text": prompt}]
+            for idx, img_bytes in enumerate(images):
+                b64 = base64.b64encode(img_bytes).decode('utf-8')
+                messages_content.append({
+                    "type": "image_url",
+                    "image_url": {"url": f"data:image/png;base64,{b64}"}
+                })
+
+            print(f"  Calling GPT-4o vision API...")
+            response = client.chat.completions.create(
+                model="gpt-4o",
+                messages=[{"role": "user", "content": messages_content}],
+                max_tokens=16000,
+                temperature=0
+            )
+
+            # Parse JSON response
+            raw_text = response.choices[0].message.content
+            print(f"  Vision API returned {len(raw_text)} characters")
+
+            # DEBUG: Save raw response to file for inspection
+            import tempfile
+            debug_file = tempfile.NamedTemporaryFile(mode='w', suffix='.txt', delete=False, prefix='vision_response_')
+            debug_file.write(raw_text)
+            debug_file.close()
+            print(f"  DEBUG: Raw response saved to {debug_file.name}")
+
+            # Also print first 500 chars to console
+            print(f"  DEBUG: First 500 chars of response:")
+            print(f"  {raw_text[:500]}")
+
+            # PHASE 2 FIX: Check for GPT-4o refusal patterns
+            refusal_patterns = [
+                "i'm unable to extract",
+                "i cannot extract",
+                "i can't extract",
+                "i'm not able to",
+                "i apologize",
+                "i do not have the ability",
+                "cannot process"
+            ]
+
+            if any(pattern in raw_text.lower() for pattern in refusal_patterns):
+                print(f"  ⚠️  GPT-4o refused extraction (content policy), using fallback...")
+                return {
+                    'status': 'vision_refused',
+                    'message': 'GPT-4o refused extraction request (content policy)',
+                    'pdf_path': pdf_path,
+                    'char_count': docling_result['char_count'],
+                    'chairman_agent': {},
+                    'board_members_agent': {},
+                    'auditor_agent': {},
+                    'financial_agent': {},
+                    'property_agent': {},
+                    'fees_agent': {},
+                    'loans_agent': [],
+                    'notes_depreciation_agent': {},
+                    'notes_maintenance_agent': {},
+                    'notes_tax_agent': {},
+                    'operations_agent': {},
+                    'reserves_agent': {},
+                    'events_agent': {},
+                    'policies_agent': {},
+                    'environmental_agent': {}
+                }
+
+            # Extract JSON from response (handle markdown code blocks)
+            json_str = raw_text
+            if "```json" in raw_text:
+                json_str = raw_text.split("```json")[1].split("```")[0].strip()
+            elif "```" in raw_text:
+                json_str = raw_text.split("```")[1].split("```")[0].strip()
+
+            result = json.loads(json_str)
+
+            # Add metadata
+            result['status'] = 'vision_extracted'
+            result['pdf_path'] = pdf_path
+            result['char_count'] = docling_result['char_count']
+            result['extraction_method'] = 'vision'
+            result['pages_processed'] = max_pages
+            result['total_pages'] = page_count
+
+            print(f"  ✓ Vision extraction complete")
+            return result
+
+        except Exception as e:
+            print(f"  ✗ Vision extraction failed: {e}")
+            # Return empty structure on failure (FIXED: {} instead of None to prevent AttributeError)
+            return {
+                'status': 'vision_failed',
+                'message': f'Vision extraction failed: {str(e)}',
+                'pdf_path': pdf_path,
+                'char_count': docling_result['char_count'],
+                'chairman_agent': {},    # ✅ FIXED: Empty dict, not None
+                'board_members_agent': {},  # ✅ FIXED: Empty dict, not None
+                'auditor_agent': {},     # ✅ FIXED: Empty dict, not None
+                'financial_agent': {},   # ✅ FIXED: Empty dict, not None
+                'property_agent': {},
+                'fees_agent': {},
+                'loans_agent': [],       # ✅ FIXED: Empty list, not None
+                'notes_depreciation_agent': {},
+                'notes_maintenance_agent': {},
+                'notes_tax_agent': {},
+                'operations_agent': {},
+                'reserves_agent': {},
+                'events_agent': {},
+                'policies_agent': {},
+                'environmental_agent': {}
+            }
+
     def extract_brf_data_ultra(self, pdf_path: str) -> Dict[str, Any]:
         """
         Main entry point for ultra-comprehensive BRF extraction.
@@ -283,11 +451,9 @@ IMPORTANT: Return ONLY valid JSON. Extract EVERYTHING visible in the document.""
         docling_result = self.extract_with_docling(pdf_path)
 
         if docling_result['status'] == 'scanned':
-            return {
-                'status': 'scanned',
-                'message': 'PDF appears to be scanned (low text content). Consider using vision models.',
-                'char_count': docling_result['char_count']
-            }
+            print("  → Detected scanned PDF, using vision extraction...")
+            # Use vision-based extraction for scanned PDFs
+            return self._extract_with_vision_ultra(pdf_path, docling_result)
 
         # Extract all data with ultra-comprehensive schema
         result = self.extract_all_ultra_comprehensive(

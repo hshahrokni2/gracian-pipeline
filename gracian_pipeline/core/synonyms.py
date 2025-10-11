@@ -102,15 +102,26 @@ FINANCIAL_SYNONYMS = {
 # =============================================================================
 
 GOVERNANCE_SYNONYMS = {
+    # Board Section Keywords (for locating governance data)
+    "styrelsen": "board_section",
+    "styrelse och revisorer": "board_section",
+    "styrelseledamöter": "board_section",
+    "förvaltning": "board_section",
+    "för styrelsen": "board_section",
+    "underskrift": "board_section",  # Signature section often lists board
+
     # Chairman
     "ordförande": "chairman",
     "ordf": "chairman",
     "ordf.": "chairman",
+    "styrelsens ordförande": "chairman",
 
     # Vice Chairman
     "vice ordförande": "vice_chairman",
+    "vice-ordförande": "vice_chairman",  # With hyphen variation
     "v ordf": "vice_chairman",
     "v. ordf.": "vice_chairman",
+    "v ordförande": "vice_chairman",
 
     # Treasurer
     "kassör": "treasurer",
@@ -123,22 +134,34 @@ GOVERNANCE_SYNONYMS = {
 
     # Board Member
     "ledamot": "board_member",
+    "ledamöter": "board_member",  # Plural form
     "styrelseledamot": "board_member",
+    "styrelseledamöter": "board_member",  # Plural form
+    "styr.ledamot": "board_member",  # Abbreviated
 
     # Deputy
     "suppleant": "deputy",
+    "suppleanter": "deputy",  # Plural form
     "ersättare": "deputy",
+    "suppl": "deputy",  # Abbreviated
+    "suppl.": "deputy",
 
     # Auditor
     "revisor": "auditor",
+    "revisorer": "auditor",  # Plural form
     "ordinarie revisor": "primary_auditor",
     "revisorssuppleant": "deputy_auditor",
     "auktoriserad revisor": "authorized_auditor",
     "aukt. revisor": "authorized_auditor",
+    "aukt revisor": "authorized_auditor",
     "godkänd revisor": "authorized_auditor",
+    "god. revisor": "authorized_auditor",
+    "revisionsbolag": "audit_firm",
+    "revisionsbyrå": "audit_firm",
 
     # Nomination Committee
     "valberedning": "nomination_committee",
+    "valberedningen": "nomination_committee",
     "sammankallande": "nomination_convener",
 }
 

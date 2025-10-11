@@ -1,0 +1,120 @@
+{
+  "test_date": "2025-10-10T17:32:39.895855",
+  "total_pdfs": 42,
+  "successful": 37,
+  "failed": 5,
+  "avg_coverage": 56.13513513513514,
+  "avg_confidence": 0.641891891891892,
+  "by_dataset": {
+    "Hjorthagen": {
+      "count": 15,
+      "successful": 15,
+      "failed": 0,
+      "total_coverage": 1003.4,
+      "total_confidence": 9.25,
+      "avg_coverage": 66.89333333333333,
+      "avg_confidence": 0.6166666666666667
+    },
+    "SRS": {
+      "count": 27,
+      "successful": 22,
+      "failed": 5,
+      "total_coverage": 1073.6,
+      "total_confidence": 14.499999999999998,
+      "avg_coverage": 48.8,
+      "avg_confidence": 0.6590909090909091
+    }
+  },
+  "extraction_field_tests": {
+    "confidence_scores_present": {
+      "passed": 37,
+      "failed": 0,
+      "total": 37,
+      "pass_rate": 100.0
+    },
+    "source_pages_tracked": {
+      "passed": 29,
+      "failed": 8,
+      "total": 37,
+      "pass_rate": 78.37837837837837
+    },
+    "multi_source_aggregation": {
+      "passed": 0,
+      "failed": 37,
+      "total": 37,
+      "pass_rate": 0.0
+    },
+    "validation_status_tracking": {
+      "passed": 0,
+      "failed": 37,
+      "total": 37,
+      "pass_rate": 0.0
+    }
+  },
+  "synonym_mapping_tests": {
+    "swedish_governance_terms": {
+      "passed": 29,
+      "failed": 8,
+      "total": 37,
+      "pass_rate": 78.37837837837837
+    },
+    "swedish_financial_terms": {
+      "passed": 36,
+      "failed": 1,
+      "total": 37,
+      "pass_rate": 97.2972972972973
+    },
+    "synonym_metadata_present": {
+      "passed": 0,
+      "failed": 37,
+      "total": 37,
+      "pass_rate": 0.0
+    }
+  },
+  "swedish_first_field_tests": {
+    "fee_swedish_primary": {
+      "passed": 0,
+      "failed": 37,
+      "total": 37,
+      "pass_rate": 0.0
+    },
+    "financial_swedish_primary": {
+      "passed": 36,
+      "failed": 1,
+      "total": 37,
+      "pass_rate": 97.2972972972973
+    },
+    "swedish_english_alias_sync": {
+      "passed": 0,
+      "failed": 37,
+      "total": 37,
+      "pass_rate": 0.0
+    }
+  },
+  "calculated_metrics_tests": {
+    "calculated_metrics_present": {
+      "passed": 0,
+      "failed": 37,
+      "total": 37,
+      "pass_rate": 0.0
+    },
+    "validation_thresholds_applied": {
+      "passed": 0,
+      "failed": 37,
+      "total": 37,
+      "pass_rate": 0.0
+    },
+    "tolerant_validation": {
+      "passed": 0,
+      "failed": 37,
+      "total": 37,
+      "pass_rate": 0.0
+    },
+    "data_preservation": {
+      "passed": 36,
+      "failed": 1,
+      "total": 37,
+      "pass_rate": 97.2972972972973
+    }
+  }
+}

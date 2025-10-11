@@ -4,6 +4,7 @@ import time
 from typing import List, Dict, Any, Tuple
 
 from .vision_qc import _b64_png  # reuse encoding helper
+from .llm_orchestrator import llm_orchestrate_sections
 
 
 def render_all_pages(pdf_path: str, dpi: int = 170) -> List[bytes]:
@@ -232,69 +233,18 @@ def vision_sectionize(pdf_path: str) -> Dict[str, Any]:
                 except Exception:
                     continue
 
-    # Heuristic mapping to agents → pages
-    pages_by_agent: Dict[str, List[int]] = {}
-    def add_pages(agent: str, s: int, e: int):
-        pages_by_agent.setdefault(agent, [])
-        for i in range(s - 1, e):
-            if i not in pages_by_agent[agent]:
-                pages_by_agent[agent].append(i)
+    # LLM-based orchestrator for dynamic section-to-agent routing
+    # Replaces hard-coded keyword matching with intelligent semantic routing
+    section_map = {
+        "level_1": level_1,
+        "level_2": level_2,
+        "level_3": level_3
+    }
 
-    def contains(t: str, needles: List[str]) -> bool:
-        t2 = t.lower()
-        return any(n in t2 for n in needles)
-
-    for sec in level_1:
-        t = sec["title"]
-        if contains(t, ["resultaträkning", "balansräkning", "kassaflöde"]):
-            add_pages("financial_agent", sec["start_page"], sec["end_page"])
-        if contains(t, ["kassaflöde", "kassaflödesanalys"]):
-            add_pages("cashflow_agent", sec["start_page"], sec["end_page"])
-        if contains(t, ["revisionsberättelse", "revisorernas"]):
-            add_pages("audit_agent", sec["start_page"], sec["end_page"])
-        if contains(t, ["underskrifter", "undertecknat"]):
-            add_pages("signatures_agent", sec["start_page"], sec["end_page"])
-        if contains(t, ["not", "tilläggsupplysningar"]):
-            # generic notes span; specific detection follows below
-            add_pages("notes_depreciation_agent", sec["start_page"], sec["end_page"])
-            add_pages("notes_maintenance_agent", sec["start_page"], sec["end_page"])
-            add_pages("notes_tax_agent", sec["start_page"], sec["end_page"])
-        if contains(t, ["förvaltningsberättelse"]):
-            add_pages("governance_agent", sec["start_page"], sec["end_page"])
-        if contains(t, ["fastighet", "lägenheter", "byggår"]):
-            add_pages("property_agent", sec["start_page"], sec["end_page"])
-        if contains(t, ["energideklaration", "energiklass", "energieffektiv", "primärenergi"]):
-            add_pages("energy_agent", sec["start_page"], sec["end_page"])
-        if contains(t, ["fond", "avsättning", "underhållsfond"]):
-            add_pages("reserves_agent", sec["start_page"], sec["end_page"])
-        if contains(t, ["lån", "kredit"]):
-            add_pages("loans_agent", sec["start_page"], sec["end_page"])
-        if contains(t, ["avgift", "avgifter", "årsavgift", "månadsavgift"]):
-            add_pages("fees_agent", sec["start_page"], sec["end_page"])
-
-    # Also use level 2/3 titles to add more precise pages
-    for it in level_2 + level_3:
-        t = it["title"]
-        s, e = it["start_page"], it["end_page"]
-        if contains(t, ["lån", "ränta", "amortering"]):
-            add_pages("loans_agent", s, e)
-        if contains(t, ["fond", "avsättning"]):
-            add_pages("reserves_agent", s, e)
-        if contains(t, ["avskrivning"]):
-            add_pages("notes_depreciation_agent", s, e)
-        if contains(t, ["underhåll"]):
-            add_pages("notes_maintenance_agent", s, e)
-        if contains(t, ["skatt", "uppskjuten"]):
-            add_pages("notes_tax_agent", s, e)
-        if contains(t, ["energideklaration", "energiklass", "energieffektiv", "primärenergi"]):
-            add_pages("energy_agent", s, e)
-        if contains(t, ["avgift", "avgifter", "årsavgift", "månadsavgift"]):
-            add_pages("fees_agent", s, e)
-        if contains(t, ["kassaflöde", "kassaflödesanalys"]):
-            add_pages("cashflow_agent", s, e)
-
-    for a in list(pages_by_agent.keys()):
-        pages_by_agent[a] = sorted(pages_by_agent[a])
+    pages_by_agent = llm_orchestrate_sections(
+        section_map=section_map,
+        verbose=verbose
+    )
 
     return {
         "level_1": level_1,

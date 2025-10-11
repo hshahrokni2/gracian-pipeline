@@ -143,6 +143,7 @@ class UltraComprehensivePydanticExtractor:
     def _extract_metadata(self, pdf_path: str, base_result: Dict) -> DocumentMetadata:
         """Extract document metadata."""
         import fitz  # PyMuPDF
+        import re
         from gracian_pipeline.models.base_fields import (
             NumberField, StringField, BooleanField, DateField
         )
@@ -150,17 +151,61 @@ class UltraComprehensivePydanticExtractor:
         pdf_path_obj = Path(pdf_path)
         doc = fitz.open(pdf_path)
 
-        # Extract basic info
-        brf_name = base_result.get("metadata_agent", {}).get("brf_name", "Unknown BRF")
-        org_number = base_result.get("metadata_agent", {}).get("organization_number", "000000-0000")
-        fiscal_year = base_result.get("metadata_agent", {}).get("fiscal_year", datetime.now().year)
+        # Extract from Docling markdown (first few pages have metadata)
+        markdown = base_result.get("_docling_markdown", "")
+
+        # Extract BRF name (usually first line or header)
+        brf_name = "Unknown BRF"
+        brf_confidence = 0.5
+        # Look for "Brf" or "Bostadsrättsföreningen" followed by name
+        brf_patterns = [
+            r'Brf\s+([^\n]+)',
+            r'Bostadsrättsföreningen\s+([^\n]+)',
+            r'^([A-ZÅÄÖ][^\n]{5,40})\s*\n',  # First line if capitalized
+        ]
+        for pattern in brf_patterns:
+            match = re.search(pattern, markdown[:1000], re.MULTILINE | re.IGNORECASE)
+            if match:
+                candidate = match.group(1).strip()
+                # Validate it's not a section header
+                if len(candidate) > 3 and not candidate.lower() in ['årsredovisning', 'förvaltningsberättelse']:
+                    brf_name = candidate
+                    brf_confidence = 0.9
+                    break
+
+        # Extract organization number (format: XXXXXX-XXXX)
+        # Search entire markdown (org number can appear late in document)
+        org_number = "000000-0000"
+        org_confidence = 0.5
+        org_pattern = r'(\d{6}-\d{4})'
+        org_match = re.search(org_pattern, markdown)  # Search entire markdown
+        if org_match:
+            org_number = org_match.group(1)
+            org_confidence = 0.9
+
+        # Extract fiscal year (look for "räkenskapsåret" or date range)
+        fiscal_year = datetime.now().year
+        year_confidence = 0.5
+        year_patterns = [
+            r'räkenskapsåret.*?(\d{4})',
+            r'1\s+januari\s*-\s*31\s+december\s+(\d{4})',
+            r'januari.*?december\s+(\d{4})',
+        ]
+        for pattern in year_patterns:
+            match = re.search(pattern, markdown[:2000], re.IGNORECASE)
+            if match:
+                year_candidate = int(match.group(1))
+                # Validate it's a reasonable year (2000-2030)
+                if 2000 <= year_candidate <= 2030:
+                    fiscal_year = year_candidate
+                    year_confidence = 0.9
+                    break
 
         # Calculate file hash
         with open(pdf_path, "rb") as f:
             file_hash = hashlib.sha256(f.read()).hexdigest()
 
         # Check if machine-readable
-        markdown = base_result.get("_docling_markdown", "")
         is_machine_readable = len(markdown) > 5000
 
         # Create metadata with MIXED approach:
@@ -178,21 +223,24 @@ class UltraComprehensivePydanticExtractor:
             file_size_bytes=pdf_path_obj.stat().st_size,
             file_hash_sha256=file_hash,
 
-            # Extracted fields: ExtractionField with confidence
+            # Extracted fields: ExtractionField with proper confidence
             fiscal_year=NumberField(
                 value=fiscal_year,
-                confidence=0.9 if fiscal_year != datetime.now().year else 0.5,
-                source="llm_extraction"
+                confidence=year_confidence,
+                source="pattern_extraction" if year_confidence > 0.5 else "default",
+                evidence_pages=[1] if year_confidence > 0.5 else []
             ),
             brf_name=StringField(
                 value=brf_name,
-                confidence=0.9 if brf_name != "Unknown BRF" else 0.5,
-                source="llm_extraction"
+                confidence=brf_confidence,
+                source="pattern_extraction" if brf_confidence > 0.5 else "default",
+                evidence_pages=[1] if brf_confidence > 0.5 else []
             ),
             organization_number=StringField(
                 value=org_number,
-                confidence=0.9 if org_number != "000000-0000" else 0.5,
-                source="llm_extraction"
+                confidence=org_confidence,
+                source="pattern_extraction" if org_confidence > 0.5 else "default",
+                evidence_pages=[1] if org_confidence > 0.5 else []
             ),
         )
 
@@ -200,21 +248,63 @@ class UltraComprehensivePydanticExtractor:
         return metadata
 
     def _extract_governance_enhanced(self, base_result: Dict) -> Optional[GovernanceStructure]:
-        """Extract enhanced governance information with MIXED approach."""
+        """
+        Extract enhanced governance information with MIXED approach.
+
+        MULTI-AGENT ARCHITECTURE: Merges results from 3 specialized agents:
+        - chairman_agent: Extracts ONLY chairman name
+        - board_members_agent: Extracts ONLY board members list with roles
+        - auditor_agent: Extracts ONLY auditor information
+
+        This decomposition prevents LLM cognitive overload (avoids brf_81563 regression).
+        """
         from gracian_pipeline.models.base_fields import StringField, ListField
 
-        gov_data = base_result.get("governance_agent", {})
+        # PHASE 1: Read from 3 specialized agents (graceful degradation)
+        chairman_data = base_result.get("chairman_agent", {})
+        board_data = base_result.get("board_members_agent", {})
+        auditor_data = base_result.get("auditor_agent", {})
 
-        if not gov_data:
+        # If ALL agents returned empty, return None (no governance data)
+        if not chairman_data and not board_data and not auditor_data:
             return None
 
-        # Extract board members with details
+        # PHASE 2: Extract chairman from chairman_agent
+        chairman = None
+        if chairman_data and chairman_data.get("chairman"):
+            chairman = StringField(
+                value=chairman_data["chairman"],
+                confidence=0.9,
+                source="llm_extraction"
+            )
+
+        # PHASE 3: Extract board members from board_members_agent
         board_members = []
-        for member_name in (gov_data.get("board_members") or []):
-            # Determine role (simplistic - could be enhanced with LLM)
-            role = "ledamot"
-            if member_name == gov_data.get("chairman"):
-                role = "ordforande"
+        raw_members = board_data.get("board_members") or []
+
+        for member_data in raw_members:
+            # Handle both formats: structured dicts (new) or simple strings (legacy)
+            if isinstance(member_data, dict):
+                # NEW: Structured format with role
+                member_name = member_data.get("name", "")
+                member_role = member_data.get("role", "ledamot")
+
+                # Normalize Swedish roles to schema format
+                role_map = {
+                    "ordförande": "ordforande",
+                    "ordförande": "ordforande",  # Handle UTF-8 variants
+                    "ledamot": "ledamot",
+                    "suppleant": "suppleant",
+                    "revisor": "revisor"
+                }
+                role = role_map.get(member_role.lower(), "ledamot")
+            else:
+                # LEGACY: Simple string format (fallback)
+                member_name = member_data
+                role = "ledamot"
+                # Check if this is the chairman (cross-agent validation)
+                if chairman and member_name == chairman.value:
+                    role = "ordforande"
 
             board_members.append(BoardMember(
                 # ✅ Extracted: ExtractionField
@@ -223,49 +313,54 @@ class UltraComprehensivePydanticExtractor:
                     confidence=0.9,
                     source="llm_extraction"
                 ),
-                # ❌ Literal type: raw string (not StringField!)
+                # ✅ FIXED: Now supports ordforande, ledamot, suppleant, revisor
                 role=role,
                 # ❌ Deprecated field: raw list (not ListField!)
-                source_page=gov_data.get("evidence_pages", [])
+                source_page=board_data.get("evidence_pages", [])
             ))
 
-        # Extract auditors
+        # PHASE 4: Extract auditor from auditor_agent
         primary_auditor = None
-        if gov_data.get("auditor_name"):
+        if auditor_data and auditor_data.get("auditor_name"):
             primary_auditor = Auditor(
                 # ✅ Extracted: ExtractionField
                 name=StringField(
-                    value=gov_data["auditor_name"],
+                    value=auditor_data["auditor_name"],
                     confidence=0.9,
                     source="llm_extraction"
                 ),
                 firm=StringField(
-                    value=gov_data.get("audit_firm", ""),
-                    confidence=0.85 if gov_data.get("audit_firm") else 0.5,
+                    value=auditor_data.get("audit_firm", ""),
+                    confidence=0.85 if auditor_data.get("audit_firm") else 0.5,
                     source="llm_extraction"
-                ) if gov_data.get("audit_firm") else None,
+                ) if auditor_data.get("audit_firm") else None,
                 # ❌ Deprecated field: raw list (not ListField!)
-                source_page=gov_data.get("evidence_pages", [])
+                source_page=auditor_data.get("evidence_pages", [])
             )
 
+        # PHASE 5: Merge all evidence pages from 3 agents
+        all_evidence_pages = set()
+        for agent_data in [chairman_data, board_data, auditor_data]:
+            if agent_data and "evidence_pages" in agent_data:
+                all_evidence_pages.update(agent_data["evidence_pages"])
+
+        # PHASE 6: Construct merged GovernanceStructure
         return GovernanceStructure(
-            # ✅ Extracted: ExtractionField
-            chairman=StringField(
-                value=gov_data.get("chairman", ""),
-                confidence=0.9 if gov_data.get("chairman") else 0.5,
-                source="llm_extraction"
-            ) if gov_data.get("chairman") else None,
-            # ❌ Structural field: raw list of objects (not wrapped)
+            # ✅ Extracted: ExtractionField (from chairman_agent)
+            chairman=chairman,
+            # ❌ Structural field: raw list of objects (from board_members_agent)
             board_members=board_members,
+            # ✅ Extracted: Auditor object (from auditor_agent)
             primary_auditor=primary_auditor,
             # ✅ Extracted list: ListField (with confidence tracking)
+            # Note: nomination_committee not yet extracted by specialized agents
             nomination_committee=ListField(
-                value=gov_data.get("nomination_committee", []),
-                confidence=0.85,
-                source="llm_extraction"
+                value=[],
+                confidence=0.5,
+                source="not_implemented"
             ),
-            # ❌ Deprecated field: raw list (not ListField!)
-            source_pages=gov_data.get("evidence_pages", [])
+            # ❌ Deprecated field: merged evidence pages from all 3 agents
+            source_pages=sorted(list(all_evidence_pages))
         )
 
     def _extract_financial_enhanced(self, base_result: Dict) -> Optional[FinancialData]:
@@ -317,6 +412,17 @@ class UltraComprehensivePydanticExtractor:
                 confidence=0.9,
                 source="llm_extraction"
             ) if self._to_decimal(fin_data.get("equity")) is not None else None,
+            # NEW: Liabilities breakdown (Issue #2 Enhancement)
+            long_term_liabilities=NumberField(
+                value=self._to_decimal(fin_data.get("long_term_liabilities")),
+                confidence=0.9,
+                source="llm_extraction"
+            ) if self._to_decimal(fin_data.get("long_term_liabilities")) is not None else None,
+            short_term_liabilities=NumberField(
+                value=self._to_decimal(fin_data.get("short_term_liabilities")),
+                confidence=0.9,
+                source="llm_extraction"
+            ) if self._to_decimal(fin_data.get("short_term_liabilities")) is not None else None,
             # ❌ Deprecated field: raw list (not ListField!)
             source_pages=fin_data.get("evidence_pages", [])
         )
@@ -522,10 +628,24 @@ class UltraComprehensivePydanticExtractor:
         """Extract enhanced loan information with MIXED approach."""
         from gracian_pipeline.models.base_fields import StringField, NumberField
 
-        loans_data = base_result.get("loans_agent", {})
+        # CRITICAL FIX: Note 5 stores loans in financial_agent.loans (array), not loans_agent
+        fin_data = base_result.get("financial_agent", {})
+        loans_array = fin_data.get("loans") if fin_data else []
+
+        # Fallback to legacy loans_agent location
+        if not loans_array:
+            loans_data = base_result.get("loans_agent", {})
+            # Handle both dict and list cases (Phase 1 fix can return [] for loans_agent)
+            if isinstance(loans_data, list):
+                loans_array = loans_data
+            elif isinstance(loans_data, dict):
+                loans_array = loans_data.get("loans", [])
+            else:
+                loans_array = []
+
         loans = []
 
-        for loan in (loans_data.get("loans") or []):
+        for loan in (loans_array or []):
             if isinstance(loan, dict):
                 loans.append(LoanDetails(
                     # ✅ Extracted: ExtractionField
@@ -535,17 +655,18 @@ class UltraComprehensivePydanticExtractor:
                         source="llm_extraction"
                     ),
                     outstanding_balance=NumberField(
-                        value=self._to_decimal(loan.get("outstanding_balance", 0)),
+                        # CRITICAL FIX: Note 5 extracts amount_2021, not outstanding_balance
+                        value=self._to_decimal(loan.get("amount_2021", 0)),
                         confidence=0.9,
                         source="llm_extraction"
-                    ) if self._to_decimal(loan.get("outstanding_balance", 0)) is not None else None,
+                    ) if self._to_decimal(loan.get("amount_2021", 0)) is not None else None,
                     interest_rate=NumberField(
                         value=loan.get("interest_rate", 0.0),
                         confidence=0.85 if loan.get("interest_rate") else 0.5,
                         source="llm_extraction"
                     ) if loan.get("interest_rate") else None,
                     # ❌ Deprecated field: raw list (not ListField!)
-                    source_page=loans_data.get("evidence_pages", [])
+                    source_page=fin_data.get("evidence_pages", []) if fin_data else []
                 ))
 
         return loans

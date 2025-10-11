@@ -19,10 +19,11 @@ except ImportError:
 # MEGA-EXPANDED TYPES - Keeps all base fields + adds comprehensive_details
 COMPREHENSIVE_TYPES: Dict[str, Dict[str, str]] = {
     "governance_agent": {
-        # Base fields (keep as-is)
+        # Base fields (keep as-is, BUT board_members is STRUCTURED format)
+        # CRITICAL: board_members is [{name: str, role: str}], not simple string list
+        # Roles: "Ordförande" (chairman), "Ledamot" (member), "Suppleant" (deputy), "Revisor" (auditor)
         **BASE_TYPES["governance_agent"],
         # NEW: Comprehensive details
-        "alternate_board_members": "list",  # Suppleanter
         "internal_auditor": "str",  # Ordinarie Intern Internrevisor
         "board_meeting_frequency": "str",  # E.g., "månadsvis"
     },
@@ -180,6 +181,65 @@ def schema_comprehensive_prompt_block(agent_id: str) -> str:
         "If you find additional structured information not in this schema, "
         "add a top-level key 'additional_facts' with a list of discovered facts."
     )
+
+    # Add agent-specific instructions
+    if agent_id == "governance_agent":
+        governance_instruction = (
+            "\n\n"
+            "**CRITICAL GOVERNANCE INSTRUCTION:**\n"
+            "board_members MUST be structured format: [{\"name\": \"Full Name\", \"role\": \"role_type\"}]\n"
+            "role_type options: \"Ordförande\" (chairman), \"Ledamot\" (member), \"Suppleant\" (deputy), \"Revisor\" (auditor)\n"
+            "Extract ALL board members including deputies (Suppleanter). Do NOT use simple string list.\n"
+            "\n"
+            "Example:\n"
+            "board_members: [\n"
+            "  {\"name\": \"Elvy Maria Löfvenberg\", \"role\": \"Ordförande\"},\n"
+            "  {\"name\": \"Torbjörn Andersson\", \"role\": \"Ledamot\"},\n"
+            "  {\"name\": \"Lisa Lind\", \"role\": \"Suppleant\"},\n"
+            "  {\"name\": \"Daniel Wetter\", \"role\": \"Suppleant\"}\n"
+            "]"
+        )
+        guidance += governance_instruction
+
+    if agent_id == "loans_agent":
+        loans_instruction = (
+            "\n\n"
+            "**CRITICAL LOANS INSTRUCTION:**\n"
+            "loans MUST be structured format: [{\"lender\": \"Bank Name\", \"loan_number\": \"Number\", \"outstanding_balance\": amount, \"interest_rate\": rate, \"maturity_date\": \"YYYY-MM-DD\", \"amortization_schedule\": \"Description\"}]\n"
+            "Extract ALL individual loans from Note 5 (Låneskulder till kreditinstitut). Return a list of loan objects.\n"
+            "Do NOT return single total - extract each loan separately with all available details.\n"
+            "\n"
+            "Example:\n"
+            "loans: [\n"
+            "  {\"lender\": \"SEB\", \"loan_number\": \"41431520\", \"outstanding_balance\": 30000000, \"interest_rate\": 0.0057, \"maturity_date\": \"2024-09-28\", \"amortization_schedule\": \"amorteringsfria\"},\n"
+            "  {\"lender\": \"SBAB\", \"loan_number\": \"12345\", \"outstanding_balance\": 28500000, \"interest_rate\": 0.0045, \"maturity_date\": \"2022-03-23\", \"amortization_schedule\": \"amorteringsfria\"}\n"
+            "]\n"
+            "Also include: outstanding_loans (total), interest_rate (average), amortization (if applicable)\n"
+        )
+        guidance += loans_instruction
+
+    if agent_id == "financial_agent":
+        financial_instruction = (
+            "\n\n"
+            "**CRITICAL FINANCIAL INSTRUCTION:**\n"
+            "Extract liabilities breakdown from Balance Sheet (Balansräkning):\n"
+            "- liabilities: Total liabilities (Summa skulder och eget kapital)\n"
+            "- long_term_liabilities: Långfristiga skulder (typically from Note 5: Loans)\n"
+            "- short_term_liabilities: Kortfristiga skulder\n"
+            "\n"
+            "Swedish terms to look for:\n"
+            "- \"Långfristiga skulder\" = long-term liabilities\n"
+            "- \"Kortfristiga skulder\" = short-term liabilities\n"
+            "- \"Låneskulder till kreditinstitut\" = loans (usually long-term)\n"
+            "\n"
+            "Example:\n"
+            "{\n"
+            "  \"liabilities\": 119617000,\n"
+            "  \"long_term_liabilities\": 114480000,\n"
+            "  \"short_term_liabilities\": 5137000\n"
+            "}\n"
+        )
+        guidance += financial_instruction
 
     return f"COMPREHENSIVE SCHEMA: {{{pairs}}}\n\n{guidance}"
 

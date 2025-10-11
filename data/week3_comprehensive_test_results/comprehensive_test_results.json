@@ -1,0 +1,1256 @@
+[
+  {
+    "dataset": "Hjorthagen",
+    "pdf_name": "brf_266956.pdf",
+    "pdf_path": "Hjorthagen/brf_266956.pdf",
+    "success": true,
+    "coverage": 69.2,
+    "confidence": 0.5,
+    "extraction_time": 113.98904800415039,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": true,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": true,
+      "swedish_financial_terms": true,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": true,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": true
+    }
+  },
+  {
+    "dataset": "Hjorthagen",
+    "pdf_name": "brf_268411.pdf",
+    "pdf_path": "Hjorthagen/brf_268411.pdf",
+    "success": true,
+    "coverage": 68.4,
+    "confidence": 0.5,
+    "extraction_time": 88.11819124221802,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": true,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": true,
+      "swedish_financial_terms": true,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": true,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": true
+    }
+  },
+  {
+    "dataset": "Hjorthagen",
+    "pdf_name": "brf_268882.pdf",
+    "pdf_path": "Hjorthagen/brf_268882.pdf",
+    "success": true,
+    "coverage": 68.4,
+    "confidence": 0.5,
+    "extraction_time": 204.77617979049683,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": true,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": true,
+      "swedish_financial_terms": true,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": true,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": true
+    }
+  },
+  {
+    "dataset": "Hjorthagen",
+    "pdf_name": "brf_271852.pdf",
+    "pdf_path": "Hjorthagen/brf_271852.pdf",
+    "success": true,
+    "coverage": 64.1,
+    "confidence": 0.5,
+    "extraction_time": 56.86894702911377,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": true,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": true,
+      "swedish_financial_terms": true,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": true,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": true
+    }
+  },
+  {
+    "dataset": "Hjorthagen",
+    "pdf_name": "brf_271949.pdf",
+    "pdf_path": "Hjorthagen/brf_271949.pdf",
+    "success": true,
+    "coverage": 80.3,
+    "confidence": 0.85,
+    "extraction_time": 49.342758893966675,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": true,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": true,
+      "swedish_financial_terms": true,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": true,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": true
+    }
+  },
+  {
+    "dataset": "Hjorthagen",
+    "pdf_name": "brf_44232.pdf",
+    "pdf_path": "Hjorthagen/brf_44232.pdf",
+    "success": true,
+    "coverage": 68.4,
+    "confidence": 0.5,
+    "extraction_time": 211.49006485939026,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": true,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": true,
+      "swedish_financial_terms": true,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": true,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": true
+    }
+  },
+  {
+    "dataset": "Hjorthagen",
+    "pdf_name": "brf_46160.pdf",
+    "pdf_path": "Hjorthagen/brf_46160.pdf",
+    "success": true,
+    "coverage": 70.1,
+    "confidence": 0.85,
+    "extraction_time": 81.5168628692627,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": true,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": true,
+      "swedish_financial_terms": true,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": true,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": true
+    }
+  },
+  {
+    "dataset": "Hjorthagen",
+    "pdf_name": "brf_48574.pdf",
+    "pdf_path": "Hjorthagen/brf_48574.pdf",
+    "success": true,
+    "coverage": 70.9,
+    "confidence": 0.85,
+    "extraction_time": 102.80087995529175,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": true,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": true,
+      "swedish_financial_terms": true,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": true,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": true
+    }
+  },
+  {
+    "dataset": "Hjorthagen",
+    "pdf_name": "brf_48893.pdf",
+    "pdf_path": "Hjorthagen/brf_48893.pdf",
+    "success": true,
+    "coverage": 68.4,
+    "confidence": 0.5,
+    "extraction_time": 80.31670212745667,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": true,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": true,
+      "swedish_financial_terms": true,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": true,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": true
+    }
+  },
+  {
+    "dataset": "Hjorthagen",
+    "pdf_name": "brf_49369.pdf",
+    "pdf_path": "Hjorthagen/brf_49369.pdf",
+    "success": true,
+    "coverage": 65.8,
+    "confidence": 0.5,
+    "extraction_time": 145.26512813568115,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": true,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": true,
+      "swedish_financial_terms": true,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": true,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": true
+    }
+  },
+  {
+    "dataset": "Hjorthagen",
+    "pdf_name": "brf_58306.pdf",
+    "pdf_path": "Hjorthagen/brf_58306.pdf",
+    "success": true,
+    "coverage": 71.8,
+    "confidence": 0.85,
+    "extraction_time": 157.5533571243286,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": true,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": true,
+      "swedish_financial_terms": true,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": true,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": true
+    }
+  },
+  {
+    "dataset": "Hjorthagen",
+    "pdf_name": "brf_78906.pdf",
+    "pdf_path": "Hjorthagen/brf_78906.pdf",
+    "success": true,
+    "coverage": 6.0,
+    "confidence": 0.5,
+    "extraction_time": 61.779247999191284,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": false,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": true,
+      "swedish_financial_terms": true,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": true,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": true
+    }
+  },
+  {
+    "dataset": "Hjorthagen",
+    "pdf_name": "brf_79568.pdf",
+    "pdf_path": "Hjorthagen/brf_79568.pdf",
+    "success": true,
+    "coverage": 64.1,
+    "confidence": 0.5,
+    "extraction_time": 152.52350783348083,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": true,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": true,
+      "swedish_financial_terms": true,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": true,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": true
+    }
+  },
+  {
+    "dataset": "Hjorthagen",
+    "pdf_name": "brf_81563.pdf",
+    "pdf_path": "Hjorthagen/brf_81563.pdf",
+    "success": true,
+    "coverage": 98.3,
+    "confidence": 0.85,
+    "extraction_time": 71.72648191452026,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": true,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": true,
+      "swedish_financial_terms": true,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": true,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": true
+    }
+  },
+  {
+    "dataset": "Hjorthagen",
+    "pdf_name": "brf_82841.pdf",
+    "pdf_path": "Hjorthagen/brf_82841.pdf",
+    "success": true,
+    "coverage": 69.2,
+    "confidence": 0.5,
+    "extraction_time": 137.42626094818115,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": true,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": true,
+      "swedish_financial_terms": true,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": true,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": true
+    }
+  },
+  {
+    "dataset": "SRS",
+    "pdf_name": "brf_198532.pdf",
+    "pdf_path": "SRS/brf_198532.pdf",
+    "success": true,
+    "coverage": 81.2,
+    "confidence": 0.85,
+    "extraction_time": 140.73172092437744,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": true,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": true,
+      "swedish_financial_terms": true,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": true,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": true
+    }
+  },
+  {
+    "dataset": "SRS",
+    "pdf_name": "brf_275608.pdf",
+    "pdf_path": "SRS/brf_275608.pdf",
+    "success": true,
+    "coverage": 65.0,
+    "confidence": 0.5,
+    "extraction_time": 116.53514695167542,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": true,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": true,
+      "swedish_financial_terms": true,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": true,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": true
+    }
+  },
+  {
+    "dataset": "SRS",
+    "pdf_name": "brf_276507.pdf",
+    "pdf_path": "SRS/brf_276507.pdf",
+    "success": true,
+    "coverage": 74.4,
+    "confidence": 0.85,
+    "extraction_time": 86.85637211799622,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": true,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": true,
+      "swedish_financial_terms": true,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": true,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": true
+    }
+  },
+  {
+    "dataset": "SRS",
+    "pdf_name": "brf_276629.pdf",
+    "pdf_path": "SRS/brf_276629.pdf",
+    "success": true,
+    "coverage": 1.7,
+    "confidence": 0.5,
+    "extraction_time": 59.6397168636322,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": false,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": true,
+      "swedish_financial_terms": true,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": true,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": true
+    }
+  },
+  {
+    "dataset": "SRS",
+    "pdf_name": "brf_276796.pdf",
+    "pdf_path": "SRS/brf_276796.pdf",
+    "success": true,
+    "coverage": 77.8,
+    "confidence": 0.85,
+    "extraction_time": 141.23976230621338,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": true,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": true,
+      "swedish_financial_terms": true,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": true,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": true
+    }
+  },
+  {
+    "dataset": "SRS",
+    "pdf_name": "brf_280938.pdf",
+    "pdf_path": "SRS/brf_280938.pdf",
+    "success": true,
+    "coverage": 71.8,
+    "confidence": 0.85,
+    "extraction_time": 120.54863691329956,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": true,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": true,
+      "swedish_financial_terms": true,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": true,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": true
+    }
+  },
+  {
+    "dataset": "SRS",
+    "pdf_name": "brf_282765.pdf",
+    "pdf_path": "SRS/brf_282765.pdf",
+    "success": true,
+    "coverage": 13.7,
+    "confidence": 0.5,
+    "extraction_time": 50.8864860534668,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": false,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": false,
+      "swedish_financial_terms": true,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": true,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": true
+    }
+  },
+  {
+    "dataset": "SRS",
+    "pdf_name": "brf_43334.pdf",
+    "pdf_path": "SRS/brf_43334.pdf",
+    "success": true,
+    "coverage": 6.8,
+    "confidence": 0.5,
+    "extraction_time": 32.83459782600403,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": false,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": false,
+      "swedish_financial_terms": false,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": false,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": false
+    }
+  },
+  {
+    "dataset": "SRS",
+    "pdf_name": "brf_47809.pdf",
+    "pdf_path": "SRS/brf_47809.pdf",
+    "success": false,
+    "coverage": 0.0,
+    "confidence": 0.0,
+    "extraction_time": 0.0,
+    "error": "Connection error.",
+    "extraction_field_tests": {},
+    "synonym_mapping_tests": {},
+    "swedish_first_field_tests": {},
+    "calculated_metrics_tests": {}
+  },
+  {
+    "dataset": "SRS",
+    "pdf_name": "brf_47903.pdf",
+    "pdf_path": "SRS/brf_47903.pdf",
+    "success": false,
+    "coverage": 0.0,
+    "confidence": 0.0,
+    "extraction_time": 0.0,
+    "error": "Connection error.",
+    "extraction_field_tests": {},
+    "synonym_mapping_tests": {},
+    "swedish_first_field_tests": {},
+    "calculated_metrics_tests": {}
+  },
+  {
+    "dataset": "SRS",
+    "pdf_name": "brf_48663.pdf",
+    "pdf_path": "SRS/brf_48663.pdf",
+    "success": false,
+    "coverage": 0.0,
+    "confidence": 0.0,
+    "extraction_time": 0.0,
+    "error": "Connection error.",
+    "extraction_field_tests": {},
+    "synonym_mapping_tests": {},
+    "swedish_first_field_tests": {},
+    "calculated_metrics_tests": {}
+  },
+  {
+    "dataset": "SRS",
+    "pdf_name": "brf_52576.pdf",
+    "pdf_path": "SRS/brf_52576.pdf",
+    "success": false,
+    "coverage": 0.0,
+    "confidence": 0.0,
+    "extraction_time": 0.0,
+    "error": "Connection error.",
+    "extraction_field_tests": {},
+    "synonym_mapping_tests": {},
+    "swedish_first_field_tests": {},
+    "calculated_metrics_tests": {}
+  },
+  {
+    "dataset": "SRS",
+    "pdf_name": "brf_53107.pdf",
+    "pdf_path": "SRS/brf_53107.pdf",
+    "success": false,
+    "coverage": 0.0,
+    "confidence": 0.0,
+    "extraction_time": 0.0,
+    "error": "Connection error.",
+    "extraction_field_tests": {},
+    "synonym_mapping_tests": {},
+    "swedish_first_field_tests": {},
+    "calculated_metrics_tests": {}
+  },
+  {
+    "dataset": "SRS",
+    "pdf_name": "brf_53546.pdf",
+    "pdf_path": "SRS/brf_53546.pdf",
+    "success": true,
+    "coverage": 76.9,
+    "confidence": 0.85,
+    "extraction_time": 10688.68976020813,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": true,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": true,
+      "swedish_financial_terms": true,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": true,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": true
+    }
+  },
+  {
+    "dataset": "SRS",
+    "pdf_name": "brf_54015.pdf",
+    "pdf_path": "SRS/brf_54015.pdf",
+    "success": true,
+    "coverage": 70.1,
+    "confidence": 0.85,
+    "extraction_time": 79.88332390785217,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": true,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": true,
+      "swedish_financial_terms": true,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": true,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": true
+    }
+  },
+  {
+    "dataset": "SRS",
+    "pdf_name": "brf_57125.pdf",
+    "pdf_path": "SRS/brf_57125.pdf",
+    "success": true,
+    "coverage": 14.5,
+    "confidence": 0.5,
+    "extraction_time": 43.89696431159973,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": true,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": false,
+      "swedish_financial_terms": true,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": true,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": true
+    }
+  },
+  {
+    "dataset": "SRS",
+    "pdf_name": "brf_58256.pdf",
+    "pdf_path": "SRS/brf_58256.pdf",
+    "success": true,
+    "coverage": 70.9,
+    "confidence": 0.85,
+    "extraction_time": 78.88824701309204,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": true,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": true,
+      "swedish_financial_terms": true,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": true,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": true
+    }
+  },
+  {
+    "dataset": "SRS",
+    "pdf_name": "brf_76536.pdf",
+    "pdf_path": "SRS/brf_76536.pdf",
+    "success": true,
+    "coverage": 0.0,
+    "confidence": 0.5,
+    "extraction_time": 47.19617795944214,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": false,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": false,
+      "swedish_financial_terms": true,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": true,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": true
+    }
+  },
+  {
+    "dataset": "SRS",
+    "pdf_name": "brf_77241.pdf",
+    "pdf_path": "SRS/brf_77241.pdf",
+    "success": true,
+    "coverage": 75.2,
+    "confidence": 0.85,
+    "extraction_time": 80.9797990322113,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": true,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": true,
+      "swedish_financial_terms": true,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": true,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": true
+    }
+  },
+  {
+    "dataset": "SRS",
+    "pdf_name": "brf_78564.pdf",
+    "pdf_path": "SRS/brf_78564.pdf",
+    "success": true,
+    "coverage": 67.5,
+    "confidence": 0.5,
+    "extraction_time": 85.53827500343323,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": true,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": false,
+      "swedish_financial_terms": true,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": true,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": true
+    }
+  },
+  {
+    "dataset": "SRS",
+    "pdf_name": "brf_78730.pdf",
+    "pdf_path": "SRS/brf_78730.pdf",
+    "success": true,
+    "coverage": 4.3,
+    "confidence": 0.5,
+    "extraction_time": 50.71531701087952,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": false,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": true,
+      "swedish_financial_terms": true,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": true,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": true
+    }
+  },
+  {
+    "dataset": "SRS",
+    "pdf_name": "brf_79101.pdf",
+    "pdf_path": "SRS/brf_79101.pdf",
+    "success": true,
+    "coverage": 68.4,
+    "confidence": 0.5,
+    "extraction_time": 53.44031310081482,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": true,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": true,
+      "swedish_financial_terms": true,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": true,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": true
+    }
+  },
+  {
+    "dataset": "SRS",
+    "pdf_name": "brf_79510.pdf",
+    "pdf_path": "SRS/brf_79510.pdf",
+    "success": true,
+    "coverage": 65.0,
+    "confidence": 0.5,
+    "extraction_time": 81.17156100273132,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": true,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": false,
+      "swedish_financial_terms": true,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": true,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": true
+    }
+  },
+  {
+    "dataset": "SRS",
+    "pdf_name": "brf_80193.pdf",
+    "pdf_path": "SRS/brf_80193.pdf",
+    "success": true,
+    "coverage": 1.7,
+    "confidence": 0.5,
+    "extraction_time": 43.45245695114136,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": false,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": false,
+      "swedish_financial_terms": true,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": true,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": true
+    }
+  },
+  {
+    "dataset": "SRS",
+    "pdf_name": "brf_81732.pdf",
+    "pdf_path": "SRS/brf_81732.pdf",
+    "success": true,
+    "coverage": 78.6,
+    "confidence": 0.85,
+    "extraction_time": 142.6511778831482,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": true,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": true,
+      "swedish_financial_terms": true,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": true,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": true
+    }
+  },
+  {
+    "dataset": "SRS",
+    "pdf_name": "brf_82839.pdf",
+    "pdf_path": "SRS/brf_82839.pdf",
+    "success": true,
+    "coverage": 76.1,
+    "confidence": 0.85,
+    "extraction_time": 109.77469801902771,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": true,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": true,
+      "swedish_financial_terms": true,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": true,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": true
+    }
+  },
+  {
+    "dataset": "SRS",
+    "pdf_name": "brf_83301.pdf",
+    "pdf_path": "SRS/brf_83301.pdf",
+    "success": true,
+    "coverage": 12.0,
+    "confidence": 0.5,
+    "extraction_time": 71.29355692863464,
+    "error": null,
+    "extraction_field_tests": {
+      "confidence_scores_present": true,
+      "source_pages_tracked": false,
+      "multi_source_aggregation": false,
+      "validation_status_tracking": false
+    },
+    "synonym_mapping_tests": {
+      "swedish_governance_terms": false,
+      "swedish_financial_terms": true,
+      "synonym_metadata_present": false
+    },
+    "swedish_first_field_tests": {
+      "fee_swedish_primary": false,
+      "financial_swedish_primary": true,
+      "swedish_english_alias_sync": false
+    },
+    "calculated_metrics_tests": {
+      "calculated_metrics_present": false,
+      "validation_thresholds_applied": false,
+      "tolerant_validation": false,
+      "data_preservation": true
+    }
+  }
+]

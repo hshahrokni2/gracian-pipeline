@@ -67,6 +67,15 @@ class HierarchicalFinancialExtractor:
                 "expected_items": 5,
                 "page_hint": "typically pages 10-12",
                 "extraction_type": "receivables_breakdown"
+            },
+            "note_5": {
+                "name": "LÅNGFRISTIGA SKULDER",
+                "fields": [
+                    "loans"  # Array of loan objects
+                ],
+                "expected_items": 4,  # Typically 3-5 loans
+                "page_hint": "typically pages 9-11",
+                "extraction_type": "loan_details"
             }
         }
 
@@ -260,6 +269,101 @@ INSTRUCTIONS:
             if field not in result or result[field] is None:
                 validation["all_fields_present"] = False
                 validation["missing_fields"].append(field)
+
+        result["_validation"] = validation
+        return result
+
+    def extract_note_5_loans_detailed(self, pdf_path: str, note_pages: List[int]) -> Dict[str, Any]:
+        """
+        Extract Note 5 (LÅNGFRISTIGA SKULDER - Long-term Liabilities/Loans).
+
+        Expected output: Array of 4 loan objects with full details.
+        """
+        note_markdown, note_tables = self.extract_note_section(pdf_path, note_pages)
+        pattern = self.note_patterns["note_5"]
+
+        prompt = f"""
+        Extract COMPLETE loan details from Note 5 ({pattern["name"]}).
+
+        CRITICAL: You MUST extract ALL loans found in the note.
+        Expected: 3-5 loans (typically from SEB or other banks).
+
+        For EACH loan, extract ALL of these fields:
+        1. loan_number - Loan identifier (e.g., "60105-01-03610")
+        2. lender - Bank name (e.g., "SEB", "Nordea", "Handelsbanken")
+        3. amount_2021 - Loan amount in current year (SEK)
+        4. amount_2020 - Loan amount in previous year (SEK)
+        5. interest_rate - Current interest rate (as decimal, e.g., 0.0125 for 1.25%)
+        6. maturity_date - When loan matures (YYYY-MM-DD format)
+        7. amortization_free - Is the loan amortization-free? (boolean)
+        8. notes - Any special conditions or notes (optional string)
+
+        Swedish Keywords to Look For:
+        - "Lån" (loan)
+        - "Långivare" (lender)
+        - "Ränta" (interest rate)
+        - "Förfallodag" (maturity date)
+        - "Amorteringsfritt" (amortization-free)
+        - "Räntesats" (interest rate)
+        - "Bindningstid" (interest rate binding period)
+
+        OUTPUT SCHEMA (JSON):
+        {{
+          "loans": [
+            {{
+              "loan_number": "string",
+              "lender": "string (e.g., 'SEB')",
+              "amount_2021": float (SEK),
+              "amount_2020": float (SEK),
+              "interest_rate": float (decimal, e.g., 0.0125),
+              "maturity_date": "YYYY-MM-DD",
+              "amortization_free": boolean,
+              "notes": "string (optional)"
+            }}
+          ]
+        }}
+
+        CRITICAL INSTRUCTION:
+        - If you find 4 loans, return 4 objects
+        - If you find 3 loans, return 3 objects
+        - Do NOT skip any loans
+        - If a field is missing, use null
+
+        NOTE CONTENT:
+        {note_markdown[:4000]}
+
+        TABLES:
+        {self.format_tables_hierarchical(note_tables[:3]) if note_tables else "No tables"}
+        """
+
+        # Call LLM with extended context
+        result = self.call_gpt4o_extended(
+            prompt=prompt,
+            max_tokens=2000,
+            temperature=0
+        )
+
+        # Validate presence of loans array
+        if not result.get("loans"):
+            result["loans"] = []
+            result["_extraction_failed"] = True
+            result["_failure_reason"] = "No loans array in response"
+
+        validation = {
+            "loans_extracted": len(result.get("loans", [])),
+            "loans_expected": pattern["expected_items"],
+            "all_loans_present": len(result.get("loans", [])) >= 3,  # Minimum 3 loans expected
+            "missing_loan_fields": []
+        }
+
+        # Validate each loan object
+        required_fields = ["loan_number", "lender", "amount_2021", "amount_2020",
+                          "interest_rate", "maturity_date", "amortization_free"]
+
+        for idx, loan in enumerate(result.get("loans", [])):
+            for field in required_fields:
+                if field not in loan or loan[field] is None:
+                    validation["missing_loan_fields"].append(f"Loan {idx+1}: {field}")
 
         result["_validation"] = validation
         return result
@@ -491,13 +595,14 @@ REMEMBER: Extract EVERY line item, not summaries. This is for detailed financial
             print(f"Error in GPT-4o extraction: {e}")
             return {}
 
-    def extract_all_notes(self, pdf_path: str, notes: List[str] = None) -> Dict[str, Dict[str, Any]]:
+    def extract_all_notes(self, pdf_path: str, notes: List[str] = None, parallel: bool = True) -> Dict[str, Dict[str, Any]]:
         """
         Extract multiple financial notes from a document.
 
         Args:
             pdf_path: Path to PDF document
             notes: List of note IDs to extract (default: ["note_4"])
+            parallel: Use parallel extraction for 3x speedup (default: True)
 
         Returns:
             Dictionary mapping note_id -> extracted data
@@ -505,6 +610,11 @@ REMEMBER: Extract EVERY line item, not summaries. This is for detailed financial
         if notes is None:
             notes = ["note_4"]
 
+        # Use parallel extraction if enabled and multiple notes requested
+        if parallel and len(notes) > 1:
+            return self.extract_all_notes_parallel(pdf_path, notes)
+
+        # Sequential extraction (legacy compatibility)
         results = {}
 
         for note_id in notes:
@@ -517,6 +627,8 @@ REMEMBER: Extract EVERY line item, not summaries. This is for detailed financial
             # Determine page ranges (heuristic - in production use sectionizer)
             if note_id == "note_4":
                 page_range = [6, 7, 8]  # Typical Note 4 pages (0-based)
+            elif note_id == "note_5":
+                page_range = [9, 10, 11]  # Typical Note 5 pages (Loans)
             elif note_id == "note_8":
                 page_range = [7, 8, 9]  # Typical Note 8 pages
             elif note_id == "note_9":
@@ -528,6 +640,8 @@ REMEMBER: Extract EVERY line item, not summaries. This is for detailed financial
                 # Call appropriate extraction method based on note type
                 if note_id == "note_4":
                     extracted = self.extract_note_4_detailed(pdf_path, page_range)
+                elif note_id == "note_5":
+                    extracted = self.extract_note_5_loans_detailed(pdf_path, page_range)
                 elif note_id == "note_8":
                     extracted = self.extract_note_8_detailed(pdf_path, page_range)
                 elif note_id == "note_9":
@@ -540,6 +654,99 @@ REMEMBER: Extract EVERY line item, not summaries. This is for detailed financial
             except Exception as e:
                 print(f"Error extracting {note_id}: {e}")
                 results[note_id] = {"_error": str(e)}
+
+        return results
+
+    def extract_all_notes_parallel(self, pdf_path: str, notes: List[str]) -> Dict[str, Dict[str, Any]]:
+        """
+        Extract multiple financial notes in PARALLEL for 3x speedup.
+
+        CRITICAL OPTIMIZATION: Sequential note extraction takes 160-220s,
+        parallel execution takes max(60s, 50s, 40s, 40s) = 60-80s.
+
+        Args:
+            pdf_path: Path to PDF document
+            notes: List of note IDs to extract (e.g., ["note_4", "note_5", "note_8", "note_9"])
+
+        Returns:
+            Dictionary mapping note_id -> extracted data
+        """
+        from concurrent.futures import ThreadPoolExecutor, as_completed
+        import time
+
+        print(f"  ⚡ Parallel extraction mode: {len(notes)} notes...")
+        start_time = time.time()
+
+        # Page range mapping
+        page_ranges = {
+            "note_4": [6, 7, 8],
+            "note_5": [9, 10, 11],
+            "note_8": [7, 8, 9],
+            "note_9": [9, 10, 11]
+        }
+
+        # Extraction method mapping
+        extraction_methods = {
+            "note_4": self.extract_note_4_detailed,
+            "note_5": self.extract_note_5_loans_detailed,
+            "note_8": self.extract_note_8_detailed,
+            "note_9": self.extract_note_9_detailed
+        }
+
+        results = {}
+        futures_to_notes = {}
+
+        # Create thread pool with one worker per note
+        with ThreadPoolExecutor(max_workers=len(notes)) as executor:
+            # Submit all extraction tasks
+            for note_id in notes:
+                if note_id not in self.note_patterns:
+                    print(f"  ⚠ Warning: Unknown note ID: {note_id}")
+                    results[note_id] = {"_error": f"Unknown note ID: {note_id}"}
+                    continue
+
+                page_range = page_ranges.get(note_id, [6, 7, 8, 9, 10, 11])
+                method = extraction_methods.get(note_id, self.extract_note_4_detailed)
+
+                # Submit extraction task
+                future = executor.submit(method, pdf_path, page_range)
+                futures_to_notes[future] = note_id
+
+            # Collect results as they complete
+            completed = 0
+            total = len(futures_to_notes)
+
+            for future in as_completed(futures_to_notes):
+                note_id = futures_to_notes[future]
+                completed += 1
+
+                try:
+                    # Wait up to 90s for each note extraction
+                    extracted = future.result(timeout=90)
+                    results[note_id] = extracted
+
+                    # Report progress
+                    note_name = self.note_patterns[note_id]["name"]
+                    validation = extracted.get("_validation", {})
+
+                    if note_id == "note_4":
+                        items = validation.get("total_items_extracted", 0)
+                        print(f"    [{completed}/{total}] ✓ {note_id}: {items} line items extracted")
+                    elif note_id == "note_5":
+                        loans = validation.get("loans_extracted", 0)
+                        print(f"    [{completed}/{total}] ✓ {note_id}: {loans} loan(s) extracted")
+                    elif note_id in ["note_8", "note_9"]:
+                        fields = validation.get("fields_extracted", 0)
+                        print(f"    [{completed}/{total}] ✓ {note_id}: {fields}/{validation.get('fields_expected', 5)} fields extracted")
+                    else:
+                        print(f"    [{completed}/{total}] ✓ {note_id}: Extracted")
+
+                except Exception as e:
+                    print(f"    [{completed}/{total}] ✗ {note_id}: Failed - {str(e)[:50]}")
+                    results[note_id] = {"_error": str(e)}
+
+        elapsed = time.time() - start_time
+        print(f"  ✓ Parallel extraction complete in {elapsed:.1f}s (avg: {elapsed/len(notes):.1f}s per note)")
 
         return results
 
