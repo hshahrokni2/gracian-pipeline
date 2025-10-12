@@ -1,0 +1,303 @@
+{
+  "pdf": "brf_81563.pdf",
+  "level_1_count": 7,
+  "level_2_count": 34,
+  "level_3_count": 7,
+  "level_1_sections": [
+    {
+      "title": "f\u00f6rvaltningsber\u00e4ttelse",
+      "start_page": 3,
+      "end_page": 6
+    },
+    {
+      "title": "resultatr\u00e4kning",
+      "start_page": 7,
+      "end_page": 7
+    },
+    {
+      "title": "balansr\u00e4kning",
+      "start_page": 8,
+      "end_page": 9
+    },
+    {
+      "title": "noter",
+      "start_page": 10,
+      "end_page": 10
+    },
+    {
+      "title": "noter/till\u00e4ggsupplysningar",
+      "start_page": 13,
+      "end_page": 17
+    },
+    {
+      "title": "underskrifter",
+      "start_page": 18,
+      "end_page": 18
+    },
+    {
+      "title": "revisionsber\u00e4ttelse",
+      "start_page": 19,
+      "end_page": 19
+    }
+  ],
+  "level_2_sections": [
+    {
+      "parent": "F\u00f6rvaltningsber\u00e4ttelse",
+      "title": "Verksamheten",
+      "start_page": 3,
+      "end_page": 3
+    },
+    {
+      "parent": "F\u00f6rvaltningsber\u00e4ttelse",
+      "title": "F\u00f6reningens \u00e4ndam\u00e5l",
+      "start_page": 3,
+      "end_page": 3
+    },
+    {
+      "parent": "F\u00f6rvaltningsber\u00e4ttelse",
+      "title": "Grundfakta om f\u00f6reningen",
+      "start_page": 3,
+      "end_page": 3
+    },
+    {
+      "parent": "F\u00f6rvaltningsber\u00e4ttelse",
+      "title": "Styrelsen",
+      "start_page": 3,
+      "end_page": 3
+    },
+    {
+      "parent": "F\u00f6rvaltningsber\u00e4ttelse",
+      "title": "Revisorer",
+      "start_page": 3,
+      "end_page": 3
+    },
+    {
+      "parent": "F\u00f6rvaltningsber\u00e4ttelse",
+      "title": "Valberedning",
+      "start_page": 3,
+      "end_page": 3
+    },
+    {
+      "parent": "F\u00f6rvaltningsber\u00e4ttelse",
+      "title": "St\u00e4mmor",
+      "start_page": 4,
+      "end_page": 4
+    },
+    {
+      "parent": "F\u00f6rvaltningsber\u00e4ttelse",
+      "title": "Fakta om v\u00e5ra fastigheter",
+      "start_page": 4,
+      "end_page": 4
+    },
+    {
+      "parent": "F\u00f6rvaltningsber\u00e4ttelse",
+      "title": "Byggnads\u00e5r och ytor",
+      "start_page": 4,
+      "end_page": 4
+    },
+    {
+      "parent": "F\u00f6rvaltningsber\u00e4ttelse",
+      "title": "L\u00e4genheter och lokaler",
+      "start_page": 4,
+      "end_page": 4
+    },
+    {
+      "parent": "F\u00f6rvaltningsber\u00e4ttelse",
+      "title": "Verksamhet i lokalerna",
+      "start_page": 4,
+      "end_page": 4
+    },
+    {
+      "parent": "F\u00f6rvaltningsber\u00e4ttelse",
+      "title": "Byggnadernas tekniska status",
+      "start_page": 4,
+      "end_page": 4
+    },
+    {
+      "parent": "F\u00f6rvaltningsber\u00e4ttelse",
+      "title": "F\u00f6rvaltning",
+      "start_page": 5,
+      "end_page": 5
+    },
+    {
+      "parent": "F\u00f6rvaltningsber\u00e4ttelse",
+      "title": "\u00d6vrig information",
+      "start_page": 5,
+      "end_page": 5
+    },
+    {
+      "parent": "F\u00f6rvaltningsber\u00e4ttelse",
+      "title": "F\u00f6reningens ekonomi",
+      "start_page": 5,
+      "end_page": 5
+    },
+    {
+      "parent": "F\u00f6rvaltningsber\u00e4ttelse",
+      "title": "F\u00f6reningen \u00e4ger fastigheten",
+      "start_page": 5,
+      "end_page": 5
+    },
+    {
+      "parent": "F\u00f6rvaltningsber\u00e4ttelse",
+      "title": "Hyresh\u00f6jning f\u00f6r hyresr\u00e4tter",
+      "start_page": 5,
+      "end_page": 5
+    },
+    {
+      "parent": "F\u00f6rvaltningsber\u00e4ttelse",
+      "title": "F\u00d6R\u00c4NDRING LIKVIDA MEDEL",
+      "start_page": 6,
+      "end_page": 6
+    },
+    {
+      "parent": "F\u00f6rvaltningsber\u00e4ttelse",
+      "title": "F\u00f6rdelning av int\u00e4kter och kostnader",
+      "start_page": 6,
+      "end_page": 6
+    },
+    {
+      "parent": "F\u00f6rvaltningsber\u00e4ttelse",
+      "title": "Skatter och avgifter",
+      "start_page": 6,
+      "end_page": 6
+    },
+    {
+      "parent": "F\u00f6rvaltningsber\u00e4ttelse",
+      "title": "V\u00e4sentliga h\u00e4ndelser under r\u00e4kenskaps\u00e5ret",
+      "start_page": 6,
+      "end_page": 6
+    },
+    {
+      "parent": "noter/till\u00e4ggsupplysningar",
+      "title": "Not 4 DRIFTKOSTNADER",
+      "start_page": 13,
+      "end_page": 13
+    },
+    {
+      "parent": "noter/till\u00e4ggsupplysningar",
+      "title": "Not 5 \u00d6VRIGA EXTERNA KOSTNADER",
+      "start_page": 13,
+      "end_page": 13
+    },
+    {
+      "parent": "noter/till\u00e4ggsupplysningar",
+      "title": "Not 6 PERSONALKOSTNADER",
+      "start_page": 13,
+      "end_page": 13
+    },
+    {
+      "parent": "noter/till\u00e4ggsupplysningar",
+      "title": "Not 7 AVSKRIVNINGAR",
+      "start_page": 13,
+      "end_page": 13
+    },
+    {
+      "parent": "noter/till\u00e4ggsupplysningar",
+      "title": "Not 8 BYGGNADER",
+      "start_page": 14,
+      "end_page": 14
+    },
+    {
+      "parent": "noter/till\u00e4ggsupplysningar",
+      "title": "Not 9 INVENTARIER",
+      "start_page": 14,
+      "end_page": 14
+    },
+    {
+      "parent": "noter/till\u00e4ggsupplysningar",
+      "title": "Not 10 \u00d6VRIGA FORDRINGAR",
+      "start_page": 14,
+      "end_page": 14
+    },
+    {
+      "parent": "noter/till\u00e4ggsupplysningar",
+      "title": "Not 11 FOND F\u00d6R YTTRE UNDERH\u00c5LL",
+      "start_page": 15,
+      "end_page": 15
+    },
+    {
+      "parent": "noter/till\u00e4ggsupplysningar",
+      "title": "Not 12 CHECKR\u00c4KNINGSKREDIT",
+      "start_page": 15,
+      "end_page": 15
+    },
+    {
+      "parent": "noter/till\u00e4ggsupplysningar",
+      "title": "Not 13 SKULDER TILL KREDITINSTITUT",
+      "start_page": 15,
+      "end_page": 15
+    },
+    {
+      "parent": "noter/till\u00e4ggsupplysningar",
+      "title": "Not 14 ST\u00c4LLDA S\u00c4KERHETER",
+      "start_page": 15,
+      "end_page": 15
+    },
+    {
+      "parent": "noter/till\u00e4ggsupplysningar",
+      "title": "Not 15 UPPLUPNA KOSTNADER OCH F\u00d6RUTBETALDA INT\u00c4KTER",
+      "start_page": 15,
+      "end_page": 15
+    },
+    {
+      "parent": "noter/till\u00e4ggsupplysningar",
+      "title": "Not 16 V\u00c4SENTLIGA H\u00c4NDELSER EFTER \u00c5RETS SLUT",
+      "start_page": 16,
+      "end_page": 16
+    }
+  ],
+  "pages_by_agent": {
+    "chairman_agent": [
+      3
+    ],
+    "board_members_agent": [
+      3
+    ],
+    "auditor_agent": [
+      3
+    ],
+    "financial_agent": [
+      7,
+      8,
+      9
+    ],
+    "property_agent": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "notes_depreciation_agent": [
+      13
+    ],
+    "notes_maintenance_agent": [
+      15
+    ],
+    "notes_tax_agent": [
+      6
+    ],
+    "events_agent": [
+      3,
+      4,
+      5,
+      6,
+      16
+    ],
+    "audit_agent": [
+      19
+    ],
+    "loans_agent": [
+      15
+    ],
+    "reserves_agent": [
+      15
+    ],
+    "fees_agent": [
+      5
+    ],
+    "cashflow_agent": [
+      6
+    ]
+  },
+  "governance_agents_assigned": true
+}

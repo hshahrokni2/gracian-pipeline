@@ -18,6 +18,9 @@ from docling.document_converter import DocumentConverter
 # OpenAI for LLM extraction
 from openai import OpenAI
 
+# Retry wrapper for resilience
+from .llm_retry_wrapper import call_llm_with_retry, RetryConfig
+
 
 class HierarchicalFinancialExtractor:
     """
@@ -560,6 +563,7 @@ REMEMBER: Extract EVERY line item, not summaries. This is for detailed financial
     def call_gpt4o_extended(self, prompt: str, max_tokens: int = 12000, temperature: float = 0) -> Dict[str, Any]:
         """
         Call GPT-4o with extended context for hierarchical extraction.
+        Now with exponential backoff retry logic for resilience.
 
         Args:
             prompt: Extraction prompt
@@ -570,7 +574,9 @@ REMEMBER: Extract EVERY line item, not summaries. This is for detailed financial
             Parsed JSON response
         """
         try:
-            response = self.openai_client.chat.completions.create(
+            # Call with retry wrapper (3 retries with exponential backoff)
+            response = call_llm_with_retry(
+                client=self.openai_client,
                 model="gpt-4o",
                 messages=[
                     {
@@ -583,8 +589,9 @@ REMEMBER: Extract EVERY line item, not summaries. This is for detailed financial
                     }
                 ],
                 temperature=temperature,
-                max_tokens=max_tokens,
-                response_format={"type": "json_object"}
+                timeout=120,  # 2 minutes for long hierarchical extractions
+                config=RetryConfig(max_retries=3, base_delay=1.0),
+                context={"module": "hierarchical_financial", "max_tokens": max_tokens}
             )
 
             # Parse response
@@ -592,8 +599,8 @@ REMEMBER: Extract EVERY line item, not summaries. This is for detailed financial
             return json.loads(content)
 
         except Exception as e:
-            print(f"Error in GPT-4o extraction: {e}")
-            return {}
+            print(f"❌ Error in GPT-4o hierarchical extraction after retries: {e}")
+            return {"_error": str(e)}
 
     def extract_all_notes(self, pdf_path: str, notes: List[str] = None, parallel: bool = True) -> Dict[str, Dict[str, Any]]:
         """

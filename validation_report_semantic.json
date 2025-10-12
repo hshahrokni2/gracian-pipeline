@@ -1,0 +1,1394 @@
+{
+  "summary": {
+    "coverage_percent": 3.488372093023256,
+    "accuracy_percent": 100.0,
+    "weighted_coverage": 3.328488372093023,
+    "weighted_accuracy": 95.41666666666667,
+    "95_95_score": 49.372577519379846,
+    "total_gt_fields": 172,
+    "total_matched_fields": 6
+  },
+  "confidence_breakdown": {
+    "high_confidence_count": 5,
+    "medium_confidence_count": 1,
+    "low_confidence_count": 0
+  },
+  "field_validations": [
+    {
+      "canonical_name": "organization_number",
+      "match_status": "semantic",
+      "match_confidence": 0.75,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 0.875,
+      "notes": "Partial string match"
+    },
+    {
+      "canonical_name": "brf_name",
+      "match_status": "mismatch",
+      "match_confidence": 0.95,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 0.975,
+      "notes": "String mismatch: 'Bostadsr\u00e4ttsf\u00f6reningen Bj\u00f6rk o...' vs 'Elvy Maria L\u00f6fvenberg...'"
+    },
+    {
+      "canonical_name": "brf_name_short",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "fiscal_year",
+      "match_status": "exact",
+      "match_confidence": 0.95,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 0.975,
+      "notes": "Match via string conversion"
+    },
+    {
+      "canonical_name": "fiscal_year_start",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "fiscal_year_end",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "report_type",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "municipality",
+      "match_status": "exact",
+      "match_confidence": 0.95,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 0.975,
+      "notes": "Exact string match (normalized)"
+    },
+    {
+      "canonical_name": "registration_date",
+      "match_status": "mismatch",
+      "match_confidence": 0.9,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 0.95,
+      "notes": "Type/value mismatch: str vs dict"
+    },
+    {
+      "canonical_name": "economic_plan_registered",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "stadgar_registered",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "registered_authority",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "company_type",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "authentic_brf",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "source_pages",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "board_members",
+      "match_status": "semantic",
+      "match_confidence": 0.95,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 0.975,
+      "notes": "List of dicts: 7/7 items matched"
+    },
+    {
+      "canonical_name": "board_meetings_count",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "auditors",
+      "match_status": "mismatch",
+      "match_confidence": 0.95,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 0.975,
+      "notes": "Type/value mismatch: list vs str"
+    },
+    {
+      "canonical_name": "nomination_committee",
+      "match_status": "semantic",
+      "match_confidence": 0.95,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 0.975,
+      "notes": "List length match (2 items)"
+    },
+    {
+      "canonical_name": "annual_meeting_date",
+      "match_status": "exact",
+      "match_confidence": 0.9,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 0.95,
+      "notes": "Exact string match (normalized)"
+    },
+    {
+      "canonical_name": "samf_membership",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "properties",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "construction_year",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "building_count",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "building_type",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "tax_value_year",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "total_area_sqm",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "residential_area_sqm",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "commercial_area_sqm",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "heating_type",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "insurance",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "total_count",
+      "match_status": "mismatch",
+      "match_confidence": 0.8,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 0.9,
+      "notes": "Outside tolerance (81.9% > 5.0%)"
+    },
+    {
+      "canonical_name": "breakdown",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "transfers_during_year",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "secondhand_rentals_approved",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "secondhand_rental_reasons",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "commercial_tenants",
+      "match_status": "mismatch",
+      "match_confidence": 0.95,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 0.975,
+      "notes": "List of dicts: only 0/2 items matched"
+    },
+    {
+      "canonical_name": "terraces",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "entrances",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "community_rooms",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "maintenance_plan",
+      "match_status": "mismatch",
+      "match_confidence": 0.95,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 0.975,
+      "notes": "Type/value mismatch: dict vs str"
+    },
+    {
+      "canonical_name": "planned_maintenance",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "economic_management",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "technical_management",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "broadband_tv_phone",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "waste_environment",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "elevators",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "snow_garage_cleaning",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "waste_suction",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "cleaning",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "elevator_inspection",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "sewage_pump",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "gate_inspection",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "billing_meview",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "fire_safety",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "central_waste_operation",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "electricity_network",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "electricity_energy",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "district_heating",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "water_sewage",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "insurance_advisor",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "property_insurance",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "income_statement",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "balance_sheet",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "annual_fees",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "commercial_rent_vat",
+      "match_status": "mismatch",
+      "match_confidence": 0.7647058823529411,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 0.8823529411764706,
+      "notes": "Type/value mismatch: int vs list"
+    },
+    {
+      "canonical_name": "commercial_rent",
+      "match_status": "mismatch",
+      "match_confidence": 0.8387096774193549,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 0.9193548387096775,
+      "notes": "Type/value mismatch: int vs list"
+    },
+    {
+      "canonical_name": "garage_rent",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "cable_tv",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "rental_discount",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "water_income",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "hot_water_income",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "electricity_income",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "electricity_income_vat",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "secondhand_rental_fee",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "rounding",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "total",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "extra_state_support",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "insurance_compensation",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "other",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "property_management",
+      "match_status": "mismatch",
+      "match_confidence": 0.8387096774193549,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 0.9193548387096775,
+      "notes": "Type/value mismatch: int vs dict"
+    },
+    {
+      "canonical_name": "repairs",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "periodic_maintenance",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "utility_costs",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "other_operating",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "property_tax",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "loans",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "property_mortgages",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "annual_fee_per_sqm_2021",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "annual_fee_per_sqm_2020",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "annual_fee_per_sqm_2019",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "annual_fee_per_sqm_2018",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "annual_fee_planned_change",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "rent_per_sqm_2021",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "rent_per_sqm_2020",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "rent_per_sqm_2019",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "rent_per_sqm_2018",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "2021",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "2020",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "2019",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "2018",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "beginning_of_year",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "new_members",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "departed_members",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "end_of_year",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "liquid_assets_beginning",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "inflows",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "outflows",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "liquid_assets_end",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "change_in_liquid_assets",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "property_tax_rate",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "property_tax_max_per_apartment",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "commercial_tax_rate",
+      "match_status": "mismatch",
+      "match_confidence": 0.7647058823529411,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 0.8823529411764706,
+      "notes": "Type/value mismatch: float vs list"
+    },
+    {
+      "canonical_name": "tax_calculation_basis",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "acquisition_value_2021",
+      "match_status": "mismatch",
+      "match_confidence": 0.8387096774193549,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 0.9193548387096775,
+      "notes": "Type/value mismatch: int vs str"
+    },
+    {
+      "canonical_name": "acquisition_value_2020",
+      "match_status": "mismatch",
+      "match_confidence": 0.8387096774193549,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 0.9193548387096775,
+      "notes": "Type/value mismatch: int vs str"
+    },
+    {
+      "canonical_name": "accumulated_depreciation_2021",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "accumulated_depreciation_2020",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "depreciation_2021",
+      "match_status": "mismatch",
+      "match_confidence": 0.8571428571428571,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 0.9285714285714286,
+      "notes": "Type/value mismatch: int vs str"
+    },
+    {
+      "canonical_name": "depreciation_2020",
+      "match_status": "mismatch",
+      "match_confidence": 0.8571428571428571,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 0.9285714285714286,
+      "notes": "Type/value mismatch: int vs str"
+    },
+    {
+      "canonical_name": "book_value_2021",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "book_value_2020",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "land_value_included",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "tax_value_building_2021",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "tax_value_land_2021",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "tax_value_total_2021",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "tax_value_residential",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "tax_value_commercial",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "depreciation_period_years",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "tax_account",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "vat_settlement",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "sbc_client_funds",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "receivables",
+      "match_status": "mismatch",
+      "match_confidence": 0.8148148148148148,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 0.9074074074074074,
+      "notes": "Type/value mismatch: int vs dict"
+    },
+    {
+      "canonical_name": "settlement_other",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "beginning_2021",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "allocation_2021",
+      "match_status": "mismatch",
+      "match_confidence": 0.782608695652174,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 0.8913043478260869,
+      "notes": "Type/value mismatch: int vs str"
+    },
+    {
+      "canonical_name": "end_2021",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "beginning_2020",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "allocation_2020",
+      "match_status": "mismatch",
+      "match_confidence": 0.782608695652174,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 0.8913043478260869,
+      "notes": "Type/value mismatch: int vs str"
+    },
+    {
+      "canonical_name": "end_2020",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "fees",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "social_costs",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "interest",
+      "match_status": "mismatch",
+      "match_confidence": 0.8,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 0.9,
+      "notes": "Outside tolerance (100.0% > 5.0%)"
+    },
+    {
+      "canonical_name": "fees_and_rents",
+      "match_status": "mismatch",
+      "match_confidence": 0.7619047619047619,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 0.8809523809523809,
+      "notes": "Type/value mismatch: int vs dict"
+    },
+    {
+      "canonical_name": "employees_count",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "board_and_auditor_compensation_2021",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "social_costs_2021",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "total_2021",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "board_and_auditor_compensation_2020",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "social_costs_2020",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "total_2020",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "events_significant_during_year",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "events_after_year_end",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "available_funds",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "board_proposal",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "bound_equity",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "accumulated_loss",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "total_equity_beginning",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "total_equity_change",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "total_equity_end",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "standard",
+      "match_status": "mismatch",
+      "match_confidence": 0.8,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 0.9,
+      "notes": "String mismatch: 'BFNAR 2016:10 - \u00c5rsredovisning...' vs '2016-11-14...'"
+    },
+    {
+      "canonical_name": "simplification_rule",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "consistency",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "imd_note",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "maintenance_fund_policy",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "loan_classification",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "depreciation",
+      "match_status": "mismatch",
+      "match_confidence": 0.8571428571428571,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 0.9285714285714286,
+      "notes": "Type/value mismatch: dict vs str"
+    },
+    {
+      "canonical_name": "total_pages_pdf",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "audit_report_pages",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "notes_count",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "table_count_approximate",
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
+    },
+    {
+      "canonical_name": "charts_count",
+      "match_status": "mismatch",
+      "match_confidence": 0.9,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 0.95,
+      "notes": "Outside tolerance (2260000.0% > 5.0%)"
+    }
+  ]
+}

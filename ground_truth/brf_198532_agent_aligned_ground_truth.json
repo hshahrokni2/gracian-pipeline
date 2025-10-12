@@ -1,0 +1,261 @@
+{
+  "metadata": {
+    "organization_number": "769629-0134",
+    "brf_name": "Bostadsrättsföreningen Björk och Plaza",
+    "brf_name_short": "Brf Björk och Plaza",
+    "fiscal_year": 2021,
+    "fiscal_year_start": "2021-01-01",
+    "fiscal_year_end": "2021-12-31",
+    "report_type": "Årsredovisning",
+    "municipality": "Stockholm",
+    "registration_date": "2014-11-03",
+    "economic_plan_registered": "2016-11-22",
+    "stadgar_registered": "2016-11-14",
+    "registered_authority": "Bolagsverket",
+    "company_type": "Privatbostadsföretag enligt inkomstskattelagen (1999:1229)",
+    "authentic_brf": true,
+    "source_pages": [
+      1
+    ]
+  },
+  "governance_agent": {
+    "chairman": "Elvy Maria Löfvenberg",
+    "board_members": [
+      {
+        "name": "Elvy Maria Löfvenberg",
+        "role": "Ordförande",
+        "term_expires_at_next_meeting": true
+      },
+      {
+        "name": "Torbjörn Andersson",
+        "role": "Ledamot",
+        "term_expires_at_next_meeting": true
+      },
+      {
+        "name": "Maria Annelie Eck Arvstrand",
+        "role": "Ledamot",
+        "term_expires_at_next_meeting": true
+      },
+      {
+        "name": "Mats Eskilson",
+        "role": "Ledamot",
+        "term_expires_at_next_meeting": true
+      },
+      {
+        "name": "Fredrik Linde",
+        "role": "Ledamot",
+        "term_expires_at_next_meeting": true
+      },
+      {
+        "name": "Lisa Lind",
+        "role": "Suppleant",
+        "term_expires_at_next_meeting": true
+      },
+      {
+        "name": "Daniel Wetter",
+        "role": "Suppleant",
+        "term_expires_at_next_meeting": true
+      }
+    ],
+    "auditor": "Tobias Andersson",
+    "audit_firm": "KPMG AB",
+    "evidence_pages": [
+      2,
+      3
+    ]
+  },
+  "cashflow_agent": {
+    "cash_in": 7641623,
+    "cash_out": 5654782,
+    "cash_change": 1986840,
+    "evidence_pages": [
+      4
+    ]
+  },
+  "financial_agent": {
+    "revenue": null,
+    "expenses": null,
+    "net_income": null,
+    "assets": null,
+    "liabilities": null,
+    "equity": null,
+    "evidence_pages": [
+      4,
+      5,
+      14
+    ]
+  },
+  "property_agent": {
+    "address": null,
+    "property_designation": null,
+    "area_sqm": null,
+    "evidence_pages": [
+      2
+    ]
+  },
+  "audit_agent": {
+    "auditor": "Tobias Andersson",
+    "audit_firm": "KPMG AB",
+    "opinion": null,
+    "clean_opinion": null,
+    "evidence_pages": [
+      16
+    ]
+  },
+  "apartments": {
+    "total_count": 94,
+    "breakdown": {
+      "1_rok": 10,
+      "2_rok": 24,
+      "3_rok": 23,
+      "4_rok": 36,
+      "5_rok": 1,
+      "over_5_rok": 0
+    },
+    "evidence_pages": [
+      2,
+      6
+    ]
+  },
+  "fees_agent": {
+    "monthly_fee_avg": null,
+    "annual_fee": null,
+    "evidence_pages": [
+      6
+    ]
+  },
+  "loans": [
+    {
+      "lender": "SEB",
+      "loan_number": "41431520",
+      "amount_2021": 30000000,
+      "amount_2020": 30000000,
+      "interest_rate": 0.0057,
+      "maturity_date": "2024-09-28",
+      "amortization_free": true,
+      "notes": "Villkorsändrat, löper på 3 år"
+    },
+    {
+      "lender": "SEB",
+      "amount_2021": 30000000,
+      "amount_2020": 30000000,
+      "interest_rate": 0.0059,
+      "maturity_date": "2023-09-28",
+      "amortization_free": true
+    },
+    {
+      "lender": "SEB",
+      "amount_2021": 28500000,
+      "amount_2020": 28500000,
+      "interest_rate": 0.0142,
+      "maturity_date": "2022-09-28",
+      "amortization_free": false,
+      "notes": "Amorteras med 500.000 kr/kvartal (lån med högst ränta)"
+    },
+    {
+      "lender": "SEB",
+      "amount_2021": 25980000,
+      "amount_2020": 25980000,
+      "interest_rate": 0.0236,
+      "maturity_date": "2025-09-28",
+      "amortization_free": true
+    }
+  ],
+  "note_8_buildings": {
+    "acquisition_value_2021": 682435875,
+    "acquisition_value_2020": 682435875,
+    "accumulated_depreciation_2021": -15765114,
+    "accumulated_depreciation_2020": -12261756,
+    "depreciation_2021": -3503359,
+    "depreciation_2020": -3503359,
+    "book_value_2021": 666670761,
+    "book_value_2020": 670174119,
+    "land_value_included": 332100000,
+    "tax_value_building_2021": 214200000,
+    "tax_value_land_2021": 175000000,
+    "tax_value_total_2021": 389200000,
+    "tax_value_residential": 370000000,
+    "tax_value_commercial": 19200000,
+    "depreciation_period_years": 100,
+    "source_pages": [
+      15
+    ]
+  },
+  "note_9_receivables": {},
+  "accounting_principles": {
+    "standard": "BFNAR 2016:10 - Årsredovisning i mindre företag (K2)",
+    "simplification_rule": "Förenklingsregeln gällande periodiseringar har tillämpats",
+    "consistency": "Samma värderingsprinciper har använts som föregående år",
+    "imd_note": "På grund av att individuell mätning (IMD) numera är skattepliktigt och momsredovisning har upprättats för år 2018, 2019 och 2020, så kan det innebära en bristande jämförbarhet mellan räkenskapsåret och det närmast föregående räkenskapsåret",
+    "maintenance_fund_policy": "Reservering till fond för yttre underhåll enligt stadgar görs i årsbokslutet. Förslag till ianspråktagande av fond för yttre underhåll för årets periodiska underhåll lämnas i resultatdispositionen",
+    "loan_classification": "Lån som har slutförfallodag inom ett år från bokslutsdagen redovisas som kortfristiga skulder. Bedömning om att redovisa den skulden som långfristig kan göras först när slutförfallodagen har passerat och fortsatt belåning har bekräftats hos bank",
+    "depreciation": {
+      "buildings_years": 100
+    },
+    "source_pages": [
+      11
+    ]
+  },
+  "collateral": {
+    "property_mortgages": 119480000
+  },
+  "contracts": {
+    "economic_management": "SBC AB och SBC Betaltjänster AB",
+    "technical_management": "Etcon Fastighetsteknik AB",
+    "broadband_tv_phone": "Ownit Broadband AB",
+    "waste_environment": "Remondis",
+    "elevators": "Kone",
+    "snow_garage_cleaning": "JC Miljöstäd AB",
+    "waste_suction": "Envac Optibag AB",
+    "cleaning": "JC MIljöstäd AB",
+    "elevator_inspection": "Dekra Sweden AB",
+    "sewage_pump": "Xylem",
+    "gate_inspection": "Dekra",
+    "billing_meview": "KTC",
+    "fire_safety": "Etcon Fastighetsteknik AB",
+    "central_waste_operation": "Stockholm stad genom BoDab",
+    "electricity_network": "Ellevio",
+    "electricity_energy": "Energiförsäljning Sverige",
+    "district_heating": "Stockholm Exergi",
+    "water_sewage": "Stockholm Vatten och Avfall AB",
+    "insurance_advisor": "Bolander&Co",
+    "property_insurance": "Brandkontoret",
+    "source_pages": [
+      3
+    ]
+  },
+  "commercial_tenants": [
+    {
+      "name": "Puls & Träning Sweden AB",
+      "area_sqm": 282,
+      "lease_start": "2017-06-20",
+      "lease_end": "2022-06-19",
+      "notes": "Uppköpt av Svenska Nérgy AB, övergår juni 2022"
+    },
+    {
+      "name": "Barnsjukhuset Martina i Stockholm AB",
+      "area_sqm": 197,
+      "lease_start": "2020-06-22",
+      "lease_end": "2030-06-21",
+      "notes": "Kompletterats med radiatorer pga låg värmekapacitet"
+    }
+  ],
+  "common_areas": {
+    "terraces": {
+      "count": 2,
+      "description": "Möblerade, alla odlingslådor utnyttjats"
+    },
+    "entrances": {
+      "count": 2,
+      "status": "Färdigställda"
+    },
+    "community_rooms": {
+      "count": 2,
+      "description": "Iordningställda för fester och möten",
+      "special_features": "Lokalen i Plaza kan även användas som övernattningslägenhet"
+    },
+    "source_pages": [
+      3
+    ]
+  }
+}

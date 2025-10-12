@@ -1,0 +1,355 @@
+{
+  "summary": {
+    "total_correct": 14,
+    "total_checked": 20,
+    "accuracy_percentage": 70.0
+  },
+  "by_category": {
+    "Metadata": [
+      {
+        "field": "metadata.organization_number",
+        "extracted": "000000-0000",
+        "ground_truth": "769629-0134",
+        "status": "wrong",
+        "note": "❌ WRONG: extracted=\"000000-0000\", gt=\"769629-0134\""
+      },
+      {
+        "field": "metadata.brf_name",
+        "extracted": "Unknown BRF",
+        "ground_truth": "Bostadsrättsföreningen Björk och Plaza",
+        "status": "wrong",
+        "note": "❌ WRONG: extracted=\"Unknown BRF\", gt=\"Bostadsrättsföreningen Björk och Plaza\""
+      },
+      {
+        "field": "metadata.fiscal_year",
+        "extracted": 2025,
+        "ground_truth": 2021,
+        "status": "correct",
+        "note": "✅ Close match (<1% diff)"
+      },
+      {
+        "field": "metadata.municipality",
+        "extracted": null,
+        "ground_truth": "Stockholm",
+        "status": "missing",
+        "note": "MISSING: Should be \"Stockholm\""
+      }
+    ],
+    "Governance": [
+      {
+        "field": "governance.chairman",
+        "extracted": "Elvy Maria Löfvenberg",
+        "ground_truth": "Elvy Maria Löfvenberg",
+        "status": "correct",
+        "note": "✅ Exact match"
+      },
+      {
+        "field": "governance.board_members",
+        "extracted": [
+          {
+            "full_name": {
+              "value": "Torbjörn Andersson",
+              "confidence": 0.9,
+              "source": "llm_extraction",
+              "evidence_pages": [],
+              "extraction_method": null,
+              "model_used": null,
+              "validation_status": null,
+              "alternative_values": [],
+              "extraction_timestamp": null
+            },
+            "role": "ledamot",
+            "term_start": null,
+            "term_end": null,
+            "elected_at_meeting": null,
+            "is_employee_representative": null,
+            "contact_info": null,
+            "source_page": [
+              1,
+              2
+            ]
+          },
+          {
+            "full_name": {
+              "value": "Maria Annelie Eck Arvstrand",
+              "confidence": 0.9,
+              "source": "llm_extraction",
+              "evidence_pages": [],
+              "extraction_method": null,
+              "model_used": null,
+              "validation_status": null,
+              "alternative_values": [],
+              "extraction_timestamp": null
+            },
+            "role": "ledamot",
+            "term_start": null,
+            "term_end": null,
+            "elected_at_meeting": null,
+            "is_employee_representative": null,
+            "contact_info": null,
+            "source_page": [
+              1,
+              2
+            ]
+          },
+          {
+            "full_name": {
+              "value": "Mats Eskilson",
+              "confidence": 0.9,
+              "source": "llm_extraction",
+              "evidence_pages": [],
+              "extraction_method": null,
+              "model_used": null,
+              "validation_status": null,
+              "alternative_values": [],
+              "extraction_timestamp": null
+            },
+            "role": "ledamot",
+            "term_start": null,
+            "term_end": null,
+            "elected_at_meeting": null,
+            "is_employee_representative": null,
+            "contact_info": null,
+            "source_page": [
+              1,
+              2
+            ]
+          },
+          {
+            "full_name": {
+              "value": "Fredrik Linde",
+              "confidence": 0.9,
+              "source": "llm_extraction",
+              "evidence_pages": [],
+              "extraction_method": null,
+              "model_used": null,
+              "validation_status": null,
+              "alternative_values": [],
+              "extraction_timestamp": null
+            },
+            "role": "ledamot",
+            "term_start": null,
+            "term_end": null,
+            "elected_at_meeting": null,
+            "is_employee_representative": null,
+            "contact_info": null,
+            "source_page": [
+              1,
+              2
+            ]
+          }
+        ],
+        "ground_truth": [
+          {
+            "name": "Elvy Maria Löfvenberg",
+            "role": "Ordförande",
+            "term_expires_at_next_meeting": true
+          },
+          {
+            "name": "Torbjörn Andersson",
+            "role": "Ledamot",
+            "term_expires_at_next_meeting": true
+          },
+          {
+            "name": "Maria Annelie Eck Arvstrand",
+            "role": "Ledamot",
+            "term_expires_at_next_meeting": true
+          },
+          {
+            "name": "Mats Eskilson",
+            "role": "Ledamot",
+            "term_expires_at_next_meeting": true
+          },
+          {
+            "name": "Fredrik Linde",
+            "role": "Ledamot",
+            "term_expires_at_next_meeting": true
+          },
+          {
+            "name": "Lisa Lind",
+            "role": "Suppleant",
+            "term_expires_at_next_meeting": true
+          },
+          {
+            "name": "Daniel Wetter",
+            "role": "Suppleant",
+            "term_expires_at_next_meeting": true
+          }
+        ],
+        "status": "partial",
+        "note": "⚠️ Count mismatch: extracted=4, gt=7"
+      },
+      {
+        "field": "governance.primary_auditor.name",
+        "extracted": "Tobias Andersson",
+        "ground_truth": "Tobias Andersson",
+        "status": "correct",
+        "note": "✅ Exact match"
+      },
+      {
+        "field": "governance.primary_auditor.firm",
+        "extracted": "KPMG AB",
+        "ground_truth": "KPMG AB",
+        "status": "correct",
+        "note": "✅ Exact match"
+      },
+      {
+        "field": "governance.nomination_committee",
+        "extracted": [
+          "Victoria Blennborn",
+          "Mattias Lovén"
+        ],
+        "ground_truth": [
+          {
+            "name": "Victoria Blennborn",
+            "role": "Sammankallande"
+          },
+          {
+            "name": "Mattias Lovén",
+            "role": "Member"
+          }
+        ],
+        "status": "correct",
+        "note": "✅ Same count (2)"
+      }
+    ],
+    "Financial (Balance Sheet)": [
+      {
+        "field": "financial.balance_sheet.assets_total",
+        "extracted": "675294786",
+        "ground_truth": 675294786,
+        "status": "correct",
+        "note": "✅ Exact match"
+      },
+      {
+        "field": "financial.balance_sheet.liabilities_total",
+        "extracted": "115487111",
+        "ground_truth": 29507111,
+        "status": "wrong",
+        "note": "❌ WRONG: 291.4% difference"
+      },
+      {
+        "field": "financial.balance_sheet.equity_total",
+        "extracted": "559807676",
+        "ground_truth": 559807676,
+        "status": "correct",
+        "note": "✅ Exact match"
+      }
+    ],
+    "Financial (Income)": [
+      {
+        "field": "financial.income_statement.revenue_total",
+        "extracted": "7451585",
+        "ground_truth": 7451585,
+        "status": "correct",
+        "note": "✅ Exact match"
+      },
+      {
+        "field": "financial.income_statement.expenses_total",
+        "extracted": "6631400",
+        "ground_truth": -6631400,
+        "status": "correct",
+        "note": "✅ Close match (<1% diff)"
+      },
+      {
+        "field": "financial.income_statement.result_after_tax",
+        "extracted": "-353810",
+        "ground_truth": -353810,
+        "status": "correct",
+        "note": "✅ Exact match"
+      }
+    ],
+    "Property": [
+      {
+        "field": "property.municipality",
+        "extracted": "Stockholm",
+        "ground_truth": "Stockholm",
+        "status": "correct",
+        "note": "✅ Exact match"
+      },
+      {
+        "field": "property.total_apartments",
+        "extracted": null,
+        "ground_truth": 94,
+        "status": "missing",
+        "note": "MISSING: Should be \"94\""
+      },
+      {
+        "field": "property.apartment_distribution",
+        "extracted": {
+          "one_room": 0,
+          "two_rooms": 0,
+          "three_rooms": 0,
+          "four_rooms": 0,
+          "five_rooms": 0,
+          "more_than_five": 0
+        },
+        "ground_truth": {
+          "1_rok": 10,
+          "2_rok": 24,
+          "3_rok": 23,
+          "4_rok": 36,
+          "5_rok": 1,
+          "over_5_rok": 0
+        },
+        "status": "wrong",
+        "note": "❌ WRONG"
+      }
+    ],
+    "Fees": [
+      {
+        "field": "fees.annual_fee_per_sqm",
+        "extracted": "582",
+        "ground_truth": 582,
+        "status": "correct",
+        "note": "✅ Exact match"
+      }
+    ],
+    "Loans": [
+      {
+        "field": "loans",
+        "extracted": [],
+        "ground_truth": [
+          {
+            "lender": "SEB",
+            "loan_number": "41431520",
+            "amount_2021": 30000000,
+            "amount_2020": 30000000,
+            "interest_rate": 0.0057,
+            "maturity_date": "2024-09-28",
+            "amortization_free": true,
+            "notes": "Villkorsändrat, löper på 3 år"
+          },
+          {
+            "lender": "SEB",
+            "amount_2021": 30000000,
+            "amount_2020": 30000000,
+            "interest_rate": 0.0059,
+            "maturity_date": "2023-09-28",
+            "amortization_free": true
+          },
+          {
+            "lender": "SEB",
+            "amount_2021": 28500000,
+            "amount_2020": 28500000,
+            "interest_rate": 0.0142,
+            "maturity_date": "2022-09-28",
+            "amortization_free": false,
+            "notes": "Amorteras med 500.000 kr/kvartal (lån med högst ränta)"
+          },
+          {
+            "lender": "SEB",
+            "amount_2021": 25980000,
+            "amount_2020": 25980000,
+            "interest_rate": 0.0236,
+            "maturity_date": "2025-09-28",
+            "amortization_free": true
+          }
+        ],
+        "status": "partial",
+        "note": "⚠️ Count mismatch: extracted=0, gt=4"
+      }
+    ]
+  },
+  "timestamp": "2025-10-09"
+}

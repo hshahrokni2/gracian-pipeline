@@ -1,0 +1,11 @@
+# Week 4 Day 1-2: Governance Fix Validation Sample
+# 5-PDF sample: 2 failed + 3 successful from Week 3 comprehensive test
+
+# FAILED PDFs (board_members_empty_list):
+brf_53107
+brf_83301
+
+# SUCCESSFUL PDFs (high coverage benchmarks):
+brf_198532
+brf_81563
+brf_54015

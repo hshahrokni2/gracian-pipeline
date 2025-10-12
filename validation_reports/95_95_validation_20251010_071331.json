@@ -1,0 +1,3002 @@
+{
+  "timestamp": "2025-10-10T07:13:31.033276",
+  "test_pdf": "SRS/brf_198532.pdf",
+  "ground_truth": "ground_truth/brf_198532_comprehensive_ground_truth.json",
+  "extraction_time_seconds": 82.22,
+  "metrics": {
+    "coverage_percent": 0.0,
+    "accuracy_percent": 0,
+    "total_gt_fields": 497,
+    "extracted_fields": 0,
+    "correct_values": 0,
+    "incorrect_values": 0,
+    "missing_fields": 497,
+    "validation_errors_found": 0,
+    "validation_warnings_found": 0
+  },
+  "target_met": false,
+  "failed_fields": [
+    {
+      "field": "metadata.organization_number",
+      "gt_value": "769629-0134",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "metadata.brf_name",
+      "gt_value": "Bostadsrättsföreningen Björk och Plaza",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "metadata.brf_name_short",
+      "gt_value": "Brf Björk och Plaza",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "metadata.fiscal_year",
+      "gt_value": "2021",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "metadata.fiscal_year_start",
+      "gt_value": "2021-01-01",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "metadata.fiscal_year_end",
+      "gt_value": "2021-12-31",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "metadata.report_type",
+      "gt_value": "Årsredovisning",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "metadata.municipality",
+      "gt_value": "Stockholm",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "metadata.registration_date",
+      "gt_value": "2014-11-03",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "metadata.economic_plan_registered",
+      "gt_value": "2016-11-22",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "metadata.stadgar_registered",
+      "gt_value": "2016-11-14",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "metadata.registered_authority",
+      "gt_value": "Bolagsverket",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "metadata.company_type",
+      "gt_value": "Privatbostadsföretag enligt inkomstskattelagen (1999:1229)",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "metadata.authentic_brf",
+      "gt_value": "True",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "metadata.source_pages[0]",
+      "gt_value": "1",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.board_members[0].name",
+      "gt_value": "Elvy Maria Löfvenberg",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.board_members[0].role",
+      "gt_value": "Ordförande",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.board_members[0].term_expires_at_next_meeting",
+      "gt_value": "True",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.board_members[1].name",
+      "gt_value": "Torbjörn Andersson",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.board_members[1].role",
+      "gt_value": "Ledamot",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.board_members[1].term_expires_at_next_meeting",
+      "gt_value": "True",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.board_members[2].name",
+      "gt_value": "Maria Annelie Eck Arvstrand",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.board_members[2].role",
+      "gt_value": "Ledamot",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.board_members[2].term_expires_at_next_meeting",
+      "gt_value": "True",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.board_members[3].name",
+      "gt_value": "Mats Eskilson",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.board_members[3].role",
+      "gt_value": "Ledamot",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.board_members[3].term_expires_at_next_meeting",
+      "gt_value": "True",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.board_members[4].name",
+      "gt_value": "Fredrik Linde",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.board_members[4].role",
+      "gt_value": "Ledamot",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.board_members[4].term_expires_at_next_meeting",
+      "gt_value": "True",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.board_members[5].name",
+      "gt_value": "Lisa Lind",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.board_members[5].role",
+      "gt_value": "Suppleant",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.board_members[5].term_expires_at_next_meeting",
+      "gt_value": "True",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.board_members[6].name",
+      "gt_value": "Daniel Wetter",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.board_members[6].role",
+      "gt_value": "Suppleant",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.board_members[6].term_expires_at_next_meeting",
+      "gt_value": "True",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.board_meetings_count",
+      "gt_value": "14",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.auditors[0].name",
+      "gt_value": "Tobias Andersson",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.auditors[0].type",
+      "gt_value": "Ordinarie Extern",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.auditors[0].firm",
+      "gt_value": "KPMG AB",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.auditors[1].name",
+      "gt_value": "Oskar Klenell",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.auditors[1].type",
+      "gt_value": "Ordinarie Intern",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.auditors[1].firm",
+      "gt_value": "Internrevisor Brf",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.nomination_committee[0].name",
+      "gt_value": "Victoria Blennborn",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.nomination_committee[0].role",
+      "gt_value": "Sammankallande",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.nomination_committee[1].name",
+      "gt_value": "Mattias Lovén",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.nomination_committee[1].role",
+      "gt_value": "Member",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.annual_meeting_date",
+      "gt_value": "2021-06-08",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.samf_membership.name",
+      "gt_value": "Sonfjällets samfällighetsförening",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.samf_membership.ownership_share",
+      "gt_value": "0.47",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.samf_membership.purpose",
+      "gt_value": "Förvaltar gård, garagefoajé och garageport",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.source_pages[0]",
+      "gt_value": "1",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "governance.source_pages[1]",
+      "gt_value": "2",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "property.properties[0].designation",
+      "gt_value": "Sonfjället 2",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "property.properties[0].acquisition_year",
+      "gt_value": "2015",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "property.properties[0].municipality",
+      "gt_value": "Stockholm",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "property.construction_year",
+      "gt_value": "2015",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "property.building_count",
+      "gt_value": "2",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "property.building_type",
+      "gt_value": "Flerbostadshus",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "property.tax_value_year",
+      "gt_value": "2017",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "property.total_area_sqm",
+      "gt_value": "8009",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "property.residential_area_sqm",
+      "gt_value": "7531",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "property.commercial_area_sqm",
+      "gt_value": "478",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "property.heating_type",
+      "gt_value": "Fjärrvärme",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "property.insurance.provider",
+      "gt_value": "Brandkontoret",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "property.insurance.type",
+      "gt_value": "Fullvärdesförsäkring",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "property.insurance.includes_member_supplement",
+      "gt_value": "True",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "property.insurance.includes_board_liability",
+      "gt_value": "True",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "property.source_pages[0]",
+      "gt_value": "2",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "apartments.total_count",
+      "gt_value": "94",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "apartments.breakdown.1_rok",
+      "gt_value": "10",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "apartments.breakdown.2_rok",
+      "gt_value": "24",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "apartments.breakdown.3_rok",
+      "gt_value": "23",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "apartments.breakdown.4_rok",
+      "gt_value": "36",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "apartments.breakdown.5_rok",
+      "gt_value": "1",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "apartments.breakdown.over_5_rok",
+      "gt_value": "0",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "apartments.transfers_during_year",
+      "gt_value": "14",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "apartments.secondhand_rentals_approved",
+      "gt_value": "6",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "apartments.secondhand_rental_reasons[0]",
+      "gt_value": "Utlandstjänstgöring",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "apartments.secondhand_rental_reasons[1]",
+      "gt_value": "Studier på annan ort",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "apartments.source_pages[0]",
+      "gt_value": "2",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "apartments.source_pages[1]",
+      "gt_value": "6",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "commercial_tenants[0].name",
+      "gt_value": "Puls & Träning Sweden AB",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "commercial_tenants[0].area_sqm",
+      "gt_value": "282",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "commercial_tenants[0].lease_start",
+      "gt_value": "2017-06-20",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "commercial_tenants[0].lease_end",
+      "gt_value": "2022-06-19",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "commercial_tenants[0].notes",
+      "gt_value": "Uppköpt av Svenska Nérgy AB, övergår juni 2022",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "commercial_tenants[1].name",
+      "gt_value": "Barnsjukhuset Martina i Stockholm AB",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "commercial_tenants[1].area_sqm",
+      "gt_value": "197",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "commercial_tenants[1].lease_start",
+      "gt_value": "2020-06-22",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "commercial_tenants[1].lease_end",
+      "gt_value": "2030-06-21",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "commercial_tenants[1].notes",
+      "gt_value": "Kompletterats med radiatorer pga låg värmekapacitet",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "vat_registered_commercial",
+      "gt_value": "True",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "source_pages[0]",
+      "gt_value": "16",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "common_areas.terraces.count",
+      "gt_value": "2",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "common_areas.terraces.description",
+      "gt_value": "Möblerade, alla odlingslådor utnyttjats",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "common_areas.entrances.count",
+      "gt_value": "2",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "common_areas.entrances.status",
+      "gt_value": "Färdigställda",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "common_areas.community_rooms.count",
+      "gt_value": "2",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "common_areas.community_rooms.description",
+      "gt_value": "Iordningställda för fester och möten",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "common_areas.community_rooms.special_features",
+      "gt_value": "Lokalen i Plaza kan även användas som övernattningslägenhet",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "common_areas.source_pages[0]",
+      "gt_value": "3",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "maintenance.maintenance_plan.start_year",
+      "gt_value": "2018",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "maintenance.maintenance_plan.end_year",
+      "gt_value": "2043",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "maintenance.planned_maintenance[0].description",
+      "gt_value": "Behandling av trädäcken",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "maintenance.planned_maintenance[0].planned_year",
+      "gt_value": "2021",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "maintenance.planned_maintenance[0].actual_execution",
+      "gt_value": "Genomförs 2022/23",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "maintenance.planned_maintenance[1].description",
+      "gt_value": "Behandling av träfasad",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "maintenance.planned_maintenance[1].planned_year",
+      "gt_value": "2023",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "maintenance.source_pages[0]",
+      "gt_value": "3",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "contracts.economic_management",
+      "gt_value": "SBC AB och SBC Betaltjänster AB",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "contracts.technical_management",
+      "gt_value": "Etcon Fastighetsteknik AB",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "contracts.broadband_tv_phone",
+      "gt_value": "Ownit Broadband AB",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "contracts.waste_environment",
+      "gt_value": "Remondis",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "contracts.elevators",
+      "gt_value": "Kone",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "contracts.snow_garage_cleaning",
+      "gt_value": "JC Miljöstäd AB",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "contracts.waste_suction",
+      "gt_value": "Envac Optibag AB",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "contracts.cleaning",
+      "gt_value": "JC MIljöstäd AB",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "contracts.elevator_inspection",
+      "gt_value": "Dekra Sweden AB",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "contracts.sewage_pump",
+      "gt_value": "Xylem",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "contracts.gate_inspection",
+      "gt_value": "Dekra",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "contracts.billing_meview",
+      "gt_value": "KTC",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "contracts.fire_safety",
+      "gt_value": "Etcon Fastighetsteknik AB",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "contracts.central_waste_operation",
+      "gt_value": "Stockholm stad genom BoDab",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "contracts.electricity_network",
+      "gt_value": "Ellevio",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "contracts.electricity_energy",
+      "gt_value": "Energiförsäljning Sverige",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "contracts.district_heating",
+      "gt_value": "Stockholm Exergi",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "contracts.water_sewage",
+      "gt_value": "Stockholm Vatten och Avfall AB",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "contracts.insurance_advisor",
+      "gt_value": "Bolander&Co",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "contracts.property_insurance",
+      "gt_value": "Brandkontoret",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "contracts.source_pages[0]",
+      "gt_value": "3",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.income_statement.2021.revenue.net_sales",
+      "gt_value": "7393591",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.income_statement.2021.revenue.other_operating_income",
+      "gt_value": "57994",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.income_statement.2021.revenue.total",
+      "gt_value": "7451585",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.income_statement.2021.operating_expenses.operating_costs",
+      "gt_value": "-2834798",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.income_statement.2021.operating_expenses.other_external_costs",
+      "gt_value": "-229331",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.income_statement.2021.operating_expenses.personnel_costs",
+      "gt_value": "-63912",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.income_statement.2021.operating_expenses.depreciation",
+      "gt_value": "-3503359",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.income_statement.2021.operating_expenses.total",
+      "gt_value": "-6631400",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.income_statement.2021.operating_result",
+      "gt_value": "820184",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.income_statement.2021.financial_items.interest_income",
+      "gt_value": "190038",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.income_statement.2021.financial_items.interest_expenses",
+      "gt_value": "-1364032",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.income_statement.2021.financial_items.total",
+      "gt_value": "-1173994",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.income_statement.2021.result_after_financial",
+      "gt_value": "-353810",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.income_statement.2021.year_result",
+      "gt_value": "-353810",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.income_statement.2020.revenue.net_sales",
+      "gt_value": "6644985",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.income_statement.2020.revenue.other_operating_income",
+      "gt_value": "172885",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.income_statement.2020.revenue.total",
+      "gt_value": "6817870",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.income_statement.2020.operating_expenses.operating_costs",
+      "gt_value": "-2352377",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.income_statement.2020.operating_expenses.other_external_costs",
+      "gt_value": "-244541",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.income_statement.2020.operating_expenses.personnel_costs",
+      "gt_value": "-112486",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.income_statement.2020.operating_expenses.depreciation",
+      "gt_value": "-3503359",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.income_statement.2020.operating_expenses.total",
+      "gt_value": "-6212763",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.income_statement.2020.operating_result",
+      "gt_value": "605108",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.income_statement.2020.financial_items.interest_income",
+      "gt_value": "551",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.income_statement.2020.financial_items.interest_expenses",
+      "gt_value": "-1468068",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.income_statement.2020.financial_items.total",
+      "gt_value": "-1467517",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.income_statement.2020.result_after_financial",
+      "gt_value": "-862409",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.income_statement.2020.year_result",
+      "gt_value": "-862409",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2021.assets.fixed_assets.buildings",
+      "gt_value": "666670761",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2021.assets.fixed_assets.total",
+      "gt_value": "666670761",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2021.assets.current_assets.receivables",
+      "gt_value": "5480836",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2021.assets.current_assets.cash_bank",
+      "gt_value": "3143189",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2021.assets.current_assets.total",
+      "gt_value": "8624026",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2021.assets.total_assets",
+      "gt_value": "675294786",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2021.equity_liabilities.equity.bound.member_deposits",
+      "gt_value": "563055875",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2021.equity_liabilities.equity.bound.maintenance_fund",
+      "gt_value": "1026655",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2021.equity_liabilities.equity.bound.total",
+      "gt_value": "564082530",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2021.equity_liabilities.equity.accumulated_loss.retained_earnings",
+      "gt_value": "-3921044",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2021.equity_liabilities.equity.accumulated_loss.year_result",
+      "gt_value": "-353810",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2021.equity_liabilities.equity.accumulated_loss.total",
+      "gt_value": "-4274854",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2021.equity_liabilities.equity.total_equity",
+      "gt_value": "559807676",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2021.equity_liabilities.long_term_liabilities.bank_loans",
+      "gt_value": "85980000",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2021.equity_liabilities.long_term_liabilities.total",
+      "gt_value": "85980000",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2021.equity_liabilities.short_term_liabilities.short_term_bank_loans",
+      "gt_value": "28500000",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2021.equity_liabilities.short_term_liabilities.accounts_payable",
+      "gt_value": "161253",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2021.equity_liabilities.short_term_liabilities.tax_liabilities",
+      "gt_value": "384000",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2021.equity_liabilities.short_term_liabilities.accrued_expenses",
+      "gt_value": "461858",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2021.equity_liabilities.short_term_liabilities.total",
+      "gt_value": "29507111",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2021.equity_liabilities.total_equity_liabilities",
+      "gt_value": "675294786",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2020.assets.fixed_assets.buildings",
+      "gt_value": "670174119",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2020.assets.fixed_assets.total",
+      "gt_value": "670174119",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2020.assets.current_assets.receivables",
+      "gt_value": "1262513",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2020.assets.current_assets.cash_bank",
+      "gt_value": "4454060",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2020.assets.current_assets.total",
+      "gt_value": "5716572",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2020.assets.total_assets",
+      "gt_value": "675890692",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2020.equity_liabilities.equity.bound.member_deposits",
+      "gt_value": "563055875",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2020.equity_liabilities.equity.bound.maintenance_fund",
+      "gt_value": "800065",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2020.equity_liabilities.equity.bound.total",
+      "gt_value": "563855940",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2020.equity_liabilities.equity.accumulated_loss.retained_earnings",
+      "gt_value": "-2832045",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2020.equity_liabilities.equity.accumulated_loss.year_result",
+      "gt_value": "-862409",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2020.equity_liabilities.equity.accumulated_loss.total",
+      "gt_value": "-3694454",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2020.equity_liabilities.equity.total_equity",
+      "gt_value": "560161486",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2020.equity_liabilities.long_term_liabilities.bank_loans",
+      "gt_value": "82630000",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2020.equity_liabilities.long_term_liabilities.total",
+      "gt_value": "82630000",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2020.equity_liabilities.short_term_liabilities.short_term_bank_loans",
+      "gt_value": "31850000",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2020.equity_liabilities.short_term_liabilities.accounts_payable",
+      "gt_value": "273779",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2020.equity_liabilities.short_term_liabilities.tax_liabilities",
+      "gt_value": "384000",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2020.equity_liabilities.short_term_liabilities.accrued_expenses",
+      "gt_value": "591427",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2020.equity_liabilities.short_term_liabilities.total",
+      "gt_value": "33099206",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.balance_sheet.2020.equity_liabilities.total_equity_liabilities",
+      "gt_value": "675890692",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.source_pages[0]",
+      "gt_value": "8",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.source_pages[1]",
+      "gt_value": "9",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "financial.source_pages[2]",
+      "gt_value": "10",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "revenue_breakdown_2021.annual_fees",
+      "gt_value": "4383289",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "revenue_breakdown_2021.commercial_rent_vat",
+      "gt_value": "610566",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "revenue_breakdown_2021.commercial_rent",
+      "gt_value": "399439",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "revenue_breakdown_2021.garage_rent",
+      "gt_value": "1105450",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "revenue_breakdown_2021.cable_tv",
+      "gt_value": "247940",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "revenue_breakdown_2021.rental_discount",
+      "gt_value": "0",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "revenue_breakdown_2021.water_income",
+      "gt_value": "14100",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "revenue_breakdown_2021.hot_water_income",
+      "gt_value": "213196",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "revenue_breakdown_2021.electricity_income",
+      "gt_value": "30000",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "revenue_breakdown_2021.electricity_income_vat",
+      "gt_value": "384102",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "revenue_breakdown_2021.secondhand_rental_fee",
+      "gt_value": "5553",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "revenue_breakdown_2021.rounding",
+      "gt_value": "-45",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "revenue_breakdown_2021.total",
+      "gt_value": "7393591",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "revenue_breakdown_2021.source_pages[0]",
+      "gt_value": "11",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "other_operating_income_2021.extra_state_support",
+      "gt_value": "0",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "other_operating_income_2021.insurance_compensation",
+      "gt_value": "0",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "other_operating_income_2021.other",
+      "gt_value": "57994",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "other_operating_income_2021.total",
+      "gt_value": "57994",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "other_operating_income_2021.source_pages[0]",
+      "gt_value": "12",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "operating_costs_2021.property_management",
+      "gt_value": "553590",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "operating_costs_2021.repairs",
+      "gt_value": "258004",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "operating_costs_2021.periodic_maintenance",
+      "gt_value": "48961",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "operating_costs_2021.utility_costs",
+      "gt_value": "1359788",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "operating_costs_2021.other_operating",
+      "gt_value": "422455",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "operating_costs_2021.property_tax",
+      "gt_value": "192000",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "operating_costs_2021.total",
+      "gt_value": "2834798",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "operating_costs_2021.source_pages[0]",
+      "gt_value": "13",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "loans[0].lender",
+      "gt_value": "SEB",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "loans[0].loan_number",
+      "gt_value": "41431520",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "loans[0].amount_2021",
+      "gt_value": "30000000",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "loans[0].amount_2020",
+      "gt_value": "30000000",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "loans[0].interest_rate",
+      "gt_value": "0.0057",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "loans[0].maturity_date",
+      "gt_value": "2024-09-28",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "loans[0].amortization_free",
+      "gt_value": "True",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "loans[0].notes",
+      "gt_value": "Villkorsändrat, löper på 3 år",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "loans[1].lender",
+      "gt_value": "SEB",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "loans[1].amount_2021",
+      "gt_value": "30000000",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "loans[1].amount_2020",
+      "gt_value": "30000000",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "loans[1].interest_rate",
+      "gt_value": "0.0059",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "loans[1].maturity_date",
+      "gt_value": "2023-09-28",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "loans[1].amortization_free",
+      "gt_value": "True",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "loans[2].lender",
+      "gt_value": "SEB",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "loans[2].amount_2021",
+      "gt_value": "28500000",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "loans[2].amount_2020",
+      "gt_value": "28500000",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "loans[2].interest_rate",
+      "gt_value": "0.0142",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "loans[2].maturity_date",
+      "gt_value": "2022-09-28",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "loans[2].amortization_free",
+      "gt_value": "False",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "loans[2].notes",
+      "gt_value": "Amorteras med 500.000 kr/kvartal (lån med högst ränta)",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "loans[3].lender",
+      "gt_value": "SEB",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "loans[3].amount_2021",
+      "gt_value": "25980000",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "loans[3].amount_2020",
+      "gt_value": "25980000",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "loans[3].interest_rate",
+      "gt_value": "0.0236",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "loans[3].maturity_date",
+      "gt_value": "2025-09-28",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "loans[3].amortization_free",
+      "gt_value": "True",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "total_loans_2021",
+      "gt_value": "114480000",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "total_loans_2020",
+      "gt_value": "114480000",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "loan_policy",
+      "gt_value": "Styrelsens mål är att får en jämn omsättning över tid av lånen",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "collateral.property_mortgages",
+      "gt_value": "119480000",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "fees.annual_fee_per_sqm_2021",
+      "gt_value": "582",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "fees.annual_fee_per_sqm_2020",
+      "gt_value": "582",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "fees.annual_fee_per_sqm_2019",
+      "gt_value": "582",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "fees.annual_fee_per_sqm_2018",
+      "gt_value": "582",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "fees.annual_fee_planned_change",
+      "gt_value": "Oförändrade närmaste året",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "fees.rent_per_sqm_2021",
+      "gt_value": "2113",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "fees.rent_per_sqm_2020",
+      "gt_value": "1274",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "fees.rent_per_sqm_2019",
+      "gt_value": "1256",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "fees.rent_per_sqm_2018",
+      "gt_value": "1231",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "fees.source_pages[0]",
+      "gt_value": "6",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2021.annual_fee_per_sqm",
+      "gt_value": "582",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2021.rent_per_sqm",
+      "gt_value": "2113",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2021.debt_per_sqm",
+      "gt_value": "15201",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2021.electricity_cost_per_sqm",
+      "gt_value": "87",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2021.heating_cost_per_sqm",
+      "gt_value": "55",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2021.water_cost_per_sqm",
+      "gt_value": "20",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2021.capital_costs_per_sqm",
+      "gt_value": "170",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2021.equity_ratio_percent",
+      "gt_value": "83",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2021.result_after_financial_tkr",
+      "gt_value": "-354",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2021.net_sales_tkr",
+      "gt_value": "7394",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2020.annual_fee_per_sqm",
+      "gt_value": "582",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2020.rent_per_sqm",
+      "gt_value": "1274",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2020.debt_per_sqm",
+      "gt_value": "15201",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2020.electricity_cost_per_sqm",
+      "gt_value": "45",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2020.heating_cost_per_sqm",
+      "gt_value": "47",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2020.water_cost_per_sqm",
+      "gt_value": "17",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2020.capital_costs_per_sqm",
+      "gt_value": "183",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2020.equity_ratio_percent",
+      "gt_value": "83",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2020.result_after_financial_tkr",
+      "gt_value": "-862",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2020.net_sales_tkr",
+      "gt_value": "6645",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2019.annual_fee_per_sqm",
+      "gt_value": "582",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2019.rent_per_sqm",
+      "gt_value": "1256",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2019.debt_per_sqm",
+      "gt_value": "15450",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2019.electricity_cost_per_sqm",
+      "gt_value": "80",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2019.heating_cost_per_sqm",
+      "gt_value": "75",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2019.water_cost_per_sqm",
+      "gt_value": "20",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2019.capital_costs_per_sqm",
+      "gt_value": "202",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2019.equity_ratio_percent",
+      "gt_value": "82",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2019.result_after_financial_tkr",
+      "gt_value": "-916",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2019.net_sales_tkr",
+      "gt_value": "7001",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2018.annual_fee_per_sqm",
+      "gt_value": "582",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2018.rent_per_sqm",
+      "gt_value": "1231",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2018.debt_per_sqm",
+      "gt_value": "15782",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2018.electricity_cost_per_sqm",
+      "gt_value": "87",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2018.heating_cost_per_sqm",
+      "gt_value": "112",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2018.water_cost_per_sqm",
+      "gt_value": "9",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2018.capital_costs_per_sqm",
+      "gt_value": "196",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2018.equity_ratio_percent",
+      "gt_value": "82",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2018.result_after_financial_tkr",
+      "gt_value": "-824",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.2018.net_sales_tkr",
+      "gt_value": "7089",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "key_ratios.source_pages[0]",
+      "gt_value": "6",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "members.beginning_of_year",
+      "gt_value": "170",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "members.new_members",
+      "gt_value": "22",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "members.departed_members",
+      "gt_value": "27",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "members.end_of_year",
+      "gt_value": "165",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "members.source_pages[0]",
+      "gt_value": "6",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "cash_flow_2021.liquid_assets_beginning",
+      "gt_value": "4454060",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "cash_flow_2021.inflows.operating_income",
+      "gt_value": "7451585",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "cash_flow_2021.inflows.financial_income",
+      "gt_value": "190038",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "cash_flow_2021.inflows.decrease_receivables",
+      "gt_value": "0",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "cash_flow_2021.inflows.increase_long_term_debt",
+      "gt_value": "0",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "cash_flow_2021.inflows.total",
+      "gt_value": "7641623",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "cash_flow_2021.outflows.operating_costs_excl_depreciation",
+      "gt_value": "3128042",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "cash_flow_2021.outflows.financial_costs",
+      "gt_value": "1364032",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "cash_flow_2021.outflows.increase_receivables",
+      "gt_value": "920613",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "cash_flow_2021.outflows.decrease_long_term_debt",
+      "gt_value": "0",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "cash_flow_2021.outflows.decrease_short_term_debt",
+      "gt_value": "242095",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "cash_flow_2021.outflows.total",
+      "gt_value": "5654782",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "cash_flow_2021.liquid_assets_end",
+      "gt_value": "6440900",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "cash_flow_2021.change_in_liquid_assets",
+      "gt_value": "1986840",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "cash_flow_2021.source_pages[0]",
+      "gt_value": "4",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "cash_flow_2020.liquid_assets_beginning",
+      "gt_value": "5020389",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "cash_flow_2020.inflows.operating_income",
+      "gt_value": "6817870",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "cash_flow_2020.inflows.financial_income",
+      "gt_value": "551",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "cash_flow_2020.inflows.decrease_receivables",
+      "gt_value": "718851",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "cash_flow_2020.inflows.increase_long_term_debt",
+      "gt_value": "0",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "cash_flow_2020.inflows.total",
+      "gt_value": "7537272",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "cash_flow_2020.outflows.operating_costs_excl_depreciation",
+      "gt_value": "2709404",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "cash_flow_2020.outflows.financial_costs",
+      "gt_value": "1468068",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "cash_flow_2020.outflows.increase_receivables",
+      "gt_value": "0",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "cash_flow_2020.outflows.decrease_long_term_debt",
+      "gt_value": "1875000",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "cash_flow_2020.outflows.decrease_short_term_debt",
+      "gt_value": "2051130",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "cash_flow_2020.outflows.total",
+      "gt_value": "8103602",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "cash_flow_2020.liquid_assets_end",
+      "gt_value": "4454060",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "cash_flow_2020.change_in_liquid_assets",
+      "gt_value": "-566330",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "cash_flow_2020.source_pages[0]",
+      "gt_value": "4",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "tax.property_tax_rate",
+      "gt_value": "0.003",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "tax.property_tax_max_per_apartment",
+      "gt_value": "1459",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "tax.commercial_tax_rate",
+      "gt_value": "0.01",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "tax.tax_calculation_basis",
+      "gt_value": "Taxeringsvärde",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "tax.source_pages[0]",
+      "gt_value": "4",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "building_details_note8.acquisition_value_2021",
+      "gt_value": "682435875",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "building_details_note8.acquisition_value_2020",
+      "gt_value": "682435875",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "building_details_note8.accumulated_depreciation_2021",
+      "gt_value": "-15765114",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "building_details_note8.accumulated_depreciation_2020",
+      "gt_value": "-12261756",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "building_details_note8.depreciation_2021",
+      "gt_value": "-3503359",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "building_details_note8.depreciation_2020",
+      "gt_value": "-3503359",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "building_details_note8.book_value_2021",
+      "gt_value": "666670761",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "building_details_note8.book_value_2020",
+      "gt_value": "670174119",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "building_details_note8.land_value_included",
+      "gt_value": "332100000",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "building_details_note8.tax_value_building_2021",
+      "gt_value": "214200000",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "building_details_note8.tax_value_land_2021",
+      "gt_value": "175000000",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "building_details_note8.tax_value_total_2021",
+      "gt_value": "389200000",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "building_details_note8.tax_value_residential",
+      "gt_value": "370000000",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "building_details_note8.tax_value_commercial",
+      "gt_value": "19200000",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "building_details_note8.depreciation_period_years",
+      "gt_value": "100",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "building_details_note8.source_pages[0]",
+      "gt_value": "15",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "receivables_note9_2021.tax_account",
+      "gt_value": "192990",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "receivables_note9_2021.vat_settlement",
+      "gt_value": "25293",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "receivables_note9_2021.sbc_client_funds",
+      "gt_value": "3297711",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "receivables_note9_2021.receivables",
+      "gt_value": "1911314",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "receivables_note9_2021.settlement_other",
+      "gt_value": "53100",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "receivables_note9_2021.total",
+      "gt_value": "5480408",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "receivables_note9_2021.source_pages[0]",
+      "gt_value": "15",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "maintenance_fund_note10.beginning_2021",
+      "gt_value": "800065",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "maintenance_fund_note10.allocation_2021",
+      "gt_value": "226590",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "maintenance_fund_note10.end_2021",
+      "gt_value": "1026655",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "maintenance_fund_note10.beginning_2020",
+      "gt_value": "573475",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "maintenance_fund_note10.allocation_2020",
+      "gt_value": "226590",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "maintenance_fund_note10.end_2020",
+      "gt_value": "800065",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "maintenance_fund_note10.source_pages[0]",
+      "gt_value": "15",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "accrued_expenses_note13_2021.fees",
+      "gt_value": "0",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "accrued_expenses_note13_2021.social_costs",
+      "gt_value": "0",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "accrued_expenses_note13_2021.interest",
+      "gt_value": "7587",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "accrued_expenses_note13_2021.fees_and_rents",
+      "gt_value": "454271",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "accrued_expenses_note13_2021.total",
+      "gt_value": "461858",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "accrued_expenses_note13_2021.source_pages[0]",
+      "gt_value": "16",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "personnel_note6.employees_count",
+      "gt_value": "0",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "personnel_note6.board_and_auditor_compensation_2021",
+      "gt_value": "58175",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "personnel_note6.social_costs_2021",
+      "gt_value": "5737",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "personnel_note6.total_2021",
+      "gt_value": "63912",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "personnel_note6.board_and_auditor_compensation_2020",
+      "gt_value": "94600",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "personnel_note6.social_costs_2020",
+      "gt_value": "17886",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "personnel_note6.total_2020",
+      "gt_value": "112486",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "personnel_note6.source_pages[0]",
+      "gt_value": "14",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[0].category",
+      "gt_value": "guarantee_inspection",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[0].description",
+      "gt_value": "Arbetet med att hävda s.k A-anmärkningar från garantibesiktningen hösten 2019 har fortsatt",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[0].details[0]",
+      "gt_value": "Elinstallationer",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[0].details[1]",
+      "gt_value": "Avloppslukt",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[0].details[2]",
+      "gt_value": "Felaktiga lufttryck i lägenheterna",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[0].details[3]",
+      "gt_value": "Injustering av ventilation",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[0].details[4]",
+      "gt_value": "Fukt under kylskåp",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[0].details[5]",
+      "gt_value": "Gemensamma dörrar",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[0].details[6]",
+      "gt_value": "Ytskikt på golv och väggar i källaren",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[0].details[7]",
+      "gt_value": "Balkongglas",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[0].details[8]",
+      "gt_value": "Träterasser",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[0].preparation",
+      "gt_value": "Inför kommande 5-års besiktning under hösten 2022 har styrelsen konsulterat en entreprenadjurist, besiktningsman och andra sakkunniga",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[1].category",
+      "gt_value": "courtyard_maintenance",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[1].description",
+      "gt_value": "Underhåll och skötsel av innergårdens växtlighet är eftersatt",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[1].notes",
+      "gt_value": "Entreprenören som har uppdraget att sköta gården under garantitiden har gått i konkurs och föreningen väntar på att byggaren ska anvisa en ersättare",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[2].category",
+      "gt_value": "tenant_change",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[2].description",
+      "gt_value": "Föreningens hyresgäst Puls &Träning är uppköpt av Svenska Nérgy AB",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[2].effective_date",
+      "gt_value": "Juni 2022",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[3].category",
+      "gt_value": "commercial_improvement",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[3].description",
+      "gt_value": "Lokalen i Barnsjukhuset Martina AB har kompletterats med radiatorer pga låg värmekapacitet",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[4].category",
+      "gt_value": "loan_modification",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[4].description",
+      "gt_value": "Lån nr 41431520 hos SEB är villkorsändrat och löper på 3 år med 0,57 % ränta",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[5].category",
+      "gt_value": "contract",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[5].description",
+      "gt_value": "Ett nytt avtal är tecknat med SBC, föreningens ekonomiska förvaltare",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[6].category",
+      "gt_value": "tax",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[6].description",
+      "gt_value": "Fastigheten är deklarerad för ny taxering 2022",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[7].category",
+      "gt_value": "maintenance_planning",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[7].description",
+      "gt_value": "Offerter är framtagna för underhållsarbete av terrassgolven och Björks fasadpanel samt service av gemensamma dörrar",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[8].category",
+      "gt_value": "facade_repair",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[8].description",
+      "gt_value": "Plazas fasad är lagad",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[9].category",
+      "gt_value": "security",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[9].description",
+      "gt_value": "Skalskyddet på entréer och källardörrar har förbättrats",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[10].category",
+      "gt_value": "charging_stations",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[10].description",
+      "gt_value": "Beslutsunderlag för installation av laddstolpar finns framtaget",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[11].category",
+      "gt_value": "renovations",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[11].description",
+      "gt_value": "Styrelsen har bistått med diverse underlag vid ut-och ombyggnader av lägenheter och etagelägenheter",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[12].category",
+      "gt_value": "improvements",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[12].description",
+      "gt_value": "Anslagstavlor är uppsatta",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[13].category",
+      "gt_value": "cleaning",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[13].description",
+      "gt_value": "Överblivna cyklar ute och inne är utrensade",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[14].category",
+      "gt_value": "storage",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[14].description",
+      "gt_value": "Antal barnvagnsrum har utökats",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[15].category",
+      "gt_value": "ventilation",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[15].description",
+      "gt_value": "Obligatorisk ventilationskontroll är genomförd och alla aggregat (3 st) är godkända",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[16].category",
+      "gt_value": "elevator",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[16].description",
+      "gt_value": "Hissarna är säkerhetsbesiktigade och godkända",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[17].category",
+      "gt_value": "pressure_measurement",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[17].description",
+      "gt_value": "Inför 5-årsbesiktningen har föreningen låtit utföra tryckmätningar i lägenheterna",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[18].category",
+      "gt_value": "external_relations",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[18].description",
+      "gt_value": "Styrelsen har träffat Exploateringskontoret tillsammans med Brf Äril angående störningar från Båthusparken",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[19].category",
+      "gt_value": "school_agreement",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[19].description",
+      "gt_value": "Engelska skolan har fått tillstånd till att använda entrén i Plaza som återsamlingsplats vid brand",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[20].category",
+      "gt_value": "waste_project",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[20].description",
+      "gt_value": "Föreningen deltar som första bostadsrättsförening i ett avfallprojekt 2022-24 tillsammans med Stockholm Vatten och Avfall AB (koordinator), Envac och KTH och Brf Gotska Sandön",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_significant_during_year[20].goal",
+      "gt_value": "Målsättningen är att driftoptimera sopsugsanläggningen, minska handhavandefel, informera användare och öka utsorteringen av främst plast och mat",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "events_after_year_end[0].description",
+      "gt_value": "Föreningen har bundit elavtalet i 3 år till 58,89 öre/kWh plus ca 1,5 öre/ kWh för vattenkraftel och valt Fortum till ny el-leverantör",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "result_disposition.available_funds.year_result",
+      "gt_value": "-353810",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "result_disposition.available_funds.retained_earnings_before_fund",
+      "gt_value": "-3694454",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "result_disposition.available_funds.maintenance_fund_allocation",
+      "gt_value": "-226590",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "result_disposition.available_funds.total",
+      "gt_value": "-4274854",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "result_disposition.board_proposal.maintenance_fund_withdrawal",
+      "gt_value": "48960",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "result_disposition.board_proposal.carry_forward",
+      "gt_value": "-4225894",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "result_disposition.source_pages[0]",
+      "gt_value": "7",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "equity_changes.bound_equity.member_deposits_beginning",
+      "gt_value": "556920000",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "equity_changes.bound_equity.member_deposits_change",
+      "gt_value": "0",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "equity_changes.bound_equity.member_deposits_end",
+      "gt_value": "556920000",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "equity_changes.bound_equity.contribution_fees_beginning",
+      "gt_value": "6135875",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "equity_changes.bound_equity.contribution_fees_change",
+      "gt_value": "0",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "equity_changes.bound_equity.contribution_fees_end",
+      "gt_value": "6135875",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "equity_changes.bound_equity.maintenance_fund_beginning",
+      "gt_value": "800065",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "equity_changes.bound_equity.maintenance_fund_change",
+      "gt_value": "226590",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "equity_changes.bound_equity.maintenance_fund_end",
+      "gt_value": "1026655",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "equity_changes.bound_equity.total_bound_beginning",
+      "gt_value": "563855940",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "equity_changes.bound_equity.total_bound_change",
+      "gt_value": "226590",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "equity_changes.bound_equity.total_bound_end",
+      "gt_value": "564082530",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "equity_changes.accumulated_loss.retained_earnings_beginning",
+      "gt_value": "-2832045",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "equity_changes.accumulated_loss.retained_earnings_allocation",
+      "gt_value": "-226590",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "equity_changes.accumulated_loss.retained_earnings_previous_year",
+      "gt_value": "-862409",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "equity_changes.accumulated_loss.retained_earnings_end",
+      "gt_value": "-3921044",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "equity_changes.accumulated_loss.year_result",
+      "gt_value": "-353810",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "equity_changes.accumulated_loss.total_loss_beginning",
+      "gt_value": "-3694454",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "equity_changes.accumulated_loss.total_loss_change",
+      "gt_value": "-580400",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "equity_changes.accumulated_loss.total_loss_end",
+      "gt_value": "-4274854",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "equity_changes.total_equity_beginning",
+      "gt_value": "560161486",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "equity_changes.total_equity_change",
+      "gt_value": "-353810",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "equity_changes.total_equity_end",
+      "gt_value": "559807676",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "equity_changes.source_pages[0]",
+      "gt_value": "6",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "accounting_principles.standard",
+      "gt_value": "BFNAR 2016:10 - Årsredovisning i mindre företag (K2)",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "accounting_principles.simplification_rule",
+      "gt_value": "Förenklingsregeln gällande periodiseringar har tillämpats",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "accounting_principles.consistency",
+      "gt_value": "Samma värderingsprinciper har använts som föregående år",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "accounting_principles.imd_note",
+      "gt_value": "På grund av att individuell mätning (IMD) numera är skattepliktigt och momsredovisning har upprättats för år 2018, 2019 och 2020, så kan det innebära en bristande jämförbarhet mellan räkenskapsåret och det närmast föregående räkenskapsåret",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "accounting_principles.maintenance_fund_policy",
+      "gt_value": "Reservering till fond för yttre underhåll enligt stadgar görs i årsbokslutet. Förslag till ianspråktagande av fond för yttre underhåll för årets periodiska underhåll lämnas i resultatdispositionen",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "accounting_principles.loan_classification",
+      "gt_value": "Lån som har slutförfallodag inom ett år från bokslutsdagen redovisas som kortfristiga skulder. Bedömning om att redovisa den skulden som långfristig kan göras först när slutförfallodagen har passerat och fortsatt belåning har bekräftats hos bank",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "accounting_principles.depreciation.buildings_years",
+      "gt_value": "100",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "accounting_principles.source_pages[0]",
+      "gt_value": "11",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "statistical_data.total_pages_pdf",
+      "gt_value": "17",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "statistical_data.audit_report_pages",
+      "gt_value": "2",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "statistical_data.notes_count",
+      "gt_value": "14",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "statistical_data.table_count_approximate",
+      "gt_value": "15",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    },
+    {
+      "field": "statistical_data.charts_count",
+      "gt_value": "2",
+      "extracted_value": "None",
+      "notes": "Field not extracted"
+    }
+  ]
+}

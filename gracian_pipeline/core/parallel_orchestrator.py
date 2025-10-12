@@ -24,6 +24,7 @@ from .docling_adapter_ultra import UltraComprehensiveDoclingAdapter
 from .sectionizer import sectionize_pdf
 from .schema_comprehensive import COMPREHENSIVE_TYPES, schema_comprehensive_prompt_block
 from ..prompts.agent_prompts import AGENT_PROMPTS
+from .llm_retry_wrapper import call_llm_with_retry, RetryConfig
 
 logger = logging.getLogger(__name__)
 
@@ -82,15 +83,18 @@ FOCUS ON PAGES: {page_numbers}
 
 Return ONLY valid JSON matching the schema above. Use null for missing data."""
 
-        # Call OpenAI with timeout
-        response = client.chat.completions.create(
+        # Call OpenAI with retry logic and timeout
+        response = call_llm_with_retry(
+            client=client,
             model="gpt-4o",
             messages=[
                 {"role": "system", "content": agent_prompt},
                 {"role": "user", "content": prompt}
             ],
             temperature=0,
-            timeout=timeout
+            timeout=timeout,
+            config=RetryConfig(max_retries=3, base_delay=1.0),
+            context={"agent_id": agent_id, "pages": page_numbers}
         )
 
         # Parse JSON with fallback

@@ -1,0 +1,315 @@
+{
+  "chairman_agent": {
+    "chairman": null,
+    "evidence_pages": []
+  },
+  "board_members_agent": {
+    "board_members": [],
+    "evidence_pages": []
+  },
+  "notes_depreciation_agent": {
+    "depreciation_method": null,
+    "useful_life_years": null,
+    "depreciation_base": null,
+    "evidence_pages": [
+      2
+    ]
+  },
+  "auditor_agent": {
+    "auditor_name": null,
+    "audit_firm": null,
+    "evidence_pages": []
+  },
+  "events_agent": {
+    "key_events": [],
+    "maintenance_budget": "",
+    "annual_meeting_date": "",
+    "evidence_pages": []
+  },
+  "notes_maintenance_agent": {
+    "maintenance_plan": "aktuell uppdaterad underhållsplan",
+    "maintenance_budget": null,
+    "evidence_pages": [
+      1
+    ]
+  },
+  "notes_tax_agent": {
+    "current_tax": null,
+    "deferred_tax": null,
+    "tax_policy": null,
+    "evidence_pages": []
+  },
+  "financial_agent": {
+    "revenue": null,
+    "expenses": null,
+    "assets": null,
+    "liabilities": null,
+    "equity": null,
+    "surplus": null,
+    "long_term_liabilities": null,
+    "short_term_liabilities": null,
+    "evidence_pages": []
+  },
+  "loans_agent": {
+    "loans": [
+      {
+        "lender": "SEB",
+        "loan_number": "41431520",
+        "outstanding_balance": 30000000,
+        "interest_rate": 0.0057,
+        "maturity_date": "2024-09-28",
+        "amortization_schedule": "amorteringsfria"
+      },
+      {
+        "lender": "SBAB",
+        "loan_number": "12345",
+        "outstanding_balance": 28500000,
+        "interest_rate": 0.0045,
+        "maturity_date": "2022-03-23",
+        "amortization_schedule": "amorteringsfria"
+      }
+    ],
+    "outstanding_loans": 2,
+    "interest_rate": 0.0051,
+    "amortization": null,
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "energy_agent": {
+    "energy_class": null,
+    "energy_performance": null,
+    "inspection_date": null,
+    "evidence_pages": []
+  },
+  "reserves_agent": {
+    "reserve_fund": null,
+    "monthly_fee": null,
+    "evidence_pages": [
+      2
+    ]
+  },
+  "property_agent": {
+    "property_designation": null,
+    "address": null,
+    "postal_code": null,
+    "city": null,
+    "municipality": null,
+    "built_year": null,
+    "building_type": null,
+    "total_area_sqm": null,
+    "living_area_sqm": null,
+    "commercial_area_sqm": null,
+    "land_area_sqm": null,
+    "heating_type": null,
+    "energy_class": null,
+    "total_apartments": null,
+    "evidence_pages": []
+  },
+  "fees_agent": {
+    "arsavgift_per_sqm_total": null,
+    "manadsavgift_per_sqm": null,
+    "manadsavgift_per_apartment_avg": null,
+    "fee_1_rok": null,
+    "fee_2_rok": null,
+    "fee_3_rok": null,
+    "fee_4_rok": null,
+    "fee_5_rok": null,
+    "inkluderar_vatten": null,
+    "inkluderar_uppvarmning": null,
+    "inkluderar_el": null,
+    "inkluderar_bredband": null,
+    "last_fee_increase_date": null,
+    "last_fee_increase_percentage": null,
+    "planned_fee_changes": [],
+    "terminology_found": null,
+    "evidence_pages": []
+  },
+  "cashflow_agent": {
+    "cash_in": null,
+    "cash_out": null,
+    "cash_change": null,
+    "evidence_pages": [],
+    "operating_activities": null,
+    "investing_activities": null,
+    "financing_activities": null
+  },
+  "audit_agent": {
+    "auditor": "John Doe",
+    "opinion": "Vi har utfört en revision av årsredovisningen för Bostadsrättsföreningen Exempel för räkenskapsåret 2022. Enligt vår uppfattning har årsredovisningen upprättats i enlighet med årsredovisningslagen och ger en rättvisande bild av föreningens finansiella ställning per den 31 december 2022 samt av dess finansiella resultat och kassaflöden för året enligt årsredovisningslagen.",
+    "clean_opinion": true,
+    "evidence_pages": [
+      2
+    ],
+    "audit_date": "2023-03-15",
+    "audit_location": "Stockholm",
+    "qualifications": null
+  },
+  "_metadata": {
+    "total_agents": 15,
+    "successful_agents": 15,
+    "failed_agents": [],
+    "agent_metadata": {
+      "chairman_agent": {
+        "status": "success",
+        "agent_id": "chairman_agent",
+        "token_count": 230,
+        "latency_ms": 1047,
+        "pages_used": []
+      },
+      "board_members_agent": {
+        "status": "success",
+        "agent_id": "board_members_agent",
+        "token_count": 276,
+        "latency_ms": 1722,
+        "pages_used": []
+      },
+      "notes_depreciation_agent": {
+        "status": "success",
+        "agent_id": "notes_depreciation_agent",
+        "token_count": 410,
+        "latency_ms": 744,
+        "pages_used": [
+          2
+        ]
+      },
+      "auditor_agent": {
+        "status": "success",
+        "agent_id": "auditor_agent",
+        "token_count": 258,
+        "latency_ms": 1993,
+        "pages_used": []
+      },
+      "events_agent": {
+        "status": "success",
+        "agent_id": "events_agent",
+        "token_count": 439,
+        "latency_ms": 702,
+        "pages_used": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "notes_maintenance_agent": {
+        "status": "success",
+        "agent_id": "notes_maintenance_agent",
+        "token_count": 856,
+        "latency_ms": 1140,
+        "pages_used": [
+          0,
+          1,
+          2,
+          18,
+          19
+        ]
+      },
+      "notes_tax_agent": {
+        "status": "success",
+        "agent_id": "notes_tax_agent",
+        "token_count": 418,
+        "latency_ms": 1446,
+        "pages_used": [
+          0,
+          1,
+          2,
+          18,
+          19
+        ]
+      },
+      "financial_agent": {
+        "status": "success",
+        "agent_id": "financial_agent",
+        "token_count": 728,
+        "latency_ms": 3462,
+        "pages_used": [
+          2
+        ]
+      },
+      "loans_agent": {
+        "status": "success",
+        "agent_id": "loans_agent",
+        "token_count": 949,
+        "latency_ms": 2081,
+        "pages_used": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "energy_agent": {
+        "status": "success",
+        "agent_id": "energy_agent",
+        "token_count": 424,
+        "latency_ms": 1534,
+        "pages_used": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "reserves_agent": {
+        "status": "success",
+        "agent_id": "reserves_agent",
+        "token_count": 403,
+        "latency_ms": 1932,
+        "pages_used": [
+          2
+        ]
+      },
+      "property_agent": {
+        "status": "success",
+        "agent_id": "property_agent",
+        "token_count": 3865,
+        "latency_ms": 5329,
+        "pages_used": [
+          1,
+          2
+        ]
+      },
+      "fees_agent": {
+        "status": "success",
+        "agent_id": "fees_agent",
+        "token_count": 1239,
+        "latency_ms": 2343,
+        "pages_used": [
+          2
+        ]
+      },
+      "cashflow_agent": {
+        "status": "success",
+        "agent_id": "cashflow_agent",
+        "token_count": 455,
+        "latency_ms": 12222,
+        "pages_used": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "audit_agent": {
+        "status": "success",
+        "agent_id": "audit_agent",
+        "token_count": 546,
+        "latency_ms": 17766,
+        "pages_used": [
+          2
+        ]
+      }
+    },
+    "total_time_seconds": 61.2,
+    "token_usage": 11496
+  }
+}

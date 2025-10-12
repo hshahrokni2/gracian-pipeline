@@ -15,7 +15,7 @@
   "structure": {
     "num_sections": 50,
     "method": "ocr",
-    "cached": false,
+    "cached": true,
     "extraction_time": 95.71463990211487
   },
   "routing": {
@@ -34,7 +34,7 @@
       "notes_tax_agent": 1,
       "notes_loans_agent": 1
     },
-    "routing_time": 0.0013172626495361328
+    "routing_time": 2.3128762245178223
   },
   "agent_results": {
     "governance_agent": {
@@ -66,9 +66,9 @@
       ],
       "num_images": 4,
       "evidence_pages": [],
-      "extraction_time": 10.002869844436646,
+      "extraction_time": 7.722545862197876,
       "model": "gpt-4o-2024-11-20",
-      "tokens_used": 4797
+      "tokens_used": 4781
     },
     "property_agent": {
       "agent_id": "property_agent",
@@ -99,7 +99,7 @@
       "evidence_pages": [
         4
       ],
-      "extraction_time": 10.445759773254395,
+      "extraction_time": 9.137545108795166,
       "model": "gpt-4o-2024-11-20",
       "tokens_used": 4793
     },
@@ -143,7 +143,7 @@
         10,
         17
       ],
-      "extraction_time": 8.958627939224243,
+      "extraction_time": 8.688541889190674,
       "model": "gpt-4o-2024-11-20",
       "tokens_used": 5307
     },
@@ -168,7 +168,7 @@
       "evidence_pages": [
         13
       ],
-      "extraction_time": 8.394161939620972,
+      "extraction_time": 7.864008903503418,
       "model": "gpt-4o-2024-11-20",
       "tokens_used": 2399
     },
@@ -187,7 +187,7 @@
       ],
       "num_images": 1,
       "evidence_pages": [],
-      "extraction_time": 2.1862239837646484,
+      "extraction_time": 2.5825300216674805,
       "model": "gpt-4o-2024-11-20",
       "tokens_used": 2519
     },
@@ -208,7 +208,7 @@
       ],
       "num_images": 1,
       "evidence_pages": [],
-      "extraction_time": 29.59645390510559,
+      "extraction_time": 3.0496530532836914,
       "model": "gpt-4o-2024-11-20",
       "tokens_used": 2685
     },
@@ -217,8 +217,8 @@
       "status": "success",
       "data": {
         "reserve_fund": "Föreningens fond för yttre underhåll",
-        "annual_contribution": "Överföring från balanserat resultat till fond för yttre underhåll sker efter beslut av föreningsstämma.",
-        "fund_purpose": "Reservering till föreningens fond för yttre underhåll ingår i styrelsens förslag till resultatdisposition.",
+        "annual_contribution": "",
+        "fund_purpose": "Reservering till föreningens fond för yttre underhåll ingår i styrelsens förslag till resultatdisposition. Efter att beslut tagits på föreningsstämma sker överföring från balanserat resultat till fond för yttre underhåll och redovisas som bundet eget kapital.",
         "evidence_pages": [
           13
         ]
@@ -233,9 +233,9 @@
       "evidence_pages": [
         13
       ],
-      "extraction_time": 17.30852198600769,
+      "extraction_time": 4.7828209400177,
       "model": "gpt-4o-2024-11-20",
-      "tokens_used": 2916
+      "tokens_used": 2928
     },
     "notes_tax_agent": {
       "agent_id": "notes_tax_agent",
@@ -258,9 +258,9 @@
       "evidence_pages": [
         13
       ],
-      "extraction_time": 3.6612370014190674,
+      "extraction_time": 7.638559103012085,
       "model": "gpt-4o-2024-11-20",
-      "tokens_used": 3121
+      "tokens_used": 3133
     },
     "notes_loans_agent": {
       "agent_id": "notes_loans_agent",
@@ -284,9 +284,9 @@
       "evidence_pages": [
         13
       ],
-      "extraction_time": 15.800167083740234,
+      "extraction_time": 11.533736228942871,
       "model": "gpt-4o-2024-11-20",
-      "tokens_used": 3328
+      "tokens_used": 3339
     }
   },
   "quality_metrics": {
@@ -295,8 +295,8 @@
     "evidence_ratio": 0.6666666666666666,
     "overall_score": 0.8333333333333333,
     "needs_coaching": true,
-    "validation_time": 1.0967254638671875e-05
+    "validation_time": 7.867813110351562e-06
   },
-  "total_time": 192.0906629562378,
+  "total_time": 57.59420895576477,
   "total_cost": 0.0
 }

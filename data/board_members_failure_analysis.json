@@ -1,0 +1,321 @@
+{
+  "total_pdfs": 43,
+  "successful": [
+    {
+      "pdf": "brf_276629",
+      "member_count": 9,
+      "coverage": 1.7,
+      "pdf_type": "scanned"
+    },
+    {
+      "pdf": "brf_198532",
+      "member_count": 7,
+      "coverage": 81.2,
+      "pdf_type": "machine-readable"
+    },
+    {
+      "pdf": "brf_54015",
+      "member_count": 8,
+      "coverage": 70.1,
+      "pdf_type": "machine-readable"
+    },
+    {
+      "pdf": "brf_48574",
+      "member_count": 6,
+      "coverage": 70.9,
+      "pdf_type": "machine-readable"
+    },
+    {
+      "pdf": "brf_49369",
+      "member_count": 4,
+      "coverage": 65.8,
+      "pdf_type": "machine-readable"
+    },
+    {
+      "pdf": "brf_82841",
+      "member_count": 6,
+      "coverage": 69.2,
+      "pdf_type": "machine-readable"
+    },
+    {
+      "pdf": "brf_47809",
+      "member_count": 7,
+      "coverage": 66.7,
+      "pdf_type": "machine-readable"
+    },
+    {
+      "pdf": "brf_79568",
+      "member_count": 8,
+      "coverage": 64.1,
+      "pdf_type": "machine-readable"
+    },
+    {
+      "pdf": "brf_48663",
+      "member_count": 5,
+      "coverage": 80.3,
+      "pdf_type": "machine-readable"
+    },
+    {
+      "pdf": "brf_276796",
+      "member_count": 8,
+      "coverage": 77.8,
+      "pdf_type": "machine-readable"
+    },
+    {
+      "pdf": "brf_58256",
+      "member_count": 5,
+      "coverage": 70.9,
+      "pdf_type": "machine-readable"
+    },
+    {
+      "pdf": "brf_58306",
+      "member_count": 5,
+      "coverage": 71.8,
+      "pdf_type": "machine-readable"
+    },
+    {
+      "pdf": "brf_53546",
+      "member_count": 8,
+      "coverage": 76.9,
+      "pdf_type": "machine-readable"
+    },
+    {
+      "pdf": "brf_266956",
+      "member_count": 9,
+      "coverage": 69.2,
+      "pdf_type": "machine-readable"
+    },
+    {
+      "pdf": "brf_268882",
+      "member_count": 7,
+      "coverage": 68.4,
+      "pdf_type": "machine-readable"
+    },
+    {
+      "pdf": "brf_78564",
+      "member_count": 6,
+      "coverage": 67.5,
+      "pdf_type": "machine-readable"
+    },
+    {
+      "pdf": "brf_52576",
+      "member_count": 7,
+      "coverage": 70.9,
+      "pdf_type": "machine-readable"
+    },
+    {
+      "pdf": "brf_271852",
+      "member_count": 5,
+      "coverage": 64.1,
+      "pdf_type": "machine-readable"
+    },
+    {
+      "pdf": "brf_276507",
+      "member_count": 11,
+      "coverage": 74.4,
+      "pdf_type": "machine-readable"
+    },
+    {
+      "pdf": "brf_48893",
+      "member_count": 7,
+      "coverage": 68.4,
+      "pdf_type": "machine-readable"
+    },
+    {
+      "pdf": "brf_77241",
+      "member_count": 8,
+      "coverage": 75.2,
+      "pdf_type": "machine-readable"
+    },
+    {
+      "pdf": "brf_271949",
+      "member_count": 5,
+      "coverage": 80.3,
+      "pdf_type": "machine-readable"
+    },
+    {
+      "pdf": "brf_268411",
+      "member_count": 9,
+      "coverage": 68.4,
+      "pdf_type": "machine-readable"
+    },
+    {
+      "pdf": "brf_280938",
+      "member_count": 8,
+      "coverage": 71.8,
+      "pdf_type": "machine-readable"
+    },
+    {
+      "pdf": "brf_81563",
+      "member_count": 4,
+      "coverage": 98.3,
+      "pdf_type": "machine-readable"
+    },
+    {
+      "pdf": "brf_275608",
+      "member_count": 6,
+      "coverage": 65.0,
+      "pdf_type": "machine-readable"
+    },
+    {
+      "pdf": "brf_78730",
+      "member_count": 8,
+      "coverage": 4.3,
+      "pdf_type": "scanned"
+    },
+    {
+      "pdf": "brf_81732",
+      "member_count": 7,
+      "coverage": 78.6,
+      "pdf_type": "machine-readable"
+    },
+    {
+      "pdf": "brf_46160",
+      "member_count": 6,
+      "coverage": 70.1,
+      "pdf_type": "machine-readable"
+    },
+    {
+      "pdf": "brf_44232",
+      "member_count": 7,
+      "coverage": 68.4,
+      "pdf_type": "machine-readable"
+    },
+    {
+      "pdf": "brf_78906",
+      "member_count": 6,
+      "coverage": 6.0,
+      "pdf_type": "scanned"
+    },
+    {
+      "pdf": "brf_47903",
+      "member_count": 8,
+      "coverage": 80.3,
+      "pdf_type": "machine-readable"
+    },
+    {
+      "pdf": "brf_79101",
+      "member_count": 6,
+      "coverage": 68.4,
+      "pdf_type": "machine-readable"
+    },
+    {
+      "pdf": "brf_82839",
+      "member_count": 8,
+      "coverage": 76.1,
+      "pdf_type": "machine-readable"
+    },
+    {
+      "pdf": "brf_79510",
+      "member_count": 6,
+      "coverage": 65.0,
+      "pdf_type": "machine-readable"
+    }
+  ],
+  "failed": [
+    {
+      "pdf": "brf_43334",
+      "reason": "board_members_field_missing",
+      "coverage": 6.8,
+      "pdf_type": "machine-readable"
+    },
+    {
+      "pdf": "brf_53107",
+      "reason": "board_members_empty_list",
+      "coverage": 14.5,
+      "pdf_type": "machine-readable"
+    },
+    {
+      "pdf": "brf_83301",
+      "reason": "board_members_empty_list",
+      "coverage": 12.0,
+      "pdf_type": "machine-readable"
+    },
+    {
+      "pdf": "brf_80193",
+      "reason": "board_members_empty_list",
+      "coverage": 1.7,
+      "pdf_type": "scanned"
+    },
+    {
+      "pdf": "brf_282765",
+      "reason": "board_members_empty_list",
+      "coverage": 13.7,
+      "pdf_type": "machine-readable"
+    },
+    {
+      "pdf": "brf_57125",
+      "reason": "board_members_empty_list",
+      "coverage": 14.5,
+      "pdf_type": "machine-readable"
+    },
+    {
+      "pdf": "comprehensive_test_summary",
+      "reason": "complete_extraction_failure",
+      "coverage": 0,
+      "pdf_type": "unknown"
+    },
+    {
+      "pdf": "brf_76536",
+      "reason": "complete_extraction_failure",
+      "coverage": 0.0,
+      "pdf_type": "scanned"
+    }
+  ],
+  "success_rate": 81.3953488372093,
+  "failure_patterns": {
+    "board_members_field_missing": 1,
+    "board_members_empty_list": 5,
+    "complete_extraction_failure": 2
+  },
+  "pdf_type_distribution": {
+    "scanned": 5,
+    "machine-readable": 37,
+    "unknown": 1
+  },
+  "coverage_distribution": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ]
+}

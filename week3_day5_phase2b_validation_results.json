@@ -1,0 +1,22 @@
+{
+  "metrics": {
+    "total_fields": 59,
+    "matched_fields": 7,
+    "coverage_percent": 100.0,
+    "accuracy_percent": 11.864406779661017
+  },
+  "field_results": [
+    {
+      "field": "metadata",
+      "status": "✗ MISMATCH (Dict mismatches: brf_name: String mismatch: 'björkochplaza' != 'bostadsrättsföreningenbjörkochplaza' (similarity=54.17%); Missing key: fiscal_year_start; Missing key: fiscal_year_end)",
+      "extracted": {
+        "document_id": "769629-0134_2021",
+        "document_type": "arsredovisning",
+        "fiscal_year": 2021,
+        "report_date": null,
+        "brf_name": "Björk och Plaza",
+        "organization_number": "769629-0134",
+        "pages_total": 19,
+        "is_machine_readable": true,
+        "ocr_confidence": null,
+        "extraction_date": 

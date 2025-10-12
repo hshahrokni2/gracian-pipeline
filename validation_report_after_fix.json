@@ -1,0 +1,61 @@
+{
+  "coverage_percent": 2.9069767441860463,
+  "weighted_coverage": 2.892441860465116,
+  "accuracy_percent": 100.0,
+  "weighted_accuracy": 99.49999999999999,
+  "total_gt_fields": 172,
+  "total_matched_fields": 5,
+  "matched_fields": [
+    {
+      "canonical_name": "fiscal_year",
+      "gt_value": "2021",
+      "extracted_value": "2021",
+      "match_status": "exact",
+      "match_confidence": 0.95,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 0.975,
+      "notes": "Exact numeric match"
+    },
+    {
+      "canonical_name": "municipality",
+      "gt_value": "Stockholm",
+      "extracted_value": "Stockholm",
+      "match_status": "exact",
+      "match_confidence": 1.0,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 1.0,
+      "notes": "Exact string match (normalized)"
+    },
+    {
+      "canonical_name": "board_members",
+      "gt_value": "[{'name': 'Elvy Maria Löfvenberg', 'role': 'Ordförande', 'term_expires_at_next_meeting': True}, {'name': 'Torbjörn Andersson', 'role': 'Ledamot', 'term_expires_at_next_meeting': True}, {'name': 'Maria Annelie Eck Arvstrand', 'role': 'Ledamot', 'term_expires_at_next_meeting': True}, {'name': 'Mats Eskilson', 'role': 'Ledamot', 'term_expires_at_next_meeting': True}, {'name': 'Fredrik Linde', 'role': 'Ledamot', 'term_expires_at_next_meeting': True}, {'name': 'Lisa Lind', 'role': 'Suppleant', 'term_expires_at_next_meeting': True}, {'name': 'Daniel Wetter', 'role': 'Suppleant', 'term_expires_at_next_meeting': True}]",
+      "extracted_value": "[{'name': 'Elvy Maria Löfvenberg', 'role': 'Ordförande'}, {'name': 'Torbjörn Andersson', 'role': 'Ledamot'}, {'name': 'Maria Annelie Eck Arvstrand', 'role': 'Ledamot'}, {'name': 'Mats Eskilson', 'role': 'Ledamot'}, {'name': 'Fredrik Linde', 'role': 'Ledamot'}, {'name': 'Lisa Lind', 'role': 'Suppleant'}, {'name': 'Daniel Wetter', 'role': 'Suppleant'}]",
+      "match_status": "semantic",
+      "match_confidence": 1.0,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 1.0,
+      "notes": "List of dicts: 7/7 items matched"
+    },
+    {
+      "canonical_name": "nomination_committee",
+      "gt_value": "[{'name': 'Victoria Blennborn', 'role': 'Sammankallande'}, {'name': 'Mattias Lovén', 'role': 'Member'}]",
+      "extracted_value": "['Victoria Blennborn', 'Mattias Lovén']",
+      "match_status": "semantic",
+      "match_confidence": 1.0,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 1.0,
+      "notes": "List length match (2 items)"
+    },
+    {
+      "canonical_name": "annual_meeting_date",
+      "gt_value": "2021-06-08",
+      "extracted_value": "2021-06-08",
+      "match_status": "exact",
+      "match_confidence": 1.0,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 1.0,
+      "notes": "Exact string match (normalized)"
+    }
+  ],
+  "summary": "\nValidation Report Summary:\n==========================\nCoverage: 2.9% (raw), 2.9% (weighted)\nAccuracy: 100.0% (raw), 99.5% (weighted)\n\nField Breakdown:\n  Total GT fields: 172\n  Matched fields: 5\n  High confidence (>0.9): 5\n  Medium confidence (0.7-0.9): 0\n  Low confidence (<0.7): 0\n\n95/95 Score: 51.2%\n"
+}
