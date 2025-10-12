@@ -1,0 +1,1160 @@
+{
+  "srs_field_counts": {
+    "metadata": 27,
+    "metadata.document_id": 27,
+    "metadata.document_type": 27,
+    "metadata.fiscal_year": 27,
+    "metadata.fiscal_year.value": 27,
+    "metadata.fiscal_year.confidence": 27,
+    "metadata.fiscal_year.source": 27,
+    "metadata.brf_name": 27,
+    "metadata.brf_name.value": 27,
+    "metadata.brf_name.confidence": 27,
+    "metadata.brf_name.source": 27,
+    "metadata.organization_number": 27,
+    "metadata.organization_number.value": 27,
+    "metadata.organization_number.confidence": 27,
+    "metadata.organization_number.source": 27,
+    "metadata.pages_total": 27,
+    "metadata.is_machine_readable": 27,
+    "metadata.extraction_date": 27,
+    "metadata.extraction_mode": 27,
+    "metadata.extraction_version": 27,
+    "metadata.file_path": 27,
+    "metadata.file_size_bytes": 27,
+    "metadata.file_hash_sha256": 27,
+    "governance": 26,
+    "governance.chairman": 18,
+    "governance.chairman.value": 18,
+    "governance.chairman.confidence": 18,
+    "governance.chairman.source": 18,
+    "governance.board_members": 20,
+    "governance.board_members.full_name": 146,
+    "governance.board_members.full_name.value": 146,
+    "governance.board_members.full_name.confidence": 146,
+    "governance.board_members.full_name.source": 146,
+    "governance.board_members.role": 146,
+    "governance.nomination_committee": 26,
+    "governance.nomination_committee.confidence": 26,
+    "governance.nomination_committee.source": 26,
+    "financial": 26,
+    "financial.income_statement": 26,
+    "financial.balance_sheet": 26,
+    "property": 26,
+    "fees": 26,
+    "loans": 15,
+    "loans.lender": 54,
+    "loans.lender.confidence": 54,
+    "loans.lender.source": 54,
+    "loans.outstanding_balance": 54,
+    "loans.outstanding_balance.value": 54,
+    "loans.outstanding_balance.confidence": 54,
+    "loans.outstanding_balance.source": 54,
+    "extraction_quality": 27,
+    "extraction_quality.coverage_percentage": 27,
+    "extraction_quality.confidence_score": 27,
+    "extraction_quality.total_fields": 27,
+    "extraction_quality.evidence_ratio": 27,
+    "coverage_percentage": 27,
+    "confidence_score": 27,
+    "metadata.fiscal_year.evidence_pages": 13,
+    "metadata.brf_name.evidence_pages": 18,
+    "metadata.organization_number.evidence_pages": 22,
+    "governance.board_members.source_page": 129,
+    "governance.primary_auditor": 23,
+    "governance.primary_auditor.name": 23,
+    "governance.primary_auditor.name.value": 23,
+    "governance.primary_auditor.name.confidence": 23,
+    "governance.primary_auditor.name.source": 23,
+    "governance.primary_auditor.firm": 21,
+    "governance.primary_auditor.firm.value": 21,
+    "governance.primary_auditor.firm.confidence": 21,
+    "governance.primary_auditor.firm.source": 21,
+    "governance.primary_auditor.source_page": 20,
+    "governance.nomination_committee.value": 16,
+    "governance.source_pages": 20,
+    "financial.income_statement.revenue_total": 18,
+    "financial.income_statement.revenue_total.value": 18,
+    "financial.income_statement.revenue_total.confidence": 18,
+    "financial.income_statement.revenue_total.source": 18,
+    "financial.income_statement.expenses_total": 18,
+    "financial.income_statement.expenses_total.value": 18,
+    "financial.income_statement.expenses_total.confidence": 18,
+    "financial.income_statement.expenses_total.source": 18,
+    "financial.income_statement.result_after_tax": 18,
+    "financial.income_statement.result_after_tax.value": 18,
+    "financial.income_statement.result_after_tax.confidence": 18,
+    "financial.income_statement.result_after_tax.source": 18,
+    "financial.income_statement.source_pages": 18,
+    "financial.balance_sheet.assets_total": 18,
+    "financial.balance_sheet.assets_total.value": 18,
+    "financial.balance_sheet.assets_total.confidence": 18,
+    "financial.balance_sheet.assets_total.source": 18,
+    "financial.balance_sheet.liabilities_total": 18,
+    "financial.balance_sheet.liabilities_total.value": 18,
+    "financial.balance_sheet.liabilities_total.confidence": 18,
+    "financial.balance_sheet.liabilities_total.source": 18,
+    "financial.balance_sheet.equity_total": 18,
+    "financial.balance_sheet.equity_total.value": 18,
+    "financial.balance_sheet.equity_total.confidence": 18,
+    "financial.balance_sheet.equity_total.source": 18,
+    "financial.balance_sheet.source_pages": 18,
+    "notes": 18,
+    "notes.note_8_buildings": 18,
+    "notes.note_8_buildings.source_pages": 18,
+    "notes.total_notes": 18,
+    "property.municipality": 17,
+    "property.municipality.value": 17,
+    "property.municipality.confidence": 17,
+    "property.municipality.source": 17,
+    "property.apartment_distribution": 17,
+    "property.apartment_distribution.one_room": 17,
+    "property.apartment_distribution.two_rooms": 17,
+    "property.apartment_distribution.three_rooms": 17,
+    "property.apartment_distribution.four_rooms": 17,
+    "property.apartment_distribution.five_rooms": 17,
+    "property.apartment_distribution.more_than_five": 17,
+    "property.commercial_tenants": 7,
+    "property.commercial_tenants.business_name": 13,
+    "property.commercial_tenants.business_name.value": 13,
+    "property.commercial_tenants.business_name.confidence": 13,
+    "property.commercial_tenants.business_name.source": 13,
+    "property.commercial_tenants.source_page": 13,
+    "property.source_pages": 18,
+    "fees.arsavgift_per_sqm_total": 18,
+    "fees.arsavgift_per_sqm_total.value": 18,
+    "fees.arsavgift_per_sqm_total.confidence": 18,
+    "fees.arsavgift_per_sqm_total.source": 18,
+    "fees.annual_fee_per_sqm": 18,
+    "fees.annual_fee_per_sqm.value": 18,
+    "fees.annual_fee_per_sqm.confidence": 18,
+    "fees.annual_fee_per_sqm.source": 18,
+    "fees.source_pages": 18,
+    "loans.lender.value": 53,
+    "loans.interest_rate": 53,
+    "loans.interest_rate.value": 53,
+    "loans.interest_rate.confidence": 53,
+    "loans.interest_rate.source": 53,
+    "loans.source_page": 53,
+    "all_source_pages": 20,
+    "financial.balance_sheet.liabilities_total.validation_status": 2,
+    "governance.nomination_committee.value.name": 4,
+    "governance.nomination_committee.value.role": 3,
+    "property.property_designation": 2,
+    "property.property_designation.value": 2,
+    "property.property_designation.confidence": 2,
+    "property.property_designation.source": 2
+  },
+  "hjorthagen_field_counts": {
+    "metadata": 15,
+    "metadata.document_id": 15,
+    "metadata.document_type": 15,
+    "metadata.fiscal_year": 15,
+    "metadata.fiscal_year.value": 15,
+    "metadata.fiscal_year.confidence": 15,
+    "metadata.fiscal_year.source": 15,
+    "metadata.brf_name": 15,
+    "metadata.brf_name.value": 15,
+    "metadata.brf_name.confidence": 15,
+    "metadata.brf_name.source": 15,
+    "metadata.brf_name.evidence_pages": 14,
+    "metadata.organization_number": 15,
+    "metadata.organization_number.value": 15,
+    "metadata.organization_number.confidence": 15,
+    "metadata.organization_number.source": 15,
+    "metadata.organization_number.evidence_pages": 13,
+    "metadata.pages_total": 15,
+    "metadata.is_machine_readable": 15,
+    "metadata.extraction_date": 15,
+    "metadata.extraction_mode": 15,
+    "metadata.extraction_version": 15,
+    "metadata.file_path": 15,
+    "metadata.file_size_bytes": 15,
+    "metadata.file_hash_sha256": 15,
+    "governance": 15,
+    "governance.chairman": 15,
+    "governance.chairman.value": 15,
+    "governance.chairman.confidence": 15,
+    "governance.chairman.source": 15,
+    "governance.board_members": 15,
+    "governance.board_members.full_name": 94,
+    "governance.board_members.full_name.value": 94,
+    "governance.board_members.full_name.confidence": 94,
+    "governance.board_members.full_name.source": 94,
+    "governance.board_members.role": 94,
+    "governance.board_members.source_page": 88,
+    "governance.primary_auditor": 15,
+    "governance.primary_auditor.name": 15,
+    "governance.primary_auditor.name.value": 15,
+    "governance.primary_auditor.name.confidence": 15,
+    "governance.primary_auditor.name.source": 15,
+    "governance.primary_auditor.firm": 12,
+    "governance.primary_auditor.firm.value": 12,
+    "governance.primary_auditor.firm.confidence": 12,
+    "governance.primary_auditor.firm.source": 12,
+    "governance.primary_auditor.source_page": 14,
+    "governance.nomination_committee": 15,
+    "governance.nomination_committee.value": 12,
+    "governance.nomination_committee.confidence": 15,
+    "governance.nomination_committee.source": 15,
+    "governance.source_pages": 14,
+    "financial": 15,
+    "financial.income_statement": 15,
+    "financial.income_statement.revenue_total": 14,
+    "financial.income_statement.revenue_total.value": 14,
+    "financial.income_statement.revenue_total.confidence": 14,
+    "financial.income_statement.revenue_total.source": 14,
+    "financial.income_statement.expenses_total": 14,
+    "financial.income_statement.expenses_total.value": 14,
+    "financial.income_statement.expenses_total.confidence": 14,
+    "financial.income_statement.expenses_total.source": 14,
+    "financial.income_statement.result_after_tax": 14,
+    "financial.income_statement.result_after_tax.value": 14,
+    "financial.income_statement.result_after_tax.confidence": 14,
+    "financial.income_statement.result_after_tax.source": 14,
+    "financial.income_statement.source_pages": 14,
+    "financial.balance_sheet": 15,
+    "financial.balance_sheet.assets_total": 14,
+    "financial.balance_sheet.assets_total.value": 14,
+    "financial.balance_sheet.assets_total.confidence": 14,
+    "financial.balance_sheet.assets_total.source": 14,
+    "financial.balance_sheet.liabilities_total": 14,
+    "financial.balance_sheet.liabilities_total.value": 14,
+    "financial.balance_sheet.liabilities_total.confidence": 14,
+    "financial.balance_sheet.liabilities_total.source": 14,
+    "financial.balance_sheet.equity_total": 14,
+    "financial.balance_sheet.equity_total.value": 14,
+    "financial.balance_sheet.equity_total.confidence": 14,
+    "financial.balance_sheet.equity_total.source": 14,
+    "financial.balance_sheet.source_pages": 14,
+    "notes": 14,
+    "notes.note_8_buildings": 14,
+    "notes.note_8_buildings.source_pages": 14,
+    "notes.total_notes": 14,
+    "property": 15,
+    "property.municipality": 14,
+    "property.municipality.value": 14,
+    "property.municipality.confidence": 14,
+    "property.municipality.source": 14,
+    "property.apartment_distribution": 14,
+    "property.apartment_distribution.one_room": 14,
+    "property.apartment_distribution.two_rooms": 14,
+    "property.apartment_distribution.three_rooms": 14,
+    "property.apartment_distribution.four_rooms": 14,
+    "property.apartment_distribution.five_rooms": 14,
+    "property.apartment_distribution.more_than_five": 14,
+    "property.commercial_tenants": 6,
+    "property.commercial_tenants.business_name": 17,
+    "property.commercial_tenants.business_name.value": 17,
+    "property.commercial_tenants.business_name.confidence": 17,
+    "property.commercial_tenants.business_name.source": 17,
+    "property.commercial_tenants.source_page": 17,
+    "property.source_pages": 14,
+    "fees": 15,
+    "fees.arsavgift_per_sqm_total": 14,
+    "fees.arsavgift_per_sqm_total.value": 14,
+    "fees.arsavgift_per_sqm_total.confidence": 14,
+    "fees.arsavgift_per_sqm_total.source": 14,
+    "fees.annual_fee_per_sqm": 14,
+    "fees.annual_fee_per_sqm.value": 14,
+    "fees.annual_fee_per_sqm.confidence": 14,
+    "fees.annual_fee_per_sqm.source": 14,
+    "fees.source_pages": 14,
+    "extraction_quality": 15,
+    "extraction_quality.coverage_percentage": 15,
+    "extraction_quality.confidence_score": 15,
+    "extraction_quality.total_fields": 15,
+    "extraction_quality.evidence_ratio": 15,
+    "coverage_percentage": 15,
+    "confidence_score": 15,
+    "all_source_pages": 14,
+    "metadata.fiscal_year.evidence_pages": 6,
+    "loans": 9,
+    "loans.lender": 28,
+    "loans.lender.value": 27,
+    "loans.lender.confidence": 28,
+    "loans.lender.source": 28,
+    "loans.outstanding_balance": 28,
+    "loans.outstanding_balance.value": 28,
+    "loans.outstanding_balance.confidence": 28,
+    "loans.outstanding_balance.source": 28,
+    "loans.interest_rate": 27,
+    "loans.interest_rate.value": 27,
+    "loans.interest_rate.confidence": 27,
+    "loans.interest_rate.source": 27,
+    "loans.source_page": 27,
+    "financial.balance_sheet.liabilities_total.validation_status": 2,
+    "governance.nomination_committee.value.name": 2,
+    "governance.nomination_committee.value.role": 2,
+    "property.property_designation": 1,
+    "property.property_designation.value": 1,
+    "property.property_designation.confidence": 1,
+    "property.property_designation.source": 1
+  },
+  "gaps": [
+    {
+      "field": "governance.board_members.source_page",
+      "srs_rate": 477.77777777777777,
+      "hjorthagen_rate": 586.6666666666666,
+      "gap": 108.88888888888886
+    },
+    {
+      "field": "governance.board_members.role",
+      "srs_rate": 540.7407407407408,
+      "hjorthagen_rate": 626.6666666666666,
+      "gap": 85.92592592592587
+    },
+    {
+      "field": "governance.board_members.full_name.source",
+      "srs_rate": 540.7407407407408,
+      "hjorthagen_rate": 626.6666666666666,
+      "gap": 85.92592592592587
+    },
+    {
+      "field": "governance.board_members.full_name.value",
+      "srs_rate": 540.7407407407408,
+      "hjorthagen_rate": 626.6666666666666,
+      "gap": 85.92592592592587
+    },
+    {
+      "field": "governance.board_members.full_name.confidence",
+      "srs_rate": 540.7407407407408,
+      "hjorthagen_rate": 626.6666666666666,
+      "gap": 85.92592592592587
+    },
+    {
+      "field": "governance.board_members.full_name",
+      "srs_rate": 540.7407407407408,
+      "hjorthagen_rate": 626.6666666666666,
+      "gap": 85.92592592592587
+    },
+    {
+      "field": "property.commercial_tenants.source_page",
+      "srs_rate": 48.148148148148145,
+      "hjorthagen_rate": 113.33333333333333,
+      "gap": 65.18518518518519
+    },
+    {
+      "field": "property.commercial_tenants.business_name",
+      "srs_rate": 48.148148148148145,
+      "hjorthagen_rate": 113.33333333333333,
+      "gap": 65.18518518518519
+    },
+    {
+      "field": "property.commercial_tenants.business_name.value",
+      "srs_rate": 48.148148148148145,
+      "hjorthagen_rate": 113.33333333333333,
+      "gap": 65.18518518518519
+    },
+    {
+      "field": "property.commercial_tenants.business_name.source",
+      "srs_rate": 48.148148148148145,
+      "hjorthagen_rate": 113.33333333333333,
+      "gap": 65.18518518518519
+    },
+    {
+      "field": "property.commercial_tenants.business_name.confidence",
+      "srs_rate": 48.148148148148145,
+      "hjorthagen_rate": 113.33333333333333,
+      "gap": 65.18518518518519
+    },
+    {
+      "field": "governance.chairman.source",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 100.0,
+      "gap": 33.33333333333334
+    },
+    {
+      "field": "governance.chairman.value",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 100.0,
+      "gap": 33.33333333333334
+    },
+    {
+      "field": "governance.chairman.confidence",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 100.0,
+      "gap": 33.33333333333334
+    },
+    {
+      "field": "governance.chairman",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 100.0,
+      "gap": 33.33333333333334
+    },
+    {
+      "field": "property.municipality.confidence",
+      "srs_rate": 62.96296296296296,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 30.370370370370367
+    },
+    {
+      "field": "property.municipality",
+      "srs_rate": 62.96296296296296,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 30.370370370370367
+    },
+    {
+      "field": "property.apartment_distribution.two_rooms",
+      "srs_rate": 62.96296296296296,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 30.370370370370367
+    },
+    {
+      "field": "property.municipality.source",
+      "srs_rate": 62.96296296296296,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 30.370370370370367
+    },
+    {
+      "field": "property.apartment_distribution.one_room",
+      "srs_rate": 62.96296296296296,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 30.370370370370367
+    },
+    {
+      "field": "property.apartment_distribution.five_rooms",
+      "srs_rate": 62.96296296296296,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 30.370370370370367
+    },
+    {
+      "field": "property.municipality.value",
+      "srs_rate": 62.96296296296296,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 30.370370370370367
+    },
+    {
+      "field": "property.apartment_distribution",
+      "srs_rate": 62.96296296296296,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 30.370370370370367
+    },
+    {
+      "field": "property.apartment_distribution.three_rooms",
+      "srs_rate": 62.96296296296296,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 30.370370370370367
+    },
+    {
+      "field": "property.apartment_distribution.more_than_five",
+      "srs_rate": 62.96296296296296,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 30.370370370370367
+    },
+    {
+      "field": "property.apartment_distribution.four_rooms",
+      "srs_rate": 62.96296296296296,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 30.370370370370367
+    },
+    {
+      "field": "financial.income_statement.result_after_tax.source",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "financial.balance_sheet.liabilities_total",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "financial.balance_sheet.source_pages",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "fees.annual_fee_per_sqm.source",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "financial.income_statement.revenue_total.source",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "property.source_pages",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "financial.balance_sheet.assets_total.confidence",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "financial.income_statement.expenses_total.value",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "financial.income_statement.result_after_tax.value",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "notes.note_8_buildings.source_pages",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "financial.income_statement.result_after_tax.confidence",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "fees.arsavgift_per_sqm_total.value",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "financial.balance_sheet.liabilities_total.value",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "fees.source_pages",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "fees.annual_fee_per_sqm.confidence",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "financial.income_statement.expenses_total",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "financial.balance_sheet.assets_total.value",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "financial.balance_sheet.liabilities_total.confidence",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "financial.income_statement.expenses_total.source",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "notes.note_8_buildings",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "financial.income_statement.revenue_total.confidence",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "financial.balance_sheet.equity_total.source",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "fees.arsavgift_per_sqm_total.confidence",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "fees.arsavgift_per_sqm_total.source",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "financial.income_statement.revenue_total.value",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "financial.balance_sheet.liabilities_total.source",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "financial.income_statement.revenue_total",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "fees.arsavgift_per_sqm_total",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "financial.balance_sheet.equity_total.confidence",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "fees.annual_fee_per_sqm.value",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "financial.balance_sheet.assets_total",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "notes.total_notes",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "financial.balance_sheet.assets_total.source",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "notes",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "financial.balance_sheet.equity_total",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "financial.income_statement.result_after_tax",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "metadata.brf_name.evidence_pages",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "financial.income_statement.expenses_total.confidence",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "financial.income_statement.source_pages",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "financial.balance_sheet.equity_total.value",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "fees.annual_fee_per_sqm",
+      "srs_rate": 66.66666666666666,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 26.66666666666667
+    },
+    {
+      "field": "governance.board_members",
+      "srs_rate": 74.07407407407408,
+      "hjorthagen_rate": 100.0,
+      "gap": 25.925925925925924
+    },
+    {
+      "field": "governance.nomination_committee.value",
+      "srs_rate": 59.25925925925925,
+      "hjorthagen_rate": 80.0,
+      "gap": 20.740740740740748
+    },
+    {
+      "field": "governance.source_pages",
+      "srs_rate": 74.07407407407408,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 19.259259259259252
+    },
+    {
+      "field": "all_source_pages",
+      "srs_rate": 74.07407407407408,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 19.259259259259252
+    },
+    {
+      "field": "governance.primary_auditor.source_page",
+      "srs_rate": 74.07407407407408,
+      "hjorthagen_rate": 93.33333333333333,
+      "gap": 19.259259259259252
+    },
+    {
+      "field": "loans.lender.value",
+      "srs_rate": 196.2962962962963,
+      "hjorthagen_rate": 180.0,
+      "gap": -16.296296296296305
+    },
+    {
+      "field": "loans.interest_rate.source",
+      "srs_rate": 196.2962962962963,
+      "hjorthagen_rate": 180.0,
+      "gap": -16.296296296296305
+    },
+    {
+      "field": "loans.interest_rate.value",
+      "srs_rate": 196.2962962962963,
+      "hjorthagen_rate": 180.0,
+      "gap": -16.296296296296305
+    },
+    {
+      "field": "loans.interest_rate.confidence",
+      "srs_rate": 196.2962962962963,
+      "hjorthagen_rate": 180.0,
+      "gap": -16.296296296296305
+    },
+    {
+      "field": "loans.interest_rate",
+      "srs_rate": 196.2962962962963,
+      "hjorthagen_rate": 180.0,
+      "gap": -16.296296296296305
+    },
+    {
+      "field": "loans.source_page",
+      "srs_rate": 196.2962962962963,
+      "hjorthagen_rate": 180.0,
+      "gap": -16.296296296296305
+    },
+    {
+      "field": "governance.primary_auditor.name.confidence",
+      "srs_rate": 85.18518518518519,
+      "hjorthagen_rate": 100.0,
+      "gap": 14.81481481481481
+    },
+    {
+      "field": "governance.primary_auditor.name.value",
+      "srs_rate": 85.18518518518519,
+      "hjorthagen_rate": 100.0,
+      "gap": 14.81481481481481
+    },
+    {
+      "field": "governance.primary_auditor",
+      "srs_rate": 85.18518518518519,
+      "hjorthagen_rate": 100.0,
+      "gap": 14.81481481481481
+    },
+    {
+      "field": "governance.primary_auditor.name",
+      "srs_rate": 85.18518518518519,
+      "hjorthagen_rate": 100.0,
+      "gap": 14.81481481481481
+    },
+    {
+      "field": "governance.primary_auditor.name.source",
+      "srs_rate": 85.18518518518519,
+      "hjorthagen_rate": 100.0,
+      "gap": 14.81481481481481
+    },
+    {
+      "field": "property.commercial_tenants",
+      "srs_rate": 25.925925925925924,
+      "hjorthagen_rate": 40.0,
+      "gap": 14.074074074074076
+    },
+    {
+      "field": "loans.outstanding_balance.confidence",
+      "srs_rate": 200.0,
+      "hjorthagen_rate": 186.66666666666666,
+      "gap": -13.333333333333343
+    },
+    {
+      "field": "loans.outstanding_balance.value",
+      "srs_rate": 200.0,
+      "hjorthagen_rate": 186.66666666666666,
+      "gap": -13.333333333333343
+    },
+    {
+      "field": "loans.lender.source",
+      "srs_rate": 200.0,
+      "hjorthagen_rate": 186.66666666666666,
+      "gap": -13.333333333333343
+    },
+    {
+      "field": "loans.outstanding_balance.source",
+      "srs_rate": 200.0,
+      "hjorthagen_rate": 186.66666666666666,
+      "gap": -13.333333333333343
+    },
+    {
+      "field": "loans.outstanding_balance",
+      "srs_rate": 200.0,
+      "hjorthagen_rate": 186.66666666666666,
+      "gap": -13.333333333333343
+    },
+    {
+      "field": "loans.lender",
+      "srs_rate": 200.0,
+      "hjorthagen_rate": 186.66666666666666,
+      "gap": -13.333333333333343
+    },
+    {
+      "field": "loans.lender.confidence",
+      "srs_rate": 200.0,
+      "hjorthagen_rate": 186.66666666666666,
+      "gap": -13.333333333333343
+    },
+    {
+      "field": "metadata.fiscal_year.evidence_pages",
+      "srs_rate": 48.148148148148145,
+      "hjorthagen_rate": 40.0,
+      "gap": -8.148148148148145
+    },
+    {
+      "field": "financial.balance_sheet.liabilities_total.validation_status",
+      "srs_rate": 7.4074074074074066,
+      "hjorthagen_rate": 13.333333333333334,
+      "gap": 5.925925925925927
+    },
+    {
+      "field": "metadata.organization_number.evidence_pages",
+      "srs_rate": 81.48148148148148,
+      "hjorthagen_rate": 86.66666666666667,
+      "gap": 5.1851851851851904
+    },
+    {
+      "field": "loans",
+      "srs_rate": 55.55555555555556,
+      "hjorthagen_rate": 60.0,
+      "gap": 4.444444444444443
+    },
+    {
+      "field": "governance",
+      "srs_rate": 96.29629629629629,
+      "hjorthagen_rate": 100.0,
+      "gap": 3.7037037037037095
+    },
+    {
+      "field": "financial.balance_sheet",
+      "srs_rate": 96.29629629629629,
+      "hjorthagen_rate": 100.0,
+      "gap": 3.7037037037037095
+    },
+    {
+      "field": "financial",
+      "srs_rate": 96.29629629629629,
+      "hjorthagen_rate": 100.0,
+      "gap": 3.7037037037037095
+    },
+    {
+      "field": "property",
+      "srs_rate": 96.29629629629629,
+      "hjorthagen_rate": 100.0,
+      "gap": 3.7037037037037095
+    },
+    {
+      "field": "fees",
+      "srs_rate": 96.29629629629629,
+      "hjorthagen_rate": 100.0,
+      "gap": 3.7037037037037095
+    },
+    {
+      "field": "governance.nomination_committee.confidence",
+      "srs_rate": 96.29629629629629,
+      "hjorthagen_rate": 100.0,
+      "gap": 3.7037037037037095
+    },
+    {
+      "field": "governance.nomination_committee.source",
+      "srs_rate": 96.29629629629629,
+      "hjorthagen_rate": 100.0,
+      "gap": 3.7037037037037095
+    },
+    {
+      "field": "financial.income_statement",
+      "srs_rate": 96.29629629629629,
+      "hjorthagen_rate": 100.0,
+      "gap": 3.7037037037037095
+    },
+    {
+      "field": "governance.nomination_committee",
+      "srs_rate": 96.29629629629629,
+      "hjorthagen_rate": 100.0,
+      "gap": 3.7037037037037095
+    },
+    {
+      "field": "governance.nomination_committee.value.role",
+      "srs_rate": 11.11111111111111,
+      "hjorthagen_rate": 13.333333333333334,
+      "gap": 2.222222222222223
+    },
+    {
+      "field": "governance.primary_auditor.firm.value",
+      "srs_rate": 77.77777777777779,
+      "hjorthagen_rate": 80.0,
+      "gap": 2.2222222222222143
+    },
+    {
+      "field": "governance.primary_auditor.firm.confidence",
+      "srs_rate": 77.77777777777779,
+      "hjorthagen_rate": 80.0,
+      "gap": 2.2222222222222143
+    },
+    {
+      "field": "governance.primary_auditor.firm.source",
+      "srs_rate": 77.77777777777779,
+      "hjorthagen_rate": 80.0,
+      "gap": 2.2222222222222143
+    },
+    {
+      "field": "governance.primary_auditor.firm",
+      "srs_rate": 77.77777777777779,
+      "hjorthagen_rate": 80.0,
+      "gap": 2.2222222222222143
+    },
+    {
+      "field": "governance.nomination_committee.value.name",
+      "srs_rate": 14.814814814814813,
+      "hjorthagen_rate": 13.333333333333334,
+      "gap": -1.4814814814814792
+    },
+    {
+      "field": "property.property_designation.confidence",
+      "srs_rate": 7.4074074074074066,
+      "hjorthagen_rate": 6.666666666666667,
+      "gap": -0.7407407407407396
+    },
+    {
+      "field": "property.property_designation.value",
+      "srs_rate": 7.4074074074074066,
+      "hjorthagen_rate": 6.666666666666667,
+      "gap": -0.7407407407407396
+    },
+    {
+      "field": "property.property_designation",
+      "srs_rate": 7.4074074074074066,
+      "hjorthagen_rate": 6.666666666666667,
+      "gap": -0.7407407407407396
+    },
+    {
+      "field": "property.property_designation.source",
+      "srs_rate": 7.4074074074074066,
+      "hjorthagen_rate": 6.666666666666667,
+      "gap": -0.7407407407407396
+    },
+    {
+      "field": "metadata.file_size_bytes",
+      "srs_rate": 100.0,
+      "hjorthagen_rate": 100.0,
+      "gap": 0.0
+    },
+    {
+      "field": "metadata.brf_name",
+      "srs_rate": 100.0,
+      "hjorthagen_rate": 100.0,
+      "gap": 0.0
+    },
+    {
+      "field": "metadata.extraction_version",
+      "srs_rate": 100.0,
+      "hjorthagen_rate": 100.0,
+      "gap": 0.0
+    },
+    {
+      "field": "metadata.file_hash_sha256",
+      "srs_rate": 100.0,
+      "hjorthagen_rate": 100.0,
+      "gap": 0.0
+    },
+    {
+      "field": "metadata.brf_name.confidence",
+      "srs_rate": 100.0,
+      "hjorthagen_rate": 100.0,
+      "gap": 0.0
+    },
+    {
+      "field": "metadata.organization_number",
+      "srs_rate": 100.0,
+      "hjorthagen_rate": 100.0,
+      "gap": 0.0
+    },
+    {
+      "field": "metadata.is_machine_readable",
+      "srs_rate": 100.0,
+      "hjorthagen_rate": 100.0,
+      "gap": 0.0
+    },
+    {
+      "field": "metadata.extraction_mode",
+      "srs_rate": 100.0,
+      "hjorthagen_rate": 100.0,
+      "gap": 0.0
+    },
+    {
+      "field": "confidence_score",
+      "srs_rate": 100.0,
+      "hjorthagen_rate": 100.0,
+      "gap": 0.0
+    },
+    {
+      "field": "metadata.pages_total",
+      "srs_rate": 100.0,
+      "hjorthagen_rate": 100.0,
+      "gap": 0.0
+    },
+    {
+      "field": "metadata.organization_number.value",
+      "srs_rate": 100.0,
+      "hjorthagen_rate": 100.0,
+      "gap": 0.0
+    },
+    {
+      "field": "metadata",
+      "srs_rate": 100.0,
+      "hjorthagen_rate": 100.0,
+      "gap": 0.0
+    },
+    {
+      "field": "metadata.document_type",
+      "srs_rate": 100.0,
+      "hjorthagen_rate": 100.0,
+      "gap": 0.0
+    },
+    {
+      "field": "extraction_quality.evidence_ratio",
+      "srs_rate": 100.0,
+      "hjorthagen_rate": 100.0,
+      "gap": 0.0
+    },
+    {
+      "field": "metadata.fiscal_year.confidence",
+      "srs_rate": 100.0,
+      "hjorthagen_rate": 100.0,
+      "gap": 0.0
+    },
+    {
+      "field": "metadata.extraction_date",
+      "srs_rate": 100.0,
+      "hjorthagen_rate": 100.0,
+      "gap": 0.0
+    },
+    {
+      "field": "extraction_quality.confidence_score",
+      "srs_rate": 100.0,
+      "hjorthagen_rate": 100.0,
+      "gap": 0.0
+    },
+    {
+      "field": "metadata.document_id",
+      "srs_rate": 100.0,
+      "hjorthagen_rate": 100.0,
+      "gap": 0.0
+    },
+    {
+      "field": "metadata.brf_name.value",
+      "srs_rate": 100.0,
+      "hjorthagen_rate": 100.0,
+      "gap": 0.0
+    },
+    {
+      "field": "metadata.organization_number.confidence",
+      "srs_rate": 100.0,
+      "hjorthagen_rate": 100.0,
+      "gap": 0.0
+    },
+    {
+      "field": "extraction_quality",
+      "srs_rate": 100.0,
+      "hjorthagen_rate": 100.0,
+      "gap": 0.0
+    },
+    {
+      "field": "metadata.fiscal_year.source",
+      "srs_rate": 100.0,
+      "hjorthagen_rate": 100.0,
+      "gap": 0.0
+    },
+    {
+      "field": "metadata.brf_name.source",
+      "srs_rate": 100.0,
+      "hjorthagen_rate": 100.0,
+      "gap": 0.0
+    },
+    {
+      "field": "extraction_quality.coverage_percentage",
+      "srs_rate": 100.0,
+      "hjorthagen_rate": 100.0,
+      "gap": 0.0
+    },
+    {
+      "field": "metadata.organization_number.source",
+      "srs_rate": 100.0,
+      "hjorthagen_rate": 100.0,
+      "gap": 0.0
+    },
+    {
+      "field": "coverage_percentage",
+      "srs_rate": 100.0,
+      "hjorthagen_rate": 100.0,
+      "gap": 0.0
+    },
+    {
+      "field": "metadata.file_path",
+      "srs_rate": 100.0,
+      "hjorthagen_rate": 100.0,
+      "gap": 0.0
+    },
+    {
+      "field": "metadata.fiscal_year.value",
+      "srs_rate": 100.0,
+      "hjorthagen_rate": 100.0,
+      "gap": 0.0
+    },
+    {
+      "field": "metadata.fiscal_year",
+      "srs_rate": 100.0,
+      "hjorthagen_rate": 100.0,
+      "gap": 0.0
+    },
+    {
+      "field": "extraction_quality.total_fields",
+      "srs_rate": 100.0,
+      "hjorthagen_rate": 100.0,
+      "gap": 0.0
+    }
+  ]
+}

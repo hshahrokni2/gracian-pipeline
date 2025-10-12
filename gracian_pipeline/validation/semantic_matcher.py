@@ -323,7 +323,20 @@ class SemanticFieldMatcher:
                 "totalarea"
             ],
 
-            # Fee variations
+            # Fee variations (WITH per_sqm compounds - critical for validation!)
+            "annual_fee_per_sqm": [
+                "arsavgift_per_sqm_total",
+                "arsavgift_per_sqm",
+                "annual_fee_sqm",
+                "avgift_per_kvm_ar",
+                "yearly_fee_per_sqm"
+            ],
+            "monthly_fee_per_sqm": [
+                "manadsavgift_per_sqm",
+                "monthly_fee_sqm",
+                "avgift_per_kvm_manad",
+                "monthly_fee_per_m2"
+            ],
             "monthly_fee_average": [
                 "manadsavgift_per_apartment_avg",
                 "average_monthly_fee",
@@ -333,6 +346,33 @@ class SemanticFieldMatcher:
                 "arsavgift_per_apartment_avg",
                 "average_annual_fee",
                 "genomsnittlig_årsavgift"
+            ],
+
+            # Revenue and cost breakdown variations (critical for Note validation!)
+            "revenue_breakdown": [
+                "revenue_breakdown_2021",
+                "revenue_breakdown_2020",
+                "intaktsfordelning",
+                "intakter_specifikation"
+            ],
+            "operating_costs": [
+                "operating_costs_2021",
+                "operating_costs_2020",
+                "driftkostnader",
+                "rörelsekostnader"
+            ],
+            "other_operating_income": [
+                "other_operating_income_2021",
+                "other_operating_income_2020",
+                "ovriga_rorelsein täkter"
+            ],
+
+            # Multi-year data mappings
+            "total_loans": [
+                "total_loans_2021",
+                "total_loans_2020",
+                "totala_lan",
+                "summa_skulder"
             ],
 
             # Note-specific variations
@@ -421,20 +461,22 @@ class SemanticFieldMatcher:
         # NEW: Strip year suffix from field name before searching
         base_field_name, year = self._normalize_field_name_with_year(canonical_field_name)
 
-        # Strategy 1: Direct match (highest confidence) - using base name without year
-        # FIXED: Search nested dictionaries (extraction is agent-based, not flat)
-        value, conf = self._search_nested_dict(data, base_field_name)
-        if value is not None:
-            return value, 1.0  # High confidence for exact field name match
-
-        # Strategy 2: Synonym match
+        # Build comprehensive search list: canonical field + all synonyms
+        # This ensures we search ALL possible names in nested structures
+        search_terms = [base_field_name]
         synonyms = self.field_synonyms.get(base_field_name, [])
-        for synonym in synonyms:
-            value, conf = self._search_nested_dict(data, synonym)
-            if value is not None:
-                return value, 0.95
+        search_terms.extend(synonyms)
 
-        # Strategy 3: Fuzzy path matching
+        # Strategy 1+2 COMBINED: Search for canonical field AND all synonyms in nested structure
+        # This fixes the issue where nested fields weren't found even with synonyms defined
+        for i, term in enumerate(search_terms):
+            value, conf = self._search_nested_dict(data, term)
+            if value is not None:
+                # First term is canonical (confidence 1.0), rest are synonyms (confidence 0.95)
+                confidence = 1.0 if i == 0 else 0.95
+                return value, confidence
+
+        # Strategy 3: Fuzzy path matching (fallback if no exact/synonym match)
         fuzzy_matches = self._fuzzy_path_search(data, base_field_name)
         if fuzzy_matches:
             best_match = max(fuzzy_matches, key=lambda x: x[1])

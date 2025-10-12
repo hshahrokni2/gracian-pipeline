@@ -1,15 +1,15 @@
 {
   "summary": {
-    "coverage_percent": 3.488372093023256,
+    "coverage_percent": 5.813953488372093,
     "accuracy_percent": 100.0,
-    "weighted_coverage": 3.328488372093023,
-    "weighted_accuracy": 95.41666666666667,
-    "95_95_score": 49.372577519379846,
+    "weighted_coverage": 5.66860465116279,
+    "weighted_accuracy": 97.49999999999999,
+    "95_95_score": 51.58430232558139,
     "total_gt_fields": 172,
-    "total_matched_fields": 6
+    "total_matched_fields": 10
   },
   "confidence_breakdown": {
-    "high_confidence_count": 5,
+    "high_confidence_count": 9,
     "medium_confidence_count": 1,
     "low_confidence_count": 0
   },
@@ -28,7 +28,7 @@
       "match_confidence": 0.95,
       "extraction_confidence": 1.0,
       "combined_confidence": 0.975,
-      "notes": "String mismatch: 'Bostadsr\u00e4ttsf\u00f6reningen Bj\u00f6rk o...' vs 'Elvy Maria L\u00f6fvenberg...'"
+      "notes": "String mismatch: 'Bostadsr\u00e4ttsf\u00f6reningen Bj\u00f6rk o...' vs 'Sonfj\u00e4llets samf\u00e4llighetsf\u00f6ren...'"
     },
     {
       "canonical_name": "brf_name_short",
@@ -44,7 +44,7 @@
       "match_confidence": 0.95,
       "extraction_confidence": 1.0,
       "combined_confidence": 0.975,
-      "notes": "Match via string conversion"
+      "notes": "Exact numeric match"
     },
     {
       "canonical_name": "fiscal_year_start",
@@ -73,9 +73,9 @@
     {
       "canonical_name": "municipality",
       "match_status": "exact",
-      "match_confidence": 0.95,
+      "match_confidence": 1.0,
       "extraction_confidence": 1.0,
-      "combined_confidence": 0.975,
+      "combined_confidence": 1.0,
       "notes": "Exact string match (normalized)"
     },
     {
@@ -136,11 +136,11 @@
     },
     {
       "canonical_name": "board_members",
-      "match_status": "semantic",
-      "match_confidence": 0.95,
+      "match_status": "fuzzy",
+      "match_confidence": 1.0,
       "extraction_confidence": 1.0,
-      "combined_confidence": 0.975,
-      "notes": "List of dicts: 7/7 items matched"
+      "combined_confidence": 1.0,
+      "notes": "List length differs: 7 vs 6"
     },
     {
       "canonical_name": "board_meetings_count",
@@ -153,25 +153,25 @@
     {
       "canonical_name": "auditors",
       "match_status": "mismatch",
-      "match_confidence": 0.95,
+      "match_confidence": 0.9,
       "extraction_confidence": 1.0,
-      "combined_confidence": 0.975,
+      "combined_confidence": 0.95,
       "notes": "Type/value mismatch: list vs str"
     },
     {
       "canonical_name": "nomination_committee",
-      "match_status": "semantic",
-      "match_confidence": 0.95,
-      "extraction_confidence": 1.0,
-      "combined_confidence": 0.975,
-      "notes": "List length match (2 items)"
+      "match_status": "missing",
+      "match_confidence": 0.0,
+      "extraction_confidence": 0.0,
+      "combined_confidence": 0.0,
+      "notes": "Field not found in extraction"
     },
     {
       "canonical_name": "annual_meeting_date",
       "match_status": "exact",
-      "match_confidence": 0.9,
+      "match_confidence": 1.0,
       "extraction_confidence": 1.0,
-      "combined_confidence": 0.95,
+      "combined_confidence": 1.0,
       "notes": "Exact string match (normalized)"
     },
     {
@@ -305,9 +305,9 @@
     {
       "canonical_name": "commercial_tenants",
       "match_status": "mismatch",
-      "match_confidence": 0.95,
+      "match_confidence": 1.0,
       "extraction_confidence": 1.0,
-      "combined_confidence": 0.975,
+      "combined_confidence": 1.0,
       "notes": "List of dicts: only 0/2 items matched"
     },
     {
@@ -337,9 +337,9 @@
     {
       "canonical_name": "maintenance_plan",
       "match_status": "mismatch",
-      "match_confidence": 0.95,
+      "match_confidence": 1.0,
       "extraction_confidence": 1.0,
-      "combined_confidence": 0.975,
+      "combined_confidence": 1.0,
       "notes": "Type/value mismatch: dict vs str"
     },
     {
@@ -704,11 +704,11 @@
     },
     {
       "canonical_name": "loans",
-      "match_status": "missing",
-      "match_confidence": 0.0,
-      "extraction_confidence": 0.0,
-      "combined_confidence": 0.0,
-      "notes": "Field not found in extraction"
+      "match_status": "mismatch",
+      "match_confidence": 1.0,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 1.0,
+      "notes": "List of dicts: only 0/4 items matched"
     },
     {
       "canonical_name": "property_mortgages",
@@ -720,35 +720,35 @@
     },
     {
       "canonical_name": "annual_fee_per_sqm_2021",
-      "match_status": "missing",
-      "match_confidence": 0.0,
-      "extraction_confidence": 0.0,
-      "combined_confidence": 0.0,
-      "notes": "Field not found in extraction"
+      "match_status": "exact",
+      "match_confidence": 0.95,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 0.975,
+      "notes": "Exact numeric match"
     },
     {
       "canonical_name": "annual_fee_per_sqm_2020",
-      "match_status": "missing",
-      "match_confidence": 0.0,
-      "extraction_confidence": 0.0,
-      "combined_confidence": 0.0,
-      "notes": "Field not found in extraction"
+      "match_status": "exact",
+      "match_confidence": 0.95,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 0.975,
+      "notes": "Exact numeric match"
     },
     {
       "canonical_name": "annual_fee_per_sqm_2019",
-      "match_status": "missing",
-      "match_confidence": 0.0,
-      "extraction_confidence": 0.0,
-      "combined_confidence": 0.0,
-      "notes": "Field not found in extraction"
+      "match_status": "exact",
+      "match_confidence": 0.95,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 0.975,
+      "notes": "Exact numeric match"
     },
     {
       "canonical_name": "annual_fee_per_sqm_2018",
-      "match_status": "missing",
-      "match_confidence": 0.0,
-      "extraction_confidence": 0.0,
-      "combined_confidence": 0.0,
-      "notes": "Field not found in extraction"
+      "match_status": "exact",
+      "match_confidence": 0.95,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 0.975,
+      "notes": "Exact numeric match"
     },
     {
       "canonical_name": "annual_fee_planned_change",
@@ -964,7 +964,7 @@
       "match_confidence": 0.8571428571428571,
       "extraction_confidence": 1.0,
       "combined_confidence": 0.9285714285714286,
-      "notes": "Type/value mismatch: int vs str"
+      "notes": "Outside tolerance (19579.5% > 5.0%)"
     },
     {
       "canonical_name": "depreciation_2020",
@@ -972,7 +972,7 @@
       "match_confidence": 0.8571428571428571,
       "extraction_confidence": 1.0,
       "combined_confidence": 0.9285714285714286,
-      "notes": "Type/value mismatch: int vs str"
+      "notes": "Outside tolerance (19579.5% > 5.0%)"
     },
     {
       "canonical_name": "book_value_2021",
@@ -1104,11 +1104,11 @@
     },
     {
       "canonical_name": "end_2021",
-      "match_status": "missing",
-      "match_confidence": 0.0,
-      "extraction_confidence": 0.0,
-      "combined_confidence": 0.0,
-      "notes": "Field not found in extraction"
+      "match_status": "exact",
+      "match_confidence": 1.0,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 1.0,
+      "notes": "Exact numeric match"
     },
     {
       "canonical_name": "beginning_2020",
@@ -1128,11 +1128,11 @@
     },
     {
       "canonical_name": "end_2020",
-      "match_status": "missing",
-      "match_confidence": 0.0,
-      "extraction_confidence": 0.0,
-      "combined_confidence": 0.0,
-      "notes": "Field not found in extraction"
+      "match_status": "mismatch",
+      "match_confidence": 1.0,
+      "extraction_confidence": 1.0,
+      "combined_confidence": 1.0,
+      "notes": "Outside tolerance (28.3% > 5.0%)"
     },
     {
       "canonical_name": "fees",
@@ -1348,7 +1348,7 @@
       "match_confidence": 0.8571428571428571,
       "extraction_confidence": 1.0,
       "combined_confidence": 0.9285714285714286,
-      "notes": "Type/value mismatch: dict vs str"
+      "notes": "Type/value mismatch: dict vs int"
     },
     {
       "canonical_name": "total_pages_pdf",

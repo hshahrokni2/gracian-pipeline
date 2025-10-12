@@ -1,7 +1,7 @@
 {
   "pdf": "../../data/raw_pdfs/Hjorthagen/brf_268882.pdf",
   "topology": {
-    "pdf_path": "test_pdfs/brf_268882.pdf",
+    "pdf_path": "../../data/raw_pdfs/Hjorthagen/brf_268882.pdf",
     "total_pages": 28,
     "avg_chars_per_page": 0.0,
     "classification": "scanned",
@@ -10,13 +10,13 @@
       9,
       18
     ],
-    "analysis_time": 0.004014015197753906
+    "analysis_time": 0.005294084548950195
   },
   "structure": {
     "num_sections": 50,
     "method": "ocr",
     "cached": true,
-    "extraction_time": 95.71463990211487
+    "extraction_time": 96.73248529434204
   },
   "routing": {
     "main_sections": {
@@ -28,48 +28,14 @@
     },
     "note_sections": {
       "notes_accounting_agent": 1,
-      "notes_other_agent": 1,
       "notes_receivables_agent": 1,
       "notes_reserves_agent": 1,
       "notes_tax_agent": 1,
       "notes_loans_agent": 1
     },
-    "routing_time": 2.3128762245178223
+    "routing_time": 2.1713249683380127
   },
   "agent_results": {
-    "governance_agent": {
-      "agent_id": "governance_agent",
-      "status": "success",
-      "data": {
-        "chairman": "",
-        "board_members": [],
-        "auditor_name": "",
-        "audit_firm": "",
-        "nomination_committee": [],
-        "evidence_pages": []
-      },
-      "section_headings": [
-        "Förvaltningsberättelse",
-        "Giltighet",
-        "Förvaltningsberättelse",
-        "Registreringsdatum",
-        "Äkta förening",
-        "Styrelsens sammansättning",
-        "Revisorer",
-        "Medlemsinformation"
-      ],
-      "pages_rendered": [
-        3,
-        6,
-        9,
-        12
-      ],
-      "num_images": 4,
-      "evidence_pages": [],
-      "extraction_time": 7.722545862197876,
-      "model": "gpt-4o-2024-11-20",
-      "tokens_used": 4781
-    },
     "property_agent": {
       "agent_id": "property_agent",
       "status": "success",
@@ -92,30 +58,81 @@
       "pages_rendered": [
         4,
         5,
-        7,
-        8
+        6
       ],
-      "num_images": 4,
+      "num_images": 3,
       "evidence_pages": [
         4
       ],
-      "extraction_time": 9.137545108795166,
+      "extraction_time": 39.77306795120239,
       "model": "gpt-4o-2024-11-20",
-      "tokens_used": 4793
+      "tokens_used": 3682
+    },
+    "governance_agent": {
+      "agent_id": "governance_agent",
+      "status": "success",
+      "data": {
+        "chairman": "Ulf Dahlqvist",
+        "board_members": [
+          "Anna Bernhardina Dolonius Bensalah",
+          "Cindy Tuliao Sarceda",
+          "Eugénie Bardin",
+          "Hanna Jansson",
+          "Pieter Gruyters",
+          "Sjurður Eldevig"
+        ],
+        "auditor_name": "Mats Lehtipalo",
+        "audit_firm": "ADECO Revisorer",
+        "nomination_committee": [
+          "Peter Brandt",
+          "Per Fernqvist"
+        ],
+        "evidence_pages": [
+          4,
+          5
+        ]
+      },
+      "section_headings": [
+        "Förvaltningsberättelse",
+        "Giltighet",
+        "Förvaltningsberättelse",
+        "Registreringsdatum",
+        "Äkta förening",
+        "Styrelsens sammansättning",
+        "Revisorer",
+        "Medlemsinformation"
+      ],
+      "pages_rendered": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "num_images": 6,
+      "evidence_pages": [
+        4,
+        5
+      ],
+      "extraction_time": 67.67895817756653,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 7116
     },
     "financial_agent": {
       "agent_id": "financial_agent",
       "status": "success",
       "data": {
-        "revenue": "",
-        "expenses": "",
+        "revenue": "2204019",
+        "expenses": "1745964",
         "assets": "66814325",
-        "liabilities": "19514381",
-        "equity": "",
-        "surplus": "",
+        "liabilities": "19942314",
+        "equity": "46872029",
+        "surplus": "-175526",
         "evidence_pages": [
+          9,
           10,
-          17
+          11
         ]
       },
       "section_headings": [
@@ -134,26 +151,32 @@
       ],
       "pages_rendered": [
         3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
         10,
-        17,
-        23
+        11
       ],
-      "num_images": 4,
+      "num_images": 9,
       "evidence_pages": [
+        9,
         10,
-        17
+        11
       ],
-      "extraction_time": 8.688541889190674,
+      "extraction_time": 15.604619026184082,
       "model": "gpt-4o-2024-11-20",
-      "tokens_used": 5307
+      "tokens_used": 11129
     },
     "notes_accounting_agent": {
       "agent_id": "notes_accounting_agent",
       "status": "success",
       "data": {
         "accounting_principles": "Årsredovisningen har upprättats enligt Årsredovisningslagen och Bokföringsnämndens allmänna råd 2016:10 (K2), årsredovisning i mindre företag och 2023:1, kompletterande upplysningar m.m. i bostadsrättsföreningars årsredovisningar.",
-        "valuation_methods": "Materiella anläggningstillgångar redovisas till anskaffningsvärde minskat med avskrivningar. Byggnader och inventarier skrivs av linjärt över den bedömda ekonomiska livslängden. Avskrivningstiden grundar sig på bedömd ekonomisk livslängd av tillgången. Markvärdet är inte föremål för avskrivning. Bestående värdenedgång hanteras genom nedskrivning. Föreningens finansiella anläggningstillgångar värderas till anskaffningsvärde. I de fall tillgången på balansdagen har ett lägre värde än anskaffningsvärdet sker nedskrivning till det lägre värdet.",
-        "revenue_recognition": "Intäkter bokförs i den period de avser oavsett när betalning eller avisering skett. I årsavgiften ingår kostnader för bredband, kabel-tv, vatten och värme.",
+        "valuation_methods": "Materiella anläggningstillgångar redovisas till anskaffningsvärde minskat med avskrivningar. Byggnader och inventarier skrivs av linjärt över den bedömda ekonomiska livslängden. Markvärdet är inte föremål för avskrivning. Bestående värdenedgång hanteras genom nedskrivning. Finansiella anläggningstillgångar värderas till anskaffningsvärde eller lägre värde vid balansdagen.",
+        "revenue_recognition": "Intäkter bokförs i den period de avser oavsett när betalning eller avisering skett.",
         "evidence_pages": [
           13
         ]
@@ -162,34 +185,16 @@
         "NOT 1 REDOVISNINGS- OCH VÄRDERINGSPRINCIPER"
       ],
       "pages_rendered": [
-        13
+        13,
+        14
       ],
-      "num_images": 1,
+      "num_images": 2,
       "evidence_pages": [
         13
       ],
-      "extraction_time": 7.864008903503418,
+      "extraction_time": 6.315055847167969,
       "model": "gpt-4o-2024-11-20",
-      "tokens_used": 2399
-    },
-    "notes_other_agent": {
-      "agent_id": "notes_other_agent",
-      "status": "success",
-      "data": {
-        "other_notes": "",
-        "evidence_pages": []
-      },
-      "section_headings": [
-        "Redovisning av intäkter"
-      ],
-      "pages_rendered": [
-        13
-      ],
-      "num_images": 1,
-      "evidence_pages": [],
-      "extraction_time": 2.5825300216674805,
-      "model": "gpt-4o-2024-11-20",
-      "tokens_used": 2519
+      "tokens_used": 3595
     },
     "notes_receivables_agent": {
       "agent_id": "notes_receivables_agent",
@@ -204,13 +209,14 @@
         "Omsättningstillgångar"
       ],
       "pages_rendered": [
-        13
+        13,
+        14
       ],
-      "num_images": 1,
+      "num_images": 2,
       "evidence_pages": [],
-      "extraction_time": 3.0496530532836914,
+      "extraction_time": 4.288687705993652,
       "model": "gpt-4o-2024-11-20",
-      "tokens_used": 2685
+      "tokens_used": 3749
     },
     "notes_reserves_agent": {
       "agent_id": "notes_reserves_agent",
@@ -227,15 +233,16 @@
         "Föreningens fond för yttre underhåll"
       ],
       "pages_rendered": [
-        13
+        13,
+        14
       ],
-      "num_images": 1,
+      "num_images": 2,
       "evidence_pages": [
         13
       ],
-      "extraction_time": 4.7828209400177,
+      "extraction_time": 38.811333894729614,
       "model": "gpt-4o-2024-11-20",
-      "tokens_used": 2928
+      "tokens_used": 3994
     },
     "notes_tax_agent": {
       "agent_id": "notes_tax_agent",
@@ -252,15 +259,16 @@
         "Skatter och avgifter"
       ],
       "pages_rendered": [
-        13
+        13,
+        14
       ],
-      "num_images": 1,
+      "num_images": 2,
       "evidence_pages": [
         13
       ],
-      "extraction_time": 7.638559103012085,
+      "extraction_time": 5.350297927856445,
       "model": "gpt-4o-2024-11-20",
-      "tokens_used": 3133
+      "tokens_used": 4204
     },
     "notes_loans_agent": {
       "agent_id": "notes_loans_agent",
@@ -269,34 +277,31 @@
         "outstanding_loans": "",
         "interest_rate": "",
         "amortization": "",
-        "loan_terms": "Lån med en bindningstid på ett år eller mindre tas i årsredovisningen upp som kortfristiga skulder.",
-        "evidence_pages": [
-          13
-        ]
+        "loan_terms": "",
+        "evidence_pages": []
       },
       "section_headings": [
         "Fastighetslån"
       ],
       "pages_rendered": [
-        13
+        13,
+        14
       ],
-      "num_images": 1,
-      "evidence_pages": [
-        13
-      ],
-      "extraction_time": 11.533736228942871,
+      "num_images": 2,
+      "evidence_pages": [],
+      "extraction_time": 3.997021198272705,
       "model": "gpt-4o-2024-11-20",
-      "tokens_used": 3339
+      "tokens_used": 4386
     }
   },
   "quality_metrics": {
     "coverage": 1.0,
     "numeric_qc_pass": true,
-    "evidence_ratio": 0.6666666666666666,
-    "overall_score": 0.8333333333333333,
+    "evidence_ratio": 0.75,
+    "overall_score": 0.875,
     "needs_coaching": true,
-    "validation_time": 7.867813110351562e-06
+    "validation_time": 1.4781951904296875e-05
   },
-  "total_time": 57.59420895576477,
+  "total_time": 144.2216489315033,
   "total_cost": 0.0
 }
