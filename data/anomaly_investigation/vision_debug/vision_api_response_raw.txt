@@ -1,0 +1,27 @@
+```json
+{
+  "financial_agent": {
+    "revenue_total": 6688420,
+    "expenses_total": 7070417,
+    "assets_total": 355251943,
+    "liabilities_total": 54620893,
+    "equity_total": 300631050,
+    "net_income": -859407,
+    "cash_and_equivalents": 2523011,
+    "long_term_debt": 17187500,
+    "short_term_debt": 37433393
+  },
+  "loans_agent": [
+    {
+      "lender": null,
+      "amount": null,
+      "rate": null
+    }
+  ],
+  "fees_agent": {
+    "annual_fee": null,
+    "monthly_fee_range_min": null,
+    "monthly_fee_range_max": null
+  }
+}
+```

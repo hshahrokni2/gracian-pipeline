@@ -1,0 +1,10 @@
+{
+  "pdf": "SRS/brf_76536.pdf",
+  "char_count": 2558,
+  "tables_detected": 16,
+  "image_markers": 19,
+  "section_headings": 45,
+  "financial_page_tables": 0,
+  "hypothesis": "Financial pages 9-12 are image-based tables that Docling cannot extract",
+  "recommended_fix": "Option A - Force vision extraction on pages 9-12"
+}

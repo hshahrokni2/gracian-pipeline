@@ -1,0 +1,1455 @@
+{
+  "chairman_agent": {
+    "name": null,
+    "contact_info": null,
+    "evidence_pages": []
+  },
+  "board_members_agent": {
+    "members": [],
+    "evidence_pages": []
+  },
+  "auditor_agent": {
+    "auditor": null,
+    "opinion": null,
+    "clean_opinion": null,
+    "evidence_pages": [],
+    "audit_date": null,
+    "audit_location": null,
+    "qualifications": null
+  },
+  "financial_agent": {
+    "revenue": null,
+    "expenses": null,
+    "assets": null,
+    "liabilities": null,
+    "equity": null,
+    "surplus": null,
+    "evidence_pages": [],
+    "operating_costs_breakdown": {},
+    "building_details": {},
+    "other_receivables": {},
+    "reserve_fund_movements": {},
+    "income_breakdown": {},
+    "tax_details": {}
+  },
+  "property_agent": {
+    "designation": null,
+    "address": null,
+    "postal_code": null,
+    "city": null,
+    "built_year": null,
+    "apartments": null,
+    "energy_class": null,
+    "evidence_pages": [],
+    "acquisition_date": null,
+    "municipality": null,
+    "heating_system": null,
+    "insurance_provider": null,
+    "insurance_details": null,
+    "apartment_breakdown": {},
+    "commercial_tenants": [],
+    "common_areas": [],
+    "samfallighet": {},
+    "registration_dates": {},
+    "tax_assessment": {}
+  },
+  "notes_depreciation_agent": {
+    "depreciation_method": null,
+    "useful_life_years": null,
+    "depreciation_base": null,
+    "evidence_pages": []
+  },
+  "notes_maintenance_agent": {
+    "maintenance_plan": null,
+    "maintenance_budget": null,
+    "evidence_pages": [],
+    "planned_actions": [],
+    "technical_status": null,
+    "suppliers": [],
+    "service_contracts": {}
+  },
+  "notes_tax_agent": {
+    "current_tax": null,
+    "deferred_tax": null,
+    "tax_policy": null,
+    "evidence_pages": [],
+    "tax_type": null,
+    "tax_law_reference": null
+  },
+  "events_agent": {
+    "key_events": [],
+    "maintenance_budget": null,
+    "annual_meeting_date": null,
+    "evidence_pages": [],
+    "warranty_claims": null,
+    "tenant_changes": null,
+    "loan_restructuring": null,
+    "rental_activity": null
+  },
+  "audit_agent": {
+    "auditor": null,
+    "opinion": null,
+    "clean_opinion": null,
+    "evidence_pages": [],
+    "audit_date": null,
+    "audit_location": null,
+    "qualifications": null
+  },
+  "loans_agent": {
+    "outstanding_loans": null,
+    "interest_rate": null,
+    "amortization": null,
+    "evidence_pages": [],
+    "loan_provider": null,
+    "loan_number": null,
+    "loan_term": null,
+    "amortization_schedule": null,
+    "loan_changes": null,
+    "loans": []
+  },
+  "reserves_agent": {
+    "reserve_fund": null,
+    "monthly_fee": null,
+    "evidence_pages": [],
+    "reserve_policy": null,
+    "fund_name": null,
+    "annual_allocation": null
+  },
+  "energy_agent": {
+    "energy_class": null,
+    "energy_performance": null,
+    "inspection_date": null,
+    "evidence_pages": [],
+    "energy_source": null
+  },
+  "fees_agent": {
+    "monthly_fee": null,
+    "planned_fee_change": null,
+    "fee_policy": null,
+    "evidence_pages": [],
+    "fee_calculation_basis": null,
+    "fee_per_sqm": null,
+    "fee_unit": null
+  },
+  "cashflow_agent": {
+    "cash_in": null,
+    "cash_out": null,
+    "cash_change": null,
+    "evidence_pages": [],
+    "operating_activities": null,
+    "investing_activities": null,
+    "financing_activities": null
+  },
+  "additional_facts": [],
+  "docling_metadata": {
+    "char_count": 2558,
+    "table_count": 16,
+    "processing_method": "ultra_comprehensive_single_call",
+    "schema_version": "comprehensive_v1",
+    "total_fields_target": 106
+  },
+  "coverage_metrics": {
+    "total_fields": 106,
+    "extracted_fields": 16,
+    "coverage_percent": 15.1
+  },
+  "status": "success",
+  "pdf_path": "/Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Gracian Pipeline/SRS/brf_76536.pdf",
+  "_docling_markdown": "<2558 chars>",
+  "_docling_tables": [
+    {
+      "self_ref": "#/tables/0",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "document_index",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 55.7745475769043,
+            "t": 665.0647735595703,
+            "r": 538.490966796875,
+            "b": 386.5421142578125,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "image": null,
+      "data": {
+        "table_cells": [],
+        "num_rows": 0,
+        "num_cols": 0,
+        "grid": []
+      },
+      "annotations": []
+    },
+    {
+      "self_ref": "#/tables/1",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "table",
+      "prov": [
+        {
+          "page_no": 7,
+          "bbox": {
+            "l": 55.44743728637695,
+            "t": 735.9611511230469,
+            "r": 540.0567016601562,
+            "b": 469.8244323730469,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "image": null,
+      "data": {
+        "table_cells": [],
+        "num_rows": 0,
+        "num_cols": 0,
+        "grid": []
+      },
+      "annotations": []
+    },
+    {
+      "self_ref": "#/tables/2",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "table",
+      "prov": [
+        {
+          "page_no": 8,
+          "bbox": {
+            "l": 55.439048767089844,
+            "t": 735.6121520996094,
+            "r": 539.7999877929688,
+            "b": 599.6445770263672,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "image": null,
+      "data": {
+        "table_cells": [],
+        "num_rows": 0,
+        "num_cols": 0,
+        "grid": []
+      },
+      "annotations": []
+    },
+    {
+      "self_ref": "#/tables/3",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "table",
+      "prov": [
+        {
+          "page_no": 8,
+          "bbox": {
+            "l": 55.31825637817383,
+            "t": 543.2520751953125,
+            "r": 539.1857299804688,
+            "b": 369.2654113769531,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "image": null,
+      "data": {
+        "table_cells": [],
+        "num_rows": 0,
+        "num_cols": 0,
+        "grid": []
+      },
+      "annotations": []
+    },
+    {
+      "self_ref": "#/tables/4",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "table",
+      "prov": [
+        {
+          "page_no": 9,
+          "bbox": {
+            "l": 55.15591812133789,
+            "t": 730.4208984375,
+            "r": 540.2079467773438,
+            "b": 372.08416748046875,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "image": null,
+      "data": {
+        "table_cells": [],
+        "num_rows": 0,
+        "num_cols": 0,
+        "grid": []
+      },
+      "annotations": []
+    },
+    {
+      "self_ref": "#/tables/5",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "table",
+      "prov": [
+        {
+          "page_no": 10,
+          "bbox": {
+            "l": 55.3241081237793,
+            "t": 728.3070373535156,
+            "r": 539.9600219726562,
+            "b": 329.0025634765625,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "image": null,
+      "data": {
+        "table_cells": [],
+        "num_rows": 0,
+        "num_cols": 0,
+        "grid": []
+      },
+      "annotations": []
+    },
+    {
+      "self_ref": "#/tables/6",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "table",
+      "prov": [
+        {
+          "page_no": 11,
+          "bbox": {
+            "l": 55.27183532714844,
+            "t": 730.3239822387695,
+            "r": 539.9262084960938,
+            "b": 299.81634521484375,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "image": null,
+      "data": {
+        "table_cells": [],
+        "num_rows": 0,
+        "num_cols": 0,
+        "grid": []
+      },
+      "annotations": []
+    },
+    {
+      "self_ref": "#/tables/7",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "table",
+      "prov": [
+        {
+          "page_no": 12,
+          "bbox": {
+            "l": 55.219276428222656,
+            "t": 732.2182235717773,
+            "r": 540.1424560546875,
+            "b": 287.9573974609375,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "image": null,
+      "data": {
+        "table_cells": [],
+        "num_rows": 0,
+        "num_cols": 0,
+        "grid": []
+      },
+      "annotations": []
+    },
+    {
+      "self_ref": "#/tables/8",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "table",
+      "prov": [
+        {
+          "page_no": 13,
+          "bbox": {
+            "l": 56.35338592529297,
+            "t": 536.8546752929688,
+            "r": 349.1112976074219,
+            "b": 511.8881530761719,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "image": null,
+      "data": {
+        "table_cells": [],
+        "num_rows": 0,
+        "num_cols": 0,
+        "grid": []
+      },
+      "annotations": []
+    },
+    {
+      "self_ref": "#/tables/9",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "table",
+      "prov": [
+        {
+          "page_no": 13,
+          "bbox": {
+            "l": 55.152706146240234,
+            "t": 235.9461669921875,
+            "r": 540.0615844726562,
+            "b": 100.91131591796875,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "image": null,
+      "data": {
+        "table_cells": [
+          {
+            "bbox": {
+              "l": 56.684,
+              "t": 620.246,
+              "r": 195.981,
+              "b": 630.0419999999999,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "NOT 2, NETTOOMSÄTTNING",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          }
+        ],
+        "num_rows": 1,
+        "num_cols": 1,
+        "grid": [
+          [
+            {
+              "bbox": {
+                "l": 56.684,
+                "t": 620.246,
+                "r": 195.981,
+                "b": 630.0419999999999,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "NOT 2, NETTOOMSÄTTNING",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ]
+        ]
+      },
+      "annotations": []
+    },
+    {
+      "self_ref": "#/tables/10",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "table",
+      "prov": [
+        {
+          "page_no": 14,
+          "bbox": {
+            "l": 54.96649932861328,
+            "t": 757.6260223388672,
+            "r": 539.6270141601562,
+            "b": 260.9169921875,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "image": null,
+      "data": {
+        "table_cells": [
+          {
+            "bbox": {
+              "l": 56.684,
+              "t": 98.99599999999998,
+              "r": 225.985,
+              "b": 108.79199999999992,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "NOT 3, ÖVRIGA RÖRELSEINTÄKTER",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 56.684,
+              "t": 200.24599999999998,
+              "r": 193.956,
+              "b": 210.04199999999992,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "NOT 4, FASTIGHETSSKÖTSEL",
+            "column_header": false,
+            "row_header": true,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 56.684,
+              "t": 344.996,
+              "r": 168.486,
+              "b": 354.792,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "NOT 5, REPARATIONER",
+            "column_header": false,
+            "row_header": true,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 56.684,
+              "t": 489.746,
+              "r": 226.03,
+              "b": 499.542,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 3,
+            "end_row_offset_idx": 4,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "NOT 6, TAXEBUNDNA KOSTNADER",
+            "column_header": false,
+            "row_header": true,
+            "row_section": false,
+            "fillable": false
+          }
+        ],
+        "num_rows": 4,
+        "num_cols": 1,
+        "grid": [
+          [
+            {
+              "bbox": {
+                "l": 56.684,
+                "t": 98.99599999999998,
+                "r": 225.985,
+                "b": 108.79199999999992,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "NOT 3, ÖVRIGA RÖRELSEINTÄKTER",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": {
+                "l": 56.684,
+                "t": 200.24599999999998,
+                "r": 193.956,
+                "b": 210.04199999999992,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "NOT 4, FASTIGHETSSKÖTSEL",
+              "column_header": false,
+              "row_header": true,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": {
+                "l": 56.684,
+                "t": 344.996,
+                "r": 168.486,
+                "b": 354.792,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "NOT 5, REPARATIONER",
+              "column_header": false,
+              "row_header": true,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": {
+                "l": 56.684,
+                "t": 489.746,
+                "r": 226.03,
+                "b": 499.542,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 3,
+              "end_row_offset_idx": 4,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "NOT 6, TAXEBUNDNA KOSTNADER",
+              "column_header": false,
+              "row_header": true,
+              "row_section": false,
+              "fillable": false
+            }
+          ]
+        ]
+      },
+      "annotations": []
+    },
+    {
+      "self_ref": "#/tables/11",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "table",
+      "prov": [
+        {
+          "page_no": 15,
+          "bbox": {
+            "l": 55.00767517089844,
+            "t": 757.6044921875,
+            "r": 539.9609375,
+            "b": 257.36004638671875,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "image": null,
+      "data": {
+        "table_cells": [
+          {
+            "bbox": {
+              "l": 56.684,
+              "t": 98.99599999999998,
+              "r": 229.652,
+              "b": 108.79199999999992,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "NOT 7, ÖVRIGA DRIFTSKOSTNADER",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 56.684,
+              "t": 272.246,
+              "r": 244.378,
+              "b": 282.0419999999999,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "NOT 8, ÖVRIGA EXTERNA KOSTNADER",
+            "column_header": false,
+            "row_header": true,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 56.684,
+              "t": 402.746,
+              "r": 206.691,
+              "b": 412.542,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "NOT 9, PERSONALKOSTNADER",
+            "column_header": false,
+            "row_header": true,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 56.684,
+              "t": 503.996,
+              "r": 272.796,
+              "b": 530.2919999999999,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 3,
+            "end_row_offset_idx": 4,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "NOT 10, RÄNTEKOSTNADER OCH LIKNANDE RESULTATPOSTER",
+            "column_header": false,
+            "row_header": true,
+            "row_section": false,
+            "fillable": false
+          }
+        ],
+        "num_rows": 4,
+        "num_cols": 1,
+        "grid": [
+          [
+            {
+              "bbox": {
+                "l": 56.684,
+                "t": 98.99599999999998,
+                "r": 229.652,
+                "b": 108.79199999999992,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "NOT 7, ÖVRIGA DRIFTSKOSTNADER",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": {
+                "l": 56.684,
+                "t": 272.246,
+                "r": 244.378,
+                "b": 282.0419999999999,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "NOT 8, ÖVRIGA EXTERNA KOSTNADER",
+              "column_header": false,
+              "row_header": true,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": {
+                "l": 56.684,
+                "t": 402.746,
+                "r": 206.691,
+                "b": 412.542,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "NOT 9, PERSONALKOSTNADER",
+              "column_header": false,
+              "row_header": true,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": {
+                "l": 56.684,
+                "t": 503.996,
+                "r": 272.796,
+                "b": 530.2919999999999,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 3,
+              "end_row_offset_idx": 4,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "NOT 10, RÄNTEKOSTNADER OCH LIKNANDE RESULTATPOSTER",
+              "column_header": false,
+              "row_header": true,
+              "row_section": false,
+              "fillable": false
+            }
+          ]
+        ]
+      },
+      "annotations": []
+    },
+    {
+      "self_ref": "#/tables/12",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "table",
+      "prov": [
+        {
+          "page_no": 16,
+          "bbox": {
+            "l": 55.0300178527832,
+            "t": 758.5663070678711,
+            "r": 539.9468383789062,
+            "b": 129.44091796875,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "image": null,
+      "data": {
+        "table_cells": [
+          {
+            "bbox": {
+              "l": 56.684,
+              "t": 98.99599999999998,
+              "r": 152.241,
+              "b": 108.79199999999992,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "NOT 11, BYGGNAD",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 56.684,
+              "t": 419.246,
+              "r": 246.043,
+              "b": 429.042,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "NOT 12, MASKINER OCH INVENTARIER",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 56.684,
+              "t": 649.496,
+              "r": 209.762,
+              "b": 659.2919999999999,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "NOT 13, ÖVRIGA FORDRINGAR",
+            "column_header": false,
+            "row_header": true,
+            "row_section": false,
+            "fillable": false
+          }
+        ],
+        "num_rows": 3,
+        "num_cols": 1,
+        "grid": [
+          [
+            {
+              "bbox": {
+                "l": 56.684,
+                "t": 98.99599999999998,
+                "r": 152.241,
+                "b": 108.79199999999992,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "NOT 11, BYGGNAD",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": {
+                "l": 56.684,
+                "t": 419.246,
+                "r": 246.043,
+                "b": 429.042,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "NOT 12, MASKINER OCH INVENTARIER",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": {
+                "l": 56.684,
+                "t": 649.496,
+                "r": 209.762,
+                "b": 659.2919999999999,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "NOT 13, ÖVRIGA FORDRINGAR",
+              "column_header": false,
+              "row_header": true,
+              "row_section": false,
+              "fillable": false
+            }
+          ]
+        ]
+      },
+      "annotations": []
+    },
+    {
+      "self_ref": "#/tables/13",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "table",
+      "prov": [
+        {
+          "page_no": 17,
+          "bbox": {
+            "l": 55.29965591430664,
+            "t": 758.0087738037109,
+            "r": 539.882568359375,
+            "b": 605.7349853515625,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "image": null,
+      "data": {
+        "table_cells": [
+          {
+            "bbox": {
+              "l": 56.684,
+              "t": 98.99599999999998,
+              "r": 318.235,
+              "b": 124.54199999999992,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "NOT 14, FÖRUTBETALDA KOSTNADER OCH UPPLUPNA INTÄKTER",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          }
+        ],
+        "num_rows": 1,
+        "num_cols": 1,
+        "grid": [
+          [
+            {
+              "bbox": {
+                "l": 56.684,
+                "t": 98.99599999999998,
+                "r": 318.235,
+                "b": 124.54199999999992,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "NOT 14, FÖRUTBETALDA KOSTNADER OCH UPPLUPNA INTÄKTER",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ]
+        ]
+      },
+      "annotations": []
+    },
+    {
+      "self_ref": "#/tables/14",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "table",
+      "prov": [
+        {
+          "page_no": 17,
+          "bbox": {
+            "l": 55.3219108581543,
+            "t": 582.346435546875,
+            "r": 539.9310302734375,
+            "b": 458.8201599121094,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "image": null,
+      "data": {
+        "table_cells": [
+          {
+            "bbox": {
+              "l": 56.684,
+              "t": 273.746,
+              "r": 162.715,
+              "b": 300.0419999999999,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "NOT 15, SKULDER TILL KREDITINSTITUT",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          }
+        ],
+        "num_rows": 1,
+        "num_cols": 1,
+        "grid": [
+          [
+            {
+              "bbox": {
+                "l": 56.684,
+                "t": 273.746,
+                "r": 162.715,
+                "b": 300.0419999999999,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "NOT 15, SKULDER TILL KREDITINSTITUT",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ]
+        ]
+      },
+      "annotations": []
+    },
+    {
+      "self_ref": "#/tables/15",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "table",
+      "prov": [
+        {
+          "page_no": 17,
+          "bbox": {
+            "l": 55.19186019897461,
+            "t": 370.30413818359375,
+            "r": 540.483154296875,
+            "b": 131.7249755859375,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "image": null,
+      "data": {
+        "table_cells": [
+          {
+            "bbox": {
+              "l": 56.684,
+              "t": 485.246,
+              "r": 318.235,
+              "b": 511.542,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "NOT 16, UPPLUPNA KOSTNADER OCH FÖRUTBETALDA INTÄKTER",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 56.684,
+              "t": 675.746,
+              "r": 205.307,
+              "b": 685.5419999999999,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "NOT 17, STÄLLDA SÄKERHETER",
+            "column_header": false,
+            "row_header": true,
+            "row_section": false,
+            "fillable": false
+          }
+        ],
+        "num_rows": 2,
+        "num_cols": 1,
+        "grid": [
+          [
+            {
+              "bbox": {
+                "l": 56.684,
+                "t": 485.246,
+                "r": 318.235,
+                "b": 511.542,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "NOT 16, UPPLUPNA KOSTNADER OCH FÖRUTBETALDA INTÄKTER",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": {
+                "l": 56.684,
+                "t": 675.746,
+                "r": 205.307,
+                "b": 685.5419999999999,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "NOT 17, STÄLLDA SÄKERHETER",
+              "column_header": false,
+              "row_header": true,
+              "row_section": false,
+              "fillable": false
+            }
+          ]
+        ]
+      },
+      "annotations": []
+    }
+  ],
+  "_validation_report": {
+    "schema_valid": true,
+    "error_count": 0,
+    "warning_count": 0,
+    "has_errors": false,
+    "has_warnings": false,
+    "issues": []
+  },
+  "_quality_metrics": {
+    "total_fields": 117,
+    "extracted_fields": 8,
+    "coverage_percent": 6.8,
+    "quality_grade": "C",
+    "warnings_count": 0,
+    "detailed_extraction_applied": false,
+    "note_8_extracted": false,
+    "note_9_extracted": false,
+    "apartment_granularity": "none",
+    "fee_schema_version": "v1"
+  },
+  "_processing_metadata": {
+    "total_time_seconds": 40.46,
+    "pass1_base_time": 40.46,
+    "pass2_deep_time": 0,
+    "pass3_validation_time": 0.0,
+    "pass3_5_validation_engine_time": 0.0,
+    "pass3_6_targeted_vision_time": 0,
+    "pass4_quality_time": 0.0,
+    "extraction_mode": "fast",
+    "vision_recovery_applied": false,
+    "errors_fixed_by_recovery": 0
+  }
+}

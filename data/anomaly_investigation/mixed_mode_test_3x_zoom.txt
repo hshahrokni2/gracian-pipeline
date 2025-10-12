@@ -1,0 +1,150 @@
+2025-10-12 09:01:30,535 - INFO - detected formats: [<InputFormat.PDF: 'pdf'>]
+2025-10-12 09:01:30,573 - INFO - Going to convert document batch...
+2025-10-12 09:01:30,573 - INFO - Initializing pipeline for StandardPdfPipeline with options hash 89360827c54c632ffd3869eb23c81de0
+2025-10-12 09:01:30,577 - INFO - Loading plugin 'docling_defaults'
+2025-10-12 09:01:30,578 - INFO - Registered picture descriptions: ['vlm', 'api']
+2025-10-12 09:01:30,582 - INFO - Loading plugin 'docling_defaults'
+2025-10-12 09:01:30,584 - INFO - Registered ocr engines: ['easyocr', 'ocrmac', 'rapidocr', 'tesserocr', 'tesseract']
+/Users/hosseins/.pyenv/versions/3.11.9/lib/python3.11/site-packages/docling/models/easyocr_model.py:68: UserWarning: Deprecated field. Better to set the `accelerator_options.device` in `pipeline_options`. When `use_gpu and accelerator_options.device == AcceleratorDevice.CUDA` the GPU is used to run EasyOCR. Otherwise, EasyOCR runs in CPU.
+  warnings.warn(
+2025-10-12 09:01:32,836 - INFO - Accelerator device: 'mps'
+2025-10-12 09:01:33,811 - INFO - Accelerator device: 'mps'
+2025-10-12 09:01:34,087 - INFO - Processing document brf_76536.pdf
+2025-10-12 09:02:05,028 - INFO - Finished converting document brf_76536.pdf in 34.49 sec.
+2025-10-12 09:02:11,293 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 09:02:42,498 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+================================================================================
+MIXED-MODE EXTRACTION TEST: brf_76536.pdf
+================================================================================
+
+🎯 Expected: Pages 9-12 extracted with vision API
+🎯 Target: Coverage 6.8% → 25-30% (+18-23pp improvement)
+
+================================================================================
+
+📄 Testing: brf_76536.pdf
+
+🚀 Ultra-Comprehensive Pydantic Extraction: brf_76536.pdf
+   Mode: fast
+
+📊 Phase 0: Check PDF Type (1s)
+
+📊 Phase 1: Base Extraction (60s)
+
+============================================================
+Robust Ultra-Comprehensive Extraction v2
+Document: brf_76536.pdf
+Mode: fast
+============================================================
+
+Pass 1: Base ultra-comprehensive extraction...
+  ✓ Complete in 40.8s
+
+Pass 3: Semantic validation and migration...
+  ✓ Complete in 0.0s
+
+Pass 3.5: Validation engine...
+  ✅ No critical errors detected
+  ✓ Complete in 0.0s
+
+Pass 4: Quality assessment...
+  ✓ Complete in 0.0s
+
+============================================================
+EXTRACTION COMPLETE
+============================================================
+
+📊 Quality Metrics:
+   Coverage: 6.8% (8/117 fields)
+   Grade: C
+   Warnings: 0
+
+🔧 Enhancements Applied:
+   Note 4 (detailed financial): ✗
+   Note 8 (building details): ✗
+   Note 9 (receivables): ✗
+   Apartment granularity: none
+   Fee schema: v1
+
+⏱️  Performance:
+   Total time: 40.8s
+   Mode: fast
+
+============================================================
+
+
+🔀 Mixed-Mode Detection: financial_sections_are_images
+   Image pages detected: [9, 10, 11, 12]
+   Financial sections: ['Resultaträkning', 'Balansräkning', 'Balansräkning', 'Kassaüödesanalys']
+
+📸 Phase 1.5: Vision Extraction for Image Pages (30s)
+   ✓ Vision extraction successful for pages [9, 10, 11, 12]
+   ✓ Results merged from 4 image pages
+
+📋 Phase 2: Document Metadata (5s)
+
+🔍 Phase 3: Enhanced Section Extraction (120s)
+
+✅ Phase 4: Quality Assessment (30s)
+
+🎉 Extraction Complete!
+   Coverage: 6.8%
+   Confidence: 0.50
+
+
+================================================================================
+EXTRACTION RESULTS
+================================================================================
+
+📊 Overall Metrics:
+   Coverage: 6.8%
+   Confidence: 0.50
+
+📋 Extracted Data:
+
+   Metadata:
+      Org number: 769625-8289
+      BRF name: Laduviken
+      Fiscal year: 2025
+
+   Governance:
+      Chairman: None
+      Board members: 0
+
+   Financial:
+      Income Statement:
+         Revenue: None
+         Expenses: None
+         Net Income: None
+      Balance Sheet:
+         Assets: None
+         Liabilities: None
+         Equity: None
+
+   Property:
+      Municipality: None
+      Address: None
+
+   Fees:
+      Annual fee/sqm: None
+
+   Loans: 1 loan(s)
+      Loan 1: None - 0
+
+
+================================================================================
+ANALYSIS
+================================================================================
+
+⚠️  No extraction metadata available
+
+📊 Coverage Comparison:
+   Baseline: 6.8%
+   New: 6.8%
+   Improvement: +0.0pp
+
+❌ FAILED: Improvement <5pp (mixed-mode may not be working)
+
+================================================================================
+TEST COMPLETE
+================================================================================

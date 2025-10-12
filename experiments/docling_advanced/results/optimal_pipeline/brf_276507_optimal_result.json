@@ -1,0 +1,235 @@
+{
+  "pdf": "../../SRS/brf_276507.pdf",
+  "topology": {
+    "pdf_path": "../../SRS/brf_276507.pdf",
+    "total_pages": 20,
+    "avg_chars_per_page": 830.6666666666666,
+    "classification": "machine_readable",
+    "sample_pages": [
+      0,
+      6,
+      12
+    ],
+    "analysis_time": 0.05427670478820801
+  },
+  "structure": {
+    "num_sections": 55,
+    "method": "text",
+    "cached": true,
+    "extraction_time": 32.134583950042725
+  },
+  "routing": {
+    "main_sections": {
+      "governance_agent": 4,
+      "financial_agent": 2,
+      "property_agent": 0,
+      "operations_agent": 4,
+      "notes_collection": 0
+    },
+    "note_sections": {
+      "notes_other_agent": 2,
+      "notes_accounting_agent": 1,
+      "notes_loans_agent": 2
+    },
+    "routing_time": 2.453573703765869
+  },
+  "agent_results": {
+    "governance_agent": {
+      "agent_id": "governance_agent",
+      "status": "success",
+      "data": {
+        "chairman": "Camilla Landén",
+        "board_members": [
+          "Bo Hallgren",
+          "Sven Gustafsson",
+          "Hans Malmström",
+          "Patrik Barkman",
+          "Jonas Eriksson",
+          "Susanna Stockhus",
+          "Martin From",
+          "Martin Almblad",
+          "Tiradd Eskandari"
+        ],
+        "auditor_name": "Matilda Hallehn",
+        "audit_firm": "BoRevision i Sverige AB",
+        "nomination_committee": [
+          "Lotta Sandström",
+          "Linda Björk"
+        ],
+        "evidence_pages": [
+          3,
+          18,
+          19,
+          20
+        ]
+      },
+      "section_headings": [
+        "Föreningen äger och förvaltar",
+        "Styrelsens sammansättning",
+        "Föreningsstämma",
+        "VÄSENTLIGA HÄNDELSER UNDER RÄKENSKAPSÅRET"
+      ],
+      "pages_rendered": [
+        2,
+        3,
+        4,
+        5,
+        18,
+        19,
+        20
+      ],
+      "num_images": 7,
+      "evidence_pages": [
+        3,
+        18,
+        19,
+        20
+      ],
+      "extraction_time": 32.154582023620605,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 8232
+    },
+    "financial_agent": {
+      "agent_id": "financial_agent",
+      "status": "success",
+      "data": {
+        "revenue": "4869041",
+        "expenses": "-6165382",
+        "assets": "480873785",
+        "liabilities": "66538986",
+        "equity": "414334800",
+        "surplus": "-3099455",
+        "evidence_pages": [
+          8,
+          10
+        ]
+      },
+      "section_headings": [
+        "Årsavgifter",
+        "ÅRSREDOVISNING 2023"
+      ],
+      "pages_rendered": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12
+      ],
+      "num_images": 9,
+      "evidence_pages": [
+        8,
+        10
+      ],
+      "extraction_time": 22.759006023406982,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 11034
+    },
+    "notes_other_agent": {
+      "agent_id": "notes_other_agent",
+      "status": "success",
+      "data": {
+        "other_notes": "Under 'Not 13 Övriga kortfristiga placeringar', it is stated that the association has short-term investments amounting to 1,300,000 SEK as of 2023-12-31, compared to 200,000 SEK as of 2022-12-31. These investments are specified as 'Placeringar HSB'.",
+        "evidence_pages": [
+          16
+        ]
+      },
+      "section_headings": [
+        "2023 ÅRSREDOVISNING",
+        "Not 13 Övriga kortfristiga placeringar"
+      ],
+      "pages_rendered": [
+        2,
+        4,
+        5,
+        7,
+        8,
+        9,
+        16,
+        17
+      ],
+      "num_images": 8,
+      "evidence_pages": [
+        16
+      ],
+      "extraction_time": 12.204121112823486,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 9791
+    },
+    "notes_accounting_agent": {
+      "agent_id": "notes_accounting_agent",
+      "status": "success",
+      "data": {
+        "accounting_principles": "Årsredovisningen har upprättats med tillämpning av årsredovisningslagen (1995:1554) och Bokföringsnämndens allmänna råd BFNAR 2012:1 Årsredovisning och koncernredovisning (K3) samt Bokföringsnämndens allmänna råd BFNAR 2023:1 om kompletterande upplysningar i bostadsrättsföreningars årsredovisningar.",
+        "valuation_methods": "Materiella anläggningstillgångar redovisas till anskaffningsvärde minskat med ackumulerade avskrivningar och nedskrivningar. Fordringar har upptagits till de belopp varmed de beräknas inflyta. Skulder har värderats till historiska anskaffningsvärden förutom vissa finansiella skulder som värderats till verkligt värde.",
+        "revenue_recognition": "Inkomster redovisas till verkligt värde av vad föreningen fått eller beräknas få. Det innebär att föreningen redovisar inkomster till nominellt belopp (fakturabelopp).",
+        "evidence_pages": [
+          12
+        ]
+      },
+      "section_headings": [
+        "Not 1 Redovisnings- och värderingsprinciper"
+      ],
+      "pages_rendered": [
+        5,
+        6,
+        8,
+        12,
+        13,
+        15
+      ],
+      "num_images": 6,
+      "evidence_pages": [
+        12
+      ],
+      "extraction_time": 17.178290843963623,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 8039
+    },
+    "notes_loans_agent": {
+      "agent_id": "notes_loans_agent",
+      "status": "success",
+      "data": {
+        "outstanding_loans": "64746000",
+        "interest_rate": "2.93%",
+        "amortization": "660000",
+        "loan_terms": "Loans maturing in 2024-2025",
+        "evidence_pages": [
+          16
+        ]
+      },
+      "section_headings": [
+        "Not 14 Övriga långfristiga skulder till kreditinstitut",
+        "Not 15 Övriga kortfristiga skulder till kreditinstitut"
+      ],
+      "pages_rendered": [
+        5,
+        6,
+        7,
+        10,
+        16,
+        17
+      ],
+      "num_images": 6,
+      "evidence_pages": [
+        16
+      ],
+      "extraction_time": 9.480762243270874,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 8274
+    }
+  },
+  "quality_metrics": {
+    "coverage": 1.0,
+    "numeric_qc_pass": true,
+    "evidence_ratio": 1.0,
+    "overall_score": 1.0,
+    "needs_coaching": false,
+    "validation_time": 6.9141387939453125e-06
+  },
+  "total_time": 96.2367947101593,
+  "total_cost": 0.0
+}

@@ -1,0 +1,107 @@
+{
+  "pdf": "../../data/raw_pdfs/Hjorthagen/brf_81563.pdf",
+  "topology": {
+    "pdf_path": "../../data/raw_pdfs/Hjorthagen/brf_81563.pdf",
+    "total_pages": 21,
+    "avg_chars_per_page": 18.333333333333332,
+    "classification": "scanned",
+    "sample_pages": [
+      0,
+      7,
+      14
+    ],
+    "analysis_time": 0.0556337833404541
+  },
+  "structure": {
+    "num_sections": 9,
+    "method": "ocr",
+    "cached": false,
+    "extraction_time": 41.63050389289856
+  },
+  "routing": {
+    "main_sections": {
+      "governance_agent": 3,
+      "financial_agent": 0,
+      "property_agent": 0,
+      "operations_agent": 0,
+      "notes_collection": 0
+    },
+    "note_sections": {
+      "notes_other_agent": 3
+    },
+    "routing_time": 1.655268907546997
+  },
+  "agent_results": {
+    "governance_agent": {
+      "agent_id": "governance_agent",
+      "status": "success",
+      "data": {
+        "chairman": "Sylvia Helena Sörensen",
+        "board_members": [
+          "Stefan Mile Kantzy",
+          "Leif Emil Brynolfsson",
+          "Vincent Francois Gliniewicz",
+          "Glenn Anders Hartikainen"
+        ],
+        "auditor_name": "Carina Toresson",
+        "audit_firm": "Toresson Revision AB",
+        "nomination_committee": [
+          "Veronika Elebäck",
+          "Kerstin Kantzy"
+        ],
+        "evidence_pages": [
+          3
+        ]
+      },
+      "section_headings": [
+        "Varsågod! Här är din förenings årsredovisning",
+        "En välskött bostadsrättsförening",
+        "Utbildning i styrelsearbete"
+      ],
+      "pages_rendered": [
+        2,
+        3,
+        4
+      ],
+      "num_images": 3,
+      "evidence_pages": [
+        3
+      ],
+      "extraction_time": 7.421047210693359,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 3736
+    },
+    "notes_other_agent": {
+      "agent_id": "notes_other_agent",
+      "status": "success",
+      "data": {
+        "other_notes": "",
+        "evidence_pages": []
+      },
+      "section_headings": [
+        "1. Förvaltningsberättelsen",
+        "2. Resultaträkningen",
+        "3. Balansräkningen"
+      ],
+      "pages_rendered": [
+        20,
+        21
+      ],
+      "num_images": 2,
+      "evidence_pages": [],
+      "extraction_time": 2.9649746417999268,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 2741
+    }
+  },
+  "quality_metrics": {
+    "coverage": 1.0,
+    "numeric_qc_pass": true,
+    "evidence_ratio": 0.5,
+    "overall_score": 0.75,
+    "needs_coaching": true,
+    "validation_time": 4.76837158203125e-06
+  },
+  "total_time": 53.73666310310364,
+  "total_cost": 0.0
+}

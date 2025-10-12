@@ -1,0 +1,340 @@
+{
+  "hjorthagen_distribution": {
+    "dataset": "Hjorthagen",
+    "count": 15,
+    "min": 6.0,
+    "max": 98.3,
+    "avg": 66.89333333333333,
+    "median": 68.4,
+    "q1": 65.8,
+    "q3": 70.9,
+    "below_50": 1,
+    "below_30": 1,
+    "above_70": 5,
+    "distribution": [
+      6.0,
+      64.1,
+      64.1,
+      65.8,
+      68.4,
+      68.4,
+      68.4,
+      68.4,
+      69.2,
+      69.2,
+      70.1,
+      70.9,
+      71.8,
+      80.3,
+      98.3
+    ]
+  },
+  "srs_distribution": {
+    "dataset": "SRS",
+    "count": 26,
+    "min": 1.7,
+    "max": 81.2,
+    "avg": 53.31923076923076,
+    "median": 70.1,
+    "q1": 14.5,
+    "q3": 76.1,
+    "below_50": 8,
+    "below_30": 8,
+    "above_70": 13,
+    "distribution": [
+      1.7,
+      1.7,
+      4.3,
+      6.8,
+      12.0,
+      13.7,
+      14.5,
+      14.5,
+      65.0,
+      65.0,
+      66.7,
+      67.5,
+      68.4,
+      70.1,
+      70.9,
+      70.9,
+      71.8,
+      74.4,
+      75.2,
+      76.1,
+      76.9,
+      77.8,
+      78.6,
+      80.3,
+      80.3,
+      81.2
+    ]
+  },
+  "hjorthagen_field_patterns": {
+    "chairman": {
+      "success_rate": 100.0,
+      "found": 15,
+      "total": 15
+    },
+    "board_members": {
+      "success_rate": 100.0,
+      "found": 15,
+      "total": 15
+    },
+    "auditor": {
+      "success_rate": 100.0,
+      "found": 15,
+      "total": 15
+    },
+    "total_assets": {
+      "success_rate": 93.33333333333333,
+      "found": 14,
+      "total": 15
+    },
+    "total_liabilities": {
+      "success_rate": 93.33333333333333,
+      "found": 14,
+      "total": 15
+    },
+    "revenue": {
+      "success_rate": 93.33333333333333,
+      "found": 14,
+      "total": 15
+    },
+    "net_result": {
+      "success_rate": 93.33333333333333,
+      "found": 14,
+      "total": 15
+    },
+    "municipality": {
+      "success_rate": 93.33333333333333,
+      "found": 14,
+      "total": 15
+    },
+    "property_designation": {
+      "success_rate": 6.666666666666667,
+      "found": 1,
+      "total": 15
+    },
+    "annual_fee_per_sqm": {
+      "success_rate": 93.33333333333333,
+      "found": 14,
+      "total": 15
+    },
+    "organization_number": {
+      "success_rate": 86.66666666666667,
+      "found": 13,
+      "total": 15
+    },
+    "fiscal_year": {
+      "success_rate": 100.0,
+      "found": 15,
+      "total": 15
+    }
+  },
+  "srs_field_patterns": {
+    "chairman": {
+      "success_rate": 66.66666666666666,
+      "found": 18,
+      "total": 27
+    },
+    "board_members": {
+      "success_rate": 74.07407407407408,
+      "found": 20,
+      "total": 27
+    },
+    "auditor": {
+      "success_rate": 85.18518518518519,
+      "found": 23,
+      "total": 27
+    },
+    "total_assets": {
+      "success_rate": 66.66666666666666,
+      "found": 18,
+      "total": 27
+    },
+    "total_liabilities": {
+      "success_rate": 66.66666666666666,
+      "found": 18,
+      "total": 27
+    },
+    "revenue": {
+      "success_rate": 66.66666666666666,
+      "found": 18,
+      "total": 27
+    },
+    "net_result": {
+      "success_rate": 66.66666666666666,
+      "found": 18,
+      "total": 27
+    },
+    "municipality": {
+      "success_rate": 62.96296296296296,
+      "found": 17,
+      "total": 27
+    },
+    "property_designation": {
+      "success_rate": 7.4074074074074066,
+      "found": 2,
+      "total": 27
+    },
+    "annual_fee_per_sqm": {
+      "success_rate": 66.66666666666666,
+      "found": 18,
+      "total": 27
+    },
+    "organization_number": {
+      "success_rate": 81.48148148148148,
+      "found": 22,
+      "total": 27
+    },
+    "fiscal_year": {
+      "success_rate": 100.0,
+      "found": 27,
+      "total": 27
+    }
+  },
+  "hjorthagen_failures": [
+    {
+      "pdf": "brf_78906.pdf",
+      "coverage": 6.0,
+      "reason": "Very low coverage (<20%)"
+    }
+  ],
+  "srs_failures": [
+    {
+      "pdf": "brf_276629.pdf",
+      "coverage": 1.7,
+      "reason": "Very low coverage (<20%)"
+    },
+    {
+      "pdf": "brf_43334.pdf",
+      "coverage": 6.8,
+      "reason": "Very low coverage (<20%)"
+    },
+    {
+      "pdf": "brf_53107.pdf",
+      "coverage": 14.5,
+      "reason": "Very low coverage (<20%)"
+    },
+    {
+      "pdf": "brf_83301.pdf",
+      "coverage": 12.0,
+      "reason": "Very low coverage (<20%)"
+    },
+    {
+      "pdf": "brf_80193.pdf",
+      "coverage": 1.7,
+      "reason": "Very low coverage (<20%)"
+    },
+    {
+      "pdf": "brf_282765.pdf",
+      "coverage": 13.7,
+      "reason": "Very low coverage (<20%)"
+    },
+    {
+      "pdf": "brf_78730.pdf",
+      "coverage": 4.3,
+      "reason": "Very low coverage (<20%)"
+    },
+    {
+      "pdf": "brf_57125.pdf",
+      "coverage": 14.5,
+      "reason": "Very low coverage (<20%)"
+    },
+    {
+      "pdf": "brf_76536.pdf",
+      "coverage": 0.0,
+      "reason": "Very low coverage (<20%)"
+    }
+  ],
+  "agent_performance_comparison": {
+    "fees_agent": {
+      "hjorthagen_success_rate": 93.33333333333333,
+      "srs_success_rate": 69.23076923076923,
+      "success_rate_delta": 24.102564102564102
+    },
+    "governance_agent": {
+      "hjorthagen_success_rate": 100.0,
+      "srs_success_rate": 76.92307692307693,
+      "success_rate_delta": 23.076923076923066
+    },
+    "property_agent": {
+      "hjorthagen_success_rate": 100.0,
+      "srs_success_rate": 73.07692307692307,
+      "success_rate_delta": 26.923076923076934
+    },
+    "financial_agent": {
+      "hjorthagen_success_rate": 93.33333333333333,
+      "srs_success_rate": 69.23076923076923,
+      "success_rate_delta": 24.102564102564102
+    }
+  },
+  "key_findings": {
+    "coverage_gap": 13.574102564102574,
+    "failure_rate_hjorthagen": 6.666666666666667,
+    "failure_rate_srs": 33.33333333333333,
+    "biggest_field_gaps": [
+      {
+        "field": "chairman",
+        "delta": 33.33333333333334,
+        "hjorthagen_rate": 100.0,
+        "srs_rate": 66.66666666666666
+      },
+      {
+        "field": "municipality",
+        "delta": 30.370370370370367,
+        "hjorthagen_rate": 93.33333333333333,
+        "srs_rate": 62.96296296296296
+      },
+      {
+        "field": "annual_fee_per_sqm",
+        "delta": 26.66666666666667,
+        "hjorthagen_rate": 93.33333333333333,
+        "srs_rate": 66.66666666666666
+      },
+      {
+        "field": "net_result",
+        "delta": 26.66666666666667,
+        "hjorthagen_rate": 93.33333333333333,
+        "srs_rate": 66.66666666666666
+      },
+      {
+        "field": "revenue",
+        "delta": 26.66666666666667,
+        "hjorthagen_rate": 93.33333333333333,
+        "srs_rate": 66.66666666666666
+      },
+      {
+        "field": "total_assets",
+        "delta": 26.66666666666667,
+        "hjorthagen_rate": 93.33333333333333,
+        "srs_rate": 66.66666666666666
+      },
+      {
+        "field": "total_liabilities",
+        "delta": 26.66666666666667,
+        "hjorthagen_rate": 93.33333333333333,
+        "srs_rate": 66.66666666666666
+      },
+      {
+        "field": "board_members",
+        "delta": 25.925925925925924,
+        "hjorthagen_rate": 100.0,
+        "srs_rate": 74.07407407407408
+      },
+      {
+        "field": "auditor",
+        "delta": 14.81481481481481,
+        "hjorthagen_rate": 100.0,
+        "srs_rate": 85.18518518518519
+      },
+      {
+        "field": "organization_number",
+        "delta": 5.1851851851851904,
+        "hjorthagen_rate": 86.66666666666667,
+        "srs_rate": 81.48148148148148
+      }
+    ]
+  }
+}

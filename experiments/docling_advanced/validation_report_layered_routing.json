@@ -3,13 +3,13 @@
   "ground_truth_file": "../../ground_truth/brf_198532_pydantic_ground_truth.json",
   "metrics": {
     "total_fields": 30,
-    "correct": 23,
+    "correct": 27,
     "partial": 3,
-    "missing": 2,
-    "incorrect": 2,
-    "coverage": 0.8666666666666667,
-    "accuracy": 0.92,
-    "overall_score": 0.7666666666666667
+    "missing": 0,
+    "incorrect": 0,
+    "coverage": 1.0,
+    "accuracy": 1.0,
+    "overall_score": 0.9
   },
   "field_results": [
     {
@@ -23,25 +23,18 @@
     {
       "section": "governance",
       "field": "board_members_count",
-      "status": "INCORRECT",
-      "extracted": 6,
+      "status": "CORRECT",
+      "extracted": 7,
       "ground_truth": 7,
-      "match": false
+      "match": true
     },
     {
       "section": "governance",
       "field": "board_member_Elvy",
-      "status": "MISSING",
-      "extracted": [
-        "Torbjörn Andersson",
-        "Maria Annelie Eck Arvstrand",
-        "Mats Eskilson",
-        "Fredrik Linde",
-        "Lisa Lind (Suppleant)",
-        "Daniel Wetter (Suppleant)"
-      ],
+      "status": "CORRECT",
+      "extracted": "Chairman: Elvy Maria Löfvenberg",
       "ground_truth": "Elvy Maria Löfvenberg",
-      "match": false
+      "match": true
     },
     {
       "section": "governance",
@@ -180,10 +173,10 @@
     {
       "section": "property",
       "field": "address",
-      "status": "MISSING",
+      "status": "CORRECT",
       "extracted": "",
       "ground_truth": null,
-      "match": false
+      "match": true
     },
     {
       "section": "property",
@@ -220,10 +213,10 @@
     {
       "section": "financial",
       "field": "expenses",
-      "status": "INCORRECT",
-      "extracted": "2834798",
+      "status": "CORRECT",
+      "extracted": "-6631400",
       "ground_truth": -6631400,
-      "match": false
+      "match": true
     },
     {
       "section": "financial",
@@ -314,32 +307,7 @@
       "match": true
     }
   ],
-  "issues_by_category": {
-    "ACCURACY": [
-      {
-        "field": "governance.board_members_count",
-        "issue": "Extracted 6 != 7",
-        "fix": "Improve governance_agent extraction accuracy"
-      },
-      {
-        "field": "financial.expenses",
-        "issue": "Extracted 2834798 != -6631400",
-        "fix": "Improve financial_agent extraction accuracy"
-      }
-    ],
-    "EXTRACTION": [
-      {
-        "field": "governance.board_member_Elvy",
-        "issue": "Agent received section but didn't extract field",
-        "fix": "Improve governance_agent prompt or page allocation"
-      },
-      {
-        "field": "property.address",
-        "issue": "Agent received section but didn't extract field",
-        "fix": "Improve property_agent prompt or page allocation"
-      }
-    ]
-  },
+  "issues_by_category": {},
   "routing_info": {
     "main_sections": {
       "governance_agent": 12,
@@ -352,7 +320,7 @@
       "notes_accounting_agent": 1,
       "notes_other_agent": 2
     },
-    "routing_time": 4.53928804397583
+    "routing_time": 2.7547662258148193
   },
   "quality_metrics": {
     "coverage": 1.0,
@@ -360,6 +328,6 @@
     "evidence_ratio": 1.0,
     "overall_score": 1.0,
     "needs_coaching": false,
-    "validation_time": 1.0251998901367188e-05
+    "validation_time": 2.47955322265625e-05
   }
 }

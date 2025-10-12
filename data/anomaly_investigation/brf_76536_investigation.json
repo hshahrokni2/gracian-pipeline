@@ -1,0 +1,39 @@
+{
+  "pdf": "SRS/brf_76536.pdf",
+  "file_size_kb": 9041.572265625,
+  "num_pages": 19,
+  "classification": {
+    "classification": "hybrid",
+    "text_percentage": 73.68421052631578,
+    "pages_with_text": 14,
+    "total_pages": 19,
+    "is_machine_readable": false,
+    "avg_chars_per_page": 146.78947368421052
+  },
+  "total_chars": 2789,
+  "pages_with_text": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "text_percentage_calculated": 73.68421052631578,
+  "extraction_result": {
+    "coverage": 6.8,
+    "confidence": 0.5,
+    "governance_extracted": true,
+    "financial_extracted": true,
+    "property_extracted": true,
+    "metadata_extracted": true
+  }
+}

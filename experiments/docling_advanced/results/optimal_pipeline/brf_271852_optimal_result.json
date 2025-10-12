@@ -1,7 +1,7 @@
 {
-  "pdf": "test_pdfs/brf_271852.pdf",
+  "pdf": "../../data/raw_pdfs/Hjorthagen/brf_271852.pdf",
   "topology": {
-    "pdf_path": "test_pdfs/brf_271852.pdf",
+    "pdf_path": "../../data/raw_pdfs/Hjorthagen/brf_271852.pdf",
     "total_pages": 18,
     "avg_chars_per_page": 596.0,
     "classification": "hybrid",
@@ -10,37 +10,329 @@
       6,
       12
     ],
-    "analysis_time": 0.06287074089050293
+    "analysis_time": 0.012861013412475586
   },
   "structure": {
     "num_sections": 45,
     "method": "hybrid",
     "cached": false,
-    "extraction_time": 32.20508694648743
+    "extraction_time": 32.73961806297302
   },
   "routing": {
     "main_sections": {
-      "governance_agent": 2,
-      "financial_agent": 1,
-      "property_agent": 3,
-      "operations_agent": 1,
+      "governance_agent": 8,
+      "financial_agent": 17,
+      "property_agent": 2,
+      "operations_agent": 3,
       "notes_collection": 1
     },
     "note_sections": {
       "notes_accounting_agent": 1,
       "notes_reserves_agent": 1,
-      "notes_other_agent": 1
+      "notes_other_agent": 2
     },
-    "routing_time": 0.0018188953399658203
+    "routing_time": 6.613690137863159
+  },
+  "agent_results": {
+    "governance_agent": {
+      "agent_id": "governance_agent",
+      "status": "success",
+      "data": {
+        "chairman": "Anders Hägg",
+        "board_members": [
+          "Torbjörn Lundstedt",
+          "Mia Maria Sallborg",
+          "Gustaf Örn"
+        ],
+        "auditor_name": "Sara Königslehner",
+        "audit_firm": "BDO Mälardalen AB",
+        "nomination_committee": [
+          "Elias Jacobson",
+          "Christoffer Arensparr",
+          "Stefan Carlsson"
+        ],
+        "evidence_pages": [
+          4
+        ]
+      },
+      "section_headings": [
+        "Förvaltningsberättelse",
+        "Föreningens stadgar",
+        "Föreningens fastighet",
+        "Styrelse",
+        "Revisorer",
+        "Föreningens fastighetslån",
+        "Medlemsinformation",
+        "Årsredovisning 2023"
+      ],
+      "pages_rendered": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "num_images": 7,
+      "evidence_pages": [
+        4
+      ],
+      "extraction_time": 12.366649866104126,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 8178
+    },
+    "property_agent": {
+      "agent_id": "property_agent",
+      "status": "success",
+      "data": {
+        "designation": "Jackproppen 1",
+        "address": "",
+        "postal_code": "",
+        "city": "Stockholm",
+        "built_year": "",
+        "apartments": "54",
+        "energy_class": "",
+        "evidence_pages": [
+          3
+        ]
+      },
+      "section_headings": [
+        "Fastighetsavgift/Fastighetsskatt",
+        "Lägenhetsfördelning:"
+      ],
+      "pages_rendered": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "num_images": 8,
+      "evidence_pages": [
+        3
+      ],
+      "extraction_time": 53.20864200592041,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 9428
+    },
+    "financial_agent": {
+      "agent_id": "financial_agent",
+      "status": "success",
+      "data": {
+        "revenue": "4697262",
+        "expenses": "-5386512",
+        "assets": "437743965",
+        "liabilities": "70063769",
+        "equity": "367680396",
+        "surplus": "-2127794",
+        "evidence_pages": [
+          8,
+          9,
+          10
+        ]
+      },
+      "section_headings": [
+        "Ekonomisk plan",
+        "Årsavgifter",
+        "Upplysning om förlust",
+        "Förändringar i eget kapital",
+        "Förslag till behandling av ansamlad förlust",
+        "Arvoden",
+        "Yttre fond",
+        "Nettoomsättning",
+        "Resultat efter finansiella poster",
+        "Soliditet (%)",
+        "Årsavgift/kvm upplåten med bostadsrätt",
+        "Skuldsättning/kvm",
+        "Skuldsättning/kvm upplåten med bostadsrätt",
+        "Sparande/kvm",
+        "Räntekänslighet (%)",
+        "Energikostnad/kvm",
+        "Årsavgifternas andel av totala rörelseintäkter (%)"
+      ],
+      "pages_rendered": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "num_images": 12,
+      "evidence_pages": [
+        8,
+        9,
+        10
+      ],
+      "extraction_time": 17.039130210876465,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 14717
+    },
+    "notes_accounting_agent": {
+      "agent_id": "notes_accounting_agent",
+      "status": "success",
+      "data": {
+        "accounting_principles": "Årsredovisningen är upprättad i enlighet med årsredovisningslagen och BFNAR 2012:1 Årsredovisning och koncernredovisning (K3). Principerna är oförändrade jämfört med föregående år.",
+        "valuation_methods": "Fordringar har upptagits till de belopp varmed de beräknas inflyta. Övriga tillgångar och skulder har upptagits till anskaffningsvärden där inget annat anges. Materiella anläggningstillgångar redovisas till anskaffningsvärde minskat med ackumulerade avskrivningar och nedskrivningar. I anskaffningsvärdet ingår förutom inköpspriset även utgifter som är direkt hänförliga till förvärvet.",
+        "revenue_recognition": "",
+        "evidence_pages": [
+          12
+        ]
+      },
+      "section_headings": [
+        "Not 1 Redovisningsprinciper"
+      ],
+      "pages_rendered": [
+        12,
+        13
+      ],
+      "num_images": 2,
+      "evidence_pages": [
+        12
+      ],
+      "extraction_time": 6.846908807754517,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 3619
+    },
+    "notes_reserves_agent": {
+      "agent_id": "notes_reserves_agent",
+      "status": "success",
+      "data": {
+        "reserve_fund": "",
+        "annual_contribution": "",
+        "fund_purpose": "Föreningens fond för yttre underhåll redovisas i enlighet med bokföringsnämndens allmänna råd (BFNAR 2003:4).",
+        "evidence_pages": [
+          12
+        ]
+      },
+      "section_headings": [
+        "Fond för yttre underhåll"
+      ],
+      "pages_rendered": [
+        12,
+        13
+      ],
+      "num_images": 2,
+      "evidence_pages": [
+        12
+      ],
+      "extraction_time": 4.854566812515259,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 3818
+    },
+    "notes_other_agent": {
+      "agent_id": "notes_other_agent",
+      "status": "success",
+      "data": {
+        "other_notes": "Fastighetsinteckningar uppgår till 70 170 000 kr per 2023-12-31, oförändrat från 2022-12-31.",
+        "evidence_pages": [
+          17
+        ]
+      },
+      "section_headings": [
+        "Kortfristig del av långfristig skuld:",
+        "Not 13 Ställda säkerheter"
+      ],
+      "pages_rendered": [
+        16,
+        17,
+        18
+      ],
+      "num_images": 3,
+      "evidence_pages": [
+        17
+      ],
+      "extraction_time": 38.78814125061035,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 5115
+    },
+    "comprehensive_notes_agent": {
+      "agent_id": "comprehensive_notes_agent",
+      "status": "success",
+      "data": {
+        "note_8_buildings": {
+          "acquisition_value_2021": 236233066,
+          "accumulated_depreciation_2021": -5050952,
+          "book_value_2021": 437341448,
+          "land_value_included": 206169334,
+          "tax_value_total_2021": 305000000
+        },
+        "note_9_receivables": {
+          "tax_account": 519014,
+          "vat_settlement": 1128298,
+          "client_funds": 0,
+          "receivables": 65804,
+          "total": 1713116
+        },
+        "note_10_maintenance_fund": {},
+        "loans": [
+          {
+            "lender": "Nordea",
+            "amount_2021": 22390000,
+            "interest_rate": 0.0451,
+            "maturity_date": "2024-03-29",
+            "amortization_free": true
+          },
+          {
+            "lender": "Nordea",
+            "amount_2021": 22862000,
+            "interest_rate": 0.0105,
+            "maturity_date": "2025-12-17",
+            "amortization_free": true
+          },
+          {
+            "lender": "Nordea",
+            "amount_2021": 22862000,
+            "interest_rate": 0.0134,
+            "maturity_date": "2027-12-29",
+            "amortization_free": true
+          }
+        ],
+        "evidence_pages": [
+          14,
+          15,
+          16
+        ]
+      },
+      "section_headings": [
+        "Noter (complete section)"
+      ],
+      "pages_rendered": [
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "num_images": 5,
+      "evidence_pages": [
+        14,
+        15,
+        16
+      ],
+      "extraction_time": 0,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 6433
+    }
   },
   "quality_metrics": {
     "coverage": 1.0,
     "numeric_qc_pass": true,
-    "evidence_ratio": 0.8333333333333334,
-    "overall_score": 0.9166666666666667,
-    "needs_coaching": true,
-    "validation_time": 6.198883056640625e-06
+    "evidence_ratio": 1.0,
+    "overall_score": 1.0,
+    "needs_coaching": false,
+    "validation_time": 1.9073486328125e-05
   },
-  "total_time": 112.49958395957947,
+  "total_time": 219.4596710205078,
   "total_cost": 0.0
 }

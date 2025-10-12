@@ -30,7 +30,7 @@
       "notes_accounting_agent": 1,
       "notes_other_agent": 2
     },
-    "routing_time": 4.53928804397583
+    "routing_time": 2.51253604888916
   },
   "agent_results": {
     "property_agent": {
@@ -69,9 +69,9 @@
       "evidence_pages": [
         2
       ],
-      "extraction_time": 72.39792799949646,
+      "extraction_time": 11.200392961502075,
       "model": "gpt-4o-2024-11-20",
-      "tokens_used": 10342
+      "tokens_used": 10554
     },
     "governance_agent": {
       "agent_id": "governance_agent",
@@ -131,7 +131,7 @@
         2,
         17
       ],
-      "extraction_time": 73.09764504432678,
+      "extraction_time": 12.578472137451172,
       "model": "gpt-4o-2024-11-20",
       "tokens_used": 12740
     },
@@ -140,7 +140,7 @@
       "status": "success",
       "data": {
         "revenue": "7393591",
-        "expenses": "2834798",
+        "expenses": "-6631400",
         "assets": "675294786",
         "liabilities": "115487111",
         "equity": "559807676",
@@ -150,7 +150,8 @@
           9,
           10,
           11,
-          13
+          13,
+          14
         ]
       },
       "section_headings": [
@@ -184,11 +185,61 @@
         9,
         10,
         11,
-        13
+        13,
+        14
       ],
-      "extraction_time": 86.67823886871338,
+      "extraction_time": 11.927489995956421,
       "model": "gpt-4o-2024-11-20",
-      "tokens_used": 14558
+      "tokens_used": 14756
+    },
+    "revenue_breakdown_agent": {
+      "agent_id": "revenue_breakdown_agent",
+      "status": "success",
+      "data": {
+        "revenue_breakdown": {
+          "nettoomsattning": 7393591,
+          "arsavgifter": 0,
+          "hyresintakter": 0,
+          "bredband_kabel_tv": 0,
+          "andel_drift_gemensam": 0,
+          "andel_el_varme": 0,
+          "andel_vatten": 0,
+          "ovriga_rorelseintak": 57994,
+          "ranta_bankmedel": 190038,
+          "valutakursvinster": 0,
+          "summa_rorelseintakter": 7451585,
+          "summa_finansiella_intakter": 190038,
+          "summa_intakter": 7641623,
+          "revenue_2021": 7641623,
+          "evidence_pages": [
+            8
+          ]
+        }
+      },
+      "section_headings": [
+        "Flerårsöversikt",
+        "Förändringar eget kapital",
+        "Resultatdisposition",
+        "Resultaträkning",
+        "Balansräkning",
+        "Balansräkning",
+        "Årsredovisning",
+        "Fördelning av intäkter och kostnader",
+        "Skatter och avgifter"
+      ],
+      "pages_rendered": [
+        1,
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "num_images": 6,
+      "evidence_pages": [],
+      "extraction_time": 9.740478754043579,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 8825
     },
     "notes_accounting_agent": {
       "agent_id": "notes_accounting_agent",
@@ -196,7 +247,7 @@
       "data": {
         "accounting_principles": "Årsredovisningen har upprättats i enlighet med BFNAR 2016:10, Årsredovisning i mindre företag (K2).",
         "valuation_methods": "Avskrivningar på anläggningstillgångar enligt plan baseras på ursprungliga anskaffningsvärdet och beräknad nyttjandeperiod. Byggnader skrivs av över 100 år.",
-        "revenue_recognition": "Förenklingsregeln gällande periodiseringar har tillämpats.",
+        "revenue_recognition": "",
         "evidence_pages": [
           11
         ]
@@ -216,9 +267,9 @@
       "evidence_pages": [
         11
       ],
-      "extraction_time": 9.727321863174438,
+      "extraction_time": 9.138443946838379,
       "model": "gpt-4o-2024-11-20",
-      "tokens_used": 8040
+      "tokens_used": 8031
     },
     "notes_other_agent": {
       "agent_id": "notes_other_agent",
@@ -226,18 +277,12 @@
       "data": {
         "other_notes": {
           "not_3": {
-            "extra_state_support": 0,
-            "insurance_compensation": 0,
-            "other_income": 57994,
-            "total_other_income": 57994
+            "extra_state_support": "0",
+            "insurance_compensation": "0",
+            "other_income": "57,994"
           },
           "not_14": {
-            "electricity_contract": {
-              "duration": "3 years",
-              "rate": "58.89 öre/kWh",
-              "additional_costs": "1.5 öre/kWh for hydropower",
-              "supplier": "Fortum"
-            }
+            "electricity_contract": "Föreningen har bundit elavtalet i 3 år till 58,89 öre/kWh plus ca 1,5 öre/kWh för vattenkraftel och valt Fortum till ny el-leverantör."
           }
         },
         "evidence_pages": [
@@ -265,9 +310,9 @@
         12,
         16
       ],
-      "extraction_time": 13.61434006690979,
+      "extraction_time": 14.236347913742065,
       "model": "gpt-4o-2024-11-20",
-      "tokens_used": 11664
+      "tokens_used": 11645
     },
     "comprehensive_notes_agent": {
       "agent_id": "comprehensive_notes_agent",
@@ -352,11 +397,11 @@
   "quality_metrics": {
     "coverage": 1.0,
     "numeric_qc_pass": true,
-    "evidence_ratio": 1.0,
-    "overall_score": 1.0,
-    "needs_coaching": false,
-    "validation_time": 1.0251998901367188e-05
+    "evidence_ratio": 0.8571428571428571,
+    "overall_score": 0.9285714285714286,
+    "needs_coaching": true,
+    "validation_time": 1.0967254638671875e-05
   },
-  "total_time": 200.78655004501343,
+  "total_time": 75.7552809715271,
   "total_cost": 0.0
 }

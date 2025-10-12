@@ -1,0 +1,86 @@
+{
+  "pdf": "../../SRS/brf_276629.pdf",
+  "topology": {
+    "pdf_path": "../../SRS/brf_276629.pdf",
+    "total_pages": 22,
+    "avg_chars_per_page": 0.0,
+    "classification": "scanned",
+    "sample_pages": [
+      0,
+      7,
+      14
+    ],
+    "analysis_time": 0.02794814109802246
+  },
+  "structure": {
+    "num_sections": 0,
+    "method": "ocr",
+    "cached": false,
+    "extraction_time": 37.472532987594604
+  },
+  "routing": {
+    "main_sections": {
+      "governance_agent": 0,
+      "financial_agent": 0,
+      "property_agent": 0,
+      "operations_agent": 0,
+      "notes_collection": 0
+    },
+    "note_sections": {},
+    "routing_time": 5.0067901611328125e-06
+  },
+  "agent_results": {
+    "governance_agent": {
+      "agent_id": "governance_agent",
+      "status": "success",
+      "data": {
+        "chairman": "Christina Tiger",
+        "board_members": [
+          "Peter Berg Lindberg",
+          "Henrik Berglund",
+          "Yvonne Broden",
+          "Andreea-Alexandra Celamar",
+          "Pia Danielsson",
+          "Marie Lindén"
+        ],
+        "auditor_name": "Pontus Ohlsson",
+        "audit_firm": "Ernst & Young",
+        "nomination_committee": [
+          "Isabella Alveborg",
+          "Stefan Danielsson",
+          "Josephine Fransson"
+        ],
+        "evidence_pages": [
+          3,
+          4
+        ]
+      },
+      "section_headings": [],
+      "pages_rendered": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "num_images": 5,
+      "evidence_pages": [
+        3,
+        4
+      ],
+      "extraction_time": 12.22369122505188,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 5939
+    }
+  },
+  "quality_metrics": {
+    "coverage": 1.0,
+    "numeric_qc_pass": true,
+    "evidence_ratio": 1.0,
+    "overall_score": 1.0,
+    "needs_coaching": false,
+    "validation_time": 1.4066696166992188e-05
+  },
+  "total_time": 49.73354887962341,
+  "total_cost": 0.0
+}

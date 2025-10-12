@@ -1028,6 +1028,16 @@ Return ONLY valid JSON, no other text."""
                 context=pass1_results
             )
 
+        # Sprint 1+2: Extract revenue_breakdown_agent (uses same headings as financial_agent)
+        # Revenue breakdown targets income statement (Resultaträkning) pages 6-8
+        if financial_headings:
+            results['revenue_breakdown_agent'] = self._extract_agent(
+                self.pdf_path_cache,
+                'revenue_breakdown_agent',
+                financial_headings,  # Same sections (Resultaträkning contains revenue)
+                context=pass1_results
+            )
+
         # Extract note agents sequentially
         for agent_id, section_headings in routing.note_sections.items():
             # Build hierarchical context (Pass 1 + financial + previous notes)

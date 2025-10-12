@@ -1,0 +1,47 @@
+[
+  {
+    "pdf": "brf_43334.pdf",
+    "coverage": 6.8,
+    "total_pages": 19,
+    "pages_with_text": 2,
+    "text_percentage": 10.526315789473683,
+    "avg_chars_per_page": 506.4736842105263,
+    "classification": "\ud83d\udcc4\ud83d\udd24 HYBRID (mostly scanned)"
+  },
+  {
+    "pdf": "brf_83301.pdf",
+    "coverage": 12.0,
+    "total_pages": 20,
+    "pages_with_text": 20,
+    "text_percentage": 100.0,
+    "avg_chars_per_page": 677.0,
+    "classification": "\ud83d\udcdd TRULY machine-readable"
+  },
+  {
+    "pdf": "brf_282765.pdf",
+    "coverage": 13.7,
+    "total_pages": 23,
+    "pages_with_text": 2,
+    "text_percentage": 8.695652173913043,
+    "avg_chars_per_page": 433.5652173913044,
+    "classification": "\ud83d\udcc4\ud83d\udd24 HYBRID (mostly scanned)"
+  },
+  {
+    "pdf": "brf_53107.pdf",
+    "coverage": 14.5,
+    "total_pages": 21,
+    "pages_with_text": 21,
+    "text_percentage": 100.0,
+    "avg_chars_per_page": 651.7142857142857,
+    "classification": "\ud83d\udcdd TRULY machine-readable"
+  },
+  {
+    "pdf": "brf_57125.pdf",
+    "coverage": 14.5,
+    "total_pages": 19,
+    "pages_with_text": 2,
+    "text_percentage": 10.526315789473683,
+    "avg_chars_per_page": 482.63157894736844,
+    "classification": "\ud83d\udcc4\ud83d\udd24 HYBRID (mostly scanned)"
+  }
+]

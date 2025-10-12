@@ -1,0 +1,51 @@
+{
+  "pdf": "/Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Gracian Pipeline/SRS/brf_78730.pdf",
+  "topology": {
+    "pdf_path": "/Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Gracian Pipeline/SRS/brf_78730.pdf",
+    "total_pages": 19,
+    "avg_chars_per_page": 0.0,
+    "classification": "scanned",
+    "sample_pages": [
+      0,
+      6,
+      12
+    ],
+    "analysis_time": 0.008311986923217773
+  },
+  "structure": {
+    "num_sections": 0,
+    "method": "ocr",
+    "cached": false,
+    "extraction_time": 32.73400115966797
+  },
+  "routing": {
+    "main_sections": {
+      "governance_agent": 0,
+      "financial_agent": 0,
+      "property_agent": 0,
+      "operations_agent": 0,
+      "notes_collection": 0
+    },
+    "note_sections": {},
+    "routing_time": 5.7220458984375e-06
+  },
+  "agent_results": {
+    "governance_agent": {
+      "agent_id": "governance_agent",
+      "status": "error",
+      "error": "The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable",
+      "extraction_time": 4.1898438930511475,
+      "evidence_pages": []
+    }
+  },
+  "quality_metrics": {
+    "coverage": 0.0,
+    "numeric_qc_pass": true,
+    "evidence_ratio": 0.0,
+    "overall_score": 0.0,
+    "needs_coaching": true,
+    "validation_time": 1.3113021850585938e-05
+  },
+  "total_time": 36.942973136901855,
+  "total_cost": 0.0
+}

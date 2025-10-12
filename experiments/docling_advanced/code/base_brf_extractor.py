@@ -15,6 +15,7 @@ import os
 import re
 import json
 import time
+import random
 import base64
 from typing import Dict, List, Any, Tuple, Optional
 from pathlib import Path
@@ -139,7 +140,7 @@ CRITICAL: Extract these specific notes:
   }
 }
 
-4. **Not 11 - Loans (Skulder till kreditinstitut/SKULDER TILL KREDITINSTITUT)** - CRITICAL:
+4. **Not 11 - Loans (Skulder till kreditinstitut/SKULDER TILL KREDITINSTITUT)** - CRITICAL (ENHANCED SPRINT 1+2):
 {
   "loans": [
     {
@@ -147,18 +148,127 @@ CRITICAL: Extract these specific notes:
       "amount_2021": 30000000,
       "interest_rate": 0.00570,
       "maturity_date": "2024-09-28",
-      "amortization_free": true
+      "amortization_free": true,
+      "loan_type": "Bundet",
+      "collateral": "Fastighetsinteckning",
+      "credit_facility_limit": 30000000,
+      "outstanding_amount": 30000000
     }
   ]
 }
 
-Look for loan tables with columns like: Långivare, Belopp, Ränta, Förfallodatum.
-Extract ALL loans (usually 4 rows from SEB).
-Parse Swedish formats: "30 000 000 kr" → 30000000, "0,57 %" → 0.00570
+**ENHANCED EXTRACTION (Sprint 1+2 - 8 fields per loan)**:
+
+EXISTING FIELDS (already working):
+- lender: Bank name (e.g., "SEB", "Handelsbanken")
+- amount_2021: Loan amount in SEK (numeric, no spaces)
+- interest_rate: Interest rate as decimal (0.57% → 0.00570)
+- maturity_date: Maturity/due date (YYYY-MM-DD format)
+- amortization_free: Boolean (true if "Amorteringsfritt")
+
+NEW FIELDS (Sprint 1+2 additions):
+- loan_type: "Bundet" (fixed) or "Rörligt" (variable) - check "Typ" or "Räntesats" column
+- collateral: Collateral type (usually "Fastighetsinteckning" or "Borgen")
+- credit_facility_limit: Credit facility maximum (if different from amount, else same as amount)
+- outstanding_amount: Current outstanding balance (if different from amount, else same as amount)
+
+PARSING INSTRUCTIONS:
+- Look for loan tables with columns: Långivare, Belopp, Ränta, Förfallodatum, Typ, Säkerhet
+- Extract ALL loans (usually 4 rows from SEB)
+- Parse Swedish formats: "30 000 000 kr" → 30000000, "0,57 %" → 0.00570
+- For loan_type: Look for "Bundet" (fixed) or "Rörligt" (variable) in table or note text
+- For collateral: Usually "Fastighetsinteckning" (mortgage) unless specified otherwise
+- If credit_facility_limit not shown separately, use amount_2021
+- If outstanding_amount not shown separately, use amount_2021
 
 Include evidence_pages: [] with ALL 1-based page numbers used.
 
-Return STRICT JSON with ONLY the structure above. If a note is not found, return empty object {}."""
+Return STRICT JSON with ONLY the structure above. If a note is not found, return empty object {}.""",
+
+        'revenue_breakdown_agent': """You are RevenueBreakdownAgent for Swedish BRF detailed income statement extraction.
+
+Extract COMPLETE revenue breakdown from the income statement (Resultaträkning) with ALL 15 line items.
+
+TARGET STRUCTURE (all fields required):
+{
+  "revenue_breakdown": {
+    "nettoomsattning": 0,            // Net sales (if present)
+    "arsavgifter": 0,                // Annual member fees (Årsavgifter)
+    "hyresintakter": 0,              // Rental income (Hyresintäkter)
+    "bredband_kabel_tv": 0,          // Broadband/cable TV (Bredband/kabel-TV)
+    "andel_drift_gemensam": 0,       // Share of common operations (Andel drift gemensam)
+    "andel_el_varme": 0,             // Share of electricity/heating (Andel el/värme)
+    "andel_vatten": 0,               // Share of water (Andel vatten)
+    "ovriga_rorelseintak": 0,        // Other operating income (Övriga rörelseintäkter)
+    "ranta_bankmedel": 0,            // Interest on bank funds (Ränta bankmedel)
+    "valutakursvinster": 0,          // Foreign exchange gains (Valutakursvinster)
+    "summa_rorelseintakter": 0,      // Sum of operating income (Summa rörelseintäkter)
+    "summa_finansiella_intakter": 0, // Sum of financial income (Summa finansiella intäkter)
+    "summa_intakter": 0,             // TOTAL INCOME (Summa intäkter) - verify this sums correctly
+    "revenue_2021": 0,               // Copy of summa_intakter for convenience
+    "evidence_pages": []
+  }
+}
+
+CRITICAL INSTRUCTIONS:
+
+1. **Find Income Statement Section**:
+   - Look for "Resultaträkning" or "RESULTATRÄKNING" heading
+   - Typically pages 6-8 in Swedish BRF reports
+   - May span 2-3 pages for K3 comprehensive format
+
+2. **Extract ALL Revenue Line Items**:
+   - Scan "Rörelseintäkter" (Operating Income) section first
+   - Then "Finansiella intäkter" (Financial Income) section
+   - Extract EVERY line item value, even if small (e.g., 1,234 kr)
+   - Common K3 format has 8-10 line items under operating income
+
+3. **Parse Swedish Number Format**:
+   - "6 631 400 kr" → 6631400
+   - "1 234" → 1234
+   - Comma is thousands separator (not decimal!)
+   - Decimal uses comma: "0,57 %" → 0.57
+
+4. **Verify Sum (CRITICAL)**:
+   - Sum all individual line items
+   - Compare to "Summa intäkter" or "Summa rörelse och finansiella intäkter"
+   - Difference should be < 1000 SEK (rounding tolerance)
+   - If mismatch > 1000, re-check extraction
+
+5. **Handle K2 vs K3 Formats**:
+   - K3 (comprehensive): 10+ line items with detailed breakdown
+   - K2 (simple): 2-5 line items with consolidated categories
+   - Extract ALL available line items regardless of format
+
+6. **Missing Fields**:
+   - If a field is not present in the document, return 0 (not null)
+   - Example: Simple K2 may only have "Årsavgifter" and "Ränteintäkter" → others are 0
+
+FEW-SHOT EXAMPLE (K3 Comprehensive - brf_198532, Pages 7-8):
+
+EXPECTED BEHAVIOR:
+- Scan pages 7-8 for "Resultaträkning" section
+- Find "Rörelseintäkter" subsection
+- Extract line items:
+  * Nettoomsättning (if present)
+  * Årsavgifter (main revenue source, usually 5-7M)
+  * Hyresintäkter (rental income)
+  * Bredband/kabel-TV (broadband fees)
+  * Andel drift gemensam (shared operations)
+  * Andel el/värme (utilities passthrough)
+  * Andel vatten (water passthrough)
+  * Övriga rörelseintäkter (other income)
+- Find "Finansiella intäkter" subsection
+  * Ränta bankmedel (bank interest)
+  * Valutakursvinster (FX gains, if any)
+- Verify: Individual items sum to "Summa intäkter"
+- Return all 15 fields with evidence_pages: [7, 8]
+
+⚠️ MANDATORY:
+- Include evidence_pages: [page_numbers] with ALL pages used
+- Return STRICT VALID JSON (no comments, no trailing text)
+- All numeric values as integers (not strings)
+- Use 0 for missing fields (not null)"""
     }
 
     def __init__(self):
@@ -266,8 +376,12 @@ If no relevant information found, return 'evidence_pages': []
 
         messages = [{"role": "user", "content": content}]
 
-        # Step 5: Call OpenAI API with retry logic
-        max_attempts = 3
+        # Step 5: Call OpenAI API with enhanced exponential backoff retry logic
+        # P0 FIX: Improved retry logic for transient API failures (HTTP 500/502)
+        # - Increased from 3 to 5 attempts (better recovery from transient errors)
+        # - Added jitter (random 0-1s) to prevent thundering herd
+        # - Backoff sequence: ~1s, ~2s, ~4s, ~8s, ~16s (total max wait ~31s)
+        max_attempts = 5
         last_error = None
 
         for attempt in range(max_attempts):
@@ -295,7 +409,7 @@ If no relevant information found, return 'evidence_pages': []
                     # Validation: Check that evidence_pages exists
                     print(f"   ⚠️  {agent_id}: No evidence_pages returned (may be empty list)")
 
-                # Step 8: Return result
+                # Step 8: Return result (successful extraction)
                 return {
                     "agent_id": agent_id,
                     "status": "success",
@@ -312,7 +426,10 @@ If no relevant information found, return 'evidence_pages': []
             except Exception as e:
                 last_error = e
                 if attempt < max_attempts - 1:
-                    wait_time = (2 ** attempt)  # Exponential backoff: 1s, 2s
+                    # Exponential backoff with jitter: 2^attempt + random(0,1)
+                    # Attempt 0: ~1s, Attempt 1: ~2s, Attempt 2: ~4s, Attempt 3: ~8s
+                    wait_time = (2 ** attempt) + random.uniform(0, 1)
+                    print(f"   ⚠️  {agent_id}: API error (attempt {attempt + 1}/{max_attempts}), retrying in {wait_time:.1f}s: {str(e)[:100]}")
                     time.sleep(wait_time)
                 continue
 

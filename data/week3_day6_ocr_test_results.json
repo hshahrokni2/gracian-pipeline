@@ -1,0 +1,26 @@
+[
+  {
+    "pdf": "SRS/brf_276629.pdf",
+    "name": "Pure Scanned (0% text)",
+    "classification": "scanned",
+    "text_percentage": 0.0,
+    "baseline_coverage": 1.7,
+    "new_coverage": 1.7,
+    "improvement": 0.0,
+    "confidence": 0.5,
+    "processing_time": 52.24292516708374,
+    "success": false
+  },
+  {
+    "pdf": "SRS/brf_43334.pdf",
+    "name": "Mostly Scanned (10.5% text)",
+    "classification": "scanned",
+    "text_percentage": 10.526315789473683,
+    "baseline_coverage": 6.8,
+    "new_coverage": 14.5,
+    "improvement": 7.7,
+    "confidence": 0.5,
+    "processing_time": 76.78418493270874,
+    "success": false
+  }
+]

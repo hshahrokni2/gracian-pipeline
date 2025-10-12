@@ -14,7 +14,12 @@ import re
 from pathlib import Path
 from typing import Dict, Any, List
 
-from docling.document_converter import DocumentConverter
+from docling.document_converter import DocumentConverter, PdfFormatOption
+from docling.datamodel.base_models import InputFormat
+from docling.datamodel.pipeline_options import (
+    PdfPipelineOptions,
+    EasyOcrOptions
+)
 from openai import OpenAI
 
 from .schema_comprehensive import (
@@ -37,15 +42,43 @@ class UltraComprehensiveDoclingAdapter:
     """
 
     def __init__(self):
-        self.converter = DocumentConverter()
+        # Configure PDF processing with Swedish OCR support
+        # Week 3 Day 6 Fix: Enable EasyOCR with Swedish for scanned/hybrid PDFs
+        pipeline_options = PdfPipelineOptions()
+        pipeline_options.do_ocr = True
+        pipeline_options.ocr_options = EasyOcrOptions(
+            lang=["sv", "en"],  # Swedish + English
+            use_gpu=False  # Set to True if CUDA available
+        )
+
+        # Create converter with OCR-enabled configuration
+        self.converter = DocumentConverter(
+            format_options={
+                InputFormat.PDF: PdfFormatOption(
+                    pipeline_options=pipeline_options
+                )
+            }
+        )
         self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-    def is_machine_readable(self, markdown: str, char_threshold: int = 5000) -> bool:
-        """Determine if PDF is machine-readable based on extracted text."""
+    def is_machine_readable(self, markdown: str, char_threshold: int = 1000) -> bool:
+        """
+        Determine if PDF has extractable text (either native or from OCR).
+
+        Week 3 Day 6 Fix: Reduced threshold from 5000 to 1000 chars.
+        With OCR enabled, even scanned PDFs will have text in markdown.
+        We want to use that OCR text for extraction, not fall back to vision.
+        """
         return len(markdown.strip()) >= char_threshold
 
     def extract_with_docling(self, pdf_path: str) -> Dict[str, Any]:
-        """Extract PDF using Docling."""
+        """
+        Extract PDF using Docling with OCR support.
+
+        Week 3 Day 6 Fix: OCR is now enabled globally, so markdown will contain
+        OCR text for scanned PDFs. We check for >1000 chars instead of >5000
+        to ensure OCR-enhanced text is used for extraction.
+        """
         result = self.converter.convert(pdf_path)
         markdown = result.document.export_to_markdown()
 

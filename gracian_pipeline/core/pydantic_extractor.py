@@ -38,7 +38,10 @@ from gracian_pipeline.models import (
 )
 
 from gracian_pipeline.core.docling_adapter_ultra_v2 import RobustUltraComprehensiveExtractor
+from gracian_pipeline.utils.pdf_classifier import classify_pdf
+from gracian_pipeline.core.mixed_mode_extractor import MixedModeExtractor
 from openai import OpenAI
+import fitz  # PyMuPDF
 
 
 class UltraComprehensivePydanticExtractor:
@@ -46,7 +49,8 @@ class UltraComprehensivePydanticExtractor:
     Extract every fact from BRF annual reports into Pydantic models.
 
     Extraction Strategy:
-    - Phase 1: Base extraction (existing pipeline)
+    - Phase 0: Check if mixed-mode needed (NEW: hybrid PDF support)
+    - Phase 1: Base extraction (text pages) + Vision extraction (image pages)
     - Phase 2: Enhanced extraction (deep dive into sections)
     - Phase 3: Pydantic model population
     - Phase 4: Validation and quality scoring
@@ -55,6 +59,8 @@ class UltraComprehensivePydanticExtractor:
     def __init__(self):
         self.base_extractor = RobustUltraComprehensiveExtractor()
         self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        # NEW: Mixed-mode extractor for hybrid PDFs
+        self.mixed_mode_extractor = None  # Lazy initialization
 
     def extract_brf_comprehensive(
         self,
@@ -74,9 +80,61 @@ class UltraComprehensivePydanticExtractor:
         print(f"\n🚀 Ultra-Comprehensive Pydantic Extraction: {Path(pdf_path).name}")
         print(f"   Mode: {mode}")
 
+        # Phase 0: Check if mixed-mode extraction needed (NEW: hybrid PDF support)
+        print("\n📊 Phase 0: Check PDF Type (1s)")
+        doc = fitz.open(pdf_path)
+        total_pages = len(doc)
+        doc.close()
+
         # Phase 1: Base extraction using existing pipeline
         print("\n📊 Phase 1: Base Extraction (60s)")
         base_result = self.base_extractor.extract_brf_document(pdf_path, mode=mode)
+
+        # Phase 1.5: Check if we need mixed-mode extraction for hybrid PDFs
+        docling_result = {
+            'markdown': base_result.get('_docling_markdown', ''),
+            'char_count': len(base_result.get('_docling_markdown', '')),
+            'status': base_result.get('_docling_status', 'text'),
+        }
+
+        # Initialize mixed-mode extractor if needed
+        if self.mixed_mode_extractor is None:
+            from gracian_pipeline.core.docling_adapter_ultra import UltraComprehensiveDoclingAdapter
+            docling_adapter = UltraComprehensiveDoclingAdapter()
+            self.mixed_mode_extractor = MixedModeExtractor(docling_adapter, self.client)
+
+        # Check if this PDF needs mixed-mode extraction
+        use_mixed, classification = self.mixed_mode_extractor.should_use_mixed_mode(
+            docling_result, total_pages
+        )
+
+        if use_mixed:
+            print(f"\n🔀 Mixed-Mode Detection: {classification.get('reason', 'unknown')}")
+            print(f"   Image pages detected: {classification.get('image_pages', [])}")
+            print(f"   Financial sections: {classification.get('financial_image_sections', [])}")
+            print(f"\n📸 Phase 1.5: Vision Extraction for Image Pages (30s)")
+
+            # Extract image pages with vision
+            vision_result = self.mixed_mode_extractor.extract_image_pages_with_vision(
+                pdf_path,
+                classification['image_pages'],
+                context_hints="Focus on financial statements: Resultaträkning, Balansräkning, Kassaflödesanalys"
+            )
+
+            if vision_result.get('success'):
+                print(f"   ✓ Vision extraction successful for pages {vision_result.get('pages_processed', [])}")
+
+                # Merge vision results into base_result
+                base_result = self.mixed_mode_extractor.merge_extraction_results(
+                    base_result,
+                    vision_result
+                )
+
+                print(f"   ✓ Results merged from {len(vision_result.get('pages_processed', []))} image pages")
+            else:
+                print(f"   ⚠️  Vision extraction failed: {vision_result.get('error', 'unknown')}")
+        else:
+            print(f"   Standard extraction mode (reason: {classification.get('reason', 'sufficient_text')})")
 
         # Phase 2: Extract document metadata
         print("\n📋 Phase 2: Document Metadata (5s)")
@@ -205,8 +263,11 @@ class UltraComprehensivePydanticExtractor:
         with open(pdf_path, "rb") as f:
             file_hash = hashlib.sha256(f.read()).hexdigest()
 
-        # Check if machine-readable
-        is_machine_readable = len(markdown) > 5000
+        # Check if machine-readable using text percentage method (fixes hybrid PDF bug)
+        # Old broken method: is_machine_readable = len(markdown) > 5000
+        # Bug: Hybrid PDFs with 2 text pages + 17 scanned pages were misclassified
+        classification_result = classify_pdf(pdf_path)
+        is_machine_readable = classification_result["is_machine_readable"]
 
         # Create metadata with MIXED approach:
         # - Extracted fields → ExtractionField (with confidence tracking)

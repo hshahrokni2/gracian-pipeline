@@ -1,0 +1,282 @@
+{
+  "pdf": "../../SRS/brf_280938.pdf",
+  "topology": {
+    "pdf_path": "../../SRS/brf_280938.pdf",
+    "total_pages": 21,
+    "avg_chars_per_page": 579.0,
+    "classification": "hybrid",
+    "sample_pages": [
+      0,
+      7,
+      14
+    ],
+    "analysis_time": 0.01772594451904297
+  },
+  "structure": {
+    "num_sections": 59,
+    "method": "hybrid",
+    "cached": false,
+    "extraction_time": 32.08353090286255
+  },
+  "routing": {
+    "main_sections": {
+      "governance_agent": 5,
+      "financial_agent": 3,
+      "property_agent": 0,
+      "operations_agent": 2,
+      "notes_collection": 2
+    },
+    "note_sections": {
+      "notes_tax_agent": 2,
+      "notes_accounting_agent": 1,
+      "notes_receivables_agent": 1,
+      "notes_reserves_agent": 1,
+      "notes_loans_agent": 1,
+      "notes_other_agent": 1
+    },
+    "routing_time": 1.9117510318756104
+  },
+  "agent_results": {
+    "governance_agent": {
+      "agent_id": "governance_agent",
+      "status": "success",
+      "data": {
+        "chairman": "Philip Björk",
+        "board_members": [
+          "Rene Naarmann",
+          "Anders Semb Goldsmith",
+          "Christian Barck",
+          "Eva Gabriella E Ejlertsson Åström",
+          "Louise Stenberg"
+        ],
+        "auditor_name": "Robert Hasslund",
+        "audit_firm": "RSM Stockholm",
+        "nomination_committee": [
+          "Tomas Olsson"
+        ],
+        "evidence_pages": [
+          4,
+          5
+        ]
+      },
+      "section_headings": [
+        "Förvaltningsberättelse",
+        "Giltighet",
+        "Förvaltningsberättelse",
+        "Registreringsdatum",
+        "Äkta förening"
+      ],
+      "pages_rendered": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "num_images": 4,
+      "evidence_pages": [
+        4,
+        5
+      ],
+      "extraction_time": 51.032958030700684,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 4843
+    },
+    "financial_agent": {
+      "agent_id": "financial_agent",
+      "status": "success",
+      "data": {
+        "revenue": "5264131",
+        "expenses": "-6631400",
+        "assets": "",
+        "liabilities": "",
+        "equity": "",
+        "surplus": "-2282227",
+        "evidence_pages": [
+          6
+        ]
+      },
+      "section_headings": [
+        "Resultaträkning",
+        "Balansräkning",
+        "Kassaflödesanalys"
+      ],
+      "pages_rendered": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "num_images": 4,
+      "evidence_pages": [
+        6
+      ],
+      "extraction_time": 6.814624786376953,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 5395
+    },
+    "notes_tax_agent": {
+      "agent_id": "notes_tax_agent",
+      "status": "success",
+      "data": {
+        "current_tax": "",
+        "deferred_tax": "",
+        "tax_policy": "Föreningen är befriad från fastighetsavgiften de första femton åren. Detta utgår från fastighetens nybyggnadsår. Lokaler beskattas med 1,00 % av lokalernas taxeringsvärde.",
+        "evidence_pages": [
+          12
+        ]
+      },
+      "section_headings": [
+        "Moms",
+        "Skatter och avgifter"
+      ],
+      "pages_rendered": [
+        4,
+        5,
+        12,
+        13
+      ],
+      "num_images": 4,
+      "evidence_pages": [
+        12
+      ],
+      "extraction_time": 5.9253950119018555,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 5226
+    },
+    "notes_accounting_agent": {
+      "agent_id": "notes_accounting_agent",
+      "status": "success",
+      "data": {
+        "accounting_principles": "Årsredovisningen för Brf Unité har upprättats enligt Årsredovisningslagen och Bokföringsnämndens allmänna råd BFNAR 2016:10 (K2), om årsredovisning i mindre företag och 2023:1, kompletterande upplysningar m.m. i bostadsrättsföreningars årsredovisningar. Samma värderingsprinciper har använts som föregående år.",
+        "valuation_methods": "Materiella anläggningstillgångar redovisas till anskaffningsvärde minskat med avskrivningar. Byggnader och inventarier skrivs av linjärt över den bedömda ekonomiska livslängden. Markvärdet är inte föremål för avskrivning. Föreningens finansiella anläggningstillgångar värderas till anskaffningsvärde. I de fall tillgången på balansdagen har ett lägre värde än anskaffningsvärdet sker nedskrivning till det lägre värdet.",
+        "revenue_recognition": "Intäkter bokförs i den period de avser oavsett när betalning eller avisering skett. I årsavgiften ingår kostnader för el, kabel-tv, vatten och värme.",
+        "evidence_pages": [
+          12
+        ]
+      },
+      "section_headings": [
+        "NOT 1, REDOVISNINGS- OCH VÄRDERINGSPRINCIPER"
+      ],
+      "pages_rendered": [
+        12,
+        13
+      ],
+      "num_images": 2,
+      "evidence_pages": [
+        12
+      ],
+      "extraction_time": 8.997875928878784,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 3482
+    },
+    "notes_receivables_agent": {
+      "agent_id": "notes_receivables_agent",
+      "status": "success",
+      "data": {
+        "current_receivables": "",
+        "long_term_receivables": "",
+        "allowances": "",
+        "evidence_pages": []
+      },
+      "section_headings": [
+        "Omsättningstillgångar"
+      ],
+      "pages_rendered": [
+        12,
+        13
+      ],
+      "num_images": 2,
+      "evidence_pages": [],
+      "extraction_time": 10.440148115158081,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 3634
+    },
+    "notes_reserves_agent": {
+      "agent_id": "notes_reserves_agent",
+      "status": "success",
+      "data": {
+        "reserve_fund": "Föreningens fond för yttre underhåll",
+        "annual_contribution": "Reservering till fond för yttre underhåll enligt stadgar görs i årsbokslutet.",
+        "fund_purpose": "Förslag till ianspråktagande av fond för yttre underhåll för årets periodiska underhåll lämnas i resultatdispositionen.",
+        "evidence_pages": [
+          12
+        ]
+      },
+      "section_headings": [
+        "Föreningens fond för yttre underhåll"
+      ],
+      "pages_rendered": [
+        12,
+        13
+      ],
+      "num_images": 2,
+      "evidence_pages": [
+        12
+      ],
+      "extraction_time": 20.987300872802734,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 3868
+    },
+    "notes_loans_agent": {
+      "agent_id": "notes_loans_agent",
+      "status": "success",
+      "data": {
+        "outstanding_loans": "",
+        "interest_rate": "",
+        "amortization": "",
+        "loan_terms": "Lån med en bindningstid på ett år eller mindre tas i årsredovisningen upp som kortfristiga skulder.",
+        "evidence_pages": [
+          12
+        ]
+      },
+      "section_headings": [
+        "Fastighetslån"
+      ],
+      "pages_rendered": [
+        12,
+        13
+      ],
+      "num_images": 2,
+      "evidence_pages": [
+        12
+      ],
+      "extraction_time": 3.7267870903015137,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 4074
+    },
+    "notes_other_agent": {
+      "agent_id": "notes_other_agent",
+      "status": "success",
+      "data": {
+        "other_notes": "Avgiftshöjning februari 2024 (+32.2%) och en sänkning i mars 2024 jämfört med februari (-7.2%).",
+        "evidence_pages": [
+          17
+        ]
+      },
+      "section_headings": [
+        "NOT 18, VÄSENTLIGA HÄNDELSER EFTER VERKSAMHETSÅRET"
+      ],
+      "pages_rendered": [
+        17,
+        18
+      ],
+      "num_images": 2,
+      "evidence_pages": [
+        17
+      ],
+      "extraction_time": 3.660382032394409,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 4256
+    }
+  },
+  "quality_metrics": {
+    "coverage": 1.0,
+    "numeric_qc_pass": true,
+    "evidence_ratio": 0.875,
+    "overall_score": 0.9375,
+    "needs_coaching": true,
+    "validation_time": 8.106231689453125e-06
+  },
+  "total_time": 145.6107678413391,
+  "total_cost": 0.0
+}
