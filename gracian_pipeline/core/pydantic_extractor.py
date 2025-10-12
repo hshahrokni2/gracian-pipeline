@@ -90,6 +90,15 @@ class UltraComprehensivePydanticExtractor:
         print("\n📊 Phase 1: Base Extraction (60s)")
         base_result = self.base_extractor.extract_brf_document(pdf_path, mode=mode)
 
+        # P1 FIX (Week 3 Day 7): Graceful degradation from LLM refusal
+        # If base extraction fails (very low coverage), force mixed-mode extraction
+        base_coverage = base_result.get('_quality_metrics', {}).get('coverage_percent', 0)
+        forced_mixed_mode = False
+
+        if base_coverage < 10:
+            print(f"\n⚠️  Base extraction low quality ({base_coverage:.1f}%), forcing mixed-mode recovery")
+            forced_mixed_mode = True
+
         # Phase 1.5: Check if we need mixed-mode extraction for hybrid PDFs
         docling_result = {
             'markdown': base_result.get('_docling_markdown', ''),
@@ -118,6 +127,17 @@ class UltraComprehensivePydanticExtractor:
         use_mixed, classification = self.mixed_mode_extractor.should_use_mixed_mode(
             docling_result, total_pages
         )
+
+        # P1 FIX: Override detection if base extraction failed
+        if forced_mixed_mode:
+            use_mixed = True
+            classification = {
+                'use_mixed_mode': True,
+                'reason': 'base_extraction_failure_recovery',
+                'image_pages': list(range(1, min(total_pages + 1, 21))),  # Extract up to 20 pages
+                'forced_recovery': True
+            }
+            print(f"\n🚨 FORCED MIXED-MODE RECOVERY: Base extraction failed, using vision for pages 1-{min(total_pages, 20)}")
 
         if DEBUG_MODE:
             print(f"  RESULT: use_mixed={use_mixed}")
@@ -177,6 +197,41 @@ class UltraComprehensivePydanticExtractor:
                     vision_result
                 )
 
+                # P1 ENHANCEMENT: Recalculate quality metrics after vision merge
+                # This ensures vision-extracted fields are counted in coverage
+                print(f"\n🔄 Recalculating quality metrics to include vision-extracted fields...")
+                try:
+                    # Count fields from all agents (including vision-extracted ones)
+                    extracted_fields = 0
+                    total_fields = 117  # Total schema fields
+
+                    # Count extracted fields from all agents
+                    for agent_key, agent_data in base_result.items():
+                        if not agent_key.startswith('_') and isinstance(agent_data, dict):
+                            # Count non-empty values in agent data
+                            for key, value in agent_data.items():
+                                if key != 'evidence_pages' and value:
+                                    if isinstance(value, (str, int, float, bool)):
+                                        if value:  # Non-empty string, non-zero number, True
+                                            extracted_fields += 1
+                                    elif isinstance(value, list) and len(value) > 0:
+                                        extracted_fields += 1
+                                    elif isinstance(value, dict) and len(value) > 0:
+                                        extracted_fields += len([v for v in value.values() if v])
+
+                    # Update quality metrics
+                    coverage_percent = (extracted_fields / total_fields) * 100
+                    base_result["_quality_metrics"] = {
+                        "coverage_percent": coverage_percent,
+                        "extracted_fields": extracted_fields,
+                        "total_fields": total_fields,
+                        "confidence": 0.85 if coverage_percent > 70 else 0.5
+                    }
+                    print(f"   ✓ Quality recalculated: {coverage_percent:.1f}% coverage ({extracted_fields}/{total_fields} fields)")
+                except Exception as e:
+                    print(f"   ⚠️  Could not recalculate quality: {e}")
+                    # Keep original metrics if recalculation fails
+
                 if DEBUG_MODE:
                     print("\n" + "="*80)
                     print("DEBUG: Merge Complete")
@@ -184,6 +239,7 @@ class UltraComprehensivePydanticExtractor:
                     print(f"  Merged result has metadata: {'_extraction_metadata' in base_result}")
                     if '_extraction_metadata' in base_result:
                         print(f"  Metadata: {base_result['_extraction_metadata']}")
+                    print(f"  Quality after merge: {base_result.get('_quality_metrics', {}).get('coverage_percent', 0):.1f}%")
                     print("="*80 + "\n")
 
                 print(f"   ✓ Results merged from {len(vision_result.get('pages_processed', []))} image pages")

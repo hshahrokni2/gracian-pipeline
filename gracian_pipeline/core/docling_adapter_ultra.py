@@ -147,9 +147,73 @@ class UltraComprehensiveDoclingAdapter:
 
         return formatted
 
+    def _detect_llm_refusal(self, content: str) -> bool:
+        """
+        Detect if LLM response is a refusal (P1 Fix - Week 3 Day 7).
+
+        Returns True if refusal patterns detected.
+        """
+        refusal_patterns = [
+            "I'm sorry",
+            "I cannot assist",
+            "I can't assist",
+            "I can't help",
+            "I'm unable to",
+            "I apologize, but I",
+            "I do not have the ability"
+        ]
+
+        content_lower = content.lower()
+        return any(pattern.lower() in content_lower for pattern in refusal_patterns)
+
+    def _simplify_prompt(self, original_prompt: str, markdown: str, tables_text: str, stats: Dict) -> str:
+        """
+        Create simplified prompt to avoid LLM refusal (P1 Fix - Week 3 Day 7).
+
+        Strategy:
+        - Remove complex instructions
+        - Emphasize Swedish BRF context
+        - Add explicit framing about public documents
+        - Focus on core extraction task
+        """
+        total_comprehensive = sum(s['comprehensive_fields'] for s in stats.values())
+
+        simplified = f"""This is a document analysis task for a Swedish BRF (housing cooperative) annual report.
+These are public corporate documents from Swedish government registries.
+
+TASK: Extract structured data from the document text provided below.
+
+TARGET: Extract {total_comprehensive} fields across 13 categories (governance, financials, property, notes, etc.)
+
+DOCUMENT TEXT (first 40,000 chars):
+{markdown[:40000]}
+
+{tables_text}
+
+EXTRACTION GUIDELINES:
+1. Extract all visible information from the document
+2. Use Swedish field names where appropriate
+3. Return structured data organized by category:
+   - governance (chairman, board, auditor)
+   - financial (revenue, expenses, assets, liabilities, equity)
+   - property (address, apartments, common areas)
+   - notes (depreciation, maintenance, taxes)
+   - loans, reserves, energy, fees, cashflow
+
+4. Use null for fields not found in document
+
+RETURN FORMAT: Valid JSON with category keys and nested field data.
+
+Note: All data is from public Swedish BRF documents and should be extracted as-is for analysis."""
+
+        return simplified
+
     def extract_all_ultra_comprehensive(self, markdown: str, tables: List[Dict]) -> Dict[str, Any]:
         """
         Extract ALL 13 agents with ultra-comprehensive details in ONE GPT-4o call.
+
+        P1 ENHANCEMENT (Week 3 Day 7): Added retry logic with prompt simplification
+        to handle LLM refusals gracefully.
 
         Targets:
         - 46 base fields (from original schema)
@@ -259,31 +323,78 @@ RETURN FORMAT:
 
 IMPORTANT: Return ONLY valid JSON. Extract EVERYTHING visible in the document."""
 
-        # Call GPT-4o with extended context
-        response = self.client.chat.completions.create(
-            model="gpt-4o",
-            messages=[
-                {"role": "system", "content": "You are an expert at extracting structured data from Swedish BRF documents. Extract EVERY piece of information available, not just summary fields."},
-                {"role": "user", "content": prompt}
-            ],
-            temperature=0,
-            max_tokens=8000  # Increased for comprehensive extraction
-        )
+        # P1 FIX (Week 3 Day 7): Retry loop with prompt simplification
+        max_retries = 3
+        result = {}
+        content = ""
 
-        # Parse response
-        content = response.choices[0].message.content.strip()
+        for attempt in range(max_retries):
+            try:
+                # Use simplified prompt on retry attempts
+                current_prompt = prompt if attempt == 0 else self._simplify_prompt(prompt, markdown, tables_text, stats)
 
-        # Remove markdown fences if present
-        if content.startswith("```"):
-            content = re.sub(r'^```(?:json)?\n', '', content)
-            content = re.sub(r'\n```$', '', content)
+                if attempt > 0:
+                    print(f"\n🔄 LLM RETRY (attempt {attempt + 1}/{max_retries}): Using simplified prompt...")
 
-        try:
-            result = json.loads(content)
-        except json.JSONDecodeError as e:
-            print(f"JSON parse error: {e}")
-            print(f"Content: {content[:500]}")
-            result = {}
+                # Call GPT-4o with extended context
+                response = self.client.chat.completions.create(
+                    model="gpt-4o",
+                    messages=[
+                        {"role": "system", "content": "You are an expert at extracting structured data from Swedish BRF documents. Extract EVERY piece of information available, not just summary fields."},
+                        {"role": "user", "content": current_prompt}
+                    ],
+                    temperature=0,
+                    max_tokens=8000  # Increased for comprehensive extraction
+                )
+
+                # Parse response
+                content = response.choices[0].message.content.strip()
+
+                # P1 FIX: Check for refusal patterns
+                if self._detect_llm_refusal(content):
+                    if attempt < max_retries - 1:
+                        print(f"   ⚠️  LLM refusal detected: \"{content[:100]}...\"")
+                        print(f"   → Retrying with simplified prompt (attempt {attempt + 2}/{max_retries})")
+                        continue  # Try again with simplified prompt
+                    else:
+                        print(f"   ❌ LLM refusal after {max_retries} attempts")
+                        print(f"   → Returning empty result (graceful degradation will trigger vision extraction)")
+                        # Return empty result - graceful degradation in pydantic_extractor.py will catch this
+                        result = {}
+                        break
+
+                # Remove markdown fences if present
+                if content.startswith("```"):
+                    content = re.sub(r'^```(?:json)?\n', '', content)
+                    content = re.sub(r'\n```$', '', content)
+
+                # Try to parse JSON
+                try:
+                    result = json.loads(content)
+                    if attempt > 0:
+                        print(f"   ✅ Retry successful! Extracted data with simplified prompt")
+                    break  # Success!
+                except json.JSONDecodeError as e:
+                    if attempt < max_retries - 1:
+                        print(f"   ⚠️  JSON parse error on attempt {attempt + 1}: {e}")
+                        print(f"   → Content preview: {content[:200]}...")
+                        continue  # Try again
+                    else:
+                        print(f"   ❌ JSON parse error after {max_retries} attempts: {e}")
+                        print(f"   → Content: {content[:500]}")
+                        result = {}
+                        break
+
+            except Exception as e:
+                if attempt < max_retries - 1:
+                    print(f"   ⚠️  API error on attempt {attempt + 1}: {e}")
+                    import time
+                    time.sleep(2 ** attempt)  # Exponential backoff: 1s, 2s, 4s
+                    continue
+                else:
+                    print(f"   ❌ API error after {max_retries} attempts: {e}")
+                    result = {}
+                    break
 
         # Add metadata
         result['docling_metadata'] = {

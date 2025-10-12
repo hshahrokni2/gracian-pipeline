@@ -168,6 +168,76 @@ def analyze_page_content_density(markdown: str) -> Dict[str, any]:
     }
 
 
+def is_table_truly_empty(table: Dict) -> bool:
+    """
+    Multi-level validation for empty table detection (P0 Fix - Week 3 Day 7).
+
+    Returns True only if ALL of:
+    1. Structure indicates empty (num_cols == 0 OR num_rows == 0)
+    2. Content is actually empty (no table_cells OR all cells empty)
+    3. Grid is empty (no grid data OR all None/empty)
+
+    This prevents false positives where Docling reports num_cols==0
+    but the table actually contains extractable content.
+
+    Args:
+        table: Docling table dict with 'data' field
+
+    Returns:
+        True if table is genuinely empty, False otherwise
+
+    Example:
+        >>> table = {'data': {'num_cols': 0, 'table_cells': [], 'grid': []}}
+        >>> is_table_truly_empty(table)
+        True
+
+        >>> table = {'data': {'num_cols': 0, 'table_cells': [{'text': 'Data'}], 'grid': [[]]}}
+        >>> is_table_truly_empty(table)
+        False  # Has content despite num_cols == 0
+    """
+    data = table.get('data', {})
+
+    # Handle both dict and list formats
+    if not isinstance(data, dict):
+        # Legacy list format
+        if isinstance(data, list):
+            return not data or len(data) == 0
+        return True  # Unknown format, consider empty
+
+    # Level 1: Structure check
+    num_cols = data.get('num_cols', 0)
+    num_rows = data.get('num_rows', 0)
+
+    if num_cols == 0 or num_rows == 0:
+        # Level 2: Content check - verify it's ACTUALLY empty
+        table_cells = data.get('table_cells', [])
+        grid = data.get('grid', [])
+
+        # Check table_cells for actual content
+        if table_cells and len(table_cells) > 0:
+            # Count non-empty cells
+            non_empty_cells = [
+                c for c in table_cells
+                if isinstance(c, dict) and c.get('text', '').strip()
+            ]
+            if non_empty_cells:
+                # Has content despite num_cols == 0
+                return False
+
+        # Check grid for actual data
+        if grid and len(grid) > 0:
+            for row in grid:
+                if row and any(cell for cell in row if cell):
+                    # Has data in grid
+                    return False
+
+        # Structure says empty AND content is empty
+        return True
+
+    # Structure says not empty
+    return False
+
+
 def should_use_mixed_mode_extraction(
     markdown: str,
     total_pages: int,
@@ -216,6 +286,13 @@ def should_use_mixed_mode_extraction(
     # Initialize empty_ratio
     empty_ratio = 0.0
 
+    # ===== QUICK EXIT: High-quality text extraction (P0 Fix - Week 3 Day 7) =====
+    # If PDF has excellent text extraction quality, skip mixed-mode entirely
+    # This prevents false positives on high-quality PDFs (e.g., brf_81563)
+    # Criteria: High char count (>15k) AND many tables (≥10) = high-quality text extraction
+    if char_count > 15000 and len(tables) >= 10:
+        return False, "high_quality_text_extraction"
+
     # ===== PRIORITY 1: Financial sections as images =====
     page_classification = detect_image_pages_from_markdown(markdown, total_pages)
 
@@ -230,29 +307,14 @@ def should_use_mixed_mode_extraction(
 
     # ===== PRIORITY 2: Empty/malformed tables (NEW - Week 3 Day 6) =====
     # If Docling detected tables but can't extract data → Image-based tables
-    # BUG FIX (Week 3 Day 6 Extended): Table 'data' is a DICT, not a list!
-    # Structure: {'table_cells': [], 'num_rows': 0, 'num_cols': 0, 'grid': []}
+    # ENHANCED (Week 3 Day 7): Multi-level validation to prevent false positives
     if len(tables) > 0:
         empty_table_count = 0
 
         for table in tables:
-            data = table.get('data', {})
-
-            # FIXED: Check dictionary structure for empty tables
-            # A table with num_cols == 0 is an empty/malformed table
-            if isinstance(data, dict):
-                num_cols = data.get('num_cols', 0)
-                if num_cols == 0:
-                    empty_table_count += 1
-                    continue
-            # Legacy list format (for compatibility)
-            elif isinstance(data, list):
-                if not data or len(data) == 0:
-                    empty_table_count += 1
-                    continue
-                first_row = data[0] if len(data) > 0 else []
-                if not first_row or len(first_row) == 0:
-                    empty_table_count += 1
+            # Use multi-level validation (P0 Fix)
+            if is_table_truly_empty(table):
+                empty_table_count += 1
 
         # If >50% of tables are empty AND we have ≥5 tables → Image-based tables
         empty_ratio = empty_table_count / len(tables) if len(tables) > 0 else 0
