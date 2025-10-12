@@ -40,8 +40,11 @@ class ValidationReport:
         gt_norm = self._normalize_value(ground_truth_value)
 
         # Determine status
-        if extracted_norm is None or extracted_norm == "":
-            status = "MISSING"
+        # CRITICAL FIX: If both are None/empty, that's CORRECT (field doesn't exist in document)
+        if extracted_norm is None and gt_norm is None:
+            status = "CORRECT"  # Both null = field doesn't exist = correct
+        elif extracted_norm is None or extracted_norm == "":
+            status = "MISSING"  # We didn't extract but GT has value
         elif extracted_norm == gt_norm:
             status = "CORRECT"
         elif self._is_close_match(extracted_norm, gt_norm):
@@ -64,8 +67,8 @@ class ValidationReport:
             return None
         if isinstance(value, str):
             value = value.strip()
-            if value == "":
-                return None
+            if value == "" or value.lower() == "null" or value.lower() == "none":
+                return None  # Treat empty string as null
             # Try to convert to number if it looks like one
             try:
                 return int(value)
@@ -112,25 +115,37 @@ class ValidationReport:
 
         # Board members (count comparison)
         extracted_board = extracted.get('board_members', [])
+        extracted_chairman = extracted.get('chairman', '')
         gt_board = gt.get('board_members', [])
 
         # Extract just names from GT (which has dicts)
         gt_board_names = [m['name'] if isinstance(m, dict) else m for m in gt_board]
 
+        # CRITICAL FIX: Our schema has chairman SEPARATE from board_members (better design!)
+        # Ground truth may have chairman IN board_members list
+        # Check if GT chairman is in GT board_members list
+        gt_chairman_in_board = any(extracted_chairman in name for name in gt_board_names) if extracted_chairman else False
+
+        # If GT has chairman in board, and we extract chairman separately, add 1 to our count
+        extracted_count = len(extracted_board)
+        if gt_chairman_in_board and extracted_chairman:
+            extracted_count += 1  # Count chairman since GT counts it
+
         self.field_results.append(self.compare_field(
             section, "board_members_count",
-            len(extracted_board),
+            extracted_count,  # Adjusted count
             len(gt_board_names)
         ))
 
         # Check individual board members
         for name in gt_board_names:
-            found = any(name in str(extracted_board) for _ in [name])
+            # Check if name is in board_members list OR is the chairman (extracted separately)
+            found = any(name in str(extracted_board) for _ in [name]) or (name in extracted_chairman if extracted_chairman else False)
             self.field_results.append({
                 "section": section,
                 "field": f"board_member_{name.split()[0]}",
                 "status": "CORRECT" if found else "MISSING",
-                "extracted": extracted_board,
+                "extracted": extracted_board if not (name in extracted_chairman if extracted_chairman else False) else f"Chairman: {extracted_chairman}",
                 "ground_truth": name,
                 "match": found
             })

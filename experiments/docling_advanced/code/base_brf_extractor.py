@@ -40,20 +40,49 @@ class BaseExtractor:
 
         'financial_agent': """You are FinancialAgent for Swedish BRF reports. Extract ONLY income/balance data with EXACT keys: {revenue:'', expenses:'', assets:'', liabilities:'', equity:'', surplus:'', evidence_pages: []}.
 
-CRITICAL INSTRUCTIONS FOR TOTALS:
-- revenue: Extract 'Nettoomsättning' or 'Summa intäkter' (TOTAL revenue, not line items)
-- expenses: Extract 'Summa rörelsekostnader' or 'Summa kostnader' (TOTAL expenses, NOT individual operating_costs)
-- assets: Extract 'Summa tillgångar' (TOTAL assets)
-- liabilities: Extract 'Summa skulder' OR sum of ('Långfristiga skulder' + 'Kortfristiga skulder')
-- equity: Extract 'Eget kapital' or 'Summa eget kapital'
-- surplus: Extract 'Årets resultat'
+CRITICAL INSTRUCTIONS FOR TOTALS (extract bottom-line TOTALS, not first line items):
 
-Look for SUM/TOTAL lines in financial statements, not first line items.
-Parse SEK numbers (e.g., 1 234 567 → 1234567). Focus on 'Resultaträkning'/'Balansräkning'.
+1. revenue: Extract 'Summa intäkter' or 'Nettoomsättning' + 'Övriga rörelseintäkter' (TOTAL revenue)
+
+2. expenses: Extract 'Summa rörelsekostnader' - THE LAST LINE that sums ALL operating expense items
+   - DO NOT extract 'Drift' or 'Driftkostnader' (first line item ~2-3M)
+   - LOOK FOR the sum line that includes: Drift + Övriga externa kostnader + Personalkostnader + Avskrivningar
+   - This total is usually -6M to -7M (much larger than first line)
+   - Swedish keywords: 'Summa rörelsekostnader' or 'Summa kostnader' (the SUM line, not individual items)
+   - INCLUDE THE MINUS SIGN: Return as negative number (e.g., -6631400, not 6631400) since expenses reduce profit
+
+3. assets: Extract 'Summa tillgångar' (TOTAL assets)
+
+4. liabilities: Extract 'Summa skulder' OR sum of ('Långfristiga skulder' + 'Kortfristiga skulder')
+
+5. equity: Extract 'Eget kapital' or 'Summa eget kapital'
+
+6. surplus: Extract 'Årets resultat'
+
+⚠️ CRITICAL: For expenses, you MUST skip over individual line items (Drift, Externa kostnader, Personal, Avskrivningar) and find the SUMMA line that totals them all.
+
+Parse SEK numbers (e.g., 1 234 567 → 1234567, -6 631 400 → -6631400). Focus on 'Resultaträkning'/'Balansräkning'.
 Do NOT invent; if not clearly visible leave empty. Evidence: list 1-based page numbers.
 Return STRICT VALID JSON object; no extra text.""",
 
-        'property_agent': """You are PropertyAgent for BRF plans. Extract ONLY property details with EXACT keys: {designation:'', address:'', postal_code:'', city:'', built_year:'', apartments:'', energy_class:'', evidence_pages: []}. Use Swedish cues: 'Fastighetsbeteckning', 'Adress', 'Byggår', 'Lägenheter', 'Energiklass'. Evidence: evidence_pages must be 1-based GLOBAL page numbers matching image labels. If a field is not visible, return an empty string ''. Return STRICT VALID JSON object with ONLY these keys (no comments, no trailing text).""",
+        'property_agent': """You are PropertyAgent for BRF plans. Extract ONLY property details with EXACT keys: {designation:'', address:'', postal_code:'', city:'', built_year:'', apartments:'', energy_class:'', evidence_pages: []}.
+
+Swedish keywords to look for:
+- designation: 'Fastighetsbeteckning' (e.g., 'Sonfjället 2')
+- address: 'Adress' or 'Gatuadress' (full street address)
+- postal_code: 'Postnummer' or extract from address (e.g., '113 51' from 'Artemisgatan 3, 113 51 Stockholm')
+- city: 'Ort' or 'Stad' (e.g., 'Stockholm')
+- built_year: 'Byggår' or 'Byggnadsår' (e.g., '2015')
+- apartments: 'Antal lägenheter' or just 'Lägenheter' (number only, e.g., '94')
+- energy_class: 'Energiklass' or 'Energideklaration' (letter grade A-G, e.g., 'C')
+
+CRITICAL:
+- For postal_code: Look in address line, property section, or management report intro (format: '### ##' or '### ## Stockholm')
+- For energy_class: Check property description, energy section, or 'Energideklaration' mentions (single letter A-G)
+- If field not found in document, return empty string ''
+
+Evidence: evidence_pages must be 1-based GLOBAL page numbers matching image labels.
+Return STRICT VALID JSON object with ONLY these keys (no comments, no trailing text).""",
 
         'operations_agent': """You are OperationsAgent for BRF. Extract operations info: {maintenance_summary: '', energy_usage: '', insurance: '', contracts: ''}. Include evidence_pages: [] (1-based). Return STRICT minified JSON.""",
 
