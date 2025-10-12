@@ -1,0 +1,17 @@
+{
+  "gaps": [
+    {
+      "category": "Governance",
+      "issue": "Governance keywords found on pages [18, 19] but no governance data extracted",
+      "severity": "HIGH",
+      "possible_cause": "Agent routing failure or context window issues"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "P1",
+      "action": "Fix governance agent context",
+      "details": "Governance data present on pages [18, 19]. Check if agent receives correct page context."
+    }
+  ]
+}

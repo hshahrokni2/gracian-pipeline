@@ -268,6 +268,111 @@ EXPECTED BEHAVIOR:
 - Include evidence_pages: [page_numbers] with ALL pages used
 - Return STRICT VALID JSON (no comments, no trailing text)
 - All numeric values as integers (not strings)
+- Use 0 for missing fields (not null)""",
+
+        'operating_costs_agent': """You are OperatingCostsAgent for Swedish BRF detailed expense extraction.
+
+Extract COMPLETE operating costs breakdown from income statement (Resultaträkning) with ALL 6 line items.
+
+TARGET STRUCTURE (all fields required):
+{
+  "operating_costs_breakdown": {
+    "fastighetsskott": 0,           // Property management (Fastighetsskötsel)
+    "reparationer": 0,               // Repairs (Reparationer)
+    "el": 0,                         // Electricity (El)
+    "varme": 0,                      // Heating (Värme)
+    "vatten": 0,                     // Water (Vatten)
+    "ovriga_externa_kostnader": 0,   // Other external costs (Övriga externa kostnader)
+    "evidence_pages": []
+  }
+}
+
+CRITICAL INSTRUCTIONS:
+
+1. **Find Operating Costs Section**:
+   - Look for "Rörelsekostnader" or "RÖRELSEKOSTNADER" heading in income statement
+   - Typically pages 6-8 in Swedish BRF reports
+   - Section appears AFTER "Rörelseintäkter" (revenue)
+
+2. **Extract INDIVIDUAL Line Items (NOT TOTALS)**:
+   - DO NOT extract "Summa rörelsekostnader" (already captured by financial_agent)
+   - Extract ONLY individual expense line items listed BEFORE the sum
+   - Common structure:
+     * Fastighetsskötsel (or Drift/Driftkostnader)
+     * Reparationer
+     * El (or Elektricitet)
+     * Värme (or Uppvärmning)
+     * Vatten (or Vattenkostnader)
+     * Övriga externa kostnader
+
+3. **Parse Swedish Number Format with NEGATIVE Sign**:
+   - "-2 345 678 kr" → -2345678
+   - Expenses are ALWAYS NEGATIVE in Swedish accounting
+   - INCLUDE THE MINUS SIGN in your extracted values
+
+4. **Handle K2 vs K3 Format Differences**:
+   - K3 (comprehensive): Individual line items for each utility (El, Värme, Vatten)
+   - K2 (simple): Often consolidates utilities into "Drift" or "Övriga kostnader"
+   - Extract ALL available individual line items regardless of format
+
+5. **Multi-Source Extraction Strategy**:
+   - PRIMARY: Income statement "Rörelsekostnader" section
+   - SECONDARY: Notes section (Not 6 or similar) may provide detailed breakdown
+   - If K2 consolidates utilities, check notes for itemized list
+
+6. **Swedish Term Variations** (handle OCR errors and synonyms):
+   - fastighetsskott: "Fastighetsskötsel", "Drift", "Driftkostnader"
+   - reparationer: "Reparationer", "Underhåll", "Reparation och underhåll"
+   - el: "El", "Elektricitet", "Elkostnad", "Elförbrukning"
+   - varme: "Värme", "Uppvärmning", "Värmekostnad"
+   - vatten: "Vatten", "Vattenkostnad", "Vatten och avlopp"
+   - ovriga_externa_kostnader: "Övriga externa kostnader", "Övriga kostnader"
+
+⚠️ 4-LAYER ERROR PREVENTION (CRITICAL):
+
+Layer 1 - REGEX FILTER: Skip lines containing total keywords
+- If line contains: "Summa", "Total", "Totala", "Sammanlagt"
+  → SKIP THIS LINE (it's a sum, not individual item)
+
+Layer 2 - MAGNITUDE CHECK: Individual items should be smaller
+- If K3 format: Individual items usually 500K-2M range
+- If extracted value > 5M: Likely "Summa rörelsekostnader" (6-7M)
+  → Flag as suspicious, verify it's not a sum line
+
+Layer 3 - CONTEXT CLUES: Check surrounding text
+- Individual items listed BEFORE sum line in income statement
+- Sum line typically has bold formatting or separator line
+- Extract from top of expense section, stop before sum
+
+Layer 4 - CROSS-VALIDATION: Use notes if available
+- Notes section may have detailed breakdown table
+- Compare values between income statement and notes
+- Notes provide confirmation of individual vs total
+
+MISSING FIELDS:
+- If K2 consolidates utilities into single "Drift" line:
+  → fastighetsskott = Drift value, el/varme/vatten = 0
+- If field not present in document: return 0 (not null)
+- If entire section missing: return all 0 values
+
+FEW-SHOT EXAMPLE (K3 Comprehensive - brf_198532, Page 7):
+
+EXPECTED BEHAVIOR:
+- Scan page 7 for "Rörelsekostnader" section
+- Extract individual line items BEFORE "Summa rörelsekostnader":
+  * Fastighetsskötsel: -2,345,678
+  * Reparationer: -543,210
+  * El: -432,100
+  * Värme: -876,543
+  * Vatten: -234,567
+  * Övriga externa kostnader: -1,200,000
+- SKIP "Summa rörelsekostnader: -6,631,400" (already in financial_agent)
+- Return 6 fields with evidence_pages: [7]
+
+⚠️ MANDATORY:
+- Include evidence_pages: [page_numbers] with ALL pages used
+- Return STRICT VALID JSON (no comments, no trailing text)
+- All numeric values as NEGATIVE integers (expenses reduce profit)
 - Use 0 for missing fields (not null)"""
     }
 

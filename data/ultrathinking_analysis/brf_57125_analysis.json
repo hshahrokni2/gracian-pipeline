@@ -1,0 +1,70 @@
+{
+  "pdf_name": "brf_57125.pdf",
+  "baseline_coverage": 14.5,
+  "new_coverage": 17.9,
+  "total_pages": 19,
+  "total_chars": 9366,
+  "financial_pages": [],
+  "governance_pages": [
+    18,
+    19
+  ],
+  "property_pages": [],
+  "docling_headings": [
+    "## Simpleko",
+    "## Revisionsberättelse",
+    "## Rapport om årsredovisningen",
+    "## Uttalanden",
+    "## Grund för uttalanden",
+    "## Styrelsens ansvar",
+    "## Revisorns ansvar",
+    "## Rapport om andra krav enligt lagar och andra författningar",
+    "## Uttalanden",
+    "## Grund för uttalanden",
+    "## Styrelsens ansvar",
+    "## Revisorns ansvar"
+  ],
+  "docling_image_markers": 4,
+  "financial_sections_detected": [],
+  "governance_sections_detected": [
+    "## Styrelsens ansvar",
+    "## Revisorns ansvar",
+    "## Styrelsens ansvar",
+    "## Revisorns ansvar"
+  ],
+  "extraction_results": {
+    "metadata": {
+      "org_number": true,
+      "brf_name": true,
+      "fiscal_year": true
+    },
+    "governance": {
+      "chairman": false,
+      "board_members": 0,
+      "auditor": false
+    },
+    "financial": {
+      "income": {
+        "revenue": false,
+        "expenses": false,
+        "net_income": false
+      },
+      "balance": {
+        "assets": false,
+        "liabilities": false,
+        "equity": false
+      }
+    },
+    "property": {
+      "municipality": false,
+      "address": false
+    },
+    "fees": {
+      "monthly_fee": false,
+      "annual_fee": false
+    },
+    "loans": 0
+  },
+  "extraction_coverage": 17.9,
+  "extraction_confidence": 0.5
+}

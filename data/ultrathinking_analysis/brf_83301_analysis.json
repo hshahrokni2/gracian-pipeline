@@ -1,0 +1,136 @@
+{
+  "pdf_name": "brf_83301.pdf",
+  "baseline_coverage": 12.0,
+  "new_coverage": 13.7,
+  "total_pages": 20,
+  "total_chars": 13809,
+  "financial_pages": [
+    3,
+    8,
+    9,
+    10
+  ],
+  "governance_pages": [
+    5,
+    19,
+    20
+  ],
+  "property_pages": [
+    4,
+    12
+  ],
+  "docling_headings": [
+    "## Årsredovisning 2023 Brf Zenhusen",
+    "## Välkommen till årsredovisningen för Brf Zenhusen",
+    "## Innehåll",
+    "## Kort guide till läsning av årsredovisningen",
+    "## Förvaltningsberättelse",
+    "## Resultaträkning",
+    "## Balansräkning",
+    "## Kassaüödesanalys",
+    "## Noter",
+    "## Giltighet",
+    "## Förvaltningsberättelse",
+    "## Verksamheten",
+    "## Allmänt om verksamheten",
+    "## Registreringsdatum",
+    "## Äkta förening",
+    "## Moms",
+    "## Fastigheten",
+    "## Styrelsens sammansättning",
+    "## Valberedning",
+    "## Firmateckning",
+    "## Revisorer",
+    "## Sammanträden och styrelsemöten",
+    "## Teknisk status",
+    "## Avtal med leverantörer",
+    "## Medlem i samfällighet",
+    "## Väsentliga händelser under räkenskapsåret",
+    "## Ekonomi",
+    "## Övriga uppgifter",
+    "## Medlemsinformation",
+    "## Flerårsöversikt",
+    "## Upplysning vid förlust",
+    "## Förändringar i eget kapital",
+    "## Resultatdisposition",
+    "## Resultaträkning",
+    "## Balansräkning",
+    "## Balansräkning",
+    "## Kassaüödesanalys",
+    "## Noter",
+    "## NOT 1, REDOVISNINGS- OCH VÄRDERINGSPRINCIPER",
+    "## Redovisning av intäkter",
+    "## Anläggningstillgångar",
+    "## Omsättningstillgångar",
+    "## Föreningens fond för yttre underhåll",
+    "## Skatter och avgifter",
+    "## Fastighetslån",
+    "## NOT 17, VÄSENTLIGA HÄNDELSER EFTER VERKSAMHETSÅRET",
+    "## Underskrifter",
+    "## REVISIONSBERÄTTELSE",
+    "## Rapport om årsredovisningen",
+    "## Uttalanden",
+    "## Styrelsens ansvar",
+    "## Revisorns ansvar",
+    "## Grund för uttalanden",
+    "## Rapport om andra krav enligt lagar, andra författningar samt stadgar",
+    "## Uttalanden",
+    "## Styrelsens ansvar",
+    "## Revisorns ansvar",
+    "## Grund för uttalanden"
+  ],
+  "docling_image_markers": 1,
+  "financial_sections_detected": [
+    "## Resultaträkning",
+    "## Balansräkning",
+    "## Kassaüödesanalys",
+    "## Resultatdisposition",
+    "## Resultaträkning",
+    "## Balansräkning",
+    "## Balansräkning",
+    "## Kassaüödesanalys"
+  ],
+  "governance_sections_detected": [
+    "## Styrelsens sammansättning",
+    "## Revisorer",
+    "## Styrelsens ansvar",
+    "## Revisorns ansvar",
+    "## Styrelsens ansvar",
+    "## Revisorns ansvar"
+  ],
+  "extraction_results": {
+    "metadata": {
+      "org_number": true,
+      "brf_name": true,
+      "fiscal_year": true
+    },
+    "governance": {
+      "chairman": false,
+      "board_members": 0,
+      "auditor": false
+    },
+    "financial": {
+      "income": {
+        "revenue": false,
+        "expenses": false,
+        "net_income": false
+      },
+      "balance": {
+        "assets": false,
+        "liabilities": false,
+        "equity": false
+      }
+    },
+    "property": {
+      "municipality": false,
+      "address": false
+    },
+    "fees": {
+      "monthly_fee": false,
+      "annual_fee": false
+    },
+    "loans": 0
+  },
+  "extraction_coverage": 13.7,
+  "extraction_confidence": 0.5
+}

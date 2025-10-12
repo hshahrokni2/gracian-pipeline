@@ -1,0 +1,44 @@
+[
+  {
+    "name": "brf_83301.pdf",
+    "path": "SRS/brf_83301.pdf",
+    "baseline_coverage": 12.0,
+    "notes": "Machine-readable (100% text) but low extraction - potential hybrid",
+    "success": true,
+    "new_coverage": 13.7,
+    "improvement": 1.6999999999999993,
+    "mixed_mode_used": false,
+    "financial_extracted": false,
+    "financial_fields_count": 0,
+    "financial_values": {},
+    "verdict": "⚠️ MINIMAL: Small improvement (<5pp)"
+  },
+  {
+    "name": "brf_282765.pdf",
+    "path": "SRS/brf_282765.pdf",
+    "baseline_coverage": 13.7,
+    "notes": "Low coverage, likely hybrid structure",
+    "success": true,
+    "new_coverage": 16.2,
+    "improvement": 2.5,
+    "mixed_mode_used": false,
+    "financial_extracted": false,
+    "financial_fields_count": 0,
+    "financial_values": {},
+    "verdict": "⚠️ MINIMAL: Small improvement (<5pp)"
+  },
+  {
+    "name": "brf_57125.pdf",
+    "path": "SRS/brf_57125.pdf",
+    "baseline_coverage": 14.5,
+    "notes": "Low coverage, Swedish governance terms failed",
+    "success": true,
+    "new_coverage": 17.9,
+    "improvement": 3.3999999999999986,
+    "mixed_mode_used": false,
+    "financial_extracted": false,
+    "financial_fields_count": 0,
+    "financial_values": {},
+    "verdict": "⚠️ MINIMAL: Small improvement (<5pp)"
+  }
+]

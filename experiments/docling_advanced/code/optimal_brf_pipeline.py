@@ -1038,6 +1038,16 @@ Return ONLY valid JSON, no other text."""
                 context=pass1_results
             )
 
+        # Sprint 1+2 Day 3: Extract operating_costs_agent (uses same headings as financial_agent)
+        # Operating costs breakdown targets income statement (Resultaträkning) pages 6-8
+        if financial_headings:
+            results['operating_costs_agent'] = self._extract_agent(
+                self.pdf_path_cache,
+                'operating_costs_agent',
+                financial_headings,  # Same sections (Resultaträkning contains operating costs)
+                context=pass1_results
+            )
+
         # Extract note agents sequentially
         for agent_id, section_headings in routing.note_sections.items():
             # Build hierarchical context (Pass 1 + financial + previous notes)

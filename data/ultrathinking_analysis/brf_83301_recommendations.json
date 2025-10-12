@@ -1,0 +1,34 @@
+{
+  "gaps": [
+    {
+      "category": "Financial",
+      "issue": "Partial financial extraction: Missing ['revenue', 'expenses', 'net_income', 'assets', 'liabilities', 'equity']",
+      "severity": "MEDIUM",
+      "possible_cause": "Incomplete table parsing or value extraction"
+    },
+    {
+      "category": "Governance",
+      "issue": "Governance keywords found on pages [5, 19, 20] but no governance data extracted",
+      "severity": "HIGH",
+      "possible_cause": "Agent routing failure or context window issues"
+    },
+    {
+      "category": "Property",
+      "issue": "Property keywords found on pages [4, 12] but no property data extracted",
+      "severity": "MEDIUM",
+      "possible_cause": "Pattern matching failure or text formatting issues"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "P0",
+      "action": "Enhance financial section detection",
+      "details": "Financial data present on pages [3, 8, 9, 10] but not extracted. Need better table parsing or section routing."
+    },
+    {
+      "priority": "P1",
+      "action": "Fix governance agent context",
+      "details": "Governance data present on pages [5, 19, 20]. Check if agent receives correct page context."
+    }
+  ]
+}

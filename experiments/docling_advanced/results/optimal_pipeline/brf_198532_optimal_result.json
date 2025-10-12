@@ -30,7 +30,7 @@
       "notes_accounting_agent": 1,
       "notes_other_agent": 2
     },
-    "routing_time": 2.51253604888916
+    "routing_time": 6.13222599029541
   },
   "agent_results": {
     "property_agent": {
@@ -69,7 +69,7 @@
       "evidence_pages": [
         2
       ],
-      "extraction_time": 11.200392961502075,
+      "extraction_time": 14.812845230102539,
       "model": "gpt-4o-2024-11-20",
       "tokens_used": 10554
     },
@@ -83,13 +83,13 @@
           "Maria Annelie Eck Arvstrand",
           "Mats Eskilson",
           "Fredrik Linde",
-          "Lisa Lind (Suppleant)",
-          "Daniel Wetter (Suppleant)"
+          "Lisa Lind (suppleant)",
+          "Daniel Wetter (suppleant)"
         ],
         "auditor_name": "Tobias Andersson",
         "audit_firm": "KPMG AB",
         "nomination_committee": [
-          "Victoria Blennborn (Sammankallande)",
+          "Victoria Blennborn (sammankallande)",
           "Mattias Lovén"
         ],
         "evidence_pages": [
@@ -131,7 +131,7 @@
         2,
         17
       ],
-      "extraction_time": 12.578472137451172,
+      "extraction_time": 18.343730926513672,
       "model": "gpt-4o-2024-11-20",
       "tokens_used": 12740
     },
@@ -188,7 +188,7 @@
         13,
         14
       ],
-      "extraction_time": 11.927489995956421,
+      "extraction_time": 16.508989095687866,
       "model": "gpt-4o-2024-11-20",
       "tokens_used": 14756
     },
@@ -237,9 +237,50 @@
       ],
       "num_images": 6,
       "evidence_pages": [],
-      "extraction_time": 9.740478754043579,
+      "extraction_time": 40.337971925735474,
       "model": "gpt-4o-2024-11-20",
       "tokens_used": 8825
+    },
+    "operating_costs_agent": {
+      "agent_id": "operating_costs_agent",
+      "status": "success",
+      "data": {
+        "operating_costs_breakdown": {
+          "fastighetsskott": -2834798,
+          "reparationer": 0,
+          "el": 0,
+          "varme": 0,
+          "vatten": 0,
+          "ovriga_externa_kostnader": -229331,
+          "evidence_pages": [
+            8
+          ]
+        }
+      },
+      "section_headings": [
+        "Flerårsöversikt",
+        "Förändringar eget kapital",
+        "Resultatdisposition",
+        "Resultaträkning",
+        "Balansräkning",
+        "Balansräkning",
+        "Årsredovisning",
+        "Fördelning av intäkter och kostnader",
+        "Skatter och avgifter"
+      ],
+      "pages_rendered": [
+        1,
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "num_images": 6,
+      "evidence_pages": [],
+      "extraction_time": 10.343217134475708,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 8857
     },
     "notes_accounting_agent": {
       "agent_id": "notes_accounting_agent",
@@ -247,7 +288,7 @@
       "data": {
         "accounting_principles": "Årsredovisningen har upprättats i enlighet med BFNAR 2016:10, Årsredovisning i mindre företag (K2).",
         "valuation_methods": "Avskrivningar på anläggningstillgångar enligt plan baseras på ursprungliga anskaffningsvärdet och beräknad nyttjandeperiod. Byggnader skrivs av över 100 år.",
-        "revenue_recognition": "",
+        "revenue_recognition": "Förenklingsregeln gällande periodiseringar har tillämpats.",
         "evidence_pages": [
           11
         ]
@@ -267,9 +308,9 @@
       "evidence_pages": [
         11
       ],
-      "extraction_time": 9.138443946838379,
+      "extraction_time": 9.640980958938599,
       "model": "gpt-4o-2024-11-20",
-      "tokens_used": 8031
+      "tokens_used": 8048
     },
     "notes_other_agent": {
       "agent_id": "notes_other_agent",
@@ -282,7 +323,8 @@
             "other_income": "57,994"
           },
           "not_14": {
-            "electricity_contract": "Föreningen har bundit elavtalet i 3 år till 58,89 öre/kWh plus ca 1,5 öre/kWh för vattenkraftel och valt Fortum till ny el-leverantör."
+            "electricity_contract": "Bound for 3 years at 58.89 öre/kWh plus approximately 1.5 öre/kWh for hydropower.",
+            "electricity_supplier": "Fortum"
           }
         },
         "evidence_pages": [
@@ -310,9 +352,9 @@
         12,
         16
       ],
-      "extraction_time": 14.236347913742065,
+      "extraction_time": 74.47534728050232,
       "model": "gpt-4o-2024-11-20",
-      "tokens_used": 11645
+      "tokens_used": 11652
     },
     "comprehensive_notes_agent": {
       "agent_id": "comprehensive_notes_agent",
@@ -343,28 +385,44 @@
             "amount_2021": 30000000,
             "interest_rate": 0.0057,
             "maturity_date": "2024-09-28",
-            "amortization_free": true
+            "amortization_free": true,
+            "loan_type": "Bundet",
+            "collateral": "Fastighetsinteckning",
+            "credit_facility_limit": 30000000,
+            "outstanding_amount": 30000000
           },
           {
             "lender": "SEB",
             "amount_2021": 30000000,
             "interest_rate": 0.0059,
             "maturity_date": "2023-09-28",
-            "amortization_free": true
+            "amortization_free": true,
+            "loan_type": "Bundet",
+            "collateral": "Fastighetsinteckning",
+            "credit_facility_limit": 30000000,
+            "outstanding_amount": 30000000
           },
           {
             "lender": "SEB",
             "amount_2021": 28000000,
             "interest_rate": 0.0142,
             "maturity_date": "2022-09-28",
-            "amortization_free": true
+            "amortization_free": true,
+            "loan_type": "Bundet",
+            "collateral": "Fastighetsinteckning",
+            "credit_facility_limit": 28000000,
+            "outstanding_amount": 28000000
           },
           {
             "lender": "SEB",
             "amount_2021": 25980000,
             "interest_rate": 0.0236,
             "maturity_date": "2025-09-28",
-            "amortization_free": true
+            "amortization_free": true,
+            "loan_type": "Bundet",
+            "collateral": "Fastighetsinteckning",
+            "credit_facility_limit": 25980000,
+            "outstanding_amount": 25980000
           }
         ],
         "evidence_pages": [
@@ -391,17 +449,17 @@
       ],
       "extraction_time": 0,
       "model": "gpt-4o-2024-11-20",
-      "tokens_used": 8756
+      "tokens_used": 9304
     }
   },
   "quality_metrics": {
     "coverage": 1.0,
     "numeric_qc_pass": true,
-    "evidence_ratio": 0.8571428571428571,
-    "overall_score": 0.9285714285714286,
+    "evidence_ratio": 0.75,
+    "overall_score": 0.875,
     "needs_coaching": true,
-    "validation_time": 1.0967254638671875e-05
+    "validation_time": 1.5974044799804688e-05
   },
-  "total_time": 75.7552809715271,
+  "total_time": 195.48863911628723,
   "total_cost": 0.0
 }
