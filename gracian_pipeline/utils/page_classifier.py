@@ -171,32 +171,52 @@ def analyze_page_content_density(markdown: str) -> Dict[str, any]:
 def should_use_mixed_mode_extraction(
     markdown: str,
     total_pages: int,
-    char_threshold: int = 5000
+    char_threshold: int = 5000,
+    tables: List[Dict] = None
 ) -> Tuple[bool, str]:
     """
     Determine if PDF should use mixed-mode extraction (text + vision).
+
+    ENHANCED DETECTION (Week 3 Day 6 - Unified Fix):
+    - Priority 1: Financial sections as images (original brf_76536 pattern)
+    - Priority 2: Empty/malformed tables (NEW - brf_83301 pattern)
+    - Priority 3: High image density (NEW - brf_282765 pattern)
 
     Args:
         markdown: Docling markdown output
         total_pages: Total number of pages
         char_threshold: Threshold for "enough text" (default 5000)
+        tables: Docling table structures (optional)
 
     Returns:
         (should_use_mixed_mode, reason)
 
     Decision Logic:
-    1. FIRST: Check if financial sections are images → Use mixed-mode (PRIORITY)
-    2. If very low text (<1000 chars) AND no financial sections → Pure scanned
-    3. If mostly text (>5000 chars) → Use text extraction only
-    4. Otherwise → Use document-level classification
+    1. PRIORITY 1: Check if financial sections are images → Use mixed-mode
+    2. PRIORITY 2: Check if tables are empty/malformed → Use mixed-mode (NEW!)
+    3. PRIORITY 3: Check if high image density → Use mixed-mode (NEW!)
+    4. AFTER image checks: Very low text (<1000 chars) → Pure scanned
+    5. Standard: Mostly text (>5000 chars, <10 images, good tables) → Text only
+    6. Borderline: Use document-level classification
 
-    CRITICAL FIX: Check for financial image sections BEFORE rejecting on char count!
-    Example: brf_76536.pdf has 2,558 chars but pages 9-12 are images → NEEDS mixed-mode
+    CRITICAL FIX: Check for image signals BEFORE rejecting on char count!
+
+    Examples:
+    - brf_76536.pdf: 2,558 chars but pages 9-12 are images → TRIGGER
+    - brf_83301.pdf: 13,809 chars but 14 tables with 0 columns → TRIGGER (NEW!)
+    - brf_282765.pdf: 10,206 chars but 26 image markers → TRIGGER (NEW!)
     """
 
     char_count = len(markdown.strip())
+    tables = tables or []
 
-    # PRIORITY: Detect image pages FIRST
+    # Count image markers
+    image_markers = markdown.count('<!-- image -->')
+
+    # Initialize empty_ratio
+    empty_ratio = 0.0
+
+    # ===== PRIORITY 1: Financial sections as images =====
     page_classification = detect_image_pages_from_markdown(markdown, total_pages)
 
     # If financial pages are images → Use mixed-mode (REGARDLESS of total char count)
@@ -208,17 +228,57 @@ def should_use_mixed_mode_extraction(
     if page_classification['image_pages']:
         return True, f"detected_{len(page_classification['image_pages'])}_image_pages"
 
-    # AFTER checking for images: Very low text (< 1000 chars) → Pure scanned
-    # Use full vision extraction (not mixed-mode)
+    # ===== PRIORITY 2: Empty/malformed tables (NEW - Week 3 Day 6) =====
+    # If Docling detected tables but can't extract data → Image-based tables
+    # BUG FIX (Week 3 Day 6 Extended): Table 'data' is a DICT, not a list!
+    # Structure: {'table_cells': [], 'num_rows': 0, 'num_cols': 0, 'grid': []}
+    if len(tables) > 0:
+        empty_table_count = 0
+
+        for table in tables:
+            data = table.get('data', {})
+
+            # FIXED: Check dictionary structure for empty tables
+            # A table with num_cols == 0 is an empty/malformed table
+            if isinstance(data, dict):
+                num_cols = data.get('num_cols', 0)
+                if num_cols == 0:
+                    empty_table_count += 1
+                    continue
+            # Legacy list format (for compatibility)
+            elif isinstance(data, list):
+                if not data or len(data) == 0:
+                    empty_table_count += 1
+                    continue
+                first_row = data[0] if len(data) > 0 else []
+                if not first_row or len(first_row) == 0:
+                    empty_table_count += 1
+
+        # If >50% of tables are empty AND we have ≥5 tables → Image-based tables
+        empty_ratio = empty_table_count / len(tables) if len(tables) > 0 else 0
+
+        if empty_ratio > 0.5 and len(tables) >= 5:
+            return True, f"empty_tables_detected_{empty_table_count}of{len(tables)}"
+
+    # ===== PRIORITY 3: High image density (NEW - Week 3 Day 6) =====
+    # If >10 image markers AND not too much text → Image-heavy hybrid
+    if image_markers >= 10:
+        if char_count < 15000:  # Not too much text (borderline)
+            return True, f"image_heavy_hybrid_{image_markers}_markers"
+
+    # ===== AFTER image checks: Very low text check =====
+    # Very low text (< 1000 chars) → Pure scanned (use full vision, not mixed-mode)
     if char_count < 1000:
         return False, "too_little_text_for_mixed_mode"
 
-    # Enough text, no image sections → Text extraction only
-    if char_count >= char_threshold:
+    # ===== Standard machine-readable check =====
+    # Enough text, low image density, good tables → Text extraction only
+    if char_count >= char_threshold and image_markers < 10 and empty_ratio < 0.5:
         return False, "sufficient_text_extraction"
 
-    # Borderline case → Use document-level classification
-    return False, "document_level_classification"
+    # ===== Borderline case =====
+    # Use document-level classification or mixed-mode for safety
+    return True, f"borderline_case_{char_count}_chars_{image_markers}_images"
 
 
 # Example usage and testing

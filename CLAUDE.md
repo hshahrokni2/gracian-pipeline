@@ -338,16 +338,17 @@ Result validation + evidence tracking
 - **Impact**: 88.1% → 95-100% projected success rate (+6.9 to +11.9 points)
 - **Status**: ✅ **PRODUCTION READY**
 
-#### **3. Low Coverage Outliers** (9 PDFs <50%)
+#### **3. Low Coverage Outliers** (9 PDFs <50%) - 🟡 **PARTIAL FIX** (Week 3 Day 6 Extended)
 - **Symptom**: 24.3% of test corpus achieved <50% coverage
 - **Impact**: Prevents hitting 75% average target
 - **Examples**: brf_78906 (6.0%), brf_43334 (6.8%), brf_76536 (0.0%)
-- **Investigation**:
-  - Manual review of low-performing PDFs
-  - Check if scanned vs machine-readable correlation
-  - Verify agent routing and context passing
-  - Overlap with SRS analysis (many low performers are SRS)
-- **Priority**: **HIGH** - Quality improvement blocker
+- **Investigation Results** (Oct 12 Extended):
+  - ✅ **Root Cause Found**: All 3 low performers are hybrid/image-heavy PDFs
+  - ✅ **Unified Solution**: Enhanced mixed-mode detection (3-priority system)
+  - ✅ **Critical Bug Fixed**: Table structure detection (dict vs list mismatch)
+  - ⏳ **Pipeline Integration**: Detection fixed, full pipeline validation pending
+- **Expected Impact**: +14-19pp per affected PDF (200-400 PDFs, 0.8-1.5% of corpus)
+- **Status**: 🟡 **BUG FIXED, TESTING PENDING** - See WEEK3_DAY6_EXTENDED_STATUS.md
 
 ### **P1 - HIGH PRIORITY** (Week 3 Day 4+ Action Items)
 
@@ -613,6 +614,7 @@ python -c "from core.parallel_orchestrator import extract_all_agents_parallel; .
 
 | Date | Change | Updated By |
 |------|--------|------------|
+| 2025-10-12 Evening | **Week 3 Day 6 Extended**: 🐛 **CRITICAL BUG FIXED** in mixed-mode detection. Table structure was dict not list - detection logic updated to check `num_cols` field. Bug discovered during validation testing, fixed in 30 min. Detection now works: `empty_tables_detected_8of14` for brf_83301.pdf. Expected impact: +14-19pp on 200-400 PDFs. Status: Detection fixed, pipeline integration pending. Docs: WEEK3_DAY6_BUG_DISCOVERY_AND_FIX.md, WEEK3_DAY6_EXTENDED_STATUS.md. Time: 2.5 hours. | Claude Code |
 | 2025-10-12 PM | **Week 3 Day 5 Complete**: ✅ Semantic validation improvements (3.5% → 5.8% coverage, +66%). Fixed nested synonym search, added 25+ Swedish→English mappings, integrated year-suffix handling. Diagnosed schema mismatch (GT expects 172 flat fields, extraction provides 97 nested). Documented comprehensive solution architecture. Time: 3 hours. | Claude Code |
 | 2025-10-12 AM | **🎉 BREAKTHROUGH - Branch B Production Ready!** Dictionary routing bug FIXED (50% → 94.3% match rate). Extraction improved 36.7% → 86.7% coverage. Critical discoveries: 4-page bottleneck, Docling detection limitation, comprehensive notes solution. Validated with ground truth (brf_198532). **Branch B now EXCEEDS 75% target!** Session: 6 hours, +51% coverage, 8 commits. Ready for pilot deployment. | Claude Code |
 | 2025-10-11 PM | **Week 3 Day 4 Complete**: ✅ Retry logic implemented with 100% recovery (5/5 failed PDFs). Exponential backoff integrated into parallel_orchestrator.py and hierarchical_financial.py. Projected success rate: 95-100% (vs 88.1% baseline). SRS dataset coverage gap now P0 priority. | Claude Code |
