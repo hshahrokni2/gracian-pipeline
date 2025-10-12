@@ -281,6 +281,67 @@ class OptimalBRFPipeline(BaseExtractor):
                 .replace('ä', 'a').replace('Ä', 'a')
                 .replace('ö', 'o').replace('Ö', 'o'))
 
+    def _is_explicit_note(self, heading: str) -> bool:
+        """
+        P0-1: Multi-pattern note detection (explicit patterns).
+
+        Supports multiple formats:
+        - "NOT 1", "NOT 2" (uppercase, used in brf_268882)
+        - "Not 1", "Not 2" (capitalized)
+        - "Noter 1", "Noter 2"
+        - "8.", "9.", "10." (number-only at start of line)
+        - "8. Byggnader", "9. Fordringar" (number + description)
+        """
+        patterns = [
+            r"^NOT\s+\d+",          # "NOT 1"
+            r"^Not\s+\d+",          # "Not 1"
+            r"^Noter\s+\d+",        # "Noter 1"
+            r"^\d+\.\s+\w+",        # "8. Byggnader"
+            r"^\d+\s+\w+",          # "8 Byggnader"
+        ]
+
+        for pattern in patterns:
+            if re.match(pattern, heading):
+                return True
+
+        return False
+
+    def _is_noter_main(self, heading: str) -> bool:
+        """Detect main 'Noter' section header"""
+        return "noter" in heading.lower() and len(heading) < 25
+
+    def _contains_note_keywords(self, heading: str) -> bool:
+        """
+        Check if heading contains note-specific keywords.
+
+        These keywords indicate financial note content:
+        - Accounting: redovisningsprinciper, värderingsprinciper
+        - Buildings: byggnader, mark, avskrivningar
+        - Loans: fastighetslån, långfristiga skulder
+        - Receivables: fordringar, omsättningstillgångar
+        - Reserves: fond, yttre underhåll, reserv
+        - Tax: skatter, avgifter
+        """
+        note_keywords = [
+            'redovisningsprinciper', 'värderingsprinciper',
+            'byggnader', 'mark', 'avskrivningar',
+            'fastighetslån', 'långfristiga skulder', 'lån',
+            'fordringar', 'omsättningstillgångar',
+            'fond', 'yttre underhåll', 'reserv',
+            'skatter', 'avgifter', 'moms'
+        ]
+        heading_lower = heading.lower()
+        return any(keyword in heading_lower for keyword in note_keywords)
+
+    def _is_end_marker(self, heading: str) -> bool:
+        """Detect end of notes section markers"""
+        end_markers = [
+            'underskrifter', 'revisionsberättelse',
+            'rapport om årsredovisningen', 'granskningsrapport'
+        ]
+        heading_lower = heading.lower()
+        return any(marker in heading_lower for marker in end_markers)
+
     def _classify_sections_llm(self, section_headings: List[str]) -> Dict[str, str]:
         """
         Classify unmatched sections using GPT-4o-mini (Option C).
@@ -535,50 +596,41 @@ Return ONLY valid JSON, no other text."""
         # OPTION C: Track unrouted sections for LLM classification fallback
         unrouted_sections = []
 
-        # Extract note headings first (same logic as test_note_semantic_routing.py)
+        # P0-1: HYBRID NOTE DETECTION (Multi-layer strategy)
         note_headings = []
         in_notes_subsection = False
+        seen_noter_main = False
 
         for section in structure.sections:
             heading = section['heading']
-            heading_lower = heading.lower()
 
-            # P0 FIX: More specific note detection to prevent premature state machine transition
-            # Only switch to notes mode on actual note subsections (NOT 1, NOT 2, etc.)
-            if heading.startswith("NOT ") and re.match(r"NOT \d+", heading):
-                # Real note subsection detected
+            # Layer 1: Explicit pattern matching (highest confidence)
+            if self._is_explicit_note(heading):
                 in_notes_subsection = True
                 note_headings.append(heading)
+                print(f"      📝 Note (explicit): '{heading[:50]}...'")
                 continue
 
-            # Detect main "Noter" section (TOC entry on page 2)
-            # Keep for collection, but DON'T switch to notes mode yet
-            if "noter" in heading_lower and len(heading) < 20:
+            # Layer 2: Main "Noter" section detection
+            if self._is_noter_main(heading):
                 main_sections['notes_collection'].append(heading)
-                # Don't set in_notes_subsection = True here - wait for actual note subsections
+                seen_noter_main = True
+                print(f"      📚 Noter main section: '{heading}'")
+                # Don't set in_notes_subsection yet - wait for actual subsections
                 continue
 
-            # Stop at end markers
-            if any(keyword in heading_lower for keyword in [
-                "underskrifter", "revisionsberättelse", "rapport om årsredovisningen"
-            ]):
-                break
-
-            # Collect note subsections
-            if in_notes_subsection:
-                # Note-specific keywords (simplified from NoteSemanticRouter)
-                note_keywords = [
-                    'redovisningsprinciper', 'värderingsprinciper',
-                    'lån', 'fastighetslån', 'skulder',
-                    'avskrivningar',
-                    'byggnader', 'mark',
-                    'fordringar', 'omsättningstillgångar',
-                    'fond', 'yttre underhåll', 'reserv',
-                    'skatter', 'avgifter', 'moms',
-                    'intäkter', 'kostnader'
-                ]
-                if any(keyword in heading_lower for keyword in note_keywords):
+            # Layer 3: Semantic detection (after seeing "Noter" main section)
+            if seen_noter_main and not self._is_end_marker(heading):
+                if self._contains_note_keywords(heading):
+                    in_notes_subsection = True
                     note_headings.append(heading)
+                    print(f"      📝 Note (semantic): '{heading[:50]}...'")
+                    continue
+
+            # Layer 4: Stop at end markers
+            if self._is_end_marker(heading):
+                print(f"      🛑 End marker: '{heading[:40]}...'")
+                break
 
             # Route main sections (before notes section)
             if not in_notes_subsection:
@@ -685,17 +737,21 @@ Return ONLY valid JSON, no other text."""
         agent_id: str = None
     ) -> List[int]:
         """
-        Map section headings to page numbers (ENHANCED Phase 2E: Provenance-First Strategy).
+        P0-2 & P0-3: ADAPTIVE PAGE ALLOCATION STRATEGY
 
-        Priority Order:
-        1. Docling provenance page numbers (✅ Works on scanned PDFs)
-        2. Add context pages around section heading (for multi-page sections)
-        3. Keyword search fallback (machine-readable PDFs only)
-        4. First N pages (last resort)
+        CRITICAL FIX: Collect pages from ALL section headings, not just first!
+
+        Strategy:
+        1. Provenance pages from ALL section headings (not just first)
+        2. Add context pages around EACH heading
+        3. Document-size-aware allocation (aggressive for small docs)
+        4. Keyword-based detection (backup)
+        5. Rank by relevance and limit to max pages (cost control)
         """
         pages = []
+        total_pages = self._get_pdf_page_count(pdf_path)
 
-        # Method 1: Try Docling provenance page numbers from cached structure
+        # Method 1: Provenance pages from ALL section headings (CRITICAL FIX)
         if hasattr(self, 'structure_cache') and self.structure_cache:
             for heading in section_headings:
                 for section in self.structure_cache.sections:
@@ -703,56 +759,66 @@ Return ONLY valid JSON, no other text."""
                         page = section['page']
                         pages.append(page)
 
-                        # CRITICAL FIX (Phase 2F): Provenance gives HEADER page, not CONTENT pages
-                        # Main sections (governance, financial) have headers on page 3 but content on pages 4-20
-                        # Notes sections have header and content on SAME page
-
-                        total_pages = self._get_pdf_page_count(pdf_path)
-
-                        # Strategy: Expand context window based on section type
-                        if agent_id == 'governance_agent':
-                            # Governance narrative typically spans 3-6 pages after header
-                            for i in range(1, 7):
-                                if page + i < total_pages:
-                                    pages.append(page + i)
-
-                        elif agent_id == 'financial_agent':
-                            # Financial statements + notes span 5-15 pages
-                            for i in range(1, 16):
-                                if page + i < total_pages:
-                                    pages.append(page + i)
-
+                        # Add context pages around THIS heading
+                        if agent_id == 'financial_agent':
+                            # Financial: Header + next 3 pages
+                            pages.extend([page+1, page+2, page+3])
                         elif agent_id == 'property_agent':
-                            # Property details typically 2-4 pages
-                            for i in range(1, 5):
-                                if page + i < total_pages:
-                                    pages.append(page + i)
+                            # Property: Header + next 2 pages
+                            pages.extend([page+1, page+2])
+                        elif agent_id == 'governance_agent':
+                            # Governance: Header + next 2 pages
+                            pages.extend([page+1, page+2])
+                        elif agent_id and 'notes_' in agent_id:
+                            # Notes: Usually header + same page content
+                            pages.append(page+1)
 
-                        # Note agents: header and content usually on same page, minimal expansion
-                        # (no explicit elif needed, just keep the provenance page)
+                        break  # Found this heading, move to next
 
-                        break
-                else:
-                    # Method 2: Search PDF text for heading (SKIP for scanned PDFs)
-                    # Text search fails on scanned PDFs, so only try on machine-readable
-                    if hasattr(self, 'topology') and self.topology.classification == "machine_readable":
-                        found_page = self._find_heading_in_pdf(pdf_path, heading)
-                        if found_page is not None:
-                            pages.append(found_page)
+        # Method 2: Document-size-aware allocation (aggressive for small docs)
+        if total_pages < 20:
+            # Small document: Be more aggressive with page allocation
+            if agent_id == 'financial_agent':
+                # P0-2: Scan pages 4-16 (typical financial statement range)
+                pages.extend(range(4, min(total_pages-2, 16)))
+            elif agent_id == 'property_agent':
+                # P0-3: Scan first 8 pages (förvaltningsberättelse + property sections)
+                pages.extend(range(0, min(8, total_pages)))
+            elif agent_id == 'governance_agent':
+                # Scan first 6 pages
+                pages.extend(range(0, min(6, total_pages)))
 
-        # Method 3: Content-based keyword search (machine-readable only)
-        # Keyword search also fails on scanned PDFs
+        # Method 3: Keyword-based detection (backup for machine-readable)
         if agent_id and hasattr(self, 'topology') and self.topology.classification == "machine_readable":
             keyword_pages = self._find_pages_by_content_keywords(pdf_path, agent_id)
             if keyword_pages:
                 pages.extend(keyword_pages)
 
-        # Method 4: If still no pages found, use first N pages
+        # Method 4: Fallback to first N pages (last resort)
         if not pages:
-            pages = list(range(min(fallback_pages, self._get_pdf_page_count(pdf_path))))
+            pages = list(range(min(fallback_pages, total_pages)))
 
         # Deduplicate and sort
-        return sorted(set(pages))
+        pages = sorted(set(pages))
+
+        # DEBUG: Show page allocation strategy
+        if agent_id:
+            print(f"      📄 {agent_id}: {len(pages)} pages allocated (before limit)")
+
+        # Optimization: Limit to reasonable max (cost control)
+        max_pages = {
+            'financial_agent': 20,
+            'governance_agent': 12,
+            'property_agent': 10,
+            'operations_agent': 8
+        }.get(agent_id, 10)
+
+        if len(pages) > max_pages:
+            # Keep first max_pages (already sorted, provenance pages come first)
+            pages = pages[:max_pages]
+            print(f"      ✂️  Limited to {max_pages} pages (cost control)")
+
+        return pages
 
     def _find_pages_by_content_keywords(self, pdf_path: str, agent_id: str) -> List[int]:
         """

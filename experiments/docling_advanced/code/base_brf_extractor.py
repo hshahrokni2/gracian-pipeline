@@ -126,14 +126,15 @@ If no relevant information found, return 'evidence_pages': []
         # Step 1: Get pages for sections
         pages = self._get_pages_for_sections(pdf_path, section_headings, fallback_pages=5, agent_id=agent_id)
 
-        # Step 2: Adaptive page selection (max 4 pages to prevent token overflow)
-        if len(pages) > 4:
-            selected_pages = [
-                pages[0],                    # Start
-                pages[len(pages)//3],        # Early-middle
-                pages[2*len(pages)//3],      # Late-middle
-                pages[-1]                    # End
-            ]
+        # P0-2/P0-3 FIX: Increase page limit for better coverage
+        # Previous: 4 pages (too restrictive for financial/property extraction)
+        # New: 12 pages (balanced - enough coverage, reasonable token cost)
+        MAX_PAGES = 12
+
+        if len(pages) > MAX_PAGES:
+            # Sample evenly across allocated pages
+            step = len(pages) / MAX_PAGES
+            selected_pages = [pages[int(i * step)] for i in range(MAX_PAGES)]
             pages = sorted(set(selected_pages))
 
         # Step 3: Render pages to images

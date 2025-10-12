@@ -1,0 +1,387 @@
+{
+  "extraction_file": "results/optimal_pipeline/brf_198532_optimal_result.json",
+  "ground_truth_file": "../../ground_truth/brf_198532_pydantic_ground_truth.json",
+  "metrics": {
+    "total_fields": 30,
+    "correct": 17,
+    "partial": 5,
+    "missing": 6,
+    "incorrect": 2,
+    "coverage": 0.7333333333333333,
+    "accuracy": 0.8947368421052632,
+    "overall_score": 0.5666666666666667
+  },
+  "field_results": [
+    {
+      "section": "governance",
+      "field": "chairman",
+      "status": "CORRECT",
+      "extracted": "Elvy Maria Löfvenberg",
+      "ground_truth": "Elvy Maria Löfvenberg",
+      "match": true
+    },
+    {
+      "section": "governance",
+      "field": "board_members_count",
+      "status": "INCORRECT",
+      "extracted": 6,
+      "ground_truth": 7,
+      "match": false
+    },
+    {
+      "section": "governance",
+      "field": "board_member_Elvy",
+      "status": "MISSING",
+      "extracted": [
+        "Torbjörn Andersson",
+        "Maria Annelie Eck Arvstrand",
+        "Mats Eskilson",
+        "Fredrik Linde",
+        "Lisa Lind (Suppleant)",
+        "Daniel Wetter (Suppleant)"
+      ],
+      "ground_truth": "Elvy Maria Löfvenberg",
+      "match": false
+    },
+    {
+      "section": "governance",
+      "field": "board_member_Torbjörn",
+      "status": "CORRECT",
+      "extracted": [
+        "Torbjörn Andersson",
+        "Maria Annelie Eck Arvstrand",
+        "Mats Eskilson",
+        "Fredrik Linde",
+        "Lisa Lind (Suppleant)",
+        "Daniel Wetter (Suppleant)"
+      ],
+      "ground_truth": "Torbjörn Andersson",
+      "match": true
+    },
+    {
+      "section": "governance",
+      "field": "board_member_Maria",
+      "status": "CORRECT",
+      "extracted": [
+        "Torbjörn Andersson",
+        "Maria Annelie Eck Arvstrand",
+        "Mats Eskilson",
+        "Fredrik Linde",
+        "Lisa Lind (Suppleant)",
+        "Daniel Wetter (Suppleant)"
+      ],
+      "ground_truth": "Maria Annelie Eck Arvstrand",
+      "match": true
+    },
+    {
+      "section": "governance",
+      "field": "board_member_Mats",
+      "status": "CORRECT",
+      "extracted": [
+        "Torbjörn Andersson",
+        "Maria Annelie Eck Arvstrand",
+        "Mats Eskilson",
+        "Fredrik Linde",
+        "Lisa Lind (Suppleant)",
+        "Daniel Wetter (Suppleant)"
+      ],
+      "ground_truth": "Mats Eskilson",
+      "match": true
+    },
+    {
+      "section": "governance",
+      "field": "board_member_Fredrik",
+      "status": "CORRECT",
+      "extracted": [
+        "Torbjörn Andersson",
+        "Maria Annelie Eck Arvstrand",
+        "Mats Eskilson",
+        "Fredrik Linde",
+        "Lisa Lind (Suppleant)",
+        "Daniel Wetter (Suppleant)"
+      ],
+      "ground_truth": "Fredrik Linde",
+      "match": true
+    },
+    {
+      "section": "governance",
+      "field": "board_member_Lisa",
+      "status": "CORRECT",
+      "extracted": [
+        "Torbjörn Andersson",
+        "Maria Annelie Eck Arvstrand",
+        "Mats Eskilson",
+        "Fredrik Linde",
+        "Lisa Lind (Suppleant)",
+        "Daniel Wetter (Suppleant)"
+      ],
+      "ground_truth": "Lisa Lind",
+      "match": true
+    },
+    {
+      "section": "governance",
+      "field": "board_member_Daniel",
+      "status": "CORRECT",
+      "extracted": [
+        "Torbjörn Andersson",
+        "Maria Annelie Eck Arvstrand",
+        "Mats Eskilson",
+        "Fredrik Linde",
+        "Lisa Lind (Suppleant)",
+        "Daniel Wetter (Suppleant)"
+      ],
+      "ground_truth": "Daniel Wetter",
+      "match": true
+    },
+    {
+      "section": "governance",
+      "field": "auditor_name",
+      "status": "CORRECT",
+      "extracted": "Tobias Andersson",
+      "ground_truth": "Tobias Andersson",
+      "match": true
+    },
+    {
+      "section": "governance",
+      "field": "audit_firm",
+      "status": "CORRECT",
+      "extracted": "KPMG AB",
+      "ground_truth": "KPMG AB",
+      "match": true
+    },
+    {
+      "section": "governance",
+      "field": "nomination_committee",
+      "status": "PARTIAL",
+      "extracted": [
+        "Victoria Blennborn (Sammankallande)",
+        "Mattias Lovén"
+      ],
+      "ground_truth": [
+        {
+          "name": "Victoria Blennborn",
+          "role": "Sammankallande"
+        },
+        {
+          "name": "Mattias Lovén",
+          "role": "Member"
+        }
+      ],
+      "match": false
+    },
+    {
+      "section": "property",
+      "field": "designation",
+      "status": "CORRECT",
+      "extracted": "Sonfjället 2",
+      "ground_truth": "Sonfjället 2",
+      "match": true
+    },
+    {
+      "section": "property",
+      "field": "address",
+      "status": "MISSING",
+      "extracted": "",
+      "ground_truth": null,
+      "match": false
+    },
+    {
+      "section": "property",
+      "field": "city",
+      "status": "CORRECT",
+      "extracted": "Stockholm",
+      "ground_truth": "Stockholm",
+      "match": true
+    },
+    {
+      "section": "property",
+      "field": "built_year",
+      "status": "CORRECT",
+      "extracted": "2015",
+      "ground_truth": 2015,
+      "match": true
+    },
+    {
+      "section": "property",
+      "field": "apartments",
+      "status": "CORRECT",
+      "extracted": "94",
+      "ground_truth": 94,
+      "match": true
+    },
+    {
+      "section": "financial",
+      "field": "revenue",
+      "status": "PARTIAL",
+      "extracted": "7393591",
+      "ground_truth": 7451585,
+      "match": false
+    },
+    {
+      "section": "financial",
+      "field": "expenses",
+      "status": "INCORRECT",
+      "extracted": "2834798",
+      "ground_truth": -6631400,
+      "match": false
+    },
+    {
+      "section": "financial",
+      "field": "surplus",
+      "status": "CORRECT",
+      "extracted": "-353810",
+      "ground_truth": -353810,
+      "match": true
+    },
+    {
+      "section": "financial",
+      "field": "assets",
+      "status": "CORRECT",
+      "extracted": "675294786",
+      "ground_truth": 675294786,
+      "match": true
+    },
+    {
+      "section": "financial",
+      "field": "equity",
+      "status": "CORRECT",
+      "extracted": "559807676",
+      "ground_truth": 559807676,
+      "match": true
+    },
+    {
+      "section": "financial",
+      "field": "liabilities",
+      "status": "CORRECT",
+      "extracted": "115487111",
+      "ground_truth": 115487111,
+      "match": true
+    },
+    {
+      "section": "notes",
+      "field": "note_8_buildings",
+      "status": "PARTIAL",
+      "extracted": "2 note agents executed",
+      "ground_truth": "Should extract note_8_buildings",
+      "match": false
+    },
+    {
+      "section": "notes",
+      "field": "note_9_receivables_2021",
+      "status": "PARTIAL",
+      "extracted": "2 note agents executed",
+      "ground_truth": "Should extract note_9_receivables_2021",
+      "match": false
+    },
+    {
+      "section": "notes",
+      "field": "note_10_maintenance_fund",
+      "status": "PARTIAL",
+      "extracted": "2 note agents executed",
+      "ground_truth": "Should extract note_10_maintenance_fund",
+      "match": false
+    },
+    {
+      "section": "loans",
+      "field": "loan_1",
+      "status": "MISSING",
+      "extracted": "No loans agent executed",
+      "ground_truth": "SEB - 30000000",
+      "match": false
+    },
+    {
+      "section": "loans",
+      "field": "loan_2",
+      "status": "MISSING",
+      "extracted": "No loans agent executed",
+      "ground_truth": "SEB - 30000000",
+      "match": false
+    },
+    {
+      "section": "loans",
+      "field": "loan_3",
+      "status": "MISSING",
+      "extracted": "No loans agent executed",
+      "ground_truth": "SEB - 28500000",
+      "match": false
+    },
+    {
+      "section": "loans",
+      "field": "loan_4",
+      "status": "MISSING",
+      "extracted": "No loans agent executed",
+      "ground_truth": "SEB - 25980000",
+      "match": false
+    }
+  ],
+  "issues_by_category": {
+    "ACCURACY": [
+      {
+        "field": "governance.board_members_count",
+        "issue": "Extracted 6 != 7",
+        "fix": "Improve governance_agent extraction accuracy"
+      },
+      {
+        "field": "financial.expenses",
+        "issue": "Extracted 2834798 != -6631400",
+        "fix": "Improve financial_agent extraction accuracy"
+      }
+    ],
+    "EXTRACTION": [
+      {
+        "field": "governance.board_member_Elvy",
+        "issue": "Agent received section but didn't extract field",
+        "fix": "Improve governance_agent prompt or page allocation"
+      },
+      {
+        "field": "property.address",
+        "issue": "Agent received section but didn't extract field",
+        "fix": "Improve property_agent prompt or page allocation"
+      }
+    ],
+    "ROUTING": [
+      {
+        "field": "loans.loan_1",
+        "issue": "Note sections not detected/routed",
+        "fix": "Improve note section detection in route_sections()"
+      },
+      {
+        "field": "loans.loan_2",
+        "issue": "Note sections not detected/routed",
+        "fix": "Improve note section detection in route_sections()"
+      },
+      {
+        "field": "loans.loan_3",
+        "issue": "Note sections not detected/routed",
+        "fix": "Improve note section detection in route_sections()"
+      },
+      {
+        "field": "loans.loan_4",
+        "issue": "Note sections not detected/routed",
+        "fix": "Improve note section detection in route_sections()"
+      }
+    ]
+  },
+  "routing_info": {
+    "main_sections": {
+      "governance_agent": 12,
+      "financial_agent": 9,
+      "property_agent": 4,
+      "operations_agent": 3,
+      "notes_collection": 1
+    },
+    "note_sections": {
+      "notes_accounting_agent": 1,
+      "notes_other_agent": 2
+    },
+    "routing_time": 2.0897769927978516
+  },
+  "quality_metrics": {
+    "coverage": 1.0,
+    "numeric_qc_pass": true,
+    "evidence_ratio": 1.0,
+    "overall_score": 1.0,
+    "needs_coaching": false,
+    "validation_time": 2.09808349609375e-05
+  }
+}
