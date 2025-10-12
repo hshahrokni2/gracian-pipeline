@@ -1,0 +1,37 @@
+{
+  "pdf": "../../SRS/brf_198532.pdf",
+  "date": "2025-10-12",
+  "revenue_breakdown": {
+    "fields_extracted": 7,
+    "total_fields": 15,
+    "coverage": 0.4666666666666667
+  },
+  "enhanced_loans": {
+    "fields_extracted": 16,
+    "total_fields": 16,
+    "coverage": 1.0
+  },
+  "operating_costs": {
+    "fields_extracted": 6,
+    "total_fields": 6,
+    "coverage": 1.0,
+    "merged_data": {
+      "fastighetsskott": -2834798,
+      "reparationer": 258004,
+      "el": 698763,
+      "varme": 438246,
+      "vatten": 162487,
+      "ovriga_externa_kostnader": -229331
+    }
+  },
+  "overall": {
+    "total_extracted": 29,
+    "total_fields": 37,
+    "coverage": 0.7837837837837838,
+    "decision": "GO"
+  },
+  "performance": {
+    "total_time": 277.42218589782715,
+    "total_cost": 0.0
+  }
+}

@@ -181,6 +181,46 @@ PARSING INSTRUCTIONS:
 - If credit_facility_limit not shown separately, use amount_2021
 - If outstanding_amount not shown separately, use amount_2021
 
+5. **Not 4 - Operating Costs (DRIFTKOSTNADER/RÖRELSEKOSTNADER)** - CRITICAL (SPRINT 1+2 DAY 4):
+{
+  "note_4_operating_costs": {
+    "fastighetskostnader_total": 0,     // Total property management costs
+    "reparationer_total": 0,             // Total repair costs
+    "el": 0,                             // Electricity (individual line item)
+    "varme": 0,                          // Heating (individual line item)
+    "vatten": 0,                         // Water/drainage (individual line item)
+    "evidence_pages": []
+  }
+}
+
+**CRITICAL - DAY 4 ENHANCEMENT**:
+Note 4 provides DETAILED operating costs breakdown that complements income statement summary.
+
+EXTRACTION STRATEGY:
+- Look for "Not 4" or "DRIFTKOSTNADER" heading (typically page 13)
+- Note 4 has TWO main categories:
+  1. Fastighetskostnader (Property management): 10-20 line items
+  2. Reparationer (Repairs): 8-15 line items
+
+TARGET FIELDS (extract from Note 4 table):
+- fastighetskostnader_total: Sum of all Fastighetskostnader line items (usually ~550,000-600,000)
+- reparationer_total: Sum of all Reparationer line items (usually ~400,000-500,000)
+- el: Individual "El" or "Elektricitet" line item within Fastighetskostnader (usually ~260,000)
+- varme: Individual "Värme" or "Uppvärmning" line item within Fastighetskostnader (usually ~600,000)
+- vatten: Individual "Vatten" or "Vatten och avlopp" line item within Fastighetskostnader (usually ~170,000)
+
+PARSING INSTRUCTIONS:
+- Scan table for "2021" column (rightmost) for current year values
+- Parse Swedish format: "553 590" → 553590 (no minus sign in notes)
+- El/Värme/Vatten are usually individual lines WITHIN Fastighetskostnader section
+- If utilities not itemized: Set el=0, varme=0, vatten=0 (consolidated)
+- Calculate totals by summing all line items in each category
+
+CRITICAL - Format Detection:
+- K3 format: Individual utilities visible (El: 260,845, Värme: 611,237, Vatten: 174,838)
+- K2 format: Utilities may be consolidated into other line items
+- Extract individual utilities if visible, otherwise set to 0
+
 Include evidence_pages: [] with ALL 1-based page numbers used.
 
 Return STRICT JSON with ONLY the structure above. If a note is not found, return empty object {}.""",

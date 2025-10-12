@@ -30,7 +30,7 @@
       "notes_accounting_agent": 1,
       "notes_other_agent": 2
     },
-    "routing_time": 6.13222599029541
+    "routing_time": 2.603996992111206
   },
   "agent_results": {
     "property_agent": {
@@ -69,7 +69,7 @@
       "evidence_pages": [
         2
       ],
-      "extraction_time": 14.812845230102539,
+      "extraction_time": 10.389063835144043,
       "model": "gpt-4o-2024-11-20",
       "tokens_used": 10554
     },
@@ -131,7 +131,7 @@
         2,
         17
       ],
-      "extraction_time": 18.343730926513672,
+      "extraction_time": 16.089557886123657,
       "model": "gpt-4o-2024-11-20",
       "tokens_used": 12740
     },
@@ -188,7 +188,7 @@
         13,
         14
       ],
-      "extraction_time": 16.508989095687866,
+      "extraction_time": 77.05497908592224,
       "model": "gpt-4o-2024-11-20",
       "tokens_used": 14756
     },
@@ -237,7 +237,7 @@
       ],
       "num_images": 6,
       "evidence_pages": [],
-      "extraction_time": 40.337971925735474,
+      "extraction_time": 10.486183166503906,
       "model": "gpt-4o-2024-11-20",
       "tokens_used": 8825
     },
@@ -278,7 +278,7 @@
       ],
       "num_images": 6,
       "evidence_pages": [],
-      "extraction_time": 10.343217134475708,
+      "extraction_time": 37.05108284950256,
       "model": "gpt-4o-2024-11-20",
       "tokens_used": 8857
     },
@@ -308,7 +308,7 @@
       "evidence_pages": [
         11
       ],
-      "extraction_time": 9.640980958938599,
+      "extraction_time": 7.058801889419556,
       "model": "gpt-4o-2024-11-20",
       "tokens_used": 8048
     },
@@ -323,8 +323,7 @@
             "other_income": "57,994"
           },
           "not_14": {
-            "electricity_contract": "Bound for 3 years at 58.89 öre/kWh plus approximately 1.5 öre/kWh for hydropower.",
-            "electricity_supplier": "Fortum"
+            "electricity_contract": "Föreningen har bundit elavtalet i 3 år till 58,89 öre/kWh plus ca 1,5 öre/kWh för vattenkraftel och valt Fortum till ny el-leverantör."
           }
         },
         "evidence_pages": [
@@ -352,9 +351,9 @@
         12,
         16
       ],
-      "extraction_time": 74.47534728050232,
+      "extraction_time": 82.87061405181885,
       "model": "gpt-4o-2024-11-20",
-      "tokens_used": 11652
+      "tokens_used": 11662
     },
     "comprehensive_notes_agent": {
       "agent_id": "comprehensive_notes_agent",
@@ -425,10 +424,16 @@
             "outstanding_amount": 25980000
           }
         ],
-        "evidence_pages": [
-          15,
-          16
-        ]
+        "note_4_operating_costs": {
+          "fastighetskostnader_total": 553590,
+          "reparationer_total": 258004,
+          "el": 698763,
+          "varme": 438246,
+          "vatten": 162487,
+          "evidence_pages": [
+            13
+          ]
+        }
       },
       "section_headings": [
         "Noter (complete section)"
@@ -443,23 +448,20 @@
         17
       ],
       "num_images": 7,
-      "evidence_pages": [
-        15,
-        16
-      ],
+      "evidence_pages": [],
       "extraction_time": 0,
       "model": "gpt-4o-2024-11-20",
-      "tokens_used": 9304
+      "tokens_used": 9942
     }
   },
   "quality_metrics": {
     "coverage": 1.0,
     "numeric_qc_pass": true,
-    "evidence_ratio": 0.75,
-    "overall_score": 0.875,
+    "evidence_ratio": 0.625,
+    "overall_score": 0.8125,
     "needs_coaching": true,
-    "validation_time": 1.5974044799804688e-05
+    "validation_time": 9.059906005859375e-06
   },
-  "total_time": 195.48863911628723,
+  "total_time": 277.42218589782715,
   "total_cost": 0.0
 }
