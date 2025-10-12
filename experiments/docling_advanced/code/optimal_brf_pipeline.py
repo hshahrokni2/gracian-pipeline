@@ -1044,6 +1044,101 @@ Return ONLY valid JSON, no other text."""
                 context=context
             )
 
+        # P1-NOTES: Comprehensive extraction if Docling missed notes
+        # If we detected "Noter" section but <5 individual notes, scan entire Noter range
+        if routing.main_sections.get('notes_collection') and len(routing.note_sections) < 5:
+            print(f"   ⚠️  Only {len(routing.note_sections)} notes detected by Docling")
+            print(f"   🔍 Running comprehensive notes extraction (Noter section)...")
+
+            # Find Noter page range dynamically
+            noter_start_page = None
+            end_page = self._get_pdf_page_count(self.pdf_path_cache)
+
+            # Find where "Noter" section starts
+            if hasattr(self, 'structure_cache') and self.structure_cache:
+                for section in self.structure_cache.sections:
+                    if self._is_noter_main(section['heading']):
+                        noter_start_page = section.get('page')
+                        break
+
+            # If found, scan from Noter to end of document (or signature page)
+            if noter_start_page is not None:
+                # Scan Noter section (typically 5-8 pages)
+                noter_pages = list(range(noter_start_page, min(noter_start_page + 8, end_page - 2)))
+                print(f"       📄 Noter pages: {[p+1 for p in noter_pages]} (0-indexed: {noter_start_page} to {noter_start_page+7})")
+
+                # Override page allocation by manually calling extraction with specific pages
+                # We'll temporarily store pages and call _extract_agent
+                saved_structure = self.structure_cache
+
+                # Call extraction with manual override by creating temp section
+                import fitz
+                doc = fitz.open(self.pdf_path_cache)
+
+                # Render Noter pages
+                images = []
+                page_labels = []
+                for page_num in noter_pages[:12]:  # Max 12 pages
+                    if page_num < len(doc):
+                        page = doc[page_num]
+                        zoom = 200 / 72
+                        mat = fitz.Matrix(zoom, zoom)
+                        pix = page.get_pixmap(matrix=mat)
+                        img_bytes = pix.tobytes("png")
+                        images.append(img_bytes)
+                        page_labels.append(f"Page {page_num + 1}")
+
+                doc.close()
+
+                # Build prompt for comprehensive notes
+                prompt = self.AGENT_PROMPTS['comprehensive_notes_agent']
+                prompt += f"\n\nScanning pages {[p+1 for p in noter_pages]} for all notes content.\n"
+
+                # Call OpenAI directly with Noter pages
+                import base64
+                content = [{"type": "text", "text": prompt}]
+                for img_bytes, label in zip(images, page_labels):
+                    img_b64 = base64.b64encode(img_bytes).decode('utf-8')
+                    content.append({"type": "text", "text": f"\n--- {label} ---"})
+                    content.append({
+                        "type": "image_url",
+                        "image_url": {
+                            "url": f"data:image/png;base64,{img_b64}",
+                            "detail": "high"
+                        }
+                    })
+
+                try:
+                    from openai import OpenAI
+                    import os
+                    client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+
+                    response = client.chat.completions.create(
+                        model="gpt-4o-2024-11-20",
+                        messages=[{"role": "user", "content": content}],
+                        max_tokens=4000,  # More tokens for comprehensive extraction
+                        temperature=0
+                    )
+
+                    raw_content = response.choices[0].message.content
+                    extracted_data = self._parse_json_with_fallback(raw_content)
+
+                    if extracted_data:
+                        results['comprehensive_notes_agent'] = {
+                            "agent_id": "comprehensive_notes_agent",
+                            "status": "success",
+                            "data": extracted_data,
+                            "section_headings": ["Noter (complete section)"],
+                            "pages_rendered": [p+1 for p in noter_pages[:12]],
+                            "num_images": len(images),
+                            "evidence_pages": extracted_data.get('evidence_pages', []),
+                            "extraction_time": 0,
+                            "model": "gpt-4o-2024-11-20",
+                            "tokens_used": response.usage.total_tokens if hasattr(response, 'usage') else 0
+                        }
+                except Exception as e:
+                    print(f"   ⚠️  Comprehensive notes extraction failed: {e}")
+
         elapsed = time.time() - start_time
         print(f"   ✅ Pass 2: {len(results)} agents completed ({elapsed:.1f}s)")
 

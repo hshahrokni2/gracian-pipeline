@@ -264,38 +264,75 @@ class ValidationReport:
         """Check if notes were extracted"""
         gt_notes = self.ground_truth.get('notes', {})
 
-        # Check if any note agents were executed
-        note_agents_executed = [
-            agent_id for agent_id in self.extraction['agent_results'].keys()
-            if 'notes_' in agent_id
-        ]
+        # Check comprehensive_notes_agent first (new approach)
+        comprehensive_data = self.extraction['agent_results'].get('comprehensive_notes_agent', {}).get('data', {})
 
-        for note_key in gt_notes.keys():
-            self.field_results.append({
-                "section": "notes",
-                "field": note_key,
-                "status": "MISSING" if not note_agents_executed else "PARTIAL",
-                "extracted": f"{len(note_agents_executed)} note agents executed",
-                "ground_truth": f"Should extract {note_key}",
-                "match": False
-            })
+        # Check note_8_buildings
+        if 'note_8_buildings' in gt_notes:
+            extracted_buildings = comprehensive_data.get('note_8_buildings', {})
+            gt_buildings = gt_notes['note_8_buildings']
+
+            # Compare book_value as representative field
+            self.field_results.append(self.compare_field(
+                "notes",
+                "note_8_buildings",
+                extracted_buildings.get('book_value_2021'),
+                gt_buildings.get('book_value_2021')
+            ))
+
+        # Check note_9_receivables
+        if 'note_9_receivables_2021' in gt_notes:
+            extracted_recv = comprehensive_data.get('note_9_receivables', {})
+            gt_recv = gt_notes['note_9_receivables_2021']
+
+            self.field_results.append(self.compare_field(
+                "notes",
+                "note_9_receivables",
+                extracted_recv.get('total'),
+                gt_recv.get('total')
+            ))
+
+        # Check note_10_maintenance_fund
+        if 'note_10_maintenance_fund' in gt_notes:
+            extracted_fund = comprehensive_data.get('note_10_maintenance_fund', {})
+            gt_fund = gt_notes['note_10_maintenance_fund']
+
+            self.field_results.append(self.compare_field(
+                "notes",
+                "note_10_maintenance_fund",
+                extracted_fund.get('end_2021'),
+                gt_fund.get('end_2021')
+            ))
 
     def analyze_loans(self):
         """Check if loans were extracted"""
         gt_loans = self.ground_truth.get('loans', [])
 
-        # Check if loans agent was executed
-        loans_agent = self.extraction['agent_results'].get('notes_loans_agent')
+        # Check comprehensive_notes_agent for loans
+        comprehensive_data = self.extraction['agent_results'].get('comprehensive_notes_agent', {}).get('data', {})
+        extracted_loans = comprehensive_data.get('loans', [])
 
-        for i, loan in enumerate(gt_loans):
-            self.field_results.append({
-                "section": "loans",
-                "field": f"loan_{i+1}",
-                "status": "MISSING",
-                "extracted": "No loans agent executed",
-                "ground_truth": f"{loan.get('lender')} - {loan.get('amount_2021')}",
-                "match": False
-            })
+        # Compare each loan
+        for i, gt_loan in enumerate(gt_loans):
+            if i < len(extracted_loans):
+                extracted_loan = extracted_loans[i]
+
+                # Compare loan amount as primary field
+                self.field_results.append(self.compare_field(
+                    "loans",
+                    f"loan_{i+1}",
+                    extracted_loan.get('amount_2021'),
+                    gt_loan.get('amount_2021')
+                ))
+            else:
+                self.field_results.append({
+                    "section": "loans",
+                    "field": f"loan_{i+1}",
+                    "status": "MISSING",
+                    "extracted": f"Only {len(extracted_loans)} loans found",
+                    "ground_truth": f"{gt_loan.get('lender')} - {gt_loan.get('amount_2021')}",
+                    "match": False
+                })
 
     def categorize_issues(self):
         """Categorize issues by root cause"""

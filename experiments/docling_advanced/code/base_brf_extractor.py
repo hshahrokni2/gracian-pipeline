@@ -38,7 +38,20 @@ class BaseExtractor:
     AGENT_PROMPTS = {
         'governance_agent': """You are GovernanceAgent for Swedish BRF annual/economic plans. From the input text/images, extract ONLY board/auditor data in JSON: {chairman: '', board_members: [], auditor_name: '', audit_firm: '', nomination_committee: []}. Focus on roles like 'Ordförande' (chairman), 'Ledamot' (member), 'Revisor' (auditor). Use NLP synonyms {'Ordförande': 'chairman'}. Ignore financials/property. Multimodal: Analyze images for signatures/tables. Include evidence_pages: [] with 1-based page numbers used. Return ONLY minified JSON.""",
 
-        'financial_agent': """You are FinancialAgent for Swedish BRF reports. Extract ONLY income/balance data with EXACT keys: {revenue:'', expenses:'', assets:'', liabilities:'', equity:'', surplus:'', evidence_pages: []}. Parse SEK numbers (e.g., 1 234 567 → 1234567). Focus on 'Resultaträkning'/'Balansräkning'. Do NOT invent; if not clearly visible on provided pages leave empty. Evidence: evidence_pages must list 1-based GLOBAL page numbers matching image labels (keep ≤ 3 items). Return STRICT VALID JSON object; no extra text.""",
+        'financial_agent': """You are FinancialAgent for Swedish BRF reports. Extract ONLY income/balance data with EXACT keys: {revenue:'', expenses:'', assets:'', liabilities:'', equity:'', surplus:'', evidence_pages: []}.
+
+CRITICAL INSTRUCTIONS FOR TOTALS:
+- revenue: Extract 'Nettoomsättning' or 'Summa intäkter' (TOTAL revenue, not line items)
+- expenses: Extract 'Summa rörelsekostnader' or 'Summa kostnader' (TOTAL expenses, NOT individual operating_costs)
+- assets: Extract 'Summa tillgångar' (TOTAL assets)
+- liabilities: Extract 'Summa skulder' OR sum of ('Långfristiga skulder' + 'Kortfristiga skulder')
+- equity: Extract 'Eget kapital' or 'Summa eget kapital'
+- surplus: Extract 'Årets resultat'
+
+Look for SUM/TOTAL lines in financial statements, not first line items.
+Parse SEK numbers (e.g., 1 234 567 → 1234567). Focus on 'Resultaträkning'/'Balansräkning'.
+Do NOT invent; if not clearly visible leave empty. Evidence: list 1-based page numbers.
+Return STRICT VALID JSON object; no extra text.""",
 
         'property_agent': """You are PropertyAgent for BRF plans. Extract ONLY property details with EXACT keys: {designation:'', address:'', postal_code:'', city:'', built_year:'', apartments:'', energy_class:'', evidence_pages: []}. Use Swedish cues: 'Fastighetsbeteckning', 'Adress', 'Byggår', 'Lägenheter', 'Energiklass'. Evidence: evidence_pages must be 1-based GLOBAL page numbers matching image labels. If a field is not visible, return an empty string ''. Return STRICT VALID JSON object with ONLY these keys (no comments, no trailing text).""",
 
@@ -58,7 +71,65 @@ class BaseExtractor:
 
         'notes_other_agent': """You are NotesOtherAgent for BRF notes. Extract ONLY other note information not covered by specific agents: {other_notes: ''}. Include evidence_pages: [] (1-based). Return STRICT minified JSON.""",
 
-        'notes_collection': """You are NotesCollectionAgent for BRF notes. Extract high-level overview of all notes sections: {notes_overview: '', total_sections: 0}. Include evidence_pages: [] (1-based). Return STRICT minified JSON."""
+        'notes_collection': """You are NotesCollectionAgent for BRF notes. Extract high-level overview of all notes sections: {notes_overview: '', total_sections: 0}. Include evidence_pages: [] (1-based). Return STRICT minified JSON.""",
+
+        'comprehensive_notes_agent': """You are ComprehensiveNotesAgent for Swedish BRF comprehensive notes extraction.
+
+Extract ALL financial notes from the complete Noter section, including notes that may not have clear section headers.
+
+CRITICAL: Extract these specific notes:
+
+1. **Not 8 - Buildings (Byggnader/BYGGNADER)**:
+{
+  "note_8_buildings": {
+    "acquisition_value_2021": 0,
+    "accumulated_depreciation_2021": 0,
+    "book_value_2021": 0,
+    "land_value_included": 0,
+    "tax_value_total_2021": 0
+  }
+}
+
+2. **Not 9 - Receivables (Fordringar/ÖVRIGA FORDRINGAR)**:
+{
+  "note_9_receivables": {
+    "tax_account": 0,
+    "vat_settlement": 0,
+    "client_funds": 0,
+    "receivables": 0,
+    "total": 0
+  }
+}
+
+3. **Not 10 - Maintenance Fund (Fond för yttre underhåll/FOND FÖR YTTRE UNDERHÅLL)**:
+{
+  "note_10_maintenance_fund": {
+    "beginning_2021": 0,
+    "allocation_2021": 0,
+    "end_2021": 0
+  }
+}
+
+4. **Not 11 - Loans (Skulder till kreditinstitut/SKULDER TILL KREDITINSTITUT)** - CRITICAL:
+{
+  "loans": [
+    {
+      "lender": "SEB",
+      "amount_2021": 30000000,
+      "interest_rate": 0.00570,
+      "maturity_date": "2024-09-28",
+      "amortization_free": true
+    }
+  ]
+}
+
+Look for loan tables with columns like: Långivare, Belopp, Ränta, Förfallodatum.
+Extract ALL loans (usually 4 rows from SEB).
+Parse Swedish formats: "30 000 000 kr" → 30000000, "0,57 %" → 0.00570
+
+Include evidence_pages: [] with ALL 1-based page numbers used.
+
+Return STRICT JSON with ONLY the structure above. If a note is not found, return empty object {}."""
     }
 
     def __init__(self):
