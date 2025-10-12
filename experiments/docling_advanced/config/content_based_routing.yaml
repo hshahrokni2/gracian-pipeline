@@ -1,0 +1,445 @@
+# Content-Based Agent Routing Configuration
+# Route by CONTENT, not note numbers!
+
+routing_strategy:
+  description: "3-layer routing: Direct keywords → Fuzzy matching → LLM classification"
+  layers:
+    - name: "Layer 1: Direct Swedish Keyword Matching"
+      accuracy_target: "93%+"
+      fallback_to: "Layer 2"
+
+    - name: "Layer 2: Fuzzy Semantic Matching"
+      accuracy_target: "5%"
+      handles: "Typos, variations, stemming"
+      fallback_to: "Layer 3"
+
+    - name: "Layer 3: LLM Classification"
+      accuracy_target: "2%"
+      handles: "Edge cases, ambiguous sections"
+
+agents:
+  MetadataAgent:
+    description: "Organization info, registration, financial year"
+    pydantic_schema: "MetadataSchema"
+    target_fields:
+      - org_number
+      - brf_name
+      - financial_year
+      - registration_date
+      - contact_address
+
+    primary_keywords:
+      - "Organisationsnummer"
+      - "Org.nr"
+      - "Org nr"
+      - "Räkenskapsår"
+      - "Redovisningsperiod"
+      - "Årsredovisning för"
+
+    secondary_keywords:
+      - "Bostadsrättsförening"
+      - "BRF"
+      - "Säte"
+      - "Postadress"
+
+    exclude_keywords: []
+
+    typical_locations:
+      - "Cover page"
+      - "Pages 1-3"
+      - "Header/footer metadata"
+
+    fuzzy_terms:
+      - "organisation"
+      - "räkenskap"
+      - "redovisning"
+
+  GovernanceAgent:
+    description: "Board structure, chairman, auditor, committees"
+    pydantic_schema: "GovernanceSchema"
+    target_fields:
+      - chairman
+      - board_members
+      - auditor_name
+      - auditor_company
+      - nomination_committee
+
+    primary_keywords:
+      - "Styrelse"
+      - "Styrelseordförande"
+      - "Ordförande"
+      - "Styrelseledamöter"
+      - "Ledamöter"
+      - "Revisorer"
+      - "Revisor"
+      - "Auktoriserad revisor"
+
+    secondary_keywords:
+      - "Suppleanter"
+      - "Valberedning"
+      - "Valberedningen"
+      - "Firmatecknare"
+
+    exclude_keywords:
+      - "Styrelsearvode"  # Financial, not structure
+
+    typical_locations:
+      - "Förvaltningsberättelse"
+      - "Pages 2-5"
+      - "Governance section"
+
+    fuzzy_terms:
+      - "styrels"
+      - "ordförand"
+      - "revisor"
+
+  PropertyAgent:
+    description: "Buildings, apartments, area, construction details"
+    pydantic_schema: "PropertySchema"
+    target_fields:
+      - buildings
+      - apartments_count
+      - total_area
+      - construction_year
+
+    primary_keywords:
+      - "Byggnader och mark"
+      - "Byggnader"
+      - "Antal lägenheter"
+      - "Bostadsrätter"
+      - "Totalarea"
+      - "Bostadsarea"
+      - "Lokalarea"
+
+    secondary_keywords:
+      - "Byggnadsår"
+      - "Färdigställd"
+      - "Uppförd"
+      - "Fastighet"
+      - "Fastighetsbeteckning"
+
+    exclude_keywords:
+      - "Byggnadsavskrivningar"  # Accounting, not property description
+      - "Fastighetsskatt"  # Operating cost, not property info
+
+    typical_locations:
+      - "Balance sheet notes"
+      - "Not X - Byggnader"
+      - "Property description section"
+
+    fuzzy_terms:
+      - "byggnad"
+      - "lägenhet"
+      - "fastighet"
+      - "area"
+
+  LoansAgent:
+    description: "Long-term debt: amounts, rates, maturities, lenders"
+    pydantic_schema: "LoanSchema"
+    target_fields:
+      - loan_amount
+      - interest_rate
+      - interest_type
+      - maturity_date
+      - lender
+      - loan_purpose
+
+    primary_keywords:
+      - "Långfristiga skulder"
+      - "Lån"
+      - "Låneavtal"
+      - "Lånebelopp"
+      - "Återstående skuld"
+      - "Räntesats"
+
+    secondary_keywords:
+      - "Bundna lån"
+      - "Rörliga lån"
+      - "Räntebindning"
+      - "Förfallodag"
+      - "Löptid"
+      - "Slutförfall"
+      - "Kreditgivare"
+      - "Långivare"
+      - "Bank"
+
+    exclude_keywords:
+      - "Kortfristiga skulder"  # Different liability type
+      - "Leverantörsskulder"  # Operating liability
+
+    typical_locations:
+      - "Balance sheet - Liabilities section"
+      - "Not X - Långfristiga skulder"
+      - "Liability notes"
+
+    fuzzy_terms:
+      - "lån"
+      - "skuld"
+      - "ränt"
+      - "förfall"
+
+  AssetsAgent:
+    description: "Cash, receivables, fixed assets summary"
+    pydantic_schema: "AssetsSchema"
+    target_fields:
+      - cash
+      - receivables
+      - fixed_assets_total
+
+    primary_keywords:
+      - "Kassa och bank"
+      - "Likvida medel"
+      - "Banktillgodohavanden"
+      - "Kortfristiga fordringar"
+      - "Kundfordringar"
+      - "Anläggningstillgångar"
+
+    secondary_keywords:
+      - "Förutbetalda kostnader"
+      - "Upplupna intäkter"
+      - "Materiella anläggningstillgångar"
+
+    exclude_keywords:
+      - "Långfristiga fordringar"  # Rare in BRF
+
+    typical_locations:
+      - "Balance sheet - Assets section"
+      - "Not X - Anläggningstillgångar"
+      - "Asset notes"
+
+    fuzzy_terms:
+      - "kassa"
+      - "bank"
+      - "fordring"
+      - "tillgång"
+
+  LiabilitiesAgent:
+    description: "Accounts payable, short-term liabilities"
+    pydantic_schema: "LiabilitiesSchema"
+    target_fields:
+      - accounts_payable
+      - other_short_term_liabilities
+
+    primary_keywords:
+      - "Kortfristiga skulder"
+      - "Leverantörsskulder"
+      - "Övriga kortfristiga skulder"
+
+    secondary_keywords:
+      - "Upplupna kostnader"
+      - "Skulder till leverantörer"
+      - "Förutbetalda intäkter"
+
+    exclude_keywords:
+      - "Långfristiga skulder"  # That's loans
+
+    typical_locations:
+      - "Balance sheet - Liabilities section"
+      - "Not X - Kortfristiga skulder"
+      - "Liability notes"
+
+    fuzzy_terms:
+      - "skuld"
+      - "leverantör"
+      - "upplupen"
+
+  EquityAgent:
+    description: "Capital, reserves, maintenance fund, retained earnings"
+    pydantic_schema: "EquitySchema"
+    target_fields:
+      - total_equity
+      - reserves
+      - maintenance_fund
+      - retained_earnings
+
+    primary_keywords:
+      - "Eget kapital"
+      - "Ansvarskapital"
+      - "Insatskapital"
+      - "Reservfond"
+      - "Underhållsfond"
+      - "Fond för yttre underhåll"
+
+    secondary_keywords:
+      - "Balanserad vinst"
+      - "Balanserade vinstmedel"
+      - "Årets resultat"
+      - "Fonder"
+
+    exclude_keywords: []
+
+    typical_locations:
+      - "Balance sheet - Equity section"
+      - "Not X - Eget kapital"
+      - "Equity notes"
+
+    fuzzy_terms:
+      - "kapital"
+      - "fond"
+      - "reserv"
+
+  RevenueAgent:
+    description: "Monthly fees, rental income, other income"
+    pydantic_schema: "RevenueSchema"
+    target_fields:
+      - monthly_fees
+      - parking_fees
+      - laundry_income
+      - rental_income
+      - other_income
+
+    primary_keywords:
+      - "Intäkter"
+      - "Årsavgifter"
+      - "Månadsavgift"
+      - "Avgifter från bostadsrättshavare"
+
+    secondary_keywords:
+      - "Hyresintäkter"
+      - "Parkeringsintäkter"
+      - "Tvättstugeintäkter"
+      - "Lokalintäkter"
+      - "Övriga intäkter"
+
+    exclude_keywords:
+      - "Ränteintäkter"  # Financial, not operating
+
+    typical_locations:
+      - "Income statement"
+      - "Not X - Intäkter"
+      - "Revenue notes"
+
+    fuzzy_terms:
+      - "intäkt"
+      - "avgift"
+      - "hyra"
+
+  OperatingCostsAgent:
+    description: "Utilities, maintenance, property tax, insurance, admin"
+    pydantic_schema: "OperatingCostsSchema"
+    target_fields:
+      - electricity
+      - heating
+      - water_sewage
+      - maintenance_costs
+      - property_tax
+      - insurance_costs
+      - administration_costs
+
+    primary_keywords:
+      - "Driftkostnader"
+      - "Fastighetskostnader"
+      - "El"
+      - "Elektricitet"
+      - "Elenergi"
+      - "Värme"
+      - "Fjärrvärme"
+      - "Vatten och avlopp"
+
+    secondary_keywords:
+      - "Uppvärmning"
+      - "Vatten"
+      - "VA"
+      - "Reparation och underhåll"
+      - "Löpande underhåll"
+      - "Fastighetsskatt"
+      - "Försäkringar"
+      - "Fastighetsförsäkring"
+      - "Administration"
+      - "Förvaltningskostnader"
+
+    exclude_keywords:
+      - "Räntekostnader"  # Financial, not operating
+      - "Periodiskt underhåll"  # Balance sheet, not P&L
+
+    typical_locations:
+      - "Income statement - Operating costs"
+      - "Not X - Driftkostnader"
+      - "Cost breakdown notes"
+
+    fuzzy_terms:
+      - "drift"
+      - "energi"
+      - "vatten"
+      - "underhåll"
+
+  FinancialCostsAgent:
+    description: "Interest expenses, interest income, financial items"
+    pydantic_schema: "FinancialCostsSchema"
+    target_fields:
+      - interest_expenses
+      - interest_income
+      - other_financial_costs
+
+    primary_keywords:
+      - "Räntekostnader"
+      - "Räntekostnad"
+      - "Räntor på lån"
+      - "Ränteintäkter"
+      - "Ränteintäkt"
+
+    secondary_keywords:
+      - "Finansiella kostnader"
+      - "Finansiella intäkter"
+      - "Övriga finansiella kostnader"
+      - "Bankavgifter"
+
+    exclude_keywords: []
+
+    typical_locations:
+      - "Income statement - Financial section"
+      - "Not X - Räntekostnader"
+      - "Financial notes"
+
+    fuzzy_terms:
+      - "ränt"
+      - "finansiell"
+
+# Note Number Pattern (for detection only, not routing!)
+note_number_pattern:
+  regex: "^Not(er)?\\s+(\\d+)"
+  description: "Detect note numbers but DO NOT use for routing"
+  usage: "Strip note numbers before content matching"
+
+  examples:
+    - input: "Not 4 - Driftkostnader"
+      note_number: "4"
+      content: "Driftkostnader"
+      route_by: "content"  # NOT note_number!
+
+    - input: "Noter - Not 8 Byggnader och mark"
+      note_number: "8"
+      content: "Byggnader och mark"
+      route_by: "content"
+
+    - input: "11. Långfristiga skulder"
+      note_number: "11"
+      content: "Långfristiga skulder"
+      route_by: "content"
+
+# Anti-Patterns (What NOT to do!)
+anti_patterns:
+  - name: "Hard-coded Note Numbers"
+    example: "if 'Not 4' in heading: return 'UtilitiesAgent'"
+    problem: "Note 4 may be different content in another BRF"
+    correct: "if 'Driftkostnader' in heading: return 'OperatingCostsAgent'"
+
+  - name: "Note Number in Agent Name"
+    example: "class Note4UtilitiesAgent"
+    problem: "Utilities not always in Note 4"
+    correct: "class OperatingCostsAgent"
+
+  - name: "Note Number in Schema Name"
+    example: "class Note4UtilitiesSchema(BaseModel)"
+    problem: "Schema coupled to arbitrary numbering"
+    correct: "class OperatingCostsSchema(BaseModel)"
+
+  - name: "Note Number in Prompt"
+    example: "Look for Not 4 which contains utility costs"
+    problem: "Won't generalize to other documents"
+    correct: "Look for section containing 'Driftkostnader' (utility costs)"
+
+  - name: "Assuming Sequential Numbering"
+    example: "NOTE_MAP = {4: 'utilities', 8: 'buildings', 11: 'liabilities'}"
+    problem: "Numbering varies across documents"
+    correct: "Use content keywords, not position"
