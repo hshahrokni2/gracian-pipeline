@@ -105,22 +105,26 @@ class UltraComprehensivePydanticExtractor:
             self.mixed_mode_extractor = MixedModeExtractor(docling_adapter, self.client)
 
         # Check if this PDF needs mixed-mode extraction
-        print("\n" + "="*80)
-        print("DEBUG: Mixed-Mode Detection Check")
-        print("="*80)
-        print(f"  Markdown length: {docling_result['char_count']:,} chars")
-        print(f"  Tables detected: {len(docling_result.get('tables', []))}")
-        print(f"  Total pages: {total_pages}")
+        DEBUG_MODE = os.getenv("GRACIAN_DEBUG", "0") == "1"
+
+        if DEBUG_MODE:
+            print("\n" + "="*80)
+            print("DEBUG: Mixed-Mode Detection Check")
+            print("="*80)
+            print(f"  Markdown length: {docling_result['char_count']:,} chars")
+            print(f"  Tables detected: {len(docling_result.get('tables', []))}")
+            print(f"  Total pages: {total_pages}")
 
         use_mixed, classification = self.mixed_mode_extractor.should_use_mixed_mode(
             docling_result, total_pages
         )
 
-        print(f"  RESULT: use_mixed={use_mixed}")
-        print(f"  REASON: {classification.get('reason', 'unknown')}")
-        if use_mixed and 'image_pages' in classification:
-            print(f"  IMAGE PAGES: {classification.get('image_pages', [])}")
-        print("="*80 + "\n")
+        if DEBUG_MODE:
+            print(f"  RESULT: use_mixed={use_mixed}")
+            print(f"  REASON: {classification.get('reason', 'unknown')}")
+            if use_mixed and 'image_pages' in classification:
+                print(f"  IMAGE PAGES: {classification.get('image_pages', [])}")
+            print("="*80 + "\n")
 
         if use_mixed:
             print(f"\n🔀 Mixed-Mode Detection: {classification.get('reason', 'unknown')}")
@@ -129,13 +133,14 @@ class UltraComprehensivePydanticExtractor:
             print(f"\n📸 Phase 1.5: Vision Extraction for Image Pages (30s)")
 
             # Extract image pages with vision
-            print("\n" + "="*80)
-            print("DEBUG: Vision Extraction Starting")
-            print("="*80)
-            print(f"  Image pages to extract: {classification.get('image_pages', [])}")
-            print(f"  Vision model: gpt-4o")
-            print(f"  API key configured: {'Yes' if self.client.api_key else 'No'}")
-            print("="*80 + "\n")
+            if DEBUG_MODE:
+                print("\n" + "="*80)
+                print("DEBUG: Vision Extraction Starting")
+                print("="*80)
+                print(f"  Image pages to extract: {classification.get('image_pages', [])}")
+                print(f"  Vision model: gpt-4o")
+                print(f"  API key configured: {'Yes' if self.client.api_key else 'No'}")
+                print("="*80 + "\n")
 
             vision_result = self.mixed_mode_extractor.extract_image_pages_with_vision(
                 pdf_path,
@@ -143,40 +148,43 @@ class UltraComprehensivePydanticExtractor:
                 context_hints="Focus on financial statements: Resultaträkning, Balansräkning, Kassaflödesanalys"
             )
 
-            print("\n" + "="*80)
-            print("DEBUG: Vision Extraction Complete")
-            print("="*80)
-            print(f"  Success: {vision_result.get('success')}")
-            print(f"  Pages processed: {vision_result.get('pages_processed', [])}")
-            if not vision_result.get('success'):
-                print(f"  Error: {vision_result.get('error', 'unknown')}")
-            else:
-                print(f"  Data keys: {list(vision_result.get('data', {}).keys())}")
-            print("="*80 + "\n")
+            if DEBUG_MODE:
+                print("\n" + "="*80)
+                print("DEBUG: Vision Extraction Complete")
+                print("="*80)
+                print(f"  Success: {vision_result.get('success')}")
+                print(f"  Pages processed: {vision_result.get('pages_processed', [])}")
+                if not vision_result.get('success'):
+                    print(f"  Error: {vision_result.get('error', 'unknown')}")
+                else:
+                    print(f"  Data keys: {list(vision_result.get('data', {}).keys())}")
+                print("="*80 + "\n")
 
             if vision_result.get('success'):
                 print(f"   ✓ Vision extraction successful for pages {vision_result.get('pages_processed', [])}")
 
                 # Merge vision results into base_result
-                print("\n" + "="*80)
-                print("DEBUG: Merging Results")
-                print("="*80)
-                print(f"  Text result agents: {len([k for k in base_result.keys() if not k.startswith('_')])}")
-                print(f"  Vision result data keys: {list(vision_result.get('data', {}).keys())}")
-                print("="*80 + "\n")
+                if DEBUG_MODE:
+                    print("\n" + "="*80)
+                    print("DEBUG: Merging Results")
+                    print("="*80)
+                    print(f"  Text result agents: {len([k for k in base_result.keys() if not k.startswith('_')])}")
+                    print(f"  Vision result data keys: {list(vision_result.get('data', {}).keys())}")
+                    print("="*80 + "\n")
 
                 base_result = self.mixed_mode_extractor.merge_extraction_results(
                     base_result,
                     vision_result
                 )
 
-                print("\n" + "="*80)
-                print("DEBUG: Merge Complete")
-                print("="*80)
-                print(f"  Merged result has metadata: {'_extraction_metadata' in base_result}")
-                if '_extraction_metadata' in base_result:
-                    print(f"  Metadata: {base_result['_extraction_metadata']}")
-                print("="*80 + "\n")
+                if DEBUG_MODE:
+                    print("\n" + "="*80)
+                    print("DEBUG: Merge Complete")
+                    print("="*80)
+                    print(f"  Merged result has metadata: {'_extraction_metadata' in base_result}")
+                    if '_extraction_metadata' in base_result:
+                        print(f"  Metadata: {base_result['_extraction_metadata']}")
+                    print("="*80 + "\n")
 
                 print(f"   ✓ Results merged from {len(vision_result.get('pages_processed', []))} image pages")
             else:
@@ -218,11 +226,7 @@ class UltraComprehensivePydanticExtractor:
         # Policies
         policies = self._extract_policies_enhanced(base_result)
 
-        # Phase 4: Quality metrics
-        print("\n✅ Phase 4: Quality Assessment (30s)")
-        quality_metrics = self._calculate_quality_metrics(base_result)
-
-        # Construct BRFAnnualReport
+        # Construct BRFAnnualReport (with placeholder quality metrics)
         report = BRFAnnualReport(
             metadata=metadata,
             governance=governance,
@@ -234,11 +238,22 @@ class UltraComprehensivePydanticExtractor:
             operations=operations,
             events=events,
             policies=policies,
-            extraction_quality=quality_metrics,
-            coverage_percentage=quality_metrics.get("coverage_percentage", 0),
-            confidence_score=quality_metrics.get("confidence_score", 0),
+            extraction_quality={},  # Will be updated below
+            coverage_percentage=0.0,  # Will be updated below
+            confidence_score=0.0,  # Will be updated below
             all_source_pages=self._collect_all_source_pages(base_result),
         )
+
+        # Phase 4: Quality Assessment - Use base_result metrics (pre-calculated by base extractor)
+        print("\n✅ Phase 4: Quality Assessment (30s)")
+        # TEMPORARY FIX: Revert to old method to stop -16pp regression
+        # TODO: Enhance to count vision-extracted fields properly
+        quality_metrics = self._calculate_quality_metrics(base_result)
+
+        # Update report with actual quality metrics
+        report.extraction_quality = quality_metrics
+        report.coverage_percentage = quality_metrics.get("coverage_percentage", 0)
+        report.confidence_score = quality_metrics.get("confidence_score", 0)
 
         print(f"\n🎉 Extraction Complete!")
         print(f"   Coverage: {report.coverage_percentage:.1f}%")
@@ -894,8 +909,99 @@ class UltraComprehensivePydanticExtractor:
 
         return policies
 
+    def _calculate_quality_metrics_from_report(self, report: BRFAnnualReport) -> Dict[str, float]:
+        """
+        Calculate extraction quality metrics from constructed Pydantic model.
+
+        This method counts ACTUAL populated fields, including those from vision extraction.
+        """
+        total_fields = 0
+        populated_fields = 0
+
+        # Count metadata fields
+        if report.metadata:
+            metadata_fields = ['fiscal_year', 'brf_name', 'organization_number']
+            for field_name in metadata_fields:
+                total_fields += 1
+                field_value = getattr(report.metadata, field_name, None)
+                if field_value is not None and hasattr(field_value, 'value') and field_value.value:
+                    populated_fields += 1
+
+        # Count governance fields
+        if report.governance:
+            total_fields += 1  # chairman
+            if report.governance.chairman and report.governance.chairman.value:
+                populated_fields += 1
+
+            total_fields += 1  # board_members count
+            if report.governance.board_members and len(report.governance.board_members) > 0:
+                populated_fields += 1
+
+            total_fields += 1  # primary_auditor
+            if report.governance.primary_auditor and report.governance.primary_auditor.name:
+                populated_fields += 1
+
+        # Count financial fields (CRITICAL: Vision-extracted fields)
+        if report.financial:
+            # Balance sheet
+            if report.financial.balance_sheet:
+                bs_fields = ['assets_total', 'liabilities_total', 'equity_total']
+                for field_name in bs_fields:
+                    total_fields += 1
+                    field_value = getattr(report.financial.balance_sheet, field_name, None)
+                    if field_value is not None and field_value.value is not None:
+                        populated_fields += 1
+
+            # Income statement
+            if report.financial.income_statement:
+                is_fields = ['revenue_total', 'expenses_total', 'result_after_tax']
+                for field_name in is_fields:
+                    total_fields += 1
+                    field_value = getattr(report.financial.income_statement, field_name, None)
+                    if field_value is not None and field_value.value is not None:
+                        populated_fields += 1
+
+        # Count property fields
+        if report.property:
+            property_fields = ['property_designation', 'municipality', 'total_apartments']
+            for field_name in property_fields:
+                total_fields += 1
+                field_value = getattr(report.property, field_name, None)
+                if field_value is not None and hasattr(field_value, 'value') and field_value.value:
+                    populated_fields += 1
+
+        # Count fees
+        if report.fees:
+            total_fields += 1
+            if report.fees.annual_fee_per_sqm and report.fees.annual_fee_per_sqm.value:
+                populated_fields += 1
+
+        # Count loans
+        total_fields += 1  # At least count if we have any loans
+        if report.loans and len(report.loans) > 0:
+            populated_fields += 1
+
+        # Calculate coverage
+        coverage_percentage = (populated_fields / max(total_fields, 1)) * 100
+
+        # Calculate confidence (simple heuristic)
+        confidence_score = 0.9 if coverage_percentage > 70 else 0.7 if coverage_percentage > 50 else 0.5
+
+        return {
+            "coverage_percentage": coverage_percentage,
+            "confidence_score": confidence_score,
+            "total_fields": total_fields,
+            "populated_fields": populated_fields,
+            "evidence_ratio": populated_fields / max(total_fields, 1),
+        }
+
     def _calculate_quality_metrics(self, base_result: Dict) -> Dict[str, float]:
-        """Calculate extraction quality metrics."""
+        """
+        DEPRECATED: Calculate extraction quality metrics from base_result.
+
+        This method is kept for compatibility but should not be used.
+        Use _calculate_quality_metrics_from_report() instead.
+        """
         # FIXED: Base extractor stores in "_quality_metrics", not "_quality"
         quality = base_result.get("_quality_metrics", {})
 

@@ -67,8 +67,16 @@ financial_tables = []
 for i, table in enumerate(tables, 1):
     print(f"📋 Table {i}:")
     print(f"   Type: {table.get('table_type', 'unknown')}")
-    print(f"   Rows: {len(table.get('data', []))}")
-    print(f"   Columns: {len(table.get('data', [[]])[0]) if table.get('data') else 0}")
+
+    data = table.get('data', [])
+    print(f"   Rows: {len(data)}")
+
+    # Get column count safely
+    col_count = 0
+    if data and len(data) > 0:
+        first_row = data[0] if isinstance(data, list) else []
+        col_count = len(first_row) if isinstance(first_row, list) else 0
+    print(f"   Columns: {col_count}")
 
     # Convert table data to text for keyword search
     table_text = json.dumps(table.get('data', []), ensure_ascii=False)
@@ -86,8 +94,7 @@ for i, table in enumerate(tables, 1):
         print(f"   ⚠️ No financial keywords")
 
     # Show table preview (first 3 rows)
-    data = table.get('data', [])
-    if data:
+    if data and isinstance(data, list):
         print(f"   Preview (first 3 rows):")
         for row_idx, row in enumerate(data[:3], 1):
             print(f"      Row {row_idx}: {row[:5] if len(row) > 5 else row}")

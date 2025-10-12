@@ -34,10 +34,7 @@
     "fields_extracted": 16,
     "total_fields": 16,
     "coverage": 1.0,
-    "evidence_pages": [
-      15,
-      16
-    ],
+    "evidence_pages": [],
     "sample_loan": {
       "lender": "SEB",
       "amount_2021": 30000000,
@@ -76,7 +73,7 @@
     "coverage": 0.6756756756756757
   },
   "performance": {
-    "total_time": 195.48863911628723,
+    "total_time": 152.613605260849,
     "total_cost": 0.0
   }
 }
