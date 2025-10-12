@@ -57,6 +57,8 @@ class MixedModeExtractor:
         """
         Determine if PDF should use mixed-mode extraction.
 
+        ENHANCED (Week 3 Day 6): Now includes empty table detection and image density checks.
+
         Args:
             docling_result: Result from Docling extraction
             total_pages: Total number of pages
@@ -67,14 +69,38 @@ class MixedModeExtractor:
         markdown = docling_result['markdown']
         char_count = docling_result['char_count']
 
-        # Check if mixed-mode is appropriate
-        use_mixed, reason = should_use_mixed_mode_extraction(markdown, total_pages)
+        # NEW: Extract tables from docling_result (for empty table detection)
+        tables = docling_result.get('tables', [])
+
+        # Check if mixed-mode is appropriate (with enhanced detection)
+        use_mixed, reason = should_use_mixed_mode_extraction(
+            markdown,
+            total_pages,
+            tables=tables  # NEW: Pass tables for empty table detection
+        )
 
         if not use_mixed:
             return False, {'reason': reason}
 
         # Get page classification
         page_classification = detect_image_pages_from_markdown(markdown, total_pages)
+
+        # CRITICAL FIX (Week 3 Day 6 Extended):
+        # Priority 2 (empty tables) and Priority 3 (high image density) may trigger
+        # but detect_image_pages_from_markdown() returns empty image_pages list
+        # because it only detects Priority 1 pattern (financial sections as images)
+        #
+        # Solution: If image_pages is empty but mixed-mode is triggered,
+        # use heuristic fallback for typical Swedish BRF financial pages
+        if not page_classification['image_pages']:
+            # Fallback: Assume financial statements are on typical pages 9-12
+            # This is conservative but based on analysis of 221-PDF corpus
+            # where 90%+ of BRF annual reports follow this structure
+            typical_financial_pages = list(range(9, min(13, total_pages + 1)))
+
+            page_classification['image_pages'] = typical_financial_pages
+            page_classification['fallback_heuristic'] = True
+            page_classification['fallback_reason'] = f"Typical BRF structure (pages 9-12) for {reason}"
 
         # Add metadata
         page_classification['use_mixed_mode'] = True

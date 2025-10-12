@@ -95,6 +95,7 @@ class UltraComprehensivePydanticExtractor:
             'markdown': base_result.get('_docling_markdown', ''),
             'char_count': len(base_result.get('_docling_markdown', '')),
             'status': base_result.get('_docling_status', 'text'),
+            'tables': base_result.get('_docling_tables', []),  # NEW: For empty table detection
         }
 
         # Initialize mixed-mode extractor if needed
@@ -104,9 +105,22 @@ class UltraComprehensivePydanticExtractor:
             self.mixed_mode_extractor = MixedModeExtractor(docling_adapter, self.client)
 
         # Check if this PDF needs mixed-mode extraction
+        print("\n" + "="*80)
+        print("DEBUG: Mixed-Mode Detection Check")
+        print("="*80)
+        print(f"  Markdown length: {docling_result['char_count']:,} chars")
+        print(f"  Tables detected: {len(docling_result.get('tables', []))}")
+        print(f"  Total pages: {total_pages}")
+
         use_mixed, classification = self.mixed_mode_extractor.should_use_mixed_mode(
             docling_result, total_pages
         )
+
+        print(f"  RESULT: use_mixed={use_mixed}")
+        print(f"  REASON: {classification.get('reason', 'unknown')}")
+        if use_mixed and 'image_pages' in classification:
+            print(f"  IMAGE PAGES: {classification.get('image_pages', [])}")
+        print("="*80 + "\n")
 
         if use_mixed:
             print(f"\n🔀 Mixed-Mode Detection: {classification.get('reason', 'unknown')}")
@@ -115,20 +129,54 @@ class UltraComprehensivePydanticExtractor:
             print(f"\n📸 Phase 1.5: Vision Extraction for Image Pages (30s)")
 
             # Extract image pages with vision
+            print("\n" + "="*80)
+            print("DEBUG: Vision Extraction Starting")
+            print("="*80)
+            print(f"  Image pages to extract: {classification.get('image_pages', [])}")
+            print(f"  Vision model: gpt-4o")
+            print(f"  API key configured: {'Yes' if self.client.api_key else 'No'}")
+            print("="*80 + "\n")
+
             vision_result = self.mixed_mode_extractor.extract_image_pages_with_vision(
                 pdf_path,
                 classification['image_pages'],
                 context_hints="Focus on financial statements: Resultaträkning, Balansräkning, Kassaflödesanalys"
             )
 
+            print("\n" + "="*80)
+            print("DEBUG: Vision Extraction Complete")
+            print("="*80)
+            print(f"  Success: {vision_result.get('success')}")
+            print(f"  Pages processed: {vision_result.get('pages_processed', [])}")
+            if not vision_result.get('success'):
+                print(f"  Error: {vision_result.get('error', 'unknown')}")
+            else:
+                print(f"  Data keys: {list(vision_result.get('data', {}).keys())}")
+            print("="*80 + "\n")
+
             if vision_result.get('success'):
                 print(f"   ✓ Vision extraction successful for pages {vision_result.get('pages_processed', [])}")
 
                 # Merge vision results into base_result
+                print("\n" + "="*80)
+                print("DEBUG: Merging Results")
+                print("="*80)
+                print(f"  Text result agents: {len([k for k in base_result.keys() if not k.startswith('_')])}")
+                print(f"  Vision result data keys: {list(vision_result.get('data', {}).keys())}")
+                print("="*80 + "\n")
+
                 base_result = self.mixed_mode_extractor.merge_extraction_results(
                     base_result,
                     vision_result
                 )
+
+                print("\n" + "="*80)
+                print("DEBUG: Merge Complete")
+                print("="*80)
+                print(f"  Merged result has metadata: {'_extraction_metadata' in base_result}")
+                if '_extraction_metadata' in base_result:
+                    print(f"  Metadata: {base_result['_extraction_metadata']}")
+                print("="*80 + "\n")
 
                 print(f"   ✓ Results merged from {len(vision_result.get('pages_processed', []))} image pages")
             else:
