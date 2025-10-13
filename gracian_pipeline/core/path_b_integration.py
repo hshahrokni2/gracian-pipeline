@@ -10,6 +10,7 @@ Date: 2025-10-13 (Integration Day)
 
 from typing import Dict, Any, List, Optional, Tuple
 import logging
+import time
 
 from ..agents.notes_agents import DepreciationNoteAgent, MaintenanceNoteAgent, TaxNoteAgent
 from ..core.enhanced_notes_detector import EnhancedNotesDetector
@@ -61,7 +62,6 @@ def extract_with_path_b_agent(
     Returns:
         (result_dict, metadata_dict) same format as Option A's extract_single_agent()
     """
-    import time
     start_time = time.time()
 
     try:
