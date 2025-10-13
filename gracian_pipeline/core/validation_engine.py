@@ -250,9 +250,29 @@ class ValidationEngine:
         if not loans:
             return issues
 
+        # P2 FIX (Week 3 Day 8): Handle multiple loan formats
+        # Convert single dict to list
+        if isinstance(loans, dict):
+            loans = [loans]
+
         loan_patterns = self.patterns["loans"]
 
         for i, loan in enumerate(loans):
+            # P2 FIX: Handle string loans (legacy format)
+            if isinstance(loan, str):
+                # Skip validation for string loans (can't validate structure)
+                continue
+            elif not isinstance(loan, dict):
+                # Unknown format - add warning and skip
+                issues.append(ValidationIssue(
+                    severity=ValidationSeverity.WARNING,
+                    field=f"loans[{i}]",
+                    value=str(loan),
+                    message=f"Loan has unexpected type: {type(loan).__name__}",
+                    suggestion="Expected dict format with lender, amount fields"
+                ))
+                continue
+
             # Extract loan data (handle ExtractionField wrapper)
             lender_field = loan.get('lender', {})
             lender = lender_field.get('value') if isinstance(lender_field, dict) else lender_field
