@@ -483,17 +483,20 @@ class ApplicableFieldsDetector:
         """
         Estimate applicable field count without full extraction.
 
+        NOTE: Updated based on actual extraction patterns showing 40-80 fields typically.
+
         Returns:
             Tuple of (min_expected, typical_expected, max_expected)
         """
-        # Minimum: Just core fields
-        min_expected = len(self.core_fields)  # ~150
+        # Minimum: Just core fields (updated from empirical data)
+        min_expected = len(self.core_fields)  # ~91
 
-        # Typical: Core + 1-3 loans + 2-3 years + 5-8 notes
-        typical_loans = 2 * len(self.LOAN_FIELDS)  # 20 fields
-        typical_years = 3 * len(self.MULTI_YEAR_FIELDS)  # 24 fields
-        typical_notes = 6 * 5  # 30 fields (6 notes × 5 fields each)
-        typical_expected = min_expected + typical_loans + typical_years + typical_notes  # ~224
+        # Typical: Core + modest optional content
+        # Empirical observation: most PDFs have 60-80 applicable fields
+        typical_loans = 2 * len(self.LOAN_FIELDS)  # 20 fields (2 loans)
+        typical_years = 2 * len(self.MULTI_YEAR_FIELDS)  # 16 fields (2 years)
+        typical_notes = 3 * 5  # 15 fields (3 notes × 5 fields each)
+        typical_expected = min_expected + typical_loans + typical_years + typical_notes  # ~142
 
         # Maximum: Core + all optional fields
         max_loans = 5 * len(self.LOAN_FIELDS)  # 50 fields
@@ -503,7 +506,7 @@ class ApplicableFieldsDetector:
         max_environmental = len(self.ENVIRONMENTAL_FIELDS)  # 5 fields
         max_calculated = len(self.CALCULATED_METRICS_FIELDS)  # 5 fields
         max_expected = (min_expected + max_loans + max_years + max_notes +
-                       max_operations + max_environmental + max_calculated)  # ~335
+                       max_operations + max_environmental + max_calculated)  # ~271
 
         return min_expected, typical_expected, max_expected
 

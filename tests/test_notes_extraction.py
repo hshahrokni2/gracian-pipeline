@@ -26,18 +26,19 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 # Import Note model (already exists)
 from gracian_pipeline.models.note import Note, NoteReference
 
-# These imports will fail initially (TDD red phase - that's expected!)
+# Import agents and detector (Day 2-3 implementations)
+from gracian_pipeline.core.enhanced_notes_detector import EnhancedNotesDetector
+from gracian_pipeline.agents.notes_agents import (
+    DepreciationNoteAgent,
+    MaintenanceNoteAgent,
+    TaxNoteAgent
+)
+
+# CrossReferenceLinker not yet implemented (Day 4)
 try:
-    from gracian_pipeline.core.enhanced_notes_detector import EnhancedNotesDetector
     from gracian_pipeline.core.cross_reference_linker import CrossReferenceLinker
-    from gracian_pipeline.agents.notes_agents import (
-        DepreciationNoteAgent,
-        MaintenanceNoteAgent,
-        TaxNoteAgent
-    )
 except ImportError:
-    # Expected to fail initially - modules don't exist yet
-    pass
+    CrossReferenceLinker = None  # Will be implemented in Day 4
 
 
 # ==============================================================================

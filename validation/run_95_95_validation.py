@@ -45,49 +45,93 @@ class ComprehensiveValidator:
 
     def count_extracted_fields(self, result: Dict[str, Any], path: str = "") -> int:
         """
-        Count how many data fields were actually extracted (have values).
+        Count how many DATA fields were actually extracted (have values).
+
+        EXCLUSIONS:
+        - Metadata fields (evidence_pages, confidence, source, etc.)
+        - Private fields (starting with _)
+        - Agent-level keys at depth 0 (just containers, not data)
 
         Args:
             result: Extraction result dictionary
             path: Current field path
 
         Returns:
-            Count of extracted fields
+            Count of extracted DATA fields only
         """
         count = 0
 
         if not isinstance(result, dict):
             return 0
 
+        # Comprehensive metadata exclusion list
+        METADATA_FIELDS = {
+            "confidence", "source", "evidence_pages", "extraction_method",
+            "model_used", "validation_status", "alternative_values",
+            "extraction_timestamp", "original_string", "quality_score",
+            "agent_name", "processing_time_ms", "tokens_used"
+        }
+
+        # Agent names (at depth 0, these are just containers)
+        AGENT_NAMES = {
+            "auditor_agent", "chairman_agent", "notes_depreciation_agent",
+            "financial_agent", "notes_maintenance_agent", "board_members_agent",
+            "notes_tax_agent", "property_agent", "events_agent", "energy_agent",
+            "audit_agent", "cashflow_agent", "loans_agent", "fees_agent",
+            "reserves_agent"
+        }
+
+        depth = len(path.split(".")) if path else 0
+
         for key, value in result.items():
-            # Skip metadata fields
-            if key in {"confidence", "source", "evidence_pages", "extraction_method",
-                      "model_used", "validation_status", "alternative_values",
-                      "extraction_timestamp", "original_string"}:
+            # EXCLUSION 1: Skip metadata fields
+            if key in METADATA_FIELDS:
+                continue
+
+            # EXCLUSION 2: Skip private fields (starting with _)
+            if key.startswith("_"):
+                continue
+
+            # EXCLUSION 3: Skip agent names at top level (depth 0)
+            # These are just containers, the actual data is inside
+            if depth == 0 and key in AGENT_NAMES:
+                # Don't count the agent name itself, but recurse into it
+                nested_count = self.count_extracted_fields(value, key)
+                if nested_count > 0:
+                    count += nested_count
                 continue
 
             field_path = f"{path}.{key}" if path else key
 
             # Check if field has a value
-            if value is not None:
-                # Handle ExtractionField objects (check if 'value' exists and is not None)
+            if value is not None and value != "" and value != [] and value != {}:
+                # CASE 1: ExtractionField object (has 'value' key)
                 if isinstance(value, dict) and "value" in value:
-                    if value["value"] is not None:
+                    if value["value"] is not None and value["value"] != "" and value["value"] != []:
+                        count += 1  # Count as 1 field (don't recurse into metadata)
+                    # Don't recurse - we already counted it
+
+                # CASE 2: List fields
+                elif isinstance(value, list) and len(value) > 0:
+                    # For lists of objects (board_members, loans), count each item's fields
+                    # For lists of primitives, count as 1 field
+                    if isinstance(value[0], dict):
+                        # List of objects: recursively count each item
+                        for i, item in enumerate(value):
+                            item_path = f"{field_path}[{i}]"
+                            item_count = self.count_extracted_fields(item, item_path)
+                            count += item_count
+                    else:
+                        # List of primitives: count as 1 field
                         count += 1
-                # Handle list fields
-                elif isinstance(value, list):
-                    if len(value) > 0:
-                        count += 1
-                        # Recursively count items in list
-                        for item in value:
-                            if isinstance(item, dict):
-                                count += self.count_extracted_fields(item, field_path)
-                # Handle nested objects
-                elif isinstance(value, dict):
+
+                # CASE 3: Nested objects (but NOT ExtractionField objects)
+                elif isinstance(value, dict) and "value" not in value:
                     nested_count = self.count_extracted_fields(value, field_path)
                     if nested_count > 0:
                         count += nested_count
-                # Handle primitive values
+
+                # CASE 4: Primitive values (str, int, float, bool)
                 else:
                     count += 1
 

@@ -25,6 +25,7 @@ from .sectionizer import sectionize_pdf
 from .schema_comprehensive import COMPREHENSIVE_TYPES, schema_comprehensive_prompt_block
 from ..prompts.agent_prompts import AGENT_PROMPTS
 from .llm_retry_wrapper import call_llm_with_retry, RetryConfig
+from .agent_confidence import add_confidence_to_result
 
 logger = logging.getLogger(__name__)
 
@@ -514,6 +515,20 @@ def extract_all_agents_parallel(
     )
 
     results["_metadata"] = metadata
+
+    # Step 8: Add confidence scores
+    if verbose:
+        print("\n📊 Step 6: Calculating confidence scores...")
+
+    results = add_confidence_to_result(results)
+
+    if verbose and "extraction_quality" in results:
+        confidence_score = results["extraction_quality"].get("confidence_score", 0)
+        high_conf = results["extraction_quality"].get("high_confidence_agents", 0)
+        low_conf = results["extraction_quality"].get("low_confidence_agents", 0)
+        print(f"   ✓ Overall confidence: {confidence_score:.1%}")
+        print(f"   ✓ High confidence agents: {high_conf}")
+        print(f"   ✓ Low confidence agents: {low_conf}")
 
     if verbose:
         print("\n" + "=" * 80)

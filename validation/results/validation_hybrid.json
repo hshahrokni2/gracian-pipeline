@@ -1,17 +1,17 @@
 {
   "pdf_type": "hybrid",
   "pdf_path": "/Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Gracian Pipeline/validation/test_pdfs/hybrid.pdf",
-  "extraction_timestamp": "2025-10-13T07:19:02.988236",
+  "extraction_timestamp": "2025-10-13T08:07:10.510355",
   "metrics": {
-    "extracted_fields": 105,
+    "extracted_fields": 42,
     "applicable_fields": 91,
     "total_schema_fields": 613,
-    "coverage_percent": 115.4,
-    "raw_coverage_percent": 17.1,
+    "coverage_percent": 46.2,
+    "raw_coverage_percent": 6.9,
     "coverage_target": 95.0,
-    "coverage_meets_target": true,
-    "confidence_score": 0.0,
-    "estimated_accuracy": 0.0
+    "coverage_meets_target": false,
+    "confidence_score": 0.305,
+    "estimated_accuracy": 30.5
   },
   "applicable_fields_detection": {
     "core_count": 91,
@@ -25,7 +25,7 @@
     }
   },
   "assessment": {
-    "meets_95_coverage": true,
+    "meets_95_coverage": false,
     "meets_95_accuracy": false,
     "ready_for_production": false
   }
