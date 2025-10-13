@@ -1,7 +1,7 @@
 
 # Schema V7.0 Quality Report - brf_198532.pdf
 
-**Date**: 2025-10-13 15:18:47
+**Date**: 2025-10-13 16:43:27
 
 ## 📊 Pipeline Extraction (optimal_brf_pipeline.py)
 
@@ -15,32 +15,40 @@
 ## 🇸🇪 Schema V7.0 Conversion
 
 - **Year**: 2025
-- **Swedish fields populated**: 1/10 (10.0%)
-- **English aliases synced**: 1/10 (100% - automatic)
+- **Swedish fields populated**: 9/19 (47.4%)
+- **English aliases synced**: 9/19 (100% - automatic)
 - **Data source**: "governance_agent, property_agent, financial_agent, revenue_breakdown_agent, operating_costs_agent, notes_accounting_agent, notes_other_agent, comprehensive_notes_agent"
 - **Extraction confidence**: 0.0%
 
 ### Populated Fields:
 
 - **nettoomsättning_tkr**: 7393591.0
+- **tillgångar_tkr**: 675294786.0
+- **skulder_tkr**: 115487111.0
+- **eget_kapital_tkr**: 559807676.0
+- **kostnader_tkr**: -6631400.0
+- **resultat_efter_finansiella_tkr**: -353810.0
+- **antal_lägenheter**: 94
+- **byggår**: 2015
+- **fastighet_beteckning**: Sonfjället 2
 
 
 ## ✅ Quality Metrics (schema_v7_validation.py)
 
 | Metric | Score | Status |
 |--------|-------|--------|
-| **Coverage** | 29.6% | ⚠️ |
+| **Coverage** | 55.8% | ⚠️ |
 | **Validation** | 0.0% | ⚠️ |
 | **Confidence** | 0.0% | ⚠️ |
 | **Evidence** | 0.0% | ⚠️ |
-| **Overall** | 8.9% | ⚠️ |
+| **Overall** | 16.7% | ⚠️ |
 
 ## 📈 Comparison
 
 | Metric | Pipeline | Schema V7 | Gap |
 |--------|----------|-----------|-----|
-| **Coverage** | 100.0% (agents) | 29.6% (fields) | 70.4% |
-| **Success Rate** | 100.0% | 8.9% | 91.1% |
+| **Coverage** | 100.0% (agents) | 55.8% (fields) | 44.2% |
+| **Success Rate** | 100.0% | 16.7% | 83.3% |
 
 ## 🎓 Insights
 
@@ -48,10 +56,9 @@
 ✅ Swedish-first pattern working - bidirectional sync automatic
 
 ### Issues Found:
-⚠️ Low field coverage (<50%) - many Swedish fields not populated
 ⚠️ No validation data - fields don't have validation_status set
 ⚠️ No confidence scores - pipeline doesn't track extraction confidence
-⚠️ Unmapped fields found: nomination_committee, equity, note_9_receivables, assets, apartments
+⚠️ Unmapped fields found: address, city, accounting_principles, valuation_methods, auditor_name
 
 ### Recommendations:
 ❌ **RECOMMEND**: Review schema design, may need refactoring

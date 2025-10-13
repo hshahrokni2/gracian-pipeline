@@ -31,38 +31,63 @@ from schema_v7_validation import (
 
 # Maps pipeline field names (English) → schema_v7 field names (Swedish)
 FIELD_MAPPING = {
-    # Revenue fields
+    # Revenue fields (raw totals)
     'annual_revenue': 'nettoomsättning_tkr',
     'net_revenue': 'nettoomsättning_tkr',
     'revenue': 'nettoomsättning_tkr',
     'total_revenue': 'nettoomsättning_tkr',
+    'nettoomsattning': 'nettoomsättning_tkr',  # Direct Swedish
+
+    # Raw financial totals (NEW in Phase 1)
+    'assets': 'tillgångar_tkr',
+    'total_assets': 'tillgångar_tkr',
+    'liabilities': 'skulder_tkr',
+    'total_liabilities': 'skulder_tkr',
+    'equity': 'eget_kapital_tkr',
+    'total_equity': 'eget_kapital_tkr',
+    'expenses': 'kostnader_tkr',
+    'total_expenses': 'kostnader_tkr',
+    'surplus': 'resultat_efter_finansiella_tkr',
 
     # Result fields
     'result_after_financial': 'resultat_efter_finansiella_tkr',
     'net_income': 'resultat_efter_finansiella_tkr',
 
-    # Equity ratio
+    # Property/building data (NEW in Phase 1)
+    'apartments': 'antal_lägenheter',
+    'number_of_apartments': 'antal_lägenheter',
+    'num_apartments': 'antal_lägenheter',
+    'built_year': 'byggår',
+    'year_built': 'byggår',
+    'construction_year': 'byggår',
+    'designation': 'fastighet_beteckning',
+    'property_designation': 'fastighet_beteckning',
+    'total_area_sqm': 'total_area_sqm',
+    'residential_area_sqm': 'boyta_sqm',
+    'boyta_sqm': 'boyta_sqm',
+
+    # Equity ratio (calculated metric)
     'equity_ratio': 'soliditet_procent',
     'solidarity': 'soliditet_procent',
     'solidarity_percent': 'soliditet_procent',
 
-    # Annual fees
+    # Annual fees (per-sqm metric)
     'annual_fee_per_sqm': 'årsavgift_per_kvm',
     'fee_per_sqm': 'årsavgift_per_kvm',
     'monthly_fee_per_sqm': 'årsavgift_per_kvm',  # Convert monthly → annual
 
-    # Debt
+    # Debt (per-sqm metrics)
     'debt_per_sqm': 'skuld_per_kvm_total',
     'debt_per_total_sqm': 'skuld_per_kvm_total',
     'debt_per_residential_sqm': 'skuld_per_kvm_boyta',
 
-    # Energy
+    # Energy (per-sqm metric)
     'energy_cost_per_sqm': 'energikostnad_per_kvm',
 
     # Interest sensitivity
     'interest_sensitivity': 'räntekänslighet_procent',
 
-    # Savings
+    # Savings (per-sqm metric)
     'savings_per_sqm': 'avsättning_per_kvm',
 
     # Fee percentage
@@ -278,10 +303,15 @@ def generate_comparison_report(
     successful_agents = sum(1 for r in agent_results.values() if r.get('status') == 'success')
     pipeline_coverage = successful_agents / total_agents if total_agents > 0 else 0.0
 
-    # Count schema v7 fields populated
+    # Count schema v7 fields populated (including NEW fields from Phase 1)
     swedish_fields = [
-        'nettoomsättning_tkr', 'resultat_efter_finansiella_tkr', 'soliditet_procent',
-        'årsavgift_per_kvm', 'skuld_per_kvm_total', 'skuld_per_kvm_boyta',
+        # Raw totals
+        'nettoomsättning_tkr', 'tillgångar_tkr', 'skulder_tkr', 'eget_kapital_tkr',
+        'kostnader_tkr', 'resultat_efter_finansiella_tkr',
+        # Property/building
+        'antal_lägenheter', 'byggår', 'fastighet_beteckning', 'total_area_sqm', 'boyta_sqm',
+        # Per-sqm metrics
+        'soliditet_procent', 'årsavgift_per_kvm', 'skuld_per_kvm_total', 'skuld_per_kvm_boyta',
         'räntekänslighet_procent', 'energikostnad_per_kvm', 'avsättning_per_kvm',
         'årsavgift_andel_intäkter_procent'
     ]

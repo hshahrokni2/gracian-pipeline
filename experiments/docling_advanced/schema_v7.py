@@ -176,8 +176,22 @@ class YearlyFinancialData(BaseModel):
     # ✅ NEW IN V7.0: Swedish-first fields with English aliases
     # These match Swedish BRF terminology exactly, with backward-compatible English aliases
 
+    # Raw totals (from source documents)
     nettoomsättning_tkr: Optional[float] = Field(None, description="Nettoomsättning (net revenue) in thousands SEK")
+    tillgångar_tkr: Optional[float] = Field(None, description="Tillgångar (total assets) in SEK")
+    skulder_tkr: Optional[float] = Field(None, description="Skulder (total liabilities) in SEK")
+    eget_kapital_tkr: Optional[float] = Field(None, description="Eget kapital (total equity) in SEK")
+    kostnader_tkr: Optional[float] = Field(None, description="Kostnader (total expenses) in SEK")
     resultat_efter_finansiella_tkr: Optional[float] = Field(None, description="Resultat efter finansiella poster (result after financial items) in thousands SEK")
+
+    # Building/property data (raw from source)
+    antal_lägenheter: Optional[int] = Field(None, description="Antal lägenheter (number of apartments)")
+    byggår: Optional[int] = Field(None, description="Byggår (built year)")
+    fastighet_beteckning: Optional[str] = Field(None, description="Fastighetsbeteckning (property designation)")
+    total_area_sqm: Optional[float] = Field(None, description="Total area in square meters")
+    boyta_sqm: Optional[float] = Field(None, description="Boyta (residential area) in square meters")
+
+    # Calculated per-sqm metrics (derived from raw totals)
     soliditet_procent: Optional[float] = Field(None, ge=0, le=100, description="Soliditet (equity ratio) in percent")
     årsavgift_per_kvm: Optional[float] = Field(None, description="Årsavgift (annual fee) per square meter")
     skuld_per_kvm_total: Optional[float] = Field(None, description="Skuld (debt) per square meter - total area")
@@ -188,8 +202,20 @@ class YearlyFinancialData(BaseModel):
     årsavgift_andel_intäkter_procent: Optional[float] = Field(None, ge=0, le=100, description="Årsavgift as percentage of total intäkter (revenue)")
 
     # English aliases (backward compatibility) - populated automatically by @model_validator
+    # Raw totals aliases
     net_revenue_tkr: Optional[float] = Field(None, description="[Alias] → nettoomsättning_tkr")
+    total_assets_tkr: Optional[float] = Field(None, description="[Alias] → tillgångar_tkr")
+    total_liabilities_tkr: Optional[float] = Field(None, description="[Alias] → skulder_tkr")
+    total_equity_tkr: Optional[float] = Field(None, description="[Alias] → eget_kapital_tkr")
+    total_expenses_tkr: Optional[float] = Field(None, description="[Alias] → kostnader_tkr")
     result_after_financial_tkr: Optional[float] = Field(None, description="[Alias] → resultat_efter_finansiella_tkr")
+
+    # Property/building aliases
+    number_of_apartments: Optional[int] = Field(None, description="[Alias] → antal_lägenheter")
+    built_year: Optional[int] = Field(None, description="[Alias] → byggår")
+    property_designation: Optional[str] = Field(None, description="[Alias] → fastighet_beteckning")
+
+    # Per-sqm metrics aliases
     solidarity_percent: Optional[float] = Field(None, description="[Alias] → soliditet_procent")
     annual_fee_per_kvm: Optional[float] = Field(None, description="[Alias] → årsavgift_per_kvm")
     debt_per_total_kvm: Optional[float] = Field(None, description="[Alias] → skuld_per_kvm_total")
@@ -218,8 +244,18 @@ class YearlyFinancialData(BaseModel):
         """
         # Define Swedish → English mappings
         field_pairs = [
+            # Raw totals
             ('nettoomsättning_tkr', 'net_revenue_tkr'),
+            ('tillgångar_tkr', 'total_assets_tkr'),
+            ('skulder_tkr', 'total_liabilities_tkr'),
+            ('eget_kapital_tkr', 'total_equity_tkr'),
+            ('kostnader_tkr', 'total_expenses_tkr'),
             ('resultat_efter_finansiella_tkr', 'result_after_financial_tkr'),
+            # Property/building data
+            ('antal_lägenheter', 'number_of_apartments'),
+            ('byggår', 'built_year'),
+            ('fastighet_beteckning', 'property_designation'),
+            # Per-sqm metrics
             ('soliditet_procent', 'solidarity_percent'),
             ('årsavgift_per_kvm', 'annual_fee_per_kvm'),
             ('skuld_per_kvm_total', 'debt_per_total_kvm'),
