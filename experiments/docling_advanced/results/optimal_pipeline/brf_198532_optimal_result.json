@@ -1,5 +1,5 @@
 {
-  "pdf": "/Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Gracian Pipeline/experiments/docling_advanced/../../SRS/brf_198532.pdf",
+  "pdf": "../../SRS/brf_198532.pdf",
   "topology": {
     "pdf_path": "../../SRS/brf_198532.pdf",
     "total_pages": 19,
@@ -20,77 +20,449 @@
   },
   "routing": {
     "main_sections": {
-      "governance_agent": 10,
-      "financial_agent": 6,
-      "property_agent": 3,
-      "operations_agent": 2,
+      "governance_agent": 12,
+      "financial_agent": 9,
+      "property_agent": 4,
+      "operations_agent": 3,
       "notes_collection": 1
     },
     "note_sections": {
       "notes_accounting_agent": 1,
       "notes_other_agent": 2
     },
-    "routing_time": 0.4625399112701416
+    "routing_time": 3.182924747467041
   },
   "agent_results": {
-    "property_agent": {
-      "agent_id": "property_agent",
-      "status": "error",
-      "error": "The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable",
-      "extraction_time": 19.202697038650513,
-      "evidence_pages": []
-    },
     "governance_agent": {
       "agent_id": "governance_agent",
-      "status": "error",
-      "error": "The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable",
-      "extraction_time": 19.254899263381958,
-      "evidence_pages": []
+      "status": "success",
+      "data": {
+        "chairman": "Elvy Maria Löfvenberg",
+        "board_members": [
+          "Torbjörn Andersson",
+          "Maria Annelie Eck Arvstrand",
+          "Mats Eskilson",
+          "Fredrik Linde",
+          "Lisa Lind (Suppleant)",
+          "Daniel Wetter (Suppleant)"
+        ],
+        "auditor_name": "Tobias Andersson",
+        "audit_firm": "KPMG AB",
+        "nomination_committee": [
+          "Victoria Blennborn (Sammankallande)",
+          "Mattias Lovén"
+        ],
+        "evidence_pages": [
+          1,
+          2,
+          17
+        ]
+      },
+      "section_headings": [
+        "Bostadsrättsföreningen Björk och Plaza",
+        "Förvaltningsberättelse",
+        "Föreningens ändamål",
+        "Grundfakta om föreningen",
+        "Styrelsen",
+        "Vid kommande ordinarie föreningsstämma löper mandatperioden ut för följande personer:",
+        "Revisorer",
+        "Valberedning",
+        "Föreningens ekonomi",
+        "Medlemsinformation",
+        "Stämmor",
+        "Väsentliga händelser under räkenskapsåret"
+      ],
+      "pages_rendered": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        14,
+        17,
+        19
+      ],
+      "num_images": 11,
+      "evidence_pages": [
+        1,
+        2,
+        17
+      ],
+      "extraction_time": 23.447247982025146,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 12740
+    },
+    "property_agent": {
+      "agent_id": "property_agent",
+      "status": "success",
+      "data": {
+        "designation": "Sonfjället 2",
+        "address": "",
+        "postal_code": "",
+        "city": "Stockholm",
+        "built_year": "2015",
+        "apartments": "94",
+        "energy_class": "",
+        "evidence_pages": [
+          2
+        ]
+      },
+      "section_headings": [
+        "Fastighetsfakta",
+        "Byggnadsår och ytor",
+        "Lägenheter och lokaler",
+        "Teknisk status"
+      ],
+      "pages_rendered": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        13
+      ],
+      "num_images": 9,
+      "evidence_pages": [
+        2
+      ],
+      "extraction_time": 67.38075423240662,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 10554
     },
     "financial_agent": {
       "agent_id": "financial_agent",
-      "status": "error",
-      "error": "The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable",
-      "extraction_time": 18.90786910057068,
-      "evidence_pages": []
+      "status": "success",
+      "data": {
+        "revenue": "7393591",
+        "expenses": "-6631400",
+        "assets": "675294786",
+        "liabilities": "115487111",
+        "equity": "559807676",
+        "surplus": "-353810",
+        "evidence_pages": [
+          6,
+          9,
+          10,
+          11,
+          13,
+          14
+        ]
+      },
+      "section_headings": [
+        "Flerårsöversikt",
+        "Förändringar eget kapital",
+        "Resultatdisposition",
+        "Resultaträkning",
+        "Balansräkning",
+        "Balansräkning",
+        "Årsredovisning",
+        "Fördelning av intäkter och kostnader",
+        "Skatter och avgifter"
+      ],
+      "pages_rendered": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15
+      ],
+      "num_images": 12,
+      "evidence_pages": [
+        6,
+        9,
+        10,
+        11,
+        13,
+        14
+      ],
+      "extraction_time": 18.269819736480713,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 14756
     },
     "revenue_breakdown_agent": {
       "agent_id": "revenue_breakdown_agent",
-      "status": "error",
-      "error": "The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable",
-      "extraction_time": 16.75360107421875,
-      "evidence_pages": []
+      "status": "success",
+      "data": {
+        "revenue_breakdown": {
+          "nettoomsattning": 7393591,
+          "arsavgifter": 0,
+          "hyresintakter": 0,
+          "bredband_kabel_tv": 0,
+          "andel_drift_gemensam": 0,
+          "andel_el_varme": 0,
+          "andel_vatten": 0,
+          "ovriga_rorelseintak": 57994,
+          "ranta_bankmedel": 190038,
+          "valutakursvinster": 0,
+          "summa_rorelseintakter": 7451585,
+          "summa_finansiella_intakter": 190038,
+          "summa_intakter": 7641623,
+          "revenue_2021": 7641623,
+          "evidence_pages": [
+            8
+          ]
+        }
+      },
+      "section_headings": [
+        "Flerårsöversikt",
+        "Förändringar eget kapital",
+        "Resultatdisposition",
+        "Resultaträkning",
+        "Balansräkning",
+        "Balansräkning",
+        "Årsredovisning",
+        "Fördelning av intäkter och kostnader",
+        "Skatter och avgifter"
+      ],
+      "pages_rendered": [
+        1,
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "num_images": 6,
+      "evidence_pages": [],
+      "extraction_time": 13.831922769546509,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 8825
     },
     "operating_costs_agent": {
       "agent_id": "operating_costs_agent",
-      "status": "error",
-      "error": "The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable",
-      "extraction_time": 17.79768705368042,
-      "evidence_pages": []
+      "status": "success",
+      "data": {
+        "operating_costs_breakdown": {
+          "fastighetsskott": -2834798,
+          "reparationer": 0,
+          "el": 0,
+          "varme": 0,
+          "vatten": 0,
+          "ovriga_externa_kostnader": -229331,
+          "evidence_pages": [
+            8
+          ]
+        }
+      },
+      "section_headings": [
+        "Flerårsöversikt",
+        "Förändringar eget kapital",
+        "Resultatdisposition",
+        "Resultaträkning",
+        "Balansräkning",
+        "Balansräkning",
+        "Årsredovisning",
+        "Fördelning av intäkter och kostnader",
+        "Skatter och avgifter"
+      ],
+      "pages_rendered": [
+        1,
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "num_images": 6,
+      "evidence_pages": [],
+      "extraction_time": 29.749094009399414,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 8857
     },
     "notes_accounting_agent": {
       "agent_id": "notes_accounting_agent",
-      "status": "error",
-      "error": "The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable",
-      "extraction_time": 17.806699991226196,
-      "evidence_pages": []
+      "status": "success",
+      "data": {
+        "accounting_principles": "Årsredovisningen har upprättats i enlighet med BFNAR 2016:10, Årsredovisning i mindre företag (K2).",
+        "valuation_methods": "Avskrivningar på anläggningstillgångar enligt plan baseras på ursprungliga anskaffningsvärdet och beräknad nyttjandeperiod. Byggnader skrivs av över 100 år.",
+        "revenue_recognition": "Förenklingsregeln gällande periodiseringar har tillämpats.",
+        "evidence_pages": [
+          11
+        ]
+      },
+      "section_headings": [
+        "Not 1 REDOVISNINGSPRINCIPER"
+      ],
+      "pages_rendered": [
+        4,
+        8,
+        10,
+        11,
+        12,
+        15
+      ],
+      "num_images": 6,
+      "evidence_pages": [
+        11
+      ],
+      "extraction_time": 10.414282321929932,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 8048
     },
     "notes_other_agent": {
       "agent_id": "notes_other_agent",
-      "status": "error",
-      "error": "The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable",
-      "extraction_time": 17.688451766967773,
-      "evidence_pages": []
+      "status": "success",
+      "data": {
+        "other_notes": {
+          "not_3": {
+            "extra_state_support": "0",
+            "insurance_compensation": "0",
+            "other_income": "57,994"
+          },
+          "not_14": {
+            "electricity_contract": "Bound for 3 years at 58.89 öre/kWh plus approximately 1.5 öre/kWh for hydropower.",
+            "new_supplier": "Fortum"
+          }
+        },
+        "evidence_pages": [
+          12,
+          16
+        ]
+      },
+      "section_headings": [
+        "Not 3 ÖVRIGA RÖRELSEINTÄKTER",
+        "Not 14 VÄSENTLIGA HÄNDELSER EFTER ÅRETS SLUT"
+      ],
+      "pages_rendered": [
+        1,
+        2,
+        5,
+        7,
+        11,
+        12,
+        13,
+        16,
+        17
+      ],
+      "num_images": 9,
+      "evidence_pages": [
+        12,
+        16
+      ],
+      "extraction_time": 81.262766122818,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 11651
+    },
+    "comprehensive_notes_agent": {
+      "agent_id": "comprehensive_notes_agent",
+      "status": "success",
+      "data": {
+        "note_8_buildings": {
+          "acquisition_value_2021": 682435875,
+          "accumulated_depreciation_2021": -15765114,
+          "book_value_2021": 666670761,
+          "land_value_included": 332100000,
+          "tax_value_total_2021": 389000000
+        },
+        "note_9_receivables": {
+          "tax_account": 192990,
+          "vat_settlement": 25293,
+          "client_funds": 3297711,
+          "receivables": 1911314,
+          "total": 5480408
+        },
+        "note_10_maintenance_fund": {
+          "beginning_2021": 800065,
+          "allocation_2021": 226590,
+          "end_2021": 1026655
+        },
+        "loans": [
+          {
+            "lender": "SEB",
+            "amount_2021": 30000000,
+            "interest_rate": 0.0057,
+            "maturity_date": "2024-09-28",
+            "amortization_free": true,
+            "loan_type": "Bundet",
+            "collateral": "Fastighetsinteckning",
+            "credit_facility_limit": 30000000,
+            "outstanding_amount": 30000000
+          },
+          {
+            "lender": "SEB",
+            "amount_2021": 30000000,
+            "interest_rate": 0.0059,
+            "maturity_date": "2023-09-28",
+            "amortization_free": true,
+            "loan_type": "Bundet",
+            "collateral": "Fastighetsinteckning",
+            "credit_facility_limit": 30000000,
+            "outstanding_amount": 30000000
+          },
+          {
+            "lender": "SEB",
+            "amount_2021": 28000000,
+            "interest_rate": 0.0142,
+            "maturity_date": "2022-09-28",
+            "amortization_free": true,
+            "loan_type": "Bundet",
+            "collateral": "Fastighetsinteckning",
+            "credit_facility_limit": 28000000,
+            "outstanding_amount": 28000000
+          },
+          {
+            "lender": "SEB",
+            "amount_2021": 25980000,
+            "interest_rate": 0.0236,
+            "maturity_date": "2025-09-28",
+            "amortization_free": true,
+            "loan_type": "Bundet",
+            "collateral": "Fastighetsinteckning",
+            "credit_facility_limit": 25980000,
+            "outstanding_amount": 25980000
+          }
+        ],
+        "note_4_operating_costs": {
+          "fastighetskostnader_total": 553590,
+          "reparationer_total": 258004,
+          "el": 698763,
+          "varme": 438246,
+          "vatten": 162487,
+          "evidence_pages": [
+            13
+          ]
+        }
+      },
+      "section_headings": [
+        "Noter (complete section)"
+      ],
+      "pages_rendered": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "num_images": 7,
+      "evidence_pages": [],
+      "extraction_time": 0,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 9942
     }
   },
   "quality_metrics": {
-    "coverage": 0.0,
+    "coverage": 1.0,
     "numeric_qc_pass": true,
-    "evidence_ratio": 0.0,
-    "overall_score": 0.0,
+    "evidence_ratio": 0.625,
+    "overall_score": 0.8125,
     "needs_coaching": true,
-    "validation_time": 8.821487426757812e-06
+    "validation_time": 2.09808349609375e-05
   },
-  "total_time": 109.31183004379272,
+  "total_time": 260.1801791191101,
   "total_cost": 0.0
 }

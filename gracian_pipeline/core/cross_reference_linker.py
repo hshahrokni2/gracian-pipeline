@@ -134,6 +134,79 @@ class CrossReferenceLinker:
         """
         return self._extract_references_from_text(text, source="unknown")
 
+    def extract_all_references(self, markdown: str) -> List[NoteReference]:
+        """
+        Extract ALL references from entire document (integration method).
+
+        Args:
+            markdown: Full document markdown
+
+        Returns:
+            List of all NoteReference objects found
+        """
+        return self._extract_references_from_text(markdown, source="document")
+
+    def link_cross_references(
+        self,
+        notes: List[Note],
+        markdown: str
+    ) -> List[Note]:
+        """
+        Link notes with their cross-references (integration method).
+
+        Updates notes' references_from and references_to lists.
+
+        Args:
+            notes: List of Note objects to link
+            markdown: Full document markdown
+
+        Returns:
+            List of Note objects with updated reference lists
+        """
+        # Try to split markdown into sections
+        # Simple heuristic: look for RESULTATRÄKNING and BALANSRÄKNING
+        balance_sheet_text = ""
+        income_statement_text = ""
+
+        if "BALANSRÄKNING" in markdown.upper():
+            # Find balance sheet section
+            bs_start = markdown.upper().find("BALANSRÄKNING")
+            bs_end = markdown.upper().find("NOTER", bs_start)
+            if bs_end == -1:
+                bs_end = len(markdown)
+            balance_sheet_text = markdown[bs_start:bs_end]
+
+        if "RESULTATRÄKNING" in markdown.upper():
+            # Find income statement section
+            is_start = markdown.upper().find("RESULTATRÄKNING")
+            is_end = markdown.upper().find("BALANSRÄKNING", is_start)
+            if is_end == -1:
+                is_end = markdown.upper().find("NOTER", is_start)
+            if is_end == -1:
+                is_end = len(markdown)
+            income_statement_text = markdown[is_start:is_end]
+
+        # Extract references from each section
+        bs_refs = self.extract_balance_sheet_references(balance_sheet_text) if balance_sheet_text else []
+        is_refs = self.extract_income_statement_references(income_statement_text) if income_statement_text else []
+
+        # Build map of note number → references pointing to it
+        refs_by_target: Dict[str, List[str]] = {}
+        for ref in bs_refs:
+            refs_by_target.setdefault(ref.note_number, []).append("balance_sheet")
+        for ref in is_refs:
+            refs_by_target.setdefault(ref.note_number, []).append("income_statement")
+
+        # Update each note's references_from list
+        for note in notes:
+            note.references_from = list(set(refs_by_target.get(note.number, [])))
+
+            # Extract references FROM this note TO other notes
+            note_refs = self.extract_note_references(note.content, source_note=note.number)
+            note.references_to = [ref.note_number for ref in note_refs]
+
+        return notes
+
     # === Phase 2: Graph Building ===
 
     def build_reference_graph(

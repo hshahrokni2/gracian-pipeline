@@ -28,15 +28,16 @@ class EnhancedNotesDetector:
     def __init__(self):
         """Initialize with all Swedish BRF note patterns (Step 3)."""
         # Compile patterns in order of specificity (most specific first)
+        # IMPORTANT: Use ^ to match only at start of line (not inline references)
         self.note_patterns = [
             # Pattern 1: "Not till punkt X" (most specific)
-            (re.compile(r'Not\s+till\s+punkt\s+(\d+)', re.IGNORECASE), 'note_to_point'),
+            (re.compile(r'^\s*Not\s+till\s+punkt\s+(\d+)', re.IGNORECASE), 'note_to_point'),
 
             # Pattern 2: Standard "Not X" or "NOTE X" (E is optional)
-            (re.compile(r'NOTE?\s+(\d+)', re.IGNORECASE), 'standard'),
+            (re.compile(r'^\s*NOTE?\s+(\d+)', re.IGNORECASE), 'standard'),
 
             # Pattern 3: "Tillägg X" (supplement)
-            (re.compile(r'Tillägg\s+(\d+)', re.IGNORECASE), 'supplement'),
+            (re.compile(r'^\s*Tillägg\s+(\d+)', re.IGNORECASE), 'supplement'),
         ]
 
         # Patterns for reference extraction (in parentheses or inline)
@@ -65,6 +66,11 @@ class EnhancedNotesDetector:
         lines = markdown.split('\n')
 
         for i, line in enumerate(lines):
+            # Skip if line contains a parenthesized reference like "(Not 1)"
+            # These are NOT note headers, they are references
+            if re.search(r'\(\s*Not\s+\d+\s*\)', line, re.IGNORECASE):
+                continue
+
             # Check for continuation marker first (Step 4)
             continuation_match = re.search(r'Not\s+(\d+)\s*\(forts\.?\)', line, re.IGNORECASE)
             if continuation_match:
