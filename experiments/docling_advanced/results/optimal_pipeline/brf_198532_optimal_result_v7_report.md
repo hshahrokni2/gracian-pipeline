@@ -1,7 +1,7 @@
 
 # Schema V7.0 Quality Report - brf_198532.pdf
 
-**Date**: 2025-10-13 17:00:24
+**Date**: 2025-10-13 17:01:48
 
 ## 📊 Pipeline Extraction (optimal_brf_pipeline.py)
 
@@ -15,8 +15,8 @@
 ## 🇸🇪 Schema V7.0 Conversion
 
 - **Year**: 2025
-- **Swedish fields populated**: 11/21 (52.4%)
-- **English aliases synced**: 11/21 (100% - automatic)
+- **Swedish fields populated**: 12/21 (57.1%)
+- **English aliases synced**: 12/21 (100% - automatic)
 - **Data source**: "governance_agent, property_agent, financial_agent, revenue_breakdown_agent, operating_costs_agent, notes_accounting_agent, notes_other_agent, comprehensive_notes_agent"
 - **Extraction confidence**: 0.0%
 
@@ -33,24 +33,25 @@
 - **fastighet_beteckning**: Sonfjället 2
 - **adress**: 
 - **stad**: Stockholm
+- **soliditet_procent**: 82.9
 
 
 ## ✅ Quality Metrics (schema_v7_validation.py)
 
 | Metric | Score | Status |
 |--------|-------|--------|
-| **Coverage** | 59.6% | ⚠️ |
+| **Coverage** | 61.7% | ⚠️ |
 | **Validation** | 0.0% | ⚠️ |
 | **Confidence** | 0.0% | ⚠️ |
 | **Evidence** | 0.0% | ⚠️ |
-| **Overall** | 17.9% | ⚠️ |
+| **Overall** | 18.5% | ⚠️ |
 
 ## 📈 Comparison
 
 | Metric | Pipeline | Schema V7 | Gap |
 |--------|----------|-----------|-----|
-| **Coverage** | 100.0% (agents) | 59.6% (fields) | 40.4% |
-| **Success Rate** | 100.0% | 17.9% | 82.1% |
+| **Coverage** | 100.0% (agents) | 61.7% (fields) | 38.3% |
+| **Success Rate** | 100.0% | 18.5% | 81.5% |
 
 ## 🎓 Insights
 
@@ -60,7 +61,7 @@
 ### Issues Found:
 ⚠️ No validation data - fields don't have validation_status set
 ⚠️ No confidence scores - pipeline doesn't track extraction confidence
-⚠️ Unmapped fields found: loans, other_notes, nomination_committee, auditor_name, chairman
+⚠️ Unmapped fields found: other_notes, operating_costs_breakdown, nomination_committee, auditor_name, accounting_principles
 
 ### Recommendations:
 ❌ **RECOMMEND**: Review schema design, may need refactoring

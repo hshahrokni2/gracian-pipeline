@@ -152,6 +152,36 @@ def map_to_swedish_fields(data: Dict[str, Any]) -> Dict[str, Any]:
     return mapped
 
 
+def calculate_derived_metrics(year_data: YearlyFinancialData) -> YearlyFinancialData:
+    """
+    Calculate derived metrics from raw totals (Option 1 feature).
+
+    Calculates:
+    - soliditet_procent: (eget_kapital / tillgångar) * 100
+    - skuld_per_kvm_total: skulder / total_area_sqm
+    - skuld_per_kvm_boyta: skulder / boyta_sqm
+
+    Args:
+        year_data: YearlyFinancialData with raw fields populated
+
+    Returns:
+        YearlyFinancialData with calculated metrics added
+    """
+    # Calculate equity ratio (soliditet) if both equity and assets are available
+    if year_data.eget_kapital_tkr and year_data.tillgångar_tkr and year_data.tillgångar_tkr > 0:
+        year_data.soliditet_procent = round((year_data.eget_kapital_tkr / year_data.tillgångar_tkr) * 100, 1)
+
+    # Calculate debt per sqm (total area) if both debt and area are available
+    if year_data.skulder_tkr and year_data.total_area_sqm and year_data.total_area_sqm > 0:
+        year_data.skuld_per_kvm_total = round(year_data.skulder_tkr / year_data.total_area_sqm, 0)
+
+    # Calculate debt per sqm (residential area) if both debt and boyta are available
+    if year_data.skulder_tkr and year_data.boyta_sqm and year_data.boyta_sqm > 0:
+        year_data.skuld_per_kvm_boyta = round(year_data.skulder_tkr / year_data.boyta_sqm, 0)
+
+    return year_data
+
+
 def extract_financial_year(
     agent_results: Dict[str, Dict],
     year: int
@@ -200,6 +230,9 @@ def extract_financial_year(
         data_source=", ".join(data_sources),
         extraction_confidence=avg_confidence
     )
+
+    # Calculate derived metrics (Option 1 feature)
+    year_data = calculate_derived_metrics(year_data)
 
     return year_data
 
