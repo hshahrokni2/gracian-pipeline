@@ -1,0 +1,19 @@
+{
+  "pdf_type": "scanned",
+  "pdf_path": "/Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Gracian Pipeline/validation/test_pdfs/scanned.pdf",
+  "extraction_timestamp": "2025-10-13T06:44:20.637405",
+  "metrics": {
+    "extracted_fields": 99,
+    "total_possible_fields": 613,
+    "coverage_percent": 16.2,
+    "coverage_target": 95.0,
+    "coverage_meets_target": false,
+    "confidence_score": 0.0,
+    "estimated_accuracy": 0.0
+  },
+  "assessment": {
+    "meets_95_coverage": false,
+    "meets_95_accuracy": false,
+    "ready_for_production": false
+  }
+}
