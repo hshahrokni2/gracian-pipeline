@@ -26,6 +26,7 @@ from .schema_comprehensive import COMPREHENSIVE_TYPES, schema_comprehensive_prom
 from ..prompts.agent_prompts import AGENT_PROMPTS
 from .llm_retry_wrapper import call_llm_with_retry, RetryConfig
 from .agent_confidence import add_confidence_to_result
+from .path_b_integration import is_path_b_agent, extract_with_path_b_agent
 
 logger = logging.getLogger(__name__)
 
@@ -41,10 +42,13 @@ def extract_single_agent(
     tables: List[Dict],
     page_numbers: List[int],
     client: OpenAI,
-    timeout: int = 30
+    timeout: int = 30,
+    markdown: str = None  # Added for Path B integration
 ) -> Tuple[Dict[str, Any], Dict[str, Any]]:
     """
     Extract data for a single agent with timeout and retry.
+
+    INTEGRATION: Routes note agents to Path B implementation for enhanced extraction.
 
     Args:
         agent_id: Agent identifier (e.g., "governance_agent")
@@ -54,6 +58,7 @@ def extract_single_agent(
         page_numbers: Page numbers this agent should focus on
         client: OpenAI client instance
         timeout: Maximum seconds for API call
+        markdown: Full document markdown (for Path B note detection)
 
     Returns:
         (result_dict, metadata_dict)
@@ -63,6 +68,15 @@ def extract_single_agent(
     Never raises exceptions - always returns valid structure.
     """
     start_time = time.time()
+
+    # ✨ PATH B INTEGRATION: Route note agents to Path B implementation
+    if is_path_b_agent(agent_id) and markdown:
+        try:
+            logger.info(f"🎯 Routing {agent_id} to Path B (TDD production-grade agent)")
+            return extract_with_path_b_agent(agent_id, markdown, tables, page_numbers)
+        except Exception as e:
+            logger.warning(f"Path B extraction failed for {agent_id}: {e}, falling back to Option A")
+            # Fall through to Option A extraction
 
     try:
         # Format tables for this agent (max 3 tables to reduce context)
@@ -422,7 +436,7 @@ def extract_all_agents_parallel(
         total_chars = sum(len(ctx["context"]) for ctx in agent_contexts.values())
         print(f"   ✓ Built contexts for {len(agent_contexts)} agents ({total_chars:,} total chars)")
 
-    # Step 4: Prepare agent tasks
+    # Step 4: Prepare agent tasks (with markdown for Path B integration)
     agent_tasks = []
     for agent_id, agent_prompt in AGENT_PROMPTS.items():
         context_data = agent_contexts.get(agent_id, {})
@@ -432,7 +446,8 @@ def extract_all_agents_parallel(
             "document_context": context_data.get("context", ""),
             "tables": context_data.get("tables", []),
             "page_numbers": context_data.get("pages", []),
-            "client": client
+            "client": client,
+            "markdown": markdown  # ✨ Added for Path B integration
         })
 
     # Step 5: Execute in parallel
