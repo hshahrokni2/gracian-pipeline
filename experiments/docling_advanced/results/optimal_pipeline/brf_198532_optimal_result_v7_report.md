@@ -1,55 +1,57 @@
 
 # Schema V7.0 Quality Report - brf_198532.pdf
 
-**Date**: 2025-10-13 12:37:54
+**Date**: 2025-10-13 15:18:47
 
 ## 📊 Pipeline Extraction (optimal_brf_pipeline.py)
 
-- **Status**: ❌ failed
+- **Status**: ✅ success
 - **Sections detected**: 44
-- **Agents run**: 7
-- **Agent success rate**: 0.0% (0/7)
-- **Total time**: 109.3s
+- **Agents run**: 8
+- **Agent success rate**: 100.0% (8/8)
+- **Total time**: 260.2s
 - **Total cost**: $0.00
 
 ## 🇸🇪 Schema V7.0 Conversion
 
 - **Year**: 2025
-- **Swedish fields populated**: 0/10 (0.0%)
-- **English aliases synced**: 0/10 (100% - automatic)
-- **Data source**: "unknown"
+- **Swedish fields populated**: 1/10 (10.0%)
+- **English aliases synced**: 1/10 (100% - automatic)
+- **Data source**: "governance_agent, property_agent, financial_agent, revenue_breakdown_agent, operating_costs_agent, notes_accounting_agent, notes_other_agent, comprehensive_notes_agent"
 - **Extraction confidence**: 0.0%
 
 ### Populated Fields:
 
+- **nettoomsättning_tkr**: 7393591.0
 
 
 ## ✅ Quality Metrics (schema_v7_validation.py)
 
 | Metric | Score | Status |
 |--------|-------|--------|
-| **Coverage** | 22.2% | ⚠️ |
+| **Coverage** | 29.6% | ⚠️ |
 | **Validation** | 0.0% | ⚠️ |
 | **Confidence** | 0.0% | ⚠️ |
 | **Evidence** | 0.0% | ⚠️ |
-| **Overall** | 6.7% | ⚠️ |
+| **Overall** | 8.9% | ⚠️ |
 
 ## 📈 Comparison
 
 | Metric | Pipeline | Schema V7 | Gap |
 |--------|----------|-----------|-----|
-| **Coverage** | 0.0% (agents) | 22.2% (fields) | 22.2% |
-| **Success Rate** | 0.0% | 6.7% | 6.7% |
+| **Coverage** | 100.0% (agents) | 29.6% (fields) | 70.4% |
+| **Success Rate** | 100.0% | 8.9% | 91.1% |
 
 ## 🎓 Insights
 
 ### What Worked:
-⚠️ Limited validation - need more extraction data
+✅ Swedish-first pattern working - bidirectional sync automatic
 
 ### Issues Found:
 ⚠️ Low field coverage (<50%) - many Swedish fields not populated
 ⚠️ No validation data - fields don't have validation_status set
 ⚠️ No confidence scores - pipeline doesn't track extraction confidence
+⚠️ Unmapped fields found: nomination_committee, equity, note_9_receivables, assets, apartments
 
 ### Recommendations:
 ❌ **RECOMMEND**: Review schema design, may need refactoring
