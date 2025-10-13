@@ -307,13 +307,14 @@ def generate_comparison_report(
     successful_agents = sum(1 for r in agent_results.values() if r.get('status') == 'success')
     pipeline_coverage = successful_agents / total_agents if total_agents > 0 else 0.0
 
-    # Count schema v7 fields populated (including NEW fields from Phase 1)
+    # Count schema v7 fields populated (including NEW fields from Phase 1 + Option 2)
     swedish_fields = [
         # Raw totals
         'nettoomsättning_tkr', 'tillgångar_tkr', 'skulder_tkr', 'eget_kapital_tkr',
         'kostnader_tkr', 'resultat_efter_finansiella_tkr',
         # Property/building
         'antal_lägenheter', 'byggår', 'fastighet_beteckning', 'total_area_sqm', 'boyta_sqm',
+        'adress', 'stad',
         # Per-sqm metrics
         'soliditet_procent', 'årsavgift_per_kvm', 'skuld_per_kvm_total', 'skuld_per_kvm_boyta',
         'räntekänslighet_procent', 'energikostnad_per_kvm', 'avsättning_per_kvm',

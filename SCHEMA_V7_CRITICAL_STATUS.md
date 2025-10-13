@@ -1,8 +1,8 @@
 # 🎯 Schema V7.0 - Critical Status & Path Forward
 
-**Last Updated**: October 13, 2025 16:45 PST
+**Last Updated**: October 13, 2025 17:00 PST
 **Location**: Root Gracian Pipeline directory (NEVER FORGET THIS FILE)
-**Status**: ✅ **PHASE 1-3 COMPLETE** - 🎉 **521% COVERAGE IMPROVEMENT!**
+**Status**: ✅ **PHASE 1-3 + OPTION 2 COMPLETE** - 🎉 **59.6% COVERAGE ACHIEVED!**
 
 ---
 
@@ -40,7 +40,21 @@
 
 **Improvement:** 🚀 **521% increase** in field coverage (8.9% → 55.8%)!
 
-**9 fields now successfully extracted:**
+### **✅ Option 2 Complete** (Oct 13, 17:00 PST)
+
+**Added 2 new location fields:**
+- `adress` (Swedish) / `address` (English)
+- `stad` (Swedish) / `city` (English)
+
+**Updated Results** (after Option 2):
+- Swedish fields populated: **11/21 (52.4%)**
+- Coverage: **59.6%** (up from 55.8%)
+- Improvement: +3.8 percentage points
+
+**New field extracted:**
+10. ✅ stad: Stockholm (NEW!)
+
+**9 fields from Phase 1-3:**
 1. ✅ nettoomsättning_tkr: 7,393,591 SEK
 2. ✅ tillgångar_tkr: 675,294,786 SEK (NEW!)
 3. ✅ skulder_tkr: 115,487,111 SEK (NEW!)
