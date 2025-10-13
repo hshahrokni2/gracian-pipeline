@@ -1,5 +1,5 @@
 {
-  "pdf": "../../data/raw_pdfs/Hjorthagen/brf_268882.pdf",
+  "pdf": "/Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Gracian Pipeline/experiments/docling_advanced/test_pdfs/brf_268882.pdf",
   "topology": {
     "pdf_path": "../../data/raw_pdfs/Hjorthagen/brf_268882.pdf",
     "total_pages": 28,
@@ -33,275 +33,88 @@
       "notes_tax_agent": 1,
       "notes_loans_agent": 1
     },
-    "routing_time": 1.5067729949951172
+    "routing_time": 1.271894931793213
   },
   "agent_results": {
     "property_agent": {
       "agent_id": "property_agent",
-      "status": "success",
-      "data": {
-        "designation": "Hagelbössan 1",
-        "address": "Artemisgatan 3A, 3B, 5A, 5B och 7",
-        "postal_code": "113 51",
-        "city": "Stockholm",
-        "built_year": "1965",
-        "apartments": "38",
-        "energy_class": "",
-        "evidence_pages": [
-          4
-        ]
-      },
-      "section_headings": [
-        "Fastigheten",
-        "Byggnadsår och ytor"
-      ],
-      "pages_rendered": [
-        4,
-        5,
-        6
-      ],
-      "num_images": 3,
-      "evidence_pages": [
-        4
-      ],
-      "extraction_time": 8.598350048065186,
-      "model": "gpt-4o-2024-11-20",
-      "tokens_used": 3899
+      "status": "error",
+      "error": "The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable",
+      "extraction_time": 18.56658172607422,
+      "evidence_pages": []
     },
     "governance_agent": {
       "agent_id": "governance_agent",
-      "status": "success",
-      "data": {
-        "chairman": "Ulf Dahlqvist",
-        "board_members": [
-          "Anna Bernhardina Dolonius Bensalah",
-          "Cindy Tuliao Sarceda",
-          "Eugénie Bardin",
-          "Hanna Jansson",
-          "Pieter Gruyters",
-          "Sjurður Eldevig"
-        ],
-        "auditor_name": "Mats Lehtipalo",
-        "audit_firm": "ADECO Revisorer",
-        "nomination_committee": [
-          "Peter Brandt",
-          "Per Fernqvist"
-        ],
-        "evidence_pages": [
-          4,
-          5
-        ]
-      },
-      "section_headings": [
-        "Förvaltningsberättelse",
-        "Giltighet",
-        "Förvaltningsberättelse",
-        "Registreringsdatum",
-        "Äkta förening",
-        "Styrelsens sammansättning",
-        "Revisorer",
-        "Medlemsinformation"
-      ],
-      "pages_rendered": [
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ],
-      "num_images": 6,
-      "evidence_pages": [
-        4,
-        5
-      ],
-      "extraction_time": 12.386417150497437,
-      "model": "gpt-4o-2024-11-20",
-      "tokens_used": 7116
+      "status": "error",
+      "error": "The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable",
+      "extraction_time": 19.037687063217163,
+      "evidence_pages": []
     },
     "financial_agent": {
       "agent_id": "financial_agent",
-      "status": "success",
-      "data": {
-        "revenue": "2204019",
-        "expenses": "-1745964",
-        "assets": "66814325",
-        "liabilities": "20042314",
-        "equity": "46872029",
-        "surplus": "-175526",
-        "evidence_pages": [
-          9,
-          10,
-          11
-        ]
-      },
-      "section_headings": [
-        "Resultaträkning",
-        "Balansräkning",
-        "Kassaflödesanalys",
-        "Ekonomi",
-        "Flerårsöversikt",
-        "Upplysning vid förlust",
-        "Förändringar i eget kapital",
-        "Resultatdisposition",
-        "Resultaträkning",
-        "Balansräkning",
-        "Balansräkning",
-        "Kassaflödesanalys"
-      ],
-      "pages_rendered": [
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11
-      ],
-      "num_images": 9,
-      "evidence_pages": [
-        9,
-        10,
-        11
-      ],
-      "extraction_time": 14.680661916732788,
-      "model": "gpt-4o-2024-11-20",
-      "tokens_used": 11328
+      "status": "error",
+      "error": "The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable",
+      "extraction_time": 18.529769897460938,
+      "evidence_pages": []
+    },
+    "revenue_breakdown_agent": {
+      "agent_id": "revenue_breakdown_agent",
+      "status": "error",
+      "error": "The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable",
+      "extraction_time": 18.187081813812256,
+      "evidence_pages": []
+    },
+    "operating_costs_agent": {
+      "agent_id": "operating_costs_agent",
+      "status": "error",
+      "error": "The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable",
+      "extraction_time": 18.53156089782715,
+      "evidence_pages": []
     },
     "notes_accounting_agent": {
       "agent_id": "notes_accounting_agent",
-      "status": "success",
-      "data": {
-        "accounting_principles": "Årsredovisningen har upprättats enligt Årsredovisningslagen och Bokföringsnämndens allmänna råd 2016:10 (K2), årsredovisning i mindre företag och 2023:1, kompletterande upplysningar m.m. i bostadsrättsföreningars årsredovisningar.",
-        "valuation_methods": "Materiella anläggningstillgångar redovisas till anskaffningsvärde minskat med avskrivningar. Byggnader och inventarier skrivs av linjärt över den bedömda ekonomiska livslängden. Avskrivningstiden grundar sig på bedömd ekonomisk livslängd av tillgången. Markvärdet är inte föremål för avskrivning. Bestående värdenedgång hanteras genom nedskrivning. Finansiella anläggningstillgångar värderas till anskaffningsvärde, eller det lägre värdet vid balansdagen.",
-        "revenue_recognition": "Intäkter bokförs i den period de avser oavsett när betalning eller avisering skett. I årsavgiften ingår kostnader för bredband, kabel-tv, vatten och värme.",
-        "evidence_pages": [
-          13
-        ]
-      },
-      "section_headings": [
-        "NOT 1 REDOVISNINGS- OCH VÄRDERINGSPRINCIPER"
-      ],
-      "pages_rendered": [
-        13,
-        14
-      ],
-      "num_images": 2,
-      "evidence_pages": [
-        13
-      ],
-      "extraction_time": 46.70836091041565,
-      "model": "gpt-4o-2024-11-20",
-      "tokens_used": 3645
+      "status": "error",
+      "error": "The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable",
+      "extraction_time": 17.27926802635193,
+      "evidence_pages": []
     },
     "notes_receivables_agent": {
       "agent_id": "notes_receivables_agent",
-      "status": "success",
-      "data": {
-        "current_receivables": "",
-        "long_term_receivables": "",
-        "allowances": "",
-        "evidence_pages": []
-      },
-      "section_headings": [
-        "Omsättningstillgångar"
-      ],
-      "pages_rendered": [
-        13,
-        14
-      ],
-      "num_images": 2,
-      "evidence_pages": [],
-      "extraction_time": 5.1931798458099365,
-      "model": "gpt-4o-2024-11-20",
-      "tokens_used": 3799
+      "status": "error",
+      "error": "The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable",
+      "extraction_time": 16.70135498046875,
+      "evidence_pages": []
     },
     "notes_reserves_agent": {
       "agent_id": "notes_reserves_agent",
-      "status": "success",
-      "data": {
-        "reserve_fund": "",
-        "annual_contribution": "",
-        "fund_purpose": "Reservering till föreningens fond för yttre underhåll ingår i styrelsens förslag till resultatdisposition. Efter att beslut tagits på föreningsstämma sker överföring från balanserat resultat till fond för yttre underhåll och redovisas som bundet eget kapital.",
-        "evidence_pages": [
-          13
-        ]
-      },
-      "section_headings": [
-        "Föreningens fond för yttre underhåll"
-      ],
-      "pages_rendered": [
-        13,
-        14
-      ],
-      "num_images": 2,
-      "evidence_pages": [
-        13
-      ],
-      "extraction_time": 6.08921217918396,
-      "model": "gpt-4o-2024-11-20",
-      "tokens_used": 4034
+      "status": "error",
+      "error": "The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable",
+      "extraction_time": 17.531166791915894,
+      "evidence_pages": []
     },
     "notes_tax_agent": {
       "agent_id": "notes_tax_agent",
-      "status": "success",
-      "data": {
-        "current_tax": "",
-        "deferred_tax": "",
-        "tax_policy": "Fastighetsavgiften för hyreshus är 1 589 kr per bostadslägenhet, dock blir avgiften högst 0,30 % av taxeringsvärdet för bostadshus med tillhörande tomtmark.",
-        "evidence_pages": [
-          13
-        ]
-      },
-      "section_headings": [
-        "Skatter och avgifter"
-      ],
-      "pages_rendered": [
-        13,
-        14
-      ],
-      "num_images": 2,
-      "evidence_pages": [
-        13
-      ],
-      "extraction_time": 26.697525024414062,
-      "model": "gpt-4o-2024-11-20",
-      "tokens_used": 4243
+      "status": "error",
+      "error": "The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable",
+      "extraction_time": 16.755257844924927,
+      "evidence_pages": []
     },
     "notes_loans_agent": {
       "agent_id": "notes_loans_agent",
-      "status": "success",
-      "data": {
-        "outstanding_loans": "",
-        "interest_rate": "",
-        "amortization": "",
-        "loan_terms": "",
-        "evidence_pages": []
-      },
-      "section_headings": [
-        "Fastighetslån"
-      ],
-      "pages_rendered": [
-        13,
-        14
-      ],
-      "num_images": 2,
-      "evidence_pages": [],
-      "extraction_time": 3.969136953353882,
-      "model": "gpt-4o-2024-11-20",
-      "tokens_used": 4425
+      "status": "error",
+      "error": "The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable",
+      "extraction_time": 16.88098931312561,
+      "evidence_pages": []
     }
   },
   "quality_metrics": {
-    "coverage": 1.0,
+    "coverage": 0.0,
     "numeric_qc_pass": true,
-    "evidence_ratio": 0.75,
-    "overall_score": 0.875,
+    "evidence_ratio": 0.0,
+    "overall_score": 0.0,
     "needs_coaching": true,
-    "validation_time": 1.0013580322265625e-05
+    "validation_time": 3.3855438232421875e-05
   },
-  "total_time": 117.23489189147949,
+  "total_time": 160.71063780784607,
   "total_cost": 0.0
 }

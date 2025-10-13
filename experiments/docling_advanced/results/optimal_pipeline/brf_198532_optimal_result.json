@@ -30,56 +30,56 @@
       "notes_accounting_agent": 1,
       "notes_other_agent": 2
     },
-    "routing_time": 0.35332202911376953
+    "routing_time": 0.4625399112701416
   },
   "agent_results": {
     "property_agent": {
       "agent_id": "property_agent",
       "status": "error",
       "error": "The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable",
-      "extraction_time": 17.570168256759644,
+      "extraction_time": 19.202697038650513,
       "evidence_pages": []
     },
     "governance_agent": {
       "agent_id": "governance_agent",
       "status": "error",
       "error": "The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable",
-      "extraction_time": 18.85876989364624,
+      "extraction_time": 19.254899263381958,
       "evidence_pages": []
     },
     "financial_agent": {
       "agent_id": "financial_agent",
       "status": "error",
       "error": "The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable",
-      "extraction_time": 17.67492699623108,
+      "extraction_time": 18.90786910057068,
       "evidence_pages": []
     },
     "revenue_breakdown_agent": {
       "agent_id": "revenue_breakdown_agent",
       "status": "error",
       "error": "The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable",
-      "extraction_time": 17.147340059280396,
+      "extraction_time": 16.75360107421875,
       "evidence_pages": []
     },
     "operating_costs_agent": {
       "agent_id": "operating_costs_agent",
       "status": "error",
       "error": "The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable",
-      "extraction_time": 17.138753652572632,
+      "extraction_time": 17.79768705368042,
       "evidence_pages": []
     },
     "notes_accounting_agent": {
       "agent_id": "notes_accounting_agent",
       "status": "error",
       "error": "The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable",
-      "extraction_time": 17.3440420627594,
+      "extraction_time": 17.806699991226196,
       "evidence_pages": []
     },
     "notes_other_agent": {
       "agent_id": "notes_other_agent",
       "status": "error",
       "error": "The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable",
-      "extraction_time": 17.92150378227234,
+      "extraction_time": 17.688451766967773,
       "evidence_pages": []
     }
   },
@@ -89,8 +89,8 @@
     "evidence_ratio": 0.0,
     "overall_score": 0.0,
     "needs_coaching": true,
-    "validation_time": 5.9604644775390625e-06
+    "validation_time": 8.821487426757812e-06
   },
-  "total_time": 106.94868183135986,
+  "total_time": 109.31183004379272,
   "total_cost": 0.0
 }

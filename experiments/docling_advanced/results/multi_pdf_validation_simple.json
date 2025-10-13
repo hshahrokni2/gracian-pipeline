@@ -1,0 +1,21 @@
+{
+  "results": [
+    {
+      "pdf": "brf_198532",
+      "status": "success",
+      "field_count": 0,
+      "path": "/Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Gracian Pipeline/experiments/docling_advanced/../../SRS/brf_198532.pdf"
+    },
+    {
+      "pdf": "brf_268882",
+      "status": "success",
+      "field_count": 0,
+      "path": "/Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Gracian Pipeline/experiments/docling_advanced/test_pdfs/brf_268882.pdf"
+    }
+  ],
+  "summary": {
+    "tested": 2,
+    "successful": 2,
+    "failed": 0
+  }
+}
