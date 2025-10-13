@@ -65,6 +65,10 @@ FIELD_MAPPING = {
     'total_area_sqm': 'total_area_sqm',
     'residential_area_sqm': 'boyta_sqm',
     'boyta_sqm': 'boyta_sqm',
+    'address': 'adress',
+    'street_address': 'adress',
+    'city': 'stad',
+    'town': 'stad',
 
     # Equity ratio (calculated metric)
     'equity_ratio': 'soliditet_procent',

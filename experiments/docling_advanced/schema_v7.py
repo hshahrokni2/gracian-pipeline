@@ -190,6 +190,8 @@ class YearlyFinancialData(BaseModel):
     fastighet_beteckning: Optional[str] = Field(None, description="Fastighetsbeteckning (property designation)")
     total_area_sqm: Optional[float] = Field(None, description="Total area in square meters")
     boyta_sqm: Optional[float] = Field(None, description="Boyta (residential area) in square meters")
+    adress: Optional[str] = Field(None, description="Adress (street address)")
+    stad: Optional[str] = Field(None, description="Stad (city)")
 
     # Calculated per-sqm metrics (derived from raw totals)
     soliditet_procent: Optional[float] = Field(None, ge=0, le=100, description="Soliditet (equity ratio) in percent")
@@ -214,6 +216,8 @@ class YearlyFinancialData(BaseModel):
     number_of_apartments: Optional[int] = Field(None, description="[Alias] → antal_lägenheter")
     built_year: Optional[int] = Field(None, description="[Alias] → byggår")
     property_designation: Optional[str] = Field(None, description="[Alias] → fastighet_beteckning")
+    address: Optional[str] = Field(None, description="[Alias] → adress")
+    city: Optional[str] = Field(None, description="[Alias] → stad")
 
     # Per-sqm metrics aliases
     solidarity_percent: Optional[float] = Field(None, description="[Alias] → soliditet_procent")
@@ -255,6 +259,8 @@ class YearlyFinancialData(BaseModel):
             ('antal_lägenheter', 'number_of_apartments'),
             ('byggår', 'built_year'),
             ('fastighet_beteckning', 'property_designation'),
+            ('adress', 'address'),
+            ('stad', 'city'),
             # Per-sqm metrics
             ('soliditet_procent', 'solidarity_percent'),
             ('årsavgift_per_kvm', 'annual_fee_per_kvm'),
