@@ -1,15 +1,38 @@
 # Gracian Pipeline - Claude Code Quick Reference
 
+## 🎯 **ULTIMATE GOAL: 95/95 FOR 27,000 HETEROGENEOUS PDFs**
+
+**Mission**: Extract structured data from 27,000 Swedish BRF annual reports with **95% coverage** (29/30 fields) AND **95% accuracy** (29/30 correct).
+
+**Current Status** (Oct 13, 2025):
+- **Phase 1**: ✅ **COMPLETE** - 90% baseline (27/30 fields), formal 30-field standard established
+- **Phase 2**: 🔄 **IN PROGRESS** - Extract +2 fields to reach 95% coverage
+- **Phase 3**: ⏳ **PENDING** - Validate 95% accuracy on populated fields
+- **Phase 4**: ⏳ **PENDING** - Multi-PDF consistency testing (10-50-500-27000 PDFs)
+
+**Tools & Architecture**:
+- **Docling** (IBM): Structure detection, OCR, table extraction from PDFs
+- **GPT-4o**: LLM-based extraction with specialized agent prompts
+- **YAML**: 30-field ground truth configuration with validation rules
+- **Python**: validate_30_fields.py (comprehensive validation with balance checks)
+- **Git**: docling-driven-gracian-pipeline branch, ~150 commits
+
+**Latest Files** (experiments/docling_advanced/):
+- `config/ground_truth_30_fields.yaml` (327 lines) - Formal field standard
+- `code/validate_30_fields.py` (326 lines) - Validation engine
+- `BASELINE_30FIELD_VALIDATION.md` (489 lines) - Phase 1 results
+- `SESSION_SUMMARY_PHASE1_COMPLETE.md` (474 lines) - Session summary
+
+---
+
 ## 🚀 Quick Start (First Thing After Context Loss)
 
 ```
-🎉 SPRINT 1+2 TARGET ACHIEVED! 78.4% coverage (Oct 12 PM)
+Read experiments/docling_advanced/SESSION_SUMMARY_PHASE1_COMPLETE.md for Phase 1 results!
+Read experiments/docling_advanced/BASELINE_30FIELD_VALIDATION.md for detailed baseline!
 
-Read experiments/docling_advanced/DAY4_COMPLETE_SPRINT1_2.md for Sprint 1+2 results!
-Read experiments/docling_advanced/FINAL_SESSION_REPORT_2025_10_12.md for Branch B achievements!
-
-Sprint 1+2: 78.4% coverage (29/37 fields) - EXCEEDS 75% target!
-Branch B: 86.7% coverage, 92% accuracy - PRODUCTION READY!
+Phase 1 (Oct 13): 90% baseline (27/30 fields) - Formal validation system complete!
+Gap to 95%: +2 fields needed (address + energy_class recommended)
 ```
 
 ---
