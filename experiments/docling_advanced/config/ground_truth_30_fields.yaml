@@ -14,14 +14,14 @@ fields:
   # GOVERNANCE (5 fields)
   governance:
     chairman:
-      path: "governance_agent.data.chairman"
+      path: "agent_results.governance_agent.data.chairman"
       type: string
       required: true
       description: "Chairman name (Ordförande)"
       swedish_terms: ["Ordförande", "Styrelsens ordförande"]
 
     board_members:
-      path: "governance_agent.data.board_members"
+      path: "agent_results.governance_agent.data.board_members"
       type: array
       required: true
       description: "Board members list including deputies"
@@ -29,20 +29,20 @@ fields:
       swedish_terms: ["Styrelseledamöter", "Ledamöter", "Suppleanter"]
 
     auditor_name:
-      path: "governance_agent.data.auditor_name"
+      path: "agent_results.governance_agent.data.auditor_name"
       type: string
       required: true
       description: "Auditor name"
       swedish_terms: ["Revisor", "Auktoriserad revisor"]
 
     audit_firm:
-      path: "governance_agent.data.audit_firm"
+      path: "agent_results.governance_agent.data.audit_firm"
       type: string
       required: false
       description: "Audit firm name (e.g., KPMG, PwC)"
 
     nomination_committee:
-      path: "governance_agent.data.nomination_committee"
+      path: "agent_results.governance_agent.data.nomination_committee"
       type: array
       required: false
       description: "Nomination committee members"
@@ -51,42 +51,42 @@ fields:
   # PROPERTY (6 fields)
   property:
     designation:
-      path: "property_agent.data.designation"
+      path: "agent_results.property_agent.data.designation"
       type: string
       required: true
       description: "Property designation (Fastighetsbeteckning)"
       swedish_terms: ["Fastighetsbeteckning", "Beteckning"]
 
     address:
-      path: "property_agent.data.address"
+      path: "agent_results.property_agent.data.address"
       type: string
       required: false  # Often missing
       description: "Street address"
       swedish_terms: ["Adress", "Gatuadress", "Postadress"]
 
     city:
-      path: "property_agent.data.city"
+      path: "agent_results.property_agent.data.city"
       type: string
       required: true
       description: "City/municipality"
       swedish_terms: ["Stad", "Kommun", "Ort"]
 
     built_year:
-      path: "property_agent.data.built_year"
+      path: "agent_results.property_agent.data.built_year"
       type: integer
       required: true
       description: "Building year"
       swedish_terms: ["Byggår", "Byggnadsår", "Färdigställt"]
 
     apartments:
-      path: "property_agent.data.apartments"
+      path: "agent_results.property_agent.data.apartments"
       type: integer
       required: true
       description: "Number of apartments"
       swedish_terms: ["Antal lägenheter", "Lägenheter"]
 
     energy_class:
-      path: "property_agent.data.energy_class"
+      path: "agent_results.property_agent.data.energy_class"
       type: string
       required: false  # Often missing
       description: "Energy class (A-G)"
@@ -95,21 +95,21 @@ fields:
   # FINANCIAL (6 fields - core balance sheet/income statement)
   financial:
     revenue:
-      path: "financial_agent.data.revenue"
+      path: "agent_results.financial_agent.data.revenue"
       type: numeric
       required: true
       description: "Total revenue (Intäkter)"
       swedish_terms: ["Intäkter", "Nettoomsättning"]
 
     expenses:
-      path: "financial_agent.data.expenses"
+      path: "agent_results.financial_agent.data.expenses"
       type: numeric
       required: true
       description: "Total expenses (Kostnader)"
       swedish_terms: ["Kostnader", "Rörelsekostnader"]
 
     assets:
-      path: "financial_agent.data.assets"
+      path: "agent_results.financial_agent.data.assets"
       type: numeric
       required: true
       description: "Total assets (Tillgångar)"
@@ -120,21 +120,21 @@ fields:
           tolerance: 0.01  # 1% tolerance
 
     liabilities:
-      path: "financial_agent.data.liabilities"
+      path: "agent_results.financial_agent.data.liabilities"
       type: numeric
       required: true
       description: "Total liabilities (Skulder)"
       swedish_terms: ["Skulder", "Summa skulder"]
 
     equity:
-      path: "financial_agent.data.equity"
+      path: "agent_results.financial_agent.data.equity"
       type: numeric
       required: true
       description: "Total equity (Eget kapital)"
       swedish_terms: ["Eget kapital", "Summa eget kapital"]
 
     surplus:
-      path: "financial_agent.data.surplus"
+      path: "agent_results.financial_agent.data.surplus"
       type: numeric
       required: true
       description: "Net result (Resultat)"
@@ -143,7 +143,7 @@ fields:
   # DETAILED FINANCIALS (2 fields - breakdown structures)
   detailed_financials:
     revenue_breakdown:
-      path: "revenue_breakdown_agent.data.revenue_breakdown"
+      path: "agent_results.revenue_breakdown_agent.data.revenue_breakdown"
       type: object
       required: true
       description: "Detailed revenue breakdown"
@@ -155,7 +155,7 @@ fields:
         - summa_rorelseintakter
 
     operating_costs_breakdown:
-      path: "operating_costs_agent.data.operating_costs_breakdown"
+      path: "agent_results.operating_costs_agent.data.operating_costs_breakdown"
       type: object
       required: true
       description: "Detailed operating costs breakdown"
@@ -168,28 +168,28 @@ fields:
   # OPERATIONS (4 fields - NEW with operations_agent fix!)
   operations:
     maintenance_summary:
-      path: "operations_agent.data.maintenance_summary"
+      path: "agent_results.operations_agent.data.maintenance_summary"
       type: string
       required: false  # Not all PDFs have detailed maintenance plans
       description: "Maintenance plan summary"
       swedish_terms: ["Underhållsplan", "Underhåll", "Planerat underhåll"]
 
     energy_usage:
-      path: "operations_agent.data.energy_usage"
+      path: "agent_results.operations_agent.data.energy_usage"
       type: string
       required: false
       description: "Energy usage summary (electricity, heating, water)"
       swedish_terms: ["Elkostnad", "Värmekostnad", "Energiförbrukning"]
 
     insurance:
-      path: "operations_agent.data.insurance"
+      path: "agent_results.operations_agent.data.insurance"
       type: string
       required: false
       description: "Insurance information"
       swedish_terms: ["Försäkring", "Fastighetsförsäkring"]
 
     contracts:
-      path: "operations_agent.data.contracts"
+      path: "agent_results.operations_agent.data.contracts"
       type: string
       required: false
       description: "Key contracts summary"
@@ -198,14 +198,14 @@ fields:
   # NOTES (7 fields - detailed accounting notes)
   notes:
     accounting_principles:
-      path: "notes_accounting_agent.data.accounting_principles"
+      path: "agent_results.notes_accounting_agent.data.accounting_principles"
       type: string
       required: true
       description: "Accounting principles (K2/K3)"
       swedish_terms: ["Redovisningsprinciper", "BFNAR", "K2", "K3"]
 
     loans:
-      path: "comprehensive_notes_agent.data.loans"
+      path: "agent_results.comprehensive_notes_agent.data.loans"
       type: array
       required: true
       description: "Loan details array"
@@ -218,7 +218,7 @@ fields:
       swedish_terms: ["Fastighetslån", "Låneskulder", "Kreditinstitut"]
 
     buildings:
-      path: "comprehensive_notes_agent.data.note_8_buildings"
+      path: "agent_results.comprehensive_notes_agent.data.note_8_buildings"
       type: object
       required: true
       description: "Buildings and land note"
@@ -229,7 +229,7 @@ fields:
       swedish_terms: ["Byggnader och mark", "Not 8", "Avskrivningar"]
 
     receivables:
-      path: "comprehensive_notes_agent.data.note_9_receivables"
+      path: "agent_results.comprehensive_notes_agent.data.note_9_receivables"
       type: object
       required: false
       description: "Receivables note"
@@ -239,7 +239,7 @@ fields:
       swedish_terms: ["Fordringar", "Not 9", "Kundfordringar"]
 
     maintenance_fund:
-      path: "comprehensive_notes_agent.data.note_10_maintenance_fund"
+      path: "agent_results.comprehensive_notes_agent.data.note_10_maintenance_fund"
       type: object
       required: false
       description: "Maintenance fund note"
@@ -250,14 +250,14 @@ fields:
       swedish_terms: ["Fond för yttre underhåll", "Not 10", "Underhållsfond"]
 
     tax_info:
-      path: "notes_tax_agent.data"
+      path: "agent_results.notes_tax_agent.data"
       type: object
       required: false  # Not all PDFs have detailed tax notes
       description: "Tax information note"
       swedish_terms: ["Skatter", "Inkomstskatt", "Not 11", "Not 12"]
 
     other_notes:
-      path: "notes_other_agent.data.other_notes"
+      path: "agent_results.notes_other_agent.data.other_notes"
       type: object
       required: false
       description: "Other miscellaneous notes"

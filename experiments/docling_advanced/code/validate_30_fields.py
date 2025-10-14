@@ -97,7 +97,7 @@ class GroundTruth30Validator:
                 extracted = True
 
         # Determine priority
-        priority = "P2"
+        priority = "P2 OPTIONAL"  # Default for fields not in priority lists
         for p, fields in self.config.get('priority', {}).items():
             if field_name in fields:
                 priority = p.replace('_', ' ').upper()
@@ -117,9 +117,9 @@ class GroundTruth30Validator:
         """
         Check if assets = liabilities + equity (within tolerance).
         """
-        assets = self._get_nested_value(extraction_data, "financial_agent.data.assets")
-        liabilities = self._get_nested_value(extraction_data, "financial_agent.data.liabilities")
-        equity = self._get_nested_value(extraction_data, "financial_agent.data.equity")
+        assets = self._get_nested_value(extraction_data, "agent_results.financial_agent.data.assets")
+        liabilities = self._get_nested_value(extraction_data, "agent_results.financial_agent.data.liabilities")
+        equity = self._get_nested_value(extraction_data, "agent_results.financial_agent.data.equity")
 
         if not all([assets, liabilities, equity]):
             return False
