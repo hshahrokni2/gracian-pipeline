@@ -67,6 +67,10 @@ class AgentConfidenceCalculator:
         Returns:
             Float between 0.0 and 1.0
         """
+        # Handle None result (agent failed to extract)
+        if agent_result is None:
+            return 0.0
+
         # Factor 1: Evidence quality (0-0.3)
         evidence_score = self._calculate_evidence_score(agent_result)
 
@@ -249,6 +253,9 @@ class AgentConfidenceCalculator:
             # Skip non-agent fields
             if not agent_name.endswith("_agent"):
                 continue
+
+            # Skip None results (failed agents) - will get 0.0 confidence
+            # Note: calculate_agent_confidence handles None, but we document it here
 
             # Calculate confidence
             confidence = self.calculate_agent_confidence(agent_name, agent_result)

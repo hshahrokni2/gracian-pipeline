@@ -1,0 +1,68 @@
+[
+  {
+    "field_name": "depreciation_method",
+    "swedish_term": "Linjär avskrivning tillämpas över nyttjandeperiode",
+    "context_keywords": [
+      "linjär",
+      "avskrivning",
+      "tillämpas",
+      "nyttjandeperioden"
+    ],
+    "success_count": 3,
+    "failure_count": 0,
+    "confidence_avg": 0.85,
+    "reliability": 1.0
+  },
+  {
+    "field_name": "depreciation_method",
+    "swedish_term": "Text containing avskrivning in Swedish",
+    "context_keywords": [
+      "containing",
+      "avskrivning",
+      "swedish"
+    ],
+    "success_count": 3,
+    "failure_count": 0,
+    "confidence_avg": 0.85,
+    "reliability": 1.0
+  },
+  {
+    "field_name": "depreciation_method",
+    "swedish_term": "Text containing avskrivningar in Swedish",
+    "context_keywords": [
+      "containing",
+      "avskrivningar",
+      "swedish"
+    ],
+    "success_count": 3,
+    "failure_count": 0,
+    "confidence_avg": 0.85,
+    "reliability": 1.0
+  },
+  {
+    "field_name": "depreciation_method",
+    "swedish_term": "Text containing avskrivningsmetod in Swedish",
+    "context_keywords": [
+      "containing",
+      "avskrivningsmetod",
+      "swedish"
+    ],
+    "success_count": 3,
+    "failure_count": 0,
+    "confidence_avg": 0.85,
+    "reliability": 1.0
+  },
+  {
+    "field_name": "depreciation_method",
+    "swedish_term": "Text containing avskrivet in Swedish",
+    "context_keywords": [
+      "containing",
+      "avskrivet",
+      "swedish"
+    ],
+    "success_count": 3,
+    "failure_count": 0,
+    "confidence_avg": 0.85,
+    "reliability": 1.0
+  }
+]

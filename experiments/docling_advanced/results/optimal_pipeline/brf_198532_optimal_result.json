@@ -30,7 +30,7 @@
       "notes_accounting_agent": 1,
       "notes_other_agent": 2
     },
-    "routing_time": 3.514105796813965
+    "routing_time": 3.4749948978424072
   },
   "agent_results": {
     "property_agent": {
@@ -45,7 +45,8 @@
         "apartments": "94",
         "energy_class": "",
         "evidence_pages": [
-          2
+          2,
+          6
         ]
       },
       "section_headings": [
@@ -67,11 +68,12 @@
       ],
       "num_images": 9,
       "evidence_pages": [
-        2
+        2,
+        6
       ],
-      "extraction_time": 16.138482093811035,
+      "extraction_time": 15.167829990386963,
       "model": "gpt-4o-2024-11-20",
-      "tokens_used": 10554
+      "tokens_used": 10557
     },
     "governance_agent": {
       "agent_id": "governance_agent",
@@ -131,7 +133,7 @@
         2,
         17
       ],
-      "extraction_time": 122.5308108329773,
+      "extraction_time": 21.38234305381775,
       "model": "gpt-4o-2024-11-20",
       "tokens_used": 12740
     },
@@ -188,9 +190,9 @@
         13,
         14
       ],
-      "extraction_time": 54925.517614126205,
+      "extraction_time": 19.681329011917114,
       "model": "gpt-4o-2024-11-20",
-      "tokens_used": 14756
+      "tokens_used": 14764
     },
     "revenue_breakdown_agent": {
       "agent_id": "revenue_breakdown_agent",
@@ -237,9 +239,9 @@
       ],
       "num_images": 6,
       "evidence_pages": [],
-      "extraction_time": 12.577830076217651,
+      "extraction_time": 11.015292167663574,
       "model": "gpt-4o-2024-11-20",
-      "tokens_used": 8824
+      "tokens_used": 8832
     },
     "operating_costs_agent": {
       "agent_id": "operating_costs_agent",
@@ -278,21 +280,22 @@
       ],
       "num_images": 6,
       "evidence_pages": [],
-      "extraction_time": 16.480518102645874,
+      "extraction_time": 12.60846996307373,
       "model": "gpt-4o-2024-11-20",
-      "tokens_used": 8857
+      "tokens_used": 8865
     },
     "operations_agent": {
       "agent_id": "operations_agent",
       "status": "success",
       "data": {
         "maintenance_summary": "Föreningen följer en underhållsplan som sträcker sig mellan åren 2018 och 2043. Planerat underhåll inkluderar behandling av trädäck (genomfört 2022/23) och behandling av träfasad (planerat för 2023).",
-        "energy_usage": "Elkostnad: 698,763 SEK, Värmekostnad: 438,246 SEK, Vattenkostnad: 162,487 SEK (2021).",
+        "energy_usage": "Elkostnad/m²: 87 kr, Värmekostnad/m²: 55 kr, Vattenkostnad/m²: 20 kr (2021).",
         "insurance": "Fastighetsförsäkring hanteras av Brandkontoret.",
-        "contracts": "Ekonomisk förvaltning: SBC AB och SBC Betaltjänster AB, Teknisk förvaltning: Etcon Fastighetsteknik AB, Bredband/TV/Telefoni: Ownit Broadband AB, Hissar: Kone, Städning: JC Miljöstäd AB, Elenergi: Ellevio, Fjärrvärme: Stockholm Exergi, Vatten och avlopp: Stockholm Vatten och Avfall AB.",
+        "contracts": "Ekonomisk förvaltning: SBC AB och SBC Betaltjänster AB, Teknisk förvaltning: Etcon Fastighetsteknik AB, Bredband/TV/Telefoni: Ownit Broadband AB, Hissar: Kone, Städning: JC Miljöstäd AB, Elenergi: Energiförsäljning Sverige, Fjärrvärme: Stockholm Exergi, Vatten och avlopp: Stockholm Vatten och Avfall AB.",
         "evidence_pages": [
           1,
           3,
+          6,
           13
         ]
       },
@@ -313,11 +316,12 @@
       "evidence_pages": [
         1,
         3,
+        6,
         13
       ],
-      "extraction_time": 13.642403841018677,
+      "extraction_time": 17.817421913146973,
       "model": "gpt-4o-2024-11-20",
-      "tokens_used": 7794
+      "tokens_used": 7809
     },
     "notes_accounting_agent": {
       "agent_id": "notes_accounting_agent",
@@ -325,7 +329,7 @@
       "data": {
         "accounting_principles": "Årsredovisningen har upprättats i enlighet med BFNAR 2016:10, Årsredovisning i mindre företag (K2).",
         "valuation_methods": "Avskrivningar på anläggningstillgångar enligt plan baseras på ursprungliga anskaffningsvärdet och beräknad nyttjandeperiod. Byggnader skrivs av över 100 år.",
-        "revenue_recognition": "Förenklingsregeln gällande periodiseringar har tillämpats.",
+        "revenue_recognition": "",
         "evidence_pages": [
           11
         ]
@@ -345,9 +349,9 @@
       "evidence_pages": [
         11
       ],
-      "extraction_time": 77.50068926811218,
+      "extraction_time": 12.357599020004272,
       "model": "gpt-4o-2024-11-20",
-      "tokens_used": 8048
+      "tokens_used": 8039
     },
     "notes_other_agent": {
       "agent_id": "notes_other_agent",
@@ -389,9 +393,9 @@
         12,
         16
       ],
-      "extraction_time": 670.0557560920715,
+      "extraction_time": 18.349504947662354,
       "model": "gpt-4o-2024-11-20",
-      "tokens_used": 11652
+      "tokens_used": 11643
     },
     "comprehensive_notes_agent": {
       "agent_id": "comprehensive_notes_agent",
@@ -471,6 +475,16 @@
           "evidence_pages": [
             13
           ]
+        },
+        "tax_info": {
+          "current_tax_2021": 0,
+          "deferred_tax_2021": 0,
+          "tax_rate": 0.206,
+          "tax_base": 0,
+          "tax_policy_summary": "Ingen skatt redovisad för året.",
+          "evidence_pages": [
+            16
+          ]
         }
       },
       "section_headings": [
@@ -489,7 +503,7 @@
       "evidence_pages": [],
       "extraction_time": 0,
       "model": "gpt-4o-2024-11-20",
-      "tokens_used": 9942
+      "tokens_used": 10493
     }
   },
   "quality_metrics": {
@@ -498,8 +512,8 @@
     "evidence_ratio": 0.6666666666666666,
     "overall_score": 0.8333333333333333,
     "needs_coaching": true,
-    "validation_time": 3.0040740966796875e-05
+    "validation_time": 7.605552673339844e-05
   },
-  "total_time": 55862.78989315033,
+  "total_time": 149.8898150920868,
   "total_cost": 0.0
 }

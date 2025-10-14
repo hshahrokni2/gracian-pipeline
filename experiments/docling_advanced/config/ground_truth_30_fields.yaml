@@ -250,10 +250,13 @@ fields:
       swedish_terms: ["Fond för yttre underhåll", "Not 10", "Underhållsfond"]
 
     tax_info:
-      path: "agent_results.notes_tax_agent.data"
+      path: "agent_results.comprehensive_notes_agent.data.tax_info"
       type: object
       required: false  # Not all PDFs have detailed tax notes
       description: "Tax information note"
+      key_subfields:
+        - current_tax_2021
+        - tax_rate
       swedish_terms: ["Skatter", "Inkomstskatt", "Not 11", "Not 12"]
 
     other_notes:

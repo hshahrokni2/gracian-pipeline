@@ -1,0 +1,28 @@
+{
+  "avskrivning": [
+    {
+      "canonical_term": "avskrivning",
+      "variant": "avskrivning",
+      "document_count": 6,
+      "confidence_avg": 0.85
+    },
+    {
+      "canonical_term": "avskrivning",
+      "variant": "in",
+      "document_count": 12,
+      "confidence_avg": 0.8499999999999998
+    },
+    {
+      "canonical_term": "avskrivning",
+      "variant": "avskrivningar",
+      "document_count": 3,
+      "confidence_avg": 0.85
+    },
+    {
+      "canonical_term": "avskrivning",
+      "variant": "avskrivningsmetod",
+      "document_count": 3,
+      "confidence_avg": 0.85
+    }
+  ]
+}

@@ -71,3 +71,10 @@ data/raw_pdfs/outputs/summary.json
 mass_scan_*_checkpoint_*.json
 scan_progress.db
 test_p1_retry.py
+
+# Experimental/child folders (separate projects with own indexing)
+experiments/docling_advanced/
+experiments/
+validation/
+.claude-code-project-index-tool/
+.claude-code-docs-tool/

@@ -10,26 +10,24 @@
       7,
       14
     ],
-    "analysis_time": 0.0556337833404541
+    "analysis_time": 0.0644381046295166
   },
   "structure": {
     "num_sections": 9,
     "method": "ocr",
-    "cached": false,
-    "extraction_time": 41.63050389289856
+    "cached": true,
+    "extraction_time": 46.71938490867615
   },
   "routing": {
     "main_sections": {
-      "governance_agent": 3,
-      "financial_agent": 0,
+      "governance_agent": 4,
+      "financial_agent": 2,
       "property_agent": 0,
       "operations_agent": 0,
       "notes_collection": 0
     },
-    "note_sections": {
-      "notes_other_agent": 3
-    },
-    "routing_time": 1.655268907546997
+    "note_sections": {},
+    "routing_time": 1.9619030952453613
   },
   "agent_results": {
     "governance_agent": {
@@ -56,42 +54,160 @@
       "section_headings": [
         "Varsågod! Här är din förenings årsredovisning",
         "En välskött bostadsrättsförening",
-        "Utbildning i styrelsearbete"
+        "Utbildning i styrelsearbete",
+        "1. Förvaltningsberättelsen"
       ],
       "pages_rendered": [
         2,
         3,
-        4
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
       ],
-      "num_images": 3,
+      "num_images": 12,
       "evidence_pages": [
         3
       ],
-      "extraction_time": 7.421047210693359,
+      "extraction_time": 34.25299024581909,
       "model": "gpt-4o-2024-11-20",
-      "tokens_used": 3736
+      "tokens_used": 13758
     },
-    "notes_other_agent": {
-      "agent_id": "notes_other_agent",
+    "financial_agent": {
+      "agent_id": "financial_agent",
       "status": "success",
       "data": {
-        "other_notes": "",
-        "evidence_pages": []
+        "revenue": "1962495",
+        "expenses": "-2694411",
+        "assets": "79762090",
+        "liabilities": "7560739",
+        "equity": "72211351",
+        "surplus": "-832411",
+        "evidence_pages": [
+          9,
+          10,
+          11
+        ]
       },
       "section_headings": [
-        "1. Förvaltningsberättelsen",
         "2. Resultaträkningen",
         "3. Balansräkningen"
       ],
       "pages_rendered": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        20,
+        21,
+        22,
+        23
+      ],
+      "num_images": 10,
+      "evidence_pages": [
+        9,
+        10,
+        11
+      ],
+      "extraction_time": 17.323616981506348,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 12123
+    },
+    "revenue_breakdown_agent": {
+      "agent_id": "revenue_breakdown_agent",
+      "status": "success",
+      "data": {
+        "revenue_breakdown": {
+          "nettoomsattning": 1960577,
+          "arsavgifter": 1585800,
+          "hyresintakter": 365035,
+          "bredband_kabel_tv": 1140,
+          "andel_drift_gemensam": 0,
+          "andel_el_varme": 0,
+          "andel_vatten": 0,
+          "ovriga_rorelseintak": 1918,
+          "ranta_bankmedel": 334,
+          "valutakursvinster": 0,
+          "summa_rorelseintakter": 1962495,
+          "summa_finansiella_intakter": 334,
+          "summa_intakter": 1962495,
+          "revenue_2021": 1962495,
+          "evidence_pages": [
+            9,
+            10
+          ]
+        }
+      },
+      "section_headings": [
+        "2. Resultaträkningen",
+        "3. Balansräkningen"
+      ],
+      "pages_rendered": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
         20,
         21
       ],
-      "num_images": 2,
+      "num_images": 10,
       "evidence_pages": [],
-      "extraction_time": 2.9649746417999268,
+      "extraction_time": 83.39210510253906,
       "model": "gpt-4o-2024-11-20",
-      "tokens_used": 2741
+      "tokens_used": 12872
+    },
+    "operating_costs_agent": {
+      "agent_id": "operating_costs_agent",
+      "status": "success",
+      "data": {
+        "operating_costs_breakdown": {
+          "fastighetsskott": -194799,
+          "reparationer": -598627,
+          "el": -53775,
+          "varme": -564782,
+          "vatten": -82327,
+          "ovriga_externa_kostnader": -146997,
+          "evidence_pages": [
+            9,
+            13
+          ]
+        }
+      },
+      "section_headings": [
+        "2. Resultaträkningen",
+        "3. Balansräkningen"
+      ],
+      "pages_rendered": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        20,
+        21
+      ],
+      "num_images": 10,
+      "evidence_pages": [],
+      "extraction_time": 21.72382688522339,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 12905
     }
   },
   "quality_metrics": {
@@ -100,8 +216,8 @@
     "evidence_ratio": 0.5,
     "overall_score": 0.75,
     "needs_coaching": true,
-    "validation_time": 4.76837158203125e-06
+    "validation_time": 1.2874603271484375e-05
   },
-  "total_time": 53.73666310310364,
+  "total_time": 158.6685390472412,
   "total_cost": 0.0
 }

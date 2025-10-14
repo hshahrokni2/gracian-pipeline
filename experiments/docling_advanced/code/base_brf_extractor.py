@@ -193,6 +193,44 @@ PARSING INSTRUCTIONS:
   }
 }
 
+6. **Not 11/Not 12 - Tax Info (SKATTER/INKOMSTSKATT)** - PHASE 2 95% COVERAGE:
+{
+  "tax_info": {
+    "current_tax_2021": 0,              // Current income tax (Aktuell skatt)
+    "deferred_tax_2021": 0,             // Deferred tax (Uppskjuten skatt)
+    "tax_rate": 0.0,                    // Tax rate as decimal (20.6% → 0.206)
+    "tax_base": 0,                      // Tax base (Skattepliktig inkomst)
+    "tax_policy_summary": "",           // Tax policy description
+    "evidence_pages": []
+  }
+}
+
+**TAX INFO EXTRACTION (Sprint 1+2 Phase 2)**:
+
+Swedish BRF annual reports typically have tax-related notes labeled "Not 11" or "Not 12" (varies by document).
+
+SEARCH STRATEGY:
+- Look for note headings: "Not 11", "Not 12", "SKATTER", "INKOMSTSKATT", "Skatt på årets resultat"
+- Typically found on pages 10-16 in the Notes section
+- May be a table or paragraph format
+
+TARGET FIELDS:
+- current_tax_2021: Current period income tax (usually small or 0 for BRFs)
+- deferred_tax_2021: Deferred tax assets/liabilities (if applicable)
+- tax_rate: Swedish corporate tax rate (typically 20.6% = 0.206)
+- tax_base: Taxable income if disclosed
+- tax_policy_summary: Brief description of tax policy (1-2 sentences)
+
+PARSING INSTRUCTIONS:
+- Parse Swedish format: "45 678" → 45678, "20,6 %" → 0.206
+- If note contains "Ingen skatt" or "Tax: 0": current_tax_2021 = 0, deferred_tax_2021 = 0
+- If tax note absent entirely: Return empty dict {} for tax_info
+- Extract any tax-related narrative in tax_policy_summary
+
+FALLBACK:
+- If explicit tax note missing, check main financial statement "Skatt" line
+- If no tax information found anywhere: tax_info = {}
+
 **CRITICAL - DAY 4 ENHANCEMENT**:
 Note 4 provides DETAILED operating costs breakdown that complements income statement summary.
 

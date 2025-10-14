@@ -1,0 +1,27 @@
+[
+  {
+    "pattern": "not 1 avskrivningar",
+    "note_type": "depreciation",
+    "frequency": 3
+  },
+  {
+    "pattern": "note 1: depreciation",
+    "note_type": "depreciation",
+    "frequency": 3
+  },
+  {
+    "pattern": "tillägg 1 - avskrivning",
+    "note_type": "depreciation",
+    "frequency": 3
+  },
+  {
+    "pattern": "not 2 underhåll",
+    "note_type": "maintenance",
+    "frequency": 3
+  },
+  {
+    "pattern": "not 3 skatter",
+    "note_type": "tax",
+    "frequency": 3
+  }
+]

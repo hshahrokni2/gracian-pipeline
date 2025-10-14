@@ -158,16 +158,17 @@ def validate_pdf(pdf_path: str, output_dir: str = "results/phase4_validation") -
                 "value_type": type(value).__name__ if value is not None else "None"
             }
 
+            # Initialize priority breakdown entry if needed (ONCE per priority)
+            if priority not in validation["priority_breakdown"]:
+                validation["priority_breakdown"][priority] = {"populated": 0, "total": 0}
+
+            # Update counters
             if populated:
                 validation["populated_fields"] += 1
-                if priority not in validation["priority_breakdown"]:
-                    validation["priority_breakdown"][priority] = {"populated": 0, "total": 0}
                 validation["priority_breakdown"][priority]["populated"] += 1
             else:
                 validation["empty_fields"] += 1
 
-            if priority not in validation["priority_breakdown"]:
-                validation["priority_breakdown"][priority] = {"populated": 0, "total": 0}
             validation["priority_breakdown"][priority]["total"] += 1
 
         # Calculate coverage

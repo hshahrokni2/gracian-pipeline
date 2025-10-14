@@ -238,7 +238,8 @@ class OptimalBRFPipeline(BaseExtractor):
                 "äkta förening", "förening", "sammansättning", "revisorer"
             ],
             "financial_agent": [
-                "resultaträkning", "income statement", "balansräkning", "balance sheet",
+                "resultaträkning", "resultatrakning", "income statement",
+                "balansräkning", "balansrakning", "balance sheet",
                 "kassaflödesanalys", "cash flow", "ekonomi", "financial",
                 # P1: Add missing financial terms from diagnostic
                 "flerårsöversikt", "förändringar", "eget kapital",
@@ -604,6 +605,25 @@ Return ONLY valid JSON, no other text."""
         for section in structure.sections:
             heading = section['heading']
 
+            # CRITICAL FIX: Check main sections FIRST to avoid false note detection
+            # Priority 0: Check if it's a main financial/governance/property section
+            routed_as_main = False
+            heading_normalized = self._normalize_swedish(heading)
+
+            for agent_id, keywords in self.main_section_keywords.items():
+                for keyword in keywords:
+                    keyword_normalized = self._normalize_swedish(keyword)
+                    if keyword_normalized in heading_normalized:
+                        main_sections[agent_id].append(heading)
+                        routed_as_main = True
+                        print(f"      🎯 Main section: '{heading[:50]}...' → {agent_id}")
+                        break
+                if routed_as_main:
+                    break
+
+            if routed_as_main:
+                continue  # Skip note detection for main sections
+
             # Layer 1: Explicit pattern matching (highest confidence)
             if self._is_explicit_note(heading):
                 in_notes_subsection = True
@@ -632,46 +652,32 @@ Return ONLY valid JSON, no other text."""
                 print(f"      🛑 End marker: '{heading[:40]}...'")
                 break
 
-            # Route main sections (before notes section)
+            # Route remaining sections (fallback routing)
             if not in_notes_subsection:
+                # OPTION A already handled above (moved to Priority 0)
+
+                # OPTION B: Try fuzzy matching with dictionary for unrouted sections
                 routed = False
+                match = self.dictionary.match_term(heading, fuzzy_threshold=0.70)
+                if match and match.confidence >= 0.70:
+                    # Map dictionary categories to agent IDs
+                    category_to_agent = {
+                        'balance_sheet': 'financial_agent',
+                        'income_statement': 'financial_agent',
+                        'cash_flow': 'financial_agent',
+                        'notes': 'notes_collection',
+                        'governance': 'governance_agent',
+                        'board': 'governance_agent',
+                        'audit': 'governance_agent',
+                        'management_report': 'governance_agent',
+                        'property': 'property_agent',
+                        'operations': 'operations_agent'
+                    }
 
-                # OPTION A: Normalize Swedish characters for matching
-                heading_normalized = self._normalize_swedish(heading)
-
-                for agent_id, keywords in self.main_section_keywords.items():
-                    # Normalize keywords for matching
-                    for keyword in keywords:
-                        keyword_normalized = self._normalize_swedish(keyword)
-                        if keyword_normalized in heading_normalized:
-                            main_sections[agent_id].append(heading)
-                            routed = True
-                            break
-                    if routed:
-                        break
-
-                # OPTION B: If still not routed, try fuzzy matching with dictionary
-                if not routed:
-                    match = self.dictionary.match_term(heading, fuzzy_threshold=0.70)
-                    if match and match.confidence >= 0.70:
-                        # Map dictionary categories to agent IDs
-                        category_to_agent = {
-                            'balance_sheet': 'financial_agent',
-                            'income_statement': 'financial_agent',
-                            'cash_flow': 'financial_agent',
-                            'notes': 'notes_collection',
-                            'governance': 'governance_agent',
-                            'board': 'governance_agent',
-                            'audit': 'governance_agent',
-                            'management_report': 'governance_agent',
-                            'property': 'property_agent',
-                            'operations': 'operations_agent'
-                        }
-
-                        agent_id = category_to_agent.get(match.category)
-                        if agent_id and agent_id in main_sections:
-                            main_sections[agent_id].append(heading)
-                            routed = True
+                    agent_id = category_to_agent.get(match.category)
+                    if agent_id and agent_id in main_sections:
+                        main_sections[agent_id].append(heading)
+                        routed = True
 
                 # OPTION C: Track unrouted sections for LLM classification
                 if not routed:
@@ -729,6 +735,48 @@ Return ONLY valid JSON, no other text."""
         doc.close()
         return None
 
+    def _get_governance_pages_for_scanned_pdf(self, pdf_path: str) -> List[int]:
+        """
+        Get governance agent pages for cross-agent fallback on scanned PDFs.
+
+        For scanned PDFs, governance sections (förvaltningsberättelse) typically
+        include or precede financial statements. This method extracts the page
+        allocation that governance_agent would receive.
+
+        Returns:
+            List of page numbers (0-indexed) allocated to governance agent
+        """
+        if not hasattr(self, 'structure_cache') or not self.structure_cache:
+            return []
+
+        # Find governance section headings from structure
+        governance_headings = []
+        for section in self.structure_cache.sections:
+            heading = section['heading']
+            heading_normalized = self._normalize_swedish(heading)
+
+            # Check if this is a governance section
+            for keyword in self.main_section_keywords.get('governance_agent', []):
+                keyword_normalized = self._normalize_swedish(keyword)
+                if keyword_normalized in heading_normalized:
+                    governance_headings.append(heading)
+                    break
+
+        if not governance_headings:
+            return []
+
+        # Get pages using same allocation logic
+        # Note: This will use Methods 1-2 (provenance + section-range)
+        # but NOT Method 3 (keyword search, which fails on scanned PDFs)
+        pages = self._get_pages_for_sections(
+            pdf_path,
+            governance_headings,
+            fallback_pages=5,
+            agent_id='governance_agent'
+        )
+
+        return pages
+
     def _get_pages_for_sections(
         self,
         pdf_path: str,
@@ -760,46 +808,101 @@ Return ONLY valid JSON, no other text."""
                         pages.append(page)
 
                         # Add context pages around THIS heading
-                        if agent_id == 'financial_agent':
-                            # Financial: Header + next 3 pages
+                        if agent_id in ['financial_agent', 'revenue_breakdown_agent', 'operating_costs_agent']:
+                            # PHASE 4B: Balanced context pages (header + 3 pages = 4 per section)
+                            # All financial agents get same treatment (income statement on same pages)
                             pages.extend([page+1, page+2, page+3])
                         elif agent_id == 'property_agent':
-                            # Property: Header + next 2 pages
-                            pages.extend([page+1, page+2])
+                            # Property: Header + next 3 pages
+                            pages.extend([page+1, page+2, page+3])
                         elif agent_id == 'governance_agent':
-                            # Governance: Header + next 2 pages
-                            pages.extend([page+1, page+2])
+                            # Governance: Header + next 3 pages
+                            pages.extend([page+1, page+2, page+3])
                         elif agent_id and 'notes_' in agent_id:
-                            # Notes: Usually header + same page content
-                            pages.append(page+1)
+                            # Notes: Header + next 2 pages (increased coverage)
+                            pages.extend([page+1, page+2])
 
                         break  # Found this heading, move to next
 
-        # Method 2: Document-size-aware allocation (aggressive for small docs)
-        if total_pages < 20:
-            # Small document: Be more aggressive with page allocation
-            if agent_id == 'financial_agent':
-                # P0-2: Scan pages 4-16 (typical financial statement range)
-                pages.extend(range(4, min(total_pages-2, 16)))
-            elif agent_id == 'property_agent':
-                # P0-3: Scan first 8 pages (förvaltningsberättelse + property sections)
-                pages.extend(range(0, min(8, total_pages)))
-            elif agent_id == 'governance_agent':
-                # Scan first 6 pages
-                pages.extend(range(0, min(6, total_pages)))
+        # Method 2: Section-range estimation using Docling structure boundaries
+        # PHASE 4B ADAPTIVE: Use next section's location to estimate current section's extent
+        # NO HARDCODED PAGE NUMBERS - fully adaptive to document structure
+        if hasattr(self, 'structure_cache') and self.structure_cache and self.structure_cache.sections:
+            for heading in section_headings:
+                # Find this section's index in Docling structure
+                section_idx = None
+                for i, section in enumerate(self.structure_cache.sections):
+                    if section['heading'] == heading:
+                        section_idx = i
+                        break
 
-        # Method 3: Keyword-based detection (backup for machine-readable)
-        if agent_id and hasattr(self, 'topology') and self.topology.classification == "machine_readable":
-            keyword_pages = self._find_pages_by_content_keywords(pdf_path, agent_id)
-            if keyword_pages:
-                pages.extend(keyword_pages)
+                if section_idx is not None and self.structure_cache.sections[section_idx].get('page') is not None:
+                    start_page = self.structure_cache.sections[section_idx]['page']
 
-        # Method 4: Fallback to first N pages (last resort)
+                    # Estimate end by finding next section boundary
+                    if section_idx + 1 < len(self.structure_cache.sections):
+                        next_section = self.structure_cache.sections[section_idx + 1]
+                        next_page = next_section.get('page')
+                        if next_page is not None:
+                            # Section spans from start to next section
+                            end_page = next_page
+                        else:
+                            # Next section missing page: use agent-specific max span
+                            max_span = {'financial_agent': 10, 'property_agent': 6, 'governance_agent': 5}.get(agent_id, 5)
+                            end_page = start_page + max_span
+                    else:
+                        # Last section: use agent-specific max span (avoid signature pages)
+                        max_span = {'financial_agent': 10, 'property_agent': 6, 'governance_agent': 5}.get(agent_id, 5)
+                        end_page = min(start_page + max_span, total_pages - 2)
+
+                    # Add section range (bounded by document length)
+                    section_range = range(start_page, min(end_page, total_pages))
+                    pages.extend(section_range)
+                    print(f"      📊 Section '{heading[:30]}...' range: pages {start_page+1}-{min(end_page, total_pages)} ({len(section_range)} pages)")
+
+        # Method 3: Keyword-based detection (machine-readable PDFs only)
+        # CRITICAL: This finds actual content pages, not just where Docling detected section headers
+        # NOTE: Only works for machine-readable PDFs (scanned PDFs have 0 chars/page)
+        if agent_id in ['financial_agent', 'revenue_breakdown_agent', 'operating_costs_agent', 'property_agent', 'operations_agent']:
+            if hasattr(self, 'topology') and self.topology.classification == "machine_readable":
+                keyword_pages = self._find_pages_by_content_keywords(pdf_path, agent_id)
+                if keyword_pages:
+                    pages.extend(keyword_pages)
+                    print(f"      🔍 Keyword search found: {len(keyword_pages)} pages")
+
+        # Deduplicate FIRST (before checking fallback conditions)
+        pages = sorted(set(pages))
+
+        # Method 4: Cross-agent page sharing (for scanned PDFs where keyword search doesn't work)
+        # CRITICAL FIX: For scanned PDFs, financial agents should use governance pages as fallback
+        # Governance pages (förvaltningsberättelse) typically include or precede financial statements
+        # IMPORTANT: Check AFTER deduplication to get accurate count
+        if agent_id in ['financial_agent', 'revenue_breakdown_agent', 'operating_costs_agent']:
+            if hasattr(self, 'topology') and self.topology.classification == "scanned":
+                # Check if we have adequate pages already (after deduplication)
+                if len(pages) < 8:
+                    # Get governance agent pages from structure cache
+                    governance_pages = self._get_governance_pages_for_scanned_pdf(pdf_path)
+                    if governance_pages and len(governance_pages) >= 8:
+                        # Use middle section of governance pages (likely where financial content is)
+                        # Typically pages 6-14 in a 12-page governance allocation
+                        start_idx = len(governance_pages) // 3  # Skip intro pages
+                        end_idx = min(start_idx + 8, len(governance_pages))
+                        fallback_pages = governance_pages[start_idx:end_idx]
+                        pages.extend(fallback_pages)
+                        # Re-deduplicate after adding governance pages
+                        pages = sorted(set(pages))
+                        print(f"      🔄 Scanned PDF fallback: +{len(fallback_pages)} governance pages")
+                    else:
+                        # Last resort: use typical financial statement pages
+                        typical_fin_pages = list(range(6, min(15, total_pages)))
+                        pages.extend(typical_fin_pages)
+                        pages = sorted(set(pages))
+                        print(f"      🔄 Scanned PDF fallback: Using typical pages {[p+1 for p in typical_fin_pages]}")
+
+        # Method 5: Fallback to first N pages (last resort)
         if not pages:
             pages = list(range(min(fallback_pages, total_pages)))
-
-        # Deduplicate and sort
-        pages = sorted(set(pages))
 
         # DEBUG: Show page allocation strategy
         if agent_id:
