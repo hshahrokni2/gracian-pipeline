@@ -1,0 +1,326 @@
+# 30 Comprehensive BRF Ground Truth Fields
+# Target: 95% Coverage (29/30) / 95% Accuracy (29/30)
+# Version: 1.0
+# Date: 2025-10-13
+
+# This defines the authoritative 30 fields for 95/95 validation
+# Each field maps to agent_results extraction paths
+
+version: "1.0"
+target_coverage: 0.95  # 29/30 fields
+target_accuracy: 0.95  # 29/30 correct
+
+fields:
+  # GOVERNANCE (5 fields)
+  governance:
+    chairman:
+      path: "governance_agent.data.chairman"
+      type: string
+      required: true
+      description: "Chairman name (Ordförande)"
+      swedish_terms: ["Ordförande", "Styrelsens ordförande"]
+
+    board_members:
+      path: "governance_agent.data.board_members"
+      type: array
+      required: true
+      description: "Board members list including deputies"
+      min_items: 3
+      swedish_terms: ["Styrelseledamöter", "Ledamöter", "Suppleanter"]
+
+    auditor_name:
+      path: "governance_agent.data.auditor_name"
+      type: string
+      required: true
+      description: "Auditor name"
+      swedish_terms: ["Revisor", "Auktoriserad revisor"]
+
+    audit_firm:
+      path: "governance_agent.data.audit_firm"
+      type: string
+      required: false
+      description: "Audit firm name (e.g., KPMG, PwC)"
+
+    nomination_committee:
+      path: "governance_agent.data.nomination_committee"
+      type: array
+      required: false
+      description: "Nomination committee members"
+      swedish_terms: ["Valberedning"]
+
+  # PROPERTY (6 fields)
+  property:
+    designation:
+      path: "property_agent.data.designation"
+      type: string
+      required: true
+      description: "Property designation (Fastighetsbeteckning)"
+      swedish_terms: ["Fastighetsbeteckning", "Beteckning"]
+
+    address:
+      path: "property_agent.data.address"
+      type: string
+      required: false  # Often missing
+      description: "Street address"
+      swedish_terms: ["Adress", "Gatuadress", "Postadress"]
+
+    city:
+      path: "property_agent.data.city"
+      type: string
+      required: true
+      description: "City/municipality"
+      swedish_terms: ["Stad", "Kommun", "Ort"]
+
+    built_year:
+      path: "property_agent.data.built_year"
+      type: integer
+      required: true
+      description: "Building year"
+      swedish_terms: ["Byggår", "Byggnadsår", "Färdigställt"]
+
+    apartments:
+      path: "property_agent.data.apartments"
+      type: integer
+      required: true
+      description: "Number of apartments"
+      swedish_terms: ["Antal lägenheter", "Lägenheter"]
+
+    energy_class:
+      path: "property_agent.data.energy_class"
+      type: string
+      required: false  # Often missing
+      description: "Energy class (A-G)"
+      swedish_terms: ["Energiklass", "Energideklaration"]
+
+  # FINANCIAL (6 fields - core balance sheet/income statement)
+  financial:
+    revenue:
+      path: "financial_agent.data.revenue"
+      type: numeric
+      required: true
+      description: "Total revenue (Intäkter)"
+      swedish_terms: ["Intäkter", "Nettoomsättning"]
+
+    expenses:
+      path: "financial_agent.data.expenses"
+      type: numeric
+      required: true
+      description: "Total expenses (Kostnader)"
+      swedish_terms: ["Kostnader", "Rörelsekostnader"]
+
+    assets:
+      path: "financial_agent.data.assets"
+      type: numeric
+      required: true
+      description: "Total assets (Tillgångar)"
+      swedish_terms: ["Tillgångar", "Summa tillgångar"]
+      validation:
+        - type: balance_check
+          formula: "assets = liabilities + equity"
+          tolerance: 0.01  # 1% tolerance
+
+    liabilities:
+      path: "financial_agent.data.liabilities"
+      type: numeric
+      required: true
+      description: "Total liabilities (Skulder)"
+      swedish_terms: ["Skulder", "Summa skulder"]
+
+    equity:
+      path: "financial_agent.data.equity"
+      type: numeric
+      required: true
+      description: "Total equity (Eget kapital)"
+      swedish_terms: ["Eget kapital", "Summa eget kapital"]
+
+    surplus:
+      path: "financial_agent.data.surplus"
+      type: numeric
+      required: true
+      description: "Net result (Resultat)"
+      swedish_terms: ["Resultat", "Årets resultat", "Överskott"]
+
+  # DETAILED FINANCIALS (2 fields - breakdown structures)
+  detailed_financials:
+    revenue_breakdown:
+      path: "revenue_breakdown_agent.data.revenue_breakdown"
+      type: object
+      required: true
+      description: "Detailed revenue breakdown"
+      min_fields: 5  # At least 5 revenue line items
+      key_subfields:
+        - nettoomsattning
+        - arsavgifter
+        - hyresintakter
+        - summa_rorelseintakter
+
+    operating_costs_breakdown:
+      path: "operating_costs_agent.data.operating_costs_breakdown"
+      type: object
+      required: true
+      description: "Detailed operating costs breakdown"
+      min_fields: 3  # At least 3 cost line items
+      key_subfields:
+        - fastighetsskott
+        - reparationer
+        - ovriga_externa_kostnader
+
+  # OPERATIONS (4 fields - NEW with operations_agent fix!)
+  operations:
+    maintenance_summary:
+      path: "operations_agent.data.maintenance_summary"
+      type: string
+      required: false  # Not all PDFs have detailed maintenance plans
+      description: "Maintenance plan summary"
+      swedish_terms: ["Underhållsplan", "Underhåll", "Planerat underhåll"]
+
+    energy_usage:
+      path: "operations_agent.data.energy_usage"
+      type: string
+      required: false
+      description: "Energy usage summary (electricity, heating, water)"
+      swedish_terms: ["Elkostnad", "Värmekostnad", "Energiförbrukning"]
+
+    insurance:
+      path: "operations_agent.data.insurance"
+      type: string
+      required: false
+      description: "Insurance information"
+      swedish_terms: ["Försäkring", "Fastighetsförsäkring"]
+
+    contracts:
+      path: "operations_agent.data.contracts"
+      type: string
+      required: false
+      description: "Key contracts summary"
+      swedish_terms: ["Avtal", "Förvaltning", "Leverantörer"]
+
+  # NOTES (7 fields - detailed accounting notes)
+  notes:
+    accounting_principles:
+      path: "notes_accounting_agent.data.accounting_principles"
+      type: string
+      required: true
+      description: "Accounting principles (K2/K3)"
+      swedish_terms: ["Redovisningsprinciper", "BFNAR", "K2", "K3"]
+
+    loans:
+      path: "comprehensive_notes_agent.data.loans"
+      type: array
+      required: true
+      description: "Loan details array"
+      min_items: 1
+      key_subfields:
+        - lender
+        - amount_2021
+        - interest_rate
+        - maturity_date
+      swedish_terms: ["Fastighetslån", "Låneskulder", "Kreditinstitut"]
+
+    buildings:
+      path: "comprehensive_notes_agent.data.note_8_buildings"
+      type: object
+      required: true
+      description: "Buildings and land note"
+      key_subfields:
+        - acquisition_value_2021
+        - accumulated_depreciation_2021
+        - book_value_2021
+      swedish_terms: ["Byggnader och mark", "Not 8", "Avskrivningar"]
+
+    receivables:
+      path: "comprehensive_notes_agent.data.note_9_receivables"
+      type: object
+      required: false
+      description: "Receivables note"
+      key_subfields:
+        - tax_account
+        - receivables
+      swedish_terms: ["Fordringar", "Not 9", "Kundfordringar"]
+
+    maintenance_fund:
+      path: "comprehensive_notes_agent.data.note_10_maintenance_fund"
+      type: object
+      required: false
+      description: "Maintenance fund note"
+      key_subfields:
+        - beginning_2021
+        - allocation_2021
+        - end_2021
+      swedish_terms: ["Fond för yttre underhåll", "Not 10", "Underhållsfond"]
+
+    tax_info:
+      path: "notes_tax_agent.data"
+      type: object
+      required: false  # Not all PDFs have detailed tax notes
+      description: "Tax information note"
+      swedish_terms: ["Skatter", "Inkomstskatt", "Not 11", "Not 12"]
+
+    other_notes:
+      path: "notes_other_agent.data.other_notes"
+      type: object
+      required: false
+      description: "Other miscellaneous notes"
+
+# Validation rules
+validation:
+  balance_check:
+    enabled: true
+    formula: "assets = liabilities + equity"
+    tolerance: 0.01  # 1%
+
+  evidence_check:
+    enabled: true
+    min_evidence_ratio: 0.80  # 80% of fields must cite source pages
+
+  array_checks:
+    board_members:
+      min_items: 3
+      max_items: 15
+    loans:
+      min_items: 1
+      max_items: 20
+
+# Scoring
+scoring:
+  coverage:
+    formula: "populated_fields / total_fields"
+    target: 0.95
+    weight: 0.50
+
+  accuracy:
+    formula: "correct_fields / populated_fields"
+    target: 0.95
+    weight: 0.50
+
+  overall:
+    formula: "(coverage * coverage_weight) + (accuracy * accuracy_weight)"
+    target: 0.95
+
+# Field prioritization for debugging
+priority:
+  P0_critical:  # Must have for any BRF document
+    - chairman
+    - board_members
+    - assets
+    - liabilities
+    - equity
+    - revenue
+    - expenses
+
+  P1_important:  # Expected in most documents
+    - designation
+    - city
+    - built_year
+    - apartments
+    - auditor_name
+    - accounting_principles
+    - loans
+    - buildings
+
+  P2_optional:  # Nice to have, may be missing
+    - address
+    - energy_class
+    - maintenance_summary
+    - tax_info
+    - other_notes

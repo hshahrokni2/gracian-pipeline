@@ -17,6 +17,7 @@ from openai import OpenAI
 
 from ..models.note import Note
 from ..schemas.notes_schemas import BaseNoteData
+from ..core.learning_loop import get_learning_loop
 
 
 class BaseNoteAgent(ABC):
@@ -38,16 +39,18 @@ class BaseNoteAgent(ABC):
     - _get_schema_class(): Return Pydantic schema class
     """
 
-    def __init__(self, model: str = "gpt-4o-mini", temperature: float = 0.0):
+    def __init__(self, model: str = "gpt-4o-mini", temperature: float = 0.0, enable_learning: bool = True):
         """
         Initialize base agent.
 
         Args:
             model: OpenAI model to use (default: gpt-4o-mini)
             temperature: Temperature for generation (default: 0.0 for deterministic)
+            enable_learning: Whether to enable adaptive learning loop (default: True)
         """
         self.model = model
         self.temperature = temperature
+        self.enable_learning = enable_learning
 
         # Initialize OpenAI client
         api_key = os.getenv("OPENAI_API_KEY")
@@ -55,6 +58,12 @@ class BaseNoteAgent(ABC):
             raise ValueError("OPENAI_API_KEY environment variable not set")
 
         self.client = OpenAI(api_key=api_key)
+
+        # Initialize learning loop
+        if self.enable_learning:
+            self.learning_loop = get_learning_loop()
+        else:
+            self.learning_loop = None
 
     def extract(self, note: Note, context: Dict[str, Any]) -> Dict[str, Any]:
         """
@@ -109,7 +118,14 @@ class BaseNoteAgent(ABC):
             print(f"Confidence calculation error: {e}")
             final = validated
 
-        # Step 7: Return dict
+        # Step 7: Record extraction for learning (if enabled)
+        if self.enable_learning and self.learning_loop:
+            try:
+                self._record_extraction_for_learning(final, note, context)
+            except Exception as e:
+                print(f"Learning loop recording error: {e}")
+
+        # Step 8: Return dict
         return final.dict()
 
     def _is_empty_note(self, note: Note) -> bool:
@@ -291,6 +307,82 @@ class BaseNoteAgent(ABC):
         data.confidence = min(confidence, 1.0)
 
         return data
+
+    def _record_extraction_for_learning(
+        self,
+        data: BaseNoteData,
+        note: Note,
+        context: Dict[str, Any]
+    ) -> None:
+        """
+        Record extraction for learning loop.
+
+        This method teaches the system from each extraction:
+        - Learn Swedish term variants from evidence
+        - Record extraction patterns (successful/failed)
+        - Calibrate confidence scoring
+        - Learn note heading patterns
+
+        Args:
+            data: Extracted data with confidence
+            note: Original note object
+            context: Context dict used for extraction
+        """
+        if not self.learning_loop:
+            return
+
+        # Get agent ID for learning
+        agent_id = self.__class__.__name__
+
+        # Record each extracted field
+        data_dict = data.dict()
+        metadata_fields = {'evidence_pages', 'evidence_quotes', 'confidence'}
+
+        for field_name, value in data_dict.items():
+            if field_name in metadata_fields:
+                continue
+
+            # Determine if validation passed (high confidence = passed)
+            validation_passed = data.confidence > 0.7 and value is not None
+
+            # Record extraction
+            self.learning_loop.record_extraction(
+                agent_id=agent_id,
+                field_name=field_name,
+                value=value,
+                confidence=data.confidence,
+                evidence={
+                    "quotes": data.evidence_quotes if hasattr(data, 'evidence_quotes') else [],
+                    "pages": data.evidence_pages if hasattr(data, 'evidence_pages') else []
+                },
+                validation_passed=validation_passed
+            )
+
+        # Record note detection pattern
+        if note.title:
+            note_type = self._get_note_type()
+            self.learning_loop.record_note_detection(
+                heading=note.title,
+                note_type=note_type,
+                detection_confidence=data.confidence
+            )
+
+    def _get_note_type(self) -> str:
+        """
+        Get note type for this agent.
+
+        Returns:
+            Note type string (depreciation, maintenance, tax)
+        """
+        agent_name = self.__class__.__name__.lower()
+        if 'depreciation' in agent_name:
+            return 'depreciation'
+        elif 'maintenance' in agent_name:
+            return 'maintenance'
+        elif 'tax' in agent_name:
+            return 'tax'
+        else:
+            return 'unknown'
 
     # Abstract methods that subclasses must implement
 

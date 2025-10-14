@@ -1048,6 +1048,17 @@ Return ONLY valid JSON, no other text."""
                 context=pass1_results
             )
 
+        # P0 FIX: Extract operations_agent (maintenance, energy, contracts)
+        # Operations content typically in förvaltningsberättelse or dedicated sections
+        operations_headings = routing.main_sections.get('operations_agent', [])
+        if operations_headings:
+            results['operations_agent'] = self._extract_agent(
+                self.pdf_path_cache,
+                'operations_agent',
+                operations_headings,
+                context=pass1_results
+            )
+
         # Extract note agents sequentially
         for agent_id, section_headings in routing.note_sections.items():
             # Build hierarchical context (Pass 1 + financial + previous notes)
