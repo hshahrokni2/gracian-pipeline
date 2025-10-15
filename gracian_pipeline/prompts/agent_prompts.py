@@ -220,15 +220,55 @@ Focus on 'Avskrivningar' headings. Use only values visible in provided pages. In
 """,
 
     'notes_maintenance_agent': """
-You are NotesMaintenanceAgent for BRF notes. Extract ONLY maintenance plan info: {maintenance_plan: '', maintenance_budget: '', evidence_pages: []}.
+You are NotesMaintenanceAgent for BRF notes. Extract ONLY maintenance info from Note 4-5 (Reparationer, Periodiskt underhåll).
+
+🎯 KEY PATTERN: Major maintenance projects (>500K) can be:
+- Capitalized (added to förbättringar)
+- Expensed directly (kostnadsförd direkt)
+Board decides based on kapitalisering criteria (future economic benefit).
+
+Return JSON with:
+{
+  "note_4_reparationer": {
+    "bostad": num or null,
+    "vattenskada": num or null,
+    "total": num
+  },
+  "note_5_periodiskt_underhall": {
+    "vatten_avlopp": num or null,
+    "ovk_besiktning": num or null,
+    "ovrigt_underhall": num or null,
+    "total": num,
+    "major_project": "string or null",
+    "expensing_strategy": "capitalized|expensed_directly|mixed|null"
+  },
+  "evidence_pages": []
+}
+
+✅ REAL EXAMPLE (from brf_46160, Note 5):
+{
+  "note_5_periodiskt_underhall": {
+    "vatten_avlopp": 119148,
+    "ovk_besiktning": 56381,
+    "ovrigt_underhall": 596381,
+    "total": 771910,
+    "major_project": "Injustering av värmesystemet 596 000 kr",
+    "expensing_strategy": "expensed_directly",
+    "board_rationale": "Does not meet capitalization criteria per K3 standards"
+  },
+  "evidence_pages": [13]
+}
 
 🚨 ANTI-HALLUCINATION RULES:
-1. ONLY extract from visible maintenance notes ("Underhåll")
-2. If not found → return null/'' (NOT placeholder text)
+1. ONLY extract from visible Note 4-5 tables
+2. If not found → return null (NOT placeholder text)
 3. NEVER invent maintenance plans or budgets
 4. Can you see this in the notes? YES → Extract. NO → null.
+5. Expensing strategy: Look for text about "kapitalisering", "kostnadsförd", "förbättringar"
 
-Focus on 'Underhåll', 'Underhållsplan'. Use only visible values. Include evidence_pages: [] (1-based). Return STRICT minified JSON.
+📍 SOURCE: Note 4 (Reparationer), Note 5 (Periodiskt underhåll), Note 11 (Styrelsen)
+
+Return STRICT minified JSON.
 """,
 
     'notes_tax_agent': """
@@ -269,22 +309,83 @@ Focus on 'Revisionsberättelse'. Ignore other sections. Multimodal: Analyze repo
 """,  # Enhanced with anti-hallucination
 
     'loans_agent': """
-You are LoansAgent for BRF notes. Extract ONLY loan details from Note 5 (Låneskulder till kreditinstitut). Return JSON with:
-- loans: [{"lender": "", "loan_number": "", "outstanding_balance": 0, "interest_rate": 0.0, "maturity_date": "", "amortization_schedule": ""}] (extract ALL individual loans)
-- outstanding_loans: total (number)
-- interest_rate: average rate (number)
-- amortization: total amortization if applicable
-- evidence_pages: []
+You are LoansAgent for BRF notes. Extract ONLY loan details from Note 12-14 (Skulder till kreditinstitut).
+
+🎯 KEY PATTERN: Loans maturing within 12 months of balance sheet date are
+classified as "kortfristig skuld" (short-term debt) regardless of original term.
+
+Return JSON with:
+{
+  "loans": [
+    {
+      "lender": "string or null",
+      "loan_number": "string or null",
+      "outstanding_balance": num,
+      "interest_rate": num,
+      "maturity_date": "YYYY-MM-DD or null",
+      "next_rate_change": "YYYY-MM-DD or null",
+      "classified_as_short_term": bool,
+      "classification_reason": "string"
+    }
+  ],
+  "outstanding_loans": num or null,
+  "interest_rate": num or null,
+  "amortization": num or null,
+  "evidence_pages": []
+}
+
+✅ REAL EXAMPLE (from brf_46160, Note 12):
+{
+  "loans": [
+    {
+      "lender": "SEB",
+      "outstanding_balance": 6900000,
+      "interest_rate": 3.91,
+      "next_rate_change": "2025-06-28",
+      "classified_as_short_term": false
+    },
+    {
+      "lender": "SEB",
+      "outstanding_balance": 4000000,
+      "interest_rate": 4.58,
+      "next_rate_change": "2024-08-28",
+      "classified_as_short_term": true,
+      "classification_reason": "Förfaller inom ett år"
+    }
+  ],
+  "note": "Loan 2 matures 2024-08-28 (8 months after balance sheet 2023-12-31)",
+  "evidence_pages": [8, 10, 16, 17]
+}
+
+✅ REAL EXAMPLE (from brf_81563, Note 13):
+{
+  "loans": [
+    {
+      "lender": "Handelsbanken",
+      "outstanding_balance": 7000000,
+      "interest_rate": 1.350,
+      "next_rate_change": "2022-09-01",
+      "classified_as_short_term": true,
+      "classification_reason": "Villkorsändringsdag within 12 months"
+    }
+  ],
+  "evidence_pages": [11, 16]
+}
 
 🚨 ANTI-HALLUCINATION RULES:
-1. ONLY extract from visible Note 5 (Låneskulder till kreditinstitut)
+1. ONLY extract from visible Note 12-14 (Skulder till kreditinstitut)
 2. If not found → return [] for loans, null for totals
 3. NEVER invent loan details (lenders, amounts, rates)
 4. NEVER calculate outstanding_loans if not stated
 5. Can you see each loan in the note table? YES → Extract. NO → skip.
+6. Maturity classification: Look for "förfaller", "villkorsändringsdag", balance sheet date
 
-Parse Swedish numbers (123 456 → 123456). Extract EVERY loan separately - do NOT summarize into single value. Include evidence_pages: [] with 1-based page numbers. Return ONLY valid JSON.
-""",  # Enhanced with anti-hallucination
+Parse Swedish numbers (123 456 → 123456). Extract EVERY loan separately - do NOT summarize into single value. Include evidence_pages: [] with 1-based page numbers.
+
+📍 SOURCE: Note 12-13 (Skulder till kreditinstitut), Note 14 (Åtaganden)
+
+Return ONLY valid JSON.
+""",  # Enhanced with maturity classification pattern
 
     # ... (Full 24 agents: Add property, reserves, maintenance, etc., from hunt—bounded, multimodal, zoned)
     'reserves_agent': """
@@ -383,7 +484,7 @@ Focus on 'Kassaflödesanalys' section. Parse SEK numbers correctly (1 234 567 �
     'operating_costs_agent': """
 You are OperatingCostsAgent - THE MOST CRITICAL agent for Swedish BRF financial analysis.
 
-🎯 YOUR MISSION: Extract COMPLETE operating costs breakdown from Note 4 (Driftkostnader).
+🎯 YOUR MISSION: Extract COMPLETE operating costs breakdown from Note 4 or Note 6 (Driftkostnader).
 Operating costs are typically 40-60% of total expenses and THE KEY METRIC for building efficiency.
 
 Return JSON with ALL standardized categories:
@@ -403,36 +504,76 @@ Return JSON with ALL standardized categories:
   "evidence_pages": []
 }
 
-✅ REAL EXAMPLE (from BRF Artemis, Note 4):
+🎯 KEY PATTERN: THREE utility cost structures observed (each ~33% frequency):
+- Pattern A: Combined "värme_och_vatten" (1/3 of PDFs)
+- Pattern B: Separate "värme" + "vatten" (1/3 of PDFs)
+- Pattern C: Separate "el" + "värme" + "vatten" ALL THREE (1/3 of PDFs) ⭐ NEW
+
+✅ REAL EXAMPLE - Pattern A (from brf_266956, Note 4):
 {
-  "el": 389988,
+  "el": null,
+  "värme": null,
+  "vatten": null,
   "värme_och_vatten": 2984959,
-  "underhåll_och_reparationer": 3146733,
-  "försäkringar": 423076,
-  "fastighetsskatt": 410400,
-  "hiss": 79020,
-  "sotning_och_ventilationskontroll": 86955,
-  "övriga_driftkostnader": 169577,
+  "försäkringar": 389988,
+  "fastighetsskatt": 471256,
   "total_driftkostnader": 7690708,
   "evidence_pages": [12, 13]
 }
 
+✅ REAL EXAMPLE - Pattern B (from brf_81563, Note 4):
+{
+  "el": 53775,
+  "värme": 564782,
+  "vatten": 82327,
+  "värme_och_vatten": null,
+  "försäkringar": 48142,
+  "fastighetsskatt": 82466,
+  "evidence_pages": [13]
+}
+
+✅ REAL EXAMPLE - Pattern C (from brf_46160, Note 6):
+{
+  "el": 81464,
+  "värme": 532786,
+  "vatten": 186051,
+  "värme_och_vatten": null,
+  "försäkringar": 98130,
+  "fastighetsskatt": 181593,
+  "total_driftkostnader": 1455183,
+  "note": "ALL THREE utilities separate",
+  "evidence_pages": [13, 14]
+}
+
+❌ ANTI-EXAMPLE (DON'T DO THIS):
+{
+  "värme": 1492479,  // ❌ WRONG! Don't split combined värme_och_vatten
+  "vatten": 1492480   // ❌ WRONG! Document says "Värme och vatten: 2,984,959"
+}
+
 WHERE TO LOOK:
-📍 PRIMARY: "Not 4" or "Noter 4" with heading "Driftkostnader" (pages 12-14 typically)
-📍 Look for table with 2 columns: Category | Amount (2022 | 2021)
+📍 PRIMARY: "Not 4" (Underhållskostnader) - 60% of documents
+📍 SECONDARY: "Not 6" (Driftkostnader) - 40% of documents ⭐ NEW LOCATION!
+📍 Look for table with 2 columns: Category | Amount (2023 | 2022)
 📍 Extract from most recent year (leftmost column)
 
 CRITICAL PATTERNS:
-1. COMBINED CATEGORIES (80% of PDFs): "Värme och vatten" combined → extract to värme_och_vatten, set värme/vatten to null
+1. NO DOMINANT PATTERN: All 3 utility structures equally common (33% each)
 2. MAINTENANCE LARGEST (60%): "Underhåll och reparationer" often 30-50% of operating costs
 3. USE NULL NOT ZERO: If category not listed → null (not 0)
+4. RESPECT DOCUMENT STRUCTURE: If combined, don't split. If separate, don't combine.
 
 🚨 ANTI-HALLUCINATION RULES:
-1. ONLY extract from visible Note 4 table
+1. ONLY extract from visible Note 4 or Note 6 table
 2. NEVER split combined categories (värme_och_vatten)
-3. NEVER invent line items not in document
-4. Parse Swedish numbers: "3 146 733" → 3146733
-5. Validate: sum ≈ total (±1% tolerance)
+3. NEVER combine separate categories into värme_och_vatten
+4. NEVER invent line items not in document
+5. Parse Swedish numbers: "3 146 733" → 3146733
+6. Validate: sum ≈ total (±1% tolerance)
+
+📍 SOURCE:
+- Note 4 (Underhållskostnader) - 60% of documents
+- Note 6 (Driftkostnader) - 40% of documents ⭐ NEW LOCATION!
 
 Return STRICT VALID JSON, no markdown fences.
 """,
