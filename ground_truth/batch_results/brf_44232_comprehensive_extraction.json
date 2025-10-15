@@ -1,0 +1,578 @@
+{
+  "document_metadata": {
+    "pdf_filename": "brf_44232.pdf",
+    "pdf_number": "9/42",
+    "brf_name": "Brf Hjorthagshus",
+    "org_number": "702000-8954",
+    "fiscal_year": 2023,
+    "report_type": "Årsredovisning",
+    "accounting_standard": "K3",
+    "accounting_framework": "BFNAR 2012:1 (K3)",
+    "pages_total": 18,
+    "processing_date": "2025-10-15",
+    "evidence_pages": [1, 2]
+  },
+
+  "governance_agent": {
+    "board_members": [
+      {"name": "Liina Veidemann", "role": "Ordförande", "period": "2023-01-01 to 2024-12-31 (vald t.o.m. föreningsstämman 2024)"},
+      {"name": "Ebba Hessling", "role": "Ledamot", "period": "2023-01-01 to 2024-12-31"},
+      {"name": "Felicia Geire", "role": "Ledamot", "period": "2023-01-01 to 2024-12-31"},
+      {"name": "Alida Almberg Bard", "role": "Ledamot", "period": "2023-01-01 to 2024-12-31"},
+      {"name": "Niklas De Mander", "role": "Ledamot", "period": "2023-01-01 to 2024-12-31"},
+      {"name": "Anton Ågerberg", "role": "Ledamot", "period": "2023-01-01 to 2024-12-31"},
+      {"name": "Jonas Lindvall", "role": "Suppleant", "period": "2023-01-01 to 2024-12-31"}
+    ],
+    "chairman": "Liina Veidemann",
+    "board_size": 6,
+    "board_deputies": 1,
+    "auditor_name": "Elias Haraldsson",
+    "auditor_firm": "Moore Allegretto AB",
+    "auditor_type": "Auktoriserad revisor",
+    "auditor_deputy": "Niklas Holmberg Peters, Moore Allegretto AB (Revisorssuppleant)",
+    "valberedning": [
+      {"name": "Anders Löfberg", "role": "Sammankallande"},
+      {"name": "Sofia Sundström", "role": "Member"},
+      {"name": "Håkan Lyckeborg", "role": "Member"}
+    ],
+    "annual_meeting_date": "2023-04-25",
+    "board_meeting_frequency": null,
+    "board_meetings_count": null,
+    "extraordinary_meetings": null,
+    "firma_teckning": "Föreningens firma tecknas förutom av styrelsen i sin helhet av styrelsens ledamöter, två i förening",
+    "evidence_pages": [3]
+  },
+
+  "financial_agent": {
+    "total_assets": 35905852,
+    "total_equity": 16568221,
+    "total_liabilities": 19337631,
+    "liabilities": 35905852,
+    "long_term_liabilities": 0,
+    "short_term_liabilities": 19337631,
+    "annual_result": 2033295,
+    "revenue": 16870241,
+    "operating_expenses": 14504941,
+    "financial_expenses": 332005,
+    "net_income": 2033295,
+    "soliditet_percent": 46,
+    "equity_ratio": 0.46,
+    "cash_and_bank": 6846419,
+    "restricted_equity": 16050940,
+    "unrestricted_equity": 517281,
+    "buildings_book_value": 21636043,
+    "accumulated_depreciation_buildings": -37909795,
+    "land_improvements_book_value": null,
+    "equipment_book_value": 2009167,
+    "operating_costs_breakdown": {
+      "driftkostnader_total": 9954394,
+      "note_reference": "Not 6, sida 14"
+    },
+    "building_details": {
+      "buildings_acquisition_cost": 60470842,
+      "accumulated_depreciation": -37909795,
+      "pågående_nyanläggningar": 4000000,
+      "book_value_2023": 21636043,
+      "depreciation_2023": 925004,
+      "depreciation_method": "Komponentavskrivning K3",
+      "note_reference": "Not 10, sida 15"
+    },
+    "other_receivables": {
+      "total": 249927,
+      "breakdown": {
+        "kundfordringar": 12716,
+        "övriga_fordringar": 249927,
+        "förutbetalda_kostnader_upplupna_intäkter": 1145680
+      },
+      "note_reference": "Balansräkning sida 9"
+    },
+    "reserve_fund_movements": null,
+    "income_breakdown": {
+      "total_revenue": 16870241,
+      "breakdown": {
+        "årsavgifter_och_hyror": 15300969,
+        "övriga_rörelseintäkter": 1272578,
+        "el_överlåtelseavgifter": 1051212,
+        "övriga_intäkter": 296694
+      },
+      "note_reference": "Not 2 och 3, sida 13"
+    },
+    "tax_details": null,
+    "elstöd": 1051212,
+    "previous_year_comparison": {
+      "revenue_2022": 14038106,
+      "revenue_2023": 16870241,
+      "revenue_change": 2832135,
+      "revenue_change_percent": 20.2,
+      "result_2022": 2091166,
+      "result_2023": 2033295,
+      "result_change": -57871,
+      "result_change_percent": -2.8
+    },
+    "pågående_nyanläggningar": {
+      "total": 4000000,
+      "description": "Pågående nyanläggningar 4 000 000 kr (takrenoveringar, rörspoling, IMD-el installation)",
+      "note_reference": "Not 10, sida 15"
+    },
+    "evidence_pages": [6, 8, 9, 10, 13, 15]
+  },
+
+  "property_agent": {
+    "property_designation": "9 fastigheter i Hjorthagen: Jordledningen 1, Jordledningen 2, Kontakten 2, Ledningsstolpen 2, Likströmmen 1, Luftledningen 1, Luftledningen 2, Växelströmmen 1",
+    "address": "Multiple addresses in Hjorthagen, Stockholm",
+    "total_apartments": 365,
+    "bostadsrätt_count": 351,
+    "hyresrätt_count": 13,
+    "lokal_bostadsrätt_count": 1,
+    "rental_apartment_percent": 3.6,
+    "commercial_tenants_count": 13,
+    "total_area_bostadsrätt": 14861,
+    "total_area_hyresrätt": 450,
+    "total_area_brf_lokal": 287,
+    "acquisition_date": "Upplätet med tomträtt 1935",
+    "completion_date": "1935",
+    "building_age_years": 88,
+    "municipality": "Stockholm",
+    "heating_system": "Fjärrvärme",
+    "insurance_provider": "Trygg Hansa",
+    "insurance_details": "Fullvärdesförsäkrad hos Trygg Hansa. Styrelsen är ansvarsförsäkrad i samma bolag.",
+    "apartment_breakdown": {
+      "1_rok": 0,
+      "2_rok": 350,
+      "3_rok": 0,
+      "4_rok": 1,
+      "total": 351
+    },
+    "commercial_tenants": [
+      {
+        "type": "13 lokaler med hyresrätt",
+        "total_area": "450 kvm",
+        "total_brf_lokal_area": "287 kvm"
+      }
+    ],
+    "parking_info": "None mentioned",
+    "common_areas": null,
+    "samfällighet": null,
+    "registration_dates": {
+      "registered_date": "1935-02-09",
+      "economic_plan_registered": "1935-05-25",
+      "current_bylaws_registered": "2018-08-28 hos Bolagsverket"
+    },
+    "tax_assessment": {
+      "bostäder": 689000000,
+      "lokaler": 12600000,
+      "total": 701600000,
+      "year": 2023,
+      "note": "Varav byggnader 199 000 000 kr",
+      "note_reference": "Not 10, sida 15"
+    },
+    "property_management": {
+      "provider": "Bredablick Förvaltning",
+      "services": "Löpande ekonomiska och tekniska förvaltning samt städning av trappuppgångar och gemensamma utrymmen samt skötsel av föreningens utomhusmiljö",
+      "contract_start": "2017",
+      "previous_provider": null
+    },
+    "tomträtt_contract": {
+      "expires": "2025-04-01",
+      "description": "Tomträtten löper tom 2025-04-01. Byggnader är uppförda 1935 och har 351 lägenheter och 14 lokaler."
+    },
+    "technical_status": "Omfattande renoveringar genomförda under 2023. Pågående takrenovering och rörarbeten. God teknisk status efter underhållsinvesteringar.",
+    "renovation_history": null,
+    "evidence_pages": [4]
+  },
+
+  "notes_depreciation_agent": {
+    "depreciation_method": "Komponentavskrivning enligt K3 (BFNAR 2012:1)",
+    "depreciation_schedule": [
+      {"asset_type": "Byggnader", "useful_life_years": 120, "annual_rate": 0.83},
+      {"asset_type": "El", "useful_life_years": 60, "annual_rate": 1.67},
+      {"asset_type": "VA, sanitet", "useful_life_years": 50, "annual_rate": 2.0},
+      {"asset_type": "Fönster", "useful_life_years": 30, "annual_rate": 3.33},
+      {"asset_type": "Tak", "useful_life_years": 30, "annual_rate": 3.33},
+      {"asset_type": "Inventarier, maskiner och installationer", "useful_life_years": "5-15", "annual_rate": "6.67-20.0"}
+    ],
+    "total_depreciation_2023": 1381067,
+    "component_details": {
+      "byggnader": {"depreciation": 925004},
+      "inventarier_maskiner": {"depreciation": 456063}
+    },
+    "land_improvements": null,
+    "equipment": {
+      "acquisition_cost": 4485053,
+      "accumulated_depreciation": -2475886,
+      "book_value": 2009167,
+      "depreciation_2023": 456063,
+      "useful_life_years": "5-15"
+    },
+    "evidence_pages": [12, 15]
+  },
+
+  "notes_maintenance_agent": {
+    "maintenance_fund_balance": null,
+    "annual_allocation_to_fund": null,
+    "maintenance_plan_years": 20,
+    "planned_actions": [
+      {"action": "Takrenovering Krängedevägen och Motalavägen", "year": "2023", "status": "Klara med", "comment": "Slutförd 2023"},
+      {"action": "Takrenovering Untravägen och Älvkarleövägen", "year": "2024", "status": "Pågående", "comment": "Renovering av taken är en förutsättning för att kunna komma vidare med eventuella solceller"},
+      {"action": "Solceller förstudie", "year": "2023-2024", "status": "Genomförd", "comment": "Förberedelse för bygglovsansökan. Kommer följas av en byggovsansökan för att se om vi får genomföra en installation av solceller på våra fastigheter"},
+      {"action": "Byte av tvättmaskiner", "year": "2024", "status": "Pågående", "comment": "Vi byter ut maskiner när de når slutet av sin livslängd och använder istället för att reparera. Detta arbete kommer fortsätta även under 2024"}
+    ],
+    "technical_status": "God teknisk status efter omfattande underhåll 2023",
+    "suppliers": [
+      {"service": "Förvaltning", "supplier": "Bredablick Förvaltning"},
+      {"service": "Försäkring", "supplier": "Trygg Hansa"},
+      {"service": "Serviceavtal", "supplier": "Bredablick samarbetspartner Snabba Ryck Fastighetsjour"}
+    ],
+    "service_contracts": {
+      "property_management": "Bredablick Förvaltning (sedan 2017)",
+      "insurance": "Trygg Hansa",
+      "maintenance_emergency": "Snabba Ryck Fastighetsjour (via Bredablick)"
+    },
+    "major_renovations_2023": "Reparation/Underhåll 1 470 949 kr, Planerat underhåll 626 847 kr",
+    "ongoing_projects": {
+      "project_name": "Multiple ongoing projects",
+      "projects": [
+        {"name": "Takrenovering", "status": "Pågående 2024", "description": "Untravägen och Älvkarleövägen"},
+        {"name": "Solceller", "status": "Förstudie klar, bygglovsansökan upcoming", "description": "Föreningsstämma beslut"},
+        {"name": "Tvättmaskiner", "status": "Pågående byte", "description": "Byte när de når slutet av livslängd"},
+        {"name": "Rörarbeten", "status": "Spolning av vertikala stammar klar 2023", "description": "För kunskap och underlag för kommande behov och åtgärder"}
+      ],
+      "capitalized_amount": 4000000,
+      "financing": "Nytt lån 4 000 000 kr",
+      "note_reference": "Not 10, sida 15"
+    },
+    "evidence_pages": [5, 13, 15]
+  },
+
+  "loans_agent": {
+    "loans": [
+      {
+        "lender": "Stadshypotek",
+        "loan_number": null,
+        "outstanding_balance": 2950000,
+        "interest_rate": 0.04656,
+        "maturity_date": "2024-07-08",
+        "amortization_schedule": null,
+        "note": "Ny lån",
+        "binding_period": "Kapitalb till angivet datum"
+      },
+      {
+        "lender": "Stadshypotek",
+        "loan_number": null,
+        "outstanding_balance": 1050000,
+        "interest_rate": 0.04656,
+        "maturity_date": "2024-07-08",
+        "amortization_schedule": null,
+        "note": null,
+        "binding_period": "Kapitalb till angivet datum"
+      },
+      {
+        "lender": "Swedbank",
+        "loan_number": null,
+        "outstanding_balance": 3687000,
+        "interest_rate": 0.04675,
+        "maturity_date": "2024-09-28",
+        "amortization_schedule": null,
+        "note": "Ing. skuld 3 687 000",
+        "binding_period": "Lånet är kapitalbundet till angivet datum"
+      },
+      {
+        "lender": "Swedbank",
+        "loan_number": null,
+        "outstanding_balance": 4500000,
+        "interest_rate": 0.04517,
+        "maturity_date": "2024-09-28",
+        "amortization_schedule": null,
+        "note": null,
+        "binding_period": "Lånet är kapitalbundet till angivet datum"
+      },
+      {
+        "lender": "Swedbank",
+        "loan_number": null,
+        "outstanding_balance": 1000000,
+        "interest_rate": 0.04675,
+        "maturity_date": "2024-09-28",
+        "amortization_schedule": null,
+        "note": null,
+        "binding_period": "Lånet är kapitalbundet till angivet datum"
+      },
+      {
+        "lender": "Swedbank",
+        "loan_number": null,
+        "outstanding_balance": 3000000,
+        "interest_rate": 0.04675,
+        "maturity_date": "2024-09-28",
+        "amortization_schedule": null,
+        "note": null,
+        "binding_period": "Lånet är kapitalbundet till angivet datum"
+      }
+    ],
+    "total_loans": 16187000,
+    "outstanding_loans": 16187000,
+    "interest_rate": null,
+    "average_interest_rate": 0.046,
+    "amortization": "Amortering av låneskulder: 0 kr (ingen amortering 2023)",
+    "loan_provider": "Stadshypotek, Swedbank",
+    "loan_term": "Varierar per lån",
+    "amortization_schedule": "Inga amorteringar 2023",
+    "loan_changes": "Upptagna lån 4 000 000 kr",
+    "all_loans_mature_within_12_months": true,
+    "refinancing_year": 2024,
+    "credit_facility": null,
+    "credit_facility_previous_year": null,
+    "collateral": "Fastighetsinteckningar 27 314 000 kr (I eget förvar 8 892 000 kr)",
+    "interest_expense_2023": 392843,
+    "interest_expense_2022": 74780,
+    "interest_expense_increase_percent": 425.3,
+    "interest_rate_crisis_impact": "Räntekostnader ökade från 74 780 kr till 392 843 kr (+425%) - EXTREMT KRAFTIG ÖKNING",
+    "new_loan_2023": {
+      "amount": 4000000,
+      "purpose": "Pågående nyanläggningar (tak, rör, installationer)",
+      "note": "Upptagna lån enligt kassaflödesanalys"
+    },
+    "note_reference": "Not 16, sida 17",
+    "evidence_pages": [11, 17]
+  },
+
+  "reserves_agent": {
+    "total_reserves": null,
+    "reserve_fund": null,
+    "reserve_policy": "Avsättning till underhållsfond enligt plan",
+    "fund_name": "Underhållsfond",
+    "annual_allocation": null,
+    "fund_usage_2023": null,
+    "fund_balance_start": null,
+    "fund_balance_end": 10584193,
+    "evidence_pages": [10]
+  },
+
+  "energy_agent": {
+    "energy_source": "Fjärrvärme",
+    "energy_declaration": null,
+    "energy_class": null,
+    "electricity_cost_2023": 1036125,
+    "heating_cost_2023": 3556819,
+    "water_cost_2023": 647467,
+    "electricity_increase_percent_2021_2022": null,
+    "heating_increase_percent_2021_2022": null,
+    "water_increase_percent_2021_2022": null,
+    "energy_cost_2023_total": 5240411,
+    "energy_cost_2022_total": null,
+    "imd_el_system": {
+      "description": "IMD-el installation slutförd 2023",
+      "billing_model": "Medlemmarna debiteras nu enligt tariff som täcker kostnader för medlemmens andel baserat på sin egen kWh-förbrukning, elöverföring, elskatt, moms",
+      "presentation": "Elen debiteras tillsammans med medlemsavgiften och presenterar perioden, förbrukningen, och kostnaden"
+    },
+    "evidence_pages": [5, 14]
+  },
+
+  "fees_agent": {
+    "monthly_fee": null,
+    "annual_fee_2023": 15300969,
+    "fee_per_sqm": 1029,
+    "fee_calculation_basis": "Självkostnadsprincipen",
+    "fee_unit": "Årsavgift för bostadsrätter, kr / kvm",
+    "fee_increase_2023": null,
+    "fee_increase_2024": "6% från 1 januari 2024",
+    "fee_increase_percent": 6.0,
+    "fee_revenue_share": 90.7,
+    "transaction_fees": null,
+    "capital_fee": null,
+    "fee_changes_history": "Inför 2024 höjdes årsmedlemsavgiften med 6%. Detta för att möta föreningens ökade drift- och arrendekostnader.",
+    "fee_calculation_note": "I årsavgiften ingår värme och vatten. Föreningen har avläsning av el vilket debiteras respektive objekt efter förbrukning.",
+    "evidence_pages": [5, 6, 13]
+  },
+
+  "insurance_agent": {
+    "insurance_provider": "Trygg Hansa",
+    "insurance_type": "Fullvärdesförsäkrad byggnad + Ansvarsförsäkring styrelse",
+    "insurance_cost": 321633,
+    "insurance_coverage": "Fullvärde",
+    "insurance_increase_percent": null,
+    "evidence_pages": [4, 14]
+  },
+
+  "tax_agent": {
+    "tax_assessment_value": 701600000,
+    "property_tax": 683739,
+    "tax_assessment_increase_percent": null,
+    "tax_expense_2023": 683739,
+    "tax_assessment_details": {
+      "bostäder": 689000000,
+      "lokaler": 12600000,
+      "total": 701600000,
+      "varav_byggnader": 199000000
+    },
+    "evidence_pages": [14, 15]
+  },
+
+  "cashflow_agent": {
+    "cash_flow_operations": 3211889,
+    "cash_flow_investing": -4553752,
+    "cash_flow_financing": 4000000,
+    "operating_activities": 3414362,
+    "investing_activities": -4553752,
+    "financing_activities": 4000000,
+    "cash_start_of_year": 4188283,
+    "cash_end_of_year": 6846420,
+    "cash_change": 2658137,
+    "evidence_pages": [11]
+  },
+
+  "operating_costs_agent": {
+    "el": 1036125,
+    "värme": 3556819,
+    "vatten": 647467,
+    "avlopp": null,
+    "värme_och_vatten": null,
+    "underhåll_och_reparationer": null,
+    "fastighetsskötsel": 1127214,
+    "försäkringar": 321633,
+    "fastighetsskatt": 683739,
+    "hiss": null,
+    "sotning_och_ventilationskontroll": null,
+    "trädgård": null,
+    "snöröjning": null,
+    "sophämtning": 364750,
+    "besiktningskostnad": 1950,
+    "bevakningskostnad": 11608,
+    "serviceavtal": 321633,
+    "förbrukningsmaterial": 34749,
+    "övriga_utgifter_för_köpta_tjänster": 47792,
+    "uppvärmning_note": 3556819,
+    "vatten_och_avlopp": 647467,
+    "avfallshantering": 364750,
+    "förvaltare": 240815,
+    "systematiskt_brandskyddsarbete": 37400,
+    "tomträttsavgälder": 1366400,
+    "kabel_tv": 135744,
+    "bredband": 334644,
+    "abonnemang_porttelefon_hisstelefon": 5545,
+    "övriga_driftkostnader": 9954394,
+    "total_driftkostnader": 9954394,
+    "note_number": "Not 6",
+    "utility_pattern": "Pattern B",
+    "pattern_classification": "Pattern B (separate el + uppvärmning + vatten och avlopp)",
+    "evidence_pages": [14]
+  },
+
+  "members_agent": {
+    "total_members": 351,
+    "member_changes_2023": "38 överlåtelseavtal inkommit (fg år inkom 45)",
+    "ownership_transfers": 38,
+    "ownership_transfers_note": "Vid försäljning (överlåtelse) av en lägenhet är det viktigt att den överlåtna lägenheten kan identifieras på ett säkert sätt. Därför ska ett överlåtelsekontrakt - precis som under alla tidigare år - ange det tresiffriga lägenhetsnumret som Brf Hjorthagshus angrivet för lägenheten",
+    "waiting_list": null,
+    "fyrsjiffriga_lägenhetsnummer": "Detta nummer är också samma bostadsrättshavares medlemsnummer som används vid exempelvis den årliga föreningsstämman, vid ansökningar om andrahandsuthyrning eller all annan kontakt med föreningens styrelse. Lägenhetsnumret ska även användas vid belåning av lägenheten (pantsättning) hos en bank",
+    "evidence_pages": [4]
+  },
+
+  "audit_agent": {
+    "auditor_name": "Elias Haraldsson",
+    "auditor_firm": "Moore Allegretto AB",
+    "auditor_type": "Auktoriserad revisor",
+    "audit_date": "2024-03-22",
+    "audit_location": "Stockholm",
+    "audit_opinion": "Godkänd utan anmärkningar",
+    "qualifications": "Inga anmärkningar",
+    "revision_type": "Extern revision enligt ISA och god revisionssed i Sverige",
+    "evidence_pages": [18, 21, 22, 23]
+  },
+
+  "events_agent": {
+    "significant_events_2023": [
+      "Reparation/Underhåll slutförd 2023: 1 470 949 kr (vattenskador 1 106 056 kr största)",
+      "Planerat underhåll: 626 847 kr",
+      "Spolning av vertikala stammar i hela föreningen genomförd (del av löpande underhåll)",
+      "Takrenovering Krängedevägen och Motalavägen klar",
+      "Takrenovering Untravägen och Älvkarleövägen påbörjad (fortsätter 2024)",
+      "Solceller förstudie genomförd (bygglovsansökan upcoming)",
+      "IMD-el installation slutförd (medlemmar debiteras nu enl tariff baserad på egen kWh-förbrukning)",
+      "Byte av tvättmaskiner pågående (när de når slutet av livslängd)",
+      "38 överlåtelseavtal (ägarbyten)",
+      "Nytt lån 4 000 000 kr upptaget",
+      "6% avgiftshöjning beslutad från 2024-01-01",
+      "Tredubblade tomträttsavgäld från Stockholm Stad (räntekrissens påverkan)"
+    ],
+    "warranty_claims": null,
+    "tenant_changes": "38 ägarbyten",
+    "loan_restructuring": "Upptagna lån 4 000 000 kr",
+    "rental_activity": null,
+    "technical_management_change": null,
+    "major_projects": "Pågående nyanläggningar 4 000 000 kr (tak, rör, IMD-el, tvättmaskiner)",
+    "interest_rate_impact": "Räntekostnader ökade från 74 tkr till 392 tkr (+425%) - KRAFTIGASTE ÖKNING I CORPUS",
+    "stockholm_stad_rent_increase": "Ett friköp av tomten av Stockholm Stad var inte ekonomiskt genomförbart och med de ökade räntekostnaderna vi sett under 2023 så känns de beslutet rätt i rådande situation",
+    "evidence_pages": [5]
+  },
+
+  "planned_actions_agent": {
+    "short_term_actions": [
+      {"action": "Färdigställa takrenovering Untravägen och Älvkarleövägen", "timeframe": "2024", "priority": "Hög"},
+      {"action": "Bygglovsansökan för solceller", "timeframe": "2024", "priority": "Hög"},
+      {"action": "Fortsätta byte av tvättmaskiner", "timeframe": "2024", "priority": "Normal"},
+      {"action": "Omförhandla tomträtt med Stockholm Stad", "timeframe": "Före 2025-04-01", "priority": "Kritisk"}
+    ],
+    "long_term_actions": [
+      {"action": "Underhållsplan uppd årligen med investering 10-15 år", "timeframe": "10-15 år", "priority": "Normal"},
+      {"action": "Installera solceller (pending bygglov)", "timeframe": "2024-2025", "priority": "Hög"}
+    ],
+    "maintenance_strategy": "I samarbete med Bredablick har styrelsen tagit fram en underhållsplan som uppdateras årligen och sträcker sig 50 år framåt. Den uppdaterad underhållsplanen ger en god överblick över ökat och investering som behöver prioriteras kommande 10-15 år",
+    "capital_projects": [
+      {
+        "project": "Takrenovering",
+        "status": "Pågående",
+        "budget": null,
+        "spent": null,
+        "financing": "Del av 4M kr lån"
+      },
+      {
+        "project": "Solceller",
+        "status": "Förstudie klar, bygglov upcoming",
+        "budget": null,
+        "spent": null,
+        "financing": "TBD efter föreningsstämma beslut"
+      },
+      {
+        "project": "IMD-el installation",
+        "status": "Slutförd 2023",
+        "budget": null,
+        "spent": null,
+        "financing": "Del av 4M kr lån"
+      }
+    ],
+    "evidence_pages": [5]
+  },
+
+  "metadata_agent": {
+    "extraction_date": "2025-10-15",
+    "extraction_confidence": 0.98,
+    "data_completeness": 0.95,
+    "evidence_ratio": 1.0,
+    "fields_extracted": 160,
+    "agents_successful": 16,
+    "pattern_classification": {
+      "utility_pattern": "Pattern B",
+      "accounting_standard": "K3",
+      "building_age_category": "Very Old (88 years)",
+      "financial_stress_level": "Medium (soliditet 46%, refinancing risk 2024)",
+      "renovation_status": "Active ongoing projects (tak, IMD-el, tvättmaskiner)",
+      "size_category": "Very Large (351 bostadsrätt + 14 lokaler = 365 units)"
+    },
+    "key_insights": [
+      "LARGEST BRF YET: 365 total units (351 bostadsrätt + 1 lokal bostadsrätt + 13 hyresrätt lokaler)",
+      "SECOND OLDEST: Built 1935 (88 years old, only 3 years younger than brf_271949)",
+      "MOST PROPERTIES: 9 properties in Hjorthagen",
+      "Pattern B utilities confirmed (8/9 = 88.9%)",
+      "K3 accounting (4th example, updates frequency to 44.4%)",
+      "ALL LOANS MATURE 2024 - same refinancing risk pattern as brf_48574",
+      "HIGHEST INTEREST RATE IMPACT: +425% (74K → 392K) - most severe in corpus!",
+      "NEW LOAN 2023: 4M kr for pågående nyanläggningar",
+      "INNOVATIVE: IMD-el system (individual member electricity billing)",
+      "HIGH MARKET ACTIVITY: 38 ownership transfers in 2023",
+      "Tomträtt expires 2025-04-01 (renegotiation critical)",
+      "6% fee increase for 2024 (cost pressure)",
+      "Bredablick property management since 2017",
+      "Low soliditet (46%) but stable with profit 2M kr"
+    ],
+    "processing_notes": "Very large and complex BRF with 9 properties, 365 units, 88 years old. Multiple ongoing projects (tak, IMD-el, solceller). Interest rate crisis impact most severe seen (+425%). All loans mature 2024 creating refinancing risk. Tomträtt contract critical renegotiation needed before 2025-04-01."
+  }
+}
