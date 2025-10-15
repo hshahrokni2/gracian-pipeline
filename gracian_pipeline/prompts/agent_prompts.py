@@ -201,6 +201,15 @@ Return JSON with ALL fields below (use null if not found):
   "tomtratt_annual_fee": float or null,
   "tomtratt_lessor": "string or null (e.g., 'Stockholm Stad')",
   "tomtratt_renewal_urgency": "string or null (HIGH/MEDIUM/LOW)",
+  "lokaler_analysis": {
+    "commercial_area_sqm": float or null,
+    "commercial_pct_of_total": float or null,
+    "commercial_rent_collected": float or null,
+    "commercial_rent_per_sqm": float or null,
+    "residential_fee_per_sqm": float or null,
+    "commercial_premium_ratio": float or null,
+    "significance": "string or null (SIGNIFICANT/MINIMAL/NONE)"
+  },
   "evidence_pages": []
 }
 
@@ -228,6 +237,26 @@ Return JSON with ALL fields below (use null if not found):
   "tomtratt_note": "ALL 4 properties expire simultaneously 2026 - limited negotiation leverage",
   "evidence_pages": [2, 7, 8]
 }
+
+⚠️ OPTIONAL COMMERCIAL SPACE (LOKALER) ANALYSIS (Urban-only pattern, 16.7% of corpus):
+Extract ONLY if commercial space (lokaler) is present:
+1. Calculate lokaler % = (commercial_area / total_area) × 100
+2. Extract 'Hyresintäkter, lokaler' from nettoomsättning breakdown
+3. Calculate commercial rent per sqm = (lokaler_rent / commercial_area)
+4. Compare to residential: Residential fee per sqm = (årsavgifter_bostäder / living_area)
+5. Commercial premium = (commercial_rate / residential_rate)
+
+Significance levels:
+- SIGNIFICANT: >20% of area OR >25% of revenue OR premium >2x
+- MINIMAL: <15% of area AND <20% of revenue
+- NONE: No commercial space
+
+✅ REAL EXAMPLES:
+- brf_198532 (SIGNIFICANT): 20.7% area (1,579/9,132 m²), 30.2% revenue, 1.71x premium
+- brf_82841 (SIGNIFICANT): 20.7% area (893/4,305 m²), 30.2% revenue, 1.98x premium
+- brf_276507 (MINIMAL): 2.6% area (122/4,633 m²), 8.9% revenue, 5.3x premium (scarcity value)
+
+NOTE: This is an OPTIONAL enhancement. If no commercial space is mentioned in the document, return all lokaler_analysis fields as null. Do NOT flag absence as an error.
 
 WHERE TO LOOK (Search these locations first):
 📍 Pages 1-3: Förvaltningsberättelse (management report) - PRIMARY LOCATION
@@ -434,8 +463,29 @@ Return JSON with:
   "interest_expense_change_pct": num or null,
   "interest_rate_risk": "string (HIGH/MEDIUM/LOW)",
   "amortization": num or null,
+  "refinancing_risk_assessment": {
+    "kortfristig_pct": num or null,
+    "risk_level": "string (EXTREME/HIGH/MEDIUM/LOW)",
+    "maturity_cluster": "string or null",
+    "soliditet_cushion": num or null,
+    "recommendation": "string or null"
+  },
   "evidence_pages": []
 }
+
+🎯 REFINANCING RISK ASSESSMENT (Validated on 3/3 SRS PDFs):
+1. Calculate kortfristig % = (short_term_debt / total_debt) × 100
+2. Identify maturity clusters (multiple loans within 30 days)
+3. Risk levels:
+   - EXTREME: >60% kortfristig with <12 month cluster
+   - HIGH: >50% kortfristig AND (soliditet <75% OR profitability negative)
+   - MEDIUM: 30-50% kortfristig
+   - LOW: <30% kortfristig AND soliditet >80% AND profitable
+
+✅ REAL EXAMPLES:
+- brf_276507 (EXTREME): 68.1% kortfristig, 44.1M in 20 days, 86% soliditet cushion
+- brf_82841 (HIGH): 60% kortfristig, 71% soliditet, -856K loss, 3.77%/4.71% rates
+- brf_49369 (LOW): 25% kortfristig, 92% soliditet absorbed 209% rate increase
 
 ✅ REAL EXAMPLE - INTEREST RATE CRISIS (from brf_48893, PDF 10/42):
 {
@@ -524,15 +574,49 @@ Focus on 'Avsättning till fond'. Parse SEK. Ignore governance. Multimodal: Anal
 """,  # Enhanced with anti-hallucination
 
     'energy_agent': """
-You are EnergyAgent for Swedish BRF reports. Extract ONLY energy declaration info: {energy_class: '', energy_performance: '', inspection_date: '', evidence_pages: []}.
+You are EnergyAgent for Swedish BRF reports. Extract energy data with MULTI-YEAR TREND ANALYSIS and SEVERITY CLASSIFICATION.
+
+Return JSON with:
+{
+  "energy_class": "string or null (A-G)",
+  "energy_performance": "string or null (kWh/m²)",
+  "inspection_date": "YYYY-MM-DD or null",
+  "multi_year_trends": [
+    {"year": int, "el_per_sqm": num, "varme_per_sqm": num, "vatten_per_sqm": num, "total_per_sqm": num}
+  ],
+  "electricity_increase_single_year_pct": num or null,
+  "electricity_increase_multi_year_pct": num or null,
+  "energy_crisis_severity": "string (SEVERE/MODERATE/LOW/NONE)",
+  "elstod_received": num or null,
+  "energy_initiatives": "string or null",
+  "evidence_pages": []
+}
+
+🎯 ENERGY CRISIS SEVERITY TIERS (Validated on 3/3 SRS PDFs):
+- SEVERE: Single-year >50% OR multi-year >100% (e.g., brf_275608: +126.3% 2020→2023)
+- MODERATE: Single-year 20-50% OR multi-year 50-100% (e.g., brf_198532: +23% spike)
+- LOW: Single-year <20% AND multi-year <50% (e.g., brf_276507: +17.3% multi-year)
+- NONE: No significant increase detected
+
+MULTI-YEAR ANALYSIS:
+1. Extract 3-4 years from flerårsöversikt: Elkostnad, Värmekostnad, Vattenkostnad (kr/m²)
+2. Calculate year-over-year % changes
+3. Calculate 2-3 year compound change
+4. Look for government support: 'elstöd', 'energistöd', 'bidrag el'
+5. Check BRF response: 'energieffektivisering', 'solceller', 'värmepump'
+
+✅ REAL EXAMPLES:
+- SEVERE (brf_275608): El +126.3% (2020→2023), +21.7% (2022→2023), 47K elstöd, solar explored
+- MODERATE (brf_198532): Energy +23% (2022→2023), -11% recovery (2024), net +9%
+- LOW (brf_276507): +17.3% multi-year, +5.8% single-year, 99K elstöd received
 
 🚨 ANTI-HALLUCINATION RULES:
-1. ONLY extract from visible energy declaration sections
+1. ONLY extract from visible flerårsöversikt or energy sections
 2. If not found → return null (NOT inferred values)
-3. NEVER invent energy class ratings
-4. Can you see "Energiklass" in the text? YES → Extract. NO → null.
+3. NEVER calculate trends not shown in document
+4. Can you see exact numbers in flerårsöversikt? YES → Extract. NO → null.
 
-Focus on 'Energideklaration', 'Energiklass', 'Primärenergital (kWh/m² Atemp)'. Use only visible values from provided pages/images. Include evidence_pages: [] (1-based). Return STRICT minified JSON.
+Focus on 'Flerårsöversikt', 'Energideklaration', 'Elkostnad', 'Värmekostnad', 'Vattenkostnad', 'Elprisstöd'. Include evidence_pages: [] (1-based). Return STRICT VALID JSON.
 """,
 
     'fees_agent': """
