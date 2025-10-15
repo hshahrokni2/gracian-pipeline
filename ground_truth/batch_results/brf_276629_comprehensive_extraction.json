@@ -1,0 +1,471 @@
+{
+  "metadata_agent": {
+    "organization_number": "769632-2663",
+    "organization_name": "Bostadsrättsföreningen Stockholm Esplanad",
+    "fiscal_year_start": "2022-01-01",
+    "fiscal_year_end": "2022-12-31",
+    "report_date": "2022-12-31",
+    "accounting_standard": "K2",
+    "pages_total": 22,
+    "report_type": "årsredovisning",
+    "property_manager": "SBC (ekonomisk), Wiab (fastighetsförvaltning)",
+    "evidence_pages": [1, 3, 4, 12]
+  },
+
+  "governance_agent": {
+    "chairman": "Christina Tiger",
+    "vice_chairman": null,
+    "treasurer": null,
+    "secretary": null,
+    "board_members": [
+      {"name": "Christina Tiger", "role": "Ordförande"},
+      {"name": "Peter Berg Lindberg", "role": "Ledamot"},
+      {"name": "Henrik Berglund", "role": "Ledamot"},
+      {"name": "Yvonne Borg", "role": "Ledamot"},
+      {"name": "Andreea-Alexandra Celamar", "role": "Ledamot"},
+      {"name": "Pia Danielsson", "role": "Ledamot"},
+      {"name": "Marie Lindén", "role": "Ledamot"},
+      {"name": "Stefan Hilding Kennegård", "role": "Suppleant"},
+      {"name": "Einat Robinsson", "role": "Suppleant"},
+      {"name": "Jasmina Vacic", "role": "Suppleant"}
+    ],
+    "board_size": 10,
+    "board_meetings_count": 11,
+    "annual_meeting_date": "2022-05-03",
+    "extra_meeting_dates": [],
+    "valberedning": ["Isabella Alveborg", "Stefan Danielsson", "Josephine Fransson"],
+    "firmateckning": "Kollektivt bostadsrättstillågg för medlemmarna",
+    "evidence_pages": [3, 4, 18]
+  },
+
+  "audit_agent": {
+    "auditor_name": "Pontus Ohlsson",
+    "auditor_firm": "Ernst & Young AB",
+    "auditor_type": "Auktoriserad revisor",
+    "audit_report_pages": 2,
+    "audit_opinion": "Utan anmärkning",
+    "evidence_pages": [4, 19, 20]
+  },
+
+  "property_agent": {
+    "property_designation": "Backåkra 4",
+    "total_area_sqm": 6355,
+    "living_area_sqm": 6215,
+    "commercial_area_sqm": 140,
+    "bostadsratter_count": 91,
+    "apartment_breakdown": {
+      "1_rok": 0,
+      "2_rok": 28,
+      "3_rok": 42,
+      "4_rok": 20,
+      "5_rok": 1,
+      "total": 91
+    },
+    "construction_year": "2017-2018",
+    "property_insurance": "Brandkontoret (fullvärdesförsäkring)",
+    "taxeringsvarde_building": 217557000,
+    "taxeringsvarde_mark": 187814000,
+    "taxeringsvarde_total": 405371000,
+    "samfallighet_membership": "Backåkra Samfällighetsförening",
+    "samfallighet_share_pct": 26.0,
+    "samfallighet_description": "Förvaltar gemensamma utrymmen (GA:1 och Backåkra GA:2, GA:1 om avser gata, ledningsanläggningar, garage och BRF:s andel är 23,5%, GA:2 som avser gård och sopsug är andel 54%)",
+    "lokaler_analysis": {
+      "commercial_area_sqm": 140.0,
+      "commercial_pct_of_total": 2.20,
+      "commercial_rent_collected": 367971.0,
+      "commercial_rent_per_sqm": 2628.36,
+      "residential_fee_per_sqm": 670.0,
+      "commercial_premium_ratio": 3.92,
+      "significance": "MINIMAL"
+    },
+    "verksamhet_i_lokaler": "Stockholmstad Bibliotek (140 m², löptid 2023)",
+    "evidence_pages": [4, 6, 12, 15]
+  },
+
+  "financial_agent": {
+    "assets_total": 657099019,
+    "equity_total": 562375237,
+    "liabilities_total": 94723782,
+    "net_revenue": 6146496,
+    "profit_loss": -1274802,
+    "soliditet_pct": 86.0,
+    "cash_and_bank": 2800402,
+    "nettoomsattning": 6146496,
+    "nettoomsattning_breakdown": {
+      "arsavgifter_bostader": 4164168,
+      "hyror_lokaler_momspliktiga": 367971,
+      "hyror_garage_moms": 938820,
+      "hyror_forrad": 53810,
+      "varmvattenintakter": 137777,
+      "elintakter_moms": 306634,
+      "overlatelse_pantsattning": 25358,
+      "avgift_andrahandsuthyrning": 16815,
+      "oresutjamning": 84,
+      "total": 6011436
+    },
+    "other_income": 135060,
+    "total_revenue": 6146496,
+    "balansomslutning": 657099019,
+    "kundfordringar": null,
+    "evidence_pages": [5, 7, 9, 10, 11]
+  },
+
+  "operating_costs_agent": {
+    "total_driftskostnader": 2273803,
+    "fastighetsskotsel": 584265,
+    "reparationer_underhall": 73702,
+    "taxebundna_kostnader": 909839,
+    "ovriga_driftskostnader": 700105,
+    "el": 443023,
+    "varme": 392406,
+    "vatten": 48714,
+    "sophamtning": 25696,
+    "fastighetsforsak ringar": 105811,
+    "tomtrattsavgald": null,
+    "kabel_tv": 259760,
+    "fastighetsskatt": 5892,
+    "hiss_underhall": 23759,
+    "sotning_ventilation": 8093,
+    "ventilation_major_work": null,
+    "varmeanlaggning_major_work": null,
+    "evidence_pages": [13]
+  },
+
+  "loans_agent": {
+    "total_debt": 93530016,
+    "long_term_debt": 64600259,
+    "short_term_debt": 28929757,
+    "loans": [
+      {
+        "lender": "SEB",
+        "loan_id": "Loan 1",
+        "amount": 28428333,
+        "interest_rate_pct": 3.040,
+        "maturity_date": "2023-06-28",
+        "villkorsandringsdag": "2023-06-28",
+        "maturity_classification": "short_term"
+      },
+      {
+        "lender": "SEB",
+        "loan_id": "Loan 2",
+        "amount": 31673350,
+        "interest_rate_pct": 1.430,
+        "maturity_date": "2024-06-28",
+        "villkorsandringsdag": "2024-06-28",
+        "maturity_classification": "short_term"
+      },
+      {
+        "lender": "SEB",
+        "loan_id": "Loan 3",
+        "amount": 33428333,
+        "interest_rate_pct": 3.690,
+        "maturity_date": "2025-06-28",
+        "villkorsandringsdag": "2025-06-28",
+        "maturity_classification": "long_term"
+      }
+    ],
+    "average_interest_rate_pct": 2.72,
+    "debt_per_sqm": 14709,
+    "projected_debt_5_years": 91022896,
+    "loan_restructuring_note": "Five year debt calculation in note shows projected decrease from 93.5M to 91.0M by 2027",
+    "refinancing_risk_assessment": {
+      "kortfristig_pct": 30.9,
+      "risk_level": "MEDIUM",
+      "maturity_cluster": "60.1M matures within 12 months (64.2% of total)",
+      "soliditet_cushion": 86.0,
+      "recommendation": "MEDIUM risk - 30.9% kortfristig debt with strong 86% soliditet cushion provides substantial buffer. Two loans (60.1M) mature June 2023-2024 but healthy equity position reduces refinancing pressure."
+    },
+    "evidence_pages": [16]
+  },
+
+  "fees_agent": {
+    "fee_per_sqm_annual": 670,
+    "fee_increase_pct": 10.0,
+    "fee_increase_date": "2023-01-01",
+    "fee_increase_reason": "Enligt styrelsens beslut höjdes årsavgifterna med 10% från och med 1 januari 2023 med reservation för ytterligare höjningar under 2023 om rånorna ökar mer än beräknat",
+    "multiple_increases": false,
+    "fee_history": [
+      {"year": 2022, "fee_per_sqm": 670},
+      {"year": 2021, "fee_per_sqm": 670},
+      {"year": 2020, "fee_per_sqm": 670},
+      {"year": 2019, "fee_per_sqm": 391}
+    ],
+    "evidence_pages": [3, 6]
+  },
+
+  "energy_agent": {
+    "energy_class": null,
+    "energy_performance": null,
+    "inspection_date": null,
+    "elkostnad_per_sqm": 70,
+    "varmekostnad_per_sqm": 62,
+    "vattenkostnad_per_sqm": 8,
+    "energikostnad_per_sqm_total": 140,
+    "multi_year_trends": [
+      {"year": 2022, "el_per_sqm": 70, "varme_per_sqm": 62, "vatten_per_sqm": 8, "total_per_sqm": 140},
+      {"year": 2021, "el_per_sqm": 46, "varme_per_sqm": 59, "vatten_per_sqm": 7, "total_per_sqm": 112},
+      {"year": 2020, "el_per_sqm": 36, "varme_per_sqm": 56, "vatten_per_sqm": 11, "total_per_sqm": 103},
+      {"year": 2019, "el_per_sqm": 21, "varme_per_sqm": 29, "vatten_per_sqm": 1, "total_per_sqm": 51}
+    ],
+    "electricity_increase_single_year_pct": 52.2,
+    "electricity_increase_multi_year_pct": 233.3,
+    "heating_increase_single_year_pct": 5.1,
+    "water_increase_single_year_pct": 14.3,
+    "energy_crisis_severity": "SEVERE",
+    "elstod_received": null,
+    "energy_initiatives": "Föreningen har gjort en energikartläggning för att reda på hur vi kan effektivisera vår energianvändning. Föreningen har laddstolpar för elbilar i anslutning till våra parkeringsplatser.",
+    "evidence_pages": [5, 6, 13]
+  },
+
+  "reserves_agent": {
+    "underhallsfond_balance": 1053043,
+    "underhallsfond_previous": 645951,
+    "underhallsfond_change": 407092,
+    "reservering_till_fond": 303508,
+    "underhallsplan_exists": true,
+    "underhallsplan_period": "2022-2051",
+    "evidence_pages": [7, 16]
+  },
+
+  "members_agent": {
+    "total_members_start": 159,
+    "new_members": 22,
+    "departing_members": 23,
+    "total_members_end": 158,
+    "transfers_during_year": 11,
+    "beviljade_andrahandsuthyrningar": 3,
+    "evidence_pages": [6]
+  },
+
+  "events_agent": {
+    "major_events": [
+      {
+        "event": "Fee increase decision",
+        "date": "2022",
+        "description": "Styrelsen beslut att höja årsavgifterna med 10% från 1 januari 2023",
+        "impact": "670 kr/m² maintained 2022, 10% increase planned 2023"
+      },
+      {
+        "event": "Energy mapping initiative",
+        "date": "2022",
+        "description": "Energikartläggning för att effektivisera energianvändning",
+        "impact": "Energy optimization study conducted"
+      },
+      {
+        "event": "Charging station installation",
+        "date": "2022",
+        "description": "Laddstolpar för elbilar i anslutning till parkeringsplatser",
+        "impact": "EV charging infrastructure added"
+      },
+      {
+        "event": "Underhållsplan adoption",
+        "date": "2022",
+        "description": "Föreningen följer en underhållsplan som sträcker sig mellan åren 2022 och 2051",
+        "impact": "30-year maintenance plan established"
+      },
+      {
+        "event": "10 new charging stations samfällighet",
+        "date": "2022",
+        "description": "10 nya laddstolpar i gemensam anläggning (GA:5, i garaget)",
+        "impact": "Samfällighet infrastructure improvement"
+      }
+    ],
+    "evidence_pages": [3, 5, 6]
+  },
+
+  "notes_maintenance_agent": {
+    "major_maintenance_completed": [
+      {
+        "year": 2023,
+        "description": "OVK-besiktning av fastigheten planeras (Not 16)"
+      }
+    ],
+    "planned_maintenance": [
+      {
+        "period": "2023",
+        "description": "OVK (Obligatorisk ventilationskontroll) planeras"
+      }
+    ],
+    "maintenance_expenses_major": {
+      "reparationer_total": 73702,
+      "gemensamma_utrymmen": 26270,
+      "hiss": 23759,
+      "ventilation": 8093,
+      "las": 7717,
+      "tak": 5956,
+      "garage_parkering": 1908
+    },
+    "underhallsplan_period": "2022-2051",
+    "evidence_pages": [13, 17]
+  },
+
+  "insurance_agent": {
+    "insurance_provider": "Brandkontoret",
+    "insurance_type": "Fullvärdesförsäkring",
+    "insurance_premium": 105811,
+    "property_coverage": null,
+    "liability_coverage": null,
+    "evidence_pages": [4, 13]
+  },
+
+  "tax_agent": {
+    "fastighetsskatt": 5892,
+    "fastighetsavgift_exemption": true,
+    "exemption_years": "Bostadshus med tillhörande tomtmark, dock blir avgiften högst 1 519 kr per bostadslägenhet. Lokaler beskattas med 1 procent av lokalernas taxeringsvärde. Föreningen är befriad från fastighetsavgiften de första femton åren. Detta utgår från föreningens nybyggnadsår 2019.",
+    "skattekonto_balance": 31844,
+    "moms_avrakning": null,
+    "taxeringsvarde_bostader": 401000000,
+    "taxeringsvarde_lokaler": 4371000,
+    "uppdelning_taxeringsvarde_note": "Taxeringsvärde byggnad 217 557 000 kr, taxeringsvärde mark 187 814 000 kr",
+    "evidence_pages": [6, 15]
+  },
+
+  "planned_actions_agent": {
+    "planned_actions": [
+      {
+        "action": "OVK-besiktning",
+        "status": "Planeras 2023",
+        "description": "Obligatorisk ventilationskontroll av fastigheten"
+      },
+      {
+        "action": "Fee increase review",
+        "status": "Beslutad 10% höjning 2023-01-01",
+        "description": "Med reservation för ytterligare höjningar under 2023 om räntor ökar mer än beräknat"
+      }
+    ],
+    "evidence_pages": [3, 17]
+  },
+
+  "cashflow_agent": {
+    "cash_flow_statement_present": false,
+    "cash_start_of_year": 2245139,
+    "cash_end_of_year": 2800402,
+    "cash_change": 555263,
+    "cash_from_operations": null,
+    "cash_from_investments": null,
+    "cash_from_financing": null,
+    "evidence_pages": [5, 11]
+  },
+
+  "depreciation_agent": {
+    "total_depreciation": 3126327,
+    "building_depreciation_rate_pct": null,
+    "property_improvements_depreciation_rate_pct": null,
+    "accumulated_depreciation": 11202483,
+    "ack_anskaffningsvarde": 664763425,
+    "restvarde_enligt_plan": 653560942,
+    "mark_value_included": 289421000,
+    "evidence_pages": [9, 14, 15]
+  },
+
+  "driftskostnader_agent": {
+    "total_driftskostnader": 2273803,
+    "fastighetsskotsel": 584265,
+    "reparationer_underhall": 73702,
+    "el": 443023,
+    "uppvarmning": 392406,
+    "vatten": 48714,
+    "sophamtning": 25696,
+    "fastighetsforsak ringar": 105811,
+    "tomtrattsavgald": null,
+    "kabel_tv": 259760,
+    "fastighetsskatt": 5892,
+    "ventilation_major": 8093,
+    "varmeanlaggning_major": null,
+    "ovriga_externa_kostnader": 260656,
+    "personalkostnader": 123613,
+    "evidence_pages": [13, 14]
+  },
+
+  "commercial_tenants_agent": {
+    "has_commercial_space": true,
+    "total_commercial_area_sqm": 140,
+    "commercial_rent_collected": 367971,
+    "commercial_rent_pct_of_revenue": 6.0,
+    "tenant_name": "Stockholmstad Bibliotek",
+    "lease_expiry": "2023",
+    "commercial_rent_per_sqm": 2628.36,
+    "evidence_pages": [4, 6, 12]
+  },
+
+  "revenue_breakdown_agent": {
+    "arsavgifter_bostader": 4164168,
+    "hyror_lokaler": 367971,
+    "hyror_garage": 938820,
+    "hyror_forrad": 53810,
+    "varmvattenintakter": 137777,
+    "elintakter": 306634,
+    "bredband": null,
+    "overlatelseavgift": 25358,
+    "andrahandsuthyrning": 16815,
+    "pantsattningsavgift": null,
+    "fakturerade_kostnader": 84,
+    "elstod": null,
+    "ovriga_intakter": 135060,
+    "nettoomsattning": 6011436,
+    "ovriga_rorelseintakter": 135060,
+    "total_revenue": 6146496,
+    "evidence_pages": [9, 12]
+  },
+
+  "enhanced_loans_agent": {
+    "total_debt": 93530016,
+    "long_term_debt": 64600259,
+    "short_term_debt": 28929757,
+    "kortfristig_pct": 30.9,
+    "loans_detail": [
+      {
+        "lender": "SEB",
+        "amount": 28428333,
+        "interest_rate_pct": 3.040,
+        "maturity_date": "2023-06-28",
+        "villkorsandringsdag": "2023-06-28",
+        "months_to_maturity": 6,
+        "classification": "short_term"
+      },
+      {
+        "lender": "SEB",
+        "amount": 31673350,
+        "interest_rate_pct": 1.430,
+        "maturity_date": "2024-06-28",
+        "villkorsandringsdag": "2024-06-28",
+        "months_to_maturity": 18,
+        "classification": "short_term"
+      },
+      {
+        "lender": "SEB",
+        "amount": 33428333,
+        "interest_rate_pct": 3.690,
+        "maturity_date": "2025-06-28",
+        "villkorsandringsdag": "2025-06-28",
+        "months_to_maturity": 30,
+        "classification": "long_term"
+      }
+    ],
+    "average_interest_rate_pct": 2.72,
+    "weighted_average_rate_pct": 2.72,
+    "debt_per_sqm": 14709,
+    "interest_cost_annual": 1641693,
+    "interest_coverage_ratio": 0.22,
+    "projected_scenarios": {
+      "current_rate": 2545118,
+      "plus_1pct": 3480418,
+      "plus_2pct": 4415718,
+      "plus_3pct": 5351018
+    },
+    "refinancing_risk_assessment": {
+      "kortfristig_pct": 30.9,
+      "risk_level": "MEDIUM",
+      "maturity_cluster": "60.1M matures within 18 months (June 2023-2024)",
+      "soliditet_cushion": 86.0,
+      "profitability_status": "negative",
+      "recommendation": "MEDIUM risk - Despite 30.9% short-term debt and negative result (-1.27M kr), exceptional 86% soliditet provides substantial refinancing buffer. Maturity cluster of 60.1M (64.2%) within 18 months requires attention but strong equity position (562M kr) significantly reduces refinancing pressure."
+    },
+    "lender_concentration": {
+      "single_lender": true,
+      "lender_name": "SEB",
+      "concentration_pct": 100.0
+    },
+    "evidence_pages": [9, 11, 16]
+  }
+}
