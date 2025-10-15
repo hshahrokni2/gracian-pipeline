@@ -141,7 +141,7 @@ def validate_pdf(pdf_path: str, output_dir: str = "results/phase4_validation") -
             "populated_fields": 0,
             "empty_fields": 0,
             "field_details": {},
-            "priority_breakdown": {"P0": {}, "P1": {}, "P2": {}},
+            "priority_breakdown": {},  # Will be populated dynamically
             "balance_check": None,
             "evidence_ratio": 0.0,
         }

@@ -1,0 +1,83 @@
+🔍 Quick Classification Starting...
+📄 Analyzing 34 candidate PDFs
+
+ 1. 📝 brf_198532.pdf                 - machine_readable (19p, 11,611 chars, 0.0% img)
+ 2. 🖼️ brf_268882.pdf                 - scanned         (28p, 0 chars, 147.3% img)
+ 3. 📝 brf_53546.pdf                  - machine_readable (15p, 11,208 chars, 0.0% img)
+ 4. 🖼️ brf_266956.pdf                 - scanned         (18p, 0 chars, 100.0% img)
+ 5. 📝 brf_268411.pdf                 - machine_readable (17p, 8,365 chars, 0.0% img)
+ 6. 📝 brf_271852.pdf                 - machine_readable (18p, 8,701 chars, 0.4% img)
+ 7. 📝 brf_271949.pdf                 - machine_readable (14p, 8,244 chars, 0.0% img)
+ 8. 🖼️ brf_44232.pdf                  - scanned         (26p, 36 chars, 80.0% img)
+ 9. 📝 brf_46160.pdf                  - machine_readable (19p, 8,232 chars, 0.0% img)
+10. 📝 brf_48574.pdf                  - machine_readable (24p, 7,996 chars, 0.0% img)
+11. 📝 brf_48893.pdf                  - machine_readable (22p, 9,973 chars, 0.7% img)
+12. 📝 brf_49369.pdf                  - machine_readable (17p, 10,070 chars, 0.6% img)
+13. 📝 brf_58306.pdf                  - machine_readable (13p, 8,219 chars, 0.0% img)
+14. 🖼️ brf_78906.pdf                  - scanned         (20p, 0 chars, 138.4% img)
+15. 📝 brf_79568.pdf                  - machine_readable (19p, 10,589 chars, 2.3% img)
+16. 🔀 brf_81563.pdf                  - hybrid          (21p, 4,016 chars, 15.3% img)
+17. 🖼️ brf_82841.pdf                  - scanned         (23p, 0 chars, 146.2% img)
+18. 📝 brf_275608.pdf                 - machine_readable (19p, 9,763 chars, 2.4% img)
+19. 🔀 brf_276507.pdf                 - hybrid          (20p, 8,519 chars, 12.2% img)
+20. 🖼️ brf_276629.pdf                 - scanned         (22p, 0 chars, 0.0% img)
+21. 📝 brf_276796.pdf                 - machine_readable (23p, 10,603 chars, 0.7% img)
+22. 📝 brf_280938.pdf                 - machine_readable (21p, 10,680 chars, 0.7% img)
+23. 🖼️ brf_282765.pdf                 - scanned         (23p, 0 chars, 12.1% img)
+24. 🖼️ brf_43334.pdf                  - scanned         (19p, 0 chars, 100.0% img)
+25. 🖼️ brf_47809.pdf                  - scanned         (15p, 0 chars, 102.9% img)
+26. 📝 brf_47903.pdf                  - machine_readable (23p, 10,603 chars, 0.7% img)
+27. 📝 brf_48663.pdf                  - machine_readable (17p, 9,521 chars, 0.8% img)
+28. 📝 brf_52576.pdf                  - machine_readable (15p, 8,935 chars, 0.0% img)
+29. 🔀 brf_53107.pdf                  - hybrid          (21p, 1,095 chars, 5.5% img)
+30. 🔀 brf_54015.pdf                  - hybrid          (20p, 10,346 chars, 12.2% img)
+31. 🖼️ brf_57125.pdf                  - scanned         (19p, 0 chars, 5.5% img)
+32. 📝 brf_58256.pdf                  - machine_readable (20p, 9,996 chars, 0.0% img)
+33. 🔀 brf_76536.pdf                  - hybrid          (19p, 834 chars, 11.8% img)
+34. 📝 brf_77241.pdf                  - machine_readable (17p, 8,089 chars, 0.0% img)
+
+================================================================================
+📊 CLASSIFICATION SUMMARY
+
+Machine-Readable: 19 PDFs
+Scanned:          10 PDFs
+Hybrid:           5 PDFs
+Errors:           0 PDFs
+================================================================================
+
+🎯 SELECTING 7 DIVERSE TEST SAMPLES
+
+================================================================================
+📋 SELECTED TEST CORPUS (7 PDFs)
+================================================================================
+
+Category: FINANCIAL (2 PDFs)
+  ✅ experiments/docling_advanced/test_pdfs/brf_198532.pdf
+     Type: machine_readable, Pages: 19, Text: 11,611 chars, Images: 0.0%
+  ✅ SRS/brf_53546.pdf
+     Type: machine_readable, Pages: 15, Text: 11,208 chars, Images: 0.0%
+
+Category: GOVERNANCE (2 PDFs)
+  ✅ Hjorthagen/brf_271949.pdf
+     Type: machine_readable, Pages: 14, Text: 8,244 chars, Images: 0.0%
+  ✅ Hjorthagen/brf_58306.pdf
+     Type: machine_readable, Pages: 13, Text: 8,219 chars, Images: 0.0%
+
+Category: PROPERTY (1 PDFs)
+  ✅ experiments/docling_advanced/test_pdfs/brf_268882.pdf
+     Type: scanned, Pages: 28, Text: 0 chars, Images: 147.3%
+
+Category: CONFLICT (2 PDFs)
+  ✅ Hjorthagen/brf_81563.pdf
+     Type: hybrid, Pages: 21, Text: 4,016 chars, Images: 15.3%
+  ✅ SRS/brf_276507.pdf
+     Type: hybrid, Pages: 20, Text: 8,519 chars, Images: 12.2%
+
+================================================================================
+TOTAL SELECTED: 7 PDFs
+================================================================================
+
+💾 Selection saved to: test_corpus_selection.json
+
+✅ Test corpus curation complete!
+📊 Ready for batch testing with 7 diverse PDFs

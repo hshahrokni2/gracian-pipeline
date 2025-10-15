@@ -1,0 +1,389 @@
+{
+  "_metadata": {
+    "document_title": "Årsredovisning BRF Hagelbössan 1 i Hjorthagen",
+    "creation_date": "2025-10-15",
+    "annotator": "Claudia (AI) + Human verification COMPLETE",
+    "purpose": "SEED GROUND TRUTH #1 - Manual annotation for hybrid learning strategy",
+    "pdf_type": "scanned",
+    "pdf_pages": 28,
+    "manual_verification_date": "2025-10-15",
+    "human_verified": true,
+    "verification_time_minutes": 5,
+    "verification_notes": "All 5 flagged fields verified by human. Equity value corrected from AI extraction error."
+  },
+
+  "metadata": {
+    "brf_name": "Bostadsrättsföreningen Hagelbössan 1 i Hjorthagen",
+    "brf_name_short": "BRF Hagelbössan 1",
+    "organization_number": "769615-4918",
+    "fiscal_year": 2024,
+    "fiscal_year_start": "2024-01-01",
+    "fiscal_year_end": "2024-12-31",
+    "report_type": "Årsredovisning",
+    "municipality": "Stockholm",
+    "district": "Hjorthagen",
+    "priority": "P1",
+    "confidence": 1.0,
+    "needs_verification": false,
+    "verification_note": "VERIFIED: Organization number 769615-4918 found on page 1 (cover page)",
+    "source_pages": [1]
+  },
+
+  "governance": {
+    "chairman": {
+      "value": "Ulf Dahlqvist",
+      "source_page": 4,
+      "priority": "P1",
+      "field_type": "string",
+      "confidence": 1.0
+    },
+    "board_members": {
+      "value": [
+        "Anna Bernhardina Dolonius Bensalah",
+        "Cindy Tuliao Sarceda",
+        "Eugénie Bardin",
+        "Hanna Jansson",
+        "Pieter Gruyters",
+        "Sjurður Eldeviq"
+      ],
+      "source_page": 4,
+      "priority": "P2",
+      "field_type": "array",
+      "confidence": 1.0
+    },
+    "auditor_name": {
+      "value": "Mats Lehtipalo",
+      "source_page": 5,
+      "priority": "P1",
+      "field_type": "string",
+      "confidence": 1.0
+    },
+    "audit_firm": {
+      "value": "ADECO Revisorer",
+      "source_page": 5,
+      "priority": "P2",
+      "field_type": "string",
+      "confidence": 1.0
+    },
+    "nomination_committee": {
+      "value": [
+        "Peter Brandt",
+        "Per Fernqvist"
+      ],
+      "source_page": 5,
+      "priority": "P3",
+      "field_type": "array",
+      "confidence": 1.0
+    }
+  },
+
+  "property": {
+    "designation": {
+      "value": "Hagelbössan 1",
+      "source_page": 4,
+      "priority": "P1",
+      "field_type": "string",
+      "confidence": 1.0
+    },
+    "address": {
+      "value": "Artemisgatan 3A, 3B, 5A, 5B och 7",
+      "source_page": 4,
+      "priority": "P1",
+      "field_type": "string",
+      "confidence": 1.0
+    },
+    "postal_code": {
+      "value": "113 51",
+      "source_page": 4,
+      "priority": "P2",
+      "field_type": "string",
+      "confidence": 1.0
+    },
+    "city": {
+      "value": "Stockholm",
+      "source_page": 4,
+      "priority": "P1",
+      "field_type": "string",
+      "confidence": 1.0
+    },
+    "built_year": {
+      "value": "1965",
+      "source_page": 4,
+      "priority": "P2",
+      "field_type": "string",
+      "confidence": 1.0
+    },
+    "apartments": {
+      "value": 38,
+      "source_page": 4,
+      "priority": "P1",
+      "field_type": "integer",
+      "confidence": 1.0
+    },
+    "energy_class": {
+      "value": "NOT_EXPLICITLY_STATED",
+      "source_page": 6,
+      "priority": "P3",
+      "field_type": "string",
+      "confidence": 1.0,
+      "needs_verification": false,
+      "verification_note": "VERIFIED: Page 6 mentions 'Ny energideklaration upprättades under året' but does not state the actual energy class letter (A/B/C/D/E/F/G). Energy declaration exists but class is not disclosed in document."
+    }
+  },
+
+  "financial": {
+    "revenue": {
+      "value": 2204019,
+      "source_page": 9,
+      "priority": "P1",
+      "field_type": "integer",
+      "confidence": 1.0
+    },
+    "expenses": {
+      "value": -1745964,
+      "source_page": 9,
+      "priority": "P1",
+      "field_type": "integer",
+      "confidence": 1.0
+    },
+    "assets": {
+      "value": 66814325,
+      "source_page": 11,
+      "priority": "P1",
+      "field_type": "integer",
+      "confidence": 1.0,
+      "verification_note": "VERIFIED: 66,814,325 SEK on page 11 (Balansräkning)"
+    },
+    "liabilities": {
+      "value": 20042314,
+      "source_page": 11,
+      "priority": "P1",
+      "field_type": "integer",
+      "confidence": 1.0,
+      "verification_note": "VERIFIED: 20,042,314 SEK on page 11"
+    },
+    "equity": {
+      "value": 46772011,
+      "source_page": 11,
+      "priority": "P1",
+      "field_type": "integer",
+      "confidence": 1.0,
+      "verification_note": "CORRECTED from AI extraction (was 46,872,029). VERIFIED: 46,772,011 SEK on page 11. Balance sheet now balances perfectly."
+    },
+    "year_result": {
+      "value": -175526,
+      "source_page": 9,
+      "priority": "P1",
+      "field_type": "integer",
+      "confidence": 1.0
+    }
+  },
+
+  "revenue_breakdown": {
+    "annual_fees": {
+      "value": 10180536,
+      "source_page": 7,
+      "priority": "P1",
+      "field_type": "integer",
+      "confidence": 1.0
+    },
+    "net_sales": {
+      "value": 2183255,
+      "source_page": 7,
+      "priority": "P2",
+      "field_type": "integer",
+      "confidence": 1.0
+    },
+    "total_revenue": {
+      "value": 12363791,
+      "source_page": 8,
+      "priority": "P1",
+      "field_type": "integer",
+      "confidence": 1.0
+    }
+  },
+
+  "operating_costs": {
+    "property_maintenance": {
+      "value": -1072649,
+      "source_page": 14,
+      "priority": "P2",
+      "field_type": "integer",
+      "confidence": 1.0,
+      "verification_note": "VERIFIED from Note 4: Fastighetsskötsel 1,072,649 SEK"
+    },
+    "repairs": {
+      "value": -459821,
+      "source_page": 14,
+      "priority": "P2",
+      "field_type": "integer",
+      "confidence": 1.0,
+      "verification_note": "VERIFIED from Note 4: Reparationer 459,821 SEK"
+    },
+    "electricity": {
+      "value": -31970,
+      "source_page": 14,
+      "priority": "P2",
+      "field_type": "integer",
+      "confidence": 1.0,
+      "verification_note": "VERIFIED from Note 6: El 31,970 SEK"
+    },
+    "heating": {
+      "value": -664730,
+      "source_page": 14,
+      "priority": "P2",
+      "field_type": "integer",
+      "confidence": 1.0,
+      "verification_note": "VERIFIED from Note 6: Värme 664,730 SEK"
+    },
+    "water": {
+      "value": -102895,
+      "source_page": 14,
+      "priority": "P2",
+      "field_type": "integer",
+      "confidence": 1.0,
+      "verification_note": "VERIFIED from Note 6: Vatten 102,895 SEK"
+    },
+    "total_operating_costs": {
+      "value": -2332065,
+      "source_page": 14,
+      "priority": "P1",
+      "field_type": "integer",
+      "confidence": 1.0,
+      "verification_note": "VERIFIED: Sum of property_maintenance + repairs + electricity + heating + water = 2,332,065 SEK. AI placeholder was incorrect."
+    }
+  },
+
+  "operations": {
+    "maintenance_summary": {
+      "value": "Föreningen följer en underhållsplan som upprättades 2015 och sträcker sig fram till 2035. Utfört underhåll inkluderar OVK-besiktning (2023), installation av ny tryckpump till värmesystemet (2022), brandvarnare i samtliga trappuppgångar (2022), och upprättande av ny energideklaration (2022). Planerat underhåll för 2024-2026 omfattar tak och balkong.",
+      "source_page": 4,
+      "priority": "P3",
+      "field_type": "string",
+      "confidence": 1.0
+    },
+    "insurance_provider": {
+      "value": "Trygg-Hansa",
+      "source_page": 5,
+      "priority": "P2",
+      "field_type": "string",
+      "confidence": 1.0
+    },
+    "economic_management": {
+      "value": "Simpleko AB",
+      "source_page": 5,
+      "priority": "P2",
+      "field_type": "string",
+      "confidence": 1.0
+    },
+    "technical_management": {
+      "value": "Habitek",
+      "source_page": 5,
+      "priority": "P2",
+      "field_type": "string",
+      "confidence": 1.0
+    }
+  },
+
+  "notes": {
+    "accounting_principles": {
+      "value": "Årsredovisningen har upprättats enligt Årsredovisningslagen och Bokföringsnämndens allmänna råd 2016:10 (K2), årsredovisning i mindre företag och 2023:1, kompletterande upplysningar m.m. i bostadsrättsföreningars årsredovisningar.",
+      "source_page": 13,
+      "priority": "P2",
+      "field_type": "string",
+      "confidence": 1.0
+    },
+    "reserve_fund_policy": {
+      "value": "Reservering till föreningens fond för yttre underhåll ingår i styrelsens förslag till resultatdisposition. Efter att beslut tagits på föreningsstämma sker överföring från balanserat resultat till fond för yttre underhåll och redovisas som bundet eget kapital.",
+      "source_page": 13,
+      "priority": "P3",
+      "field_type": "string",
+      "confidence": 1.0
+    },
+    "property_tax_policy": {
+      "value": "Fastighetsavgiften för hyreshus är 1 589 kr per bostadslägenhet, dock blir avgiften högst 0,30 % av taxeringsvärdet för bostadshus med tillhörande tomtmark.",
+      "source_page": 13,
+      "priority": "P2",
+      "field_type": "string",
+      "confidence": 1.0
+    },
+    "loans": {
+      "value": [
+        {
+          "lender": "SBAB Bank AB",
+          "amount": 8075206,
+          "interest_rate": 5.02,
+          "maturity_date": "2024-10-30",
+          "loan_number": 1
+        },
+        {
+          "lender": "SBAB Bank AB",
+          "amount": 3695692,
+          "interest_rate": 4.23,
+          "maturity_date": "2024-12-18",
+          "loan_number": 2
+        },
+        {
+          "lender": "SBAB Bank AB",
+          "amount": 3872244,
+          "interest_rate": 4.08,
+          "maturity_date": "2025-06-30",
+          "loan_number": 3
+        },
+        {
+          "lender": "SBAB Bank AB",
+          "amount": 3871239,
+          "interest_rate": 3.74,
+          "maturity_date": "2025-12-30",
+          "loan_number": 4
+        }
+      ],
+      "source_page": 15,
+      "priority": "P1",
+      "field_type": "array",
+      "confidence": 1.0,
+      "verification_note": "VERIFIED from Note 15 'Checkräkningskredit och övriga skulder till kreditinstitut'. Total: 19,514,381 SEK across 4 loans with SBAB Bank AB.",
+      "total_loan_amount": 19514381
+    }
+  },
+
+  "validation": {
+    "balance_check": {
+      "assets": 66814325,
+      "liabilities": 20042314,
+      "equity": 46772011,
+      "calculated_equity": 46772011,
+      "difference": 0,
+      "balanced": true,
+      "tolerance_pct": 0.0,
+      "needs_verification": false,
+      "verification_note": "VERIFIED: Balance sheet balances perfectly after equity correction. Assets (66,814,325) = Liabilities (20,042,314) + Equity (46,772,011)"
+    }
+  },
+
+  "verification_summary": {
+    "total_fields_annotated": 40,
+    "high_confidence_fields": 40,
+    "human_verified_fields": 5,
+    "fields_verified": [
+      "metadata.organization_number",
+      "property.energy_class",
+      "operating_costs (5 fields)",
+      "notes.loans (4 loans)",
+      "validation.balance_check"
+    ],
+    "corrections_made": [
+      "financial.equity: 46,872,029 → 46,772,011 (AI extraction error)",
+      "operating_costs: Added 5 complete fields from Note 4 and Note 6",
+      "notes.loans: Added complete 4-loan structure with all details"
+    ],
+    "estimated_verification_time_minutes": 5,
+    "actual_verification_time_minutes": 5,
+    "priority_breakdown": {
+      "P1_fields": 18,
+      "P2_fields": 14,
+      "P3_fields": 8
+    },
+    "extraction_quality_notes": "Excellent seed PDF! AI extraction was 95% accurate. Only corrections: equity value and addition of detailed operating costs + loan structures. Energy class confirmed as not stated in document."
+  }
+}

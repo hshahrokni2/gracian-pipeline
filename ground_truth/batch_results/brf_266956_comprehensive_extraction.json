@@ -1,0 +1,279 @@
+{
+  "governance_agent": {
+    "chairman": "Jan Melén",
+    "board_members": [
+      {"name": "Jan Melén", "role": "Ordförande"},
+      {"name": "Suzann Fors", "role": "Ledamot"},
+      {"name": "Anna von Sydow", "role": "Ledamot"},
+      {"name": "Ulrika Plesner", "role": "Ledamot"},
+      {"name": "Gunilla Westin", "role": "Ledamot"},
+      {"name": "Marie Rooth", "role": "Suppleant"},
+      {"name": "Berith Johansson", "role": "Suppleant"},
+      {"name": "Eva Larsson", "role": "Suppleant"},
+      {"name": "Pia Ankar", "role": "Revisor"}
+    ],
+    "auditor_name": "Auktoriserad revisor Sana Numan och auktoriserad revisor Louise Bäcklund",
+    "audit_firm": "Öhrlings PricewaterhouseCoopers AB",
+    "nomination_committee": [],
+    "internal_auditor": "Pia Ankar",
+    "board_meeting_frequency": "Styrelsen har haft 6 protokollförda möten under verksamhetsåret",
+    "evidence_pages": [1, 2, 15, 16]
+  },
+
+  "financial_agent": {
+    "revenue": 19945200,
+    "expenses": 16906895,
+    "assets": 132835485,
+    "liabilities": 105098538,
+    "equity": 27736947,
+    "surplus": 3038305,
+    "long_term_liabilities": 101890539,
+    "short_term_liabilities": 3207999,
+    "operating_costs_breakdown": {
+      "underhåll_och_reparationer": 3146733,
+      "värme_och_vatten": 2984959,
+      "försäkringar": 423076,
+      "fastighetsskatt": 410400,
+      "el": 389988,
+      "sotning_och_ventilationskontroll": 86955,
+      "hiss": 79020,
+      "övriga_driftkostnader": 169577,
+      "total": 7690708
+    },
+    "income_breakdown": {
+      "årsavgifter": 14743275,
+      "garage_och_parkeringsintäkter": 624300,
+      "hyresintäkter_lokaler": 3516825,
+      "hyresintäkter_bostäder": 90600,
+      "övriga_intäkter": 970200,
+      "total_nettoomsättning": 19945200
+    },
+    "building_details": {
+      "ackumulerad_avskrivning_2021": -47817926,
+      "ackumulerad_avskrivning_2022": -50254346,
+      "årets_avskrivning": -2436420,
+      "avskrivningsmetod": "linjär avskrivning",
+      "nyttjandeperiod_byggnader": "100 år",
+      "nyttjandeperiod_mark_och_inventarier": "5 år"
+    },
+    "other_receivables": {
+      "total": 0
+    },
+    "reserve_fund_movements": {
+      "ingående_balans": 3086093,
+      "avsättning_under_året": 921690,
+      "uttag_under_året": -1127932,
+      "utgående_balans": 2879851
+    },
+    "tax_details": {
+      "skattesats": "20.6%",
+      "skattekostnad_året": null,
+      "skattetyp": "inkomstskatt",
+      "skattemässigt_resultat": null
+    },
+    "evidence_pages": [5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+  },
+
+  "property_agent": {
+    "designation": "Artemis 21, 23, 29",
+    "address": "Tulegatan 26-38, 40, Wallingatan 1-1A, 3-5, Odengatan 82, 84, 86",
+    "postal_code": "11353",
+    "city": "Stockholm",
+    "built_year": "1905-1910",
+    "apartments": 150,
+    "energy_class": null,
+    "acquisition_date": "2013-08-31",
+    "municipality": "Stockholm",
+    "heating_system": "Fjärrvärme",
+    "insurance_provider": "Protector Försäkring",
+    "insurance_details": "Byggnads- och egendomsförsäkring tecknad hos Protector Försäkring",
+    "apartment_breakdown": {
+      "1_rok": 11,
+      "2_rok": 79,
+      "3_rok": 46,
+      "4_rok": 13,
+      "5_rok": 1,
+      "total": 150
+    },
+    "commercial_tenants": [
+      {"name": "Systembolaget", "area": "331 kvm", "lease": "Hyresavtal löper till 2025-12-31"},
+      {"name": "Övriga kommersiella hyresgäster", "area": "149 kvm", "lease": "Diverse hyresavtal"}
+    ],
+    "common_areas": [
+      {"type": "Gemensamhetsutrymmen", "count": null, "notes": "Tvättstugor, förråd, cykelrum"}
+    ],
+    "samfallighet": null,
+    "registration_dates": {
+      "ekonomisk_plan": "2013-06-27",
+      "stadgar": "2013-06-27",
+      "föreningens_registrering": "2013-06-27"
+    },
+    "tax_assessment": {
+      "taxeringsvärde_mark": 4230000,
+      "taxeringsvärde_byggnader": 70665000,
+      "total_taxeringsvärde": 74895000,
+      "taxeringsår": "2022"
+    },
+    "evidence_pages": [3, 4, 11, 12]
+  },
+
+  "notes_depreciation_agent": {
+    "depreciation_method": "Linjär avskrivning",
+    "useful_life_years": "Byggnader 100 år, mark och inventarier 5 år",
+    "depreciation_base": "Anskaffningsvärde",
+    "evidence_pages": [11]
+  },
+
+  "notes_maintenance_agent": {
+    "maintenance_plan": "Underhållsplan omfattar fönsterrenoveringar, takomläggning, fasadarbeten, stammens renovering, hissbyten",
+    "maintenance_budget": 3146733,
+    "planned_actions": [
+      {"action": "Fönsterrenovering", "year": "2021-2022", "comment": "Genomförd under året, kostnad 2.1 MSEK"},
+      {"action": "Takomläggning", "year": "2022", "comment": "Delvis genomförd"},
+      {"action": "Fasadarbeten", "year": "2023-2025", "comment": "Planerad"},
+      {"action": "Stambyten", "year": "2024-2026", "comment": "Planerad"},
+      {"action": "Hissbyte", "year": "2025-2027", "comment": "Planerad"}
+    ],
+    "technical_status": "God teknisk status efter fönsterrenovering. Vissa större åtgärder planerade kommande år.",
+    "suppliers": [
+      {"service": "Förvaltning", "supplier": "Stockholms Kooperativa Bostadsförening (SKB)"},
+      {"service": "Fastighetsskötsel", "supplier": "SKB Fastighetsservice"},
+      {"service": "Teknisk förvaltning", "supplier": "SKB Teknisk förvaltning"}
+    ],
+    "service_contracts": {
+      "förvaltning": "SKB - löpande avtal",
+      "fastighetsskötsel": "SKB Fastighetsservice - löpande avtal",
+      "teknisk_förvaltning": "SKB Teknisk förvaltning - löpande avtal"
+    },
+    "evidence_pages": [10, 12, 13]
+  },
+
+  "notes_tax_agent": {
+    "tax_type": "Inkomstskatt enligt inkomstskattelagen (1999:1229)",
+    "tax_law_reference": "inkomstskattelagen (1999:1229)",
+    "evidence_pages": [11]
+  },
+
+  "events_agent": {
+    "warranty_claims": null,
+    "tenant_changes": "Inga större förändringar i uthyrning under året",
+    "loan_restructuring": null,
+    "rental_activity": "Ingen andrahandsuthyrning rapporterad",
+    "evidence_pages": [2, 14]
+  },
+
+  "audit_agent": {
+    "audit_date": "2023-03-20",
+    "audit_location": "Stockholm",
+    "qualifications": "Ingen anmärkning",
+    "evidence_pages": [15, 16]
+  },
+
+  "loans_agent": {
+    "outstanding_loans": 101890539,
+    "interest_rate": "Rörlig ränta enligt marknadsvillkor",
+    "amortization": "Amorteringsfritt",
+    "loan_provider": "Ej specificerat i rapporten",
+    "loan_number": null,
+    "loan_term": "Löpande",
+    "amortization_schedule": "Amorteringsfritt, inga amorteringar under året",
+    "loan_changes": "Inga större förändringar i lånestruktur under året",
+    "loans": [
+      {
+        "lender": "Ej specificerat",
+        "loan_number": null,
+        "outstanding_balance": 101890539,
+        "interest_rate": null,
+        "maturity_date": null,
+        "amortization_schedule": "Amorteringsfritt"
+      }
+    ],
+    "evidence_pages": [6, 7, 12]
+  },
+
+  "reserves_agent": {
+    "reserve_fund": 2879851,
+    "reserve_policy": "Avsättning till fond för yttre underhåll enligt underhållsplan",
+    "fund_name": "Fond för yttre underhåll",
+    "annual_allocation": 921690,
+    "evidence_pages": [7, 12]
+  },
+
+  "energy_agent": {
+    "energy_source": "Fjärrvärme",
+    "evidence_pages": [13]
+  },
+
+  "fees_agent": {
+    "monthly_fee": null,
+    "fee_calculation_basis": "Självkostnadsprincipen",
+    "fee_per_sqm": null,
+    "fee_unit": null,
+    "evidence_pages": [2]
+  },
+
+  "cashflow_agent": {
+    "operating_activities": null,
+    "investing_activities": null,
+    "financing_activities": null,
+    "evidence_pages": []
+  },
+
+  "_extraction_metadata": {
+    "pdf_name": "brf_266956.pdf",
+    "organization_number": "769608-0840",
+    "organization_name": "Brf Artemis",
+    "extraction_date": "2025-10-15",
+    "total_pages": 15,
+    "extraction_confidence": 0.85,
+    "fields_needing_gpt_review": [
+      {
+        "agent": "loans_agent",
+        "field": "loan_provider",
+        "current_value": "Ej specificerat",
+        "confidence": 0.70,
+        "reason": "Långivare inte explicit angiven i Note 5, kan finnas i revisionsberättelse eller förvaltningsberättelse"
+      },
+      {
+        "agent": "loans_agent",
+        "field": "interest_rate",
+        "current_value": "Rörlig ränta enligt marknadsvillkor",
+        "confidence": 0.75,
+        "reason": "Exakt räntesats inte angiven, endast beskrivning"
+      },
+      {
+        "agent": "property_agent",
+        "field": "energy_class",
+        "current_value": null,
+        "confidence": 0.60,
+        "reason": "Energiklass saknas i årsredovisning, finns troligen i separat energideklaration"
+      },
+      {
+        "agent": "fees_agent",
+        "field": "monthly_fee",
+        "current_value": null,
+        "confidence": 0.65,
+        "reason": "Genomsnittlig månadsavgift inte explicit angiven, kan beräknas från årsavgifter/antal lägenheter"
+      },
+      {
+        "agent": "cashflow_agent",
+        "fields": ["operating_activities", "investing_activities", "financing_activities"],
+        "current_values": [null, null, null],
+        "confidence": 0.50,
+        "reason": "Kassaflödesanalys saknas helt i denna årsredovisning (K2-regelverket kräver inte detta)"
+      }
+    ],
+    "additional_facts": [
+      "Brf Artemis förvaltas av SKB (Stockholms Kooperativa Bostadsförening)",
+      "Fastigheten omfattar 3 byggnader från 1905-1910 i välskött skick",
+      "150 lägenheter + 2 kommersiella lokaler (480 kvm totalt)",
+      "Systembolaget är största kommersiella hyresgäst (331 kvm)",
+      "Fönsterrenovering genomförd 2021-2022 för 2.1 MSEK",
+      "Inga väsentliga händelser efter räkenskapsårets slut",
+      "Föreningen tillämpar K2-regelverket (förenklat för mindre företag)",
+      "Inga pantsättningar eller ansvarsförbindelser",
+      "Årsavgifter utgör 74% av totala intäkter",
+      "Underhåll och reparationer är största kostnadspost (19.6% av totala kostnader)"
+    ]
+  }
+}

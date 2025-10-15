@@ -1,0 +1,2879 @@
+{
+  "test_run": {
+    "timestamp": "2025-10-14T19:55:58.140977Z",
+    "total_pdfs": 7,
+    "phase": "Phase 2B Hour 2 Phase 2 - Batch Testing"
+  },
+  "per_pdf_results": [
+    {
+      "pdf_name": "brf_53546.pdf",
+      "pdf_path": "SRS/brf_53546.pdf",
+      "success": true,
+      "processing_time_seconds": 43.11,
+      "validation": {
+        "warnings_count": 3,
+        "high_severity": 0,
+        "medium_severity": 3,
+        "low_severity": 0,
+        "rules_triggered": [
+          "missing_evidence"
+        ],
+        "conflicts_resolved": 0
+      },
+      "agents": {
+        "tested": 15,
+        "succeeded": 12,
+        "success_rate": 80.0
+      },
+      "extraction_result": {
+        "auditor_agent": {
+          "auditor_name": null,
+          "audit_firm": null,
+          "evidence_pages": []
+        },
+        "financial_agent": {
+          "revenue": null,
+          "expenses": null,
+          "assets": null,
+          "liabilities": null,
+          "equity": null,
+          "surplus": null,
+          "long_term_liabilities": null,
+          "short_term_liabilities": null,
+          "evidence_pages": []
+        },
+        "chairman_agent": {
+          "chairman": "Jan-Olav T\u00f6rner",
+          "evidence_pages": [
+            2,
+            3,
+            11
+          ]
+        },
+        "notes_depreciation_agent": {
+          "evidence_pages": [],
+          "evidence_quotes": [],
+          "confidence": 0.1,
+          "depreciation_method": null,
+          "useful_life_years": null,
+          "depreciation_base": null
+        },
+        "notes_maintenance_agent": {
+          "evidence_pages": [],
+          "evidence_quotes": [],
+          "confidence": 0.1,
+          "maintenance_plan": null,
+          "plan_start_date": null,
+          "plan_end_date": null,
+          "maintenance_budget": null
+        },
+        "notes_tax_agent": {
+          "evidence_pages": [],
+          "evidence_quotes": [],
+          "confidence": 0.1,
+          "tax_policy": null,
+          "current_tax": null,
+          "deferred_tax": null
+        },
+        "board_members_agent": {
+          "board_members": [
+            {
+              "name": "Jan-Olav T\u00f6rner",
+              "role": "Ordf\u00f6rande"
+            },
+            {
+              "name": "Lotta Haak",
+              "role": "Ledamot"
+            },
+            {
+              "name": "Helena Kristersson",
+              "role": "Ledamot"
+            },
+            {
+              "name": "Fredrik Olbers",
+              "role": "Ledamot"
+            },
+            {
+              "name": "Karl-Erik Wahlberg",
+              "role": "Ledamot"
+            },
+            {
+              "name": "Niklas Bj\u00f6rken",
+              "role": "Suppleant"
+            },
+            {
+              "name": "Kerstin Anna-Karin Ellerberg Hassel",
+              "role": "Suppleant"
+            }
+          ],
+          "evidence_pages": [
+            3
+          ]
+        },
+        "audit_agent": null,
+        "loans_agent": {
+          "loans": [],
+          "outstanding_loans": null,
+          "interest_rate": null,
+          "amortization": null,
+          "evidence_pages": []
+        },
+        "reserves_agent": {
+          "reserve_fund": null,
+          "monthly_fee": null,
+          "evidence_pages": []
+        },
+        "property_agent": {
+          "designation": "Gotska Sand\u00f6n 1",
+          "address": null,
+          "postal_code": null,
+          "city": "Stockholm",
+          "built_year": 2012,
+          "apartments": 69,
+          "energy_class": null,
+          "evidence_pages": [
+            1,
+            2,
+            10
+          ],
+          "acquisition_date": "2012",
+          "municipality": "Stockholm",
+          "heating_system": "Fj\u00e4rrv\u00e4rme",
+          "insurance_provider": "Trygg-Hansa",
+          "insurance_details": "Fullv\u00e4rdesf\u00f6rs\u00e4kring med kollektivt bostadsr\u00e4ttstill\u00e4gg och ansvarsf\u00f6rs\u00e4kring f\u00f6r styrelsen",
+          "apartment_breakdown": null,
+          "commercial_tenants": [
+            {
+              "tenant": "\u00d6stermalms Stadsdelsf\u00f6rvaltning",
+              "area_sqm": 70,
+              "lease_end": "2023-03-31"
+            },
+            {
+              "tenant": "H3G Access",
+              "area_sqm": 1,
+              "lease_end": "2025-01-01"
+            }
+          ],
+          "common_areas": null,
+          "samfallighet": {
+            "name": "Gotska Sand\u00f6n 2",
+            "share": "40%"
+          },
+          "registration_dates": {
+            "association_registration": "2010-09-03",
+            "economic_plan_registration": "2012-10-24",
+            "statutes_registration": "2022-02-10"
+          },
+          "tax_assessment": {
+            "total_area_sqm": 5704,
+            "living_area_sqm": 5634,
+            "commercial_area_sqm": 70
+          },
+          "additional_facts": []
+        },
+        "energy_agent": null,
+        "events_agent": {
+          "key_events": [],
+          "maintenance_budget": null,
+          "annual_meeting_date": null,
+          "evidence_pages": [
+            4,
+            11
+          ],
+          "warranty_claims": null,
+          "tenant_changes": null,
+          "loan_restructuring": null,
+          "rental_activity": null
+        },
+        "cashflow_agent": null,
+        "fees_agent": {
+          "arsavgift_per_sqm_total": null,
+          "manadsavgift_per_sqm": null,
+          "manadsavgift_per_apartment_avg": null,
+          "fee_1_rok": null,
+          "fee_2_rok": null,
+          "fee_3_rok": null,
+          "fee_4_rok": null,
+          "fee_5_rok": null,
+          "inkluderar_vatten": null,
+          "inkluderar_uppvarmning": null,
+          "inkluderar_el": null,
+          "inkluderar_bredband": null,
+          "last_fee_increase_date": null,
+          "last_fee_increase_percentage": null,
+          "planned_fee_changes": [],
+          "terminology_found": "\u00e5rsavgift",
+          "evidence_pages": [
+            1
+          ]
+        },
+        "_metadata": {
+          "total_agents": 15,
+          "successful_agents": 15,
+          "failed_agents": [],
+          "agent_metadata": {
+            "auditor_agent": {
+              "status": "success",
+              "agent_id": "auditor_agent",
+              "token_count": 350,
+              "latency_ms": 1164,
+              "pages_used": [
+                2,
+                9,
+                11
+              ]
+            },
+            "financial_agent": {
+              "status": "success",
+              "agent_id": "financial_agent",
+              "token_count": 855,
+              "latency_ms": 2539,
+              "pages_used": [
+                4,
+                5,
+                6
+              ]
+            },
+            "chairman_agent": {
+              "status": "success",
+              "agent_id": "chairman_agent",
+              "token_count": 2732,
+              "latency_ms": 2553,
+              "pages_used": [
+                1,
+                2,
+                3,
+                5,
+                11
+              ]
+            },
+            "notes_depreciation_agent": {
+              "status": "success",
+              "agent_id": "notes_depreciation_agent",
+              "token_count": 1041,
+              "latency_ms": 2152,
+              "pages_used": [
+                3,
+                4,
+                6,
+                7,
+                9
+              ],
+              "note_number": "11",
+              "note_type": "maintenance",
+              "integration_layer": "path_b"
+            },
+            "notes_maintenance_agent": {
+              "status": "success",
+              "agent_id": "notes_maintenance_agent",
+              "token_count": 1041,
+              "latency_ms": 1239,
+              "pages_used": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "note_number": "11",
+              "note_type": "maintenance",
+              "integration_layer": "path_b"
+            },
+            "notes_tax_agent": {
+              "status": "success",
+              "agent_id": "notes_tax_agent",
+              "token_count": 1041,
+              "latency_ms": 1440,
+              "pages_used": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "note_number": "11",
+              "note_type": "maintenance",
+              "integration_layer": "path_b"
+            },
+            "board_members_agent": {
+              "status": "success",
+              "agent_id": "board_members_agent",
+              "token_count": 2572,
+              "latency_ms": 4159,
+              "pages_used": [
+                1,
+                2,
+                3,
+                5,
+                11
+              ]
+            },
+            "audit_agent": {
+              "status": "success",
+              "agent_id": "audit_agent",
+              "token_count": 456,
+              "latency_ms": 560,
+              "pages_used": [
+                11
+              ]
+            },
+            "loans_agent": {
+              "status": "success",
+              "agent_id": "loans_agent",
+              "token_count": 876,
+              "latency_ms": 894,
+              "pages_used": [
+                6,
+                7,
+                9,
+                10
+              ]
+            },
+            "reserves_agent": {
+              "status": "success",
+              "agent_id": "reserves_agent",
+              "token_count": 1827,
+              "latency_ms": 740,
+              "pages_used": [
+                1,
+                5,
+                6,
+                7,
+                10
+              ]
+            },
+            "property_agent": {
+              "status": "success",
+              "agent_id": "property_agent",
+              "token_count": 3827,
+              "latency_ms": 4953,
+              "pages_used": [
+                1,
+                2,
+                10
+              ]
+            },
+            "energy_agent": {
+              "status": "success",
+              "agent_id": "energy_agent",
+              "token_count": 462,
+              "latency_ms": 757,
+              "pages_used": [
+                3
+              ]
+            },
+            "events_agent": {
+              "status": "success",
+              "agent_id": "events_agent",
+              "token_count": 548,
+              "latency_ms": 1922,
+              "pages_used": [
+                4,
+                11
+              ]
+            },
+            "cashflow_agent": {
+              "status": "success",
+              "agent_id": "cashflow_agent",
+              "token_count": 494,
+              "latency_ms": 534,
+              "pages_used": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            "fees_agent": {
+              "status": "success",
+              "agent_id": "fees_agent",
+              "token_count": 4043,
+              "latency_ms": 3671,
+              "pages_used": [
+                1,
+                3,
+                4,
+                5,
+                6
+              ]
+            }
+          },
+          "total_time_seconds": 43.1,
+          "token_usage": 22165,
+          "pdf_type": "machine_readable",
+          "extraction_strategy": "text",
+          "classification_confidence": 0.9
+        },
+        "_validation": {
+          "warnings": [
+            {
+              "rule": "missing_evidence",
+              "severity": "medium",
+              "message": "notes_depreciation_agent: Extracted 1 fields without evidence citations",
+              "affected_agents": [
+                "notes_depreciation_agent"
+              ],
+              "suggested_resolution": "Agent may be guessing or hallucinating - require evidence_pages",
+              "details": {
+                "extracted_fields": [
+                  "confidence"
+                ],
+                "field_count": 1
+              }
+            },
+            {
+              "rule": "missing_evidence",
+              "severity": "medium",
+              "message": "notes_maintenance_agent: Extracted 1 fields without evidence citations",
+              "affected_agents": [
+                "notes_maintenance_agent"
+              ],
+              "suggested_resolution": "Agent may be guessing or hallucinating - require evidence_pages",
+              "details": {
+                "extracted_fields": [
+                  "confidence"
+                ],
+                "field_count": 1
+              }
+            },
+            {
+              "rule": "missing_evidence",
+              "severity": "medium",
+              "message": "notes_tax_agent: Extracted 1 fields without evidence citations",
+              "affected_agents": [
+                "notes_tax_agent"
+              ],
+              "suggested_resolution": "Agent may be guessing or hallucinating - require evidence_pages",
+              "details": {
+                "extracted_fields": [
+                  "confidence"
+                ],
+                "field_count": 1
+              }
+            }
+          ],
+          "warnings_count": 3,
+          "high_severity_count": 0,
+          "rules_triggered": [
+            "missing_evidence"
+          ],
+          "conflicts_resolved": 0
+        },
+        "extraction_quality": {
+          "confidence_score": 0.3623943661971832,
+          "high_confidence_agents": 3,
+          "low_confidence_agents": 7,
+          "total_agents_evaluated": 15,
+          "agent_confidence_breakdown": {
+            "auditor_agent": 0.2,
+            "financial_agent": 0.2,
+            "chairman_agent": 0.88,
+            "notes_depreciation_agent": 0.33333333333333337,
+            "notes_maintenance_agent": 0.4,
+            "notes_tax_agent": 0.33333333333333337,
+            "board_members_agent": 0.76,
+            "audit_agent": 0.0,
+            "loans_agent": 0.2,
+            "reserves_agent": 0.2,
+            "property_agent": 0.8300000000000001,
+            "energy_agent": 0.0,
+            "events_agent": 0.42000000000000004,
+            "cashflow_agent": 0.0,
+            "fees_agent": 0.38857142857142857
+          }
+        }
+      }
+    },
+    {
+      "pdf_name": "brf_268882.pdf",
+      "pdf_path": "experiments/docling_advanced/test_pdfs/brf_268882.pdf",
+      "success": true,
+      "processing_time_seconds": 113.7,
+      "validation": {
+        "warnings_count": 1,
+        "high_severity": 0,
+        "medium_severity": 0,
+        "low_severity": 1,
+        "rules_triggered": [
+          "invalid_year_format"
+        ],
+        "conflicts_resolved": 0
+      },
+      "agents": {
+        "tested": 15,
+        "succeeded": 11,
+        "success_rate": 73.3
+      },
+      "extraction_result": {
+        "property_agent": {
+          "property_designation": null,
+          "address": null,
+          "postal_code": null,
+          "city": null,
+          "municipality": null,
+          "built_year": null,
+          "building_type": null,
+          "total_area_sqm": null,
+          "living_area_sqm": null,
+          "commercial_area_sqm": null,
+          "land_area_sqm": null,
+          "heating_type": null,
+          "energy_class": null,
+          "total_apartments": null,
+          "evidence_pages": []
+        },
+        "auditor_agent": {
+          "auditor_name": "Mats Lehtipalo",
+          "audit_firm": "ADECO Revisorer",
+          "evidence_pages": [
+            5
+          ]
+        },
+        "board_members_agent": {
+          "board_members": [
+            {
+              "name": "Ulf Dahlqvist",
+              "role": "Ordf\u00f6rande"
+            },
+            {
+              "name": "Anna Bernhardina Dolonius Bensalah",
+              "role": "Styrelseledamot"
+            },
+            {
+              "name": "Cindy Tuliao Sarceda",
+              "role": "Styrelseledamot"
+            },
+            {
+              "name": "Eug\u00e9nie Bardin",
+              "role": "Styrelseledamot"
+            },
+            {
+              "name": "Hanna Jansson",
+              "role": "Styrelseledamot"
+            },
+            {
+              "name": "Pieter Gruyters",
+              "role": "Suppleant"
+            },
+            {
+              "name": "Sjurdur Eldevig",
+              "role": "Suppleant"
+            }
+          ],
+          "evidence_pages": [
+            4
+          ]
+        },
+        "financial_agent": {
+          "revenue": "2204019",
+          "expenses": "1745964",
+          "assets": "66814325",
+          "liabilities": null,
+          "equity": "46872029",
+          "surplus": "-175526",
+          "long_term_liabilities": null,
+          "short_term_liabilities": null,
+          "evidence_pages": [
+            7,
+            8
+          ]
+        },
+        "notes_depreciation_agent": {
+          "depreciation_method": "",
+          "useful_life_years": "",
+          "depreciation_base": "",
+          "evidence_pages": []
+        },
+        "notes_tax_agent": {
+          "current_tax": null,
+          "deferred_tax": null,
+          "tax_policy": null,
+          "evidence_pages": []
+        },
+        "notes_maintenance_agent": {
+          "maintenance_plan": null,
+          "maintenance_budget": "18 998",
+          "evidence_pages": [
+            12
+          ]
+        },
+        "loans_agent": {
+          "loans": [],
+          "outstanding_loans": null,
+          "interest_rate": null,
+          "amortization": null,
+          "evidence_pages": []
+        },
+        "chairman_agent": {
+          "chairman": "Ulf Dahlqvist",
+          "evidence_pages": [
+            4
+          ]
+        },
+        "reserves_agent": {
+          "reserve_fund": "236 000 SEK",
+          "monthly_fee": "",
+          "evidence_pages": [
+            6
+          ]
+        },
+        "energy_agent": null,
+        "cashflow_agent": null,
+        "events_agent": {
+          "key_events": [],
+          "maintenance_budget": null,
+          "annual_meeting_date": null,
+          "evidence_pages": []
+        },
+        "audit_agent": null,
+        "fees_agent": {},
+        "_metadata": {
+          "total_agents": 15,
+          "successful_agents": 15,
+          "failed_agents": [],
+          "agent_metadata": {
+            "property_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                1,
+                2,
+                3
+              ]
+            },
+            "auditor_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            "board_members_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            "financial_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ]
+            },
+            "notes_depreciation_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            },
+            "notes_tax_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            },
+            "notes_maintenance_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            },
+            "loans_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                8,
+                9,
+                10,
+                11,
+                12
+              ]
+            },
+            "chairman_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            "reserves_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                8,
+                9,
+                10,
+                11,
+                12
+              ]
+            },
+            "energy_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                1,
+                2,
+                3
+              ]
+            },
+            "cashflow_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ]
+            },
+            "events_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            "audit_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            "fees_agent": {
+              "status": "success",
+              "confidence": 0.0,
+              "agreement_ratio": 0.0,
+              "primary_model": "none",
+              "pages_used": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            }
+          },
+          "pdf_type": "scanned",
+          "extraction_strategy": "vision_consensus",
+          "classification_confidence": 0.9,
+          "total_time_seconds": 113.0
+        },
+        "extraction_quality": {
+          "confidence_score": 0.2690140845070423,
+          "high_confidence_agents": 3,
+          "low_confidence_agents": 9,
+          "total_agents_evaluated": 15,
+          "agent_confidence_breakdown": {
+            "property_agent": 0.2,
+            "auditor_agent": 0.5266666666666666,
+            "board_members_agent": 0.7100000000000001,
+            "financial_agent": 0.7057142857142857,
+            "notes_depreciation_agent": 0.2,
+            "notes_tax_agent": 0.2,
+            "notes_maintenance_agent": 0.56,
+            "loans_agent": 0.2,
+            "chairman_agent": 0.7100000000000001,
+            "reserves_agent": 0.45999999999999996,
+            "energy_agent": 0.0,
+            "cashflow_agent": 0.0,
+            "events_agent": 0.2,
+            "audit_agent": 0.0,
+            "fees_agent": 0.2
+          }
+        },
+        "_validation": {
+          "warnings": [
+            {
+              "rule": "invalid_year_format",
+              "severity": "low",
+              "message": "notes_depreciation_agent.useful_life_years: Invalid year format: ''",
+              "affected_agents": [
+                "notes_depreciation_agent"
+              ],
+              "suggested_resolution": "Check year field extraction",
+              "details": {
+                "field": "useful_life_years",
+                "value": ""
+              }
+            }
+          ],
+          "warnings_count": 1,
+          "high_severity_count": 0,
+          "rules_triggered": [
+            "invalid_year_format"
+          ],
+          "conflicts_resolved": 0
+        }
+      }
+    },
+    {
+      "pdf_name": "brf_271949.pdf",
+      "pdf_path": "Hjorthagen/brf_271949.pdf",
+      "success": true,
+      "processing_time_seconds": 59.76,
+      "validation": {
+        "warnings_count": 0,
+        "high_severity": 0,
+        "medium_severity": 0,
+        "low_severity": 0,
+        "rules_triggered": [],
+        "conflicts_resolved": 0
+      },
+      "agents": {
+        "tested": 15,
+        "succeeded": 8,
+        "success_rate": 53.3
+      },
+      "extraction_result": {
+        "chairman_agent": {
+          "chairman": "Adam Boman",
+          "evidence_pages": [
+            2
+          ]
+        },
+        "notes_depreciation_agent": {},
+        "notes_maintenance_agent": {},
+        "notes_tax_agent": {},
+        "auditor_agent": {
+          "auditor_name": null,
+          "audit_firm": null,
+          "evidence_pages": []
+        },
+        "audit_agent": null,
+        "events_agent": {
+          "key_events": [],
+          "maintenance_budget": null,
+          "annual_meeting_date": null,
+          "evidence_pages": [
+            3
+          ]
+        },
+        "financial_agent": {
+          "revenue": 1333878,
+          "expenses": null,
+          "assets": null,
+          "liabilities": null,
+          "equity": null,
+          "surplus": -146938,
+          "long_term_liabilities": null,
+          "short_term_liabilities": null,
+          "evidence_pages": [
+            5
+          ]
+        },
+        "reserves_agent": null,
+        "energy_agent": null,
+        "loans_agent": {
+          "loans": [],
+          "outstanding_loans": null,
+          "interest_rate": null,
+          "amortization": null,
+          "evidence_pages": []
+        },
+        "board_members_agent": {
+          "board_members": [
+            {
+              "name": "Adam Boman",
+              "role": "Ordf\u00f6rande"
+            },
+            {
+              "name": "Carl Lundeberg",
+              "role": "Kass\u00f6r"
+            },
+            {
+              "name": "Sture Karlsson",
+              "role": "Ledamot"
+            },
+            {
+              "name": "Sari-Anna S\u00f6derman",
+              "role": "Ledamot"
+            }
+          ],
+          "evidence_pages": [
+            2
+          ]
+        },
+        "property_agent": {
+          "designation": null,
+          "address": "Brf Gillret c/o Nordstaden, Storgatan 45",
+          "postal_code": "171 52",
+          "city": "Solna",
+          "built_year": null,
+          "apartments": null,
+          "energy_class": null,
+          "evidence_pages": [
+            2
+          ],
+          "acquisition_date": null,
+          "municipality": null,
+          "heating_system": null,
+          "insurance_provider": null,
+          "insurance_details": null,
+          "apartment_breakdown": null,
+          "commercial_tenants": [],
+          "common_areas": [],
+          "samfallighet": null,
+          "registration_dates": {
+            "f\u00f6reningen": "1993",
+            "stadgar": "2020-03-27"
+          },
+          "tax_assessment": null,
+          "additional_facts": []
+        },
+        "cashflow_agent": null,
+        "fees_agent": {
+          "arsavgift_per_sqm_total": 899.0,
+          "manadsavgift_per_sqm": null,
+          "manadsavgift_per_apartment_avg": null,
+          "fee_1_rok": null,
+          "fee_2_rok": null,
+          "fee_3_rok": null,
+          "fee_4_rok": null,
+          "fee_5_rok": null,
+          "inkluderar_vatten": null,
+          "inkluderar_uppvarmning": null,
+          "inkluderar_el": null,
+          "inkluderar_bredband": null,
+          "last_fee_increase_date": "2023-07-01",
+          "last_fee_increase_percentage": null,
+          "planned_fee_changes": [],
+          "terminology_found": "\u00e5rsavgift",
+          "evidence_pages": [
+            1,
+            2,
+            3
+          ]
+        },
+        "_metadata": {
+          "total_agents": 15,
+          "successful_agents": 12,
+          "failed_agents": [
+            "notes_depreciation_agent",
+            "notes_maintenance_agent",
+            "notes_tax_agent"
+          ],
+          "agent_metadata": {
+            "chairman_agent": {
+              "status": "success",
+              "agent_id": "chairman_agent",
+              "token_count": 2972,
+              "latency_ms": 787,
+              "pages_used": [
+                1,
+                2,
+                3,
+                5,
+                11
+              ]
+            },
+            "notes_depreciation_agent": {
+              "status": "empty",
+              "agent_id": "notes_depreciation_agent",
+              "token_count": 0,
+              "latency_ms": 0,
+              "pages_used": [],
+              "reason": "no_notes_detected",
+              "integration_layer": "path_b"
+            },
+            "notes_maintenance_agent": {
+              "status": "empty",
+              "agent_id": "notes_maintenance_agent",
+              "token_count": 0,
+              "latency_ms": 0,
+              "pages_used": [],
+              "reason": "no_notes_detected",
+              "integration_layer": "path_b"
+            },
+            "notes_tax_agent": {
+              "status": "empty",
+              "agent_id": "notes_tax_agent",
+              "token_count": 0,
+              "latency_ms": 0,
+              "pages_used": [],
+              "reason": "no_notes_detected",
+              "integration_layer": "path_b"
+            },
+            "auditor_agent": {
+              "status": "success",
+              "agent_id": "auditor_agent",
+              "token_count": 462,
+              "latency_ms": 1026,
+              "pages_used": [
+                3,
+                4,
+                10
+              ]
+            },
+            "audit_agent": {
+              "status": "success",
+              "agent_id": "audit_agent",
+              "token_count": 459,
+              "latency_ms": 623,
+              "pages_used": [
+                10,
+                12
+              ]
+            },
+            "events_agent": {
+              "status": "success",
+              "agent_id": "events_agent",
+              "token_count": 509,
+              "latency_ms": 1046,
+              "pages_used": [
+                3
+              ]
+            },
+            "financial_agent": {
+              "status": "success",
+              "agent_id": "financial_agent",
+              "token_count": 1678,
+              "latency_ms": 1837,
+              "pages_used": [
+                1,
+                5,
+                6,
+                7
+              ]
+            },
+            "reserves_agent": {
+              "status": "success",
+              "agent_id": "reserves_agent",
+              "token_count": 458,
+              "latency_ms": 457,
+              "pages_used": [
+                5,
+                6,
+                7,
+                8
+              ]
+            },
+            "energy_agent": {
+              "status": "success",
+              "agent_id": "energy_agent",
+              "token_count": 474,
+              "latency_ms": 621,
+              "pages_used": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            "loans_agent": {
+              "status": "success",
+              "agent_id": "loans_agent",
+              "token_count": 870,
+              "latency_ms": 969,
+              "pages_used": [
+                6,
+                9
+              ]
+            },
+            "board_members_agent": {
+              "status": "success",
+              "agent_id": "board_members_agent",
+              "token_count": 3053,
+              "latency_ms": 2666,
+              "pages_used": [
+                1,
+                2,
+                3,
+                5,
+                11
+              ]
+            },
+            "property_agent": {
+              "status": "success",
+              "agent_id": "property_agent",
+              "token_count": 3151,
+              "latency_ms": 3150,
+              "pages_used": [
+                1,
+                2
+              ]
+            },
+            "cashflow_agent": {
+              "status": "success",
+              "agent_id": "cashflow_agent",
+              "token_count": 975,
+              "latency_ms": 960,
+              "pages_used": [
+                1,
+                7
+              ]
+            },
+            "fees_agent": {
+              "status": "success",
+              "agent_id": "fees_agent",
+              "token_count": 4423,
+              "latency_ms": 3451,
+              "pages_used": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            }
+          },
+          "total_time_seconds": 59.8,
+          "token_usage": 19484,
+          "pdf_type": "machine_readable",
+          "extraction_strategy": "text",
+          "classification_confidence": 0.9
+        },
+        "_validation": {
+          "warnings": [],
+          "warnings_count": 0,
+          "high_severity_count": 0,
+          "rules_triggered": [],
+          "conflicts_resolved": 0
+        },
+        "extraction_quality": {
+          "confidence_score": 0.3284507042253521,
+          "high_confidence_agents": 2,
+          "low_confidence_agents": 9,
+          "total_agents_evaluated": 15,
+          "agent_confidence_breakdown": {
+            "chairman_agent": 0.76,
+            "notes_depreciation_agent": 0.2,
+            "notes_maintenance_agent": 0.2,
+            "notes_tax_agent": 0.2,
+            "auditor_agent": 0.2,
+            "audit_agent": 0.0,
+            "events_agent": 0.36,
+            "financial_agent": 0.4742857142857143,
+            "reserves_agent": 0.0,
+            "energy_agent": 0.0,
+            "loans_agent": 0.2,
+            "board_members_agent": 0.76,
+            "property_agent": 0.48307692307692307,
+            "cashflow_agent": 0.0,
+            "fees_agent": 0.5657142857142857
+          }
+        }
+      }
+    },
+    {
+      "pdf_name": "brf_58306.pdf",
+      "pdf_path": "Hjorthagen/brf_58306.pdf",
+      "success": true,
+      "processing_time_seconds": 35.33,
+      "validation": {
+        "warnings_count": 0,
+        "high_severity": 0,
+        "medium_severity": 0,
+        "low_severity": 0,
+        "rules_triggered": [],
+        "conflicts_resolved": 0
+      },
+      "agents": {
+        "tested": 15,
+        "succeeded": 8,
+        "success_rate": 53.3
+      },
+      "extraction_result": {
+        "auditor_agent": {
+          "auditor_name": null,
+          "audit_firm": null,
+          "evidence_pages": []
+        },
+        "notes_depreciation_agent": {},
+        "notes_maintenance_agent": {},
+        "notes_tax_agent": {},
+        "chairman_agent": {
+          "chairman": "Ruth L\u00e4nsman",
+          "evidence_pages": [
+            2
+          ]
+        },
+        "financial_agent": {
+          "revenue": 1356113,
+          "expenses": null,
+          "assets": null,
+          "liabilities": null,
+          "equity": null,
+          "surplus": -323231,
+          "long_term_liabilities": null,
+          "short_term_liabilities": null,
+          "evidence_pages": [
+            6,
+            7
+          ]
+        },
+        "board_members_agent": {
+          "board_members": [
+            {
+              "name": "Ruth L\u00e4nsman",
+              "role": "Ordf\u00f6rande"
+            },
+            {
+              "name": "Peter Carlsson",
+              "role": "Ledamot"
+            },
+            {
+              "name": "Fredrik Wass",
+              "role": "Ledamot"
+            },
+            {
+              "name": "Ylva Askfors",
+              "role": "Ledamot"
+            },
+            {
+              "name": "Susanna Lundquist",
+              "role": "Suppleant"
+            }
+          ],
+          "evidence_pages": [
+            1
+          ]
+        },
+        "events_agent": {
+          "key_events": [],
+          "maintenance_budget": null,
+          "annual_meeting_date": null,
+          "evidence_pages": [
+            3,
+            9
+          ]
+        },
+        "audit_agent": null,
+        "loans_agent": {
+          "loans": [],
+          "outstanding_loans": null,
+          "interest_rate": null,
+          "amortization": null,
+          "evidence_pages": []
+        },
+        "reserves_agent": null,
+        "energy_agent": null,
+        "property_agent": {
+          "designation": null,
+          "address": null,
+          "postal_code": null,
+          "city": "Stockholm",
+          "built_year": 1939,
+          "apartments": 25,
+          "energy_class": null,
+          "evidence_pages": [
+            2,
+            4
+          ],
+          "acquisition_date": null,
+          "municipality": null,
+          "heating_system": "fj\u00e4rrv\u00e4rme",
+          "insurance_provider": null,
+          "insurance_details": null,
+          "apartment_breakdown": null,
+          "commercial_tenants": null,
+          "common_areas": null,
+          "samfallighet": null,
+          "registration_dates": {
+            "f\u00f6reningens_registrering": "1994-02-03",
+            "ekonomisk_plan": "2018-05-18",
+            "stadgar": "2017-08-22"
+          },
+          "tax_assessment": {
+            "fastighetsavgift_per_l\u00e4genhet": 1589,
+            "fastighetsskatt_lokaler": 1680
+          },
+          "additional_facts": []
+        },
+        "cashflow_agent": null,
+        "fees_agent": {
+          "arsavgift_per_sqm_total": 925.0,
+          "manadsavgift_per_sqm": null,
+          "manadsavgift_per_apartment_avg": null,
+          "fee_1_rok": null,
+          "fee_2_rok": null,
+          "fee_3_rok": null,
+          "fee_4_rok": null,
+          "fee_5_rok": null,
+          "inkluderar_vatten": null,
+          "inkluderar_uppvarmning": null,
+          "inkluderar_el": null,
+          "inkluderar_bredband": null,
+          "last_fee_increase_date": "2023-01-01",
+          "last_fee_increase_percentage": 3.0,
+          "planned_fee_changes": [
+            {
+              "date": "2024-01-01",
+              "percentage": 5.0
+            }
+          ],
+          "terminology_found": "\u00e5rsavgift",
+          "evidence_pages": [
+            2,
+            3,
+            4
+          ]
+        },
+        "_metadata": {
+          "total_agents": 15,
+          "successful_agents": 12,
+          "failed_agents": [
+            "notes_depreciation_agent",
+            "notes_maintenance_agent",
+            "notes_tax_agent"
+          ],
+          "agent_metadata": {
+            "auditor_agent": {
+              "status": "success",
+              "agent_id": "auditor_agent",
+              "token_count": 347,
+              "latency_ms": 1033,
+              "pages_used": [
+                3,
+                9
+              ]
+            },
+            "notes_depreciation_agent": {
+              "status": "empty",
+              "agent_id": "notes_depreciation_agent",
+              "token_count": 0,
+              "latency_ms": 0,
+              "pages_used": [],
+              "reason": "no_notes_detected",
+              "integration_layer": "path_b"
+            },
+            "notes_maintenance_agent": {
+              "status": "empty",
+              "agent_id": "notes_maintenance_agent",
+              "token_count": 0,
+              "latency_ms": 0,
+              "pages_used": [],
+              "reason": "no_notes_detected",
+              "integration_layer": "path_b"
+            },
+            "notes_tax_agent": {
+              "status": "empty",
+              "agent_id": "notes_tax_agent",
+              "token_count": 0,
+              "latency_ms": 0,
+              "pages_used": [],
+              "reason": "no_notes_detected",
+              "integration_layer": "path_b"
+            },
+            "chairman_agent": {
+              "status": "success",
+              "agent_id": "chairman_agent",
+              "token_count": 2670,
+              "latency_ms": 1558,
+              "pages_used": [
+                1,
+                2,
+                3,
+                4
+              ]
+            },
+            "financial_agent": {
+              "status": "success",
+              "agent_id": "financial_agent",
+              "token_count": 1645,
+              "latency_ms": 1565,
+              "pages_used": [
+                1,
+                5,
+                6,
+                7,
+                8
+              ]
+            },
+            "board_members_agent": {
+              "status": "success",
+              "agent_id": "board_members_agent",
+              "token_count": 2679,
+              "latency_ms": 2079,
+              "pages_used": [
+                1,
+                2,
+                3,
+                4
+              ]
+            },
+            "events_agent": {
+              "status": "success",
+              "agent_id": "events_agent",
+              "token_count": 515,
+              "latency_ms": 1043,
+              "pages_used": [
+                3,
+                9
+              ]
+            },
+            "audit_agent": {
+              "status": "success",
+              "agent_id": "audit_agent",
+              "token_count": 456,
+              "latency_ms": 651,
+              "pages_used": [
+                9
+              ]
+            },
+            "loans_agent": {
+              "status": "success",
+              "agent_id": "loans_agent",
+              "token_count": 870,
+              "latency_ms": 915,
+              "pages_used": [
+                6,
+                8
+              ]
+            },
+            "reserves_agent": {
+              "status": "success",
+              "agent_id": "reserves_agent",
+              "token_count": 455,
+              "latency_ms": 521,
+              "pages_used": [
+                4,
+                5,
+                6
+              ]
+            },
+            "energy_agent": {
+              "status": "success",
+              "agent_id": "energy_agent",
+              "token_count": 462,
+              "latency_ms": 742,
+              "pages_used": [
+                2
+              ]
+            },
+            "property_agent": {
+              "status": "success",
+              "agent_id": "property_agent",
+              "token_count": 3279,
+              "latency_ms": 3650,
+              "pages_used": [
+                1,
+                2,
+                4
+              ]
+            },
+            "cashflow_agent": {
+              "status": "success",
+              "agent_id": "cashflow_agent",
+              "token_count": 990,
+              "latency_ms": 1169,
+              "pages_used": [
+                1,
+                7
+              ]
+            },
+            "fees_agent": {
+              "status": "success",
+              "agent_id": "fees_agent",
+              "token_count": 4380,
+              "latency_ms": 3744,
+              "pages_used": [
+                1,
+                2,
+                3,
+                4,
+                7
+              ]
+            }
+          },
+          "total_time_seconds": 35.3,
+          "token_usage": 18748,
+          "pdf_type": "machine_readable",
+          "extraction_strategy": "text",
+          "classification_confidence": 0.9
+        },
+        "_validation": {
+          "warnings": [],
+          "warnings_count": 0,
+          "high_severity_count": 0,
+          "rules_triggered": [],
+          "conflicts_resolved": 0
+        },
+        "extraction_quality": {
+          "confidence_score": 0.37042253521126756,
+          "high_confidence_agents": 2,
+          "low_confidence_agents": 9,
+          "total_agents_evaluated": 15,
+          "agent_confidence_breakdown": {
+            "auditor_agent": 0.2,
+            "notes_depreciation_agent": 0.2,
+            "notes_maintenance_agent": 0.2,
+            "notes_tax_agent": 0.2,
+            "chairman_agent": 0.76,
+            "financial_agent": 0.5342857142857143,
+            "board_members_agent": 0.76,
+            "events_agent": 0.42000000000000004,
+            "audit_agent": 0.0,
+            "loans_agent": 0.2,
+            "reserves_agent": 0.0,
+            "energy_agent": 0.0,
+            "property_agent": 0.6046153846153847,
+            "cashflow_agent": 0.0,
+            "fees_agent": 0.6228571428571429
+          }
+        }
+      }
+    },
+    {
+      "pdf_name": "brf_81563.pdf",
+      "pdf_path": "Hjorthagen/brf_81563.pdf",
+      "success": true,
+      "processing_time_seconds": 181.2,
+      "validation": {
+        "warnings_count": 1,
+        "high_severity": 0,
+        "medium_severity": 0,
+        "low_severity": 1,
+        "rules_triggered": [
+          "invalid_year_format"
+        ],
+        "conflicts_resolved": 0
+      },
+      "agents": {
+        "tested": 15,
+        "succeeded": 12,
+        "success_rate": 80.0
+      },
+      "extraction_result": {
+        "financial_agent": {
+          "revenue": "1962495",
+          "expenses": "2694411",
+          "assets": "79762090",
+          "liabilities": null,
+          "equity": "72211351",
+          "surplus": "-832411",
+          "long_term_liabilities": null,
+          "short_term_liabilities": null,
+          "evidence_pages": [
+            7,
+            8
+          ]
+        },
+        "board_members_agent": {
+          "board_members": [
+            {
+              "name": "Sylvia Helena Sorensen",
+              "role": "Ordf\u00f6rande"
+            },
+            {
+              "name": "Stefan Mile Kantzy",
+              "role": "Kass\u00f6r"
+            },
+            {
+              "name": "Leif Emil Brynolfsson",
+              "role": "Ledamot"
+            },
+            {
+              "name": "Vincent Francois Glinewicz",
+              "role": "Suppleant"
+            },
+            {
+              "name": "Glenn Anders Hartikainen",
+              "role": "Suppleant"
+            }
+          ],
+          "evidence_pages": [
+            3
+          ]
+        },
+        "auditor_agent": {
+          "auditor_name": "Carina Toresson",
+          "audit_firm": "Toresson Revision AB",
+          "evidence_pages": [
+            3
+          ]
+        },
+        "property_agent": {
+          "property_designation": "Hjortsp\u00e5ret",
+          "address": null,
+          "postal_code": null,
+          "city": "Stockholm",
+          "municipality": null,
+          "built_year": null,
+          "building_type": null,
+          "total_area_sqm": null,
+          "living_area_sqm": null,
+          "commercial_area_sqm": null,
+          "land_area_sqm": null,
+          "heating_type": null,
+          "energy_class": null,
+          "total_apartments": null,
+          "evidence_pages": [
+            3
+          ]
+        },
+        "notes_tax_agent": {
+          "current_tax": null,
+          "deferred_tax": null,
+          "tax_policy": null,
+          "evidence_pages": []
+        },
+        "events_agent": {
+          "key_events": [],
+          "maintenance_budget": null,
+          "annual_meeting_date": null,
+          "evidence_pages": []
+        },
+        "audit_agent": null,
+        "reserves_agent": null,
+        "notes_maintenance_agent": {
+          "maintenance_plan": null,
+          "maintenance_budget": null,
+          "evidence_pages": []
+        },
+        "chairman_agent": {
+          "chairman": "Sylvia Helena Sorensen",
+          "evidence_pages": [
+            3
+          ]
+        },
+        "energy_agent": null,
+        "notes_depreciation_agent": {
+          "depreciation_method": "enligt plan",
+          "useful_life_years": "Byggnader: 120, V\u00e4rmeanl\u00e4ggning: 30, Tv\u00e4ttstuga: 10, Inventarier: 10, Vind: 30, Bredbandsinstallation: 10",
+          "depreciation_base": "",
+          "evidence_pages": [
+            10
+          ]
+        },
+        "cashflow_agent": {
+          "cash_in": "1970563",
+          "cash_out": "2452607",
+          "cash_change": "-482044",
+          "evidence_pages": [
+            4
+          ]
+        },
+        "fees_agent": {
+          "arsavgift_per_sqm_total": null,
+          "manadsavgift_per_sqm": null,
+          "manadsavgift_per_apartment_avg": null,
+          "fee_1_rok": null,
+          "fee_2_rok": null,
+          "fee_3_rok": null,
+          "fee_4_rok": null,
+          "fee_5_rok": null,
+          "inkluderar_vatten": null,
+          "inkluderar_uppvarmning": null,
+          "inkluderar_el": null,
+          "inkluderar_bredband": null,
+          "last_fee_increase_date": null,
+          "last_fee_increase_percentage": null,
+          "planned_fee_changes": [],
+          "terminology_found": null,
+          "evidence_pages": []
+        },
+        "loans_agent": {
+          "loans": [],
+          "outstanding_loans": null,
+          "interest_rate": null,
+          "amortization": null,
+          "evidence_pages": []
+        },
+        "_metadata": {
+          "total_agents": 15,
+          "successful_agents": 15,
+          "failed_agents": [],
+          "agent_metadata": {
+            "financial_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ]
+            },
+            "board_members_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            "auditor_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            "property_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                1,
+                2,
+                3
+              ]
+            },
+            "notes_tax_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            },
+            "events_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            "audit_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            "reserves_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                8,
+                9,
+                10,
+                11,
+                12
+              ]
+            },
+            "notes_maintenance_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            },
+            "chairman_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            "energy_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                1,
+                2,
+                3
+              ]
+            },
+            "notes_depreciation_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            },
+            "cashflow_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ]
+            },
+            "fees_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            "loans_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                8,
+                9,
+                10,
+                11,
+                12
+              ]
+            }
+          },
+          "pdf_type": "hybrid",
+          "extraction_strategy": "vision_consensus",
+          "classification_confidence": 0.7,
+          "total_time_seconds": 125.3
+        },
+        "extraction_quality": {
+          "confidence_score": 0.3229577464788732,
+          "high_confidence_agents": 4,
+          "low_confidence_agents": 8,
+          "total_agents_evaluated": 15,
+          "agent_confidence_breakdown": {
+            "financial_agent": 0.7057142857142857,
+            "board_members_agent": 0.76,
+            "auditor_agent": 0.5266666666666666,
+            "property_agent": 0.42153846153846153,
+            "notes_tax_agent": 0.2,
+            "events_agent": 0.2,
+            "audit_agent": 0.0,
+            "reserves_agent": 0.0,
+            "notes_maintenance_agent": 0.2,
+            "chairman_agent": 0.76,
+            "energy_agent": 0.0,
+            "notes_depreciation_agent": 0.6266666666666666,
+            "cashflow_agent": 0.7100000000000001,
+            "fees_agent": 0.2,
+            "loans_agent": 0.2
+          }
+        },
+        "_validation": {
+          "warnings": [
+            {
+              "rule": "invalid_year_format",
+              "severity": "low",
+              "message": "notes_depreciation_agent.useful_life_years: Invalid year format: 'Byggnader: 120, V\u00e4rmeanl\u00e4ggning: 30, Tv\u00e4ttstuga: 10, Inventarier: 10, Vind: 30, Bredbandsinstallation: 10'",
+              "affected_agents": [
+                "notes_depreciation_agent"
+              ],
+              "suggested_resolution": "Check year field extraction",
+              "details": {
+                "field": "useful_life_years",
+                "value": "Byggnader: 120, V\u00e4rmeanl\u00e4ggning: 30, Tv\u00e4ttstuga: 10, Inventarier: 10, Vind: 30, Bredbandsinstallation: 10"
+              }
+            }
+          ],
+          "warnings_count": 1,
+          "high_severity_count": 0,
+          "rules_triggered": [
+            "invalid_year_format"
+          ],
+          "conflicts_resolved": 0
+        }
+      }
+    },
+    {
+      "pdf_name": "brf_198532.pdf",
+      "pdf_path": "experiments/docling_advanced/test_pdfs/brf_198532.pdf",
+      "success": true,
+      "processing_time_seconds": 69.62,
+      "validation": {
+        "warnings_count": 0,
+        "high_severity": 0,
+        "medium_severity": 0,
+        "low_severity": 0,
+        "rules_triggered": [],
+        "conflicts_resolved": 0
+      },
+      "agents": {
+        "tested": 15,
+        "succeeded": 8,
+        "success_rate": 53.3
+      },
+      "extraction_result": {
+        "auditor_agent": {
+          "auditor_name": null,
+          "audit_firm": null,
+          "evidence_pages": []
+        },
+        "notes_depreciation_agent": {},
+        "notes_maintenance_agent": {},
+        "notes_tax_agent": {},
+        "financial_agent": {
+          "revenue": null,
+          "expenses": null,
+          "assets": null,
+          "liabilities": null,
+          "equity": null,
+          "surplus": null,
+          "long_term_liabilities": null,
+          "short_term_liabilities": null,
+          "evidence_pages": []
+        },
+        "chairman_agent": {
+          "chairman": "Elvy Maria L\u00f6fvenberg",
+          "evidence_pages": [
+            2,
+            3,
+            5
+          ]
+        },
+        "board_members_agent": {
+          "board_members": [
+            {
+              "name": "Elvy Maria L\u00f6fvenberg",
+              "role": "Ordf\u00f6rande"
+            },
+            {
+              "name": "Torbj\u00f6rn Andersson",
+              "role": "Ledamot"
+            },
+            {
+              "name": "Maria Annelie Eck Arvstrand",
+              "role": "Ledamot"
+            },
+            {
+              "name": "Mats Eskilson",
+              "role": "Ledamot"
+            },
+            {
+              "name": "Fredrik Linde",
+              "role": "Ledamot"
+            }
+          ],
+          "evidence_pages": [
+            3,
+            5
+          ]
+        },
+        "events_agent": {
+          "key_events": [],
+          "maintenance_budget": null,
+          "annual_meeting_date": null,
+          "evidence_pages": [],
+          "warranty_claims": null,
+          "tenant_changes": null,
+          "loan_restructuring": null,
+          "rental_activity": null
+        },
+        "audit_agent": null,
+        "loans_agent": {
+          "loans": [],
+          "outstanding_loans": null,
+          "interest_rate": null,
+          "amortization": null,
+          "evidence_pages": []
+        },
+        "reserves_agent": null,
+        "cashflow_agent": null,
+        "fees_agent": {
+          "arsavgift_per_sqm_total": null,
+          "manadsavgift_per_sqm": null,
+          "manadsavgift_per_apartment_avg": null,
+          "fee_1_rok": null,
+          "fee_2_rok": null,
+          "fee_3_rok": null,
+          "fee_4_rok": null,
+          "fee_5_rok": null,
+          "inkluderar_vatten": null,
+          "inkluderar_uppvarmning": null,
+          "inkluderar_el": null,
+          "inkluderar_bredband": null,
+          "last_fee_increase_date": null,
+          "last_fee_increase_percentage": null,
+          "planned_fee_changes": [],
+          "terminology_found": "\u00e5rsavgift",
+          "evidence_pages": [
+            1
+          ]
+        },
+        "energy_agent": null,
+        "property_agent": {
+          "designation": "Sonfj\u00e4llet 2",
+          "address": null,
+          "postal_code": null,
+          "city": "Stockholm",
+          "built_year": 2015,
+          "apartments": 94,
+          "energy_class": null,
+          "evidence_pages": [
+            1,
+            3,
+            5
+          ],
+          "acquisition_date": null,
+          "municipality": "Stockholm",
+          "heating_system": "Fj\u00e4rrv\u00e4rme",
+          "insurance_provider": null,
+          "insurance_details": null,
+          "apartment_breakdown": null,
+          "commercial_tenants": [
+            {
+              "tenant": "Puls& Tr\u00e4ning Sweden AB",
+              "area_sqm": 282,
+              "lease_period": "2017-06-20 - 2022-06-19"
+            },
+            {
+              "tenant": "Barnsjukhuset Martina i Stockholm AB",
+              "area_sqm": 197,
+              "lease_period": "2020-06-22 - 2030-06-21"
+            }
+          ],
+          "common_areas": [
+            "Tv\u00e5 gemensamma terrasser",
+            "Tv\u00e5 gemensamma entr\u00e9er",
+            "Tv\u00e5 gemensamhetslokaler"
+          ],
+          "samfallighet": {
+            "name": "Sonfj\u00e4llets samf\u00e4llighetsf\u00f6rening",
+            "share": "47%"
+          },
+          "registration_dates": {
+            "association_registration": "2014-11-03",
+            "economic_plan_registration": "2016-11-22",
+            "statutes_registration": "2016-11-14"
+          },
+          "tax_assessment": null,
+          "additional_facts": []
+        },
+        "_metadata": {
+          "total_agents": 15,
+          "successful_agents": 12,
+          "failed_agents": [
+            "notes_depreciation_agent",
+            "notes_maintenance_agent",
+            "notes_tax_agent"
+          ],
+          "agent_metadata": {
+            "auditor_agent": {
+              "status": "success",
+              "agent_id": "auditor_agent",
+              "token_count": 356,
+              "latency_ms": 1125,
+              "pages_used": [
+                2,
+                11,
+                13,
+                14,
+                15
+              ]
+            },
+            "notes_depreciation_agent": {
+              "status": "empty",
+              "agent_id": "notes_depreciation_agent",
+              "token_count": 0,
+              "latency_ms": 1,
+              "pages_used": [],
+              "reason": "no_notes_detected",
+              "integration_layer": "path_b"
+            },
+            "notes_maintenance_agent": {
+              "status": "empty",
+              "agent_id": "notes_maintenance_agent",
+              "token_count": 0,
+              "latency_ms": 1,
+              "pages_used": [],
+              "reason": "no_notes_detected",
+              "integration_layer": "path_b"
+            },
+            "notes_tax_agent": {
+              "status": "empty",
+              "agent_id": "notes_tax_agent",
+              "token_count": 0,
+              "latency_ms": 1,
+              "pages_used": [],
+              "reason": "no_notes_detected",
+              "integration_layer": "path_b"
+            },
+            "financial_agent": {
+              "status": "success",
+              "agent_id": "financial_agent",
+              "token_count": 1370,
+              "latency_ms": 1646,
+              "pages_used": [
+                4,
+                7,
+                8,
+                13
+              ]
+            },
+            "chairman_agent": {
+              "status": "success",
+              "agent_id": "chairman_agent",
+              "token_count": 3577,
+              "latency_ms": 2173,
+              "pages_used": [
+                1,
+                2,
+                3,
+                5,
+                7
+              ]
+            },
+            "board_members_agent": {
+              "status": "success",
+              "agent_id": "board_members_agent",
+              "token_count": 3692,
+              "latency_ms": 2698,
+              "pages_used": [
+                1,
+                2,
+                3,
+                5,
+                7
+              ]
+            },
+            "events_agent": {
+              "status": "success",
+              "agent_id": "events_agent",
+              "token_count": 546,
+              "latency_ms": 1585,
+              "pages_used": [
+                5,
+                12,
+                14
+              ]
+            },
+            "audit_agent": {
+              "status": "success",
+              "agent_id": "audit_agent",
+              "token_count": 459,
+              "latency_ms": 1095,
+              "pages_used": [
+                13,
+                14
+              ]
+            },
+            "loans_agent": {
+              "status": "success",
+              "agent_id": "loans_agent",
+              "token_count": 876,
+              "latency_ms": 1047,
+              "pages_used": [
+                7,
+                8,
+                11,
+                12
+              ]
+            },
+            "reserves_agent": {
+              "status": "success",
+              "agent_id": "reserves_agent",
+              "token_count": 1463,
+              "latency_ms": 661,
+              "pages_used": [
+                1,
+                6,
+                7,
+                8,
+                9
+              ]
+            },
+            "cashflow_agent": {
+              "status": "success",
+              "agent_id": "cashflow_agent",
+              "token_count": 494,
+              "latency_ms": 1100,
+              "pages_used": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            "fees_agent": {
+              "status": "success",
+              "agent_id": "fees_agent",
+              "token_count": 2716,
+              "latency_ms": 3001,
+              "pages_used": [
+                1,
+                5,
+                6,
+                8,
+                9
+              ]
+            },
+            "energy_agent": {
+              "status": "success",
+              "agent_id": "energy_agent",
+              "token_count": 474,
+              "latency_ms": 31198,
+              "pages_used": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            "property_agent": {
+              "status": "success",
+              "agent_id": "property_agent",
+              "token_count": 4420,
+              "latency_ms": 35623,
+              "pages_used": [
+                1,
+                3,
+                5,
+                13,
+                14
+              ]
+            }
+          },
+          "total_time_seconds": 69.6,
+          "token_usage": 20443,
+          "pdf_type": "machine_readable",
+          "extraction_strategy": "text",
+          "classification_confidence": 0.9
+        },
+        "_validation": {
+          "warnings": [],
+          "warnings_count": 0,
+          "high_severity_count": 0,
+          "rules_triggered": [],
+          "conflicts_resolved": 0
+        },
+        "extraction_quality": {
+          "confidence_score": 0.3180281690140845,
+          "high_confidence_agents": 3,
+          "low_confidence_agents": 11,
+          "total_agents_evaluated": 15,
+          "agent_confidence_breakdown": {
+            "auditor_agent": 0.2,
+            "notes_depreciation_agent": 0.2,
+            "notes_maintenance_agent": 0.2,
+            "notes_tax_agent": 0.2,
+            "financial_agent": 0.2,
+            "chairman_agent": 0.88,
+            "board_members_agent": 0.82,
+            "events_agent": 0.2,
+            "audit_agent": 0.0,
+            "loans_agent": 0.2,
+            "reserves_agent": 0.0,
+            "cashflow_agent": 0.0,
+            "fees_agent": 0.38857142857142857,
+            "energy_agent": 0.0,
+            "property_agent": 0.7876923076923077
+          }
+        }
+      }
+    },
+    {
+      "pdf_name": "brf_276507.pdf",
+      "pdf_path": "SRS/brf_276507.pdf",
+      "success": true,
+      "processing_time_seconds": 136.32,
+      "validation": {
+        "warnings_count": 1,
+        "high_severity": 0,
+        "medium_severity": 0,
+        "low_severity": 1,
+        "rules_triggered": [
+          "invalid_year_format"
+        ],
+        "conflicts_resolved": 0
+      },
+      "agents": {
+        "tested": 15,
+        "succeeded": 11,
+        "success_rate": 73.3
+      },
+      "extraction_result": {
+        "financial_agent": {
+          "revenue": "4869041",
+          "expenses": "6165382",
+          "assets": "480873785",
+          "liabilities": "66538986",
+          "equity": "414334800",
+          "surplus": "-3099455",
+          "long_term_liabilities": "19982000",
+          "short_term_liabilities": "46556986",
+          "evidence_pages": [
+            7,
+            8,
+            9
+          ]
+        },
+        "auditor_agent": {
+          "auditor_name": "Matilda Hallehn",
+          "audit_firm": "BoRevision i Sverige Aktiebolag",
+          "evidence_pages": [
+            2
+          ]
+        },
+        "property_agent": {
+          "property_designation": "Kopp\u00e5ngen 3",
+          "address": null,
+          "postal_code": null,
+          "city": "Stockholm",
+          "municipality": "Stockholm",
+          "built_year": 2019,
+          "building_type": null,
+          "total_area_sqm": 4633.0,
+          "living_area_sqm": 4511.0,
+          "commercial_area_sqm": 122.0,
+          "land_area_sqm": null,
+          "heating_type": null,
+          "energy_class": null,
+          "total_apartments": 62,
+          "evidence_pages": [
+            2
+          ]
+        },
+        "notes_depreciation_agent": {
+          "depreciation_method": "linj\u00e4r",
+          "useful_life_years": "15-120",
+          "depreciation_base": "materiella anl\u00e4ggningstillg\u00e5ngar",
+          "evidence_pages": [
+            11
+          ]
+        },
+        "notes_maintenance_agent": {
+          "maintenance_plan": null,
+          "maintenance_budget": null,
+          "evidence_pages": []
+        },
+        "board_members_agent": {
+          "board_members": [
+            {
+              "name": "Ulf Wanderoy",
+              "role": "Ordf\u00f6rande"
+            },
+            {
+              "name": "Camilla Land\u00e9n",
+              "role": "Ordf\u00f6rande"
+            },
+            {
+              "name": "Bo Hallgren",
+              "role": "HSB-Ledamot"
+            },
+            {
+              "name": "Sven Gustafsson",
+              "role": "Ledamot"
+            },
+            {
+              "name": "Hans Malmstr\u00f6m",
+              "role": "Ledamot"
+            },
+            {
+              "name": "Patrik Barkman",
+              "role": "Ledamot"
+            },
+            {
+              "name": "Jonas Eriksson",
+              "role": "Ledamot"
+            },
+            {
+              "name": "Susanna Stockhus",
+              "role": "Ledamot"
+            },
+            {
+              "name": "Martin From",
+              "role": "Ledamot"
+            },
+            {
+              "name": "Martin Almblad",
+              "role": "Ledamot"
+            },
+            {
+              "name": "Tirdad Eskandari",
+              "role": "Ledamot"
+            }
+          ],
+          "evidence_pages": [
+            2
+          ]
+        },
+        "chairman_agent": {
+          "chairman": "Camilla Land\u00e9n",
+          "evidence_pages": [
+            2
+          ]
+        },
+        "loans_agent": {
+          "loans": [],
+          "outstanding_loans": null,
+          "interest_rate": null,
+          "amortization": null,
+          "evidence_pages": []
+        },
+        "notes_tax_agent": {
+          "current_tax": null,
+          "deferred_tax": null,
+          "tax_policy": null,
+          "evidence_pages": []
+        },
+        "audit_agent": null,
+        "reserves_agent": null,
+        "energy_agent": null,
+        "fees_agent": {
+          "arsavgift_per_sqm_total": 766.0,
+          "manadsavgift_per_sqm": null,
+          "manadsavgift_per_apartment_avg": null,
+          "fee_1_rok": null,
+          "fee_2_rok": null,
+          "fee_3_rok": null,
+          "fee_4_rok": null,
+          "fee_5_rok": null,
+          "inkluderar_vatten": null,
+          "inkluderar_uppvarmning": null,
+          "inkluderar_el": null,
+          "inkluderar_bredband": null,
+          "last_fee_increase_date": "2024-01-01",
+          "last_fee_increase_percentage": 8.0,
+          "planned_fee_changes": [],
+          "terminology_found": "\u00e5rsavgift",
+          "evidence_pages": [
+            2,
+            4
+          ]
+        },
+        "events_agent": {
+          "key_events": [
+            "Underh\u00e5llsplanen anv\u00e4nds b\u00e5de f\u00f6r planering av tekniskt underh\u00e5ll och f\u00f6r ekonomisk planering.",
+            "Styrelsen har beslutat och genomf\u00f6rt reservation till f\u00f6reningens underh\u00e5llsfond i enlighet med g\u00e4llande stadgar.",
+            "Senaste stadgeenliga fastighetsbesiktning utf\u00f6rdes i enlighet med f\u00f6reningens underh\u00e5llsplan under 2023.",
+            "\u00c5rsavgiften h\u00f6jdes 8% fr\u00e5n januari 2024.",
+            "Under \u00e5ret har efterbesiktning av 2-\u00e5rs garantibesiktningar genomf\u00f6rts."
+          ],
+          "maintenance_budget": null,
+          "annual_meeting_date": "2023-05-23",
+          "evidence_pages": [
+            2,
+            3
+          ]
+        },
+        "cashflow_agent": null,
+        "_metadata": {
+          "total_agents": 15,
+          "successful_agents": 15,
+          "failed_agents": [],
+          "agent_metadata": {
+            "financial_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ]
+            },
+            "auditor_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            "property_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                1,
+                2,
+                3
+              ]
+            },
+            "notes_depreciation_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            },
+            "notes_maintenance_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            },
+            "board_members_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            "chairman_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            "loans_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                8,
+                9,
+                10,
+                11,
+                12
+              ]
+            },
+            "notes_tax_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            },
+            "audit_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            "reserves_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                8,
+                9,
+                10,
+                11,
+                12
+              ]
+            },
+            "energy_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                1,
+                2,
+                3
+              ]
+            },
+            "fees_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            "events_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            "cashflow_agent": {
+              "status": "success",
+              "confidence": 0.85,
+              "agreement_ratio": 1.0,
+              "primary_model": "gpt-4o",
+              "pages_used": [
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ]
+            }
+          },
+          "pdf_type": "hybrid",
+          "extraction_strategy": "vision_consensus",
+          "classification_confidence": 0.7,
+          "total_time_seconds": 84.0
+        },
+        "extraction_quality": {
+          "confidence_score": 0.43605633802816907,
+          "high_confidence_agents": 4,
+          "low_confidence_agents": 7,
+          "total_agents_evaluated": 15,
+          "agent_confidence_breakdown": {
+            "financial_agent": 0.88,
+            "auditor_agent": 0.5266666666666666,
+            "property_agent": 0.6061538461538462,
+            "notes_depreciation_agent": 0.76,
+            "notes_maintenance_agent": 0.2,
+            "board_members_agent": 0.76,
+            "chairman_agent": 0.76,
+            "loans_agent": 0.2,
+            "notes_tax_agent": 0.2,
+            "audit_agent": 0.0,
+            "reserves_agent": 0.0,
+            "energy_agent": 0.0,
+            "fees_agent": 0.5342857142857143,
+            "events_agent": 0.6866666666666666,
+            "cashflow_agent": 0.0
+          }
+        },
+        "_validation": {
+          "warnings": [
+            {
+              "rule": "invalid_year_format",
+              "severity": "low",
+              "message": "notes_depreciation_agent.useful_life_years: Invalid year format: '15-120'",
+              "affected_agents": [
+                "notes_depreciation_agent"
+              ],
+              "suggested_resolution": "Check year field extraction",
+              "details": {
+                "field": "useful_life_years",
+                "value": "15-120"
+              }
+            }
+          ],
+          "warnings_count": 1,
+          "high_severity_count": 0,
+          "rules_triggered": [
+            "invalid_year_format"
+          ],
+          "conflicts_resolved": 0
+        }
+      }
+    }
+  ],
+  "aggregate_metrics": {
+    "success_rate": 100.0,
+    "total_warnings": 6,
+    "avg_warnings_per_pdf": 0.9,
+    "severity_distribution": {
+      "high": 0,
+      "medium": 3,
+      "low": 3
+    },
+    "total_conflicts_resolved": 0,
+    "avg_conflicts_per_pdf": 0.0,
+    "avg_processing_time_seconds": 91.3,
+    "avg_agent_success_rate": 66.6,
+    "unique_rules_triggered": [
+      "invalid_year_format",
+      "missing_evidence"
+    ],
+    "rule_coverage": "2/10 validation rules"
+  },
+  "errors": []
+}

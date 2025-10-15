@@ -1,0 +1,591 @@
+{
+  "metadata": {
+    "brf_name": "Bostadsrättsföreningen Hjortspåret",
+    "org_number": "769608-2598",
+    "report_year": 2021,
+    "report_period": "2021-01-01 to 2021-12-31",
+    "location": "Stockholm",
+    "property_manager": "SBC (Sveriges BostadsrättsCentrum AB)",
+    "pages_total": 21,
+    "extraction_date": "2025-10-15",
+    "extraction_model": "Claude 4.5",
+    "pdf_filename": "brf_81563.pdf",
+    "evidence_pages": [1, 3]
+  },
+
+  "governance_agent": {
+    "chairman": "Sylvia Helena Sörensen",
+    "board_members": [
+      {
+        "name": "Sylvia Helena Sörensen",
+        "role": "Ordförande"
+      },
+      {
+        "name": "Stefan Mile Kantzy",
+        "role": "Kassör"
+      },
+      {
+        "name": "Leif Emil Brynolfsson",
+        "role": "Ledamot"
+      }
+    ],
+    "deputy_members": [
+      {
+        "name": "Vincent Francois Gliniewicz",
+        "role": "Suppleant"
+      },
+      {
+        "name": "Glenn Anders Hartikainen",
+        "role": "Suppleant"
+      }
+    ],
+    "auditor_name": "Carina Toresson",
+    "auditor_firm": "Toresson Revision AB",
+    "auditor_deputy": "Camilla Lindstaf",
+    "election_committee": [
+      {
+        "name": "Veronika Elebäck",
+        "role": "Member"
+      },
+      {
+        "name": "Kerstin Kantzy",
+        "role": "Sammankallande"
+      }
+    ],
+    "board_meetings_held": 1,
+    "registration_date": "2002-04-16",
+    "economic_plan_registered": "2009-08-31",
+    "current_statutes_registered": "2019-01-25",
+    "entity_type": "Privatbostadsföretag enligt inkomstskattelagen (1999:1229)",
+    "evidence_pages": [3, 17]
+  },
+
+  "property_agent": {
+    "properties": [
+      {
+        "name": "Spåret 1",
+        "acquisition_year": 2009,
+        "municipality": "Stockholm"
+      },
+      {
+        "name": "Spåret 2",
+        "acquisition_year": 2009,
+        "municipality": "Stockholm"
+      },
+      {
+        "name": "Spåret 3",
+        "acquisition_year": 2009,
+        "municipality": "Stockholm"
+      }
+    ],
+    "num_properties": 3,
+    "building_year": 1939,
+    "num_buildings": 3,
+    "property_value_year": 2000,
+    "heating_type": "fjärrvärme",
+    "total_area_sqm": 2642,
+    "residential_area_sqm": 2508,
+    "commercial_area_sqm": 134,
+    "apartment_breakdown": {
+      "1_rok": 0,
+      "2_rok": 46,
+      "3_rok": 5,
+      "4_rok": 3,
+      "5_rok": 0,
+      "over_5_rok": 0,
+      "total": 54
+    },
+    "bostadsratt_apartments": 48,
+    "hyresratt_apartments": 6,
+    "hyresratt_premises": 2,
+    "premises_details": [
+      {
+        "type": "Uthyrd",
+        "area_sqm": 38,
+        "lease_term": null
+      },
+      {
+        "type": "Två rum + Värmecentral och Möteslokal",
+        "area_sqm": 47,
+        "lease_term": null
+      },
+      {
+        "type": "Uthyrd",
+        "area_sqm": 19,
+        "lease_term": null
+      },
+      {
+        "type": "Uthyrd (garage)",
+        "area_sqm": 30,
+        "lease_term": null
+      }
+    ],
+    "parking_spaces": 2,
+    "parking_type": "P-platser för nyttjande utomhus",
+    "insurance_type": "Fullvärdesförsäkring via Bostadsrätternas medlemsförsäkring",
+    "maintenance_plan_period": "2016-2029",
+    "maintenance_plan_items": [
+      {
+        "activity": "Kontinuerlig uppföljning och översyn, för förhindrande av fuktskador",
+        "year": "2016 tills vidare, successivt",
+        "status": "Genomförande enligt plan samt med stöd av fuktutredning 2015"
+      }
+    ],
+    "pandemic_impact": "På grund av pandemin har vissa åtgärder, som exempelvis, planerad OVK och Energideklaration inte kunnat genomföras under året. Åtgärderna är inplanerade för genomförande år 2022.",
+    "delayed_activities": ["OVK", "Energideklaration"],
+    "rescheduled_to": 2022,
+    "planned_actions_2022": [
+      "OVK samt rengöring av ventilationskanaler",
+      "Energideklaration",
+      "Renovering och justering av plattläggning utanför soprum och vid trapp",
+      "Målning av skärmtak"
+    ],
+    "evidence_pages": [4, 5, 6, 17]
+  },
+
+  "financial_agent": {
+    "revenue_2021": 1962495,
+    "revenue_2020": 1952662,
+    "operating_costs_2021": 2694411,
+    "operating_costs_2020": 4193080,
+    "operating_result_2021": -731916,
+    "operating_result_2020": -2240418,
+    "financial_income_2021": 334,
+    "financial_costs_2021": 100828,
+    "net_result_2021": -832411,
+    "net_result_2020": -2355384,
+    "total_assets_2021": 79762090,
+    "total_assets_2020": 80735885,
+    "equity_2021": 72211351,
+    "equity_2020": 73043762,
+    "soliditet_pct_2021": 91,
+    "soliditet_pct_2020": 90,
+    "cash_and_bank_2021": 196579,
+    "cash_and_bank_2020": 196579,
+    "client_funds_held_by_manager_2021": 549629,
+    "client_funds_held_by_manager_2020": 1694807,
+    "manager_name": "SBC",
+    "short_term_receivables_2021": 1301354,
+    "short_term_receivables_2020": 1780652,
+    "liquidity_change_2021": -482044,
+    "liquidity_change_2020": 520398,
+    "revenue_breakdown": {
+      "arsavgifter": 1585800,
+      "hyror_bostader": 200635,
+      "hyror_lokaler": 96600,
+      "hyror_parkering": 26400,
+      "hyror_garage": 42000,
+      "bredbandsintakter": 1140,
+      "avgift_andrahandsuthyrning": 7999,
+      "oresutjamning": 3
+    },
+    "rental_income_per_sqm_trend": {
+      "2021": 643,
+      "2020": 673,
+      "2019": 950,
+      "2018": 1016
+    },
+    "rental_trend_analysis": {
+      "direction": "declining",
+      "total_change_pct": -36.7,
+      "years_analyzed": 4,
+      "concern_level": "high"
+    },
+    "multi_year_metrics": {
+      "2021": {
+        "arsavgift_per_sqm": 727,
+        "hyror_per_sqm": 643,
+        "lan_per_sqm_bostad": 3230,
+        "elkostnad_per_sqm": 20,
+        "varmekostnad_per_sqm": 214,
+        "vattenkostnad_per_sqm": 31,
+        "kapitalkostnader_per_sqm": 38,
+        "soliditet_pct": 91,
+        "resultat_efter_finansiella_poster": -832000,
+        "nettoomsattning": 1961000
+      },
+      "2020": {
+        "arsavgift_per_sqm": 716,
+        "hyror_per_sqm": 673,
+        "lan_per_sqm_bostad": 3226,
+        "elkostnad_per_sqm": 19,
+        "varmekostnad_per_sqm": 221,
+        "vattenkostnad_per_sqm": 33,
+        "kapitalkostnader_per_sqm": 44,
+        "soliditet_pct": 90,
+        "resultat_efter_finansiella_poster": -2355000,
+        "nettoomsattning": 1953000
+      },
+      "2019": {
+        "arsavgift_per_sqm": 695,
+        "hyror_per_sqm": 950,
+        "lan_per_sqm_bostad": 5602,
+        "elkostnad_per_sqm": 23,
+        "varmekostnad_per_sqm": 224,
+        "vattenkostnad_per_sqm": 26,
+        "kapitalkostnader_per_sqm": 106,
+        "soliditet_pct": 84,
+        "resultat_efter_finansiella_poster": -1325000,
+        "nettoomsattning": 2036000
+      },
+      "2018": {
+        "arsavgift_per_sqm": 692,
+        "hyror_per_sqm": 1016,
+        "lan_per_sqm_bostad": 6515,
+        "elkostnad_per_sqm": 22,
+        "varmekostnad_per_sqm": 229,
+        "vattenkostnad_per_sqm": 32,
+        "kapitalkostnader_per_sqm": 110,
+        "soliditet_pct": 82,
+        "resultat_efter_finansiella_poster": -1198000,
+        "nettoomsattning": 2047000
+      }
+    },
+    "property_tax_rate": 0.003,
+    "property_tax_max_per_apt": 1459,
+    "commercial_tax_rate": 0.01,
+    "economic_assessment": "Föreningens ekonomi bedöms vara god",
+    "evidence_pages": [6, 7, 9, 10, 11, 15]
+  },
+
+  "operating_costs_agent": {
+    "fastighetskostnader": {
+      "fastighetsskotsel_entreprenad": 59799,
+      "fastighetsskotsel_bestallning": 36260,
+      "fastighetsskotsel_gard_entreprenad": 132466,
+      "fastighetsskotsel_gard_bestallning": 27310,
+      "snorojning_sandning": 100289,
+      "stadning_entreprenad": 145451,
+      "stadning_bestallning": 14129,
+      "mattvatt_hyrmattor": 19559,
+      "gemensamma_utrymmen": 2716,
+      "sophantering": 0,
+      "gard": 32625,
+      "serviceavtal": 20384,
+      "forbrukningsmaterial": 1934,
+      "storningsgjour_larm": 0,
+      "brandskydd": 5073,
+      "fordon": 633,
+      "subtotal": 598627
+    },
+    "reparationer": {
+      "fastighet_forbattringar": 0,
+      "gemensamma_utrymmen": 0,
+      "tvattstuga": 15315,
+      "entre_trapphus": 1050,
+      "las": 6609,
+      "vvs": 14658,
+      "varmeanlaggning_undercentral": 2188,
+      "ventilation": 0,
+      "elinstallationer": 56825,
+      "tele_tv_kabel_porttelefon": 7505,
+      "tak": 4800,
+      "mark_gard_utemiljo": 2489,
+      "skador_klotter_skadegorelse": 7938,
+      "vattenskada": 54118,
+      "subtotal": 173495
+    },
+    "periodiskt_underhall": {
+      "hyreslagenheter": 0,
+      "gemensamma_utrymmen": 130625,
+      "entre_trapphus": 0,
+      "elinstallationer": 0,
+      "tak": 0,
+      "mark_gard_utemiljo": 0,
+      "subtotal": 130625
+    },
+    "el": 53775,
+    "varme": 564782,
+    "vatten": 82327,
+    "varme_och_vatten": null,
+    "underhall_och_reparationer": null,
+    "forsakringar": 48142,
+    "fastighetsskatt": 82466,
+    "hiss": null,
+    "sotning_och_ventilationskontroll": null,
+    "sophamtning_renhallning": 106051,
+    "grovsopor": 8740,
+    "ovriga_driftkostnader": {
+      "kabel_tv": 15111,
+      "bredband": 83744,
+      "subtotal": 146997
+    },
+    "total_fastighetskostnader": 598627,
+    "total_reparationer": 173495,
+    "total_periodiskt_underhall": 130625,
+    "total_taxebundna_kostnader": 815675,
+    "total_ovriga_driftkostnader": 146997,
+    "total_fastighetsskatt": 82466,
+    "total_driftkostnader": 1947884,
+    "note": "Separate värme and vatten (NOT combined värme_och_vatten like brf_266956)",
+    "evidence_pages": [13]
+  },
+
+  "loans_agent": {
+    "loan_1": {
+      "lender": "Handelsbanken",
+      "amount": 7000000,
+      "interest_rate": 1.350,
+      "maturity_date": null,
+      "villkorsandringsdag": "2022-09-01",
+      "classified_as_short_term": true,
+      "classification_reason": "Villkorsändringsdag within 12 months of balance sheet date (2021-12-31). Lån som har slutförfallodag inom ett år från bokslutsdagen redovisas som kortfristiga skulder."
+    },
+    "total_loans": 7000000,
+    "long_term_portion": 0,
+    "short_term_portion": 7000000,
+    "loan_classification_note": "Om fem år beräknas skulden till kreditinstitut uppgå till 7 000 000 kr",
+    "checking_credit": {
+      "approved": 300000,
+      "utilized": 40506,
+      "interest_rate": 0.000
+    },
+    "property_liens": 30000000,
+    "evidence_pages": [11, 16]
+  },
+
+  "members_agent": {
+    "member_apartments": 48,
+    "total_apartments": 54,
+    "members_beginning_of_year": 67,
+    "new_members": 8,
+    "departing_members": 12,
+    "members_end_of_year": 63,
+    "transfers_during_year": 7,
+    "transfer_fee_policy": "Överlåtelse- och pantsättningsavgift tas ut enligt stadgar. Överlåtelseavgift betalas av köpare.",
+    "evidence_pages": [7]
+  },
+
+  "notes_maintenance_agent": {
+    "maintenance_plan": {
+      "period": "2016-2029",
+      "items": [
+        {
+          "activity": "Kontinuerlig uppföljning och översyn, för förhindrande av fuktskador",
+          "year": "2016 tills vidare, successivt",
+          "status": "Genomförande enligt plan samt med stöd av fuktutredning 2015"
+        }
+      ]
+    },
+    "planned_maintenance_2022": [
+      "OVK samt rengöring av ventilationskanaler",
+      "Energideklaration",
+      "Renovering och justering av plattläggning utanför soprum och vid trapp",
+      "Målning av skärmtak"
+    ],
+    "evidence_pages": [4, 17]
+  },
+
+  "notes_income_agent": {
+    "nettoomsattning_2021": 1960577,
+    "nettoomsattning_2020": 1952662,
+    "breakdown": {
+      "arsavgifter": 1585800,
+      "hyror_bostader": 200635,
+      "hyror_lokaler": 96600,
+      "hyror_parkering": 26400,
+      "hyror_garage": 42000,
+      "bredbandsintakter": 1140,
+      "avgift_andrahandsuthyrning": 7999,
+      "oresutjamning": 3
+    },
+    "ovriga_rorelseintakter_2021": 1918,
+    "ovriga_rorelseintakter_2020": 0,
+    "evidence_pages": [12]
+  },
+
+  "notes_external_costs_agent": {
+    "total_2021": 154183,
+    "total_2020": 390285,
+    "breakdown": {
+      "kreditupplysning": 0,
+      "juridiska_atgarder": 0,
+      "hyresforluster": 0,
+      "revisionsarvode_extern_revisor": 16563,
+      "foreningskostnader": 2419,
+      "fritids_trivselkostnader": 877,
+      "forvaltningsarvode": 105672,
+      "administration": 3429,
+      "korttidsinventarier": 1148,
+      "konsultarvode": 17865,
+      "bostadsratternas_sverige_ek_for": 6210
+    },
+    "evidence_pages": [14]
+  },
+
+  "notes_personnel_agent": {
+    "employees": 0,
+    "board_compensation": 81000,
+    "social_costs": 16848,
+    "total_personnel_costs_2021": 97848,
+    "total_personnel_costs_2020": 97545,
+    "evidence_pages": [14]
+  },
+
+  "notes_depreciation_agent": {
+    "depreciation_schedule": {
+      "byggnader": 120,
+      "varmeanlaggning": 30,
+      "tvattstuga": 10,
+      "inventarier": 10,
+      "vind": 30,
+      "bredbandsinstallation": 10
+    },
+    "total_depreciation_2021": 494496,
+    "total_depreciation_2020": 494496,
+    "breakdown": {
+      "byggnad": 403677,
+      "forbattringar": 88434,
+      "inventarier": 2385
+    },
+    "evidence_pages": [12, 14]
+  },
+
+  "notes_buildings_agent": {
+    "acquisition_value": 81872091,
+    "accumulated_depreciation": -3611646,
+    "book_value_2021": 78260445,
+    "book_value_2020": 78752557,
+    "land_value_in_book_value": 34267492,
+    "tax_assessment": {
+      "buildings": 44768000,
+      "land": 59800000,
+      "total": 104568000,
+      "year": 2021
+    },
+    "tax_assessment_breakdown": {
+      "bostader": 104200000,
+      "lokaler": 368000
+    },
+    "evidence_pages": [15]
+  },
+
+  "notes_inventory_agent": {
+    "acquisition_value": 23846,
+    "accumulated_depreciation": -20134,
+    "book_value_2021": 3712,
+    "book_value_2020": 6097,
+    "evidence_pages": [15]
+  },
+
+  "notes_fordringar_agent": {
+    "skattekonto": 88369,
+    "klientmedel_hos_sbc": 549629,
+    "fordringar_kreditfakturor": 222,
+    "rantekonto_hos_sbc": 663134,
+    "total_2021": 1301354,
+    "total_2020": 1780652,
+    "note": "Client funds held by SBC (property manager) - NOT direct bank account",
+    "evidence_pages": [15]
+  },
+
+  "notes_fund_agent": {
+    "fund_beginning_2021": 215130,
+    "fund_beginning_2020": 215260,
+    "reservering_enligt_stadgar_2021": 313704,
+    "reservering_enligt_stadgar_2020": 215130,
+    "reservering_enligt_stammobeslut_2021": 0,
+    "ianspraktagande_enligt_stadgar_2021": -215130,
+    "ianspraktagande_enligt_stammobeslut_2021": -215130,
+    "fund_end_2021": 313704,
+    "fund_end_2020": 215130,
+    "evidence_pages": [16]
+  },
+
+  "cashflow_agent": {
+    "inbetalningar": {
+      "rorelseintakter": 1962495,
+      "finansiella_intakter": 334,
+      "minskning_kortfristiga_fordringar": 0,
+      "medlemsinsatser": 0,
+      "okning_langfristiga_skulder": 7734,
+      "total": 1970563
+    },
+    "utbetalningar": {
+      "rورelsekostnader_exkl_avskrivningar": 2199915,
+      "finansiella_kostnader": 100828,
+      "okning_kortfristiga_fordringar": 2746,
+      "minskning_langfristiga_skulder": 0,
+      "minskning_kortfristiga_skulder": 149118,
+      "total": 2452607
+    },
+    "likvida_medel_arets_borjan": 1891386,
+    "likvida_medel_arets_slut": 1409342,
+    "arets_forandring": -482044,
+    "note": "Likvida medel redovisas i balansräkningen under posterna Kassa och Bank samt Övriga fordringar",
+    "evidence_pages": [6]
+  },
+
+  "management_contracts_agent": {
+    "ekonomisk_administrativ_forvaltning": "SBC, Sveriges BostadsrättsCentrum AB",
+    "teknisk_forvaltning": "Flexibla Fastighets Service",
+    "teknisk_jourtjanst": "Securitas Sverige AB, Avd Jourmontör",
+    "snorojning_sandning": "Två Smålänningar AB",
+    "grovsopor": "SITA Sverige AB",
+    "stadning": "Flexibla Fastighets Service",
+    "entremattor": "Carpeting AB",
+    "fiberförbindelse": "Ownit Broadband AB samt TMK Kommunikation AB",
+    "interaktiva_tjanster_kabel_tv": "Com Hem AB",
+    "elnat": "Fortum Distribution AB",
+    "varme": "AB Fortum Värme",
+    "vatten": "Stockholm Vatten AB",
+    "bank": "Handelsbanken",
+    "skadedjur": "Ingår i fastighetsförsäkring",
+    "tradgardsskotsel": "Två Smålänningar AB",
+    "fastighetsforsakring": "Bostadsrätternas Fastighetsförsäkring i samarbete med Söderberg & Partners",
+    "hushallsavfall": "Trafikkontoret, Avd för avfall",
+    "evidence_pages": [5]
+  },
+
+  "equity_changes_agent": {
+    "bundet_eget_kapital": {
+      "inbetalda_insatser_beginning": 66181692,
+      "inbetalda_insatser_end": 66181692,
+      "upplatelseavgifter_beginning": 21477549,
+      "upplatelseavgifter_end": 21477549,
+      "fond_yttre_underhall_beginning": 215130,
+      "fond_yttre_underhall_change": 313704,
+      "fond_yttre_underhall_disposition": -215130,
+      "fond_yttre_underhall_end": 313704,
+      "total_beginning": 87874371,
+      "total_end": 87972945
+    },
+    "ansamlad_forlust": {
+      "balanserat_resultat_beginning": -12475225,
+      "balanserat_resultat_change": -313704,
+      "balanserat_resultat_disposition": -2140254,
+      "balanserat_resultat_end": -14929183,
+      "arets_resultat_beginning": -2355384,
+      "arets_resultat_change": -832411,
+      "arets_resultat_disposition": 2355384,
+      "arets_resultat_end": -832411,
+      "total_beginning": -14830609,
+      "total_end": -15761594
+    },
+    "eget_kapital_beginning": 73043762,
+    "eget_kapital_end": 72211351,
+    "evidence_pages": [7]
+  },
+
+  "result_disposition_agent": {
+    "arets_resultat": -832411,
+    "balanserat_resultat_fore_reservering": -14615479,
+    "reservering_fond_yttre_underhall": -313704,
+    "summa_balanserat_resultat": -15761594,
+    "styrelsen_foreslar": {
+      "ianspraktagande_fond_yttre_underhall": 130625,
+      "ny_rakning_overfors": -15630969
+    },
+    "evidence_pages": [8]
+  },
+
+  "tax_info_agent": {
+    "fastighetsskatt_rate": 0.003,
+    "fastighetsskatt_max_per_apartment": 1459,
+    "lokaler_tax_rate": 0.01,
+    "tax_assessment_buildings": 44768000,
+    "tax_assessment_land": 59800000,
+    "tax_assessment_total": 104568000,
+    "evidence_pages": [6, 15]
+  }
+}

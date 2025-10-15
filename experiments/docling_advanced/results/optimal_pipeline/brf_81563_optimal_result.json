@@ -1,5 +1,5 @@
 {
-  "pdf": "../../data/raw_pdfs/Hjorthagen/brf_81563.pdf",
+  "pdf": "/Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Gracian Pipeline/Hjorthagen/brf_81563.pdf",
   "topology": {
     "pdf_path": "../../data/raw_pdfs/Hjorthagen/brf_81563.pdf",
     "total_pages": 21,
@@ -10,13 +10,13 @@
       7,
       14
     ],
-    "analysis_time": 0.0644381046295166
+    "analysis_time": 0.05624699592590332
   },
   "structure": {
     "num_sections": 9,
     "method": "ocr",
     "cached": true,
-    "extraction_time": 46.71938490867615
+    "extraction_time": 41.42603802680969
   },
   "routing": {
     "main_sections": {
@@ -27,7 +27,7 @@
       "notes_collection": 0
     },
     "note_sections": {},
-    "routing_time": 1.9619030952453613
+    "routing_time": 1.5424270629882812
   },
   "agent_results": {
     "governance_agent": {
@@ -75,7 +75,7 @@
       "evidence_pages": [
         3
       ],
-      "extraction_time": 34.25299024581909,
+      "extraction_time": 95.08925223350525,
       "model": "gpt-4o-2024-11-20",
       "tokens_used": 13758
     },
@@ -119,7 +119,7 @@
         10,
         11
       ],
-      "extraction_time": 17.323616981506348,
+      "extraction_time": 11.180880784988403,
       "model": "gpt-4o-2024-11-20",
       "tokens_used": 12123
     },
@@ -140,8 +140,8 @@
           "valutakursvinster": 0,
           "summa_rorelseintakter": 1962495,
           "summa_finansiella_intakter": 334,
-          "summa_intakter": 1962495,
-          "revenue_2021": 1962495,
+          "summa_intakter": 1962829,
+          "revenue_2021": 1962829,
           "evidence_pages": [
             9,
             10
@@ -166,7 +166,7 @@
       ],
       "num_images": 10,
       "evidence_pages": [],
-      "extraction_time": 83.39210510253906,
+      "extraction_time": 20.76573872566223,
       "model": "gpt-4o-2024-11-20",
       "tokens_used": 12872
     },
@@ -175,7 +175,7 @@
       "status": "success",
       "data": {
         "operating_costs_breakdown": {
-          "fastighetsskott": -194799,
+          "fastighetsskott": -815675,
           "reparationer": -598627,
           "el": -53775,
           "varme": -564782,
@@ -205,7 +205,7 @@
       ],
       "num_images": 10,
       "evidence_pages": [],
-      "extraction_time": 21.72382688522339,
+      "extraction_time": 17.432154178619385,
       "model": "gpt-4o-2024-11-20",
       "tokens_used": 12905
     }
@@ -216,8 +216,8 @@
     "evidence_ratio": 0.5,
     "overall_score": 0.75,
     "needs_coaching": true,
-    "validation_time": 1.2874603271484375e-05
+    "validation_time": 0.04363584518432617
   },
-  "total_time": 158.6685390472412,
+  "total_time": 146.12725710868835,
   "total_cost": 0.0
 }

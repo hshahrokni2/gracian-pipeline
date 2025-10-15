@@ -1,7 +1,7 @@
 {
-  "pdf": "../../data/raw_pdfs/Hjorthagen/brf_46160.pdf",
+  "pdf": "/Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Gracian Pipeline/Hjorthagen/brf_46160.pdf",
   "topology": {
-    "pdf_path": "../../data/raw_pdfs/Hjorthagen/brf_46160.pdf",
+    "pdf_path": "/Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Gracian Pipeline/Hjorthagen/brf_46160.pdf",
     "total_pages": 19,
     "avg_chars_per_page": 620.6666666666666,
     "classification": "hybrid",
@@ -10,18 +10,18 @@
       6,
       12
     ],
-    "analysis_time": 0.012691974639892578
+    "analysis_time": 0.021724939346313477
   },
   "structure": {
     "num_sections": 60,
     "method": "hybrid",
     "cached": false,
-    "extraction_time": 29.261483907699585
+    "extraction_time": 37.00855493545532
   },
   "routing": {
     "main_sections": {
       "governance_agent": 10,
-      "financial_agent": 18,
+      "financial_agent": 19,
       "property_agent": 4,
       "operations_agent": 3,
       "notes_collection": 1
@@ -31,9 +31,44 @@
       "notes_other_agent": 5,
       "notes_loans_agent": 1
     },
-    "routing_time": 7.783347129821777
+    "routing_time": 6.700008869171143
   },
   "agent_results": {
+    "property_agent": {
+      "agent_id": "property_agent",
+      "status": "success",
+      "data": {
+        "designation": "Skytten 2",
+        "address": "",
+        "postal_code": "",
+        "city": "Stockholm",
+        "built_year": "1962",
+        "apartments": "47",
+        "energy_class": "",
+        "evidence_pages": [
+          3
+        ]
+      },
+      "section_headings": [
+        "Fastighetsförsäkring",
+        "Fastighetsavgift/Fastighetsskatt",
+        "Fastighetens  taxeringsuppgifter",
+        "Lägenhetsfördelning:"
+      ],
+      "pages_rendered": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "num_images": 4,
+      "evidence_pages": [
+        3
+      ],
+      "extraction_time": 8.22820782661438,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 5007
+    },
     "governance_agent": {
       "agent_id": "governance_agent",
       "status": "success",
@@ -75,68 +110,31 @@
         4,
         5,
         6,
-        7
-      ],
-      "num_images": 7,
-      "evidence_pages": [
-        4,
-        5
-      ],
-      "extraction_time": 9.224479913711548,
-      "model": "gpt-4o-2024-11-20",
-      "tokens_used": 7854
-    },
-    "property_agent": {
-      "agent_id": "property_agent",
-      "status": "success",
-      "data": {
-        "designation": "Skytten 2",
-        "address": "",
-        "postal_code": "",
-        "city": "Stockholm",
-        "built_year": "1962",
-        "apartments": "47",
-        "energy_class": "",
-        "evidence_pages": [
-          3
-        ]
-      },
-      "section_headings": [
-        "Fastighetsförsäkring",
-        "Fastighetsavgift/Fastighetsskatt",
-        "Fastighetens  taxeringsuppgifter",
-        "Lägenhetsfördelning:"
-      ],
-      "pages_rendered": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
         7,
         8
       ],
       "num_images": 8,
       "evidence_pages": [
-        3
+        4,
+        5
       ],
-      "extraction_time": 54.93159294128418,
+      "extraction_time": 77.50117778778076,
       "model": "gpt-4o-2024-11-20",
-      "tokens_used": 9111
+      "tokens_used": 8987
     },
     "financial_agent": {
       "agent_id": "financial_agent",
       "status": "success",
       "data": {
-        "revenue": "2590581",
-        "expenses": "-2872813",
-        "assets": "75227130",
-        "liabilities": "12006125",
-        "equity": "63021004",
-        "surplus": "-1823390",
+        "revenue": 2590581,
+        "expenses": -2872813,
+        "assets": 75227130,
+        "liabilities": 12206125,
+        "equity": 63021004,
+        "surplus": -1823390,
         "evidence_pages": [
           8,
+          9,
           10
         ]
       },
@@ -147,6 +145,7 @@
         "Upplysning  om  förlust",
         "Förändringar  i  eget  kapital",
         "Förslag  till  behandling  av  ansamlad  förlust",
+        "Allmänna  upplysningar",
         "Avsättning  till  yttre  fond",
         "Nettoomsättning",
         "Resultat  efter  finansiella  poster",
@@ -167,28 +166,178 @@
         6,
         7,
         8,
+        9,
         10,
         11,
         12,
         13,
-        14,
-        15
+        14
       ],
       "num_images": 12,
       "evidence_pages": [
         8,
+        9,
         10
       ],
-      "extraction_time": 16.384583950042725,
+      "extraction_time": 20.953102111816406,
       "model": "gpt-4o-2024-11-20",
-      "tokens_used": 14835
+      "tokens_used": 14836
+    },
+    "revenue_breakdown_agent": {
+      "agent_id": "revenue_breakdown_agent",
+      "status": "success",
+      "data": {
+        "revenue_breakdown": {
+          "nettoomsattning": 2590581,
+          "arsavgifter": 1423133,
+          "hyresintakter": 1081744,
+          "bredband_kabel_tv": 0,
+          "andel_drift_gemensam": 0,
+          "andel_el_varme": 0,
+          "andel_vatten": 0,
+          "ovriga_rorelseintak": 85703,
+          "ranta_bankmedel": 37267,
+          "valutakursvinster": 0,
+          "summa_rorelseintakter": 2590581,
+          "summa_finansiella_intakter": 37267,
+          "summa_intakter": 2627848,
+          "revenue_2021": 2627848,
+          "evidence_pages": [
+            8
+          ]
+        }
+      },
+      "section_headings": [
+        "Ekonomisk  förvaltning",
+        "Ekonomisk  plan",
+        "Årsavgifter",
+        "Upplysning  om  förlust",
+        "Förändringar  i  eget  kapital",
+        "Förslag  till  behandling  av  ansamlad  förlust",
+        "Allmänna  upplysningar",
+        "Avsättning  till  yttre  fond",
+        "Nettoomsättning",
+        "Resultat  efter  finansiella  poster",
+        "Soliditet  ( a )",
+        "Årsavgift/kvm  upplåten  med  bostadsrätt  (kr)",
+        "Skuldsättning/kvm(kr)",
+        "Skuldsättning/kvm  upplåten  med  bostadsrätt  (kr)",
+        "Sparande/kvm  (kr)",
+        "Räntekänslighet,  ( a )",
+        "Energikostnad/kvm  (kr)",
+        "Årsavgifternas  andel  av  totala  rörelseintäkter  ( a )",
+        "Årets  resultat  exkl  avskrivningar  (kr)"
+      ],
+      "pages_rendered": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "num_images": 10,
+      "evidence_pages": [],
+      "extraction_time": 15.100269079208374,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 13361
+    },
+    "operating_costs_agent": {
+      "agent_id": "operating_costs_agent",
+      "status": "success",
+      "data": {
+        "operating_costs_breakdown": {
+          "fastighetsskott": -1455183,
+          "reparationer": -219380,
+          "el": 0,
+          "varme": 0,
+          "vatten": 0,
+          "ovriga_externa_kostnader": -771910,
+          "evidence_pages": [
+            8
+          ]
+        }
+      },
+      "section_headings": [
+        "Ekonomisk  förvaltning",
+        "Ekonomisk  plan",
+        "Årsavgifter",
+        "Upplysning  om  förlust",
+        "Förändringar  i  eget  kapital",
+        "Förslag  till  behandling  av  ansamlad  förlust",
+        "Allmänna  upplysningar",
+        "Avsättning  till  yttre  fond",
+        "Nettoomsättning",
+        "Resultat  efter  finansiella  poster",
+        "Soliditet  ( a )",
+        "Årsavgift/kvm  upplåten  med  bostadsrätt  (kr)",
+        "Skuldsättning/kvm(kr)",
+        "Skuldsättning/kvm  upplåten  med  bostadsrätt  (kr)",
+        "Sparande/kvm  (kr)",
+        "Räntekänslighet,  ( a )",
+        "Energikostnad/kvm  (kr)",
+        "Årsavgifternas  andel  av  totala  rörelseintäkter  ( a )",
+        "Årets  resultat  exkl  avskrivningar  (kr)"
+      ],
+      "pages_rendered": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "num_images": 10,
+      "evidence_pages": [],
+      "extraction_time": 13.297246932983398,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 13390
+    },
+    "operations_agent": {
+      "agent_id": "operations_agent",
+      "status": "success",
+      "data": {
+        "maintenance_summary": "Föreningen har en aktuell underhållsplan.",
+        "energy_usage": "",
+        "insurance": "Fastigheten är fullvärdesförsäkrad hos Folksam via Bostadsrätterna och Söderberg & Partners. I försäkringen ingår kollektivt bostadsrättstillägg för medlemmar.",
+        "contracts": "Energibevakning AB (Fastighetsskötsel), EEE Eriksson (Städning), Berendsen Textil (Entrémattor), Suez Recycling (Sophämtning), Takjour Entreprenad i Mälardalen AB (Trädgårdsskötsel och vinterunderhåll), Tele2 (Bredband och kabel-TV), Stockholm Exergi (Värme), Ellevio AB (Elnät), Fortum AB (Elavtal), Stockholm Vatten (Vatten och avlopp), Utvägen AB (Systematiskt Brandskyddsarbete), Brandexperten (Service av brandskyddsutrustning).",
+        "evidence_pages": [
+          3,
+          4
+        ]
+      },
+      "section_headings": [
+        "Verksamheten",
+        "Övriga  avtal",
+        "Underhållsplan"
+      ],
+      "pages_rendered": [
+        3,
+        4
+      ],
+      "num_images": 2,
+      "evidence_pages": [
+        3,
+        4
+      ],
+      "extraction_time": 10.854604005813599,
+      "model": "gpt-4o-2024-11-20",
+      "tokens_used": 3241
     },
     "notes_accounting_agent": {
       "agent_id": "notes_accounting_agent",
       "status": "success",
       "data": {
-        "accounting_principles": "Årsredovisningen är upprättad i enlighet med årsredovisningslagen och Bokföringsnämndens allmänna råd BFNAR 2012:1 (K3) samt kompletterande upplysningar enligt BFNAR 2023:1 för bostadsrättsföreningar. Redovisningsprinciperna är oförändrade jämfört med föregående år.",
-        "valuation_methods": "Fordringar har upptagits till de belopp varmed de beräknas inflyta. Övriga tillgångar och skulder har upptagits till anskaffningsvärden där inget annat anges. Materiella anläggningstillgångar redovisas till anskaffningsvärde minskat med ackumulerade avskrivningar och nedskrivningar.",
+        "accounting_principles": "Årsredovisningen är upprättad i enlighet med årsredovisningslagen och bokföringsnämndens allmänna råd BFNAR 2012:1 (K3) om årsredovisning och koncernredovisning samt Bokföringsnämndens allmänna råd BFNAR 2023:1 om kompletterande upplysningar m m i bostadsrättsföreningarnas årsredovisningar. Redovisningsprinciperna är oförändrade jämfört med föregående år.",
+        "valuation_methods": "Fordringar har upptagits till de belopp varmed de beräknas inflyta. Övriga tillgångar och skulder har upptagits till anskaffningsvärden där inget annat anges. Materiella anläggningstillgångar redovisas till anskaffningsvärde minskat med ackumulerade avskrivningar och nedskrivningar. I anskaffningsvärdet ingår förutom inköpspriset även utgifter som är direkt hänförliga till förvärvet.",
         "revenue_recognition": "Intäkter har tagits upp till verkligt värde av vad som erhållits eller kommer att erhållas och redovisas i den omfattning det är sannolikt att de ekonomiska fördelarna kommer att tillgodogöras bolaget och intäkterna kan beräknas på ett tillförlitligt sätt.",
         "evidence_pages": [
           12
@@ -199,127 +348,50 @@
       ],
       "pages_rendered": [
         12,
-        13
+        13,
+        14
       ],
-      "num_images": 2,
+      "num_images": 3,
       "evidence_pages": [
         12
       ],
-      "extraction_time": 6.681429862976074,
+      "extraction_time": 11.913762092590332,
       "model": "gpt-4o-2024-11-20",
-      "tokens_used": 3809
+      "tokens_used": 4985
     },
     "notes_other_agent": {
       "agent_id": "notes_other_agent",
       "status": "success",
       "data": {
         "other_notes": {
-          "driftskostnader": {
-            "2023": {
-              "fastighetsskötsel": 49121,
-              "trädgårdsskötsel": 6062,
-              "kostnader_städdagar": 1615,
-              "städkostnader": 68628,
-              "hyra_entremattor": 20932,
-              "snöröjning_sandning": 91344,
-              "besiktningskostnader": 14932,
-              "inköp_parkeringstjänster": 0,
-              "el": 81464,
-              "värme": 532786,
-              "vatten_avlopp": 186051,
-              "avfallshantering": 58982,
-              "försäkringskostnader": 98130,
-              "kabel_tv": 11020,
-              "bredband": 103374,
-              "förbrukningsinventarier": 111962,
-              "förbrukningsmaterial": 18782,
-              "total": 1455185
-            },
-            "2022": {
-              "fastighetsskötsel": 46696,
-              "trädgårdsskötsel": 42162,
-              "kostnader_städdagar": 13180,
-              "städkostnader": 68628,
-              "hyra_entremattor": 18575,
-              "snöröjning_sandning": 53020,
-              "besiktningskostnader": 7477,
-              "inköp_parkeringstjänster": 250,
-              "el": 103234,
-              "värme": 524501,
-              "vatten_avlopp": 146089,
-              "avfallshantering": 59694,
-              "försäkringskostnader": 87264,
-              "kabel_tv": 10240,
-              "bredband": 94130,
-              "förbrukningsinventarier": 4994,
-              "förbrukningsmaterial": 2394,
-              "total": 1282528
+          "not_6": {
+            "driftskostnader": {
+              "2023": 1455185,
+              "2022": 1282528
             }
           },
-          "förutbetalda_kostnader_upplupna_intäkter": {
-            "2023": {
-              "försäkring": 34197,
-              "kabel_tv": 24824,
-              "ekonomisk_förvaltning": 25524,
-              "bredband": 4638,
-              "medlemskap": 6050,
-              "snöjour": 0,
-              "total": 95233
-            },
-            "2022": {
-              "försäkring": 29736,
-              "kabel_tv": 23949,
-              "ekonomisk_förvaltning": 29277,
-              "bredband": 4638,
-              "medlemskap": 6050,
-              "snöjour": 9700,
-              "total": 103350
+          "not_11": {
+            "förutbetalda_kostnader_och_upplupna_intäkter": {
+              "2023": 95233,
+              "2022": 103350
             }
           },
-          "upplupna_kostnader_förutbetalda_intäkter": {
-            "2023": {
-              "räntekostnader": 76581,
-              "arvode_revision": 24000,
-              "förutbetalda_avgifter_hyror": 265170,
-              "fastighet": 7360,
-              "fjärrvärme": 81009,
-              "fastighetsskötsel": 0,
-              "entremattor": 0,
-              "vatten_avlopp": 32169,
-              "renhållning": 10696,
-              "städning": 7639,
-              "snöröjning": 0,
-              "övrigt": 648,
-              "total": 505272
-            },
-            "2022": {
-              "räntekostnader": 4331,
-              "arvode_revision": 18000,
-              "förutbetalda_avgifter_hyror": 190111,
-              "fastighet": 13814,
-              "fjärrvärme": 77309,
-              "fastighetsskötsel": 3929,
-              "entremattor": 2132,
-              "vatten_avlopp": 24510,
-              "renhållning": 12337,
-              "städning": 7639,
-              "snöröjning": 4159,
-              "övrigt": 0,
-              "total": 358271
+          "not_13": {
+            "upplupna_kostnader_och_förutbetalda_intäkter": {
+              "2023": 505272,
+              "2022": 358271
             }
           },
-          "ställda_säkerheter": {
-            "2023": {
-              "fastighetsinteckningar": 31500000,
-              "total": 31500000
-            },
-            "2022": {
-              "fastighetsinteckningar": 31500000,
-              "total": 31500000
+          "not_14": {
+            "ställda_säkerheter": {
+              "fastighetsinteckningar": {
+                "2023": 31500000,
+                "2022": 31500000
+              }
             }
           },
-          "väsentliga_händelser_efter_räkenskapsårets_slut": {
-            "årsavgifter_höjning": "5% från 2024-01-01"
+          "not_15": {
+            "väsentliga_händelser_efter_räkenskapsårets_slut": "Årsavgifterna har höjts med 5% fr om 2024-01-01."
           }
         },
         "evidence_pages": [
@@ -341,27 +413,34 @@
         15,
         16,
         17,
-        18
+        18,
+        19
       ],
-      "num_images": 5,
+      "num_images": 6,
       "evidence_pages": [
         14,
         15,
         16,
         17
       ],
-      "extraction_time": 47.75221920013428,
+      "extraction_time": 15.996959924697876,
       "model": "gpt-4o-2024-11-20",
-      "tokens_used": 8434
+      "tokens_used": 8796
     },
     "notes_loans_agent": {
       "agent_id": "notes_loans_agent",
       "status": "success",
       "data": {
         "outstanding_loans": "10900000",
-        "interest_rate": "3.91% (SEK 6900000), 4.58% (SEK 4000000)",
-        "amortization": "100000 per year",
-        "loan_terms": "SEK 4000000 due within one year, remaining loans extended upon maturity",
+        "interest_rate": {
+          "SEB_1": "3.91",
+          "SEB_2": "4.58"
+        },
+        "amortization": "100000",
+        "loan_terms": {
+          "SEB_1": "2025-06-28",
+          "SEB_2": "2024-08-28"
+        },
         "evidence_pages": [
           16
         ]
@@ -371,15 +450,16 @@
       ],
       "pages_rendered": [
         16,
-        17
+        17,
+        18
       ],
-      "num_images": 2,
+      "num_images": 3,
       "evidence_pages": [
         16
       ],
-      "extraction_time": 3.878451108932495,
+      "extraction_time": 8.470249891281128,
       "model": "gpt-4o-2024-11-20",
-      "tokens_used": 5384
+      "tokens_used": 5764
     },
     "comprehensive_notes_agent": {
       "agent_id": "comprehensive_notes_agent",
@@ -387,7 +467,7 @@
       "data": {
         "note_8_buildings": {
           "acquisition_value_2021": 46429010,
-          "accumulated_depreciation_2021": -6970009,
+          "accumulated_depreciation_2021": -7975192,
           "book_value_2021": 38476818,
           "land_value_included": 82200000,
           "tax_value_total_2021": 120691000
@@ -406,20 +486,36 @@
             "amount_2021": 6900000,
             "interest_rate": 0.0391,
             "maturity_date": "2025-06-28",
-            "amortization_free": true
+            "amortization_free": false,
+            "loan_type": "Bundet",
+            "collateral": "Fastighetsinteckning",
+            "credit_facility_limit": 6900000,
+            "outstanding_amount": 6900000
           },
           {
             "lender": "SEB",
             "amount_2021": 4000000,
             "interest_rate": 0.0458,
             "maturity_date": "2024-08-28",
-            "amortization_free": true
+            "amortization_free": false,
+            "loan_type": "Bundet",
+            "collateral": "Fastighetsinteckning",
+            "credit_facility_limit": 4000000,
+            "outstanding_amount": 4000000
           }
         ],
-        "evidence_pages": [
-          15,
-          16
-        ]
+        "note_4_operating_costs": {
+          "fastighetskostnader_total": 1455185,
+          "reparationer_total": 219379,
+          "el": 81464,
+          "varme": 532786,
+          "vatten": 186051,
+          "evidence_pages": [
+            13,
+            14
+          ]
+        },
+        "tax_info": {}
       },
       "section_headings": [
         "Noter (complete section)"
@@ -433,23 +529,20 @@
         17
       ],
       "num_images": 6,
-      "evidence_pages": [
-        15,
-        16
-      ],
+      "evidence_pages": [],
       "extraction_time": 0,
       "model": "gpt-4o-2024-11-20",
-      "tokens_used": 7483
+      "tokens_used": 9067
     }
   },
   "quality_metrics": {
     "coverage": 1.0,
     "numeric_qc_pass": true,
-    "evidence_ratio": 1.0,
-    "overall_score": 1.0,
-    "needs_coaching": false,
-    "validation_time": 1.2874603271484375e-05
+    "evidence_ratio": 0.7,
+    "overall_score": 0.85,
+    "needs_coaching": true,
+    "validation_time": 2.2172927856445312e-05
   },
-  "total_time": 178.14747524261475,
+  "total_time": 304.10234904289246,
   "total_cost": 0.0
 }

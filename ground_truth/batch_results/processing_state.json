@@ -1,0 +1,14 @@
+{
+  "processed_pdfs": [
+    "brf_46160.pdf",
+    "brf_81563.pdf"
+  ],
+  "failed_pdfs": [
+    {
+      "pdf_name": "brf_48574.pdf",
+      "error": "[Errno 32] Broken pipe",
+      "timestamp": "2025-10-15 10:44:22"
+    }
+  ],
+  "last_updated": "2025-10-15 10:44:22"
+}

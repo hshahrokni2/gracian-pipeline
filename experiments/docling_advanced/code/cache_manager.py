@@ -119,6 +119,26 @@ class CacheManager:
             conn.execute("CREATE INDEX IF NOT EXISTS idx_cache_created_at ON structure_cache(created_at)")
             conn.execute("CREATE INDEX IF NOT EXISTS idx_cache_accessed_at ON structure_cache(accessed_at)")
 
+            # Layer 3 LLM Classification Cache (v3.0)
+            conn.execute("""
+                CREATE TABLE IF NOT EXISTS llm_classification_cache (
+                    heading_normalized TEXT PRIMARY KEY,
+                    agents_json TEXT NOT NULL,
+                    primary_agent TEXT NOT NULL,
+                    confidence REAL NOT NULL,
+                    reasoning TEXT,
+                    model TEXT NOT NULL,
+                    tokens_used INTEGER,
+                    cost_usd REAL,
+                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                    accessed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                    access_count INTEGER DEFAULT 1
+                )
+            """)
+
+            conn.execute("CREATE INDEX IF NOT EXISTS idx_llm_cache_accessed_at ON llm_classification_cache(accessed_at)")
+            conn.execute("CREATE INDEX IF NOT EXISTS idx_llm_cache_primary_agent ON llm_classification_cache(primary_agent)")
+
             conn.commit()
 
     def compute_cache_key(self, pdf_path: str) -> str:
@@ -599,6 +619,154 @@ class CacheManager:
             'cache_size_gb': self.get_cache_size_gb(),
             'memory_cache_size': len(self.memory_cache),
             'most_accessed': most_accessed
+        }
+
+    # ========================================================================
+    # LAYER 3 LLM CLASSIFICATION CACHE METHODS (v3.0)
+    # ========================================================================
+
+    def _normalize_heading_for_cache(self, heading: str) -> str:
+        """
+        Normalize heading for cache key (Swedish character normalization).
+
+        Args:
+            heading: Section heading
+
+        Returns:
+            Normalized heading (lowercase, Swedish chars normalized)
+        """
+        return (heading.lower()
+                .replace('å', 'a').replace('Å', 'a')
+                .replace('ä', 'a').replace('Ä', 'a')
+                .replace('ö', 'o').replace('Ö', 'o')
+                .strip())
+
+    def get_llm_classification(self, heading: str) -> Optional[Dict[str, Any]]:
+        """
+        Get cached LLM classification result.
+
+        Args:
+            heading: Section heading to classify
+
+        Returns:
+            Classification dict or None if not cached
+        """
+        heading_normalized = self._normalize_heading_for_cache(heading)
+
+        with sqlite3.connect(str(self.db_path)) as conn:
+            conn.row_factory = sqlite3.Row
+            cursor = conn.cursor()
+
+            cursor.execute("""
+                SELECT * FROM llm_classification_cache WHERE heading_normalized = ?
+            """, (heading_normalized,))
+
+            row = cursor.fetchone()
+
+            if row:
+                # Update access metadata
+                cursor.execute("""
+                    UPDATE llm_classification_cache
+                    SET accessed_at = CURRENT_TIMESTAMP, access_count = access_count + 1
+                    WHERE heading_normalized = ?
+                """, (heading_normalized,))
+                conn.commit()
+
+                # Return classification
+                return {
+                    'agents': json.loads(row['agents_json']),
+                    'primary_agent': row['primary_agent'],
+                    'confidence': row['confidence'],
+                    'reasoning': row['reasoning'],
+                    'model': row['model'],
+                    'cached': True
+                }
+
+        return None
+
+    def put_llm_classification(
+        self,
+        heading: str,
+        agents: List[str],
+        primary_agent: str,
+        confidence: float,
+        reasoning: str,
+        model: str,
+        tokens_used: int,
+        cost_usd: float
+    ):
+        """
+        Cache LLM classification result.
+
+        Args:
+            heading: Section heading
+            agents: List of agent IDs (multi-agent routing)
+            primary_agent: Primary agent ID
+            confidence: Confidence score (0-1)
+            reasoning: Classification reasoning
+            model: Model used
+            tokens_used: Tokens consumed
+            cost_usd: Cost in USD
+        """
+        heading_normalized = self._normalize_heading_for_cache(heading)
+
+        with sqlite3.connect(str(self.db_path)) as conn:
+            conn.execute("""
+                INSERT OR REPLACE INTO llm_classification_cache (
+                    heading_normalized, agents_json, primary_agent, confidence,
+                    reasoning, model, tokens_used, cost_usd
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+            """, (
+                heading_normalized,
+                json.dumps(agents),
+                primary_agent,
+                confidence,
+                reasoning,
+                model,
+                tokens_used,
+                cost_usd
+            ))
+            conn.commit()
+
+    def get_llm_classification_stats(self) -> Dict[str, Any]:
+        """Get LLM classification cache statistics."""
+        with sqlite3.connect(str(self.db_path)) as conn:
+            conn.row_factory = sqlite3.Row
+            cursor = conn.cursor()
+
+            # Total cached classifications
+            cursor.execute("SELECT COUNT(*) as count FROM llm_classification_cache")
+            total_cached = cursor.fetchone()['count']
+
+            # Total cost saved
+            cursor.execute("SELECT SUM(cost_usd) as total_cost FROM llm_classification_cache")
+            total_cost = cursor.fetchone()['total_cost'] or 0.0
+
+            # Total tokens saved (assuming 80% cache hit rate after warmup)
+            cursor.execute("SELECT SUM(tokens_used) as total_tokens FROM llm_classification_cache")
+            total_tokens = cursor.fetchone()['total_tokens'] or 0
+
+            # Most common primary agents
+            cursor.execute("""
+                SELECT primary_agent, COUNT(*) as count
+                FROM llm_classification_cache
+                GROUP BY primary_agent
+                ORDER BY count DESC
+                LIMIT 5
+            """)
+            top_agents = [dict(row) for row in cursor.fetchall()]
+
+            # Average confidence
+            cursor.execute("SELECT AVG(confidence) as avg_conf FROM llm_classification_cache")
+            avg_confidence = cursor.fetchone()['avg_conf'] or 0.0
+
+        return {
+            'total_cached_headings': total_cached,
+            'total_cost_spent_usd': round(total_cost, 4),
+            'total_tokens_used': total_tokens,
+            'avg_confidence': round(avg_confidence, 3),
+            'top_primary_agents': top_agents,
+            'estimated_savings_80pct_hit_rate': round(total_cost * 0.8, 4)
         }
 
 

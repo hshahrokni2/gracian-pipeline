@@ -144,6 +144,28 @@ COMPREHENSIVE_TYPES: Dict[str, Dict[str, str]] = {
         "investing_activities": "num",  # Investeringsverksamheten
         "financing_activities": "num",  # Finansieringsverksamheten
     },
+
+    "operating_costs_agent": {
+        # THE MOST CRITICAL AGENT - Operating costs breakdown from Note 4
+        "el": "num",  # Electricity
+        "värme": "num",  # Heating
+        "vatten": "num",  # Water
+        "avlopp": "num",  # Sewage/drainage
+        "värme_och_vatten": "num",  # Combined heating+water (MOST COMMON!)
+        "underhåll_och_reparationer": "num",  # Maintenance & repairs (OFTEN LARGEST!)
+        "fastighetsskötsel": "num",  # Property management services
+        "försäkringar": "num",  # Insurance
+        "fastighetsskatt": "num",  # Property tax
+        "hiss": "num",  # Elevator maintenance
+        "sotning_och_ventilationskontroll": "num",  # Chimney sweep & ventilation
+        "trädgård": "num",  # Garden/landscaping
+        "snöröjning": "num",  # Snow removal
+        "sophämtning": "num",  # Garbage collection
+        "övriga_driftkostnader": "num",  # Other operating costs (catchall)
+        "total_driftkostnader": "num",  # Total operating costs
+        "note_number": "str",  # Which note (e.g., "Not 4")
+        "evidence_pages": "list",  # Page numbers where data found
+    },
 }
 
 

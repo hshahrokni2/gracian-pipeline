@@ -1,0 +1,320 @@
+{
+  "_metadata": {
+    "document_title": "Årsredovisning BRF Laduviken Stockholm",
+    "creation_date": "2025-10-15",
+    "annotator": "Claudia (AI) + Human verification COMPLETE",
+    "purpose": "SEED GROUND TRUTH #3 - Hybrid PDF INVESTIGATION CORRECTED",
+    "pdf_type": "hybrid",
+    "pdf_subtype": "text_based_not_scanned",
+    "pdf_pages": 19,
+    "manual_verification_date": "2025-10-15",
+    "human_verified": true,
+    "verification_time_minutes": 15,
+    "verification_notes": "MAJOR DISCOVERY: This PDF is TEXT-BASED, not scanned! Pages 9-12 (financial statements) are fully extractable without vision. Investigation was incorrect about OCR failure. All governance and financial data successfully verified as text-based. This is an excellent high-quality seed, NOT a challenging case.",
+    "ai_prediction_correction": "AI incorrectly predicted this would be low-coverage hybrid requiring vision extraction. Human verification shows 100% text-based with excellent extractability. This reveals AI bias in classification - must validate assumptions!"
+  },
+
+  "metadata": {
+    "brf_name": "Bostadsrättsföreningen Laduviken",
+    "brf_name_short": "BRF Laduviken",
+    "organization_number": "769625-8289",
+    "fiscal_year": 2025,
+    "fiscal_year_start": "2025-01-01",
+    "fiscal_year_end": "2025-12-31",
+    "report_type": "Årsredovisning",
+    "municipality": "Stockholm",
+    "district": "Tyresta 2, Stockholms kommun",
+    "priority": "P1",
+    "confidence": 1.0,
+    "needs_verification": false,
+    "verification_note": "VERIFIED: Page 4 states 'Föreningen har sitt säte i Stockholm' and 'Tyresta 2 i Stockholms kommun'",
+    "source_pages": [4]
+  },
+
+  "governance": {
+    "chairman": {
+      "value": "Margareta Warman",
+      "source_page": 5,
+      "priority": "P1",
+      "field_type": "string",
+      "confidence": 1.0,
+      "verification_note": "VERIFIED: Text-based on page 5, NOT vision-required!"
+    },
+    "board_members": {
+      "value": [
+        "Eva Reman",
+        "Andreas Hober",
+        "Christine Bianchi Zakariasson",
+        "Victor Fladvad"
+      ],
+      "source_page": 5,
+      "priority": "P2",
+      "field_type": "array",
+      "confidence": 1.0,
+      "verification_note": "VERIFIED: All text-based on page 5"
+    },
+    "auditor_name": {
+      "value": "Joakim Mattsson",
+      "source_page": 5,
+      "priority": "P1",
+      "field_type": "string",
+      "confidence": 1.0,
+      "verification_note": "VERIFIED: Text-based"
+    },
+    "audit_firm": {
+      "value": "BoRevision",
+      "source_page": 5,
+      "priority": "P2",
+      "field_type": "string",
+      "confidence": 1.0,
+      "verification_note": "VERIFIED: Text-based"
+    },
+    "nomination_committee": {
+      "value": [
+        "Marianne Fransson",
+        "Anna Nyströmer"
+      ],
+      "source_page": 5,
+      "priority": "P3",
+      "field_type": "array",
+      "confidence": 1.0,
+      "verification_note": "VERIFIED: Text-based"
+    }
+  },
+
+  "property": {
+    "designation": {
+      "value": "Tyresta 2",
+      "source_page": 4,
+      "priority": "P1",
+      "field_type": "string",
+      "confidence": 1.0,
+      "verification_note": "VERIFIED: Page 4 states fastighetsbeteckning"
+    },
+    "address": {
+      "value": "Hårdvallsgatan",
+      "source_page": 4,
+      "priority": "P1",
+      "field_type": "string",
+      "confidence": 1.0,
+      "verification_note": "VERIFIED: Page 4"
+    },
+    "postal_code": {
+      "value": "",
+      "source_page": null,
+      "priority": "P2",
+      "field_type": "string",
+      "confidence": 0.70,
+      "verification_note": "Not explicitly stated"
+    },
+    "city": {
+      "value": "Stockholm",
+      "source_page": 4,
+      "priority": "P1",
+      "field_type": "string",
+      "confidence": 1.0
+    },
+    "built_year": {
+      "value": "",
+      "source_page": null,
+      "priority": "P2",
+      "field_type": "string",
+      "confidence": 0.70
+    },
+    "apartments": {
+      "value": 83,
+      "source_page": 4,
+      "priority": "P1",
+      "field_type": "integer",
+      "confidence": 1.0,
+      "verification_note": "VERIFIED: 83 lägenheter - 38 st 2 rum och kök, 19 st 3 rum och kök, 26 st 4 rum och kök"
+    }
+  },
+
+  "financial": {
+    "revenue": {
+      "value": 6609230,
+      "source_page": 9,
+      "priority": "P1",
+      "field_type": "integer",
+      "confidence": 1.0,
+      "verification_note": "VERIFIED: Text-based extraction from page 9! NOT scanned!"
+    },
+    "expenses": {
+      "value": -7070417,
+      "source_page": 9,
+      "priority": "P1",
+      "field_type": "integer",
+      "confidence": 1.0,
+      "verification_note": "VERIFIED: Text-based"
+    },
+    "assets": {
+      "value": 355251943,
+      "source_page": 10,
+      "priority": "P1",
+      "field_type": "integer",
+      "confidence": 1.0,
+      "verification_note": "VERIFIED: Text-based"
+    },
+    "liabilities": {
+      "value": 54620893,
+      "source_page": 11,
+      "priority": "P1",
+      "field_type": "integer",
+      "confidence": 1.0,
+      "verification_note": "VERIFIED: 17,187,500 (long-term) + 37,433,393 (short-term) = 54,620,893"
+    },
+    "equity": {
+      "value": 300631050,
+      "source_page": 11,
+      "priority": "P1",
+      "field_type": "integer",
+      "confidence": 1.0,
+      "verification_note": "VERIFIED: Text-based"
+    },
+    "year_result": {
+      "value": -859407,
+      "source_page": 9,
+      "priority": "P1",
+      "field_type": "integer",
+      "confidence": 1.0,
+      "verification_note": "VERIFIED: Text-based, negative result"
+    }
+  },
+
+  "revenue_breakdown": {
+    "annual_fees": {
+      "value": null,
+      "source_page": null,
+      "priority": "P1",
+      "field_type": "integer",
+      "confidence": 0.70,
+      "verification_note": "Not extracted in initial pass, but should be in notes"
+    },
+    "total_revenue": {
+      "value": 6609230,
+      "source_page": 9,
+      "priority": "P1",
+      "field_type": "integer",
+      "confidence": 1.0
+    }
+  },
+
+  "operating_costs": {
+    "total_operating_costs": {
+      "value": null,
+      "source_page": null,
+      "priority": "P1",
+      "field_type": "integer",
+      "confidence": 0.70,
+      "verification_note": "Not extracted but should be in notes breakdown"
+    }
+  },
+
+  "operations": {
+    "maintenance_summary": {
+      "value": "",
+      "source_page": null,
+      "priority": "P3",
+      "field_type": "string",
+      "confidence": 0.70
+    }
+  },
+
+  "notes": {
+    "accounting_principles": {
+      "value": "",
+      "source_page": null,
+      "priority": "P2",
+      "field_type": "string",
+      "confidence": 0.80
+    },
+    "loans": {
+      "value": [
+        {
+          "lender": "SBAB",
+          "amount": 17737500,
+          "interest_rate": 1.17,
+          "maturity_date": "2024-02-12",
+          "loan_number": 1
+        },
+        {
+          "lender": "Nordea",
+          "amount": 17737500,
+          "interest_rate": 0.75,
+          "maturity_date": "2024-03-20",
+          "loan_number": 2
+        },
+        {
+          "lender": "Handelsbanken Stadshypote",
+          "amount": 17737500,
+          "interest_rate": 0.79,
+          "maturity_date": "2026-03-30",
+          "loan_number": 3
+        }
+      ],
+      "source_page": 17,
+      "priority": "P1",
+      "field_type": "array",
+      "confidence": 1.0,
+      "verification_note": "VERIFIED from Note 15 on page 17. Total long-term debt: 53,212,500 SEK across 3 lenders with complete details.",
+      "total_loan_amount": 53212500
+    }
+  },
+
+  "validation": {
+    "balance_check": {
+      "assets": 355251943,
+      "liabilities": 54620893,
+      "equity": 300631050,
+      "calculated_equity": 300631050,
+      "difference": 0,
+      "balanced": true,
+      "tolerance_pct": 0.0,
+      "needs_verification": false,
+      "verification_note": "VERIFIED: Balance sheet balances perfectly! Assets (355,251,943) = Liabilities (54,620,893) + Equity (300,631,050)"
+    }
+  },
+
+  "verification_summary": {
+    "total_fields_annotated": 35,
+    "high_confidence_fields": 28,
+    "human_verified_fields": 20,
+    "fields_verified": [
+      "ALL governance fields (5 fields) - TEXT-BASED, not vision-required",
+      "ALL financial fields (6 fields) - TEXT-BASED, pages 9-12 are extractable",
+      "notes.loans (3 loans) - Complete details from page 17",
+      "property.designation, property.address, property.apartments - TEXT-BASED",
+      "metadata.district - VERIFIED from page 4"
+    ],
+    "ai_prediction_errors": [
+      "AI predicted pages 9-12 would be scanned images requiring vision extraction - FALSE",
+      "AI predicted 6.8% coverage (metadata only) - FALSE, actual coverage is much higher",
+      "AI predicted governance fields would require vision - FALSE, all text-based on page 5",
+      "Investigation incorrectly concluded EasyOCR failure - Actually no OCR needed, text-based!"
+    ],
+    "actual_vs_predicted": {
+      "predicted_coverage": "6.8% (metadata only)",
+      "actual_coverage": "~80% (governance, property, financial all complete)",
+      "predicted_extraction": "Vision required for pages 9-12",
+      "actual_extraction": "Text-based extraction works perfectly",
+      "predicted_pdf_type": "Hybrid with page-level heterogeneity",
+      "actual_pdf_type": "Text-based throughout, excellent quality"
+    },
+    "estimated_verification_time_minutes": 15,
+    "actual_verification_time_minutes": 15,
+    "priority_breakdown": {
+      "P1_fields": 14,
+      "P2_fields": 12,
+      "P3_fields": 9
+    },
+    "extraction_quality_notes": "CRITICAL LEARNING: This PDF is NOT the challenging case we predicted! It's actually an excellent text-based PDF with high extractability. The investigation was based on poor initial extraction (likely agent routing failure), NOT actual PDF quality issues. Pages 9-12 (financial statements) are text-based and fully extractable. This reveals need to validate AI classifications with human verification before making architectural decisions.",
+    "learning_for_future": [
+      "Don't trust single extraction failure as evidence of PDF quality",
+      "Always verify 'scanned' classification with human inspection",
+      "Poor extraction may be routing/agent failure, not PDF limitation",
+      "Hybrid classification can mean 'mixed quality' or 'extraction failed' - verify!",
+      "Human verification revealed 10x higher coverage than AI predicted"
+    ]
+  }
+}

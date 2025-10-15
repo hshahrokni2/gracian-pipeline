@@ -1,0 +1,72 @@
+{
+  "selected_pdfs": [
+    "experiments/docling_advanced/test_pdfs/brf_198532.pdf",
+    "SRS/brf_53546.pdf",
+    "Hjorthagen/brf_271949.pdf",
+    "Hjorthagen/brf_58306.pdf",
+    "experiments/docling_advanced/test_pdfs/brf_268882.pdf",
+    "Hjorthagen/brf_81563.pdf",
+    "SRS/brf_276507.pdf"
+  ],
+  "categories": {
+    "financial": [
+      {
+        "path": "experiments/docling_advanced/test_pdfs/brf_198532.pdf",
+        "type": "machine_readable",
+        "pages": 19,
+        "text_chars": 11611,
+        "image_ratio": 0.0
+      },
+      {
+        "path": "SRS/brf_53546.pdf",
+        "type": "machine_readable",
+        "pages": 15,
+        "text_chars": 11208,
+        "image_ratio": 0.0
+      }
+    ],
+    "governance": [
+      {
+        "path": "Hjorthagen/brf_271949.pdf",
+        "type": "machine_readable",
+        "pages": 14,
+        "text_chars": 8244,
+        "image_ratio": 0.0
+      },
+      {
+        "path": "Hjorthagen/brf_58306.pdf",
+        "type": "machine_readable",
+        "pages": 13,
+        "text_chars": 8219,
+        "image_ratio": 0.0
+      }
+    ],
+    "property": [
+      {
+        "path": "experiments/docling_advanced/test_pdfs/brf_268882.pdf",
+        "type": "scanned",
+        "pages": 28,
+        "text_chars": 0,
+        "image_ratio": 1.4732977967217773
+      }
+    ],
+    "conflict": [
+      {
+        "path": "Hjorthagen/brf_81563.pdf",
+        "type": "hybrid",
+        "pages": 21,
+        "text_chars": 4016,
+        "image_ratio": 0.1531996070979651
+      },
+      {
+        "path": "SRS/brf_276507.pdf",
+        "type": "hybrid",
+        "pages": 20,
+        "text_chars": 8519,
+        "image_ratio": 0.1215892733072111
+      }
+    ]
+  },
+  "total": 7,
+  "timestamp": "2025-10-14T21:20:00Z"
+}

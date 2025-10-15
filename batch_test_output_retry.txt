@@ -1,0 +1,440 @@
+2025-10-14 21:55:58,230 - INFO - 📝 Routing to text extraction (machine-readable PDF)
+2025-10-14 21:55:58,389 - INFO - detected formats: [<InputFormat.PDF: 'pdf'>]
+2025-10-14 21:55:58,420 - INFO - Going to convert document batch...
+2025-10-14 21:55:58,420 - INFO - Initializing pipeline for StandardPdfPipeline with options hash 89360827c54c632ffd3869eb23c81de0
+2025-10-14 21:55:58,425 - INFO - Loading plugin 'docling_defaults'
+2025-10-14 21:55:58,426 - INFO - Registered picture descriptions: ['vlm', 'api']
+2025-10-14 21:55:58,429 - INFO - Loading plugin 'docling_defaults'
+2025-10-14 21:55:58,431 - INFO - Registered ocr engines: ['easyocr', 'ocrmac', 'rapidocr', 'tesserocr', 'tesseract']
+/Users/hosseins/.pyenv/versions/3.11.9/lib/python3.11/site-packages/docling/models/easyocr_model.py:68: UserWarning: Deprecated field. Better to set the `accelerator_options.device` in `pipeline_options`. When `use_gpu and accelerator_options.device == AcceleratorDevice.CUDA` the GPU is used to run EasyOCR. Otherwise, EasyOCR runs in CPU.
+  warnings.warn(
+2025-10-14 21:56:00,844 - INFO - Accelerator device: 'mps'
+2025-10-14 21:56:02,384 - INFO - Accelerator device: 'mps'
+2025-10-14 21:56:03,104 - INFO - Processing document brf_53546.pdf
+2025-10-14 21:56:32,559 - INFO - Finished converting document brf_53546.pdf in 34.17 sec.
+2025-10-14 21:56:32,671 - INFO - Loaded learned patterns from /Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Gracian Pipeline/gracian_pipeline/learned_patterns
+2025-10-14 21:56:32,671 - INFO - Loaded learned patterns from /Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Gracian Pipeline/gracian_pipeline/learned_patterns
+2025-10-14 21:56:32,671 - INFO - Loaded learned patterns from /Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Gracian Pipeline/gracian_pipeline/learned_patterns
+2025-10-14 21:56:32,671 - INFO - Loaded learned patterns from /Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Gracian Pipeline/gracian_pipeline/learned_patterns
+2025-10-14 21:56:32,671 - INFO - Loaded learned patterns from /Users/hosseins/Dropbox/zeldadb/zeldabot/pdf_docs/Gracian Pipeline/gracian_pipeline/learned_patterns
+2025-10-14 21:56:33,829 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:56:33,834 - INFO - 🎯 Routing notes_depreciation_agent to Path B (TDD production-grade agent)
+2025-10-14 21:56:33,837 - WARNING - notes_depreciation_agent: Using fallback note (no type/keyword match)
+2025-10-14 21:56:35,193 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:56:35,196 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:56:35,209 - INFO - 🎯 Routing notes_maintenance_agent to Path B (TDD production-grade agent)
+2025-10-14 21:56:35,224 - INFO - 🎯 Routing notes_tax_agent to Path B (TDD production-grade agent)
+2025-10-14 21:56:35,247 - WARNING - notes_tax_agent: Using fallback note (no type/keyword match)
+2025-10-14 21:56:35,972 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:56:36,447 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:56:36,665 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:56:36,828 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:56:36,992 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:56:37,549 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:56:37,566 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:56:37,616 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:56:37,758 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:56:37,902 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:56:38,090 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:56:41,222 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:56:41,612 - INFO - 🎨 Routing to vision consensus extraction (scanned PDF)
+2025-10-14 21:56:51,904 - WARNING - Gemini API key not found - Gemini extraction disabled
+2025-10-14 21:56:59,238 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:56:59,239 - INFO - property_agent: GPT-4V extraction successful (7.3s)
+2025-10-14 21:56:59,239 - INFO - property_agent: Single model consensus (gpt-4o)
+2025-10-14 21:57:02,397 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:57:02,398 - INFO - auditor_agent: GPT-4V extraction successful (10.5s)
+2025-10-14 21:57:02,398 - INFO - auditor_agent: Single model consensus (gpt-4o)
+2025-10-14 21:57:03,033 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:57:03,033 - INFO - board_members_agent: GPT-4V extraction successful (11.1s)
+2025-10-14 21:57:03,033 - INFO - board_members_agent: Single model consensus (gpt-4o)
+2025-10-14 21:57:05,341 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:57:05,341 - INFO - financial_agent: GPT-4V extraction successful (13.4s)
+2025-10-14 21:57:05,341 - INFO - financial_agent: Single model consensus (gpt-4o)
+2025-10-14 21:57:12,099 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:57:12,099 - INFO - notes_depreciation_agent: GPT-4V extraction successful (12.9s)
+2025-10-14 21:57:12,099 - INFO - notes_depreciation_agent: Single model consensus (gpt-4o)
+2025-10-14 21:57:13,828 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:57:13,828 - INFO - notes_tax_agent: GPT-4V extraction successful (10.8s)
+2025-10-14 21:57:13,829 - INFO - notes_tax_agent: Single model consensus (gpt-4o)
+2025-10-14 21:57:17,477 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:57:17,478 - INFO - notes_maintenance_agent: GPT-4V extraction successful (15.1s)
+2025-10-14 21:57:17,478 - INFO - notes_maintenance_agent: Single model consensus (gpt-4o)
+2025-10-14 21:57:22,651 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:57:22,651 - INFO - loans_agent: GPT-4V extraction successful (8.8s)
+2025-10-14 21:57:22,651 - INFO - loans_agent: Single model consensus (gpt-4o)
+2025-10-14 21:57:23,784 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:57:23,785 - INFO - chairman_agent: GPT-4V extraction successful (31.9s)
+2025-10-14 21:57:23,785 - INFO - chairman_agent: Single model consensus (gpt-4o)
+2025-10-14 21:57:27,118 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:57:27,118 - INFO - reserves_agent: GPT-4V extraction successful (9.6s)
+2025-10-14 21:57:27,118 - INFO - reserves_agent: Single model consensus (gpt-4o)
+2025-10-14 21:57:29,401 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:57:29,401 - INFO - energy_agent: GPT-4V extraction successful (6.7s)
+2025-10-14 21:57:29,401 - INFO - energy_agent: Single model consensus (gpt-4o)
+2025-10-14 21:57:38,838 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:57:38,839 - INFO - cashflow_agent: GPT-4V extraction successful (11.7s)
+2025-10-14 21:57:38,839 - INFO - cashflow_agent: Single model consensus (gpt-4o)
+2025-10-14 21:58:11,865 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 500 Internal Server Error"
+2025-10-14 21:58:11,865 - INFO - Retrying request to /chat/completions in 0.485913 seconds
+2025-10-14 21:58:12,583 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 500 Internal Server Error"
+2025-10-14 21:58:12,583 - INFO - Retrying request to /chat/completions in 0.462483 seconds
+2025-10-14 21:58:21,519 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:58:21,519 - INFO - events_agent: GPT-4V extraction successful (76.2s)
+2025-10-14 21:58:21,519 - INFO - events_agent: Single model consensus (gpt-4o)
+2025-10-14 21:58:22,113 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:58:22,113 - INFO - audit_agent: GPT-4V extraction successful (70.0s)
+2025-10-14 21:58:22,113 - INFO - audit_agent: Single model consensus (gpt-4o)
+2025-10-14 21:58:24,449 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 500 Internal Server Error"
+2025-10-14 21:58:24,449 - INFO - Retrying request to /chat/completions in 0.470858 seconds
+2025-10-14 21:58:34,936 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:58:34,937 - ERROR - fees_agent: GPT-4V extraction failed: the JSON object must be str, bytes or bytearray, not NoneType
+2025-10-14 21:58:34,937 - WARNING - fees_agent: All vision models failed
+2025-10-14 21:58:34,967 - INFO - 📝 Routing to text extraction (machine-readable PDF)
+2025-10-14 21:58:34,981 - INFO - detected formats: [<InputFormat.PDF: 'pdf'>]
+2025-10-14 21:58:34,983 - INFO - Going to convert document batch...
+2025-10-14 21:58:34,983 - INFO - Initializing pipeline for StandardPdfPipeline with options hash 89360827c54c632ffd3869eb23c81de0
+/Users/hosseins/.pyenv/versions/3.11.9/lib/python3.11/site-packages/docling/models/easyocr_model.py:68: UserWarning: Deprecated field. Better to set the `accelerator_options.device` in `pipeline_options`. When `use_gpu and accelerator_options.device == AcceleratorDevice.CUDA` the GPU is used to run EasyOCR. Otherwise, EasyOCR runs in CPU.
+  warnings.warn(
+2025-10-14 21:58:37,158 - INFO - Accelerator device: 'mps'
+2025-10-14 21:59:08,175 - INFO - Accelerator device: 'mps'
+2025-10-14 21:59:08,811 - INFO - Processing document brf_271949.pdf
+2025-10-14 21:59:28,869 - INFO - Finished converting document brf_271949.pdf in 53.89 sec.
+2025-10-14 21:59:29,736 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:59:29,742 - INFO - 🎯 Routing notes_depreciation_agent to Path B (TDD production-grade agent)
+2025-10-14 21:59:29,743 - WARNING - notes_depreciation_agent: No notes detected in document
+2025-10-14 21:59:29,743 - INFO - 🎯 Routing notes_maintenance_agent to Path B (TDD production-grade agent)
+2025-10-14 21:59:29,744 - WARNING - notes_maintenance_agent: No notes detected in document
+2025-10-14 21:59:29,744 - INFO - 🎯 Routing notes_tax_agent to Path B (TDD production-grade agent)
+2025-10-14 21:59:29,745 - WARNING - notes_tax_agent: No notes detected in document
+2025-10-14 21:59:29,983 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:59:30,598 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:59:30,788 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:59:30,794 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:59:31,248 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:59:31,416 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:59:31,576 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:59:31,620 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:59:32,107 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:59:32,363 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:59:34,701 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 21:59:34,731 - INFO - 📝 Routing to text extraction (machine-readable PDF)
+2025-10-14 21:59:34,746 - INFO - detected formats: [<InputFormat.PDF: 'pdf'>]
+2025-10-14 21:59:34,748 - INFO - Going to convert document batch...
+2025-10-14 21:59:34,748 - INFO - Initializing pipeline for StandardPdfPipeline with options hash 89360827c54c632ffd3869eb23c81de0
+/Users/hosseins/.pyenv/versions/3.11.9/lib/python3.11/site-packages/docling/models/easyocr_model.py:68: UserWarning: Deprecated field. Better to set the `accelerator_options.device` in `pipeline_options`. When `use_gpu and accelerator_options.device == AcceleratorDevice.CUDA` the GPU is used to run EasyOCR. Otherwise, EasyOCR runs in CPU.
+  warnings.warn(
+2025-10-14 21:59:36,918 - INFO - Accelerator device: 'mps'
+2025-10-14 21:59:37,849 - INFO - Accelerator device: 'mps'
+2025-10-14 21:59:38,526 - INFO - Processing document brf_58306.pdf
+2025-10-14 22:00:03,991 - INFO - Finished converting document brf_58306.pdf in 29.25 sec.
+2025-10-14 22:00:05,111 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:00:05,112 - INFO - 🎯 Routing notes_depreciation_agent to Path B (TDD production-grade agent)
+2025-10-14 22:00:05,113 - WARNING - notes_depreciation_agent: No notes detected in document
+2025-10-14 22:00:05,113 - INFO - 🎯 Routing notes_maintenance_agent to Path B (TDD production-grade agent)
+2025-10-14 22:00:05,114 - WARNING - notes_maintenance_agent: No notes detected in document
+2025-10-14 22:00:05,114 - INFO - 🎯 Routing notes_tax_agent to Path B (TDD production-grade agent)
+2025-10-14 22:00:05,115 - WARNING - notes_tax_agent: No notes detected in document
+2025-10-14 22:00:05,633 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:00:05,644 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:00:06,065 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:00:06,157 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:00:06,278 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:00:06,555 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:00:06,678 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:00:06,900 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:00:07,729 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:00:07,729 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:00:10,023 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:00:10,307 - INFO - 🔀 Using hybrid strategy (text with vision fallback)
+2025-10-14 22:00:10,325 - INFO - detected formats: [<InputFormat.PDF: 'pdf'>]
+2025-10-14 22:00:10,334 - INFO - Going to convert document batch...
+2025-10-14 22:00:10,334 - INFO - Initializing pipeline for StandardPdfPipeline with options hash 89360827c54c632ffd3869eb23c81de0
+/Users/hosseins/.pyenv/versions/3.11.9/lib/python3.11/site-packages/docling/models/easyocr_model.py:68: UserWarning: Deprecated field. Better to set the `accelerator_options.device` in `pipeline_options`. When `use_gpu and accelerator_options.device == AcceleratorDevice.CUDA` the GPU is used to run EasyOCR. Otherwise, EasyOCR runs in CPU.
+  warnings.warn(
+2025-10-14 22:00:12,642 - INFO - Accelerator device: 'mps'
+2025-10-14 22:00:13,830 - INFO - Accelerator device: 'mps'
+2025-10-14 22:00:14,377 - INFO - Processing document brf_81563.pdf
+2025-10-14 22:01:01,885 - INFO - Finished converting document brf_81563.pdf in 51.56 sec.
+2025-10-14 22:01:03,177 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:01:03,181 - INFO - 🎯 Routing notes_depreciation_agent to Path B (TDD production-grade agent)
+2025-10-14 22:01:03,181 - WARNING - notes_depreciation_agent: No notes detected in document
+2025-10-14 22:01:03,181 - INFO - 🎯 Routing notes_maintenance_agent to Path B (TDD production-grade agent)
+2025-10-14 22:01:03,181 - WARNING - notes_maintenance_agent: No notes detected in document
+2025-10-14 22:01:03,181 - INFO - 🎯 Routing notes_tax_agent to Path B (TDD production-grade agent)
+2025-10-14 22:01:03,182 - WARNING - notes_tax_agent: No notes detected in document
+2025-10-14 22:01:03,489 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:01:03,936 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:01:04,057 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:01:04,352 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:01:04,426 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:01:04,550 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:01:04,569 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:01:04,965 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:01:05,140 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:01:05,827 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:01:05,923 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:01:12,723 - WARNING - Gemini API key not found - Gemini extraction disabled
+2025-10-14 22:01:24,271 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:01:24,272 - INFO - financial_agent: GPT-4V extraction successful (11.5s)
+2025-10-14 22:01:24,272 - INFO - financial_agent: Single model consensus (gpt-4o)
+2025-10-14 22:01:30,733 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:01:30,733 - INFO - board_members_agent: GPT-4V extraction successful (18.0s)
+2025-10-14 22:01:30,733 - INFO - board_members_agent: Single model consensus (gpt-4o)
+2025-10-14 22:01:30,768 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:01:30,769 - INFO - auditor_agent: GPT-4V extraction successful (18.0s)
+2025-10-14 22:01:30,769 - INFO - auditor_agent: Single model consensus (gpt-4o)
+2025-10-14 22:01:37,445 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:01:37,446 - INFO - property_agent: GPT-4V extraction successful (24.7s)
+2025-10-14 22:01:37,446 - INFO - property_agent: Single model consensus (gpt-4o)
+2025-10-14 22:01:44,838 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:01:44,838 - INFO - notes_tax_agent: GPT-4V extraction successful (14.1s)
+2025-10-14 22:01:44,839 - INFO - notes_tax_agent: Single model consensus (gpt-4o)
+2025-10-14 22:01:57,995 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:01:57,996 - INFO - events_agent: GPT-4V extraction successful (20.5s)
+2025-10-14 22:01:57,996 - INFO - events_agent: Single model consensus (gpt-4o)
+2025-10-14 22:01:58,877 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:01:58,877 - INFO - audit_agent: GPT-4V extraction successful (14.0s)
+2025-10-14 22:01:58,877 - INFO - audit_agent: Single model consensus (gpt-4o)
+2025-10-14 22:02:11,048 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 502 Bad Gateway"
+2025-10-14 22:02:11,048 - INFO - Retrying request to /chat/completions in 0.484746 seconds
+2025-10-14 22:02:13,763 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 500 Internal Server Error"
+2025-10-14 22:02:13,763 - INFO - Retrying request to /chat/completions in 0.415050 seconds
+2025-10-14 22:02:17,374 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:02:17,375 - INFO - reserves_agent: GPT-4V extraction successful (18.5s)
+2025-10-14 22:02:17,375 - INFO - reserves_agent: Single model consensus (gpt-4o)
+2025-10-14 22:02:20,897 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:02:20,898 - INFO - notes_maintenance_agent: GPT-4V extraction successful (50.2s)
+2025-10-14 22:02:20,898 - INFO - notes_maintenance_agent: Single model consensus (gpt-4o)
+2025-10-14 22:02:24,992 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 500 Internal Server Error"
+2025-10-14 22:02:24,992 - INFO - Retrying request to /chat/completions in 0.436540 seconds
+2025-10-14 22:02:27,492 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:02:27,493 - INFO - chairman_agent: GPT-4V extraction successful (74.8s)
+2025-10-14 22:02:27,493 - INFO - chairman_agent: Single model consensus (gpt-4o)
+2025-10-14 22:02:28,235 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:02:28,235 - INFO - energy_agent: GPT-4V extraction successful (10.9s)
+2025-10-14 22:02:28,236 - INFO - energy_agent: Single model consensus (gpt-4o)
+2025-10-14 22:02:37,149 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:02:37,149 - INFO - notes_depreciation_agent: GPT-4V extraction successful (72.9s)
+2025-10-14 22:02:37,149 - INFO - notes_depreciation_agent: Single model consensus (gpt-4o)
+2025-10-14 22:02:40,108 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:02:40,109 - INFO - cashflow_agent: GPT-4V extraction successful (12.6s)
+2025-10-14 22:02:40,109 - INFO - cashflow_agent: Single model consensus (gpt-4o)
+2025-10-14 22:02:41,423 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:02:41,423 - INFO - fees_agent: GPT-4V extraction successful (20.5s)
+2025-10-14 22:02:41,423 - INFO - fees_agent: Single model consensus (gpt-4o)
+2025-10-14 22:03:00,902 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 500 Internal Server Error"
+2025-10-14 22:03:00,902 - INFO - Retrying request to /chat/completions in 0.409844 seconds
+2025-10-14 22:03:11,225 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:03:11,226 - INFO - loans_agent: GPT-4V extraction successful (73.2s)
+2025-10-14 22:03:11,226 - INFO - loans_agent: Single model consensus (gpt-4o)
+2025-10-14 22:03:11,263 - INFO - 📝 Routing to text extraction (machine-readable PDF)
+2025-10-14 22:03:11,277 - INFO - detected formats: [<InputFormat.PDF: 'pdf'>]
+2025-10-14 22:03:11,279 - INFO - Going to convert document batch...
+2025-10-14 22:03:11,279 - INFO - Initializing pipeline for StandardPdfPipeline with options hash 89360827c54c632ffd3869eb23c81de0
+/Users/hosseins/.pyenv/versions/3.11.9/lib/python3.11/site-packages/docling/models/easyocr_model.py:68: UserWarning: Deprecated field. Better to set the `accelerator_options.device` in `pipeline_options`. When `use_gpu and accelerator_options.device == AcceleratorDevice.CUDA` the GPU is used to run EasyOCR. Otherwise, EasyOCR runs in CPU.
+  warnings.warn(
+2025-10-14 22:03:13,449 - INFO - Accelerator device: 'mps'
+2025-10-14 22:03:14,650 - INFO - Accelerator device: 'mps'
+2025-10-14 22:03:15,261 - INFO - Processing document brf_198532.pdf
+2025-10-14 22:03:45,108 - INFO - Finished converting document brf_198532.pdf in 33.83 sec.
+2025-10-14 22:03:46,353 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:03:46,354 - INFO - 🎯 Routing notes_depreciation_agent to Path B (TDD production-grade agent)
+2025-10-14 22:03:46,355 - WARNING - notes_depreciation_agent: No notes detected in document
+2025-10-14 22:03:46,355 - INFO - 🎯 Routing notes_maintenance_agent to Path B (TDD production-grade agent)
+2025-10-14 22:03:46,356 - WARNING - notes_maintenance_agent: No notes detected in document
+2025-10-14 22:03:46,356 - INFO - 🎯 Routing notes_tax_agent to Path B (TDD production-grade agent)
+2025-10-14 22:03:46,357 - WARNING - notes_tax_agent: No notes detected in document
+2025-10-14 22:03:46,874 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:03:47,232 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:03:47,925 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:03:47,928 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:03:47,970 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:03:48,353 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:03:48,586 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:03:49,501 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:03:50,966 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:04:15,336 - INFO - Retrying request to /chat/completions in 0.396122 seconds
+2025-10-14 22:04:17,945 - INFO - Retrying request to /chat/completions in 0.467640 seconds
+2025-10-14 22:04:19,141 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:04:20,852 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:04:20,943 - INFO - 🔀 Using hybrid strategy (text with vision fallback)
+2025-10-14 22:04:20,956 - INFO - detected formats: [<InputFormat.PDF: 'pdf'>]
+2025-10-14 22:04:20,958 - INFO - Going to convert document batch...
+2025-10-14 22:04:20,958 - INFO - Initializing pipeline for StandardPdfPipeline with options hash 89360827c54c632ffd3869eb23c81de0
+/Users/hosseins/.pyenv/versions/3.11.9/lib/python3.11/site-packages/docling/models/easyocr_model.py:68: UserWarning: Deprecated field. Better to set the `accelerator_options.device` in `pipeline_options`. When `use_gpu and accelerator_options.device == AcceleratorDevice.CUDA` the GPU is used to run EasyOCR. Otherwise, EasyOCR runs in CPU.
+  warnings.warn(
+2025-10-14 22:04:23,078 - INFO - Accelerator device: 'mps'
+2025-10-14 22:04:24,225 - INFO - Accelerator device: 'mps'
+2025-10-14 22:04:24,644 - INFO - Processing document brf_276507.pdf
+2025-10-14 22:05:06,467 - INFO - Finished converting document brf_276507.pdf in 45.51 sec.
+2025-10-14 22:05:07,651 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:05:07,652 - INFO - 🎯 Routing notes_depreciation_agent to Path B (TDD production-grade agent)
+2025-10-14 22:05:07,653 - WARNING - notes_depreciation_agent: No notes detected in document
+2025-10-14 22:05:07,653 - INFO - 🎯 Routing notes_maintenance_agent to Path B (TDD production-grade agent)
+2025-10-14 22:05:07,655 - WARNING - notes_maintenance_agent: No notes detected in document
+2025-10-14 22:05:07,655 - INFO - 🎯 Routing notes_tax_agent to Path B (TDD production-grade agent)
+2025-10-14 22:05:07,656 - WARNING - notes_tax_agent: No notes detected in document
+2025-10-14 22:05:07,745 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:05:08,396 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:05:08,544 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:05:09,385 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:05:09,444 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:05:09,711 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:05:09,844 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:05:09,990 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:05:10,251 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:05:11,283 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:05:13,148 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:05:18,951 - WARNING - Gemini API key not found - Gemini extraction disabled
+2025-10-14 22:05:29,271 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:05:29,272 - INFO - financial_agent: GPT-4V extraction successful (10.3s)
+2025-10-14 22:05:29,272 - INFO - financial_agent: Single model consensus (gpt-4o)
+2025-10-14 22:05:30,580 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:05:30,581 - INFO - auditor_agent: GPT-4V extraction successful (11.6s)
+2025-10-14 22:05:30,581 - INFO - auditor_agent: Single model consensus (gpt-4o)
+2025-10-14 22:05:35,677 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:05:35,677 - INFO - property_agent: GPT-4V extraction successful (16.7s)
+2025-10-14 22:05:35,677 - INFO - property_agent: Single model consensus (gpt-4o)
+2025-10-14 22:05:40,307 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:05:40,307 - INFO - notes_depreciation_agent: GPT-4V extraction successful (11.0s)
+2025-10-14 22:05:40,308 - INFO - notes_depreciation_agent: Single model consensus (gpt-4o)
+2025-10-14 22:05:41,227 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:05:41,227 - INFO - notes_maintenance_agent: GPT-4V extraction successful (10.6s)
+2025-10-14 22:05:41,227 - INFO - notes_maintenance_agent: Single model consensus (gpt-4o)
+2025-10-14 22:05:41,451 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:05:41,451 - INFO - board_members_agent: GPT-4V extraction successful (22.5s)
+2025-10-14 22:05:41,452 - INFO - board_members_agent: Single model consensus (gpt-4o)
+2025-10-14 22:05:47,290 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:05:47,291 - INFO - chairman_agent: GPT-4V extraction successful (28.3s)
+2025-10-14 22:05:47,291 - INFO - chairman_agent: Single model consensus (gpt-4o)
+2025-10-14 22:05:48,510 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:05:48,510 - INFO - loans_agent: GPT-4V extraction successful (7.1s)
+2025-10-14 22:05:48,510 - INFO - loans_agent: Single model consensus (gpt-4o)
+2025-10-14 22:05:49,214 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:05:49,215 - INFO - notes_tax_agent: GPT-4V extraction successful (13.5s)
+2025-10-14 22:05:49,215 - INFO - notes_tax_agent: Single model consensus (gpt-4o)
+2025-10-14 22:05:51,508 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:05:51,508 - INFO - audit_agent: GPT-4V extraction successful (10.3s)
+2025-10-14 22:05:51,508 - INFO - audit_agent: Single model consensus (gpt-4o)
+2025-10-14 22:05:55,743 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:05:55,743 - INFO - reserves_agent: GPT-4V extraction successful (8.5s)
+2025-10-14 22:05:55,743 - INFO - reserves_agent: Single model consensus (gpt-4o)
+2025-10-14 22:06:00,747 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:06:00,748 - INFO - energy_agent: GPT-4V extraction successful (12.2s)
+2025-10-14 22:06:00,748 - INFO - energy_agent: Single model consensus (gpt-4o)
+2025-10-14 22:06:07,710 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:06:07,711 - INFO - fees_agent: GPT-4V extraction successful (18.5s)
+2025-10-14 22:06:07,711 - INFO - fees_agent: Single model consensus (gpt-4o)
+2025-10-14 22:06:30,026 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:06:30,027 - INFO - events_agent: GPT-4V extraction successful (49.7s)
+2025-10-14 22:06:30,027 - INFO - events_agent: Single model consensus (gpt-4o)
+2025-10-14 22:06:37,164 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-14 22:06:37,165 - INFO - cashflow_agent: GPT-4V extraction successful (45.7s)
+2025-10-14 22:06:37,165 - INFO - cashflow_agent: Single model consensus (gpt-4o)
+
+================================================================================
+🚀 PHASE 2B BATCH TESTING
+================================================================================
+
+Objective: Test Phase 2B validation on 10 diverse PDFs
+Metrics: Warnings, conflicts, time, agent success
+
+📋 Loaded 7 PDFs for testing
+   (3 baseline + 7 selected = 10 total)
+
+================================================================================
+🧪 PHASE 2B BATCH TESTING - 10 PDFs
+================================================================================
+
+
+📄 [1/7] Testing: brf_53546.pdf
+------------------------------------------------------------
+   ✅ Success in 43.1s
+      Warnings: 3 (High: 0, Medium: 3, Low: 0)
+      Rules Triggered: missing_evidence
+      Conflicts Resolved: 0
+      Agents: 12/15 (80.0%)
+
+📄 [2/7] Testing: brf_268882.pdf
+------------------------------------------------------------
+   ✅ Success in 113.7s
+      Warnings: 1 (High: 0, Medium: 0, Low: 1)
+      Rules Triggered: invalid_year_format
+      Conflicts Resolved: 0
+      Agents: 11/15 (73.3%)
+
+📄 [3/7] Testing: brf_271949.pdf
+------------------------------------------------------------
+   ✅ Success in 59.8s
+      Warnings: 0 (High: 0, Medium: 0, Low: 0)
+      Rules Triggered: None
+      Conflicts Resolved: 0
+      Agents: 8/15 (53.3%)
+
+📄 [4/7] Testing: brf_58306.pdf
+------------------------------------------------------------
+   ✅ Success in 35.3s
+      Warnings: 0 (High: 0, Medium: 0, Low: 0)
+      Rules Triggered: None
+      Conflicts Resolved: 0
+      Agents: 8/15 (53.3%)
+
+📄 [5/7] Testing: brf_81563.pdf
+------------------------------------------------------------
+   ✅ Success in 181.2s
+      Warnings: 1 (High: 0, Medium: 0, Low: 1)
+      Rules Triggered: invalid_year_format
+      Conflicts Resolved: 0
+      Agents: 12/15 (80.0%)
+
+📄 [6/7] Testing: brf_198532.pdf
+------------------------------------------------------------
+   ✅ Success in 69.6s
+      Warnings: 0 (High: 0, Medium: 0, Low: 0)
+      Rules Triggered: None
+      Conflicts Resolved: 0
+      Agents: 8/15 (53.3%)
+
+📄 [7/7] Testing: brf_276507.pdf
+------------------------------------------------------------
+   ✅ Success in 136.3s
+      Warnings: 1 (High: 0, Medium: 0, Low: 1)
+      Rules Triggered: invalid_year_format
+      Conflicts Resolved: 0
+      Agents: 11/15 (73.3%)
+
+================================================================================
+📊 AGGREGATE METRICS
+================================================================================
+
+Success Rate: 100.0% (7/7 PDFs)
+
+Validation Warnings:
+  Total: 6 warnings across 7 PDFs
+  Average: 0.9 warnings/PDF
+  Severity: High=0, Medium=3, Low=3
+
+Conflict Resolution:
+  Total: 0 conflicts resolved
+  Average: 0.0 conflicts/PDF
+
+Processing Performance:
+  Average Time: 91.3s/PDF
+  Average Agent Success: 66.6%
+
+Validation Rule Coverage:
+  Rules Triggered: 2/10
+  Active Rules: invalid_year_format, missing_evidence
+
+💾 Results saved to: phase2b_batch_test_results.json
+   Size: 82,196 bytes
+
+================================================================================
+✅ BATCH TESTING COMPLETE
+================================================================================
+
+🎉 SUCCESS: ≥80% success rate achieved!
+
+Next: Analyze results in phase2b_batch_test_results.json
+      Calculate accuracy improvement metrics
