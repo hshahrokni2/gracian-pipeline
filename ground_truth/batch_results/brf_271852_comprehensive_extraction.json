@@ -1,0 +1,397 @@
+{
+  "extraction_metadata": {
+    "pdf_filename": "brf_271852.pdf",
+    "extraction_date": "2025-10-15",
+    "pdf_number": "7/42",
+    "brf_name": "Bostadsrättsföreningen Bergsvåg",
+    "org_number": "769630-4687",
+    "reporting_year": 2023,
+    "accounting_standard": "K3",
+    "pages_total": 18,
+    "extraction_confidence": 0.98,
+    "special_notes": "NEW CONSTRUCTION completed March 29, 2021. Guarantee period until Jan 1, 2026. Component depreciation from June 1, 2021. K3 accounting (2nd K3 example validates 17% frequency).",
+    "evidence_pages": [1, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+  },
+
+  "metadata_agent": {
+    "brf_name": "Bostadsrättsföreningen Bergsvåg",
+    "org_number": "769630-4687",
+    "registration_date": "2015-08-21",
+    "reporting_year": 2023,
+    "fiscal_year_start": "2023-01-01",
+    "fiscal_year_end": "2023-12-31",
+    "accounting_standard": "K3",
+    "accounting_framework": "BFNAR 2012:1",
+    "currency": "SEK",
+    "document_type": "Årsredovisning",
+    "document_date": "2024-05-13",
+    "property_manager": "Fastum AB",
+    "auditor_firm": "BDO Mälardalen AB",
+    "audit_date": "2024-05-13",
+    "stadgar_registration_date": "2017-07-28",
+    "economic_plan_registration_date": "2020-04-28",
+    "evidence_pages": [1, 3, 4, 12]
+  },
+
+  "governance_agent": {
+    "board_members": [
+      {"name": "Anders Hägg", "role": "Ordförande", "period": "2023-05-31 to 2023-12-31"},
+      {"name": "Torbjörn Lundstedt", "role": "Ledamot", "period": "2023-05-31 to 2023-12-31"},
+      {"name": "Mia Maria Sallborg", "role": "Ledamot", "period": "2023-05-31 to 2023-12-31"},
+      {"name": "Gustaf Örn", "role": "Ledamot", "period": "2023-05-31 to 2023-12-31"},
+      {"name": "Morteza Arabi", "role": "Suppleant", "period": "2023-05-31 to 2023-12-31"}
+    ],
+    "board_meeting_count": 9,
+    "annual_meeting_date": "2023-05-31",
+    "board_compensation_total": 52500,
+    "board_compensation_note": "Ett prisbasbelopp (52,500 kr) inklusive sociala avgifter för styrelsen att fritt fördela",
+    "nomination_committee": [
+      {"name": "Elias Jacobson", "role": "Sammankallande"},
+      {"name": "Christoffer Arensparr", "role": "Ledamot"},
+      {"name": "Stefan Carlsson", "role": "Ledamot"}
+    ],
+    "signing_authority": "Styrelsen, eller styrelsens ledamöter två i förening",
+    "evidence_pages": [4, 17]
+  },
+
+  "audit_agent": {
+    "auditor_firm": "BDO Mälardalen AB",
+    "auditor_name": "Sara Königslehner",
+    "auditor_title": "Auktoriserad revisor",
+    "audit_opinion": "Standard revisionsberättelse",
+    "audit_date": "2024-05-13",
+    "auditor_compensation": "Skäligt belopp enligt ingiven räkning",
+    "audit_type": "Helårsgranskning",
+    "evidence_pages": [4, 17]
+  },
+
+  "property_agent": {
+    "property_name": "Jackproppen 1",
+    "municipality": "Stockholm kommun",
+    "total_apartments": 54,
+    "bostadsrätt_count": 54,
+    "hyresrätt_count": 0,
+    "commercial_units": 1,
+    "commercial_units_note": "1 bostadrättslokal fördelad på 7 stycken separata bostadsrätter",
+    "apartment_breakdown": {
+      "1_rok": 19,
+      "2_rok": 6,
+      "3_rok": 8,
+      "4_rok": 12,
+      "5_rok": 5,
+      "stadsradhus": 4,
+      "total": 54
+    },
+    "total_boa": 3876,
+    "total_loa": 743,
+    "parking_spaces": 46,
+    "parking_mc_spaces": 4,
+    "parking_type": "Garage",
+    "insurance_provider": "Brandkontoret",
+    "insurance_type": "Fullvärdesförsäkring inklusive ansvarsförsäkring för styrelsen",
+    "completion_date": "2021-03-29",
+    "completion_meeting_date": "2021-03-29",
+    "guarantee_period_years": 5,
+    "guarantee_expiry_date": "2026-01-01",
+    "construction_type": "Nyproduktion",
+    "building_count": 2,
+    "building_type": "Två flerbostadshus",
+    "technical_management": "A.S underhåll AB",
+    "property_management": "Fastum AB (ekonomisk förvaltning)",
+    "evidence_pages": [3]
+  },
+
+  "financial_agent": {
+    "total_assets": 437743965,
+    "total_equity": 367680396,
+    "total_liabilities": 70063569,
+    "long_term_liabilities": 45372000,
+    "short_term_liabilities": 24691569,
+    "revenue": 4697262,
+    "net_income": -2127794,
+    "operating_income": -689250,
+    "financial_income": 25114,
+    "financial_expenses": 1463658,
+    "depreciation": 3196391,
+    "soliditet_percent": 84.0,
+    "taxeringsvärde_buildings": 181000000,
+    "taxeringsvärde_land": 124000000,
+    "taxeringsvärde_total": 305000000,
+    "buildings_book_value": 227975723,
+    "land_book_value": 206169334,
+    "buildings_acquisition_cost": 236233066,
+    "accumulated_depreciation": -8257343,
+    "cash_and_bank": 1154442,
+    "short_term_investments": 367000,
+    "accounts_receivable": 11238,
+    "other_receivables": 1713116,
+    "prepaid_expenses": 353112,
+    "accounts_payable": 161214,
+    "tax_liabilities": 960000,
+    "accrued_expenses": 801833,
+    "member_deposits": 298505920,
+    "upplåtelseavgifter": 73726480,
+    "maintenance_fund": 368708,
+    "retained_earnings": -2792917,
+    "elstöd": 143830,
+    "elstöd_note": "Statligt elprisstöd 2023 - betydligt högre än andra föreningar",
+    "loss_explanation": "Negativt resultat till följd av höga avskrivningskostnader. Bokförd förlust från avskrivningar har inte påverkan på kassaflöde, årsavgift eller långsiktig ekonomisk uthållighet.",
+    "evidence_pages": [8, 9, 10]
+  },
+
+  "loans_agent": {
+    "total_loans": 68114000,
+    "loans": [
+      {
+        "lender": "Nordea",
+        "loan_number": "Not specified",
+        "outstanding_balance": 22390000,
+        "interest_rate": 0.0451,
+        "maturity_date": "2024-03-29",
+        "interest_change_date": "2024-03-29",
+        "amortization_schedule": "See note - 352,000 kr planerad amortering kommande år"
+      },
+      {
+        "lender": "Nordea",
+        "loan_number": "Not specified",
+        "outstanding_balance": 22862000,
+        "interest_rate": 0.0105,
+        "maturity_date": "2025-12-17",
+        "interest_change_date": "2025-12-17",
+        "amortization_schedule": "See note"
+      },
+      {
+        "lender": "Nordea",
+        "loan_number": "Not specified",
+        "outstanding_balance": 22862000,
+        "interest_rate": 0.0134,
+        "maturity_date": "2027-12-29",
+        "interest_change_date": "2027-12-29",
+        "amortization_schedule": "See note"
+      }
+    ],
+    "average_interest_rate": 0.0230,
+    "interest_expense": 1463658,
+    "collateral": "Fastighetsinteckningar 70,170,000 kr",
+    "loan_maturity_note": "Lån som förfaller kommande år redovisas som kortfristiga skulder men är av långfristig karaktär och kommer att förlängas vid förfall",
+    "amortization_plan": "352,000 kr planerad amortering kommande räkenskapsår, varav 0 kr ingår i lån som förfaller",
+    "long_term_portion": 45372000,
+    "short_term_portion": 22742000,
+    "evidence_pages": [4, 16]
+  },
+
+  "reserves_agent": {
+    "maintenance_fund": 368708,
+    "maintenance_fund_previous_year": 183948,
+    "annual_allocation": 184760,
+    "allocation_method": "0.1% av taxeringsvärde ELLER enligt underhållsplan ELLER enligt ekonomisk plan för första 3 verksamhetsåren",
+    "allocation_calculation": "Fastigheten är nybyggd - inget planerat underhåll de närmaste åren",
+    "maintenance_plan_exists": false,
+    "maintenance_plan_note": "Föreningen har ingen aktuell underhållsplan eftersom fastigheten är nybyggd",
+    "economic_plan_allocation": true,
+    "fund_policy": "Eftersom fastigheten är nybyggd finns inget planerat underhåll de närmaste åren",
+    "evidence_pages": [4, 6]
+  },
+
+  "fees_agent": {
+    "annual_fee_total": 2918652,
+    "annual_fee_apartments": 2412672,
+    "annual_fee_commercial": 505980,
+    "fee_calculation_basis": "Täcka föreningens löpande utgifter för drift och underhåll, räntebetalningar, amorteringar samt fondering för framtida underhåll",
+    "fee_per_sqm_bostadsyta": 739,
+    "fee_includes": "Fastighetsel, värme, avfallshantering",
+    "fee_increase_2024": 0.075,
+    "fee_increase_2024_note": "Styrelsen beslutade om 7,5% höjning från 1 januari 2024",
+    "storage_rental_income": 121400,
+    "garage_rental_income": 629429,
+    "fastighetsskatt_charged": 330000,
+    "el_charged": 399186,
+    "vatten_charged": 83229,
+    "fee_revenue_share_percent": 72.4,
+    "transaction_fee_transfer": 1432,
+    "transaction_fee_transfer_basis": "2.5% av prisbasbelopp (2024)",
+    "transaction_fee_mortgage": 573,
+    "transaction_fee_mortgage_basis": "1% av prisbasbelopp (2024)",
+    "subletting_fee_annual": 5730,
+    "subletting_fee_basis": "10% av prisbasbelopp per år (2024)",
+    "subletting_income": 2048,
+    "evidence_pages": [4, 5, 13]
+  },
+
+  "members_agent": {
+    "members_beginning": 95,
+    "members_new": 0,
+    "members_departed": 1,
+    "members_ending": 94,
+    "transfers_count": 1,
+    "transfer_fee": 1432,
+    "transfer_fee_note": "2.5% av prisbasbelopp (2024 = 1,432 kr)",
+    "mortgage_fee": 573,
+    "mortgage_fee_note": "1% av prisbasbelopp (2024 = 573 kr)",
+    "subletting_fee": 5730,
+    "subletting_fee_note": "10% av prisbasbelopp per år (2024 = 5,730 kr)",
+    "evidence_pages": [5]
+  },
+
+  "operating_costs_agent": {
+    "fastighetsskötsel": 83633,
+    "trädgårdsskötsel": 48808,
+    "trivselåtgärder": 1638,
+    "städkostnader": 78857,
+    "snöröjning_sandning": 76052,
+    "hisservice_besiktning": 19555,
+    "portar": 1643,
+    "reparationer": 63246,
+    "planerat_underhåll": 26064,
+    "el": 408426,
+    "uppvärmning": 399997,
+    "vatten_och_avlopp": 135973,
+    "avfallshantering": 55589,
+    "fastighetsförsäkring": 59611,
+    "bredband": 48899,
+    "övriga_driftkostnader": 6344,
+    "förbrukningsinventarier": 772,
+    "förbrukningsmaterial": 2289,
+    "total_driftkostnader": 1517396,
+    "note_number": "Not 4",
+    "utility_pattern": "Pattern B (separate värme + vatten)",
+    "energy_cost_per_sqm": 157,
+    "fastighetsskatt": 480000,
+    "fastighetsskatt_note": "Fastighetsskatt för lokaler. Bostäder befriade 15 år efter värdeår 2020",
+    "evidence_pages": [13]
+  },
+
+  "notes_maintenance_agent": {
+    "maintenance_fund": 368708,
+    "planned_maintenance": 26064,
+    "repairs": 63246,
+    "major_maintenance_2023": "Fällning av två stora björkar i känsligt läge",
+    "maintenance_plan_exists": false,
+    "maintenance_plan_note": "Föreningen har ingen aktuell underhållsplan eftersom fastigheten är nybyggd",
+    "guarantee_period": "5 år till 2026-01-01",
+    "completion_date": "2021-03-29",
+    "suppliers": [
+      {"service": "Ekonomisk förvaltning", "supplier": "Fastum AB"},
+      {"service": "Fastighetsservice", "supplier": "A.S underhåll AB"}
+    ],
+    "insurance_provider": "Brandkontoret",
+    "evidence_pages": [3, 4, 5, 13]
+  },
+
+  "notes_depreciation_agent": {
+    "depreciation_method": "Komponentavskrivning (rak avskrivningsplan)",
+    "depreciation_start_date": "2021-06-01",
+    "annual_depreciation": 3196391,
+    "accumulated_depreciation": 8257343,
+    "buildings_acquisition_cost": 236233066,
+    "buildings_book_value": 227975723,
+    "component_schedule": {
+      "stomme_och_grund": "150 år",
+      "stomkompletteringar_innerväggar": "60 år",
+      "värme_sanitet": "60 år",
+      "fasad_inklusive_fönster": "60 år",
+      "yttertak": "60 år",
+      "el": "50 år",
+      "ventilation": "40 år",
+      "hissar": "40 år",
+      "resterande_byggnad": "50 år"
+    },
+    "accounting_standard": "K3",
+    "component_depreciation_note": "Komponentavskrivning tillämpas från och med 1 juni 2021",
+    "evidence_pages": [12, 14]
+  },
+
+  "notes_tax_agent": {
+    "tax_type": "Privatbostadsföretag",
+    "tax_law_reference": "Inkomstskattelagen (1999:1229)",
+    "tax_status": "Äkta bostadsrättsförening",
+    "fastighetsskatt_exemption": "Fastigheten helt befriad från fastighetsavgift avseende bostäder de första 15 åren efter värdeåret 2020",
+    "fastighetsskatt_commercial": "En procent av taxeringsvärde för lokaler",
+    "tax_debt": 960000,
+    "tax_receivable": 519014,
+    "evidence_pages": [3, 4, 15]
+  },
+
+  "events_agent": {
+    "major_events_2023": [
+      "Erhållit 144,000 kr i statligt elprisstöd",
+      "Fällning av två stora björkar i känsligt läge",
+      "Upphandling av entreprenör för skötsel och uthyrning av garageplatser",
+      "Styrelsen beslutade om 7,5% årsavgiftshöjning från 1 januari 2024"
+    ],
+    "elstöd_received": 143830,
+    "fee_increase_decision": "7.5% från 2024-01-01",
+    "tree_removal": "Två stora björkar i känsligt läge",
+    "garage_management_procurement": "Upphandling av entreprenör för skötsel och uthyrning av garageplatser",
+    "fastighetsskatt_correction": -108000,
+    "fastighetsskatt_correction_note": "Fastighetsskatt ändrad efter ny taxering (2022)",
+    "evidence_pages": [5, 14]
+  },
+
+  "energy_agent": {
+    "electricity_cost": 408426,
+    "heating_cost": 399997,
+    "water_cost": 135973,
+    "waste_management_cost": 55589,
+    "total_energy_cost": 944396,
+    "energy_cost_per_sqm": 157,
+    "elstöd_received": 143830,
+    "heating_system": "Fjärrvärme",
+    "electricity_provider": "Not specified",
+    "electricity_charged_to_members": 399186,
+    "water_charged_to_members": 83229,
+    "energy_included_in_fee": true,
+    "energy_included_note": "I årsavgiften ingår fastighetsel, värme och avfallshantering",
+    "evidence_pages": [5, 13]
+  },
+
+  "cashflow_agent": {
+    "operating_activities": 1223811,
+    "investing_activities": 0,
+    "financing_activities": -852000,
+    "net_cashflow": 371811,
+    "cash_beginning": 1910930,
+    "cash_ending": 2282741,
+    "cash_from_operations_before_wc": 1330597,
+    "adjustments_non_cash": 3196391,
+    "adjustments_note": "Avskrivningar som inte ingår i kassaflödet",
+    "change_tax": 262000,
+    "change_receivables": -380242,
+    "change_payables": 273456,
+    "loan_repayment": 852000,
+    "evidence_pages": [11]
+  },
+
+  "insurance_agent": {
+    "insurance_provider": "Brandkontoret",
+    "insurance_type": "Fullvärdesförsäkring inklusive ansvarsförsäkring för styrelsen",
+    "insurance_cost": 59611,
+    "insurance_cost_previous_year": 57206,
+    "insurance_increase_percent": 4.2,
+    "evidence_pages": [3, 13]
+  },
+
+  "tax_agent": {
+    "taxeringsvärde_buildings": 181000000,
+    "taxeringsvärde_land": 124000000,
+    "taxeringsvärde_total": 305000000,
+    "fastighetsskatt": 480000,
+    "fastighetsskatt_exemption": "Bostäder befriade 15 år efter värdeår 2020",
+    "fastighetsskatt_commercial_rate": 0.01,
+    "fastighetsskatt_commercial_note": "En procent av taxeringsvärde för lokaler",
+    "evidence_pages": [4, 14]
+  },
+
+  "planned_actions_agent": {
+    "no_maintenance_plan": true,
+    "maintenance_plan_note": "Föreningen har ingen aktuell underhållsplan eftersom fastigheten är nybyggd",
+    "guarantee_period_active": true,
+    "guarantee_expiry": "2026-01-01",
+    "planned_actions": [
+      {"action": "Monitor guarantee period claims", "timeframe": "Until 2026-01-01", "comment": "5-year guarantee period active"}
+    ],
+    "fee_increase_planned": 0.075,
+    "fee_increase_effective_date": "2024-01-01",
+    "evidence_pages": [3, 4, 5]
+  }
+}
