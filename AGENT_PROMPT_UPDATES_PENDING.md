@@ -218,33 +218,61 @@ DETAILS:
 - Fees: Single 8% increase (Jan 2024), no mid-year adjustments. Historical 523 → 766 (+46% multi-year)
 - Energy: LOW tier - +17.3% multi-year (139→163 kr/m²), +5.8% single-year (154→163), 99K elstöd received. NOT crisis level.
 - Lokaler: MINIMAL commercial - 122 m² (2.6%), revenue 419K (8.9%), premium 5.3x (HIGHEST premium but tiny area)
+
+PDF 20 (brf_276796 - Brf Äril Båtbyggarparken 2023): ✅ COMPLETE - 🚨 CRITICAL DISCOVERY!
+[✅] Loan reclassification? (kortfristig 100% - EXTREME!) YES (WORST CASE!)
+[✅] Multiple fee increases? (+20% Jan + 40% Nov = 68% compound) YES (FIRST SRS CASE!)
+[❌] Electricity increase >50%? (-3.7% single-year, -4.6% multi-year) NO (NONE tier)
+[⚠️] Lokaler >15% of area? (13.66% = 1,128/8,255 m²) MINIMAL (but 27.5% revenue!)
+
+SCORE: 2.5 / 4 (62.5%)
+DETAILS:
+- Loans: 134.17M ALL short-term (100%!) matures May-June 2024 (21-day cluster) - WORST CASE
+- Fees: **DOUBLE INCREASES** +20% Jan 1 + 40% Nov 1 = 68% compound (response to 100% debt maturity + -7.65M loss) - **CRITICAL DISCOVERY!**
+- Energy: NONE tier - electricity DECREASED -3.7% (2022→2023), -4.6% (2020→2023). Heating +14.6% due to technical failures.
+- Lokaler: MINIMAL 13.66% area BUT 27.5% revenue (2.30M kr), premium 3.42x residential
 ```
 
-**FINAL DECISION AFTER 3/3 PDFs COMPLETE**:
+**FINAL DECISION AFTER 4/4 PDFs COMPLETE** (UPDATED AFTER PDF 20):
 ```
-✅ IMPLEMENT loans_agent (3/3 = 100% confirmation)
-❌ DEFER fees_agent (0/3 SRS = 0%, rare Hjorthagen-only pattern)
-✅ IMPLEMENT energy_agent with SEVERITY TIERS (3/3 with LOW/MODERATE/SEVERE validated)
-⚠️ IMPLEMENT property_agent lokaler AS OPTIONAL (1/3 SRS = 33.3%, urban-only pattern)
+✅ IMPLEMENT loans_agent (4/4 = 100% confirmation, EXTREME tier validated)
+⚠️ **RECONSIDER fees_agent** (1/4 SRS = 25%, NOT Hjorthagen-only!) 🚨 DECISION REVERSAL
+✅ IMPLEMENT energy_agent with SEVERITY TIERS (4/4 with NONE/LOW/MODERATE/SEVERE validated)
+⚠️ IMPLEMENT property_agent lokaler AS OPTIONAL (2/4 SRS = 50%, threshold refinement needed)
 
-FINAL STATUS (after PDF 18 - COMPLETE!):
-- Loans: 3/3 = 100% (✅ **IMPLEMENT NOW!** - Universal pattern across ALL PDFs)
+FINAL STATUS (after PDF 20 - CRITICAL DISCOVERY!):
+- Loans: 4/4 = 100% (✅ **ALREADY IMPLEMENTED** - Universal pattern, EXTREME tier works)
   - brf_198532: 49.7% kortfristig
   - brf_275608: 37.2% kortfristig
-  - brf_276507: 68.1% kortfristig (EXTREME!)
-- Fees: 0/3 = 0% (❌ **DEFER** - Single increases only, no mid-year adjustments)
-  - brf_198532: Single +5%
-  - brf_275608: Single +48.3% (emergency)
-  - brf_276507: Single +8%
-- Energy: 3/3 = 100% with 3 TIERS (✅ **IMPLEMENT with SEVERITY CLASSIFICATION!**)
-  - brf_198532: MODERATE tier (+23% spike, -11% recovery, net +9%)
-  - brf_275608: SEVERE tier (+126.3% multi-year, +21.7% single-year)
-  - brf_276507: LOW tier (+17.3% multi-year, +5.8% single-year)
-- Lokaler: 1/3 SRS = 33.3% (⚠️ **IMPLEMENT AS OPTIONAL** - Urban-only pattern)
-  - brf_198532: 20.7% area ✅
-  - brf_275608: 0% area ❌
-  - brf_276507: 2.6% area ❌ (minimal)
-  - Total: 1/3 SRS + 2/15 Hjorthagen = 3/18 overall (16.7% urban-only)
+  - brf_276507: 68.1% kortfristig
+  - brf_276796: 100% kortfristig (WORST CASE!)
+
+- Fees: 1/4 = 25% (⚠️ **IMPLEMENT RECOMMENDED** - NOT Hjorthagen-only, extreme severity)
+  - brf_198532: Single +5% ❌
+  - brf_275608: Single +48.3% ❌
+  - brf_276507: Single +8% ❌
+  - brf_276796: **Double +20% Jan + 40% Nov = 68%** ✅ (FIRST SRS CASE!)
+
+  **REVISED DECISION** (after PDF 20):
+  ✅ **IMPLEMENT fees_agent**
+  **Rationale**:
+  - SRS prevalence: 25% (1/4) vs Hjorthagen 13.3% (2/15) - NOT location-specific!
+  - Overall: 15.8% (3/19 PDFs) - material prevalence
+  - Severity: Up to 68% compound (extreme member impact)
+  - Pattern validated across both datasets (urban + suburban)
+
+- Energy: 4/4 = 100% with 4 TIERS (✅ **ALREADY IMPLEMENTED** - Tier diversity validated)
+  - brf_198532: MODERATE tier (+23% spike, -11% recovery)
+  - brf_275608: SEVERE tier (+126.3% multi-year)
+  - brf_276507: LOW tier (+17.3% multi-year)
+  - brf_276796: **NONE tier** (-3.7% single-year, -4.6% multi-year)
+
+- Lokaler: 2/4 SRS = 50% (⚠️ **ALREADY IMPLEMENTED AS OPTIONAL** - Threshold refinement suggested)
+  - brf_198532: 20.7% area ✅ SIGNIFICANT
+  - brf_275608: 0% area ❌ NONE
+  - brf_276507: 2.6% area ❌ MINIMAL
+  - brf_276796: 13.66% area ⚠️ MINIMAL (but 27.5% revenue - suggests revenue % threshold needed)
+  - Total: 1/4 SRS SIGNIFICANT + 1/4 MINIMAL = 50% with ≥10% commercial
 ```
 
 ---

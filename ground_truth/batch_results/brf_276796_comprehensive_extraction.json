@@ -1,0 +1,498 @@
+{
+  "metadata_agent": {
+    "organization_number": "769631-7028",
+    "organization_name": "Brf Äril Båtbyggarparken",
+    "fiscal_year_start": "2023-01-01",
+    "fiscal_year_end": "2023-12-31",
+    "report_date": "2023-12-31",
+    "accounting_standard": "K3",
+    "pages_total": 23,
+    "report_type": "årsredovisning",
+    "property_manager": "SBC AB (ekonomisk), BK Kraft AB (teknisk)",
+    "evidence_pages": [1, 2, 4, 5]
+  },
+
+  "governance_agent": {
+    "chairman": "Lars-Håkan Lindqvist",
+    "vice_chairman": null,
+    "treasurer": null,
+    "secretary": null,
+    "board_members": [
+      {"name": "Lars-Håkan Lindqvist", "role": "Ordförande"},
+      {"name": "Anna Forsgren", "role": "Styrelseledamot"},
+      {"name": "Christer Karlsson", "role": "Styrelseledamot"},
+      {"name": "Daniel Eli Schuss", "role": "Styrelseledamot"},
+      {"name": "Lars Gert Östberg", "role": "Styrelseledamot"},
+      {"name": "Carl Fredrik Gejrot", "role": "Suppleant"},
+      {"name": "Eva-Marie Boberg", "role": "Suppleant"},
+      {"name": "Mattias Lindgren", "role": "Suppleant"}
+    ],
+    "board_size": 8,
+    "board_meetings_count": 13,
+    "annual_meeting_date": "2023-06-20",
+    "extra_meeting_dates": [],
+    "valberedning": ["Joakim Claesson"],
+    "firmateckning": "Firman tecknas av styrelsen. Firman tecknas två i förening av ledamöterna.",
+    "evidence_pages": [4, 5, 21]
+  },
+
+  "audit_agent": {
+    "auditor_name": "Joakim Häll",
+    "auditor_firm": "BoRevision",
+    "auditor_type": "Revisor",
+    "audit_report_pages": 2,
+    "audit_opinion": "Utan anmärkning",
+    "evidence_pages": [5, 22, 23]
+  },
+
+  "property_agent": {
+    "property_designation": "Backåkra 1",
+    "total_area_sqm": 8255,
+    "living_area_sqm": 7127,
+    "commercial_area_sqm": 1128,
+    "bostadsratter_count": 76,
+    "apartment_breakdown": {
+      "1_rok": 0,
+      "2_rok": 28,
+      "3_rok": 42,
+      "4_rok": 20,
+      "5_rok": 1,
+      "total": 91
+    },
+    "construction_year": "2017-2019",
+    "property_insurance": "Nordeuropa Försäkring",
+    "taxeringsvarde_building": 271800000,
+    "taxeringsvarde_mark": 261200000,
+    "taxeringsvarde_total": 533000000,
+    "samfallighet_membership": "Backåkra samfällighetsförening",
+    "samfallighet_share_pct": 44.0,
+    "samfallighet_description": "Förvaltar och sköter gemensamma sopsugar, grönytor samt gångstråk",
+    "lokaler_analysis": {
+      "commercial_area_sqm": 1128.0,
+      "commercial_pct_of_total": 13.66,
+      "commercial_rent_collected": 2301584.0,
+      "commercial_rent_per_sqm": 2040.61,
+      "residential_fee_per_sqm": 596.0,
+      "commercial_premium_ratio": 3.42,
+      "significance": "MINIMAL"
+    },
+    "evidence_pages": [4, 8, 18]
+  },
+
+  "financial_agent": {
+    "assets_total": 842270992,
+    "equity_total": 705415691,
+    "liabilities_total": 136855301,
+    "net_revenue": 8360032,
+    "profit_loss": -7647424,
+    "soliditet_pct": 84.0,
+    "cash_and_bank": 6624588,
+    "nettoomsattning": 8360032,
+    "nettoomsattning_breakdown": {
+      "arsavgifter_bostader": 3158588,
+      "arsavgifter_lokaler_moms": 232968,
+      "hyresintakter_lokaler": 2301584,
+      "hyresintakter_garage_moms": 888291,
+      "bredband": 212475,
+      "vatten": 527294,
+      "el_moms": 385455,
+      "uppvarmning": 60384,
+      "overnattnings_gastlagenhet": 36400,
+      "pantsattningsavgift": 9975,
+      "overlatelseavgift": 12237,
+      "andrahandsuthyrning": 44446,
+      "total": 8360032
+    },
+    "other_income": 682,
+    "total_revenue": 8360714,
+    "balansomslutning": 842270992,
+    "kundfordringar": 15751,
+    "evidence_pages": [8, 9, 10, 11]
+  },
+
+  "operating_costs_agent": {
+    "total_driftskostnader": 4354820,
+    "fastighetsskotsel": 817026,
+    "reparationer_underhall": 235609,
+    "planerade_underhall": 121331,
+    "taxebundna_kostnader": 2090588,
+    "ovriga_driftskostnader": 1090265,
+    "el": 859316,
+    "varme": 840216,
+    "vatten": 192213,
+    "sophamtning": 198843,
+    "fastighetsforsak ringar": 83980,
+    "tomtrattsavgald": null,
+    "kabel_tv": 271817,
+    "fastighetsskatt": 400000,
+    "hiss_underhall": 7636,
+    "sotning_ventilation": 66583,
+    "ventilation_major_work": 67054,
+    "varmeanlaggning_major_work": 54278,
+    "evidence_pages": [16, 17]
+  },
+
+  "loans_agent": {
+    "total_debt": 134170000,
+    "long_term_debt": 0,
+    "short_term_debt": 134170000,
+    "loans": [
+      {
+        "lender": "Nordea",
+        "loan_id": "Loan 1",
+        "amount": 43930000,
+        "interest_rate_pct": 1.06,
+        "maturity_date": "2024-06-07",
+        "villkorsandringsdag": "2024-06-07",
+        "maturity_classification": "short_term"
+      },
+      {
+        "lender": "Nordea",
+        "loan_id": "Loan 2",
+        "amount": 45120000,
+        "interest_rate_pct": 4.36,
+        "maturity_date": "2024-05-17",
+        "villkorsandringsdag": "2024-05-17",
+        "maturity_classification": "short_term"
+      },
+      {
+        "lender": "Nordea",
+        "loan_id": "Loan 3",
+        "amount": 45120000,
+        "interest_rate_pct": 4.49,
+        "maturity_date": "2024-06-07",
+        "villkorsandringsdag": "2024-06-07",
+        "maturity_classification": "short_term"
+      }
+    ],
+    "average_interest_rate_pct": 2.67,
+    "debt_per_sqm": 16253,
+    "projected_debt_5_years": 131870000,
+    "loan_restructuring_note": "One loan omsattes under året. All three loans mature within 7 months (May-June 2024)",
+    "refinancing_risk_assessment": {
+      "kortfristig_pct": 100.0,
+      "risk_level": "EXTREME",
+      "maturity_cluster": "ALL 134.17M matures within 7 months (May-June 2024) - 100% concentration!",
+      "soliditet_cushion": 84.0,
+      "recommendation": "EXTREME risk - 100% of debt (134.17M kr) is short-term with complete maturity cluster in May-June 2024 (5-6 months from report date). Despite strong 84% soliditet cushion (705M kr equity), simultaneous refinancing of entire debt portfolio during rising rate environment (2.67% avg → 4.36-4.49% on recent renewals) creates exceptional refinancing pressure. Negative result (-7.65M kr) and double fee increases (20% Jan + 40% Nov 2023) indicate financial stress. Urgent refinancing planning required."
+    },
+    "lender_concentration": {
+      "single_lender": true,
+      "lender_name": "Nordea",
+      "concentration_pct": 100.0
+    },
+    "evidence_pages": [12, 19]
+  },
+
+  "fees_agent": {
+    "fee_per_sqm_annual": 596,
+    "fee_increase_pct": null,
+    "fee_increase_date": null,
+    "fee_increase_reason": "Täcka ökade ränte- och energikostnader",
+    "multiple_increases": true,
+    "fee_history": [
+      {"year": 2023, "fee_per_sqm": 596, "note": "Two increases: +20% Jan 1, +40% Nov 1"},
+      {"year": 2022, "fee_per_sqm": null},
+      {"year": 2021, "fee_per_sqm": null},
+      {"year": 2020, "fee_per_sqm": null}
+    ],
+    "fee_increase_details": {
+      "increase_1_date": "2023-01-01",
+      "increase_1_pct": 20.0,
+      "increase_2_date": "2023-11-01",
+      "increase_2_pct": 40.0,
+      "compound_effect_pct": 68.0,
+      "reason": "Täcka ökade ränte- och energikostnader samt förluster",
+      "future_note": "Inga höjningar av avgifterna är planerade för 2024"
+    },
+    "evidence_pages": [6, 7]
+  },
+
+  "energy_agent": {
+    "energy_class": null,
+    "energy_performance": null,
+    "inspection_date": null,
+    "elkostnad_per_sqm": 104,
+    "varmekostnad_per_sqm": 102,
+    "vattenkostnad_per_sqm": 23,
+    "energikostnad_per_sqm_total": 229,
+    "multi_year_trends": [
+      {"year": 2023, "el_per_sqm": 104, "varme_per_sqm": 102, "vatten_per_sqm": 23, "total_per_sqm": 229},
+      {"year": 2022, "el_per_sqm": 108, "varme_per_sqm": 89, "vatten_per_sqm": 30, "total_per_sqm": 228},
+      {"year": 2021, "el_per_sqm": 107, "varme_per_sqm": 83, "vatten_per_sqm": 28, "total_per_sqm": 218},
+      {"year": 2020, "el_per_sqm": 109, "varme_per_sqm": 110, "vatten_per_sqm": 31, "total_per_sqm": 250}
+    ],
+    "electricity_increase_single_year_pct": -3.7,
+    "electricity_increase_multi_year_pct": -4.6,
+    "heating_increase_single_year_pct": 14.6,
+    "water_increase_single_year_pct": -23.3,
+    "energy_crisis_severity": "NONE",
+    "elstod_received": null,
+    "energy_initiatives": "Heating system ongoing work - system not delivering per specification. Matarledningar replaced in 2023 to increase available energy. All golvvärmeventiler replaced. Warranty work with builder (Erlandsson Bygg in bankruptcy).",
+    "evidence_pages": [6, 8]
+  },
+
+  "reserves_agent": {
+    "underhallsfond_balance": 1625531,
+    "underhallsfond_previous": 1247600,
+    "underhallsfond_change": 377931,
+    "reservering_till_fond": 533000,
+    "underhallsplan_exists": true,
+    "underhallsplan_period": "2022-2072",
+    "evidence_pages": [7, 9]
+  },
+
+  "members_agent": {
+    "total_members_start": 133,
+    "new_members": 12,
+    "departing_members": 14,
+    "total_members_end": 131,
+    "transfers_during_year": 10,
+    "beviljade_andrahandsuthyrningar": 4,
+    "evidence_pages": [7]
+  },
+
+  "events_agent": {
+    "major_events": [
+      {
+        "event": "Double fee increases",
+        "date": "2023",
+        "description": "Avgifterna höjdes med 20% från den 1 januari och med 40% från den 1 november 2023",
+        "impact": "Compound 68% increase to cover increased interest and energy costs"
+      },
+      {
+        "event": "Loan renegotiation",
+        "date": "2023",
+        "description": "Ett av föreningens lån omsattes under året",
+        "impact": "Interest rates increased from 1.06% to 4.36-4.49% range"
+      },
+      {
+        "event": "Heating system problems",
+        "date": "2023",
+        "description": "Styrelsen har under 2023 fortsatt arbetet med att komma till rätta med problemet att vissa lägenheter är kalla under vintern. Utbyte av värmesystemets matarledningar i källaren påbörjades",
+        "impact": "Major project to fix heating delivery issues, all golvvärmeventiler replaced"
+      },
+      {
+        "event": "Builder bankruptcy",
+        "date": "2023",
+        "description": "Eftersom Erlandsson Bygg i Stockholm AB är försatt i konkurs har styrelsen fortsatt att arbeta med garanti åtgärder",
+        "impact": "Ongoing warranty work complicated by builder insolvency"
+      },
+      {
+        "event": "Inglasning av balkonger REJECTED",
+        "date": "2023",
+        "description": "Under 2023 fick föreningen ett slutligt nej från Mark- och miljödomstolen på ansökan om inglasning av huskropparnas indragna balkonger",
+        "impact": "Final rejection after appeals to Stockholms Stad, Länsstyrelsen, and Mark- och miljödomstolen"
+      },
+      {
+        "event": "OVK-besiktning genomförd",
+        "date": "2023",
+        "description": "Under 2023 genomfördes OVK-besiktning. I samband med detta rengjordes och injusterades ventilationen och frånluftsdon byttes i våtutrymmena",
+        "impact": "Mandatory ventilation inspection with cleaning and adjustments"
+      },
+      {
+        "event": "New SBC contract",
+        "date": "2023",
+        "description": "Föreningen har under året tecknat ett nytt avtal om ekonomisk förvaltning med SBC",
+        "impact": "Changed economic management agreement"
+      }
+    ],
+    "evidence_pages": [6, 7]
+  },
+
+  "notes_maintenance_agent": {
+    "major_maintenance_completed": [
+      {"year": 2023, "description": "Underhåll hissar (6 stycken)"},
+      {"year": 2023, "description": "Besiktning hissar (6 stycken)"},
+      {"year": 2023, "description": "Bättringsåtgärder, Entrédörrar i trä"},
+      {"year": 2023, "description": "Besiktning brandsäkerhet"},
+      {"year": 2023, "description": "OVK-besiktning med rengöring och injustering av ventilation"},
+      {"year": 2023, "description": "Utbyte värmesystemets matarledningar i källaren"},
+      {"year": 2023, "description": "Byte samtliga golvvärmeventiler"}
+    ],
+    "planned_maintenance": [
+      {"period": "2024", "description": "Underhåll hissar (6 stycken)"},
+      {"period": "2024", "description": "Besiktning hissar (6 stycken)"},
+      {"period": "2024", "description": "Bättringsåtgärder, Entrédörrar i trä"},
+      {"period": "2024", "description": "Besiktning brandsäkerhet"},
+      {"period": "2024", "description": "Fortsatt arbete med värmesystemet"}
+    ],
+    "maintenance_expenses_major": {
+      "varmeanlaggning": 54278,
+      "ventilation": 67054,
+      "total_planerat": 121331
+    },
+    "underhallsplan_period": "2022-2072",
+    "evidence_pages": [5, 17]
+  },
+
+  "insurance_agent": {
+    "insurance_provider": "Nordeuropa Försäkring",
+    "insurance_premium": 83980,
+    "property_coverage": null,
+    "liability_coverage": "Kollektivt bostadsrättstillägg för medlemmarna samt ansvarsförsäkring för styrelsen",
+    "evidence_pages": [4, 17]
+  },
+
+  "tax_agent": {
+    "fastighetsskatt": 400000,
+    "fastighetsavgift_exemption": true,
+    "exemption_years": "Föreningen är befriad från fastighetsavgiften de första femton åren. Detta utgår från fastighetens nybyggnadsår.",
+    "skattekonto_balance": 85281,
+    "moms_avrakning": null,
+    "evidence_pages": [8, 17]
+  },
+
+  "planned_actions_agent": {
+    "planned_actions": [
+      {
+        "action": "Heating system completion",
+        "status": "Fortsätter 2024",
+        "description": "Under 2024 kommer styrelsen tillsammans med vår tekniska förvaltare BK Kraft, att fortsätta arbetet med värmesystemet, vilket fortfarande inte levererar enligt specifikation"
+      },
+      {
+        "action": "Takängar breddavlopp",
+        "status": "Pågår",
+        "description": "Styrelsen påbörjade under 2023 arbetet med att dokumentera avrinningen från våra takängar. Takängarna behöver kompletteras med ett antal breddavlopp, i det fall staden drabbas av någon typ av 100-års regn framgent"
+      },
+      {
+        "action": "No fee increase 2024",
+        "status": "Beslutad",
+        "description": "Inga höjningar av avgifterna är planerade för 2024"
+      }
+    ],
+    "evidence_pages": [7, 20]
+  },
+
+  "cashflow_agent": {
+    "cash_flow_statement_present": true,
+    "cash_start_of_year": 9714549,
+    "cash_end_of_year": 6624588,
+    "cash_change": -3089961,
+    "cash_from_operations": 456509,
+    "cash_from_investments": -2392717,
+    "cash_from_financing": -930000,
+    "evidence_pages": [13]
+  },
+
+  "depreciation_agent": {
+    "total_depreciation": 7812316,
+    "building_depreciation_rate_pct": null,
+    "property_improvements_depreciation_rate_pct": null,
+    "accumulated_depreciation": 30334869,
+    "ack_anskaffningsvarde": 863275071,
+    "restvarde_enligt_plan": 832940201,
+    "mark_value_included": 418626375,
+    "evidence_pages": [14, 18]
+  },
+
+  "driftskostnader_agent": {
+    "total_driftskostnader": 4354820,
+    "fastighetsskotsel": 817026,
+    "reparationer_underhall": 235609,
+    "el": 859316,
+    "uppvarmning": 840216,
+    "vatten": 192213,
+    "sophamtning": 198843,
+    "fastighetsforsak ringar": 83980,
+    "tomtrattsavgald": null,
+    "kabel_tv": 271817,
+    "fastighetsskatt": 400000,
+    "ventilation_major": 67054,
+    "varmeanlaggning_major": 54278,
+    "ovriga_externa_kostnader": 246858,
+    "personalkostnader": 130735,
+    "evidence_pages": [10, 16, 17]
+  },
+
+  "commercial_tenants_agent": {
+    "has_commercial_space": true,
+    "total_commercial_area_sqm": 1128,
+    "commercial_rent_collected": 2301584,
+    "commercial_rent_pct_of_revenue": 27.5,
+    "commercial_rent_per_sqm": 2040.61,
+    "tenant_details": "1 lokal + 4 bostadsrättslokaler",
+    "evidence_pages": [4, 15]
+  },
+
+  "revenue_breakdown_agent": {
+    "arsavgifter_bostader": 3158588,
+    "hyror_lokaler": 2301584,
+    "hyror_garage": 888291,
+    "hyror_forrad": null,
+    "varmvattenintakter": 60384,
+    "elintakter": 385455,
+    "bredband": 212475,
+    "overlatelseavgift": 12237,
+    "andrahandsuthyrning": 44446,
+    "pantsattningsavgift": 9975,
+    "fakturerade_kostnader": null,
+    "elstod": null,
+    "ovriga_intakter": 682,
+    "nettoomsattning": 8360032,
+    "ovriga_rorelseintakter": 682,
+    "total_revenue": 8360714,
+    "evidence_pages": [10, 15]
+  },
+
+  "enhanced_loans_agent": {
+    "total_debt": 134170000,
+    "long_term_debt": 0,
+    "short_term_debt": 134170000,
+    "kortfristig_pct": 100.0,
+    "loans_detail": [
+      {
+        "lender": "Nordea",
+        "amount": 43930000,
+        "interest_rate_pct": 1.06,
+        "maturity_date": "2024-06-07",
+        "villkorsandringsdag": "2024-06-07",
+        "months_to_maturity": 5,
+        "classification": "short_term"
+      },
+      {
+        "lender": "Nordea",
+        "amount": 45120000,
+        "interest_rate_pct": 4.36,
+        "maturity_date": "2024-05-17",
+        "villkorsandringsdag": "2024-05-17",
+        "months_to_maturity": 4,
+        "classification": "short_term"
+      },
+      {
+        "lender": "Nordea",
+        "amount": 45120000,
+        "interest_rate_pct": 4.49,
+        "maturity_date": "2024-06-07",
+        "villkorsandringsdag": "2024-06-07",
+        "months_to_maturity": 5,
+        "classification": "short_term"
+      }
+    ],
+    "average_interest_rate_pct": 2.67,
+    "weighted_average_rate_pct": 3.30,
+    "debt_per_sqm": 16253,
+    "interest_cost_annual": 3594825,
+    "interest_coverage_ratio": -2.13,
+    "projected_scenarios": {
+      "current_rate": 4428410,
+      "plus_1pct": 5770110,
+      "plus_2pct": 7111810,
+      "plus_3pct": 8453510
+    },
+    "refinancing_risk_assessment": {
+      "kortfristig_pct": 100.0,
+      "risk_level": "EXTREME",
+      "maturity_cluster": "COMPLETE SIMULTANEOUS REFINANCING - All 134.17M matures May-June 2024 (within 21 days!)",
+      "soliditet_cushion": 84.0,
+      "profitability_status": "negative",
+      "recommendation": "EXTREME CRISIS - 100% of debt (134.17M kr) matures simultaneously in May-June 2024 (4-5 months, within 21-day window). This is the WORST maturity clustering pattern seen - complete portfolio refinancing during peak rate environment. Interest costs +200% (1.20M → 3.59M kr), double fee increases in 2023 (+20% Jan + 40% Nov = 68% compound), and -7.65M kr loss signal severe financial distress. Despite strong 84% soliditet (705M kr equity), 100% Nordea concentration creates single-lender dependency risk. Heating system failures and builder bankruptcy add operational stress. URGENT: Immediate refinancing negotiations critical to avoid liquidity crisis."
+    },
+    "lender_concentration": {
+      "single_lender": true,
+      "lender_name": "Nordea",
+      "concentration_pct": 100.0
+    },
+    "evidence_pages": [10, 12, 19]
+  }
+}
