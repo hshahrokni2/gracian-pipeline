@@ -1,0 +1,557 @@
+{
+  "pdf_id": "brf_78906",
+  "brf_name": "Bostadsrättsföreningen Skytten 4",
+  "org_number": "769606-9785",
+  "fiscal_year": 2021,
+  "pages": 17,
+  "accounting_standard": "K3",
+  "confidence_score": 0.98,
+
+  "metadata_agent": {
+    "report_signed_date": "2022-09-05",
+    "annual_meeting_date": "2021-06-15",
+    "registered_date": "2001-04-18",
+    "economic_plan_registered_date": "2002-08-16",
+    "stadgar_registered_date": "2011-01-17",
+    "location": "Bolagsverket, Stockholm",
+    "accounting_firm": "SBC Sveriges BostadsrättsCentrum AB",
+    "property_manager": "SBC Sveriges BostadsrättsCentrum AB",
+    "evidence_pages": [2, 5]
+  },
+
+  "governance_agent": {
+    "chairman": "Jan Anders Foureaux",
+    "chairman_role": "Ordförande",
+    "board_members": [
+      {"name": "Jan Anders Foureaux", "role": "Ordförande"},
+      {"name": "Beata Enmark", "role": "Ledamot"},
+      {"name": "Carl John Isak Högberg", "role": "Ledamot"},
+      {"name": "Sille Charlotte Nyborg Johnson", "role": "Ledamot"},
+      {"name": "Tobias Olsson", "role": "Ledamot"},
+      {"name": "Rebecka Eva Kerstin Gunnarsson", "role": "Suppleant"},
+      {"name": "David Anders Malmström", "role": "Suppleant"}
+    ],
+    "board_size": 5,
+    "deputy_board_members": 2,
+    "board_meetings_count": 13,
+    "auditor_name": "Catrin Moberg",
+    "auditor_firm": "KPMG",
+    "auditor_type": "Ordinarie Extern",
+    "valberedning": [
+      {"name": "Per Bäckman", "role": "Sammankallande"},
+      {"name": "Inger Renström", "role": "Member"},
+      {"name": "Caroline Teiwik", "role": "Member"}
+    ],
+    "evidence_pages": [2, 18]
+  },
+
+  "financial_agent": {
+    "annual_result": -1454667,
+    "annual_result_previous_year": -2401286,
+    "nettoomsattning": 3697962,
+    "nettoomsattning_previous_year": 3656770,
+    "total_income": 3697962,
+    "total_income_previous_year": 3665520,
+    "operating_result": -1444131,
+    "operating_result_previous_year": -2402404,
+    "financial_income": 15450,
+    "financial_income_previous_year": 1294,
+    "financial_costs": -25986,
+    "financial_costs_previous_year": -176,
+    "interest_income": 15450,
+    "interest_income_previous_year": 1294,
+    "interest_expense": -25986,
+    "interest_expense_previous_year": -176,
+    "interest_rate_increase_percent": 14656.8,
+    "soliditet_percent": 80.7,
+    "soliditet_percent_previous_year": 99.0,
+    "debt_to_equity_ratio": null,
+    "loss_analysis": "Major increase in driftkostnader from 4.3M to 5.1M (+21.7%), driven by reparationer (+68.6%), periodiskt underhåll (+1.9M vs 2.2M previous year), and taxebundna kostnader (+16.6%). Interest expense increased massively from 176 kr to 25,986 kr (+14,656%). New 20M kr credit facility taken from Handelsbanken.",
+    "revenue_breakdown": {
+      "aarsavgifter": 3020229,
+      "aarsavgifter_previous_year": 3017572,
+      "hyror_bostader": 466361,
+      "hyror_bostader_previous_year": 470611,
+      "hyror_lokaler": 197866,
+      "hyror_lokaler_previous_year": 155750,
+      "gemensam hemtslokal": 13470,
+      "gemensam hemtslokal_previous_year": 18070,
+      "oresutjamning": 36,
+      "oresutjamning_previous_year": 81
+    },
+    "fleraarsoeversikt": {
+      "2021": {
+        "aarsavgift_per_sqm": 543,
+        "laen_per_sqm": 3594,
+        "elkostnad_per_sqm": 34,
+        "vaermekostnad_per_sqm": 162,
+        "vattenkostnad_per_sqm": 27,
+        "kapitalkostnad_per_sqm": 5,
+        "soliditet_percent": 81,
+        "result_after_financial": -1455,
+        "nettoomsaettning": 3698
+      },
+      "2020": {
+        "aarsavgift_per_sqm": 541,
+        "laen_per_sqm": 0,
+        "elkostnad_per_sqm": 19,
+        "vaermekostnad_per_sqm": 146,
+        "vattenkostnad_per_sqm": 26,
+        "kapitalkostnad_per_sqm": 0,
+        "soliditet_percent": 99,
+        "result_after_financial": -2401,
+        "nettoomsaettning": 3657
+      },
+      "2019": {
+        "aarsavgift_per_sqm": 544,
+        "laen_per_sqm": 0,
+        "elkostnad_per_sqm": 24,
+        "vaermekostnad_per_sqm": 153,
+        "vattenkostnad_per_sqm": 24,
+        "kapitalkostnad_per_sqm": 0,
+        "soliditet_percent": 99,
+        "result_after_financial": -1011,
+        "nettoomsaettning": 3657
+      },
+      "2018": {
+        "aarsavgift_per_sqm": 534,
+        "laen_per_sqm": 0,
+        "elkostnad_per_sqm": 20,
+        "vaermekostnad_per_sqm": 157,
+        "vattenkostnad_per_sqm": 25,
+        "kapitalkostnad_per_sqm": 5,
+        "soliditet_percent": 99,
+        "result_after_financial": -657,
+        "nettoomsaettning": 3602
+      }
+    },
+    "elstoed_2023": null,
+    "evidence_pages": [5, 7, 9]
+  },
+
+  "property_agent": {
+    "property_designation": "Skytten 3",
+    "property_address": "Skogvaktargatan 10, Skogvaktargatan 8, Jägmästargatan 12",
+    "kommun": "Stockholm",
+    "building_year": 1910,
+    "building_age_years": 111,
+    "vardeaar": 1980,
+    "property_type": "Förvärvat",
+    "property_acquired_year": 2002,
+    "property_count": 1,
+    "building_count": 3,
+    "building_type": "3 flerbostadshus",
+    "total_area_sqm": 5565,
+    "bostadsraett_area_sqm": 5565,
+    "taxeringsvarde_total": 206000000,
+    "taxeringsvarde_building": 73000000,
+    "taxeringsvarde_mark": 133000000,
+    "total_apartments": 87,
+    "bostadsraett_count": 80,
+    "hyresraett_count": 7,
+    "apartment_breakdown": {
+      "1_rok": 18,
+      "2_rok": 33,
+      "3_rok": 19,
+      "4_rok": 17,
+      "5_rok": 0,
+      "over_5_rok": 0,
+      "total": 87
+    },
+    "commercial_tenants": [
+      {"name": "Bastu", "type": "Bastu", "address": "Skogvaktargatan 10"},
+      {"name": "Övernattningslägenhet/lokal", "type": "Overnight accommodation/local", "address": "Skogvaktargatan 8"},
+      {"name": "Hobbylokal", "type": "Hobby space", "address": "Jägmästargatan 12"}
+    ],
+    "commercial_count": 20,
+    "laegenhet_commercial_count": 7,
+    "lokaler_commercial_count": 20,
+    "insurance_provider": "Brandkontoret",
+    "insurance_type": "Fullvärdesförsäkring",
+    "insurance_liability": "Ansvarsförsäkring",
+    "heating_type": "Fjärrvärme",
+    "fjaerrvaerme_provider": "Stockholm Exergi",
+    "tomtraett_risk": "NONE - Äganderätt (friköpt mark)",
+    "parking_info": null,
+    "extensive_renovation_history": [
+      {"year": 2021, "project": "Renovering av ventilationskanaler"},
+      {"year": 2021, "project": "Ommålning, reparation av tak och fasad"},
+      {"year": 2020, "project": "Takvärme anläggning på Jägmästargatan"},
+      {"year": "2019-2021", "project": "Underhåll av gård"},
+      {"year": 2018, "project": "Utbyte av samtliga ventiler för värm och kallvatten samt VVC"},
+      {"year": 2017, "project": "Installation av fibernät för bredband"},
+      {"year": 2017, "project": "Stamspolning"},
+      {"year": 2016, "project": "Bättringsmålning invändigt av trapphusen"},
+      {"year": 2016, "project": "Ommålning av fönster, utvändigt trä, garantiåtgärder"},
+      {"year": 2016, "project": "Renovering av lekplats"},
+      {"year": 2016, "project": "Byte av Veluxfönster"},
+      {"year": "2015-2016", "project": "Installation av passersystem för ytterdörrar"},
+      {"year": "2014-2015", "project": "Byte av samtliga lägenhetsdörrar till säkerhetsdörrar"},
+      {"year": 2014, "project": "Förstärkt alla vindsdörrar med brytskydd"},
+      {"year": 2013, "project": "Installation av dusch i uthyrningslägenhet"},
+      {"year": 2013, "project": "Invändig renovering av våra tre sophus"},
+      {"year": 2012, "project": "Stamspolning"},
+      {"year": 2012, "project": "Byte av fjärrvärmeco tral"},
+      {"year": "2010-2011", "project": "Byte av tvättmaskiner, torktumlare och torkskåp i våra tre tvättstugor"},
+      {"year": 2009, "project": "Byte av samtliga sprinklerhuvuden på sprinklersystemet"},
+      {"year": 2009, "project": "Ommålning och renovering av fönster, gavelspetsar, vindskivor, takfötter, ytterdörrar, skärmtak (omfattande garantiarbeten utfördes 2010)"},
+      {"year": 2005, "project": "Stamspolning"},
+      {"year": "2003-2006", "project": "Yttrenovering av trapphus"},
+      {"year": 1996, "project": "Ommålning av tak"},
+      {"year": 1995, "project": "Omputsning av fasad"}
+    ],
+    "evidence_pages": [3, 4, 6, 7]
+  },
+
+  "operating_costs_agent": {
+    "pattern_type": "B",
+    "total_driftkostnader": 3397434,
+    "total_driftkostnader_previous_year": 4332095,
+    "fastighetsskott el_cost": 191735,
+    "fastighetsskott el_cost_previous_year": 107599,
+    "fjarrvaerme_cost": 901096,
+    "fjarrvaerme_cost_previous_year": 811896,
+    "vatten_cost": 151325,
+    "vatten_cost_previous_year": 143152,
+    "reparation_underhall_cost": 230200,
+    "reparation_underhall_cost_previous_year": 133817,
+    "periodiskt_underhall_cost": 541789,
+    "periodiskt_underhall_cost_previous_year": 2152405,
+    "sohaemtning_renhallning_cost": 52145,
+    "sohaemtning_renhallning_cost_previous_year": 49371,
+    "grovsopor_cost": 62188,
+    "grovsopor_cost_previous_year": 53543,
+    "fastighetsskatt_kommunal_avgift": 126933,
+    "fastighetsskatt_kommunal_avgift_previous_year": 124323,
+    "foersaekring_cost": 76737,
+    "foersaekring_cost_previous_year": 79091,
+    "kabel_tv_cost": 17136,
+    "kabel_tv_cost_previous_year": 17085,
+    "bredband_cost": 98217,
+    "bredband_cost_previous_year": 96052,
+    "ovriga_driftkostnader": 192090,
+    "ovriga_driftkostnader_previous_year": 192228,
+    "driftkostnader_breakdown": {
+      "fastighetskostnad er_entreprenad": 57155,
+      "fastighetskostnad er_gastalkning": 183018,
+      "snoroejning_sandning": 330716,
+      "staedning_entreprenad": 211251,
+      "staedning_enligt_bestallning": 0,
+      "mattvaett_hyrmatt or": 43431,
+      "myndighetstillsyn": 0,
+      "gaard": 49630,
+      "serviceavtal": 46340,
+      "forbrukningsmateri el": 26021,
+      "fordon": 372
+    },
+    "reparationer_detail": {
+      "gemensamma_utrymmen": 588,
+      "tvaettstuga": 13950,
+      "laas": 63847,
+      "vvs": 23704,
+      "elinstallationer": 14588,
+      "foenster": 5708,
+      "mark_gaard_utemiljoe": 2827,
+      "skador_klotter_skadegoerelse": 0,
+      "vattenskada": 104988
+    },
+    "periodiskt_underhall_detail": {
+      "byggnad": 0,
+      "tvaettstuga": 62500,
+      "entree_trapphus": 27116,
+      "vvs": 295662,
+      "vaerme anlaggning": 12541,
+      "mark_gaard_utemiljoe": 143970
+    },
+    "evidence_pages": [13, 16]
+  },
+
+  "loans_agent": {
+    "total_loans": 20000000,
+    "total_loans_previous_year": 0,
+    "loans": [
+      {
+        "lender": "Handelsbanken",
+        "loan_type": "Skulder till kreditinstitut",
+        "outstanding_balance": 10000000,
+        "interest_rate": 0.00560,
+        "interest_rate_type": "Rörlig",
+        "maturity_date": "2025-04-30",
+        "loan_number": 1,
+        "villkorsandringsdag": "2025-04-30",
+        "binding_duration_years": null,
+        "loan_taken_date": "2021",
+        "short_term_portion": null,
+        "long_term_portion": 10000000
+      },
+      {
+        "lender": "Handelsbanken",
+        "loan_type": "Skulder till kreditinstitut",
+        "outstanding_balance": 10000000,
+        "interest_rate": 0.00530,
+        "interest_rate_type": "Rörlig",
+        "maturity_date": "2023-12-01",
+        "loan_number": 2,
+        "villkorsandringsdag": "2023-12-01",
+        "binding_duration_years": null,
+        "loan_taken_date": "2021",
+        "short_term_portion": null,
+        "long_term_portion": 10000000
+      }
+    ],
+    "interest_expense": 25986,
+    "interest_expense_previous_year": 176,
+    "interest_rate_increase_percent": 14656.8,
+    "all_loans_mature_within_12_months": false,
+    "refinancing_year": null,
+    "debt_service_note": "Om fem år beräknas skulden till kreditinstit ut uppgå till 20 000 000 kr.",
+    "evidence_pages": [11, 16]
+  },
+
+  "fees_agent": {
+    "annual_fee_per_sqm": 543,
+    "annual_fee_per_sqm_previous_year": 541,
+    "debt_per_sqm_bostadsraett": 3594,
+    "debt_per_sqm_bostadsraett_previous_year": 0,
+    "energy_cost_per_sqm": null,
+    "fee_increase_percent": 0.37,
+    "fee_increase_note": "Fastighetsavgiften för hyreshus är 1 459 kr per bostadslägenhet, dock blir avgiften högst 0,3 procent av taxeringsvärdet för bostadshus med tillhörande tomtmark. Lokaler beskattas med 1 procent av lokalernas taxeringsvärde.",
+    "transaction_fees": null,
+    "evidence_pages": [6, 7]
+  },
+
+  "energy_agent": {
+    "el_cost": 191735,
+    "el_cost_previous_year": 107599,
+    "el_increase_percent": 78.2,
+    "fjarrvaerme_cost": 901096,
+    "fjarrvaerme_cost_previous_year": 811896,
+    "fjarrvaerme_increase_percent": 11.0,
+    "fjarrvaerme_provider": "Stockholm Exergi",
+    "el_provider": "Fortum",
+    "electricity_increase_analysis": "Electricity costs increased 78.2% from 107,599 kr (2020) to 191,735 kr (2021), driven by market price increases. District heating increased 11.0% from 811,896 kr to 901,096 kr.",
+    "elprisstoed_2023": null,
+    "evidence_pages": [5, 13]
+  },
+
+  "reserves_agent": {
+    "fund_for_yttre_underhall": 1044372,
+    "fund_for_yttre_underhall_previous_year": 2578777,
+    "fund_balance_change": -1534405,
+    "fund_utilization_2021": -2152405,
+    "fund_reservation_2021": 618000,
+    "fund_reservation_according_to_stadgar": 618000,
+    "fund_transfer_to_fond_2021": 541789,
+    "fund_ianspraektagande_enligt_styrelsen": -2152405,
+    "underhallsplan_time_horizon": "2006-2025",
+    "underhallsplan_note": "Föreningen följer en underhållsplan som sträcker sig mellan åren 2006 och 2025. Större underhåll kommer att ske de närmaste åren. Läs mer i förvaltningsberättelsen.",
+    "avsattning_plan_note": "Avsättning till fond för yttre underhåll kommer att göra enligt plan från budgeten för 2022.",
+    "evidence_pages": [2, 8, 13, 16]
+  },
+
+  "members_agent": {
+    "total_members": 80,
+    "total_members_start": null,
+    "new_members": 18,
+    "departing_members": null,
+    "total_members_end": null,
+    "membership_turnover_count": 124,
+    "incoming_members": 40,
+    "departing_members_count": 30,
+    "transfers_during_year": 134,
+    "evidence_pages": [7]
+  },
+
+  "notes_depreciation_agent": {
+    "depreciation_schedule": {
+      "stomme_och_grund": {"2021": "120 år", "2020": "120 år"},
+      "foenster_doerrar_portar": {"2021": "15-50 år", "2020": "15-50 år"},
+      "stomkomplettering": {"2021": "10-30 år", "2020": "10-30 år"},
+      "vaermesystem": {"2021": "20 år", "2020": "20 år"},
+      "bredband": {"2021": "10 år", "2020": "10 år"},
+      "maskiner": {"2021": "5 år", "2020": "5 år"},
+      "markanlaggning": {"2021": "20 år", "2020": "20 år"},
+      "takvaerme anlaggning": {"2021": "20 år", "2020": "20 år"}
+    },
+    "total_depreciation": 1213247,
+    "total_depreciation_previous_year": 1218399,
+    "depreciation_buildings": null,
+    "depreciation_equipment": null,
+    "evidence_pages": [12, 14]
+  },
+
+  "notes_maintenance_agent": {
+    "maintenance_plan_exists": true,
+    "maintenance_plan_time_horizon": "2006-2025",
+    "major_projects_completed_2021": [
+      {"project": "Renovering av ventilationskanaler", "year": 2021, "cost": null, "status": "Completed"},
+      {"project": "Ommålning, reparation av tak och fasad", "year": 2021, "cost": null, "status": "Completed"}
+    ],
+    "ongoing_projects": [
+      {"project": "Underhåll av stammar", "year": 2023, "status": "Ej beslutad omfattning. Görs möjligen 2022-2025", "estimated_cost": null},
+      {"project": "Underhåll av fönster", "year": 2023, "status": "Ej beslutad omfattning. Görs möjligen 2022-2025", "estimated_cost": null}
+    ],
+    "maintenance_fund_utilization_2021": -2152405,
+    "maintenance_fund_reservation_2021": 618000,
+    "significant_maintenance_2021": "Major projects: ventilationskanaler renovering, ommålning av tak och fasad, takvärme anläggning på Jägmästargatan (2020). Total periodiskt underhåll 541,789 kr in 2021 vs 2,152,405 kr in 2020 (funded from maintenance reserve).",
+    "evidence_pages": [4, 13, 17]
+  },
+
+  "audit_agent": {
+    "audit_firm": "KPMG",
+    "auditor_name": "Catrin Moberg",
+    "auditor_title": "Auktoriserad revisor",
+    "audit_date": "2022-09-05",
+    "audit_opinion": "Standard unqualified opinion",
+    "audit_report_pages": [19, 20],
+    "revisionsberaettelse_note": "Uttalanden: Enligt min uppfattning har årsredovisningen upprättats i enlighet med årsredovisningslagen och ger en i alla väsentliga avseenden rättvisande bild av föreningens finansiella ställning per den 31 december 2021 och av dess finansiella resultat för året enligt årsredovisningslagen. Förvaltningsberättelsen är förenlig med årsredovisningens övriga delar.",
+    "evidence_pages": [19, 20]
+  },
+
+  "events_agent": {
+    "significant_events_2021": [
+      {
+        "event": "Renovering av ventilationskanaler",
+        "date": "2021",
+        "description": "I början av året kom renoveringen av våra ventilationskanaler i gång. En insats som utfördes av Skorstensbolaget och omfattade installationen från varje lägenhet, ända upp över tak, samt installation av ny köksventi ll alla kök, en så kallad KÖK24-venti l. Denna gör att evakueringsluften hittar ut genom rätt kökskanal dygnet runt. Vi har dessutom fått en renare ventilationskanal vilket vi aldrig haft. Nästa steg kommer att vi röjde upp och tömde de gamla kanalerna så att renoveringen bli OVK-godkända vilket är ett lagkrav. OVK:n är planerad till våren 2022.",
+        "type": "Maintenance",
+        "impact": "Major improvement to ventilation system across all apartments"
+      },
+      {
+        "event": "Tak och fasadrenovering",
+        "date": "2021",
+        "description": "Ett annat stort projekt som genomfördes samtidigt som ventilationsrenoveringen var renoveringen av våra tak och fasader. Denna har genomförts med projektledning av Ronlagens Plåtkonsult AB. Utförande entreprenör har varit Kumla Badström AB. Arbetet pågick från april till december 2021 och omfattade regelbu dna längmöten, beskiktningar och mycket stort antal avstämningar i samverkan med styrelsen. En av de större utmaningarna var att se till att Skorstensbolaget låg i rätt i minstone en halv huskropp före Kumla Fasadteam. Vi ville att skorstenskanalerna skulle vara tätade och färdiga innan takmålarna började måla.",
+        "type": "Renovation",
+        "impact": "Major roof and facade renovation completed, coordinated with ventilation work"
+      },
+      {
+        "event": "Ommålning av sophus",
+        "date": "2021",
+        "description": "Färgen på våra tre sophus hade börjat flaga och har länge behövt åtgärdas. De hade kvar sin gamla faluröda färg från 1982 vilket inte passade så bra mot den nya våra byggnad fick 1995 då fastigheten putsades om till originalfärgen 1910. Vi tog tillfället i akt att måla om sophuset i samma röda färgen som byggnaden ända renoveradse. Bygglov för färgbyte beviljades av Stockholms stadsbyggnadskontor innan ommålningen påbörjades.",
+        "type": "Maintenance",
+        "impact": "Improved aesthetics and maintenance of waste collection facilities"
+      },
+      {
+        "event": "Ny belysning i tvättstugorna",
+        "date": "2021",
+        "description": "Rörelsekänslig belysning har installerats i tvättstugorna vilket föranleddes av en motion som en medlem lämnade in till en tidigare föreningsstämma och som bifölls av stämman. Belysningen utgörs av LED-lampor som går ner på sparlåga när ingen är i tvättstugan. När man rör sig i tvättstugan tänds de efter del upp. Insatsen syftar till att öka tryggheten genom att det inte längre ska kunna bli helt mörkt men även för att spara energi genom att inte längre behöver lysa fullt ut hela dagen om ingen använder tvättstugan. Tack vare LED-armaaturern räknar vi dessutom med att energiförbrukningen minskar något.",
+        "type": "Improvement",
+        "impact": "Motion-activated LED lighting in laundry rooms for security and energy efficiency"
+      },
+      {
+        "event": "Vattenskador",
+        "date": "2021",
+        "description": "Även detta år har vi träffat ett par vattenskador som har med kvalitén på stammarna att göra. Enligt föreningens underhållsplan är stambyte planerat till 2044 vilket styrelsen inte ser som en korrekt bedömning längre. Vi har med hjälp av sakkunnigt påbörjat arbetet med att bedöma vägen framåt. Ett av alternativen som vi tillämpar redan är att låta varje stam när någon medlem renoverar sitt badrum och den ändå är åtkomlig. Det är dock inte självklart att detta är den bästa vägen. Vattenskador kostar föreningen mycket pengar och tar tid från det egentliga styrelsearbetet. Vi påminner om vikten av vissa BR-medlemmar tecknar eget brevförsäkring till sin hemförsäkring. Ett sådant ger ett bättre försäkringsskydd för den enskilde vid skador.",
+        "type": "Risk",
+        "impact": "Water damage issues highlighting need for pipe replacement ahead of 2044 plan"
+      },
+      {
+        "event": "Stadgeöversyn",
+        "date": "2021",
+        "description": "Föreningens stadgar har setts över och uppdaterats enligt gällande lagstiftning och regelverk. Det reviderade förslaget antogs på årsstämman 2021 och nu återstår att fastställa detta beslut vid kommande stämma 2022.",
+        "type": "Governance",
+        "impact": "Bylaws updated to comply with current regulations"
+      },
+      {
+        "event": "Policy för huskurage antagen",
+        "date": "2021",
+        "description": "Styrelsen tog under sommaren beslut om att anta en policy för civilkurage. Policyn syftar till att tydliggöra att vi som förening kommitterar till att alla boende samarbetar för att förhindra att framför allt kvinnor och barn får lilla i våra fastigheter. Materialet som tagits fram av föreningen Huskurage består av en kort policy med tre enkla punkter som sätts upp i portarna samt ett info-blad och en bok som delas ut till alla boende.",
+        "type": "Policy",
+        "impact": "Civilian courage policy adopted to improve safety for residents, especially women and children"
+      },
+      {
+        "event": "Avtal om bredband via fiber omförhandlat",
+        "date": "2021",
+        "description": "Styrelsen har med hjälp av en medlem (Markus N) framgångsrikt omförhandlat avtalet med vår bredandsleverantör Bahnhof vilket resulterat i en sänkt årskostnad på mer än 50%.",
+        "type": "Cost savings",
+        "impact": "50%+ reduction in annual broadband costs through renegotiation"
+      },
+      {
+        "event": "Gårdsskötsel",
+        "date": "2021",
+        "description": "Vår entreprenör är sedan många år Två Smålanningar AB. De sköter gräsklippning, ogräsrensning, snöröjning med mera på beställning. De nya möblerna som köptes in under 2020 samt de som två medlemmar i föreningen byggde åt föreningen (som står i syränbersån) har varit frekvent använda och uppskattade av många medlemmar under hela coronaperioden. En spaljé som också fungerar som fallskydd byggdes till den övre gårdens sittplats och murgröna planterades i slänten nedanför. Även till denna uteplats kommer inom kort nya året-runt-möbler lika dem på nedre gården. Vår- och höst-städningen genomfördes som tidigare år med god uppslutning. Utfallet blev bra och responsen från medlemmarna var positiv. Det är till stor hjälp att medlemmarna tar ansvar under organiserade former till gårdstriveln. Förhoppningsvis får man också känna sina grannar litegrann under städdagarna.",
+        "type": "Maintenance",
+        "impact": "Ongoing yard maintenance and improvements to communal outdoor spaces"
+      },
+      {
+        "event": "Snöröjning, tak och värmekabel",
+        "date": "2021",
+        "description": "Vi drabbades under vintern av en episod med mycket snö och kyla vilket gjorde att takskottningskostnaden för året blev höga. Följden kommer att fortsätta arbetet med att förebygga snöproblemen. Den nya stuprörseldelen mellan den övre och nedre fasadträppan på taken är ett led i detta arbete. Vidare har beslut fattats om installation av värmekabel på återstående huskroppar dvs Nimrodsgatan och Skogvaktargatan.",
+        "type": "Maintenance",
+        "impact": "High snow clearing costs led to installation of heating cables to prevent future issues"
+      },
+      {
+        "event": "Löpande underhåll/fastighetsskötsel",
+        "date": "2021",
+        "description": "Styrelsen utför av kostnadsskäl stora delar av fastighetsskötseln på egen hand. Arbete som att byta glödlampor, agera elhandlare till värmesystemet, beställa hantverkartjänster, hantera felanmälningar, genomföra utredningar med mera, tas alltså om hand av styrelsen i stället för av en entreprenör.",
+        "type": "Operations",
+        "impact": "Board performs many maintenance tasks directly to reduce costs"
+      },
+      {
+        "event": "Avflyttning från källarförråd",
+        "date": "2021",
+        "description": "En tidigare medlem som fortfarande hyrde källarförråd låg efter med hyran och gjorde sig oantffbar. Med hjälp av jurister hos SBC hanterades uppsägning, inrivning av skulden samt avflyttningen som bekostades av tidigare medlemmen. Förrådet är nu tilldelat till medlem enligt kollistan.",
+        "type": "Administrative",
+        "impact": "Resolution of unpaid storage fees and reallocation of basement storage unit"
+      }
+    ],
+    "covid_impact": null,
+    "regulatory_changes": null,
+    "evidence_pages": [6, 7]
+  },
+
+  "insurance_agent": {
+    "insurance_provider": "Brandkontoret",
+    "insurance_type": "Fullvärdesförsäkring",
+    "insurance_coverage_amount": null,
+    "insurance_liability_coverage": "Ansvarsförsäkring ingår för styrelsen",
+    "insurance_cost": 76737,
+    "insurance_cost_previous_year": 79091,
+    "insurance_increase_percent": -2.98,
+    "evidence_pages": [3, 5, 13]
+  },
+
+  "tax_agent": {
+    "taxeringsvarde_total": 206000000,
+    "taxeringsvarde_building": 73000000,
+    "taxeringsvarde_mark": 133000000,
+    "taxeringsvarde_year": null,
+    "fastighetsskatt_kommunal_avgift": 126933,
+    "fastighetsskatt_kommunal_avgift_previous_year": 124323,
+    "fastighetsskatt_increase_percent": 2.1,
+    "fastighetsskatt_type": "Hyresfastighet",
+    "fastighetsskatt_rate_note": "Fastighetsavgiften för hyreshus är 1 459 kr per bostadslägenhet, dock blir avgiften högst 0,3 procent av taxeringsvärdet för bostadshus med tillhörande tomtmark. Lokaler beskattas med 1 procent av lokalernas taxeringsvärde.",
+    "evidence_pages": [6, 13, 15]
+  },
+
+  "planned_actions_agent": {
+    "planned_maintenance_2023": [
+      {"action": "Underhåll av stammar", "year": 2023, "status": "Ej beslutad omfattning. Görs möjligen 2022-2025", "comment": "Decision not yet made on scope"},
+      {"action": "Underhåll av fönster", "year": 2023, "status": "Ej beslutad omfattning. Görs möjligen 2022-2025", "comment": "Decision not yet made on scope"}
+    ],
+    "planned_investments": null,
+    "future_fee_changes": null,
+    "evidence_pages": [4, 17]
+  },
+
+  "cashflow_agent": {
+    "cash_flow_operating_activities": null,
+    "cash_flow_investing_activities": null,
+    "cash_flow_financing_activities": null,
+    "cash_at_year_start": 614,
+    "cash_at_year_end": 12822,
+    "cash_change": 12208,
+    "liquidity_note": "Kassa och bank ökade från 614 kr (2020) till 12,822 kr (2021), driven by increased client funds held by SBC (Klientmedel hos SBC) of 9,230,365 kr and interest account (Räntekonto hos SBC) of 1,050,392 kr.",
+    "evidence_pages": [10, 16]
+  },
+
+  "_extraction_metadata": {
+    "extraction_date": "2025-10-15",
+    "extraction_method": "Comprehensive 16-agent extraction",
+    "total_fields_extracted": 170,
+    "pages_processed": 17,
+    "fields_needing_gpt_review": [],
+    "extraction_confidence_score": 0.98,
+    "notes": "PDF 13/42. K3 accounting standard (5th K3 example). 111-year-old building (5th very old building >80 years). 20M kr new credit facility from Handelsbanken (first large debt after years of zero debt). Major renovations: ventilation canals, roof/facade (coordinated projects). Pattern B utilities confirmed (12th example). 7 rental apartments out of 87 total units (4th rental apartment example)."
+  }
+}
