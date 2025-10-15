@@ -357,6 +357,57 @@ These tools give Claude **architectural awareness** and **documentation access**
 - Day 6: Based on validation results
 - Day 7: Based on chosen path
 
+---
+
+## 🚀 **PRE-AGENT LAYER OPTIMIZATION** (Oct 15, 2025) - **TIER 1 IN PROGRESS**
+
+### **Mission**: Optimize Docling + Routing to reduce agent burden and cost
+
+**Current Performance** (Branch B):
+- Docling detection: 79% (misses 3 of 14 notes!)
+- Routing: 94.3% (excellent but can improve)
+- Cost: $0.14/PDF
+- Processing: 165-200s/PDF
+
+**Target** (After Tier 1):
+- Docling detection: 90%+ (recover 10-15% of missed sections)
+- Routing: 97%+
+- Cost: $0.10/PDF (-29%)
+- Processing: 120-150s/PDF (-30%)
+
+### **Tier 1 Optimizations** (5 hours, HIGHEST ROI) 🔄 **IN PROGRESS**
+
+1. **Enhanced Docling Configuration** (1 hour) - ✅ IN PROGRESS
+   - Lower OCR confidence threshold (0.7 → 0.5 for Swedish)
+   - Enable table structure detection (accurate mode)
+   - Expected: +11% section detection
+
+2. **Structure Post-Processing** (2 hours) - ⏳ PENDING
+   - Consolidate note formats (NOT/Not/Noter → canonical)
+   - Fix hierarchy (Noter parent-child relationships)
+   - Interpolate missing sections using BRF conventions
+   - Expected: Recover 10-15% of missed sections
+
+3. **Content Density Analysis** (2 hours) - ⏳ PENDING
+   - Analyze keyword density per page
+   - Allocate pages based on relevance score
+   - Expected: 30-40% token reduction (12 → 8 pages avg)
+
+### **Expected Impact** (Tier 1 Complete):
+
+| Metric | Before | After Tier 1 | Improvement |
+|--------|--------|--------------|-------------|
+| Section Detection | 79% | **90%** | +11% |
+| Cost per PDF | $0.14 | **$0.10** | -29% |
+| Processing Time | 165-200s | **120-150s** | -30% |
+| Quality | 86.7% | **90%+** | +3-4% |
+
+**ROI**: At 27K PDFs, save $1,134 (vs $3,780 at $0.14/doc)
+
+**Documentation**: `ULTRATHINKING_PRE_AGENT_OPTIMIZATION.md` (complete analysis with Tier 2+3 roadmap)
+
+---
+
 ### **🔬 Key Technology: Docling + Granite**
 
 **Docling** (IBM open-source):

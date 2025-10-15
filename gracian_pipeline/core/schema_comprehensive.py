@@ -89,6 +89,8 @@ COMPREHENSIVE_TYPES: Dict[str, Dict[str, str]] = {
         "tenant_changes": "str",  # Changes in commercial tenants
         "loan_restructuring": "str",  # Loan modifications
         "rental_activity": "str",  # Andrahandsuthyrningar count
+        # NEW from brf_48574: Technical management changes
+        "technical_management_change": "dict",  # {"new_provider": str, "start_date": str, "previous_provider": str}
     },
 
     "audit_agent": {
@@ -109,6 +111,10 @@ COMPREHENSIVE_TYPES: Dict[str, Dict[str, str]] = {
         "loan_term": "str",  # E.g., "3 år"
         "amortization_schedule": "str",  # E.g., "amorteringsfria"
         "loan_changes": "str",  # Villkorsändringar
+        # NEW from brf_48574: Risk indicators
+        "all_loans_mature_within_12_months": "bool",  # True if ALL loans mature < 1 year (refinancing risk)
+        "refinancing_year": "int",  # Year when all loans mature (if applicable)
+        "credit_facility_previous_year": "num",  # Previous year's credit facility for comparison
     },
 
     "reserves_agent": {
@@ -125,6 +131,10 @@ COMPREHENSIVE_TYPES: Dict[str, Dict[str, str]] = {
         **BASE_TYPES["energy_agent"],
         # Energy data typically in separate documents
         "energy_source": "str",  # If mentioned in årsredovisning
+        # NEW from brf_48574: Energy crisis impact tracking
+        "electricity_increase_percent_2021_2022": "float",  # % increase electricity cost
+        "heating_increase_percent_2021_2022": "float",  # % increase heating cost
+        "water_increase_percent_2021_2022": "float",  # % increase water cost
     },
 
     "fees_agent": {
@@ -134,6 +144,20 @@ COMPREHENSIVE_TYPES: Dict[str, Dict[str, str]] = {
         "fee_calculation_basis": "str",  # E.g., "självkostnadsprincipen"
         "fee_per_sqm": "num",  # If different from monthly_fee
         "fee_unit": "str",  # E.g., "SEK/m² per year"
+    },
+
+    "insurance_agent": {
+        # Base fields (keep as-is)
+        **BASE_TYPES.get("insurance_agent", {}),
+        # NEW from brf_48574: Insurance cost tracking
+        "insurance_increase_percent": "float",  # Year-over-year % increase
+    },
+
+    "tax_agent": {
+        # Base fields (keep as-is)
+        **BASE_TYPES.get("tax_agent", {}),
+        # NEW from brf_48574: Tax assessment tracking
+        "tax_assessment_increase_percent": "float",  # Year-over-year % increase in taxeringsvärde
     },
 
     "cashflow_agent": {
