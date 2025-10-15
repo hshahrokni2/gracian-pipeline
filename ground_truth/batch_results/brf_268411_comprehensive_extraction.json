@@ -1,0 +1,372 @@
+{
+  "metadata_agent": {
+    "brf_name": "Brf Drevkarlen",
+    "org_number": "769605-0116",
+    "fiscal_year": 2023,
+    "fiscal_year_start": "2023-01-01",
+    "fiscal_year_end": "2023-12-31",
+    "report_date": "2024-04-19",
+    "accounting_standard": "K2",
+    "accounting_framework": "BFNAR 2016:10 (årsredovisning i mindre företag)",
+    "pages": 15,
+    "document_type": "Årsredovisning",
+    "formation_year": 1999,
+    "property_manager": "Savetime Ekonomikonsult AB",
+    "property_manager_role": "Löpande bokföring och fakturahantering",
+    "evidence_pages": [1, 2, 11]
+  },
+
+  "governance_agent": {
+    "board_members": [
+      {"name": "Ivar Virgin", "role": "Ordförande", "period": "2023-07-03 to 2023-12-31"},
+      {"name": "Andreas Hafström", "role": "Sekreterare", "period": "2023-07-03 to 2023-12-31"},
+      {"name": "Ingrid Larsen", "role": "Kassör", "period": "2023-01-01 to 2023-12-31"},
+      {"name": "Magnus Stenmark", "role": "Ledamot", "period": "2023-07-03 to 2023-12-31"},
+      {"name": "Daniel Wilk", "role": "Ledamot", "period": "2023-07-03 to 2023-12-31"},
+      {"name": "Ann-Sofi Sjöberg", "role": "Ordförande", "period": "2023-05-10 to 2023-07-03"},
+      {"name": "Ivar Virgin", "role": "Sekreterare", "period": "2023-05-10 to 2023-07-03"},
+      {"name": "Oscar Wetterling", "role": "Ledamot", "period": "2023-05-10 to 2023-07-03"},
+      {"name": "Magnus Stenmark", "role": "Ordförande", "period": "2023-01-01 to 2023-05-10"},
+      {"name": "Linnea Hanell", "role": "Sekreterare", "period": "2023-01-01 to 2023-05-10"},
+      {"name": "Anders Kjellström", "role": "Ledamot", "period": "2023-01-01 to 2023-05-10"}
+    ],
+    "auditor_name": "Anna Stenberg",
+    "auditor_company": "Mazars",
+    "auditor_type": "Auktoriserad revisor",
+    "board_meetings_count": 14,
+    "meeting_protocol_location": "Anslagstavla vid tvättstugan",
+    "board_changes_2023": "3 different boards during 2023 (ordinarie årsstämma + 2 extrastämma)",
+    "number_of_members": 37,
+    "evidence_pages": [2, 16]
+  },
+
+  "financial_agent": {
+    "revenue": 1591572,
+    "other_income": 59347,
+    "total_income": 1650919,
+    "operating_costs": 1678899,
+    "operating_result": -27980,
+    "financial_income": 28697,
+    "financial_expenses": 59674,
+    "net_financial": -30977,
+    "result_after_financial": -58957,
+    "net_result": -58957,
+    "assets": 32063766,
+    "equity": 29365914,
+    "liabilities": 2697852,
+    "long_term_liabilities": 1524000,
+    "short_term_liabilities": 1173852,
+    "soliditet_percent": 92,
+    "revenue_breakdown": {
+      "hyresintakter_lokaler": 573905,
+      "hyresintakter_bostader": 89464,
+      "arsavgifter": 928203,
+      "ovriga_intakter": 59347
+    },
+    "income_breakdown": {
+      "commercial_rental_income": 573905,
+      "residential_rental_income": 89464,
+      "membership_fees": 928203,
+      "other_income": 59347
+    },
+    "depreciation": 250806,
+    "personnel_costs": 66651,
+    "cash": 1871583,
+    "accounts_receivable": 255358,
+    "deferred_income": 85561,
+    "evidence_pages": [6, 7, 8, 9]
+  },
+
+  "property_agent": {
+    "property_name": "Drevkarlen 8",
+    "municipality": "Stockholms Kommun",
+    "addresses": ["Skogvaktargatan 1", "Skogvaktargatan 3", "Skogvaktargatan 5", "Skogvaktargatan 7", "Artemisgatan 10"],
+    "acquisition_date": "2001-05-22",
+    "possession_date": "2001-10-11",
+    "total_apartments": 24,
+    "bostadsratt_count": 23,
+    "hyresratt_count": 1,
+    "apartment_breakdown": {
+      "4_rok": 18,
+      "3_rok": 6,
+      "total": 24
+    },
+    "bostadsyta": 2211,
+    "lokalyta": 349,
+    "total_area": 2560,
+    "tomtarea": 2333,
+    "commercial_spaces": 2,
+    "commercial_tenants": [
+      {
+        "name": "Tandea AB",
+        "type": "Tandläkarklinik",
+        "lease_term": "10 år till 2028-01-31",
+        "notice_period": "9 månader"
+      },
+      {
+        "name": "Kinesisk Hälsovård",
+        "type": "Hälsovård",
+        "lease_term": "3 år till 2026-08-01",
+        "notice_period": "9 månader",
+        "renewal": "3 år i taget"
+      }
+    ],
+    "building_type": "Flerbostadshus i tre plan + souterrängplan",
+    "common_areas": ["Gemensamhetsutrymmen för möten och trivselaktiviteter", "Tvättstuga", "Undercentral", "El-central", "Förråd", "Barnvagnsrum", "Cykelrum med kärl för grovsopor"],
+    "tax_assessment": {
+      "total": 88158000,
+      "buildings": 27158000,
+      "land": 61000000,
+      "year": 2023
+    },
+    "insurance_provider": "Trygg-Hansa",
+    "insurance_details": "Fullvärdesförsäkrad",
+    "parking_info": "Not explicitly mentioned",
+    "heating_system": "Undercentral för värmesystem",
+    "evidence_pages": [2, 3, 4, 5, 13]
+  },
+
+  "operating_costs_agent": {
+    "uppvarmning": 304534,
+    "el": 58392,
+    "vatten": 82526,
+    "gas": 6285,
+    "sophamtning": 29998,
+    "stadning": 50880,
+    "kabel_tv_bredband": 43614,
+    "hyra_mattor": 12187,
+    "snorojning": 0,
+    "fastighetsforsakring": 72197,
+    "forbrukningsmaterial": 10623,
+    "total_driftkostnader": 671236,
+    "reparationer_och_underhall": 106267,
+    "planerat_underhall": 416927,
+    "total_operating_costs": 1361442,
+    "pattern_type": "Pattern B (separate uppvärmning + vatten + el + gas)",
+    "note_number": "Not 3",
+    "evidence_pages": [12]
+  },
+
+  "notes_maintenance_agent": {
+    "maintenance_fund": "Fond för yttre underhåll",
+    "annual_allocation": 463100,
+    "fund_balance": 1801782,
+    "maintenance_plan_years": 20,
+    "maintenance_plan_status": "Aktuell underhållsplan för 20 år framåt, budget i balans",
+    "maintenance_2023": [
+      {"action": "Partiellt stambyte Skogvaktargatan 3 och 7", "cost": null, "status": "Genomfört"},
+      {"action": "Översyn och kartläggning elsystem", "cost": null, "status": "Genomfört"},
+      {"action": "Nya trädgårdskomposter", "cost": null, "status": "Genomfört"},
+      {"action": "Ny slangvinda cykelrum", "cost": null, "status": "Genomfört"},
+      {"action": "Nya dörrstängare", "cost": null, "status": "Genomfört"},
+      {"action": "Ny elgräsklippare", "cost": null, "status": "Genomfört"}
+    ],
+    "planned_2024": [
+      {"action": "Stambyte, en enhet", "cost": 60000},
+      {"action": "Dagvattenrör, lagning", "cost": 25000},
+      {"action": "Belysningstimer tvättstuga", "cost": 5000},
+      {"action": "Rörisolering VVC", "cost": 12000},
+      {"action": "Upprustning gemensamhetslokal", "cost": 60000},
+      {"action": "Nya möbler gemensamhetslokal", "cost": 30000},
+      {"action": "Hyllor verkstad", "cost": 15000}
+    ],
+    "planned_2025": [
+      {"action": "Stambyte, tre enheter", "cost": 180000},
+      {"action": "Renovering av balkonger", "cost": 1200000},
+      {"action": "Nytt skärmtak Artemisgatan 10", "cost": 60000},
+      {"action": "Ny trädgårdshäck runt uteplatsen", "cost": 15000},
+      {"action": "Renovering hyreslägenhet", "cost": 180000},
+      {"action": "Kanalrensning", "cost": 50000},
+      {"action": "Upprustning vegetationsytor", "cost": 35000},
+      {"action": "Brunnar dagvatten", "cost": 30000},
+      {"action": "OVK lägenheter", "cost": 15000}
+    ],
+    "major_renovations_2009_2023": [
+      "VA-stammar löpande bytta (60% bytt till 2022)",
+      "Omläggning tak (2014)",
+      "Fönsterrenovering samtliga fönster (2017)",
+      "Fibernät indraget (2014)",
+      "FTX-aggregat med återvinning (2018, 2019)",
+      "Tilluftsventiler och frånluft injusterade (2019)",
+      "Byte låssystem iLOQ (2021-2022)",
+      "Sanering asbest källarstråk (2020)"
+    ],
+    "evidence_pages": [3, 4]
+  },
+
+  "loans_agent": {
+    "loans": [
+      {
+        "lender": "SEB",
+        "loan_number": "31437695",
+        "outstanding_balance": 1000000,
+        "interest_rate": 0.029,
+        "maturity_date": "2026-12-28",
+        "amortization_schedule": "Amorteringsfria",
+        "binding_type": "Bundet"
+      },
+      {
+        "lender": "SEB",
+        "loan_number": "34137498",
+        "outstanding_balance": 500000,
+        "interest_rate": 0.029,
+        "maturity_date": "2026-12-28",
+        "amortization_schedule": "Amorteringsfria",
+        "binding_type": "Bundet"
+      },
+      {
+        "lender": "SEB",
+        "loan_number": "34137536",
+        "outstanding_balance": 500000,
+        "interest_rate": 0.0584,
+        "maturity_date": "2024-03-28",
+        "amortization_schedule": "Amorteringsfria",
+        "binding_type": "Bundet"
+      }
+    ],
+    "total_loans": 2000000,
+    "outstanding_loans": 2000000,
+    "long_term_loans": 1500000,
+    "short_term_loans": 500000,
+    "average_interest_rate": 0.0367,
+    "amortization_2023": 0,
+    "loan_binding_incident": "SEB misstag februari 2022 - bindning misslyckades, bands december 2022 till högre ränta. SEB kompensation utbetald.",
+    "collateral": "Fastighetsinteckningar 7,140,000 kr",
+    "all_loans_mature_within_12_months": false,
+    "evidence_pages": [3, 8, 15]
+  },
+
+  "fees_agent": {
+    "monthly_fee": null,
+    "annual_fee_2023": 928203,
+    "fee_increase_2023": "2% från 2023-01-01",
+    "fee_increase_2024": "10% från 2024-01-01 (kraftigt ökade driftskostnader)",
+    "fee_per_sqm_bostadsyta": 435,
+    "fee_calculation_basis": "Självkostnadsprincipen",
+    "fee_revenue_share": 56.2,
+    "gas_collective_agreement_cancelled": "2023-02-01 - medlemmar tecknar enskilt",
+    "evidence_pages": [3, 6]
+  },
+
+  "energy_agent": {
+    "heating_cost": 304534,
+    "heating_cost_per_sqm": 119,
+    "electricity_cost": 58392,
+    "electricity_cost_per_sqm": 23,
+    "water_cost": 82526,
+    "water_cost_per_sqm": 32,
+    "gas_cost": 6285,
+    "gas_cost_per_sqm": 2,
+    "total_energy_cost": 451737,
+    "total_energy_cost_per_sqm": 176,
+    "heating_system": "Undercentral för värmesystem",
+    "energy_improvements": "Avgasare installerad i undercentral (2020), Energiekonomi uppföljning värmesystem",
+    "evidence_pages": [6, 12]
+  },
+
+  "reserves_agent": {
+    "reserve_fund": "Fond för yttre underhåll",
+    "reserve_balance": 1801782,
+    "annual_allocation": 463100,
+    "reserve_policy": "Avsättning från 2019 enligt upprättad underhållsplan 20 år",
+    "reserve_balance_previous_year": 1361782,
+    "reserve_increase": 440000,
+    "evidence_pages": [3, 6, 9]
+  },
+
+  "members_agent": {
+    "total_members": 37,
+    "member_changes_2023": "Två överlåtelser",
+    "evidence_pages": [3]
+  },
+
+  "audit_agent": {
+    "audit_firm": "Mazars AB",
+    "auditor_name": "Anna Stenberg",
+    "auditor_type": "Auktoriserad revisor",
+    "audit_date": "2024-04-22",
+    "audit_opinion": "Standard (no qualifications mentioned)",
+    "evidence_pages": [2, 16, 17]
+  },
+
+  "events_agent": {
+    "board_changes": "3 different board compositions in 2023 (ordinarie årsstämma + 2 extrastämma events)",
+    "loan_binding_error": "SEB misstag februari 2022 - bindning misslyckades, bands istället december 2022 till högre ränta. SEB kompensation utbetald för högre räntekostnader.",
+    "gas_agreement_termination": "Kollektivavtal för gas uppsagt 2023-02-01, medlemmar tecknar enskilt abonnemang",
+    "fee_increase_announcement": "10% fee increase announced for 2024-01-01 due to kraftigt ökade driftskostnader",
+    "member_transfers": 2,
+    "evidence_pages": [2, 3]
+  },
+
+  "cashflow_agent": {
+    "operating_cashflow": 245313,
+    "investing_cashflow": 0,
+    "financing_cashflow": 0,
+    "total_cashflow": 245313,
+    "cash_beginning": 1626270,
+    "cash_ending": 1871583,
+    "evidence_pages": [10]
+  },
+
+  "notes_depreciation_agent": {
+    "depreciation_buildings": 164042,
+    "depreciation_inventory": 20920,
+    "depreciation_other": 65844,
+    "total_depreciation": 250806,
+    "depreciation_schedule": {
+      "buildings": "100 år",
+      "materiella_anlaggningstillgangar": "2-20 år",
+      "inventarier": "5-12 år",
+      "ftx_agregat": "20 år",
+      "maskiner_och_lokal": "10 år",
+      "elcentral_fjarrvärmecentral": "20 år",
+      "branddorr_kyl_varmevaxlare": "50 år"
+    },
+    "evidence_pages": [11, 13, 14]
+  },
+
+  "notes_tax_agent": {
+    "tax_type": "Privatbostadsföretag enligt inkomstskattelagen",
+    "property_tax": 59716,
+    "property_tax_previous_year": 58036,
+    "evidence_pages": [2, 12]
+  },
+
+  "insurance_agent": {
+    "insurance_provider": "Trygg-Hansa",
+    "insurance_type": "Fullvärdesförsäkring",
+    "insurance_cost": 72197,
+    "insurance_cost_previous_year": 68617,
+    "insurance_increase_percent": 5.22,
+    "evidence_pages": [2, 12]
+  },
+
+  "tax_agent": {
+    "tax_assessment_total": 88158000,
+    "tax_assessment_buildings": 27158000,
+    "tax_assessment_land": 61000000,
+    "tax_assessment_year": 2023,
+    "evidence_pages": [2, 13]
+  },
+
+  "_extraction_metadata": {
+    "extraction_date": "2025-10-15",
+    "pdf_filename": "brf_268411.pdf",
+    "pdf_size_kb": 730,
+    "pages_total": 15,
+    "extraction_confidence": 0.98,
+    "pattern_classification": "Pattern B (separate värme + vatten + el + gas)",
+    "k2_k3": "K2",
+    "key_characteristics": [
+      "2nd PDF with rental apartment (1/24 units = 4.2%)",
+      "Pattern B utilities confirmed (5/6 PDFs now 83%)",
+      "Board instability (3 different boards in 2023)",
+      "SEB loan binding compensation (unique event)",
+      "10% fee increase planned for 2024",
+      "Ongoing partial pipe replacement (stambyte)",
+      "No loan amortization (amorteringsfria)",
+      "Gas collective agreement cancelled 2023"
+    ],
+    "fields_needing_review": []
+  }
+}
