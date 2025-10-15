@@ -4,15 +4,17 @@
 
 **If you're starting a new session, READ THESE FILES IN ORDER**:
 1. **`LEARNING_SYSTEM_MASTER_GUIDE.md`** ⭐ **START HERE!** - Cross-session learning framework
-2. **THIS FILE** (`CLAUDE.md`) - Project overview and architecture
-3. Last **`SESSION_SUMMARY_*.md`** in `ground_truth/batch_results/` - What happened last session
+2. **`AGENT_PROMPT_UPDATES_PENDING.md`** 🚨 **IMPORTANT REMINDER!** - 4 agent enhancements ready to implement (after PDF 18)
+3. **THIS FILE** (`CLAUDE.md`) - Project overview and architecture
+4. Last **`LEARNING_FROM_BRF_*.md`** in `ground_truth/batch_results/` - Latest ultrathinking analysis
 
-**Learning System Status**: ✅ **OPERATIONAL** (Oct 15, 2025)
-- **PDFs Processed**: 2/42 complete with comprehensive ultrathinking
-- **Learning Loop**: 6-step process per PDF (Extract → Ultrathink → Update Prompts → Update Schema → Document → Commit)
-- **Latest**: brf_81563 (Hjortspåret) - Validated enhanced system, discovered 4 NEW patterns
-- **Next PDF**: brf_46160 (test enhanced prompts on 3rd architecture variant)
-- **Confidence**: 98% (up from 95% after first PDF)
+**Learning System Status**: ✅ **HJORTHAGEN 100% COMPLETE!** (Oct 15, 2025)
+- **PDFs Processed**: 15/42 complete (Hjorthagen dataset 15/15 = 100%)
+- **Schema Saturation**: 98%+ (10 consecutive zero-schema PDFs)
+- **Pattern B**: 93.3% (14/15 PDFs) - statistical significance achieved
+- **Latest**: brf_82841 (Dubbelbössan) - 10th zero-schema, refinancing risk, multiple fees, energy crisis, commercial space
+- **Next PDF**: 16/42 (SRS dataset) - validate patterns before updating agent prompts
+- **Agent Updates**: 4 enhancements PENDING (loans, fees, energy, property) - see AGENT_PROMPT_UPDATES_PENDING.md
 
 ---
 
