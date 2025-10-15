@@ -38,6 +38,8 @@ COMPREHENSIVE_TYPES: Dict[str, Dict[str, str]] = {
         "reserve_fund_movements": "dict",  # Note 10: Fond för yttre underhåll
         "income_breakdown": "dict",  # Intäkter line items
         "tax_details": "dict",  # Skatter details if available
+        # NEW from brf_268882: Government subsidies
+        "elstöd": "num",  # Government electricity subsidy (2023 energy crisis)
     },
 
     "property_agent": {
@@ -55,6 +57,10 @@ COMPREHENSIVE_TYPES: Dict[str, Dict[str, str]] = {
         "samfallighet": "dict",  # {"name": str, "ownership_percent": num, "manages": str}
         "registration_dates": "dict",  # Economic plan, bylaws registration
         "tax_assessment": "dict",  # Taxeringsvärde breakdown
+        # NEW from brf_268882: Ownership structure
+        "bostadsrätt_count": "int",  # Number of bostadsrätt units (ownership)
+        "hyresrätt_count": "int",  # Number of rental apartments (hyresrätt)
+        "parking_info": "str",  # Parking availability ("None", count, or description)
     },
 
     "notes_depreciation_agent": {
@@ -144,6 +150,8 @@ COMPREHENSIVE_TYPES: Dict[str, Dict[str, str]] = {
         "fee_calculation_basis": "str",  # E.g., "självkostnadsprincipen"
         "fee_per_sqm": "num",  # If different from monthly_fee
         "fee_unit": "str",  # E.g., "SEK/m² per year"
+        # NEW from brf_268882: Transaction fees
+        "transaction_fees": "dict",  # Detailed breakdown of various transaction fees
     },
 
     "insurance_agent": {
