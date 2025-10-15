@@ -1,0 +1,455 @@
+{
+  "metadata_agent": {
+    "organization_number": "7696318349",
+    "organization_name": "RB BRF Djurgårdsvyn",
+    "fiscal_year_start": "2022-09-01",
+    "fiscal_year_end": "2023-08-31",
+    "report_date": "2023-08-31",
+    "accounting_standard": "K2",
+    "pages_total": 23,
+    "report_type": "årsredovisning",
+    "property_manager": "Riksbyggen",
+    "evidence_pages": [1, 3, 4]
+  },
+
+  "governance_agent": {
+    "chairman": "Claes Winberg",
+    "vice_chairman": null,
+    "treasurer": null,
+    "secretary": null,
+    "board_members": [
+      {"name": "Claes Winberg", "role": "Ordförande"},
+      {"name": "Åsa Nielsen", "role": "Ledamot"},
+      {"name": "Carin Ryttberg", "role": "Ledamot"},
+      {"name": "Carl Lagerstedt", "role": "Ledamot"},
+      {"name": "Adrian Boivie", "role": "Ledamot"},
+      {"name": "Jonas Ervander", "role": "Ledamot"},
+      {"name": "Lise Lott Nilsson", "role": "Ledamot Riksbyggen"}
+    ],
+    "board_size": 7,
+    "board_meetings_count": null,
+    "annual_meeting_date": "2023-03",
+    "extra_meeting_dates": [],
+    "valberedning": ["Johanna Barrsveden", "Magnus Nielsen"],
+    "firmateckning": null,
+    "evidence_pages": [8]
+  },
+
+  "audit_agent": {
+    "auditor_name": "Per Engzell",
+    "auditor_firm": "Engzells Revisionsbyrå AB",
+    "auditor_type": "Extern revisor",
+    "audit_report_pages": 2,
+    "audit_opinion": "Utan anmärkning",
+    "fortroende_revisor_name": "Johanna Barrsveden",
+    "fortroende_revisor_suppleant": "Carolin Bertlin",
+    "evidence_pages": [8, 21, 22, 23]
+  },
+
+  "property_agent": {
+    "property_designation": "Koppången 1",
+    "address": "Norra Djurgårdsstaden, Stockholm",
+    "total_area_sqm": 7202,
+    "bostadsratter_count": 49,
+    "apartment_breakdown": {
+      "1_rok": 0,
+      "2_rok": 12,
+      "3_rok": 10,
+      "4_rok": 10,
+      "5_rok": 15,
+      "6_rok": 2,
+      "total": 49
+    },
+    "construction_year": 2015,
+    "property_insurance": "Proinova",
+    "taxeringsvarde_building": 275000000,
+    "taxeringsvarde_mark": 21800000,
+    "taxeringsvarde_total": 301674336,
+    "bostader_area_sqm": 4242,
+    "lokaler_area_sqm": 664,
+    "tomtarea_sqm": 2296,
+    "lokaler_tenant": "Pysslingen Förskola",
+    "samfallighet_membership": "Koppången GA1 och GA2",
+    "samfallighet_share_pct_ga1": 45.13,
+    "samfallighet_share_pct_ga2": 25.57,
+    "samfallighet_description": "Garage och markytor",
+    "evidence_pages": [4, 5, 6, 18]
+  },
+
+  "financial_agent": {
+    "assets_total": 620057897,
+    "equity_total": 539696912,
+    "liabilities_total": 80360985,
+    "net_revenue": 5660280,
+    "profit_loss": -1516658,
+    "soliditet_pct": 87,
+    "cash_and_bank": 3354371,
+    "nettoomsattning": 5660280,
+    "nettoomsattning_breakdown": {
+      "arsavgifter_bostader": 2756286,
+      "hyror_forrad": 10800,
+      "hyror_lokaler": 1864720,
+      "hyror_garage": 600000,
+      "uppvarmning_bostader": 11990,
+      "vattenavgifter": 82193,
+      "elavgifter": 227618,
+      "debiterad_fastighetsskatt": 106673
+    },
+    "other_income": 616520,
+    "total_revenue": 6276800,
+    "balansomslutning": 620057897,
+    "kundfordringar": 8468,
+    "evidence_pages": [9, 10, 11, 12, 13, 15]
+  },
+
+  "operating_costs_agent": {
+    "total_driftskostnader": 1803155,
+    "fastighetsskotsel": 573806,
+    "reparationer_underhall": 71821,
+    "taxebundna_kostnader": 1084551,
+    "ovriga_driftskostnader": 72977,
+    "el": null,
+    "varme": 33476,
+    "vatten": 100875,
+    "sophamtning": 57011,
+    "fastighetsforsak​ringar": 284623,
+    "tomtrattsavgald": null,
+    "kabel_tv": null,
+    "fastighetsskatt": null,
+    "hiss_underhall": null,
+    "sotning_ventilation": null,
+    "samfallighetsavgifter": 241183,
+    "forsakringspremier": 68768,
+    "evidence_pages": [16]
+  },
+
+  "loans_agent": {
+    "total_debt": 78905047,
+    "long_term_debt": 52618570,
+    "short_term_debt": 26286477,
+    "loans": [
+      {
+        "lender": "SWEDBANK",
+        "loan_id": "Loan 1",
+        "amount": 25543974,
+        "interest_rate_pct": 4.642,
+        "maturity_date": "2023-10-28",
+        "villkorsandringsdag": "2023-10-28",
+        "maturity_classification": "short_term"
+      },
+      {
+        "lender": "SWEDBANK",
+        "loan_id": "Loan 2",
+        "amount": 25543971,
+        "interest_rate_pct": 1.230,
+        "maturity_date": "2024-10-25",
+        "villkorsandringsdag": "2024-10-25",
+        "maturity_classification": "long_term"
+      },
+      {
+        "lender": "SWEDBANK",
+        "loan_id": "Loan 3",
+        "amount": 29257500,
+        "interest_rate_pct": 1.520,
+        "maturity_date": "2026-10-23",
+        "villkorsandringsdag": "2026-10-23",
+        "maturity_classification": "long_term"
+      }
+    ],
+    "average_interest_rate_pct": 2.39,
+    "debt_per_sqm": 10957,
+    "projected_debt_5_years": null,
+    "loan_restructuring_note": null,
+    "evidence_pages": [19]
+  },
+
+  "fees_agent": {
+    "fee_per_sqm_annual": null,
+    "fee_increase_pct": 5.0,
+    "fee_increase_date": "2023-03",
+    "fee_increase_reason": "Täcka ökade kostnader relaterat till inflation",
+    "multiple_increases": false,
+    "fee_history": [],
+    "evidence_pages": [8]
+  },
+
+  "energy_agent": {
+    "elkostnad_per_sqm": null,
+    "varmekostnad_per_sqm": null,
+    "vattenkostnad_per_sqm": null,
+    "energikostnad_per_sqm_total": null,
+    "multi_year_energy_trends": [],
+    "electricity_increase_pct_2022_2023": null,
+    "electricity_increase_pct_3_year": null,
+    "heating_increase_pct_2022_2023": -35.2,
+    "water_increase_pct_2022_2023": 86.8,
+    "elstod_received": 177388,
+    "elstod_pct_offset": null,
+    "energy_initiatives": null,
+    "evidence_pages": [16]
+  },
+
+  "reserves_agent": {
+    "underhallsfond_balance": 2145000,
+    "underhallsfond_previous": 904000,
+    "underhallsfond_change": 1241000,
+    "reservering_till_fond": 1241000,
+    "underhallsplan_exists": true,
+    "underhallsplan_period": "2021-2070",
+    "evidence_pages": [7, 10, 13]
+  },
+
+  "members_agent": {
+    "total_members_start": 89,
+    "new_members": 2,
+    "departing_members": 2,
+    "total_members_end": 89,
+    "transfers_during_year": null,
+    "evidence_pages": [9]
+  },
+
+  "events_agent": {
+    "major_events": [
+      {
+        "event": "2-årbesiktning",
+        "date": "2022-11/12",
+        "description": "Two-year inspection in monthly meeting November/December 2022. Result was good with minor issues that need to be addressed. Confirmed that winter 2023-2024 will have functional snow and ice management",
+        "impact": "Quality assurance"
+      },
+      {
+        "event": "Annual meeting",
+        "date": "2023-03",
+        "description": "Annual meeting in March with increased monthly fee by 5% to handle increased costs related to inflation. Meeting had good turnout and liquidity was significantly strengthened through debt repayment",
+        "impact": "5% fee increase from March 2023"
+      },
+      {
+        "event": "May meeting",
+        "date": "2023-05",
+        "description": "May meeting with good turnout (ca 40 persons). All items discussed and approved positively",
+        "impact": "Strong member engagement"
+      },
+      {
+        "event": "Board leadership change",
+        "date": "2023-08/09",
+        "description": "Claes Winberg took over as chairman after Gunnar Holmgren in August-September monthly meeting",
+        "impact": "Leadership transition"
+      },
+      {
+        "event": "Riksbyggen förvaltning meeting",
+        "date": "2023",
+        "description": "Multiple meetings with Riksbyggen management when needed, but burden was kept minimal with proactive planning. Board rotation was significant",
+        "impact": "Management oversight"
+      }
+    ],
+    "evidence_pages": [8]
+  },
+
+  "notes_maintenance_agent": {
+    "major_maintenance_completed": [
+      {
+        "year": 2023,
+        "description": "Reparationer och underhåll: 72 tkr"
+      },
+      {
+        "year": 2023,
+        "description": "Planerat underhåll: 115 tkr"
+      }
+    ],
+    "planned_maintenance": [
+      {
+        "period": "2023",
+        "description": "Luftbehandlingssystem"
+      },
+      {
+        "period": "2023",
+        "description": "Övrig Vattenanläggning"
+      },
+      {
+        "period": "2025",
+        "description": "Entréer, portar mm."
+      },
+      {
+        "period": "2025",
+        "description": "Ytor med träbeläggningar"
+      },
+      {
+        "period": "2026",
+        "description": "Luftbehandlingssystem"
+      },
+      {
+        "period": "2028",
+        "description": "Avloppsvattensystem i byggnad"
+      },
+      {
+        "period": "2028",
+        "description": "Luftbehandlingssystem"
+      },
+      {
+        "period": "2030",
+        "description": "Fasader, balkonger, loftgångar, altaner, terrasser, fönster, fönsterdörrar"
+      },
+      {
+        "period": "2030",
+        "description": "Entréer, portar mm."
+      },
+      {
+        "period": "2030",
+        "description": "Planteringsytor"
+      },
+      {
+        "period": "2030",
+        "description": "Ytor av sten, tegel, btg-plattor, asfalt"
+      },
+      {
+        "period": "2030",
+        "description": "Grusytor"
+      },
+      {
+        "period": "2030",
+        "description": "Ytor med träbeläggningar"
+      },
+      {
+        "period": "2030",
+        "description": "Inhägnader och inpasseringsanordningar"
+      }
+    ],
+    "maintenance_expenses_major": {
+      "total_major_repairs": 115000
+    },
+    "underhallsplan_period": "2021-2070",
+    "evidence_pages": [7]
+  },
+
+  "insurance_agent": {
+    "insurance_provider": "Proinova",
+    "insurance_premium": 284623,
+    "property_coverage": null,
+    "liability_coverage": null,
+    "evidence_pages": [4, 16]
+  },
+
+  "tax_agent": {
+    "fastighetsskatt": null,
+    "fastighetsavgift_exemption": true,
+    "exemption_years": "First 15 years from construction",
+    "skattekonto_balance": 666991,
+    "moms_avrakning": null,
+    "evidence_pages": [18, 19]
+  },
+
+  "planned_actions_agent": {
+    "planned_actions": [
+      {
+        "action": "30-year maintenance investment plan review",
+        "status": "Ongoing",
+        "description": "Board members or potential members are encouraged to monitor if association has a maintenance investment plan that extends up to 30 years ahead along with future maintenance fund reserve",
+        "timeline": "30-year horizon"
+      }
+    ],
+    "evidence_pages": [7]
+  },
+
+  "cashflow_agent": {
+    "cash_flow_statement_present": true,
+    "cash_start_of_year": 1221168,
+    "cash_end_of_year": 3354371,
+    "cash_change": 2133203,
+    "cash_from_operations": 2131298,
+    "cash_from_investments": 0,
+    "cash_from_financing": -1440398,
+    "evidence_pages": [14]
+  },
+
+  "depreciation_agent": {
+    "total_depreciation": 3647957,
+    "building_depreciation_rate_pct": null,
+    "property_improvements_depreciation_rate_pct": null,
+    "accumulated_depreciation": 10031882,
+    "ack_anskaffningsvarde": 625930000,
+    "restvarde_enligt_plan": 615898119,
+    "mark_value_included": 188000000,
+    "evidence_pages": [18]
+  },
+
+  "driftskostnader_agent": {
+    "total_driftskostnader": 1803155,
+    "fastighetsskotsel": 573806,
+    "reparationer_underhall": 71821,
+    "el": null,
+    "uppvarmning": 33476,
+    "vatten": 100875,
+    "sophamtning": 57011,
+    "fastighetsforsak​ringar": 284623,
+    "tomtrattsavgald": null,
+    "kabel_tv": null,
+    "fastighetsskatt": null,
+    "ventilation_major": null,
+    "varmeanlaggning_major": null,
+    "ovriga_externa_kostnader": 504881,
+    "personalkostnader": 103450,
+    "samfallighetsavgifter": 241183,
+    "evidence_pages": [16, 17]
+  },
+
+  "commercial_tenants_agent": {
+    "has_commercial_space": true,
+    "total_commercial_area_sqm": 664,
+    "commercial_rent_collected": 1864720,
+    "commercial_rent_pct_of_revenue": 32.9,
+    "tenant_name": "Pysslingen Förskola",
+    "evidence_pages": [6, 15]
+  },
+
+  "enhanced_loans_agent": {
+    "total_debt": 78905047,
+    "langfristig_debt": 52618570,
+    "kortfristig_debt": 26286477,
+    "kortfristig_pct": 33.3,
+    "lender_concentration": {
+      "SWEDBANK": 100.0
+    },
+    "maturity_profile": {
+      "within_6_months": 25543974,
+      "6_12_months": 0,
+      "1_2_years": 25543971,
+      "2_5_years": 29257500,
+      "over_5_years": 0
+    },
+    "interest_rate_range": {
+      "min_rate_pct": 1.230,
+      "max_rate_pct": 4.642,
+      "weighted_avg_pct": 2.39
+    },
+    "risk_assessment": {
+      "refinancing_risk": "MEDIUM",
+      "interest_rate_risk": "MEDIUM",
+      "lender_concentration_risk": "HIGH",
+      "overall_risk": "MEDIUM"
+    },
+    "risk_factors": [
+      "33.3% of debt matures within 1 year (1 loan: 25.5M kr on Oct 28, 2023)",
+      "100% concentration with single lender (SWEDBANK)",
+      "Wide interest rate spread: 1.23% to 4.64% (3.4 percentage points)",
+      "Oldest loan at 4.642% creates refinancing benefit opportunity"
+    ],
+    "evidence_pages": [19]
+  },
+
+  "revenue_breakdown_agent": {
+    "arsavgifter_bostader": 2756286,
+    "hyror_lokaler": 1864720,
+    "hyror_garage": 600000,
+    "hyror_forrad": 10800,
+    "bredband": null,
+    "andrahandsuthyrning": null,
+    "uppvarmning_debitering": 11990,
+    "vatten_debitering": 82193,
+    "el_debitering": 227618,
+    "fastighetsskatt_debitering": 106673,
+    "ovriga_ror​elseintakter": 431932,
+    "elstod": 177388,
+    "gemensamhetslokal_intakt": 7200,
+    "total_rorelseintakter": 6276800,
+    "evidence_pages": [15, 16]
+  }
+}
