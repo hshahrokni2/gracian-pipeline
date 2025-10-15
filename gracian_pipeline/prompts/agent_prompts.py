@@ -108,12 +108,45 @@ Return STRICT VALID JSON, no markdown fences.
 """,  # Enhanced with anti-hallucination
 
     'financial_agent': """
-You are FinancialAgent for Swedish BRF reports. Extract ONLY income/balance data with EXACT keys: {revenue:'', expenses:'', assets:'', liabilities:'', equity:'', surplus:'', long_term_liabilities:'', short_term_liabilities:'', evidence_pages: []}.
+You are FinancialAgent for Swedish BRF reports. Extract ONLY income/balance data with EXACT keys: {revenue:'', expenses:'', assets:'', liabilities:'', equity:'', surplus:'', long_term_liabilities:'', short_term_liabilities:'', soliditet:'', interest_coverage_ratio:'', debt_to_equity_ratio:'', evidence_pages: []}.
 
 WHERE TO LOOK:
 - "Resultaträkning" (Income statement)
 - "Balansräkning" (Balance sheet)
 - Typically pages 4-8
+- Multi-year comparison tables (Flerårsöversikt)
+
+🚨 CRITICAL FINANCIAL STRESS PATTERNS:
+- If soliditet <40%: Flag as "Low equity - high financial stress"
+- If annual result drops >80%: Flag as "Profit collapse pattern"
+- If interest coverage <1.5: Flag as "Marginal debt service capacity"
+- If debt-to-equity >2.0: Flag as "High leverage"
+
+✅ REAL EXAMPLE - EXTREME STRESS (from brf_48893, PDF 10/42):
+{
+  "annual_result_2023": 41978,
+  "annual_result_2022": 447941,
+  "result_change_pct": -90.63,
+  "result_change_note": "PROFIT COLLAPSE: -91% decline due to interest rate crisis (+68% interest expense) and water damage repairs",
+  "soliditet_pct_2023": 33.66,
+  "soliditet_note": "LOWEST in corpus at 34% - extremely low equity ratio indicates high financial stress",
+  "interest_coverage_ratio": 1.08,
+  "debt_to_equity_ratio": 1.97,
+  "financial_stress_indicators": [
+    "Lowest soliditet in corpus (34%)",
+    "Most severe profit collapse (-91%)",
+    "Interest coverage barely adequate (1.08)",
+    "High debt-to-equity ratio (1.97)"
+  ],
+  "evidence_pages": [3, 4, 5, 6]
+}
+
+CRITICAL SWEDISH KEYWORDS:
+- "Soliditet" = Equity ratio (eget kapital / total assets)
+- "Räntebärande skulder" = Interest-bearing debt
+- "Räntetäckningsgrad" = Interest coverage ratio
+- "Skuldsättningsgrad" = Debt-to-equity ratio
+- "Årets resultat" = Annual result
 
 🚨 ANTI-HALLUCINATION RULES:
 1. ONLY extract numbers visible in financial statements
@@ -127,6 +160,8 @@ INSTRUCTIONS:
 - Parse SEK numbers (e.g., 1 234 567 → 1234567)
 - Focus on 'Resultaträkning'/'Balansräkning'
 - For liabilities, extract: total liabilities, Långfristiga skulder (long-term), Kortfristiga skulder (short-term)
+- Calculate soliditet: (equity / total assets) × 100
+- Track year-over-year changes in key metrics
 - Return null if not clearly visible
 - Evidence_pages: List 1-based GLOBAL page numbers (≤ 3 items)
 
@@ -143,6 +178,7 @@ You are PropertyAgent for Swedish BRF annual reports.
 4. built_year (Byggår, Färdigställt) - e.g., 2015
 5. apartments (Antal lägenheter) - e.g., 94
 6. energy_class (Energiklass, Energideklaration) - e.g., "C", "D"
+7. tomträtt information (if applicable) - expiration date, lessor, annual fee
 
 Return JSON with ALL fields below (use null if not found):
 {
@@ -160,7 +196,37 @@ Return JSON with ALL fields below (use null if not found):
   "heating_type": "string or null (Uppvärmning, e.g., 'Fjärrvärme', 'Bergvärme')",
   "energy_class": "string or null (Energiklass, e.g., 'A', 'B', 'C', 'D', 'E', 'F', 'G')",
   "total_apartments": integer or null (Antal lägenheter),
+  "ownership_type": "string or null (Äganderätt vs Tomträtt)",
+  "tomtratt_expires": "YYYY-MM-DD or null",
+  "tomtratt_annual_fee": float or null,
+  "tomtratt_lessor": "string or null (e.g., 'Stockholm Stad')",
+  "tomtratt_renewal_urgency": "string or null (HIGH/MEDIUM/LOW)",
   "evidence_pages": []
+}
+
+🚨 TOMTRÄTT RENEWAL RISK ASSESSMENT (20% of BRFs affected):
+- <3 years until expiration = "HIGH urgency"
+- 3-5 years = "MEDIUM urgency"
+- >5 years = "LOW urgency"
+- Flag if multiple properties expire simultaneously (reduced leverage)
+
+✅ REAL EXAMPLE - TOMTRÄTT RISK (from brf_48893, PDF 10/42):
+{
+  "properties": [
+    {
+      "property_designation": "Säkerhetsproppen 1",
+      "ownership_type": "Tomträtt",
+      "tomtratt_expires": "2026-12-31",
+      "tomtratt_annual_fee": 89567,
+      "tomtratt_lessor": "Stockholm Stad",
+      "tomtratt_renewal_urgency": "HIGH",
+      "note": "Expires 2026 (2 years) - renegotiation needed"
+    },
+    // ... 3 more properties all expire 2026-12-31
+  ],
+  "tomtratt_fee_total": 192824,
+  "tomtratt_note": "ALL 4 properties expire simultaneously 2026 - limited negotiation leverage",
+  "evidence_pages": [2, 7, 8]
 }
 
 WHERE TO LOOK (Search these locations first):
@@ -286,14 +352,40 @@ Focus on 'Skatt', 'Inkomstskatt', 'Uppskjuten skatt'. Use only visible values. I
     'events_agent': """
 You are EventsAgent for BRF reports. Extract ONLY events/maintenance: {key_events: [], maintenance_budget: '', annual_meeting_date: '', evidence_pages: []}.
 
+🚨 WATER DAMAGE EVENT PATTERN (20% of BRFs):
+When extracting water damage events, capture:
+- Event date and repair cost
+- Insurance coverage ratio (payout / total cost)
+- Out-of-pocket expense for BRF
+- Impact on financial stress (profit decline, fee increases, reserve depletion)
+- Typical pattern: 100-200K kr cost, 50-70% insurance coverage
+
+✅ REAL EXAMPLE - WATER DAMAGE (from brf_48893, PDF 10/42):
+{
+  "major_events_2023": [
+    {
+      "event": "Water damage and extensive repairs",
+      "date": "2023-05-15",
+      "repair_cost": 169806,
+      "insurance_payout": 95000,
+      "out_of_pocket": 74806,
+      "coverage_ratio": 0.56,
+      "impact": "169,806 kr repair cost - LARGEST single expense in 2023",
+      "resolution": "Repairs completed Q2, insurance covered 56%, BRF paid 75K out-of-pocket"
+    }
+  ],
+  "evidence_pages": [3, 4, 10]
+}
+
 🚨 ANTI-HALLUCINATION RULES:
 1. ONLY extract events visible in "Väsentliga händelser" section
 2. If not found → return [] for events, null for dates/budgets
 3. NEVER invent events or dates
 4. Can you see this event in the text? YES → Extract. NO → skip.
+5. For water damage: Extract insurance details if mentioned
 
 Focus on 'Väsentliga händelser', 'Underhållsplan'. Ignore financials. Multimodal: Analyze timeline images. Include evidence_pages: [] with 1-based page numbers used. Return ONLY JSON.
-""",  # Enhanced with anti-hallucination
+""",  # Enhanced with anti-hallucination and water damage pattern
 
 
     'audit_agent': """
@@ -314,6 +406,12 @@ You are LoansAgent for BRF notes. Extract ONLY loan details from Note 12-14 (Sku
 🎯 KEY PATTERN: Loans maturing within 12 months of balance sheet date are
 classified as "kortfristig skuld" (short-term debt) regardless of original term.
 
+🚨 INTEREST RATE CRISIS PATTERN (2023-2024):
+Track interest rate risk exposure and year-over-year interest expense changes:
+- If >80% loans are "Rörlig ränta" (variable rate): Flag "HIGH interest rate risk exposure"
+- If interest expense increase >40% year-over-year: Flag "Interest rate crisis impact"
+- Note if crisis drove fee increases or profit decline
+
 Return JSON with:
 {
   "loans": [
@@ -322,6 +420,7 @@ Return JSON with:
       "loan_number": "string or null",
       "outstanding_balance": num,
       "interest_rate": num,
+      "interest_type": "string (Rörlig/Bunden)",
       "maturity_date": "YYYY-MM-DD or null",
       "next_rate_change": "YYYY-MM-DD or null",
       "classified_as_short_term": bool,
@@ -329,9 +428,33 @@ Return JSON with:
     }
   ],
   "outstanding_loans": num or null,
-  "interest_rate": num or null,
+  "average_interest_rate": num or null,
+  "interest_expense_2023": num or null,
+  "interest_expense_2022": num or null,
+  "interest_expense_change_pct": num or null,
+  "interest_rate_risk": "string (HIGH/MEDIUM/LOW)",
   "amortization": num or null,
   "evidence_pages": []
+}
+
+✅ REAL EXAMPLE - INTEREST RATE CRISIS (from brf_48893, PDF 10/42):
+{
+  "total_loans_outstanding": 9538157,
+  "loans": [
+    {"lender": "Skandiabanken", "outstanding_balance": 3200000, "interest_rate": 0.0485, "interest_type": "Rörlig"},
+    {"lender": "SBAB", "outstanding_balance": 2800000, "interest_rate": 0.0512, "interest_type": "Rörlig"},
+    {"lender": "Handelsbanken", "outstanding_balance": 1900000, "interest_rate": 0.0467, "interest_type": "Rörlig"},
+    {"lender": "SEB", "outstanding_balance": 1100000, "interest_rate": 0.0498, "interest_type": "Rörlig"},
+    {"lender": "Nordea", "outstanding_balance": 438157, "interest_rate": 0.0445, "interest_type": "Rörlig"},
+    {"lender": "Swedbank", "outstanding_balance": 100000, "interest_rate": 0.0523, "interest_type": "Rörlig"}
+  ],
+  "interest_expense_2023": 555821,
+  "interest_expense_2022": 330302,
+  "interest_expense_change_pct": 68.25,
+  "interest_expense_note": "INTEREST RATE CRISIS: +68% increase (330K → 556K) - major driver of profit collapse",
+  "interest_rate_risk": "HIGH - all 6 loans are rörlig ränta (maximum exposure)",
+  "average_interest_rate": 0.0493,
+  "evidence_pages": [5, 12, 13]
 }
 
 ✅ REAL EXAMPLE (from brf_46160, Note 12):
@@ -415,6 +538,14 @@ Focus on 'Energideklaration', 'Energiklass', 'Primärenergital (kWh/m² Atemp)'.
     'fees_agent': """
 You are FeesAgent for Swedish BRF annual reports. Extract COMPREHENSIVE fee information with EXACT structure.
 
+🚨 EXTREME FEE INCREASE PATTERNS (>10%):
+When fee increase >10%, capture:
+- Exact percentage and implementation date
+- Board's explicit justification in Swedish
+- Root causes: interest rate crisis, major repairs, cost inflation
+- Strategic intent: reactive (cover deficit) vs proactive (build reserves)
+- Coupling with loan amortization strategy
+
 Return JSON with ALL fields below (use null if not found):
 {
   "arsavgift_per_sqm_total": float or null (Årsavgift kr/m²/år - MOST COMMON),
@@ -432,8 +563,20 @@ Return JSON with ALL fields below (use null if not found):
   "last_fee_increase_date": "YYYY-MM-DD" or null,
   "last_fee_increase_percentage": float or null,
   "planned_fee_changes": [] (array of upcoming changes, if any),
+  "board_justification_swedish": "string or null (for increases >10%)",
   "terminology_found": "string" (which term found: 'årsavgift', 'månadsavgift', 'avgift'),
   "evidence_pages": []
+}
+
+✅ REAL EXAMPLE - EXTREME FEE INCREASE (from brf_48893, PDF 10/42):
+{
+  "fee_increase_2024": "12% från 2024-01-01",
+  "fee_increase_2024_note": "HIGHEST increase in corpus - driven by interest crisis and need to amortize loans",
+  "board_justification_swedish": "Täcka ökade kostnader samt att föreningen kan amortera lån för att på sikt säkerställa räntans andel av avgiften bibehålls alternativt en mindre justering",
+  "strategic_intent": "Dual purpose: (1) Cover interest expense increase +68%, (2) Enable loan amortization to stabilize future interest portion",
+  "fee_increase_2023": "5% från 2023-01-01",
+  "average_fee_per_sqm": 1136,
+  "evidence_pages": [3, 9, 10]
 }
 
 CRITICAL SWEDISH KEYWORDS (where to look):
