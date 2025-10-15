@@ -193,11 +193,18 @@ DETAILS:
 - Energy: 2022: 165 kr/m² → 2023: 203 kr/m² (+23%) → 2024: 180 kr/m² (-11%, net +9%)
 - Lokaler: 1,579 m² (20.7%), revenue 1.16M (30.2%), premium 1.71x residential
 
-PDF 17 (_____):
-[ ] Loan reclassification? Y/N
-[ ] Multiple fee increases? Y/N
-[ ] Electricity increase >50%? Y/N
-[ ] Lokaler >15% of area? Y/N
+PDF 17 (brf_275608 - BRF ND Studios 2023): ✅ COMPLETE
+[✅] Loan reclassification? (kortfristig 37.2%) YES
+[❌] Multiple fee increases? (single 48.3% increase Nov 2022) NO
+[✅] Electricity increase >50%? (+126.3% multi-year 2020→2023, +21.7% single-year) YES (SEVERE)
+[❌] Lokaler >15% of area? (0% lokaler, residential only) NO
+
+SCORE: 2 / 4 (50%)
+DETAILS:
+- Loans: 9.46M short-term / 25.4M total = 37.2% kortfristig, 4 loans mature Sept 2023 (3 months)
+- Fees: Single MASSIVE increase (48.3% Nov 2022) to cover interest + energy crisis, no mid-year adjustments
+- Energy: SEVERE tier - el +126.3% (2020→2023), +21.7% (2022→2023), 47K kr elstöd received, solar explored
+- Lokaler: 0 m² commercial, 46 residential units only (may be location-specific pattern)
 
 PDF 18 (_____):
 [ ] Loan reclassification? Y/N
@@ -213,11 +220,11 @@ IF ≥1 of 3 for Fees → UPDATE fees_agent
 IF ALL 3 for Energy → UPDATE energy_agent (or if ≥2 show +30%+)
 IF ≥1 of 3 for Lokaler → UPDATE property_agent (otherwise mark as optional urban-only pattern)
 
-CURRENT STATUS (after PDF 16):
-- Loans: 1/1 = 100% (IMPLEMENT if ≥2/3)
-- Fees: 0/1 = 0% (DEFER - rare pattern)
-- Energy: 1/1 = 100% partial (IMPLEMENT with severity classification)
-- Lokaler: 2/2 = 100% (brf_82841 + brf_198532) → ✅ IMPLEMENT NOW!
+CURRENT STATUS (after PDF 17):
+- Loans: 2/2 = 100% (✅ READY TO IMPLEMENT! - threshold met)
+- Fees: 0/2 = 0% (DEFER - rare pattern, 1 Hjorthagen only)
+- Energy: 2/2 = 100% with SEVERITY TIERS (✅ READY TO IMPLEMENT! - SEVERE + MODERATE examples)
+- Lokaler: 2/3 = 66.7% (⚠️ IMPLEMENT AS OPTIONAL - may be urban-only pattern)
 ```
 
 ---
