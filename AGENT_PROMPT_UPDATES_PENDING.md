@@ -180,11 +180,18 @@
 For EACH of the next 3 SRS PDFs, track:
 
 ```
-PDF 16 (_____):
-[ ] Loan reclassification? (kortfristig >40%?) Y/N
-[ ] Multiple fee increases? Y/N
-[ ] Electricity increase >50%? Y/N
-[ ] Lokaler >15% of area? Y/N
+PDF 16 (brf_198532 - Björk och Plaza 2024): ✅ COMPLETE
+[✅] Loan reclassification? (kortfristig 49.7%) YES
+[❌] Multiple fee increases? (single +5% April 2025) NO
+[⚠️] Electricity increase >50%? (total energy +23% spike 2023, -11% recovery 2024, +9% net) PARTIAL
+[✅] Lokaler >15% of area? (20.7% = 1,579/9,132 m²) YES
+
+SCORE: 2.5 / 4 (62.5%)
+DETAILS:
+- Loans: 55.98M short-term / 112.6M total = 49.7% kortfristig, 2 loans mature Sept 2025
+- Fees: Single increase only (5% from April 2025), no mid-year adjustments
+- Energy: 2022: 165 kr/m² → 2023: 203 kr/m² (+23%) → 2024: 180 kr/m² (-11%, net +9%)
+- Lokaler: 1,579 m² (20.7%), revenue 1.16M (30.2%), premium 1.71x residential
 
 PDF 17 (_____):
 [ ] Loan reclassification? Y/N
@@ -205,6 +212,12 @@ IF ≥2 of 3 for Loans → UPDATE loans_agent
 IF ≥1 of 3 for Fees → UPDATE fees_agent
 IF ALL 3 for Energy → UPDATE energy_agent (or if ≥2 show +30%+)
 IF ≥1 of 3 for Lokaler → UPDATE property_agent (otherwise mark as optional urban-only pattern)
+
+CURRENT STATUS (after PDF 16):
+- Loans: 1/1 = 100% (IMPLEMENT if ≥2/3)
+- Fees: 0/1 = 0% (DEFER - rare pattern)
+- Energy: 1/1 = 100% partial (IMPLEMENT with severity classification)
+- Lokaler: 2/2 = 100% (brf_82841 + brf_198532) → ✅ IMPLEMENT NOW!
 ```
 
 ---

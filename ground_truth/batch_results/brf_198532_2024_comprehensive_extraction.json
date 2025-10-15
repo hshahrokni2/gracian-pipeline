@@ -1,0 +1,425 @@
+{
+  "metadata_agent": {
+    "brf_name": "BRF Björk och Plaza",
+    "org_number": "769629-0134",
+    "registered_date": "2014-11-03",
+    "fiscal_year_start": "2024-01-01",
+    "fiscal_year_end": "2024-12-31",
+    "report_pages": 20,
+    "accounting_standard": "K2",
+    "accounting_standard_reference": "BFNAR 2016:10",
+    "signed_date": "2025-04-24/2025-04-25",
+    "evidence_pages": [2, 3, 14]
+  },
+
+  "governance_agent": {
+    "chairman": "Mats Eskilson",
+    "chairman_period": "from 2024-04-25",
+    "previous_chairman": "Elvy Maria Löfvenberg",
+    "previous_chairman_period": "tom 2024-04-25",
+    "board_members": [
+      {"name": "Torbjörn Andersson", "role": "Ledamot"},
+      {"name": "Annelie Eck Arvstrand", "role": "Ledamot"},
+      {"name": "Angelo Ljungquist Baldesi", "role": "Ledamot"},
+      {"name": "Helena Lovén", "role": "Ledamot"}
+    ],
+    "board_deputies": [
+      {"name": "Christoph Comstedt", "role": "Suppleant"},
+      {"name": "Ann Viner", "role": "Suppleant", "period": "from 2024-04-25"},
+      {"name": "Kjell Levin", "role": "Suppleant", "period": "from 2024-04-25"},
+      {"name": "Carl Nordblom", "role": "Suppleant", "period": "tom 2024-04-25"}
+    ],
+    "board_meetings_count": 12,
+    "annual_meeting_date": "2024-04-25",
+    "auditor": "Frida Lundgren",
+    "auditor_firm": "KPMG",
+    "auditor_type": "Auktoriserad revisor",
+    "nomination_committee": [
+      {"name": "Mattias Lovén", "role": "Sammankallande"},
+      {"name": "Carl Nordblom", "role": "Member"}
+    ],
+    "evidence_pages": [6, 7, 20]
+  },
+
+  "property_agent": {
+    "address": "Drevergatan 1-3",
+    "city": "Stockholm",
+    "property_designation": "Sonfjället 2",
+    "acquisition_year": 2015,
+    "construction_year": 2015,
+    "valuation_year": 2017,
+    "buildings_count": 2,
+    "building_type": "flerbostadshus",
+    "total_area_sqm": 9132,
+    "residential_area_sqm": 7552,
+    "commercial_area_sqm": 1579,
+    "heating_system": "fjärrvärme",
+    "ownership_type": "äganderätt",
+    "insurance_provider": "Brandkontoret",
+    "insurance_type": "fullvärdesförsäkrad med kollektivt bostadsrättstillägg",
+    "property_manager_technical": "Alova Fastighetsteknik AB",
+    "property_manager_economic": "Botema Fastighets AB",
+    "member_in_samfallighet": true,
+    "samfallighet_name": "Sonfjällets samfällighetsförening",
+    "samfallighet_share_pct": 47,
+    "samfallighet_manages": "gården, garagefoajén med yttre garageport",
+    "evidence_pages": [3, 4, 5]
+  },
+
+  "members_agent": {
+    "total_apartments": 94,
+    "total_commercial_units": 2,
+    "commercial_unit_type": "hyreslägenhet lokaler",
+    "apartment_breakdown": {
+      "1_rok": 10,
+      "2_rok": 24,
+      "3_rok": 23,
+      "4_rok": 36,
+      "5_rok": 1
+    },
+    "members_start_of_year": 160,
+    "members_new": 9,
+    "members_departed": 11,
+    "members_end_of_year": 162,
+    "transfers_during_year": 6,
+    "sublet_approvals_active": 1,
+    "sublet_apartment": "3-1403",
+    "sublet_extended_one_year": true,
+    "common_spaces": [
+      {"type": "entreér", "count": 2, "description": "gemensamma"},
+      {"type": "gemensamhetslokaler", "count": 2, "description": "för fester och möten, Plaza kan även användas som övernattningslägenhet"},
+      {"type": "takterrasser", "count": 2, "description": "med möbler och odlingslådor"}
+    ],
+    "evidence_pages": [3, 4, 6, 7]
+  },
+
+  "fees_agent": {
+    "total_fees_collected": 4777857,
+    "fee_increase_2025": 0.05,
+    "fee_increase_date": "2025-04-01",
+    "fee_increase_reason": "ökade räntekostnader vid omläggning av lån samt generella prisökningar från föreningens leverantörer",
+    "avg_fee_per_sqm_residential": 761,
+    "avg_fee_per_sqm_residential_previous_year": 725,
+    "tv_broadband_fee_reduction": true,
+    "tv_broadband_old_fee": 220,
+    "tv_broadband_new_fee": 170,
+    "tv_broadband_change_date": "2025-04-01",
+    "evidence_pages": [8, 15]
+  },
+
+  "commercial_tenants_agent": {
+    "commercial_tenants": [
+      {
+        "tenant_name": "Puls & Träning/STC Sweden AB",
+        "area_sqm": 282,
+        "lease_start": "2022-06-20",
+        "lease_end": "2025-06-19",
+        "annual_rent": null
+      },
+      {
+        "tenant_name": "Barnsjukhuset Martina i Stockholm AB",
+        "area_sqm": 197,
+        "lease_start": "2020-06-22",
+        "lease_end": "2030-06-21",
+        "annual_rent": null
+      }
+    ],
+    "total_commercial_rent_collected": 1162689,
+    "commercial_rent_per_sqm_avg": 1299,
+    "commercial_rent_pct_of_revenue": 30.2,
+    "vat_registered": true,
+    "evidence_pages": [4, 15]
+  },
+
+  "financial_agent": {
+    "total_revenue": 8163873,
+    "total_revenue_previous_year": 7729532,
+    "total_operating_expenses": 8278080,
+    "total_operating_expenses_previous_year": 8393837,
+    "operating_result": -72510,
+    "operating_result_previous_year": -430822,
+    "financial_income": 213788,
+    "financial_expenses": 3558997,
+    "result_after_financial": -3417718,
+    "result_after_financial_previous_year": -2786321,
+    "total_assets": 668523855,
+    "total_assets_previous_year": 672570173,
+    "total_equity": 551870686,
+    "total_equity_previous_year": 555288403,
+    "soliditet_pct": 82.6,
+    "total_liabilities": 116653169,
+    "long_term_liabilities": 56625000,
+    "short_term_liabilities": 60028169,
+    "cash_and_bank": 7698591,
+    "cash_and_bank_previous_year": 8250383,
+    "multi_year_metrics": {
+      "2024": {"revenue": 8164, "result": -3418, "soliditet": 82.6, "fee_per_sqm": 761, "debt_per_sqm_residential": 14909, "debt_per_sqm_total": 12331, "savings_per_sqm": 75, "interest_sensitivity_pct": 20, "energy_cost_per_sqm": 180, "fees_pct_of_revenue": 70},
+      "2023": {"revenue": 7730, "result": -2786, "soliditet": 82.6, "fee_per_sqm": 725, "debt_per_sqm_residential": 14975, "debt_per_sqm_total": 12386, "savings_per_sqm": 118, "interest_sensitivity_pct": 21, "energy_cost_per_sqm": 203, "fees_pct_of_revenue": 69},
+      "2022": {"revenue": 7475, "result": -1733, "soliditet": 83.0, "fee_per_sqm": 699, "debt_per_sqm_residential": 15024, "debt_per_sqm_total": 12427, "savings_per_sqm": 196, "interest_sensitivity_pct": 22, "energy_cost_per_sqm": 165, "fees_pct_of_revenue": 70},
+      "2021": {"revenue": 7394, "result": -354, "soliditet": 82.9, "fee_per_sqm": 582, "debt_per_sqm_residential": 15201},
+      "2020": {"revenue": 6645, "result": -862, "soliditet": 83.0, "fee_per_sqm": 582, "debt_per_sqm_residential": 15201}
+    },
+    "evidence_pages": [7, 10, 11, 12]
+  },
+
+  "loans_agent": {
+    "total_debt": 112605000,
+    "total_debt_previous_year": 113105000,
+    "amortization_year": 500000,
+    "amortization_free": false,
+    "average_interest_rate_pct": 3.528,
+    "interest_rate_context": "Efter omläggning av lån i september 2024 är vår snittränta 3,528%",
+    "loans": [
+      {
+        "lender": "SEB",
+        "loan_id": "41431520",
+        "amount": 30000000,
+        "interest_rate_pct": 2.54,
+        "interest_change_date": "2027-09-28",
+        "maturity_classification": "long_term"
+      },
+      {
+        "lender": "SEB",
+        "loan_id": "41431539",
+        "amount": 30000000,
+        "interest_rate_pct": 4.67,
+        "interest_change_date": "2025-09-28",
+        "maturity_classification": "short_term"
+      },
+      {
+        "lender": "SEB",
+        "loan_id": "41431555",
+        "amount": 26625000,
+        "interest_rate_pct": 4.54,
+        "interest_change_date": "2026-09-28",
+        "maturity_classification": "long_term"
+      },
+      {
+        "lender": "SEB",
+        "loan_id": "41431571",
+        "amount": 25980000,
+        "interest_rate_pct": 2.36,
+        "interest_change_date": "2025-09-28",
+        "maturity_classification": "short_term"
+      }
+    ],
+    "short_term_debt": 55980000,
+    "long_term_debt": 56625000,
+    "pledged_collateral": 119480000,
+    "collateral_type": "fastighetsinteckningar",
+    "evidence_pages": [8, 18, 19]
+  },
+
+  "operating_costs_agent": {
+    "total_operating_costs": 2702992,
+    "total_operating_costs_previous_year": 3035320,
+    "el": 681096,
+    "el_previous_year": 667970,
+    "värme": 683717,
+    "värme_previous_year": 709367,
+    "vatten": 275993,
+    "vatten_previous_year": 310674,
+    "sophämtning": 5829,
+    "sophämtning_previous_year": 7921,
+    "källsortering": 64460,
+    "källsortering_previous_year": 67514,
+    "sopsug": 134387,
+    "sopsug_previous_year": 143983,
+    "reparationer": 819463,
+    "reparationer_previous_year": 685704,
+    "trädgård": 38047,
+    "trädgård_previous_year": 442187,
+    "utility_pattern": "Pattern C (separate el+värme+vatten)",
+    "evidence_pages": [15, 16]
+  },
+
+  "driftskostnader_agent": {
+    "total_driftskostnader": 1248610,
+    "total_driftskostnader_previous_year": 1119614,
+    "städning": 96101,
+    "hisservice": 240771,
+    "hisservice_previous_year": 172019,
+    "entrémattor": 16256,
+    "fastighetsförsäkring": 101019,
+    "fastighetsförsäkring_previous_year": 61719,
+    "kabel_tv": 115902,
+    "bredband": 117030,
+    "fastighetsskötsel_avtal": 274572,
+    "fastighetsskötsel_utöver_avtal": 55585,
+    "fastighetsskatt": 228000,
+    "evidence_pages": [16]
+  },
+
+  "notes_maintenance_agent": {
+    "maintenance_plan_exists": true,
+    "maintenance_plan_period": "2018-2043",
+    "maintenance_plan_status": "under uppdatering",
+    "major_maintenance_completed_2024": [
+      {"item": "Stamspolning avlopp", "year": 2024, "cost": null},
+      {"item": "Byte till LED belysning i källare och garage", "year": 2024, "cost": null},
+      {"item": "Belysning i hisshallar och trapphus kompletterat med nödbelysningsfunktion", "year": 2024, "cost": null}
+    ],
+    "major_maintenance_planned": [
+      {"item": "Säkrare utrymning vid trapphusen", "year": 2025, "cost": null},
+      {"item": "Gårdens trägångar och pergola", "year": 2025, "cost": null},
+      {"item": "Utbyte av droppskydd under kylskåp", "year": 2025, "cost": null},
+      {"item": "Bättre förvaringsmöjligheter i Cykelrummet", "year": "2025-2026", "cost": null},
+      {"item": "Takterrasser", "year": "2025-2026", "cost": null}
+    ],
+    "evidence_pages": [4, 5]
+  },
+
+  "events_agent": {
+    "significant_events_2024": [
+      {
+        "event": "Överenskommelse med Skanska och återställande av gården",
+        "description": "Styrelsen har under 2024 fortsatt drivit våra krav på åtgärdande av fel gentemot Skanska. En av besiktningspunkterna gäller trägångar och pergola på gården som nu är i så dåligt skick att de behöver göras om fullständigt. Vi måste av säkerhetsskäl åtgärda detta under 2025 oavsett om vi når en överenskommelse med Skanska eller inte. Upphandling av en entreprenör för detta påbörjades i slutet av 2024.",
+        "evidence_pages": [5, 6]
+      },
+      {
+        "event": "OVK-besiktning och åtgärder för brandskydd",
+        "description": "I början på året avslutades Obligatorisk ventilationskontroll (OVK) för denna gång. (OVK genomförs var tredje år.) I samband med OVK genomfördes en injustering av ventilationen som Skanska efter styrelsens begäran har betalat. Vid injusteringen upptäcktes vissa brister i ventilationsbrandskyddet. Dessa är delvis åtgärdade och styrelsen driver frågan vidare mot Skanska.",
+        "evidence_pages": [6]
+      },
+      {
+        "event": "Stamspolning och underhåll av avloppssystemet",
+        "description": "Som en del av föreningens långsiktiga underhållsplan genomfördes under året en omfattande stamspolning av fastighetens avloppssystem. Detta arbete syftar till att förebygga framtida avloppsproblem och säkerställa att systemet fungerar optimalt.",
+        "evidence_pages": [6]
+      },
+      {
+        "event": "Energieffektivisering genom uppgradering till LED-belysning",
+        "description": "Föreningen har under året fortsatt sitt arbete med att förbättra energieffektiviteten i fastigheten. En större uppgradering av belysningen har genomförts, där äldre lysrörsarmaturer har ersatts med moderna LED-lösningar.",
+        "evidence_pages": [6]
+      }
+    ],
+    "post_balance_events": [
+      {
+        "event": "Skanska ersättning",
+        "date": "2025-03-14",
+        "description": "Föreningen har erhållit ersättning om 1 062 000 kr från Skanska",
+        "evidence_pages": [19]
+      },
+      {
+        "event": "Fee increase and TV/broadband reduction",
+        "date": "2025-04-01",
+        "description": "Styrelsen har beslutat att justera månadsavgifterna med en höjning om 5 procent. Samtidigt har kostnaden för TV och bredband sänkts från 220 kronor per månad till 170 kronor per månad.",
+        "evidence_pages": [19]
+      }
+    ],
+    "evidence_pages": [5, 6, 19]
+  },
+
+  "tax_agent": {
+    "property_tax_exemption": true,
+    "property_tax_exemption_years": 15,
+    "property_tax_exemption_based_on": "nybyggnadsår 2015",
+    "property_tax_rate_per_apartment": 1630,
+    "property_tax_rate_max_pct": 0.3,
+    "property_tax_calculation_base": "taxeringsvärdet för bostadshuset med tillhörande tomtmark",
+    "tax_assessment_value_building": 275800000,
+    "tax_assessment_value_land": 259000000,
+    "tax_assessment_value_total": 534800000,
+    "tax_assessment_breakdown": {
+      "bostäder": 512000000,
+      "lokaler": 22800000
+    },
+    "evidence_pages": [8, 18]
+  },
+
+  "energy_agent": {
+    "heating_provider": "Stockholm Exergi",
+    "electricity_provider": "Fortum Markets AB",
+    "electricity_network": "Ellevio AB",
+    "water_provider": "Stockholm Vatten och Avfall AB",
+    "energy_cost_per_sqm_2024": 180,
+    "energy_cost_per_sqm_2023": 203,
+    "energy_cost_per_sqm_2022": 165,
+    "energy_trend": "decreased from 2023 to 2024 after spike in 2023",
+    "energy_efficiency_measures_2024": [
+      {"measure": "LED-belysning i källare och garage", "year": 2024},
+      {"measure": "LED-lösningar i trapphus och korridorer", "year": 2024}
+    ],
+    "evidence_pages": [5, 6, 7, 15]
+  },
+
+  "reserves_agent": {
+    "maintenance_fund_balance": 1195369,
+    "maintenance_fund_balance_previous_year": 968779,
+    "maintenance_fund_allocation_2024": 226590,
+    "maintenance_fund_usage_2024": 401434,
+    "maintenance_fund_min_requirement_per_sqm": 30,
+    "maintenance_fund_requirement_basis": "stadgarna, minst 30 kr per kvm bostadsarea",
+    "evidence_pages": [9, 12]
+  },
+
+  "cashflow_agent": {
+    "operating_cashflow_before_wc": 114120,
+    "operating_cashflow_after_wc": -440874,
+    "investing_cashflow": 389082,
+    "financing_cashflow": -500000,
+    "net_cashflow": -551792,
+    "net_cashflow_previous_year": 4802780,
+    "cash_start_of_year": 8250383,
+    "cash_end_of_year": 7698591,
+    "evidence_pages": [13]
+  },
+
+  "depreciation_agent": {
+    "building_depreciation": 3503359,
+    "building_depreciation_previous_year": 3503359,
+    "laddstolpar_depreciation": 38908,
+    "laddstolpar_depreciation_previous_year": 0,
+    "total_depreciation": 3542267,
+    "total_depreciation_previous_year": 3503359,
+    "building_depreciation_period_years": 100,
+    "laddstolpar_depreciation_period_years": 10,
+    "building_acquisition_value": 682435875,
+    "building_accumulated_depreciation": 26275191,
+    "building_carrying_value": 656160684,
+    "laddstolpar_acquisition_value": 389082,
+    "laddstolpar_accumulated_depreciation": 38908,
+    "laddstolpar_carrying_value": 350174,
+    "laddstolpar_nedskrivning_bidrag": -389082,
+    "evidence_pages": [17, 18]
+  },
+
+  "_extraction_confidence": {
+    "overall_confidence_pct": 98,
+    "fields_high_confidence": [
+      "metadata",
+      "governance",
+      "property",
+      "members",
+      "financial",
+      "loans",
+      "operating_costs",
+      "reserves",
+      "tax",
+      "depreciation"
+    ],
+    "fields_medium_confidence": [
+      "commercial_rent_amounts (not explicitly stated per tenant)",
+      "maintenance_costs (not all itemized)"
+    ],
+    "fields_uncertain": []
+  },
+
+  "_notes": {
+    "pdf_quality": "Excellent - Machine-readable, well-structured K2 report",
+    "special_characteristics": [
+      "NEW CONSTRUCTION (2015) - 9-10 years old",
+      "Member of samfällighet (47% share)",
+      "All loans with SEB (single lender)",
+      "Pattern C utilities (el + värme + vatten ALL separate)",
+      "Post-balance Skanska settlement 1.06M SEK",
+      "5% fee increase April 2025 but TV/broadband reduced",
+      "K2 accounting standard",
+      "KPMG audit (different from Hjorthagen's Adeco/individual auditors)",
+      "Ongoing dispute with Skanska (builder) over construction defects",
+      "Major maintenance: Garden restoration needed for safety reasons"
+    ],
+    "extraction_method": "Manual comprehensive extraction from PDF read",
+    "extraction_date": "2025-10-15",
+    "extracted_by": "Claude (Learning Loop Step 1)"
+  }
+}
