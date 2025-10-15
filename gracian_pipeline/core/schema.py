@@ -5,6 +5,14 @@ from typing import Dict, Any
 
 # Base expected types per agent. Types: 'str', 'num', 'bool', 'list', 'num|str'
 EXPECTED_TYPES: Dict[str, Dict[str, str]] = {
+    "metadata_agent": {
+        "brf_name": "str",
+        "org_number": "str",
+        "report_year": "num",
+        "accounting_standard": "str",  # "K2"|"K3"
+        "pages": "num",
+        "evidence_pages": "list",
+    },
     "governance_agent": {
         "chairman": "str",
         "board_members": "list",
@@ -20,6 +28,8 @@ EXPECTED_TYPES: Dict[str, Dict[str, str]] = {
         "liabilities": "num",
         "equity": "num",
         "surplus": "num",
+        "consecutive_loss_years": "num",  # Count of consecutive loss years
+        "multi_year_metrics": "list",  # Flerårsöversikt data
         "evidence_pages": "list",
     },
     "property_agent": {
@@ -41,6 +51,8 @@ EXPECTED_TYPES: Dict[str, Dict[str, str]] = {
     "notes_maintenance_agent": {
         "maintenance_plan": "str",
         "maintenance_budget": "num|str",
+        "major_project": "str",
+        "expensing_strategy": "str",  # "capitalized"|"expensed_directly"|"mixed"
         "evidence_pages": "list",
     },
     "notes_tax_agent": {
@@ -62,6 +74,7 @@ EXPECTED_TYPES: Dict[str, Dict[str, str]] = {
         "evidence_pages": "list",
     },
     "loans_agent": {
+        "loans": "list",  # List of loan objects with maturity classification
         "outstanding_loans": "num",
         "interest_rate": "num",
         "amortization": "num",
