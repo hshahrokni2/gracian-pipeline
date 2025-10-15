@@ -1,0 +1,469 @@
+{
+  "metadata_agent": {
+    "organization_number": "769633-6838",
+    "organization_name": "Brf Unité",
+    "fiscal_year_start": "2023-01-01",
+    "fiscal_year_end": "2023-12-31",
+    "report_date": "2023-12-31",
+    "accounting_standard": "K2",
+    "pages_total": 21,
+    "report_type": "årsredovisning",
+    "property_manager": "SBC AB",
+    "evidence_pages": [1, 2, 4]
+  },
+
+  "governance_agent": {
+    "chairman": "Philip Björk",
+    "vice_chairman": null,
+    "treasurer": null,
+    "secretary": null,
+    "board_members": [
+      {"name": "Philip Björk", "role": "Ordförande"},
+      {"name": "Rene Naarmann", "role": "Styrelseledamot"},
+      {"name": "Anders Semb Goldsmith", "role": "Styrelseledamot"},
+      {"name": "Christian Barck", "role": "Styrelseledamot"},
+      {"name": "Eva Gabriella E Ejlertsson Åström", "role": "Styrelseledamot"},
+      {"name": "Louise Stenberg", "role": "Styrelseledamot"},
+      {"name": "Manda Norea Kristensson", "role": "Suppleant"},
+      {"name": "Patrik Hardin", "role": "Suppleant"}
+    ],
+    "board_size": 8,
+    "board_meetings_count": 11,
+    "annual_meeting_date": "2023-10-26",
+    "extra_meeting_dates": [],
+    "valberedning": ["Tomas Olsson"],
+    "firmateckning": "Firman tecknas av styrelsen två i förening",
+    "evidence_pages": [4, 5]
+  },
+
+  "audit_agent": {
+    "auditor_name": "Robert Hasslund",
+    "auditor_firm": "RSM Stockholm",
+    "auditor_type": "Auktoriserad revisor",
+    "audit_report_pages": 3,
+    "audit_opinion": "Utan anmärkning",
+    "evidence_pages": [5, 19, 20, 21]
+  },
+
+  "property_agent": {
+    "property_designation": "Backåkra 7",
+    "total_area_sqm": 3539,
+    "bostadsratter_count": 46,
+    "apartment_breakdown": {
+      "1_rok": null,
+      "2_rok": null,
+      "3_rok": null,
+      "4_rok": null,
+      "5_rok": null,
+      "total": 46
+    },
+    "construction_year": 2020,
+    "property_insurance": "Proinova AB",
+    "taxeringsvarde_building": 121098000,
+    "taxeringsvarde_mark": 108775000,
+    "taxeringsvarde_total": 229873000,
+    "samfallighet_membership": "Backåkra",
+    "samfallighet_share_pct": 29.4,
+    "samfallighet_description": "Förvaltar gård, Garage och Sophantering",
+    "evidence_pages": [4, 16]
+  },
+
+  "financial_agent": {
+    "assets_total": 398343229,
+    "equity_total": 322171267,
+    "liabilities_total": 76171962,
+    "net_revenue": -2282227,
+    "profit_loss": -2282227,
+    "soliditet_pct": 81.0,
+    "cash_and_bank": 6113873,
+    "nettoomsattning": 5264131,
+    "nettoomsattning_breakdown": {
+      "arsavgifter_bostader": 3472577,
+      "arsavgifter_garage": -738,
+      "hyresintakter_lokaler": 777521,
+      "hyresintakter_ovr_objekt": 6667,
+      "fastighetsskatt_moms": 68560,
+      "vatten_moms": 41277,
+      "el_moms": 258758,
+      "gemensamhetslokal": 9200,
+      "parkering": 608538,
+      "drojsmalsranta": 619,
+      "pantsattningsavgift": 3675,
+      "overlatelseavgift": 5252,
+      "andrahandsuthyrning": 12223,
+      "ores_kronutjamning": 2
+    },
+    "other_income": 344299,
+    "total_revenue": 5608430,
+    "balansomslutning": 398343229,
+    "kundfordringar": 34780,
+    "evidence_pages": [8, 9, 10, 13]
+  },
+
+  "operating_costs_agent": {
+    "total_driftskostnader": 2010058,
+    "fastighetsskotsel": 169026,
+    "reparationer_underhall": 388807,
+    "taxebundna_kostnader": 1091811,
+    "ovriga_driftskostnader": 360414,
+    "el": 299690,
+    "varme": 494718,
+    "vatten": 164560,
+    "sophamtning": 132843,
+    "fastighetsforsakringar": 41544,
+    "kabel_tv": 74832,
+    "fastighetsskatt": 68730,
+    "samfallighetsavgifter": 186129,
+    "hiss_underhall": 9031,
+    "sotning_ventilation": null,
+    "ventilation_major_work": 36385,
+    "varmeanlaggning_major_work": 21196,
+    "vattenskada": 289314,
+    "evidence_pages": [13, 14]
+  },
+
+  "loans_agent": {
+    "total_debt": 75209658,
+    "long_term_debt": 7062228,
+    "short_term_debt": 68147430,
+    "loans": [
+      {
+        "lender": "SBAB",
+        "loan_id": "Loan 1",
+        "amount": 68147430,
+        "interest_rate_pct": 4.69,
+        "maturity_date": "2024-06-17",
+        "villkorsandringsdag": "2024-06-17",
+        "maturity_classification": "short_term"
+      }
+    ],
+    "average_interest_rate_pct": 4.32,
+    "debt_per_sqm": 19256,
+    "projected_debt_5_years": 66422190,
+    "loan_restructuring_note": "100% of loan debt matures June 17, 2024 (6 months from report date) - EXTREME refinancing risk",
+    "evidence_pages": [17]
+  },
+
+  "fees_agent": {
+    "fee_per_sqm_annual": 1051,
+    "multiple_increases": true,
+    "fee_increase_details": {
+      "increase_1_date": "2023-01-01",
+      "increase_1_pct": 29.0,
+      "increase_1_from": 204908,
+      "increase_1_to": 264328,
+      "increase_2_date": "2023-12-01",
+      "increase_2_pct": 9.0,
+      "increase_2_from": 264328,
+      "increase_2_to": 288118,
+      "extra_member_payment_december": 264328,
+      "total_stated_increase_pct": 41.5,
+      "compound_effect_pct": 40.61,
+      "reason": "Two-step fee increase in 2023 to cover increased costs"
+    },
+    "fee_history": [
+      {"year": 2023, "fee_per_sqm": 1051},
+      {"year": 2022, "fee_per_sqm": null},
+      {"year": 2021, "fee_per_sqm": null}
+    ],
+    "evidence_pages": [5, 6]
+  },
+
+  "energy_agent": {
+    "elkostnad_per_sqm": 85,
+    "varmekostnad_per_sqm": 140,
+    "vattenkostnad_per_sqm": 46,
+    "energikostnad_per_sqm_total": 271,
+    "multi_year_energy_trends": [
+      {"year": 2023, "el_per_sqm": 85, "varme_per_sqm": 140, "vatten_per_sqm": 46},
+      {"year": 2022, "el_per_sqm": 112, "varme_per_sqm": 114, "vatten_per_sqm": 40},
+      {"year": 2021, "el_per_sqm": 78, "varme_per_sqm": 74, "vatten_per_sqm": 36}
+    ],
+    "electricity_increase_pct_2022_2023": -24.1,
+    "electricity_increase_pct_3_year": 9.0,
+    "heating_increase_pct_2022_2023": 22.8,
+    "water_increase_pct_2022_2023": 15.0,
+    "elstod_received": 85597,
+    "elstod_pct_offset": null,
+    "energy_initiatives": null,
+    "energy_crisis_severity": "MODERATE",
+    "evidence_pages": [6, 14]
+  },
+
+  "reserves_agent": {
+    "underhallsfond_balance": 81272,
+    "underhallsfond_previous": 106170,
+    "underhallsfond_change": -24898,
+    "reservering_till_fond": -53085,
+    "underhallsplan_exists": true,
+    "underhallsplan_period": "2022-2023",
+    "underhallsplan_updated": 2023,
+    "evidence_pages": [5, 7]
+  },
+
+  "members_agent": {
+    "total_members_start": 74,
+    "new_members": 8,
+    "departing_members": 7,
+    "total_members_end": 75,
+    "transfers_during_year": 5,
+    "evidence_pages": [5]
+  },
+
+  "events_agent": {
+    "major_events": [
+      {
+        "event": "Double fee increase",
+        "date": "2023",
+        "description": "Two fee increases: +29% Jan 1 (204,908 → 264,328 kr) and +9% Dec 1 (264,328 → 288,118 kr), plus extra member payment 264,328 kr in December",
+        "impact": "Total 41.5% increase for 2023"
+      },
+      {
+        "event": "2-year warranty inspection",
+        "date": "2023",
+        "description": "2-year garantibesiktning completed with action plan created",
+        "impact": "Ongoing work to address warranty issues"
+      },
+      {
+        "event": "Substantial loss",
+        "date": "2023",
+        "description": "Loss of 2.28M kr exceeds depreciation + maintenance by 388,600 kr",
+        "impact": "Negative operational result"
+      },
+      {
+        "event": "Post-year fee changes",
+        "date": "2024",
+        "description": "Feb 2024: +32.2% increase, Mar 2024: -7.2% reduction",
+        "impact": "Continued fee volatility after fiscal year"
+      }
+    ],
+    "evidence_pages": [5, 7, 17]
+  },
+
+  "notes_maintenance_agent": {
+    "major_maintenance_completed": [
+      {"year": 2023, "description": "2-års garantibesiktning (warranty inspection)"}
+    ],
+    "planned_maintenance": [
+      {"period": "2023-ongoing", "description": "Åtgärdsplan implementation from warranty inspection"}
+    ],
+    "maintenance_expenses_major": {
+      "vattenskada": 289314,
+      "ventilation": 36385,
+      "varmeanlaggning": 21196,
+      "vvs": 0,
+      "total_major_repairs": 346895
+    },
+    "underhallsplan_period": "2022-2023",
+    "evidence_pages": [5, 14]
+  },
+
+  "insurance_agent": {
+    "insurance_provider": "Proinova AB",
+    "insurance_premium": 41544,
+    "property_coverage": null,
+    "liability_coverage": "Includes board liability insurance",
+    "evidence_pages": [4, 14]
+  },
+
+  "tax_agent": {
+    "fastighetsskatt": 68730,
+    "fastighetsavgift_exemption": true,
+    "exemption_years": "First 15 years from construction (2020)",
+    "skattekonto_balance": 2998,
+    "moms_avrakning": 10935,
+    "lokaler_fastighetsskatt": 68730,
+    "evidence_pages": [14, 16]
+  },
+
+  "planned_actions_agent": {
+    "planned_actions": [
+      {
+        "action": "Fee stabilization",
+        "status": "Implemented 2024",
+        "description": "Post-year fee adjustments: +32.2% Feb 2024, -7.2% Mar 2024 to stabilize finances"
+      },
+      {
+        "action": "Warranty issue remediation",
+        "status": "In progress 2023-2024",
+        "description": "Implementing action plan from 2-year warranty inspection"
+      },
+      {
+        "action": "Loan refinancing preparation",
+        "status": "Critical - June 2024",
+        "description": "100% of debt (68.15M kr) matures June 17, 2024 - urgent refinancing needed"
+      }
+    ],
+    "evidence_pages": [5, 17]
+  },
+
+  "cashflow_agent": {
+    "cash_flow_statement_present": true,
+    "cash_start_of_year": 10206962,
+    "cash_end_of_year": 6426703,
+    "cash_change": -3780259,
+    "cash_from_operations": -433702,
+    "cash_from_investments": 0,
+    "cash_from_financing": -3346557,
+    "evidence_pages": [11]
+  },
+
+  "depreciation_agent": {
+    "total_depreciation": 1938228,
+    "building_depreciation_rate_pct": 0.83,
+    "property_improvements_depreciation_rate_pct": null,
+    "accumulated_depreciation": 3876457,
+    "ack_anskaffningsvarde": 395686089,
+    "restvarde_enligt_plan": 391809632,
+    "mark_value_included": 162038915,
+    "evidence_pages": [16]
+  },
+
+  "driftskostnader_agent": {
+    "total_driftskostnader": 2010058,
+    "fastighetsskotsel": 169026,
+    "reparationer_underhall": 388807,
+    "el": 299690,
+    "uppvarmning": 494718,
+    "vatten": 164560,
+    "sophamtning": 132843,
+    "fastighetsforsakringar": 41544,
+    "kabel_tv": 74832,
+    "fastighetsskatt": 68730,
+    "samfallighetsavgifter": 186129,
+    "ventilation_major": 36385,
+    "varmeanlaggning_major": 21196,
+    "ovriga_externa_kostnader": 1195073,
+    "personalkostnader": 0,
+    "evidence_pages": [13, 14, 15]
+  },
+
+  "commercial_tenants_agent": {
+    "has_commercial_space": true,
+    "total_commercial_area_sqm": 227,
+    "commercial_rent_collected": 777521,
+    "commercial_rent_pct_of_revenue": 14.8,
+    "commercial_area_pct_of_total": 6.4,
+    "evidence_pages": [4, 13]
+  },
+
+  "enhanced_loans_agent": {
+    "total_debt": 75209658,
+    "langfristig_debt": 7062228,
+    "kortfristig_debt": 68147430,
+    "langfristig_pct": 9.4,
+    "kortfristig_pct": 90.6,
+    "lender_concentration": {
+      "SBAB": 100.0
+    },
+    "maturity_profile": {
+      "within_6_months": 68147430,
+      "6_12_months": 0,
+      "1_2_years": 0,
+      "2_5_years": 7062228,
+      "over_5_years": 0
+    },
+    "weighted_avg_rate": 4.32,
+    "rate_range": {
+      "min": 4.69,
+      "max": 4.69
+    },
+    "interest_expense_annual": 2954100,
+    "risk_assessment": {
+      "refinancing_risk": "EXTREME",
+      "rate_risk": "HIGH",
+      "concentration_risk": "EXTREME",
+      "overall_risk": "EXTREME"
+    },
+    "risk_factors": [
+      "100% of loan debt matures within 6 months (June 17, 2024)",
+      "100% concentration with single lender (SBAB)",
+      "90.6% of total debt classified as short-term",
+      "Substantial operational losses (2.28M kr) may impair refinancing capacity",
+      "Multiple fee increases (41.5% total) indicate financial stress",
+      "New construction (2020) with warranty issues may affect valuation"
+    ],
+    "evidence_pages": [17]
+  },
+
+  "revenue_breakdown_agent": {
+    "total_revenue": 5608430,
+    "arsavgifter_total": 3471839,
+    "arsavgifter_pct": 61.9,
+    "hyresintakter_total": 784188,
+    "hyresintakter_pct": 14.0,
+    "taxebundna_intakter": 368595,
+    "taxebundna_pct": 6.6,
+    "parkering_intakter": 608538,
+    "parkering_pct": 10.9,
+    "ovriga_intakter": 375270,
+    "ovriga_pct": 6.7,
+    "revenue_concentration": {
+      "top_source": "Årsavgifter bostäder",
+      "top_source_pct": 61.9
+    },
+    "evidence_pages": [8, 13]
+  },
+
+  "ключевые_показатели_agent": {
+    "skuldsattningsgrad_pct": 23.3,
+    "rantabilitet_pct": -0.7,
+    "likviditet": 8.9,
+    "belaning_taxeringsvarde_pct": 32.7,
+    "riskjusterad_soliditet_pct": 81.0,
+    "driftnetto": 465071,
+    "driftnetto_per_sqm": 131,
+    "rantekostnad_per_sqm": 835,
+    "rantekanslighe_pct": 18.33,
+    "evidence_pages": [6, 8, 9, 10]
+  },
+
+  "ватерфолл_анализ_agent": {
+    "intakter_totalt": 5608430,
+    "drift_totalt": -2010058,
+    "externa_kostnader": -1195073,
+    "avskrivningar": -1938228,
+    "rorelseresultat": 465071,
+    "ranteintakter": 215909,
+    "rantekostnader": -2963207,
+    "resultat_efter_finans": -2282227,
+    "waterfall_summary": "Revenue 5.61M → Operating costs -2.01M → External costs -1.20M → Depreciation -1.94M → Operating profit 0.47M → Interest -2.75M → Net loss -2.28M",
+    "evidence_pages": [8]
+  },
+
+  "critical_patterns_agent": {
+    "patterns_identified": [
+      {
+        "pattern": "EXTREME refinancing risk",
+        "severity": "CRITICAL",
+        "description": "100% of loan debt (68.15M kr) matures June 17, 2024 - only 6 months from report date",
+        "impact": "Association must refinance entire debt within 6 months during period of financial stress"
+      },
+      {
+        "pattern": "Multiple fee increases - SRS validation",
+        "severity": "HIGH",
+        "description": "Second SRS case validating multiple increases pattern: +29% Jan, +9% Dec, plus extra 264K kr member payment = 41.5% total",
+        "impact": "Confirms fees_agent pattern exists in SRS dataset at 40% prevalence (2/5 PDFs)"
+      },
+      {
+        "pattern": "New construction warranty complications",
+        "severity": "MEDIUM",
+        "description": "2020-2021 construction with 2-year warranty inspection revealing issues requiring action plan",
+        "impact": "Potential additional costs and reduced refinancing capacity"
+      },
+      {
+        "pattern": "Negative operational result",
+        "severity": "HIGH",
+        "description": "Loss of 2.28M kr exceeds depreciation+maintenance by 388,600 kr - true cash loss",
+        "impact": "Reduced reserves and financial flexibility for refinancing"
+      },
+      {
+        "pattern": "Post-year fee volatility",
+        "severity": "MEDIUM",
+        "description": "Feb 2024: +32.2%, Mar 2024: -7.2% - continued instability after fiscal year",
+        "impact": "Indicates ongoing financial challenges and planning difficulties"
+      }
+    ],
+    "evidence_pages": [5, 7, 17]
+  }
+}
