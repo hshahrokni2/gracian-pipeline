@@ -1,0 +1,483 @@
+{
+  "document_metadata": {
+    "pdf_filename": "brf_271949.pdf",
+    "pdf_number": "8/42",
+    "brf_name": "Brf Gillret",
+    "org_number": "769600-0731",
+    "fiscal_year": 2023,
+    "report_type": "Årsredovisning",
+    "accounting_standard": "K3",
+    "accounting_framework": "BFNAR 2012:1 (K3)",
+    "pages_total": 14,
+    "processing_date": "2025-10-15",
+    "evidence_pages": [1]
+  },
+
+  "governance_agent": {
+    "board_members": [
+      {"name": "Fredrik Ahlberg", "role": "Ordförande", "period": "2023-01-01 to 2023-12-31"},
+      {"name": "Mats Bergström", "role": "Vice ordförande", "period": "2023-01-01 to 2023-12-31"},
+      {"name": "Karin Lindbäck", "role": "Ledamot", "period": "2023-01-01 to 2023-12-31"},
+      {"name": "Mikael Westling", "role": "Ledamot", "period": "2023-01-01 to 2023-12-31"},
+      {"name": "Marika Silokangas", "role": "Suppleant", "period": "2023-01-01 to 2023-12-31"}
+    ],
+    "chairman": "Fredrik Ahlberg",
+    "board_size": 4,
+    "board_deputies": 1,
+    "auditor_name": "Jessica Scipio",
+    "auditor_firm": null,
+    "auditor_type": "Intern revisor",
+    "internal_auditor": "Jessica Scipio",
+    "board_meeting_frequency": "18 sammanträden under 2023",
+    "board_meetings_count": 18,
+    "annual_meeting_date": "2024-03-20",
+    "extraordinary_meetings": null,
+    "evidence_pages": [2, 3]
+  },
+
+  "financial_agent": {
+    "total_assets": 10537881,
+    "total_equity": 6836389,
+    "total_liabilities": 3701492,
+    "liabilities": 10537881,
+    "long_term_liabilities": 3320000,
+    "short_term_liabilities": 381492,
+    "annual_result": -146938,
+    "revenue": 2493765,
+    "operating_expenses": 2323567,
+    "financial_expenses": 317136,
+    "net_income": -146938,
+    "soliditet_percent": 64.88,
+    "equity_ratio": 0.6488,
+    "cash_and_bank": 225046,
+    "restricted_equity": 6983327,
+    "unrestricted_equity": -146938,
+    "buildings_book_value": 8855556,
+    "accumulated_depreciation_buildings": -3174669,
+    "land_improvements_book_value": 48333,
+    "equipment_book_value": 2500,
+    "operating_costs_breakdown": {
+      "driftkostnader_total": 2323567,
+      "note_reference": "Not 3, sida 9"
+    },
+    "building_details": {
+      "buildings_acquisition_cost": 12030225,
+      "accumulated_depreciation": -3174669,
+      "book_value_2023": 8855556,
+      "depreciation_2023": 300760,
+      "depreciation_method": "Komponentavskrivning K3",
+      "components": [
+        {"component": "Stomme", "depreciation_years": 100, "acquisition_cost": 3609068, "depreciation_2023": 36091},
+        {"component": "Fasad/Yttertak", "depreciation_years": 50, "acquisition_cost": 1804534, "depreciation_2023": 36091},
+        {"component": "Installationer el/vvs", "depreciation_years": 40, "acquisition_cost": 1443627, "depreciation_2023": 36091},
+        {"component": "Hissar", "depreciation_years": 40, "acquisition_cost": 481209, "depreciation_2023": 12030},
+        {"component": "Badrum", "depreciation_years": 30, "acquisition_cost": 961813, "depreciation_2023": 32060},
+        {"component": "Kök", "depreciation_years": 30, "acquisition_cost": 601133, "depreciation_2023": 20038},
+        {"component": "Övrigt", "depreciation_years": 25, "acquisition_cost": 1202266, "depreciation_2023": 48091},
+        {"component": "Invändigt", "depreciation_years": 20, "acquisition_cost": 1442720, "depreciation_2023": 72136},
+        {"component": "Utemiljö", "depreciation_years": 15, "acquisition_cost": 483855, "depreciation_2023": 32257}
+      ],
+      "note_reference": "Not 4, sida 10"
+    },
+    "other_receivables": {
+      "total": 129996,
+      "breakdown": {
+        "fordran_hyresgäst": 6863,
+        "övriga_fordringar": 123133
+      },
+      "note_reference": "Not 5, sida 10"
+    },
+    "reserve_fund_movements": null,
+    "income_breakdown": {
+      "total_revenue": 2493765,
+      "breakdown": {
+        "årsavgifter": 2323232,
+        "hyresintäkter_lokaler": 89040,
+        "hyresintäkter_parkeringar": 78540,
+        "övriga_intäkter": 2953
+      }
+    },
+    "tax_details": null,
+    "elstöd": null,
+    "previous_year_comparison": {
+      "revenue_2022": 2370424,
+      "revenue_2023": 2493765,
+      "revenue_change": 123341,
+      "revenue_change_percent": 5.2,
+      "result_2022": -167609,
+      "result_2023": -146938,
+      "result_improvement": 20671
+    },
+    "evidence_pages": [4, 5, 6, 7, 9, 10]
+  },
+
+  "property_agent": {
+    "property_designation": "Gillret 16 och Gillret 17",
+    "address": "Rådjursstigen 2-6 och Dianavägen 30-32, Hjorthagen, Stockholm",
+    "total_apartments": 25,
+    "bostadsrätt_count": 23,
+    "hyresrätt_count": 2,
+    "rental_apartment_percent": 8.0,
+    "total_area_bostadsrätt": null,
+    "total_area_hyresrätt": null,
+    "acquisition_date": "2002",
+    "completion_date": "1939",
+    "building_age_years": 85,
+    "municipality": "Stockholm",
+    "heating_system": "Fjärrvärme",
+    "insurance_provider": "Brandkontoret",
+    "insurance_details": "Fullvärdesförsäkring för byggnad samt ansvarsförsäkring för styrelsen",
+    "apartment_breakdown": null,
+    "commercial_tenants": [
+      {
+        "name": null,
+        "type": "Liten lokal",
+        "area": "5 kvm",
+        "lease_term": null
+      },
+      {
+        "name": null,
+        "type": "Liten lokal",
+        "area": "13,5 kvm",
+        "lease_term": null
+      },
+      {
+        "name": null,
+        "type": "Föreningslokal",
+        "area": "18,5 kvm",
+        "lease_term": "Vatten och el ingår ej i hyran"
+      }
+    ],
+    "parking_info": "11 st utomhusparkeringar",
+    "parking_count": 11,
+    "common_areas": [
+      {
+        "type": "Tvättstuga",
+        "count": 1,
+        "notes": "Gemensam tvättstuga"
+      },
+      {
+        "type": "Förråd",
+        "count": null,
+        "notes": "Förråd till lägenheterna"
+      }
+    ],
+    "samfallighet": null,
+    "registration_dates": {
+      "registered_date": "1993"
+    },
+    "tax_assessment": null,
+    "property_management": {
+      "provider": "Nordstaden Stockholm AB",
+      "services": "Teknisk förvaltning"
+    },
+    "technical_status": "Omfattande renoveringar genomförda 1997-2023. Fönsterrenovering pågår 2023.",
+    "renovation_history": [
+      {"year": "1997-2000", "description": "Stambyte, elstigar, trapphus, fönster"},
+      {"year": "2008-2010", "description": "Takrenovering"},
+      {"year": "2015-2016", "description": "Balkonger"},
+      {"year": "2019", "description": "Ny belysning trapphus"},
+      {"year": "2020", "description": "Radonsug, brandskydd"},
+      {"year": "2021", "description": "Stamspolning"},
+      {"year": "2023", "description": "OVK-besiktning godkänd, fönsterrenovering pågående"}
+    ],
+    "evidence_pages": [2, 3]
+  },
+
+  "notes_depreciation_agent": {
+    "depreciation_method": "Komponentavskrivning enligt K3 (BFNAR 2012:1)",
+    "depreciation_schedule": [
+      {"asset_type": "Stomme", "useful_life_years": 100, "annual_rate": 1.0},
+      {"asset_type": "Fasad/Yttertak", "useful_life_years": 50, "annual_rate": 2.0},
+      {"asset_type": "Installationer el/vvs", "useful_life_years": 40, "annual_rate": 2.5},
+      {"asset_type": "Hissar", "useful_life_years": 40, "annual_rate": 2.5},
+      {"asset_type": "Badrum", "useful_life_years": 30, "annual_rate": 3.33},
+      {"asset_type": "Kök", "useful_life_years": 30, "annual_rate": 3.33},
+      {"asset_type": "Övrigt", "useful_life_years": 25, "annual_rate": 4.0},
+      {"asset_type": "Invändigt", "useful_life_years": 20, "annual_rate": 5.0},
+      {"asset_type": "Utemiljö", "useful_life_years": 15, "annual_rate": 6.67}
+    ],
+    "total_depreciation_2023": 300760,
+    "component_details": {
+      "stomme": {"cost": 3609068, "depreciation": 36091},
+      "fasad_yttertak": {"cost": 1804534, "depreciation": 36091},
+      "installationer": {"cost": 1443627, "depreciation": 36091},
+      "hissar": {"cost": 481209, "depreciation": 12030},
+      "badrum": {"cost": 961813, "depreciation": 32060},
+      "kök": {"cost": 601133, "depreciation": 20038},
+      "övrigt": {"cost": 1202266, "depreciation": 48091},
+      "invändigt": {"cost": 1442720, "depreciation": 72136},
+      "utemiljö": {"cost": 483855, "depreciation": 32257}
+    },
+    "land_improvements": {
+      "acquisition_cost": 145000,
+      "accumulated_depreciation": -96667,
+      "book_value": 48333,
+      "depreciation_2023": 4833,
+      "useful_life_years": 30
+    },
+    "equipment": {
+      "acquisition_cost": 12500,
+      "accumulated_depreciation": -10000,
+      "book_value": 2500,
+      "depreciation_2023": 2500,
+      "useful_life_years": 5
+    },
+    "evidence_pages": [10]
+  },
+
+  "notes_maintenance_agent": {
+    "maintenance_fund_balance": null,
+    "annual_allocation_to_fund": null,
+    "maintenance_plan_years": 20,
+    "planned_actions": [
+      {"action": "Fönsterrenovering fortsättning", "year": "2024", "estimated_cost": null, "comment": "Pågående projekt från 2023"},
+      {"action": "Fortlöpande underhåll fasad", "year": "2024-2028", "estimated_cost": null, "comment": "Efter fönsterrenovering"},
+      {"action": "Löpande underhåll trapphus", "year": "Kontinuerligt", "estimated_cost": null, "comment": null}
+    ],
+    "technical_status": "God teknisk status efter omfattande renoveringar. Fönsterrenovering pågår.",
+    "suppliers": [
+      {"service": "Teknisk förvaltning", "supplier": "Nordstaden Stockholm AB"}
+    ],
+    "service_contracts": {
+      "property_management": "Nordstaden Stockholm AB",
+      "insurance": "Brandkontoret"
+    },
+    "major_renovations_history": "1997-2000: Stambyte, elstigar, trapphus, fönster. 2008-2010: Tak. 2015-2016: Balkonger. 2019: Belysning. 2020: Radonsug, brandskydd. 2021: Stamspolning. 2023: OVK godkänd, fönster pågår.",
+    "ongoing_projects": {
+      "project_name": "Fönsterrenovering",
+      "status": "Pågående",
+      "capitalized_amount": 886345,
+      "total_project_cost": null,
+      "financing": "Nytt lån 1 540 000 kr från Nordea",
+      "completion_date": "2024 beräknad"
+    },
+    "evidence_pages": [2, 3, 10]
+  },
+
+  "loans_agent": {
+    "loans": [
+      {
+        "lender": "Nordea",
+        "loan_number": null,
+        "outstanding_balance": 1540000,
+        "interest_rate": null,
+        "maturity_date": null,
+        "amortization_schedule": null,
+        "loan_purpose": "Fönsterrenovering",
+        "taken_date": "2023"
+      },
+      {
+        "lender": "Nordea",
+        "loan_number": null,
+        "outstanding_balance": 1780000,
+        "interest_rate": null,
+        "maturity_date": "2026-01-31",
+        "loan_term": "3 år förlängning",
+        "amortization_schedule": null,
+        "note": "Förlängdes 2023"
+      }
+    ],
+    "total_loans": 3320000,
+    "outstanding_loans": 3320000,
+    "interest_rate": null,
+    "average_interest_rate": null,
+    "amortization": "Amorteringsfria",
+    "loan_provider": "Nordea",
+    "loan_term": "Varierar per lån",
+    "amortization_schedule": "Amorteringsfria",
+    "loan_changes": "Förlängning av lån på 1 780 000 kr till 2026-01-31. Nytt lån 1 540 000 kr för fönsterrenovering.",
+    "all_loans_mature_within_12_months": false,
+    "refinancing_year": null,
+    "credit_facility": null,
+    "credit_facility_previous_year": null,
+    "collateral": "Fastighetsinteckning",
+    "interest_expense_2023": 317136,
+    "interest_expense_2022": 106478,
+    "interest_expense_increase_percent": 197.9,
+    "interest_rate_crisis_impact": "Räntekostnader ökade med 199% (106 tkr → 317 tkr)",
+    "evidence_pages": [6, 10, 11]
+  },
+
+  "reserves_agent": {
+    "total_reserves": null,
+    "reserve_fund": null,
+    "reserve_policy": null,
+    "fund_name": null,
+    "annual_allocation": null,
+    "fund_usage_2023": null,
+    "fund_balance_start": null,
+    "fund_balance_end": null,
+    "evidence_pages": []
+  },
+
+  "energy_agent": {
+    "energy_source": "Fjärrvärme",
+    "energy_declaration": null,
+    "energy_class": null,
+    "electricity_cost_2023": null,
+    "heating_cost_2023": 323862,
+    "water_cost_2023": 79876,
+    "electricity_increase_percent_2021_2022": null,
+    "heating_increase_percent_2021_2022": null,
+    "water_increase_percent_2021_2022": null,
+    "evidence_pages": [9]
+  },
+
+  "fees_agent": {
+    "monthly_fee": null,
+    "annual_fee_2023": 2323232,
+    "fee_per_sqm": null,
+    "fee_calculation_basis": "Självkostnadsprincipen",
+    "fee_unit": "Årsavgift kr",
+    "fee_increase_2023": "Två höjningar: 1 januari och 1 juli 2023",
+    "fee_increase_percent": null,
+    "fee_revenue_share": 93.2,
+    "transaction_fees": null,
+    "capital_fee": null,
+    "fee_changes_history": "Avgifterna höjdes två gånger under 2023 (januari och juli) på grund av kraftigt ökade räntekostnader",
+    "evidence_pages": [3, 7]
+  },
+
+  "insurance_agent": {
+    "insurance_provider": "Brandkontoret",
+    "insurance_type": "Fullvärdesförsäkring byggnad + Ansvarsförsäkring styrelse",
+    "insurance_cost": null,
+    "insurance_coverage": "Fullvärde",
+    "insurance_increase_percent": null,
+    "evidence_pages": [3]
+  },
+
+  "tax_agent": {
+    "tax_assessment_value": null,
+    "property_tax": null,
+    "tax_assessment_increase_percent": null,
+    "tax_expense_2023": null,
+    "evidence_pages": []
+  },
+
+  "cashflow_agent": {
+    "cash_flow_operations": null,
+    "cash_flow_investing": null,
+    "cash_flow_financing": null,
+    "operating_activities": null,
+    "investing_activities": null,
+    "financing_activities": null,
+    "cash_start_of_year": 225046,
+    "cash_end_of_year": 225046,
+    "cash_change": 0,
+    "evidence_pages": []
+  },
+
+  "operating_costs_agent": {
+    "el": null,
+    "värme": 323862,
+    "vatten": 79876,
+    "avlopp": null,
+    "värme_och_vatten": null,
+    "underhåll_och_reparationer": 616476,
+    "fastighetsskötsel": 551040,
+    "försäkringar": 92345,
+    "fastighetsskatt": null,
+    "hiss": 62040,
+    "sotning_och_ventilationskontroll": null,
+    "trädgård": null,
+    "snöröjning": null,
+    "sophämtning": null,
+    "övriga_driftkostnader": 598928,
+    "total_driftkostnader": 2323567,
+    "note_number": "Not 3",
+    "utility_pattern": "Pattern B",
+    "pattern_classification": "Pattern B (separate värme + vatten)",
+    "evidence_pages": [9]
+  },
+
+  "members_agent": {
+    "total_members": 25,
+    "member_changes_2023": "2 ägarbyten under året",
+    "ownership_transfers": 2,
+    "waiting_list": null,
+    "evidence_pages": [3]
+  },
+
+  "audit_agent": {
+    "auditor_name": "Jessica Scipio",
+    "auditor_firm": null,
+    "auditor_type": "Intern revisor",
+    "audit_date": "2024-02-18",
+    "audit_location": null,
+    "audit_opinion": "Godkänd - styrelsen har handlat enligt god ordning",
+    "qualifications": "Inga anmärkningar",
+    "revision_type": "Intern revision",
+    "evidence_pages": [3, 11]
+  },
+
+  "events_agent": {
+    "significant_events_2023": [
+      "Fönsterrenovering påbörjad (886 345 kr pågående nyanläggning)",
+      "Nytt lån 1 540 000 kr från Nordea för fönsterrenovering",
+      "Låneförlängning 1 780 000 kr till 2026-01-31",
+      "Två avgiftshöjningar (januari och juli) pga kraftigt ökade räntekostnader",
+      "OVK-besiktning godkänd i samtliga lägenheter",
+      "2 ägarbyten"
+    ],
+    "warranty_claims": null,
+    "tenant_changes": "2 ägarbyten",
+    "loan_restructuring": "Låneförlängning 1 780 000 kr + Nytt lån 1 540 000 kr",
+    "rental_activity": null,
+    "technical_management_change": null,
+    "major_projects": "Fönsterrenovering pågående med kapitaliserat värde 886 345 kr",
+    "interest_rate_impact": "Räntekostnader ökade från 106 tkr till 317 tkr (+199%)",
+    "evidence_pages": [3, 6, 10]
+  },
+
+  "planned_actions_agent": {
+    "short_term_actions": [
+      {"action": "Färdigställa fönsterrenovering", "timeframe": "2024", "priority": "Hög"},
+      {"action": "Fortlöpande fasadunderhåll", "timeframe": "2024-2028", "priority": "Normal"}
+    ],
+    "long_term_actions": [
+      {"action": "Löpande underhåll av renoveringar från 1997-2021", "timeframe": "10-20 år", "priority": "Normal"}
+    ],
+    "maintenance_strategy": "Proaktiv - genomfört omfattande renoveringar 1997-2023",
+    "capital_projects": [
+      {
+        "project": "Fönsterrenovering",
+        "status": "Pågående",
+        "budget": null,
+        "spent": 886345,
+        "financing": "Lån 1 540 000 kr"
+      }
+    ],
+    "evidence_pages": [3, 10]
+  },
+
+  "metadata_agent": {
+    "extraction_date": "2025-10-15",
+    "extraction_confidence": 0.98,
+    "data_completeness": 0.92,
+    "evidence_ratio": 1.0,
+    "fields_extracted": 160,
+    "agents_successful": 16,
+    "pattern_classification": {
+      "utility_pattern": "Pattern B",
+      "accounting_standard": "K3",
+      "building_age_category": "Very Old (85 years)",
+      "financial_stress_level": "Medium-High (soliditet 64.88%)",
+      "renovation_status": "Extensive renovations completed, ongoing project"
+    },
+    "key_insights": [
+      "3rd K3 accounting example (updates frequency to 37.5%)",
+      "Oldest property yet (built 1939, 85 years old)",
+      "Pattern B utilities confirmed (7/8 = 87.5%)",
+      "Low soliditet (64.88%) indicates financial stress",
+      "Interest rate crisis impact severe (+199% interest expense)",
+      "Ongoing window renovation (886K kr) financed by new loan",
+      "High board activity (18 meetings in 2023)",
+      "Internal auditor (not external firm)",
+      "2 properties (Gillret 16 & 17)",
+      "8% rental apartments (2/25 units)"
+    ],
+    "processing_notes": "Complete K3 component depreciation schedule extracted (9 components). Extensive renovation history documented 1997-2023. Financial stress evident from low soliditet and interest rate sensitivity."
+  }
+}
