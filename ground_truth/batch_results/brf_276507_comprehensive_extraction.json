@@ -1,0 +1,402 @@
+{
+  "metadata_agent": {
+    "organization_number": "769630-7623",
+    "organization_name": "HSB Brf Broparken i Stockholm",
+    "fiscal_year_start": "2023-01-01",
+    "fiscal_year_end": "2023-12-31",
+    "report_date": "2023-12-31",
+    "accounting_standard": "K3",
+    "pages_total": 16,
+    "report_type": "årsredovisning",
+    "property_manager": "HSB Stockholm",
+    "evidence_pages": [1, 2, 11]
+  },
+
+  "governance_agent": {
+    "chairman": "Camilla Landén",
+    "vice_chairman": null,
+    "treasurer": null,
+    "secretary": null,
+    "board_members": [
+      {"name": "Camilla Landén", "role": "Ordförande", "from": "2023-05-25"},
+      {"name": "Bo Hallgren", "role": "HSB-Ledamot", "from": "2021-11-21"},
+      {"name": "Sven Gustafsson", "role": "Ledamot", "from": "2022-06-11"},
+      {"name": "Hans Malmström", "role": "Ledamot", "from": "2022-06-11"},
+      {"name": "Jonas Eriksson", "role": "Ledamot", "from": "2023-05-25"},
+      {"name": "Martin Almblad", "role": "Ledamot", "from": "2022-06-11"},
+      {"name": "Ulf Wanderoy", "role": "Ordförande", "from": "2021-06-04", "to": "2023-05-25"},
+      {"name": "Patrik Barkman", "role": "Ledamot", "from": "2021-06-04", "to": "2023-05-25"},
+      {"name": "Susanna Stockhus", "role": "Ledamot", "from": "2022-06-11", "to": "2023-05-25"},
+      {"name": "Martin From", "role": "Ledamot", "from": "2021-06-04", "to": "2024-03-10"},
+      {"name": "Tirdad Eskandari", "role": "Ledamot", "from": "2023-05-25", "to": "2024-02-29"}
+    ],
+    "board_size": 6,
+    "board_meetings_count": 11,
+    "annual_meeting_date": "2023-05-23",
+    "annual_meeting_attendees": 24,
+    "extra_meeting_dates": [],
+    "valberedning": ["Lotta Sandström", "Linda Björk"],
+    "firmateckning": "Två ledamöter ur styrelsen",
+    "evidence_pages": [2, 3]
+  },
+
+  "audit_agent": {
+    "auditor_name": "Agnes Milton",
+    "auditor_firm": "BoRevision i Sverige AB",
+    "auditor_type": "Av HSB Riksförbund utsedd revisor",
+    "member_auditor_name": "Matilda Hallehn",
+    "member_auditor_suppleant": "Gustav Thor",
+    "audit_report_pages": 2,
+    "audit_opinion": "Utan anmärkning",
+    "evidence_pages": [3, 18, 19]
+  },
+
+  "property_agent": {
+    "property_designation": "Koppången 3",
+    "acquisition_date": "2017-01-01",
+    "construction_year": 2019,
+    "total_area_sqm": 4633,
+    "bostadsratter_area_sqm": 4511,
+    "lokaler_area_sqm": 122,
+    "bostadsratter_count": 62,
+    "apartment_breakdown": {
+      "1_rok": 10,
+      "2_rok": 20,
+      "3_rok": 13,
+      "4_rok": 16,
+      "5_rok": 3,
+      "total": 62
+    },
+    "garageplatser_count": 33,
+    "property_insurance": "Folksam",
+    "taxeringsvarde_building_bostader": 155000000,
+    "taxeringsvarde_building_lokaler": 8994650,
+    "taxeringsvarde_mark_bostader": 134000000,
+    "taxeringsvarde_mark_lokaler": 1576000,
+    "taxeringsvarde_total": 299570650,
+    "samfallighet_membership": "Stockholm Koppången GA:1 och GA:2",
+    "samfallighet_share_pct_ga1": 54.9,
+    "samfallighet_share_pct_ga2": 25.5,
+    "samfallighet_description": "GA:1 avseende garage (62/113 andelar), GA:2 avseende innergård (5756/22588 andelar)",
+    "evidence_pages": [2, 14]
+  },
+
+  "financial_agent": {
+    "assets_total": 480873785,
+    "equity_total": 414334800,
+    "liabilities_total": 66538986,
+    "net_revenue": 4726317,
+    "profit_loss": -3099455,
+    "soliditet_pct": 86.0,
+    "cash_and_bank": 2395566,
+    "nettoomsattning": 4726317,
+    "nettoomsattning_breakdown": {
+      "arsavgifter_bostader": 2927100,
+      "hyror_lokaler": 419248,
+      "hyror_garage": 776000,
+      "hyror_forbrukningsbaserad": 420242,
+      "hyror_informationsoverforing": 107136,
+      "hyror_ovrigt": 28152,
+      "ovriga_primara_intakter": 53004,
+      "avgiftsbortfall": -4500,
+      "hyresbortfall": -65
+    },
+    "other_income": 142724,
+    "total_revenue": 4869041,
+    "balansomslutning": 480873785,
+    "kundfordringar": 335276,
+    "evidence_pages": [7, 8, 9, 10, 12]
+  },
+
+  "operating_costs_agent": {
+    "total_driftskostnader": 1833764,
+    "fastighetsskotsel": 485432,
+    "sno_halk": 5625,
+    "reparationer_underhall": 87686,
+    "planerat_underhall": 29500,
+    "taxebundna_kostnader": 1021838,
+    "ovriga_driftskostnader": 117563,
+    "el": 300508,
+    "varme": 343391,
+    "vatten": 113033,
+    "sophamtning": 59200,
+    "fastighetsforsakringar": 61566,
+    "kabel_tv": 107132,
+    "fastighetsskatt": 105706,
+    "forvaltningsavtalskostnader": 117563,
+    "ovriga_driftkostnader": 17424,
+    "hiss_underhall": null,
+    "sotning_ventilation": null,
+    "evidence_pages": [12]
+  },
+
+  "loans_agent": {
+    "total_debt": 64746000,
+    "long_term_debt": 19982000,
+    "short_term_debt": 44764000,
+    "loans": [
+      {
+        "lender": "Nordea",
+        "loan_id": "Loan 1",
+        "amount": 25302000,
+        "interest_rate_pct": 1.0,
+        "maturity_date": "2024-11-20",
+        "villkorsandringsdag": "2024-11-20",
+        "maturity_classification": "short_term"
+      },
+      {
+        "lender": "Nordea",
+        "loan_id": "Loan 2",
+        "amount": 18802000,
+        "interest_rate_pct": 4.46,
+        "maturity_date": "2024-12-09",
+        "villkorsandringsdag": "2024-12-09",
+        "maturity_classification": "short_term"
+      },
+      {
+        "lender": "Nordea",
+        "loan_id": "Loan 3",
+        "amount": 20642000,
+        "interest_rate_pct": 3.89,
+        "maturity_date": "2025-11-19",
+        "villkorsandringsdag": "2025-11-19",
+        "maturity_classification": "long_term"
+      }
+    ],
+    "average_interest_rate_pct": 2.93,
+    "debt_per_sqm": 13975,
+    "projected_debt_5_years": 61466000,
+    "next_year_amortization": 660000,
+    "amortization_2_5_years": 2640000,
+    "loan_restructuring_note": "68.1% of total debt (44.104M kr) has conversion dates within 1 year (2024). Significant refinancing risk.",
+    "evidence_pages": [9, 10, 15]
+  },
+
+  "fees_agent": {
+    "fee_per_sqm_annual": 766,
+    "fee_increase_pct": 8.0,
+    "fee_increase_date": "2024-01-01",
+    "fee_increase_reason": "Ökade kostnader",
+    "multiple_increases": false,
+    "fee_history": [
+      {"year": 2023, "fee_per_sqm": 766},
+      {"year": 2022, "fee_per_sqm": 560},
+      {"year": 2021, "fee_per_sqm": 533},
+      {"year": 2020, "fee_per_sqm": 523}
+    ],
+    "evidence_pages": [3, 4]
+  },
+
+  "energy_agent": {
+    "elkostnad_per_sqm": null,
+    "varmekostnad_per_sqm": null,
+    "vattenkostnad_per_sqm": null,
+    "energikostnad_per_sqm_total": 163,
+    "multi_year_energy_trends": [
+      {"year": 2023, "energy_per_sqm": 163},
+      {"year": 2022, "energy_per_sqm": 154},
+      {"year": 2021, "energy_per_sqm": 164},
+      {"year": 2020, "energy_per_sqm": 139}
+    ],
+    "electricity_increase_pct_2022_2023": 5.8,
+    "electricity_increase_pct_3_year": 17.3,
+    "elstod_received": 99296,
+    "elstod_pct_offset": null,
+    "energy_initiatives": "None mentioned",
+    "evidence_pages": [4, 12]
+  },
+
+  "reserves_agent": {
+    "underhallsfond_balance": 1268500,
+    "underhallsfond_previous": 926000,
+    "underhallsfond_change": 342500,
+    "reservering_till_fond": 372000,
+    "ianspraktagande_fond": 29500,
+    "underhallsplan_exists": true,
+    "underhallsplan_period": "Digital underhållsplan via HSB Stockholm",
+    "evidence_pages": [3, 5]
+  },
+
+  "members_agent": {
+    "total_members_start": null,
+    "new_members": 7,
+    "departing_members": 7,
+    "total_members_end": 110,
+    "transfers_during_year": 7,
+    "evidence_pages": [3]
+  },
+
+  "events_agent": {
+    "major_events": [
+      {
+        "event": "OVK ventilations kontroll",
+        "date": "2023",
+        "description": "Obligatorisk ventilationskontroll genomförd",
+        "impact": "Compliance maintenance"
+      },
+      {
+        "event": "Rökluckor besiktning",
+        "date": "2023",
+        "description": "Besiktning av rökluckor tak (lagkrav), byte batterier för nödström",
+        "impact": "Safety compliance"
+      },
+      {
+        "event": "Efterbesiktningar 2-års garanti",
+        "date": "2023",
+        "description": "Efterbesiktningar av 2-års garantibesiktningar genomförts. Fortfarande kvarstår fel varför ytterligare efterbesiktning kommer behövas",
+        "impact": "Ongoing warranty issues"
+      },
+      {
+        "event": "Stadgar uppdatering",
+        "date": "2023-05-23",
+        "description": "Föreningsstämman godkände HSBs uppdaterade Normalstadgar 2023 (kräver beslut på nästkommande stämma)",
+        "impact": "Governance update pending"
+      },
+      {
+        "event": "Fee increase 8%",
+        "date": "2024-01-01",
+        "description": "Årsavgiften höjdes 8% från januari 2024",
+        "impact": "Cost recovery measure"
+      }
+    ],
+    "evidence_pages": [3, 4]
+  },
+
+  "notes_maintenance_agent": {
+    "major_maintenance_completed": [
+      {
+        "year": 2023,
+        "description": "OVK (Obligatorisk ventilationskontroll)"
+      },
+      {
+        "year": 2023,
+        "description": "Besiktning av rökluckor tak (lagkrav), byte batterier för nödström"
+      }
+    ],
+    "planned_maintenance": [
+      {
+        "period": "2024",
+        "description": "Strykning träpanel fasad, ekfönster och ekdörrar utomhus"
+      },
+      {
+        "period": "2025",
+        "description": "Stamspolning lägenheter"
+      },
+      {
+        "period": "2026",
+        "description": "OVK-besiktning, FTX-system och lägenheter. Strykning träpanel fasad, ekfönster och ekdörrar utomhus"
+      },
+      {
+        "period": "2027",
+        "description": "Inga planerade åtgärder"
+      },
+      {
+        "period": "2028",
+        "description": "Strykning träpanel fasad, ekfönster och ekdörrar utomhus. Målning och dammbindning miljörum"
+      }
+    ],
+    "maintenance_expenses_major": {
+      "planerat_underhall": 29500,
+      "reparationer": 87686,
+      "total_major_repairs": 117186
+    },
+    "underhallsplan_period": "Digital underhållsplan via HSB Stockholm",
+    "evidence_pages": [3, 4]
+  },
+
+  "insurance_agent": {
+    "insurance_provider": "Folksam",
+    "insurance_premium": 61566,
+    "property_coverage": "Fullvärdesförsäkrad",
+    "liability_coverage": "Styrelseansvar ingår",
+    "evidence_pages": [2, 12]
+  },
+
+  "tax_agent": {
+    "fastighetsskatt": 105706,
+    "fastighetsavgift_exemption": true,
+    "exemption_years": "Till och med 2034 befriad från kommunal fastighetsavgift",
+    "skattekonto_balance": 211412,
+    "moms_avrakning": null,
+    "evidence_pages": [12, 15]
+  },
+
+  "planned_actions_agent": {
+    "planned_actions": [
+      {
+        "action": "Strykning träpanel fasad, ekfönster och ekdörrar utomhus",
+        "status": "Planerad 2024",
+        "description": "Exterior wood maintenance"
+      },
+      {
+        "action": "Stamspolning lägenheter",
+        "status": "Planerad 2025",
+        "description": "Drain pipe flushing in apartments"
+      },
+      {
+        "action": "OVK-besiktning, FTX-system och lägenheter",
+        "status": "Planerad 2026",
+        "description": "Ventilation inspection for FTX system and apartments"
+      },
+      {
+        "action": "Målning och dammbindning miljörum",
+        "status": "Planerad 2028",
+        "description": "Environmental room painting and dust control"
+      }
+    ],
+    "evidence_pages": [4]
+  },
+
+  "cashflow_agent": {
+    "cash_flow_statement_present": true,
+    "cash_start_of_year": 2292734,
+    "cash_end_of_year": 2395566,
+    "cash_change": 102834,
+    "cash_from_operations": 1262834,
+    "cash_from_financing": -1160000,
+    "evidence_pages": [10]
+  },
+
+  "depreciation_agent": {
+    "total_depreciation": 4092224,
+    "building_depreciation_rate_pct": null,
+    "property_improvements_depreciation_rate_pct": null,
+    "accumulated_depreciation": 17490558,
+    "ack_anskaffningsvarde_building": 293926000,
+    "ack_anskaffningsvarde_mark": 201630000,
+    "ack_anskaffningsvarde_total": 495556000,
+    "restvarde_enligt_plan": 478065442,
+    "mark_value_included": 201630000,
+    "evidence_pages": [7, 14]
+  },
+
+  "driftskostnader_agent": {
+    "total_driftskostnader": 1833764,
+    "fastighetsskotsel": 485432,
+    "reparationer_underhall": 87686,
+    "el": 300508,
+    "uppvarmning": 343391,
+    "vatten": 113033,
+    "sophamtning": 59200,
+    "fastighetsforsakringar": 61566,
+    "kabel_tv": 107132,
+    "fastighetsskatt": 105706,
+    "forvaltningsavtalskostnader": 117563,
+    "ovriga_externa_kostnader": 106576,
+    "personalkostnader": 132817,
+    "ovriga_driftkostnader": 17424,
+    "planerat_underhall": 29500,
+    "sno_halk": 5625,
+    "evidence_pages": [12, 13]
+  },
+
+  "commercial_tenants_agent": {
+    "has_commercial_space": true,
+    "total_commercial_area_sqm": 122,
+    "commercial_pct_of_total": 2.6,
+    "commercial_rent_collected": 419248,
+    "commercial_rent_pct_of_revenue": 8.9,
+    "commercial_rent_per_sqm": 3436,
+    "evidence_pages": [2, 12]
+  }
+}
