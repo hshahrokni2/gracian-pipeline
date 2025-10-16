@@ -1,0 +1,604 @@
+{
+  "pdf_metadata": {
+    "filename": "brf_47903.pdf",
+    "pdf_id": "brf_47903",
+    "extraction_date": "2025-10-16",
+    "fiscal_year": 2023,
+    "pages": 23,
+    "file_size_kb": 691.4,
+    "processing_order": "31/42",
+    "dataset": "SRS",
+    "dataset_position": "15/27 SRS PDFs"
+  },
+
+  "basic_information": {
+    "name": "Brf Äril Båtbyggarparken",
+    "org_number": "769631-7028",
+    "registration_date": "2016-02-16",
+    "economic_plan_registered": "2018-09-12",
+    "current_statutes_registered": "2022-11-28",
+    "fiscal_year_start": "2023-01-01",
+    "fiscal_year_end": "2023-12-31",
+    "location_municipality": "Stockholm",
+    "location_city": "Stockholm",
+    "street_address": "Bobergsgatan 75, Labradorgatan 8",
+    "postal_code": null,
+    "accounting_standard": "K3",
+    "authentic_brf": true,
+    "vat_registered": true,
+    "property_manager": "SBC AB",
+    "technical_manager": "BK Kraft AB",
+    "economic_manager": "SBC AB"
+  },
+
+  "property_information": {
+    "properties": [
+      {
+        "property_designation": "Backåkra 1",
+        "acquisition_year": 2017,
+        "municipality": "Stockholm",
+        "land_tenure": "äganderätt",
+        "construction_years": "2017-2019",
+        "property_value_year": 2019,
+        "number_of_buildings": 2,
+        "building_type": "flerbostadshus"
+      }
+    ],
+    "total_area_sqm": 8255,
+    "residential_area_sqm": 7127,
+    "commercial_area_sqm": 1128,
+    "number_of_apartments": 76,
+    "number_of_commercial_units": 1,
+    "number_of_commercial_brf_units": 4,
+    "garage_spaces": null,
+    "parking_spaces": null,
+    "insurance_provider": "Nordeuropa Försäkring",
+    "insurance_coverage": "kollektivt bostadsrättstillägg + ansvarsförsäkring för styrelsen",
+    "maintenance_plan_year": 2022,
+    "maintenance_plan_horizon": "2022-2072"
+  },
+
+  "governance": {
+    "board_members": [
+      {
+        "name": "Lars-Håkan Lindqvist",
+        "role": "Ordförande",
+        "type": "Styrelseledamot"
+      },
+      {
+        "name": "Anna Forsgren",
+        "role": "Styrelseledamot",
+        "type": "Styrelseledamot"
+      },
+      {
+        "name": "Christer Karlsson",
+        "role": "Styrelseledamot",
+        "type": "Styrelseledamot"
+      },
+      {
+        "name": "Daniel Eli Schuss",
+        "role": "Styrelseledamot",
+        "type": "Styrelseledamot"
+      },
+      {
+        "name": "Lars Gert Östberg",
+        "role": "Styrelseledamot",
+        "type": "Styrelseledamot"
+      },
+      {
+        "name": "Carl Fredrik Gejrot",
+        "role": "Suppleant",
+        "type": "Suppleant"
+      },
+      {
+        "name": "Eva-Marie Boberg",
+        "role": "Suppleant",
+        "type": "Suppleant"
+      },
+      {
+        "name": "Mattias Lindgren",
+        "role": "Suppleant",
+        "type": "Suppleant"
+      }
+    ],
+    "nomination_committee": [
+      {
+        "name": "Joakim Claesson",
+        "role": "Valberedning"
+      }
+    ],
+    "auditors": [
+      {
+        "name": "Joakim Häll",
+        "firm": "BoRevision",
+        "type": "Revisor"
+      }
+    ],
+    "signatory_rules": "Firman tecknas av styrelsen. Firman tecknas två i förening av ledamöterna.",
+    "annual_meeting_date": "2023-06-20",
+    "board_meetings_count": 13
+  },
+
+  "membership_information": {
+    "members_start_of_year": 133,
+    "members_added": 12,
+    "members_removed": 14,
+    "members_end_of_year": 131,
+    "transfers_during_year": 10,
+    "second_hand_rentals_approved": 4
+  },
+
+  "income_statement": {
+    "net_revenue": 8360032,
+    "other_operating_income": 682,
+    "total_operating_income": 8360714,
+    "operating_costs": -4354820,
+    "other_external_costs": -246858,
+    "personnel_costs": -130735,
+    "depreciation": -7812316,
+    "total_operating_costs": -12544730,
+    "operating_result": -4184015,
+    "interest_income": 134466,
+    "interest_expenses": -3597875,
+    "total_financial_items": -3463409,
+    "result_after_financial_items": -7647424,
+    "annual_result": -7647424
+  },
+
+  "revenue_breakdown": {
+    "annual_fees_residential": 3158588,
+    "annual_fees_commercial_vat": 232968,
+    "rental_income_commercial": 2301584,
+    "rental_income_commercial_vat": 0,
+    "rental_income_garage_vat": 888291,
+    "property_tax_charged": 294884,
+    "property_tax_charged_vat": 84023,
+    "broadband_fees": 212475,
+    "broadband_fees_vat": 3120,
+    "water_fees": 527294,
+    "water_fees_vat": 21936,
+    "electricity_fees_vat": 385455,
+    "ev_charging_fees_vat": 52054,
+    "heating_fees": 60384,
+    "guest_apartment_income": 36400,
+    "reminder_fees": 960,
+    "late_payment_interest": 2969,
+    "mortgage_registration_fees": 9975,
+    "transfer_fees": 12237,
+    "second_hand_rental_fees": 44446,
+    "recharged_costs": 21169,
+    "recharged_costs_vat": 8823,
+    "rounding": -4,
+    "accrued_point_taxes": 1
+  },
+
+  "operating_costs_breakdown": {
+    "property_maintenance_contract": 271575,
+    "property_maintenance_additional": 30577,
+    "yard_maintenance_additional": 68064,
+    "cleaning_contract": 89105,
+    "cleaning_additional": 0,
+    "elevator_inspection": 13932,
+    "ovk_inspection": 66583,
+    "fire_safety": 17201,
+    "yard_costs": 2194,
+    "common_areas": 19748,
+    "garage_parking": 7000,
+    "snow_removal": 68316,
+    "service_contracts": 113174,
+    "vehicles": 4819,
+    "consumables": 44739
+  },
+
+  "repairs_breakdown": {
+    "installations": 1596,
+    "apartments": 5430,
+    "commercial_premises": 0,
+    "preschool": 0,
+    "laundry_room": 0,
+    "stairwells_entrances": 47165,
+    "waste_management": 1968,
+    "doors_locks_intercom": 25343,
+    "other_common_areas": 0,
+    "vvs_plumbing": 50596,
+    "heating_system": 6589,
+    "ventilation": 28468,
+    "electrical": 6469,
+    "telecom_tv_broadband": 9089,
+    "elevators": 7636,
+    "windows": 5393,
+    "grounds_yard": 0,
+    "garage_parking_repairs": 19317,
+    "water_damage": 20549,
+    "vandalism": 0
+  },
+
+  "planned_maintenance": {
+    "installations": 0,
+    "entrance_stairwells": 0,
+    "heating_system": 54278,
+    "ventilation": 67054,
+    "elevators": 0,
+    "total_planned_maintenance": 121331
+  },
+
+  "utilities_costs": {
+    "electricity": 859316,
+    "heating": 840216,
+    "water": 192213,
+    "waste_management": 198843,
+    "total_utilities": 2090588
+  },
+
+  "other_operating_costs": {
+    "property_insurance": 83980,
+    "cable_tv": 271817,
+    "samfallighet_fees": 334468,
+    "property_tax": 400000,
+    "total_other_operating": 1090265
+  },
+
+  "administrative_costs": {
+    "credit_checks": 4919,
+    "telecommunications": 14815,
+    "legal_costs": 0,
+    "collection_costs": 4718,
+    "bad_debt_losses": 0,
+    "external_audit_fees": 31250,
+    "recreation_costs": 0,
+    "association_costs": 12081,
+    "management_fees_contract": 88567,
+    "transfer_costs": 20218,
+    "mortgage_costs": 14972,
+    "short_term_equipment": 0,
+    "administration_general": 49628,
+    "consulting_fees": 0,
+    "association_memberships": 5690
+  },
+
+  "personnel_costs": {
+    "board_fees": 105000,
+    "employer_contributions": 25735,
+    "total_personnel": 130735,
+    "number_of_employees": 0
+  },
+
+  "financial_items": {
+    "interest_income_total": 134466,
+    "interest_expense_loans": 3594825,
+    "late_payment_interest_expense": 102,
+    "tax_interest_expense": 2932,
+    "other_interest_expense": 15
+  },
+
+  "balance_sheet_assets": {
+    "buildings_and_land_gross": 863275071,
+    "buildings_and_land_depreciation": -30334869,
+    "buildings_and_land_net": 832940201,
+    "land_value_included": 418626375,
+    "ongoing_projects": 2072565,
+    "total_fixed_assets": 835012766,
+    "customer_receivables": 15751,
+    "other_receivables": 362249,
+    "prepaid_expenses": 255638,
+    "total_current_receivables": 633638,
+    "short_term_investments": 3000000,
+    "cash_and_bank": 3624588,
+    "total_current_assets": 7258225,
+    "total_assets": 842270992
+  },
+
+  "balance_sheet_equity_liabilities": {
+    "member_contributions": 731400000,
+    "initial_fees": 0,
+    "external_maintenance_fund": 1625531,
+    "total_restricted_equity": 733025531,
+    "retained_earnings": -19962415,
+    "annual_result": -7647424,
+    "total_unrestricted_equity": -27609840,
+    "total_equity": 705415691,
+    "long_term_debt": 0,
+    "short_term_debt": 134170000,
+    "supplier_debts": 368417,
+    "tax_liabilities": 175926,
+    "other_short_term_liabilities": 209390,
+    "accrued_expenses": 1931568,
+    "total_short_term_liabilities": 136855301,
+    "total_equity_and_liabilities": 842270992
+  },
+
+  "loans_detailed": [
+    {
+      "lender": "Nordea",
+      "original_amount": null,
+      "current_balance_2023": 43930000,
+      "current_balance_2022": 44390000,
+      "interest_rate": 1.06,
+      "rate_type": "Lång fast ränta (5 år)",
+      "maturity_date": "2024-06-07",
+      "amortization_annual": 460000,
+      "classification": "kortfristig"
+    },
+    {
+      "lender": "Nordea",
+      "original_amount": null,
+      "current_balance_2023": 45120000,
+      "current_balance_2022": 45355000,
+      "interest_rate": 4.36,
+      "rate_type": "Kort fast ränta",
+      "maturity_date": "2024-05-17",
+      "amortization_annual": 0,
+      "classification": "kortfristig"
+    },
+    {
+      "lender": "Nordea",
+      "original_amount": null,
+      "current_balance_2023": 45120000,
+      "current_balance_2022": 45355000,
+      "interest_rate": 4.49,
+      "rate_type": "Kort ränta mot Stibor",
+      "maturity_date": "2024-06-07",
+      "amortization_annual": 0,
+      "classification": "kortfristig"
+    }
+  ],
+
+  "key_metrics": {
+    "net_revenue": 8360032,
+    "result_after_financial": -7647424,
+    "equity_ratio_percent": 84,
+    "external_maintenance_fund": 1625531,
+    "property_tax_value": 533000000,
+    "annual_fee_per_sqm_residential": 596,
+    "annual_fees_percent_of_revenue": 53.7,
+    "debt_per_sqm_residential": 17828,
+    "debt_per_sqm_total": 16253,
+    "savings_per_sqm_total": 35,
+    "electricity_cost_per_sqm": 104,
+    "heating_cost_per_sqm": 102,
+    "water_cost_per_sqm": 23,
+    "energy_cost_per_sqm": 229,
+    "average_interest_rate_percent": 2.67,
+    "interest_sensitivity_percent": 29.89,
+    "total_debt": 134170000,
+    "soliditet_percent": 84
+  },
+
+  "multi_year_overview": {
+    "years": [2023, 2022, 2021, 2020],
+    "net_revenue": [8360032, 6997925, 6809702, 6993422],
+    "result_after_financial": [-7647424, -7339039, -5097077, -5419530],
+    "equity_ratio": [84, 84, 83, 83],
+    "external_fund": [1625531, 1247600, 831800, 415800],
+    "property_tax_value": [533000000, 533000000, 415800000, 415800000],
+    "debt_per_sqm_residential": [17828, 17951, 18137, 18323],
+    "debt_per_sqm_total": [16253, 16364, 16533, 16703],
+    "savings_per_sqm_total": [35, 68, 307, 232],
+    "energy_cost_per_sqm": [229, 228, 218, 250]
+  },
+
+  "cash_flow": {
+    "operating_result": -4184015,
+    "depreciation_adjustment": 7812316,
+    "interest_received": 109760,
+    "interest_paid": -3281552,
+    "cash_flow_before_wc_changes": 456509,
+    "change_in_receivables": -51816,
+    "change_in_liabilities": -171937,
+    "cash_flow_from_operations": 232756,
+    "investments_in_fixed_assets": -2392717,
+    "cash_flow_from_investments": -2392717,
+    "loan_amortization": -930000,
+    "cash_flow_from_financing": -930000,
+    "total_cash_flow": -3089961,
+    "cash_beginning_of_year": 9714549,
+    "cash_end_of_year": 6624588
+  },
+
+  "equity_changes": {
+    "member_contributions_start": 505470000,
+    "member_contributions_end": 505470000,
+    "initial_fees_start": 225930000,
+    "initial_fees_end": 225930000,
+    "external_fund_start": 1247600,
+    "external_fund_change": 377931,
+    "external_fund_end": 1625531,
+    "retained_earnings_start": -12245446,
+    "retained_earnings_change": -7716969,
+    "retained_earnings_end": -19962415,
+    "annual_result_prior": -7339039,
+    "annual_result_current": -7647424,
+    "total_equity_start": 713063116,
+    "total_equity_end": 705415691
+  },
+
+  "significant_events": {
+    "fee_changes": [
+      {
+        "date": "2023-01-01",
+        "change_percent": 20,
+        "reason": "Ekonomisk anpassning"
+      },
+      {
+        "date": "2023-11-01",
+        "change_percent": 40,
+        "reason": "Ekonomisk anpassning"
+      }
+    ],
+    "loan_refinancing": [
+      {
+        "year": 2023,
+        "amount": 45120000,
+        "description": "Ett av föreningens lån omsattes under året"
+      }
+    ],
+    "major_events": [
+      "Erlandsson Bygg i Stockholm AB är försatt i konkurs - garanti åtgärder pågår",
+      "Värmesystem problem - vissa lägenheter kalla under vintern",
+      "Utbyte av värmesystemets matarledningar i källaren",
+      "Samtliga golvvärmeventiler i lägenheterna byttes",
+      "OVK-besiktning genomförd",
+      "Ventilation rengjord och injusterad",
+      "Fem entrédörrar i trä slipade och oljad",
+      "Nytt låssystem i övernattningsrummet",
+      "Slutligt nej från Mark- och miljödomstolen på inglasning av balkonger",
+      "Nytt avtal om ekonomisk förvaltning med SBC",
+      "10 lägenheter överlåtits under året",
+      "Backåkra samfällighetsförening: nya avtal för utomhusmiljö och vinterunderhåll"
+    ],
+    "construction_defects": [
+      "Värmesystem levererar inte enligt specifikation",
+      "Golvvärmetermostater saknade kablar mellan termostat och ventil",
+      "Duschblandare felmonterade i två lägenheter",
+      "Felkopplad el i köksskåp",
+      "Takängar behöver kompletteras med breddavlopp"
+    ]
+  },
+
+  "vendor_contracts": [
+    {"service": "4G/5G-förstärkare", "vendor": "Awiwo AB"},
+    {"service": "Bergvärmeanläggning", "vendor": "Alight AB"},
+    {"service": "Ekonomisk förvaltning", "vendor": "SBC AB"},
+    {"service": "El, förbrukning", "vendor": "Vattenfall"},
+    {"service": "El, nätavgift", "vendor": "Ellevio"},
+    {"service": "Fjärrvärme", "vendor": "Stockholm Exergi"},
+    {"service": "Förvaltning garage", "vendor": "Parkona"},
+    {"service": "Hissar", "vendor": "Kone"},
+    {"service": "Mättjänst elförbrukning", "vendor": "Infometric"},
+    {"service": "Snö- och halkbekämpning", "vendor": "Habitek"},
+    {"service": "Sophämtning (miljörum)", "vendor": "Ragn-Sells"},
+    {"service": "Styr & regler", "vendor": "Nordomatic"},
+    {"service": "Städning", "vendor": "Gabriella Städ"},
+    {"service": "Systematiskt brandskyddsarbete", "vendor": "Brandsäkra"},
+    {"service": "Takängarna", "vendor": "Miljönära 08 AB"},
+    {"service": "Teknisk förvaltning", "vendor": "BK Kraft AB"},
+    {"service": "Tv, bredband & telefoni", "vendor": "Tele2"}
+  ],
+
+  "samfallighet_information": {
+    "name": "Backåkra samfällighetsförening",
+    "ownership_share_percent": 44,
+    "responsibilities": "Förvaltar och sköter gemensamma sopsugar, grönytor samt gångstråk",
+    "annual_fee": 334468,
+    "activities_2023": [
+      "Fokus på kostnadskontroll och rutiner",
+      "Nytt avtal för skötsel av utomhusmiljön med minskade kostnader",
+      "Ny leverantör för vinterunderhåll 2023-2024",
+      "Nya QR-koder på sopnedkasten (forskningsprojekt med KTH)"
+    ]
+  },
+
+  "garage_common_facility": {
+    "issues": "Vattenansamling på golvet vid Labradorgatan 8",
+    "solution": "Beställer sugbil vid behov (mest ekonomiska lösningen)",
+    "charging_provider": "Wattif (tidigare EFuel)"
+  },
+
+  "tax_information": {
+    "property_tax_exemption_years": 15,
+    "property_tax_exemption_from": 2019,
+    "commercial_tax_rate": 1.00,
+    "taxable_value_building": 271800000,
+    "taxable_value_land": 261200000,
+    "total_taxable_value": 533000000
+  },
+
+  "collateral": {
+    "property_mortgages": 140000000
+  },
+
+  "future_outlook": {
+    "planned_fee_changes_2024": "Inga höjningar planerade för 2024",
+    "major_projects_planned": [
+      "Fortsatt arbete med värmesystemet",
+      "Komplettering av takängar med breddavlopp"
+    ],
+    "loan_maturities_2024": [
+      "43,930,000 kr förfaller 2024-06-07",
+      "45,120,000 kr förfaller 2024-05-17",
+      "45,120,000 kr förfaller 2024-06-07"
+    ],
+    "estimated_debt_5_years": 131870000
+  },
+
+  "loss_explanation": {
+    "loss_amount_2023": -7647424,
+    "loss_amount_2022": -7339039,
+    "non_cash_depreciation": 7812316,
+    "interest_expense_increase_vs_budget": 2128874,
+    "cash_flow_from_operations": 456509,
+    "savings_per_sqm": 35,
+    "management_assessment": "Styrelsen bedömer att nuvarande ekonomiska situation är tillräckligt för att kunna finansiera föreningens ekonomiska åtaganden 2024, men kan inte utesluta att ytterligare avgiftsjusteringar kan bli nödvändiga.",
+    "fee_increase_november_2023_percent": 40,
+    "full_year_effect_2024": true
+  },
+
+  "critical_analysis": {
+    "debt_tier": "EXTREME - 100% kortfristig (UNPRECEDENTED)",
+    "debt_maturity_risk": "ALL THREE LOANS mature May-June 2024 (within 6 months)",
+    "interest_rate_exposure": "HIGH - 4.36% and 4.49% on 67% of debt",
+    "loss_pattern": "CHRONIC - Two consecutive years (-7.3M, -7.6M)",
+    "fee_shock_strategy": "DUAL INCREASES - +20% Jan + +40% Nov = +68% total in 2023",
+    "construction_age": "5-6 years old - Modern but defective heating system",
+    "builder_bankruptcy": "Erlandsson Bygg konkurs - warranty work complicated",
+    "land_tenure_advantage": "Äganderätt (no tomträtt burden)",
+    "samfallighet_burden": "44% share - moderate (334,468 kr/year)",
+    "soliditet_strength": "84% despite chronic losses",
+    "energy_crisis_impact": "Heating costs +15.5% (734k → 840k), electricity stable",
+    "technical_defects": [
+      "Heating system not meeting specifications",
+      "Multiple thermostat/ventilation issues",
+      "Roof drainage inadequate (100-year rain risk)"
+    ]
+  },
+
+  "pattern_validation": {
+    "pattern_b_chronic_loss": true,
+    "pattern_b_criteria_met": [
+      "2+ consecutive years losses",
+      "High soliditet (84%)",
+      "Fee increases implemented (+68% in 2023)",
+      "Non-cash depreciation causes accounting loss",
+      "Positive operational cash flow (456k kr)"
+    ],
+    "unique_characteristics": [
+      "100% kortfristig debt classification (first 100% case?)",
+      "ALL loans mature within 6 months (extreme refinancing risk)",
+      "Äganderätt vs tomträtt (no ground lease burden)",
+      "Builder bankruptcy complicating warranty work",
+      "Dual fee increases in single year (+20%, +40%)",
+      "Technical defects in 5-6 year old building"
+    ],
+    "schema_changes": 0,
+    "schema_saturation_status": "28 consecutive zero-schema PDFs (99.5%+ complete)"
+  },
+
+  "extraction_metadata": {
+    "extraction_agent": "comprehensive_extraction_agent",
+    "agents_used": [
+      "basic_info_agent",
+      "governance_agent",
+      "property_agent",
+      "income_statement_agent",
+      "revenue_breakdown_agent",
+      "operating_costs_agent",
+      "balance_sheet_agent",
+      "loans_agent",
+      "key_metrics_agent",
+      "multi_year_agent",
+      "cash_flow_agent",
+      "equity_changes_agent",
+      "events_agent",
+      "contracts_agent",
+      "samfallighet_agent",
+      "tax_agent",
+      "future_outlook_agent",
+      "loss_explanation_agent",
+      "critical_analysis_agent",
+      "pattern_validation_agent"
+    ],
+    "total_fields_extracted": 197,
+    "extraction_confidence": 0.95,
+    "notes": "EXTREME DEBT TIER - 100% kortfristig classification. ALL THREE LOANS mature May-June 2024. HIGH interest rates (4.36%, 4.49%). CHRONIC LOSSES despite 84% soliditet. DUAL FEE INCREASES (+68% total in 2023). BUILDER BANKRUPTCY complicating warranty work. ÄGANDERÄTT advantage (no tomträtt). TECHNICAL DEFECTS in heating system. First PDF with 100% short-term debt classification."
+  }
+}
