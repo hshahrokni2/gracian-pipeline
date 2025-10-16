@@ -271,17 +271,32 @@ DETAILS:
 - Energy: **INSUFFICIENT DATA** - Only 2023 reported (127 kr/m² total), no multi-year trend. Solar panels generating 10,049 kr revenue (renewable offset)
 - Lokaler: **MINIMAL 5.4% area** (177 m²) but **17.1% revenue** (531,680 kr) = moderate commercial presence. Restaurant since 2015-12-01 (8+ years stable), **received monthly financing assistance during 2023** (first documented tenant support!)
 - **MAJOR EVENT**: 🔥 Fire/water damage 846,177 kr causing -839,561 kr annual loss! BUT **92.9% soliditet absorbed loss** without emergency fees (0.5% equity erosion) ⭐⭐⭐
+
+PDF 24 (brf_47809 - Brf Husarvikens Park 2022): ✅ COMPLETE - 📉 FIRST FEE REDUCTION!
+[⚠️] Loan reclassification? (kortfristig 38.1%) MEDIUM tier
+[❌] Multiple fee increases? (FEE REDUCTION! -10%) NO - OPPOSITE!
+[✅] Electricity increase >50%? (+59.4% = 47k→76k) YES (MODERATE tier)
+[❌] Lokaler >15% of area? (5.2% = 146/2,816 m²) MINIMAL (10.2% revenue)
+
+SCORE: 1 / 4 (25%)
+DETAILS:
+- Loans: **5.0M short-term / 13.1M total = 38.1% kortfristig (MEDIUM tier!)** - One loan (5M) matures June 2023 (6 months), second loan (4.32M) matures June 2024, 100% Nordea concentration, wide rate spread (0.65%-4.0%)
+- Fees: **FEE REDUCTION! -10%** (692 → 623 kr/m², 2020→2021) held stable 2021-2022 ⭐⭐⭐ **FIRST REDUCTION CASE!** High soliditet (90.4%) enables affordability improvement DESPITE +59.4% electricity spike!
+- Energy: **MODERATE tier** - electricity +59.4% (47,505 → 75,738 kr, 2021→2022) = 50-100% single-year increase. Absorbed via high soliditet WITHOUT fee increase reversion!
+- Lokaler: **MINIMAL 5.2% area** (146 m²) but **10.2% revenue** (208,647 kr) = minimal commercial presence. Restaurant since 2015-11-01 (7+ years stable). Same Husarviken cluster as PDF 23!
+- **CLUSTER RELATIONSHIP**: 🏢 Neighboring BRF to PDF 23 (Skuleskogen 3 vs 4), same samfälligheter (48% vs 67% combined), same management (PRIMÄR), same auditor (Magnus Emilsson / BoRevision)
+- **BALCONY CONSTRUCTION**: 5 new balconies approved 2022-11-10, city permit obtained, construction starts 2023, financed from reserves (NO fee increase needed!)
 ```
 
-**FINAL DECISION AFTER 8/8 SRS VALIDATION PDFs** (UPDATED AFTER PDF 23 - FIRE DAMAGE RESILIENCE!):
+**FINAL DECISION AFTER 9/9 SRS VALIDATION PDFs** (UPDATED AFTER PDF 24 - FEE REDUCTION DISCOVERY!):
 ```
-✅ IMPLEMENT loans_agent (8/8 = 100% confirmation, HIGH tier validated, EXTREME tier validated TWICE, MEDIUM tier validated)
-✅ **IMPLEMENT fees_agent** (2/8 SRS = 25.0%, SRS 1.9x > Hjorthagen!) 🎯 **FULLY VALIDATED**
+✅ IMPLEMENT loans_agent (9/9 = 100% confirmation, HIGH tier validated, EXTREME tier validated TWICE, MEDIUM tier validated 4x)
+✅ **IMPLEMENT fees_agent** (2/9 SRS = 22.2%, SRS 1.7x > Hjorthagen!) 🎯 **FULLY VALIDATED**
 ✅ IMPLEMENT energy_agent with SEVERITY TIERS (all tiers represented: NONE/LOW/MODERATE/SEVERE)
 ⚠️ **REFINE property_agent lokaler** (DUAL THRESHOLD NEEDED: area >15% OR revenue >30%)
 
-FINAL STATUS (after PDF 23 - FIRE DAMAGE RESILIENCE VALIDATED!):
-- Loans: 8/8 = 100% (✅ **ALREADY IMPLEMENTED** - Universal pattern, ALL tier diversity validated!)
+FINAL STATUS (after PDF 24 - FEE REDUCTION DISCOVERY VALIDATED!):
+- Loans: 9/9 = 100% (✅ **ALREADY IMPLEMENTED** - Universal pattern, ALL tier diversity validated!)
   - brf_198532: 49.7% kortfristig (MEDIUM tier)
   - brf_275608: 37.2% kortfristig (MEDIUM tier)
   - brf_276507: 68.1% kortfristig (HIGH tier)
@@ -290,8 +305,9 @@ FINAL STATUS (after PDF 23 - FIRE DAMAGE RESILIENCE VALIDATED!):
   - brf_280938: **90.6% kortfristig, 100% of loans** (EXTREME! - SECOND EXTREME CASE)
   - brf_282765: **33.3% kortfristig** (MEDIUM tier - HEALTHY BASELINE!)
   - **brf_43334: 65.4% kortfristig** (HIGH tier - 8.5M maturing Q1-Q2 2024, 100% Nordea, wide rate spread)
+  - **brf_47809: 38.1% kortfristig** (MEDIUM tier - 5M maturing June 2023, 100% Nordea, wide rate spread 0.65%-4.0%)
 
-- Fees: **2/8 SRS = 25.0%** (✅ **IMPLEMENTATION VALIDATED** - SRS 1.9x > Hjorthagen, pattern confirmed)
+- Fees: **2/9 SRS = 22.2%** (✅ **IMPLEMENTATION VALIDATED** - SRS 1.7x > Hjorthagen, pattern confirmed)
   - brf_198532: Single +5% ❌
   - brf_275608: Single +48.3% ❌
   - brf_276507: Single +8% ❌
@@ -300,18 +316,20 @@ FINAL STATUS (after PDF 23 - FIRE DAMAGE RESILIENCE VALIDATED!):
   - brf_280938: **Triple +29% Jan + 9% Dec + extra 264K = 41.5%** ✅ (SECOND SRS CASE!)
   - brf_282765: **Single +5% March 2023** ❌ (FIRST CLEAN SRS PDF!)
   - **brf_43334: Single +6% approved 2024-04-01** ❌ (post-year strategic timing, held constant through fire crisis!)
+  - **brf_47809: FEE REDUCTION -10%** (692 → 623 kr/m²) ❌ (OPPOSITE pattern! High soliditet enables affordability, held 2021-2022)
 
-  **FINAL DECISION** (after PDF 23 - PATTERN STABLE, FIRE RESILIENCE VALIDATED!):
+  **FINAL DECISION** (after PDF 24 - FEE REDUCTION VALIDATED, PATTERN STABLE!):
   ✅ **IMPLEMENT fees_agent** - **PATTERN FULLY VALIDATED!** 🎯
   **Rationale**:
-  - **SRS prevalence: 25.0%** (2/8 PDFs, down from 28.6%) - **SRS STILL 1.9x > HJORTHAGEN (13.3%)!**
-  - **Overall: 17.4%** (4/23 PDFs) - material pattern confirmed, stabilizing
-  - **Severity range**: +23.5% to **+68%** compound (extreme member impact)
+  - **SRS prevalence: 22.2%** (2/9 PDFs) - **SRS STILL 1.7x > HJORTHAGEN (13.3%)!**
+  - **Overall: 16.7%** (4/24 PDFs) - material pattern confirmed, stabilizing
+  - **Severity range**: -10% (reduction) to **+68%** compound (extreme member impact)
   - **Pattern CONFIRMED across both datasets** (urban + suburban, NOT location-specific!)
-  - **SRS HETEROGENEITY MAINTAINED**: PDFs 22-23 clean (0-1/4) vs PDFs 20-21 extreme (2-3/4) = NOT UNIFORM RISK
+  - **SRS HETEROGENEITY MAINTAINED**: PDFs 22-24 mostly clean (0-1/4) vs PDFs 20-21 extreme (2-3/4) = NOT UNIFORM RISK
   - **Extra payments detected**: PDF 21 shows 264K kr one-time payment (schema enhancement needed)
-  - **Post-year fee timing**: PDFs 22-23 show strategic post-fiscal-year adjustments (2/6 cases = 33.3%)
+  - **Post-year fee timing**: PDFs 22-23 show strategic post-fiscal-year adjustments (2/7 cases = 28.6%)
   - **FIRE RESILIENCE**: PDF 23 held fee constant through 840k fire expense (92.9% soliditet absorbed without emergency fees!)
+  - **FEE REDUCTION**: PDF 24 shows high soliditet (90.4%) enables AFFORDABILITY improvements despite +59.4% electricity spike!
 
 - Energy: 4/4 = 100% with 4 TIERS (✅ **ALREADY IMPLEMENTED** - Tier diversity validated)
   - brf_198532: MODERATE tier (+23% spike, -11% recovery)
