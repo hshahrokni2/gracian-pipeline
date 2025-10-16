@@ -1,0 +1,625 @@
+{
+  "metadata_agent": {
+    "pdf_filename": "2024-AR-BRF-Bjork-Plaza-1.pdf",
+    "brf_identifier": "brf_769629",
+    "organization_number": "769629-0134",
+    "organization_name": "BRF Björk och Plaza",
+    "fiscal_year": 2024,
+    "fiscal_year_start": "2024-01-01",
+    "fiscal_year_end": "2024-12-31",
+    "report_pages": 20,
+    "file_size_kb": 478,
+    "accounting_standard": "K2",
+    "address": "Drevergatan 1-3, Stockholm",
+    "property_designation": "Sonfjället 2",
+    "municipality": "Stockholm",
+    "registration_date": "2014-11-03",
+    "construction_year": 2015,
+    "value_year": 2017,
+    "report_signed_date": "2025-04-24/2025-04-25",
+    "agm_date": "2024-04-25",
+    "pdf_quality": "machine_readable",
+    "language": "Swedish"
+  },
+
+  "governance_agent": {
+    "chairman": "Mats Eskilson",
+    "chairman_term_start": "2024-04-25",
+    "previous_chairman": "Elvy Maria Löfvenberg",
+    "previous_chairman_term_end": "2024-04-25",
+    "board_members": [
+      {
+        "name": "Mats Eskilson",
+        "role": "Ordförande",
+        "term_start": "2024-04-25"
+      },
+      {
+        "name": "Torbjörn Andersson",
+        "role": "Ledamot"
+      },
+      {
+        "name": "Annelie Eck Arvstrand",
+        "role": "Ledamot"
+      },
+      {
+        "name": "Angelo Ljungquist Baldesi",
+        "role": "Ledamot"
+      },
+      {
+        "name": "Helena Lovén",
+        "role": "Ledamot"
+      },
+      {
+        "name": "Christoph Comstedt",
+        "role": "Suppleant"
+      },
+      {
+        "name": "Ann Viner",
+        "role": "Suppleant",
+        "term_start": "2024-04-25"
+      },
+      {
+        "name": "Kjell Levin",
+        "role": "Suppleant",
+        "term_start": "2024-04-25"
+      }
+    ],
+    "board_meetings": 12,
+    "auditor_firm": "KPMG AB",
+    "auditor_name": "Frida Lundgren",
+    "auditor_type": "Auktoriserad revisor",
+    "election_committee": [
+      {
+        "name": "Mattias Lovén",
+        "role": "Sammankallande"
+      },
+      {
+        "name": "Carl Nordblom",
+        "role": "Member"
+      }
+    ],
+    "governance_note": "Board transition: Elvy Maria Löfvenberg stepped down as chairman 2024-04-25, replaced by Mats Eskilson. 12 board meetings held during year."
+  },
+
+  "financial_agent": {
+    "total_revenue": 8205570,
+    "total_operating_costs": -8278080,
+    "operating_result": -72510,
+    "financial_income": 213788,
+    "financial_costs": -3558997,
+    "net_financial_items": -3345209,
+    "result_before_tax": -3417718,
+    "net_result": -3417718,
+    "total_assets": 668523855,
+    "total_equity": 551870686,
+    "total_liabilities": 116653169,
+    "cash_and_bank": 7698591,
+    "accounts_receivable": 2298282,
+    "solidarity_percent": 82.6,
+    "revenue_breakdown": {
+      "annual_fees": 4777857,
+      "commercial_rent": 1162689,
+      "hot_water": 244122,
+      "electricity_members": 478005,
+      "electricity_commercial": 8702,
+      "property_tax": 79862,
+      "tv_broadband": 248160,
+      "waste_management": 8936,
+      "heating_water_commercial": 14100,
+      "parking_rent": 1141440
+    },
+    "financial_note": "2nd consecutive year of losses (-2.8M in 2023, -3.4M in 2024). Operating result slightly negative (-73K) but large interest burden (-3.6M) drives overall loss. Interest costs increased 41.3% year-over-year (2.5M → 3.6M). Solidarity remains strong at 82.6%."
+  },
+
+  "loans_agent": {
+    "total_longterm_debt": 56625000,
+    "total_shortterm_debt": 55980000,
+    "total_debt": 112605000,
+    "primary_lender": "SEB",
+    "number_of_loans": 4,
+    "amortization_2024": 500000,
+    "loans_list": [
+      {
+        "lender": "SEB",
+        "loan_number": "41431520",
+        "amount": 30000000,
+        "interest_rate": 2.54,
+        "rate_type": "fixed",
+        "maturity_date": "2027-09-28",
+        "classification": "long-term",
+        "months_to_maturity": 33
+      },
+      {
+        "lender": "SEB",
+        "loan_number": "41431539",
+        "amount": 30000000,
+        "interest_rate": 4.67,
+        "rate_type": "fixed",
+        "maturity_date": "2025-09-28",
+        "classification": "short-term",
+        "months_to_maturity": 9
+      },
+      {
+        "lender": "SEB",
+        "loan_number": "41431555",
+        "amount": 26625000,
+        "interest_rate": 4.54,
+        "rate_type": "fixed",
+        "maturity_date": "2026-09-28",
+        "classification": "long-term",
+        "months_to_maturity": 21
+      },
+      {
+        "lender": "SEB",
+        "loan_number": "41431571",
+        "amount": 25980000,
+        "interest_rate": 2.36,
+        "rate_type": "fixed",
+        "maturity_date": "2025-09-28",
+        "classification": "short-term",
+        "months_to_maturity": 9
+      }
+    ],
+    "loans_note": "All 4 loans with SEB. Amortized 500K during 2024. Average interest rate 3.528% (after September 2024 refinancing) vs 2.8% assumed in economic plan. Two loans totaling 55.98M mature September 2025 (9 months from year-end)."
+  },
+
+  "enhanced_loans_agent": {
+    "total_debt": 112605000,
+    "kortfristig_amount": 55980000,
+    "langfristig_amount": 56625000,
+    "kortfristig_pct": 49.7,
+    "debt_tier": "MEDIUM",
+    "lender_concentration": {
+      "SEB": {
+        "amount": 112605000,
+        "percentage": 100.0,
+        "loan_count": 4
+      }
+    },
+    "lender_concentration_risk": "extreme",
+    "refinancing_clusters": [
+      {
+        "maturity_period": "2025-09",
+        "total_amount": 55980000,
+        "percentage_of_total": 49.7,
+        "months_until_maturity": 9,
+        "loans_in_cluster": [
+          {
+            "amount": 30000000,
+            "current_rate": 4.67,
+            "maturity": "2025-09-28"
+          },
+          {
+            "amount": 25980000,
+            "current_rate": 2.36,
+            "maturity": "2025-09-28"
+          }
+        ],
+        "risk_level": "HIGH"
+      }
+    ],
+    "weighted_average_rate": 3.528,
+    "weighted_average_maturity_months": 18.4,
+    "rate_shock_analysis": {
+      "economic_plan_rate": 2.8,
+      "current_average_rate": 3.528,
+      "rate_increase_pct": 26.0,
+      "current_annual_interest": 3558997,
+      "economic_plan_interest": 3153340,
+      "additional_annual_cost": 405657,
+      "comment": "Current average rate 3.528% is 26% higher than 2.8% economic plan assumption. Interest costs increased 1.04M (+41.3%) year-over-year despite 500K amortization."
+    },
+    "refinancing_risk_assessment": {
+      "near_term_refinancing": 55980000,
+      "near_term_percentage": 49.7,
+      "risk_level": "HIGH",
+      "comment": "CRITICAL: 55.98M kr (49.7% of all debt) matures September 2025, just 9 months from year-end. Association is 0.3 percentage points away from HIGH debt tier. Two consecutive years of losses (-6.2M total) despite fee increases. Rate environment remains elevated."
+    },
+    "amortization_schedule": {
+      "2024_actual": 500000,
+      "2023_actual": 375000,
+      "amortization_policy": "Currently amortization-free (amorteringsfria)"
+    },
+    "enhanced_loans_note": "MEDIUM tier at 49.7% kortfristig - just 0.3% below HIGH tier threshold! Large refinancing risk with 55.98M maturing Sept 2025. 100% SEB concentration. Rate shock evident: 3.528% actual vs 2.8% plan (+26%). Interest burden driving losses despite operating breakeven."
+  },
+
+  "fees_agent": {
+    "avg_fee_per_sqm": 761,
+    "avg_fee_per_sqm_previous": 725,
+    "total_fees_collected": 4777857,
+    "fee_increases_approved": [
+      {
+        "effective_date": "2025-04-01",
+        "increase_percentage": 5.0,
+        "reason": "Ökade räntekostnader vid omläggning av lån samt generella prisökningar från föreningens leverantörer",
+        "decision_date": "2024",
+        "decision_body": "Styrelsen"
+      }
+    ],
+    "fee_coverage_analysis": {
+      "2024_result": -3417718,
+      "2024_operating_result": -72510,
+      "2024_interest_costs": 3558997,
+      "fee_adequacy": "inadequate",
+      "comment": "Despite 4.9% fee increase (725 → 761 kr/sqm), association still recorded 3.4M loss. Additional 5% increase approved for April 2025 to address rising interest costs and supplier price increases."
+    },
+    "fees_note": "Fees increased 4.9% during 2024 (725 → 761 kr/sqm). Additional 5% increase approved for April 2025. Despite increases, losses continue due to high interest burden (3.6M annually). TV/broadband cost reduced from 220 kr/month to 170 kr/month effective April 2025."
+  },
+
+  "energy_agent": {
+    "heating_system": "Fjärrvärme",
+    "heating_cost_2024": 683717,
+    "heating_cost_2023": 709367,
+    "heating_change_pct": -3.6,
+    "electricity_cost_2024": 681096,
+    "electricity_cost_2023": 667970,
+    "electricity_change_pct": 2.0,
+    "water_cost_2024": 275993,
+    "water_cost_2023": 310674,
+    "water_change_pct": -11.2,
+    "total_energy_cost_2024": 1640806,
+    "total_energy_cost_2023": 1688011,
+    "energy_cost_per_sqm": 180,
+    "energy_cost_per_sqm_previous": 203,
+    "energy_supplier_heating": "Stockholm Exergi",
+    "energy_supplier_electricity": "Fortum Markets AB",
+    "grid_operator": "Ellevio AB",
+    "water_supplier": "Stockholm Vatten och Avfall AB",
+    "energy_improvements_2024": [
+      "LED-belysning i källare och garage (energy efficiency)",
+      "LED-belysning i hisshallar och trapphus med nödbelysningsfunktion (energy efficiency + safety)"
+    ],
+    "energy_note": "Total energy costs decreased 2.8% (1.69M → 1.64M). Heating down 3.6%, water down 11.2%, electricity up 2.0%. Energy cost per sqm improved from 203 kr to 180 kr (-11.3%) due to LED upgrades and efficiency measures. Major LED retrofit completed in basement, garage, elevators, and stairwells."
+  },
+
+  "property_agent": {
+    "property_designation": "Sonfjället 2",
+    "acquisition_year": 2015,
+    "ownership_type": "äganderätt",
+    "land_area_sqm": null,
+    "building_area_sqm": 9132,
+    "residential_area_sqm": 7552,
+    "commercial_area_sqm": 1579,
+    "number_of_buildings": 2,
+    "number_of_apartments": 94,
+    "number_of_commercial_units": 2,
+    "apartment_distribution": {
+      "1_rok": 10,
+      "2_rok": 24,
+      "3_rok": 23,
+      "4_rok": 36,
+      "5_rok": 1
+    },
+    "commercial_tenants": [
+      {
+        "tenant": "Puls & Träning/STC Sweden AB",
+        "area_sqm": 282,
+        "lease_start": "2022-06-20",
+        "lease_end": "2025-06-19",
+        "business_type": "gym/fitness"
+      },
+      {
+        "tenant": "Barnsjukhuset Martina i Stockholm AB",
+        "area_sqm": 197,
+        "lease_start": "2020-06-22",
+        "lease_end": "2030-06-21",
+        "business_type": "children's hospital"
+      }
+    ],
+    "taxeringsvarde_total": 534800000,
+    "taxeringsvarde_building": 275800000,
+    "taxeringsvarde_mark": 259000000,
+    "taxeringsvarde_residential": 512000000,
+    "taxeringsvarde_commercial": 22800000,
+    "insurance_provider": "Brandkontoret",
+    "insurance_type": "Fullvärdesförsäkrad",
+    "maintenance_plan_period": "2018-2043",
+    "samfallighet_membership": {
+      "name": "Sonfjällets samfällighetsförening",
+      "ownership_percentage": 47.0,
+      "responsibilities": "Gården, garagefoajén med yttre garageport"
+    },
+    "common_facilities": [
+      "Två gemensamma entreér",
+      "Två gemensamhetslokaler (för fester och möten)",
+      "Plaza lokal kan användas som övernattningslägenhet",
+      "Två gemensamma takterrasser (med möbler och odlingslådor)"
+    ],
+    "property_note": "Very new building constructed 2015 (only 10 years old!). Owns land (no tomträtt burden). Member in samfällighet with 47% share. Two commercial tenants providing 1.16M annual income. Long-term lease with children's hospital (until 2030). Ongoing construction defect issues with builder Skanska."
+  },
+
+  "maintenance_agent": {
+    "maintenance_plan_start_year": 2018,
+    "maintenance_plan_end_year": 2043,
+    "yttre_underhallsfond_balance": 1195369,
+    "yttre_underhallsfond_balance_previous": 968779,
+    "yttre_underhallsfond_addition_2024": 226590,
+    "yttre_underhallsfond_withdrawal_2024": 401434,
+    "maintenance_completed_2024": [
+      {
+        "project": "Stamspolning avlopp",
+        "year": 2024,
+        "description": "Omfattande stamspolning av fastighetens avloppssystem för att förebygga framtida avloppsproblem",
+        "preventive": true
+      },
+      {
+        "project": "Byte till LED belysning i källare och garage",
+        "year": 2024,
+        "category": "energy_efficiency"
+      },
+      {
+        "project": "Belysning i hisshallar och trapphus kompletterat med nödbelysningsfunktion",
+        "year": 2024,
+        "category": "safety_improvement"
+      },
+      {
+        "project": "OVK-besiktning och injustering av ventilation",
+        "year": 2024,
+        "description": "Obligatorisk ventilationskontroll (OVK) genomförd med injustering betald av Skanska. Vissa brister i ventilationsbrandskyddet upptäcktes.",
+        "triennial": true
+      }
+    ],
+    "maintenance_planned": [
+      {
+        "project": "Säkrare utrymning vid trapphusen",
+        "planned_year": 2025,
+        "category": "safety"
+      },
+      {
+        "project": "Gårdens trägångar och pergola",
+        "planned_year": 2025,
+        "estimated_cost": null,
+        "urgency": "high",
+        "reason": "I så dåligt skick att de behöver göras om fullständigt. Måste av säkerhetsskäl åtgärdas under 2025.",
+        "dispute": "Skanska-related defect"
+      },
+      {
+        "project": "Utbyte av droppskydd under kylskåp",
+        "planned_year": 2025
+      },
+      {
+        "project": "Bättre förvaringsmöjligheter i Cykelrummet",
+        "planned_year": "2025-2026"
+      },
+      {
+        "project": "Takterrasser",
+        "planned_year": "2025-2026"
+      }
+    ],
+    "construction_defects": {
+      "builder": "Skanska",
+      "defect_claims_active": true,
+      "disputed_items": [
+        "Trägångar och pergola på gården (i mycket dåligt skick, full ersättning begärd)"
+      ],
+      "rectified_items": "Vissa fel åtgärdade av Skanska",
+      "ventilation_fire_safety_issues": "Brister i ventilationsbrandskyddet upptäcktes vid OVK, delvis åtgärdade",
+      "settlement_received": {
+        "amount": 1062000,
+        "date": "2025-03-14",
+        "source": "Note 12, post-balance-sheet event"
+      }
+    },
+    "maintenance_note": "Maintenance plan updated in 2024. Critical safety issue: wooden walkways/pergola on courtyard must be replaced in 2025 due to severe deterioration. Ongoing dispute with builder Skanska for construction defects. Received 1.062M kr settlement from Skanska in March 2025. OVK revealed ventilation fire safety deficiencies being addressed."
+  },
+
+  "notes_agent": {
+    "note_1_revenue": {
+      "annual_fees": 4777857,
+      "commercial_rent": 1162689,
+      "parking_rent": 1141440,
+      "utilities_charged": 992899,
+      "other": 331058
+    },
+    "note_2_other_operating_income": {
+      "transfer_mortgage_fees": 26551,
+      "other_income": 11589,
+      "government_subsidies": 0,
+      "subletting_fees": 3558,
+      "note": "No government subsidies in 2024 (211,910 kr received in 2023)"
+    },
+    "note_3_property_costs": {
+      "repairs": -819463,
+      "landscaping": -38047,
+      "electricity": -681096,
+      "heating": -683717,
+      "water_sewer": -275993,
+      "waste_collection": -5829,
+      "waste_sorting": -64460,
+      "vacuum_waste_system": -134387,
+      "total": -2702992
+    },
+    "note_4_operating_costs": {
+      "cleaning": -96101,
+      "elevator_service": -240771,
+      "entrance_mats": -16256,
+      "other_property_costs": -3374,
+      "property_insurance": -101019,
+      "cable_tv": -115902,
+      "broadband": -117030,
+      "technical_management_contract": -274572,
+      "technical_management_extra": -55585,
+      "property_tax": -228000,
+      "total": -1248610
+    },
+    "note_5_admin_external_costs": {
+      "audit_fees": -30000,
+      "advisory_fees": -43956,
+      "property_management": -96684,
+      "property_management_extra": -36272,
+      "meeting_costs": -11875,
+      "bank_fees": -6568,
+      "samfallighet_fee": -211500,
+      "representation_other": -23594,
+      "change_audit_accrual": -29158,
+      "association_fees": -7740,
+      "consumables": -56742,
+      "other_services_it": -49039,
+      "total": -603128,
+      "note": "2023 audit fee included in 'change in audit accrual' line. 2024 audit fee is accrued estimate to be settled against 2025 invoice."
+    },
+    "note_6_personnel_costs": {
+      "salaries": -157500,
+      "employer_taxes": -23583,
+      "total": -181083
+    },
+    "note_7_depreciation": {
+      "buildings": -3503359,
+      "charging_stations": -38908,
+      "total": -3542267
+    },
+    "note_8_financial_items": {
+      "interest_income_longterm": 36693,
+      "interest_income_bank": 176667,
+      "tax_free_interest": 428,
+      "interest_expense_bank": -3558997,
+      "net_financial": -3345209
+    },
+    "note_9_buildings_land": {
+      "acquisition_value": 682435875,
+      "accumulated_depreciation": -26275191,
+      "book_value": 656160684,
+      "taxeringsvarde_building": 275800000,
+      "taxeringsvarde_land": 259000000,
+      "taxeringsvarde_total": 534800000,
+      "charging_stations_acquisition": 389082,
+      "charging_stations_depreciation": -38908,
+      "charging_stations_book_value": 350174,
+      "charging_stations_note": "Nedskrivning 389,082 kr due to government subsidy received"
+    },
+    "note_10_loans": {
+      "total_loans": 112605000,
+      "longterm": 56625000,
+      "shortterm": 55980000,
+      "loans_detail": "See enhanced_loans_agent"
+    },
+    "note_11_collateral": {
+      "property_mortgages": 119480000
+    },
+    "note_12_post_balance_sheet_events": {
+      "fee_increase": {
+        "effective_date": "2025-04-01",
+        "increase_pct": 5.0
+      },
+      "tv_broadband_cost_reduction": {
+        "effective_date": "2025-04-01",
+        "old_cost": 220,
+        "new_cost": 170,
+        "reduction": -50
+      },
+      "skanska_settlement": {
+        "amount": 1062000,
+        "date": "2025-03-14",
+        "description": "Erhållit ersättning från Skanska"
+      }
+    }
+  },
+
+  "members_agent": {
+    "total_members_start": 160,
+    "members_joined": 9,
+    "members_left": 11,
+    "total_members_end": 162,
+    "apartments_transferred": 6,
+    "subletting_applications_received": 0,
+    "subletting_active": 1,
+    "subletting_details": "Andrahandsuthyrning av lgh 3-1403 har förlängts ett år",
+    "subletting_policy": "Föreningen följer bostadsrättslagen 7 kap. Samtycke ges t ex för studier, militärtjänst, arbete på annan ort eller för att pröva samboende.",
+    "members_note": "162 members at year-end (160 start + 9 new - 11 departed). 6 apartment transfers during 2024. No new subletting applications received. One existing subletting (apt 3-1403) extended for one more year."
+  },
+
+  "risk_assessment_agent": {
+    "financial_risks": {
+      "debt_refinancing": {
+        "severity": "HIGH",
+        "description": "55.98M kr (49.7% of debt) matures September 2025. Rate environment remains elevated.",
+        "mitigation": "Board aware and monitoring. Fee increase approved April 2025 (+5%)."
+      },
+      "chronic_losses": {
+        "severity": "HIGH",
+        "description": "2 consecutive years of losses totaling 6.2M kr despite fee increases and energy savings.",
+        "mitigation": "Fee increases approved. Skanska settlement received (1.062M). Interest burden is primary driver."
+      },
+      "lender_concentration": {
+        "severity": "MEDIUM",
+        "description": "100% of debt with SEB (all 4 loans). No diversification.",
+        "mitigation": "Strong relationship with SEB. Good payment history."
+      },
+      "near_high_debt_tier": {
+        "severity": "MEDIUM",
+        "description": "At 49.7% kortfristig, only 0.3% below HIGH tier threshold (50%).",
+        "mitigation": "Refinancing in 2025 may allow restructuring to reduce short-term percentage."
+      }
+    },
+    "operational_risks": {
+      "construction_defects": {
+        "severity": "MEDIUM",
+        "description": "Ongoing dispute with Skanska. Wooden walkways/pergola must be replaced in 2025 for safety reasons.",
+        "mitigation": "1.062M kr settlement received March 2025. Replacement project budgeted for 2025."
+      },
+      "building_age": {
+        "severity": "LOW",
+        "description": "Very new building (2015, only 10 years old) but already showing defects.",
+        "mitigation": "Under warranty/dispute resolution. Maintenance plan in place through 2043."
+      },
+      "ventilation_fire_safety": {
+        "severity": "MEDIUM",
+        "description": "OVK revealed ventilation fire safety deficiencies.",
+        "mitigation": "Partially remediated. Board driving issue with Skanska."
+      }
+    },
+    "market_risks": {
+      "commercial_lease_expiry": {
+        "severity": "LOW",
+        "description": "Gym lease expires June 2025 (282 sqm).",
+        "mitigation": "Children's hospital has long-term lease until 2030. Commercial rent provides 1.16M annual revenue."
+      }
+    },
+    "overall_assessment": "MEDIUM-HIGH RISK. Primary concerns: (1) Large refinancing in Sept 2025 during elevated rate environment, (2) Chronic losses despite efficiency measures, (3) Construction defect remediation costs, (4) Just 0.3% below HIGH debt tier. Mitigating factors: Strong 82.6% solidarity, 7.7M cash position, 1.1M Skanska settlement, owns land (no tomträtt), diversified revenue streams."
+  },
+
+  "comprehensive_summary": {
+    "critical_patterns": [
+      "MEDIUM debt tier at 49.7% kortfristig - only 0.3% below HIGH tier threshold!",
+      "Large refinancing risk: 55.98M kr (49.7% of debt) matures September 2025",
+      "2 consecutive years of losses: -2.8M (2023), -3.4M (2024) = -6.2M total",
+      "Interest rate shock: 3.528% actual vs 2.8% economic plan (+26%)",
+      "Interest costs jumped 41.3% year-over-year (2.5M → 3.6M)",
+      "Very new building (2015, only 10 years old) but already major construction defects",
+      "Ongoing builder dispute with Skanska - 1.062M settlement received March 2025",
+      "100% lender concentration with SEB (all 4 loans, no diversification)",
+      "Owns land (äganderätt, no tomträtt burden) - positive factor",
+      "Member in samfällighet (47% ownership of shared courtyard/garage)"
+    ],
+    "financial_health": "CONCERNING - Despite strong 82.6% solidarity and 7.7M cash, association faces mounting challenges. Two years of losses despite fee increases and energy savings. Interest burden (3.6M annually) is primary loss driver. Large refinancing coming Sept 2025 in elevated rate environment.",
+    "key_strengths": [
+      "Strong solidarity at 82.6%",
+      "Good liquidity with 7.7M cash",
+      "Owns land (no tomträtt burden)",
+      "Diversified revenue streams (fees, commercial rent, parking, utilities)",
+      "Very new building (2015) with long maintenance plan to 2043",
+      "Energy efficiency improvements reducing costs (LED upgrades)",
+      "Long-term commercial tenant (children's hospital until 2030)"
+    ],
+    "key_weaknesses": [
+      "2 consecutive years of significant losses (-6.2M total)",
+      "Large near-term refinancing risk (55.98M in 9 months)",
+      "Interest rate shock (actual 3.528% vs plan 2.8%)",
+      "100% lender concentration (all loans with SEB)",
+      "Construction defects requiring remediation (safety-critical)",
+      "On edge of HIGH debt tier (49.7%, just 0.3% below threshold)",
+      "Fee increases insufficient to cover losses"
+    ],
+    "outlook": "CAUTIOUS - Association faces critical September 2025 refinancing of 49.7% of debt during elevated rate environment. Two years of losses demonstrate fee increases insufficient to offset interest burden. Skanska settlement (1.1M) provides some relief but construction defect remediation costs pending. Strong solidarity and cash position provide buffer, but refinancing outcome will be determinative. Board actively managing through fee increases (+5% April 2025) and cost controls.",
+    "unique_characteristics": [
+      "Very new construction (2015, only 10 years old)",
+      "Early-life construction defects (builder dispute active)",
+      "Member in samfällighet (shared courtyard ownership structure)",
+      "Electric vehicle charging station investment",
+      "Two common rooftop terraces with gardening",
+      "Overnight guest apartment available",
+      "No tomträtt burden (owns land outright)",
+      "Central Stockholm location (Drevergatan 1-3)"
+    ]
+  }
+}

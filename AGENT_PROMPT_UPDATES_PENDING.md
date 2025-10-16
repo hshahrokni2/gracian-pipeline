@@ -422,6 +422,43 @@ DETAILS:
 - 🏗️ **Tomträtt structural burden**: 33.6% of ops (3rd highest) creates chronic deficit even in modern buildings
 - 💰 **Lender concentration risk**: 100% Nordea = all loans refinance at same time with same lender (no diversification benefit)
 
+PDF 32 (brf_769629 - BRF Björk och Plaza 2024): ✅ COMPLETE - 🎯 MEDIUM TIER AT EDGE OF HIGH (49.7%)!
+[⚠️] Loan reclassification? (kortfristig 49.7% - MEDIUM tier, 0.3% below HIGH!) EDGE CASE
+[❌] Multiple fee increases? (single +5% increase April 2025) NO (INADEQUATE RESPONSE)
+[❌] Electricity increase >50%? (total energy +9% net, 2-year swing) NO (MODERATE)
+[✅] Lokaler >15% of area? (20.7% = 1,579/9,132 m²) YES (SAME AS PDF 16!)
+
+SCORE: 1.5 / 4 (37.5%)
+DETAILS:
+- Loans: **55.98M short-term / 112.6M total = 49.7% kortfristig (MEDIUM tier, but 0.3% below HIGH! EDGE CASE!)** ⚡⚡
+- **REFINANCING CLUSTER (single month!)**: 30.0M + 26.0M mature Sept 28, 2025 (9 months out) = **49.7% of ALL debt in ONE month!**
+- **EDGE CASE ALERT**: Only **336,000 kr** (0.3 percentage points) separates this from HIGH tier classification!
+- **2 CONSECUTIVE YEARS OF LOSSES**: -6.2M total (2023-2024, -3.1M average) despite **operating improvement +83%**!
+- **INTEREST BURDEN EXPLODED**: Operating result improved -431K → -73K (+83%!) BUT interest costs jumped +1.04M (+41%) = net result 23% worse!
+- **Rate shock**: 3.528% actual vs 2.8% economic plan (+26% higher), interest costs 3.56M consumes 74.5% of fee revenue!
+- **100% SEB concentration**: All 4 loans with same lender (no diversification)
+- **Fee increase inadequate**: +5% approved April 2025 generates 239K revenue vs 3.4M annual loss = **covers only 7.0% of deficit!**
+- **VERY NEW BUILDING WITH DEFECTS**: Built 2015 (only 10 years old!), active Skanska dispute, wooden walkway/pergola must be replaced for safety in 2025
+- **Settlement received**: 1,062,000 kr from Skanska (2025-03-14, post-balance-sheet event in Note 12)
+- **Äganderätt property**: Owns land (NO tomträtt burden, saves ~1M/year vs typical Stockholm BRF!)
+- **Samfällighet structure**: 47% share of Sonfjällets samfällighetsförening (shared courtyard with Heba + BRF Zenhusen), 211,500 kr annual
+- Energy: Total energy +9% net (165 → 203 → 180 kr/m²), +23% spike in 2023, -11% recovery 2024 via LED retrofits
+- Lokaler: **20.7% area** (1,579 m²) = SAME AS PDF 16! Revenue 1.16M (30.2%), premium 1.71x residential
+- **Commercial tenants**: Puls & Träning gym (282 m², expires 2025-06-19) + Barnsjukhuset Martina children's hospital (197 m², expires 2030-06-21)
+- Schema: **29th consecutive ZERO new fields** (99.5%+ complete)
+- **K2 accounting standard**: 20 pages, modern format
+- **2010-2015 construction cohort**: 10-year-old building with major defects (early-life failure pattern)
+
+**CRITICAL INSIGHTS**:
+- 🎯 **EDGE CASE MEDIUM TIER**: 49.7% technically MEDIUM but behaves like HIGH risk (only 336K away from threshold!)
+- 🚨 **Operating vs interest split**: Can improve operations +83% but still lose money if interest explodes +41% (decoupling pattern!)
+- 🏗️ **New ≠ problem-free**: 10-year-old building needs major safety repairs (2010-2015 cohort vulnerability)
+- 💰 **100% SEB lender concentration**: 4 loans, single point of failure (vs PDF 31 Nordea, PDF 28 dual lenders)
+- ✅ **Äganderätt advantage**: No tomträtt saves ~1M/year (huge structural benefit vs PDFs 28/30/31)
+- 🏢 **Samfällighet governance**: Shared courtyard = coordinated disputes + joint costs (first comprehensive example)
+- 📉 **Fee inadequacy extreme**: 5% increase covers only 7% of deficit (vs PDF 31's 10% covering ~8%)
+- 💸 **Post-balance-sheet events matter**: 1.06M settlement changes financial picture (systematic Note 12 check needed)
+
 **FINAL DECISION AFTER 15/15 SRS VALIDATION PDFs** (UPDATED AFTER PDF 31 - EXPLICIT RATE SHOCK CONFIRMED!):
 ```
 ✅ IMPLEMENT loans_agent (10/10 = 100% confirmation, NONE tier validated 3rd time, ALL tiers represented!)

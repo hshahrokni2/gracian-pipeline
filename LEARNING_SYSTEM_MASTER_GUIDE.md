@@ -3514,6 +3514,191 @@ Risk: All loans refinance with same lender, no diversification benefit
 
 ---
 
-**Total Progress**: 31/42 PDFs (73.8% complete) 🎯 **APPROACHING 75% MILESTONE!** ✅
-**SRS Progress**: 15/27 PDFs (55.6% complete, excluding 1 duplicate)
+---
+
+### **PDF 32: brf_769629 (BRF Björk och Plaza 2024, 769629-0134) ✅ COMPLETE - 🎯 MEDIUM TIER AT EDGE OF HIGH (49.7%!) + 2 YEARS LOSSES!**
+
+**Critical Discovery - MEDIUM Debt Tier at Extreme Upper Edge + Very New Building with Defects!**:
+```
+Loan Structure:
+Kortfristig:  55,980,000 kr @ 2.36%-4.67% (both mature Sept 2025)
+Långfristig:  56,625,000 kr @ 2.54%-4.54% (2026-2027 maturities)
+Total debt:   112,605,000 kr
+Short-term %: 49.7% (MEDIUM tier, 0.3% below HIGH!) 🚨🚨
+
+Refinancing Cluster (single month!):
+Sept 28, 2025:  30,000,000 kr @ 4.67%  (9 months out!)
+Sept 28, 2025:  25,980,000 kr @ 2.36%  (9 months out!)
+Total:          55,980,000 kr (49.7% of all debt in ONE month!)
+
+Interest Rate: 3.528% avg (vs 2.8% economic plan = +26% shock!)
+Lender Concentration: 100% SEB (all 4 loans with same bank)
+```
+
+**⚠️ EDGE CASE ALERT - 49.7% vs 50.0% Threshold**:
+```
+Current classification: MEDIUM (49.7%)
+HIGH threshold: 50.0%
+Distance to HIGH: 0.3 percentage points (only 336,000 kr!)
+
+WHY THIS MATTERS:
+✅ Technically MEDIUM but behaves like HIGH risk
+✅ Large single-month refinancing (55.98M in Sept 2025)
+✅ Only 336K kr reclassification away from HIGH tier
+✅ 2 years of consecutive losses despite improvements
+✅ Interest costs jumped 41.3% year-over-year
+
+Risk Level: HIGH despite MEDIUM classification!
+```
+
+**Two Consecutive Years of Losses (Interest Burden Drives Losses)**:
+```
+Year    Resultat        Operating    Interest      Analysis
+─────────────────────────────────────────────────────────────────────
+2023    -2,786,321 kr   -430,822 kr  -2,519,421 kr Operating weak
+2024    -3,417,718 kr    -72,510 kr  -3,558,997 kr Operating fixed!
+─────────────────────────────────────────────────────────────────────
+Change  -631,397 kr     +358,312 kr  -1,039,576 kr Interest exploded
+        (-23% worse)    (+83% better!) (-41% worse)
+
+Total 2-year losses: -6,204,039 kr
+Soliditet: 82.6% (stable, high)
+Cash: 7.7M kr (strong)
+```
+
+**KEY INSIGHT**: **Operating performance improved 83%** (nearly breakeven!) but **interest costs jumped 41%**, driving overall loss 23% worse despite efficiency gains!
+
+**Interest Rate Shock (Economic Plan vs Reality)**:
+```
+Economic Plan (2015):     2.8% average rate
+Current Reality (2024):   3.528% average rate
+Rate Shock:               +26% higher than plan (+0.728 points)
+
+Impact:
+Plan annual interest:     3,153,340 kr (at 2.8%)
+Actual annual interest:   3,558,997 kr (at 3.528%)
+Additional annual cost:   +405,657 kr (+13%)
+
+Sept 2025 Refinancing Risk:
+Amount: 55.98M kr (49.7% of debt)
+Current avg rate: 3.6% (these 2 loans)
+Market outlook: 4.0-4.5% expected
+Projected 2026 interest: 4.56M kr (+28% vs 2024!)
+
+Fee Response (INADEQUATE):
+2024 fee: 761 kr/m² (+4.9% vs 2023)
+2025 approved: ~799 kr/m² (+5.0%)
+Additional revenue: 239K kr/year
+Deficit to cover: 3.4M kr/year
+Gap: Fee increase covers only 7.0% of needed revenue!
+```
+
+**🏗️ VERY NEW BUILDING WITH EARLY-LIFE DEFECTS** (CRITICAL PATTERN!):
+```
+Construction: 2015 (only 10 years old!)
+Builder: Skanska (major Swedish construction company)
+Status: Active construction defect dispute
+
+Defects Identified:
+1. Wooden walkways and pergola on courtyard: "I så dåligt skick att de
+   behöver göras om fullständigt" (must replace for safety in 2025!)
+2. Ventilation fire safety deficiencies (OVK discovered, partially fixed)
+3. Other unspecified defects under dispute with Skanska
+
+Settlement Received (Post-Balance-Sheet):
+Date: 2025-03-14 (3.5 months after year-end)
+Amount: 1,062,000 kr (Note 12)
+
+Pending Costs:
+- Wooden walkway/pergola full replacement (2025) - amount TBD
+- Ventilation fire safety remediation - ongoing
+- Other disputed defects - unresolved
+
+WHY THIS IS CRITICAL:
+🚨 Building is only 10 years old (expected 100+ year lifespan!)
+🚨 Major structural issues requiring full replacement
+🚨 Safety-critical defects mandate immediate action
+🚨 Early-life failure pattern in 2010-2015 construction cohort
+```
+
+**✅ POSITIVE: Owns Land (No Tomträtt Burden!)**:
+```
+Ownership: Äganderätt (full ownership)
+Property: Sonfjället 2, Stockholm
+Taxeringsvärde:
+- Building: 275.8M kr
+- Land: 259.0M kr
+- Total: 534.8M kr
+
+Annual Savings vs Typical Tomträtt: ~1M kr/year (30-37% of ops!)
+
+Comparative Context:
+Tomträtt PDFs in corpus: 9/32 (28.1%)
+Typical tomträtt burden: 30-41% of operating costs
+This PDF: 0% tomträtt burden ⭐
+```
+
+**🏢 Samfällighet Structure (Shared Courtyard)**:
+```
+Samfällighet: Sonfjällets samfällighetsförening
+Ownership: 47% share
+Responsibilities: Courtyard, garage lobby, exterior garage door
+Annual cost: 211,500 kr (BRF's 47% share)
+Total samfällighet budget: ~450,000 kr/year
+Other members: Likely Heba and BRF Zenhusen
+
+Benefits:
+✅ Shared infrastructure costs across multiple BRFs
+✅ Joint dispute coordination (wooden walkway replacement)
+✅ Professional management of common areas
+✅ Economies of scale for landscaping/maintenance
+```
+
+**100% Lender Concentration Risk**:
+```
+SEB Loan 1: 30,000,000 kr @ 2.54% (matures 2027-09-28) LÅNGFRISTIG
+SEB Loan 2: 30,000,000 kr @ 4.67% (matures 2025-09-28) KORTFRISTIG
+SEB Loan 3: 26,625,000 kr @ 4.54% (matures 2026-09-28) LÅNGFRISTIG
+SEB Loan 4: 25,980,000 kr @ 2.36% (matures 2025-09-28) KORTFRISTIG
+Total: 112,605,000 kr (100% with SEB, no diversification!)
+
+Risk: Single point of failure, no competitive pressure, all loans at risk
+```
+
+**Updated Debt Tier Distribution** (32 PDFs processed):
+- NONE (0-1.99%): 3 PDFs (9.4%)
+- LOW (2-24%): 10 PDFs (31.3%)
+- **MEDIUM (25-49%): 12 PDFs (37.5%)** ⭐ **Still largest group, +1 from PDF 32!**
+- HIGH (50-74%): 6 PDFs (18.8%)
+- EXTREME (75-100%): 2 PDFs (6.3%)
+
+**Agent Performance**:
+- 20+ agents used (comprehensive MEDIUM-edge extraction)
+- 250+ fields extracted
+- K2 accounting standard (20 pages, modern format)
+- Zero-schema improvements needed ✅ (29th consecutive!)
+
+**Key Insights for Agent Improvements**:
+1. 🎯 **MEDIUM tier edge case**: 49.7% behaves like HIGH risk despite classification!
+2. 🚨 **Operating vs interest split**: Can fix operations (+83%) but still lose if rates explode (-41%)
+3. 🏗️ **New ≠ problem-free**: 10-year-old building with major defects (2010-2015 cohort pattern)
+4. 💰 **100% lender concentration**: All 4 loans with SEB = no diversification
+5. ✅ **Äganderätt benefit**: No tomträtt saves ~1M/year (huge advantage!)
+6. 🏢 **Samfällighet complexity**: Shared courtyard = coordinated governance/disputes
+7. 📉 **Fee inadequacy pattern**: 5% increases can't cover 41% interest jumps
+8. 💸 **Post-balance-sheet events**: 1.06M Skanska settlement changes picture
+
+**Action Items**:
+- 📊 **Track "edge MEDIUM" cases**: 45-50% range needs special monitoring
+- 📊 **2010-2015 construction cohort**: Track defect patterns in newest buildings
+- 📊 **Fee adequacy metric**: Calculate "needed vs approved" gap systematically
+- 📊 **Samfällighet cost allocation**: Standardize shared ownership structure tracking
+- 📊 **Post-balance-sheet events**: Systematically check Note 12 for all PDFs
+- 📊 **100% lender concentration**: Track single-lender exposure across corpus
+- 📝 **Next PDF**: PDF 33/42 (17th SRS PDF, 10 remaining, past 75% milestone!)
+
+---
+
+**Total Progress**: 32/42 PDFs (76.2% complete) 🎯 **PAST 75% MILESTONE!** ✅✅✅
+**SRS Progress**: 16/27 PDFs (59.3% complete)
 **Hjorthagen Progress**: 15/15 PDFs (100% complete) ✅
