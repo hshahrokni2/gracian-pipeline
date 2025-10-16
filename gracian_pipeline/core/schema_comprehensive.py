@@ -61,6 +61,26 @@ COMPREHENSIVE_TYPES: Dict[str, Dict[str, str]] = {
         "bostadsrätt_count": "int",  # Number of bostadsrätt units (ownership)
         "hyresrätt_count": "int",  # Number of rental apartments (hyresrätt)
         "parking_info": "str",  # Parking availability ("None", count, or description)
+        # PHASE 0 ENHANCEMENTS: Lokaler Revenue & Dual Threshold (25.6% prevalence)
+        "lokaler_revenue_2023": "int",  # Revenue from commercial tenants (hyresintäkter lokaler)
+        "lokaler_revenue_2022": "int",
+        "lokaler_revenue_percentage": "float",  # (lokaler_revenue / total_revenue) * 100
+        "lokaler_efficiency_multiplier": "float",  # revenue% / area%
+        "lokaler_dependency_risk_tier": "str",  # LOW/MEDIUM/MEDIUM-HIGH/HIGH
+        "residential_fee_impact_if_lokaler_lost": "float",  # % increase if all lokaler lost
+        # PHASE 0 ENHANCEMENTS: Tomträtt Analysis (16.3% prevalence)
+        "tomtratt_annual_cost_2023": "int",  # Tomträttsavgäld annual cost
+        "tomtratt_annual_cost_2022": "int",
+        "tomtratt_escalation_percent": "float",  # YoY change %
+        "tomtratt_percent_of_operating_costs": "float",  # Burden ratio
+        "tomtratt_escalation_risk_tier": "str",  # NONE/LOW/MEDIUM/HIGH/EXTREME
+        "tomtratt_20year_projection_stable": "int",  # 20-year cost stable scenario
+        "tomtratt_20year_projection_25pct_escalation": "int",
+        "tomtratt_20year_projection_50pct_escalation": "int",
+        "tomtratt_20year_projection_100pct_escalation": "int",
+        "savings_vs_tomtratt_baseline": "int",  # For äganderätt: estimated annual savings
+        "savings_vs_tomtratt_20year": "int",  # 20-year cumulative savings
+        "structural_advantage_percent": "float",  # Savings as % of fees
     },
 
     "notes_depreciation_agent": {
@@ -121,6 +141,16 @@ COMPREHENSIVE_TYPES: Dict[str, Dict[str, str]] = {
         "all_loans_mature_within_12_months": "bool",  # True if ALL loans mature < 1 year (refinancing risk)
         "refinancing_year": "int",  # Year when all loans mature (if applicable)
         "credit_facility_previous_year": "num",  # Previous year's credit facility for comparison
+        # PHASE 0 ENHANCEMENTS: Refinancing Risk Assessment (100% prevalence)
+        "refinancing_risk_tier": "str",  # NONE/MEDIUM/HIGH/EXTREME based on kortfristig ratio
+        "maturity_cluster_date": "str",  # ISO date of earliest major maturity (>10% debt)
+        "maturity_cluster_months": "int",  # Months from report date to maturity
+        "maturity_cluster_amount": "int",  # Amount maturing in cluster (TSEK)
+        "lender_diversity_score": "float",  # unique_lenders / total_loans (0-1)
+        "interest_rate_scenario_plus1pct": "int",  # Annual cost +1% rates (TSEK)
+        "interest_rate_scenario_plus2pct": "int",  # Annual cost +2% rates (TSEK)
+        "interest_rate_scenario_plus3pct": "int",  # Annual cost +3% rates (TSEK)
+        "affordability_impact_plus1pct": "float",  # Monthly/apt increase +1% (SEK)
     },
 
     "reserves_agent": {
@@ -141,6 +171,15 @@ COMPREHENSIVE_TYPES: Dict[str, Dict[str, str]] = {
         "electricity_increase_percent_2021_2022": "float",  # % increase electricity cost
         "heating_increase_percent_2021_2022": "float",  # % increase heating cost
         "water_increase_percent_2021_2022": "float",  # % increase water cost
+        # PHASE 0 ENHANCEMENTS: Energy Efficiency Analysis (14% efficiency prevalence)
+        "building_age_at_report": "int",  # report_year - construction_year
+        "electricity_reduction_percent": "float",  # YoY electricity cost change %
+        "total_energy_reduction_percent": "float",  # YoY total energy cost change %
+        "energy_reduction_hypothesis": "str",  # commissioning/retrofit/renovation/none
+        "energy_commissioning_issue_flag": "bool",  # age <10 AND reduction >30%
+        "energy_best_practice_flag": "bool",  # reduction ≥25% electricity OR ≥20% total
+        "energy_measures_implemented": "str",  # Text: LED, automation, BMS, etc.
+        "government_energy_support_2023": "int",  # elstöd or other subsidies (SEK)
     },
 
     "fees_agent": {
@@ -152,6 +191,15 @@ COMPREHENSIVE_TYPES: Dict[str, Dict[str, str]] = {
         "fee_unit": "str",  # E.g., "SEK/m² per year"
         # NEW from brf_268882: Transaction fees
         "transaction_fees": "dict",  # Detailed breakdown of various transaction fees
+        # PHASE 0 ENHANCEMENTS: Fee Response Classification (100% prevalence)
+        "fee_increase_count_2023": "int",  # Number of separate fee adjustments in year
+        "fee_increase_dates": "list",  # List of ISO dates ["2024-01-01", ...]
+        "fee_increase_percentages": "list",  # List of % for each increase [25.0, ...]
+        "compound_fee_effect": "float",  # Compound effect of multiple increases
+        "fee_response_classification": "str",  # AGGRESSIVE/REACTIVE/PROACTIVE/DISTRESS
+        "fee_decision_soliditet": "float",  # Soliditet at decision time
+        "fee_decision_cash_to_debt": "float",  # Cash ratio at decision time
+        "fee_stabilization_probability": "float",  # Predicted success 0-100%
     },
 
     "insurance_agent": {
@@ -197,6 +245,56 @@ COMPREHENSIVE_TYPES: Dict[str, Dict[str, str]] = {
         "total_driftkostnader": "num",  # Total operating costs
         "note_number": "str",  # Which note (e.g., "Not 4")
         "evidence_pages": "list",  # Page numbers where data found
+    },
+
+    # ==================================================================================
+    # PHASE 0 NEW AGENT TYPES - These agents don't exist in BASE_TYPES yet
+    # ==================================================================================
+
+    "key_metrics_agent": {
+        # NEW AGENT: Key financial metrics and calculated fields
+        # PHASE 0 ENHANCEMENTS: Depreciation Paradox Detection (4.7% prevalence)
+        "result_without_depreciation_2023": "int",  # result + avskrivningar (TSEK)
+        "result_without_depreciation_2022": "int",
+        "depreciation_as_percent_of_revenue_2023": "float",  # (avskrivningar / revenue) * 100
+        "depreciation_paradox_flag": "bool",  # result_wo_dep ≥500k AND soliditet ≥85%
+        "depreciation_paradox_cash_flow_quality": "str",  # EXCELLENT/STRONG/NONE
+        # Energy analysis fields (moved here from energy_agent for calculation convenience)
+        "building_age_at_report_calculated": "int",  # Calculated: report_year - construction_year
+        "electricity_reduction_calculated": "float",  # Calculated: YoY change %
+        "total_energy_reduction_calculated": "float",  # Calculated: YoY change %
+    },
+
+    "balance_sheet_agent": {
+        # NEW AGENT: Balance sheet analysis and liquidity monitoring
+        # Base balance sheet fields would come from BASE_TYPES if they exist
+        # PHASE 0 ENHANCEMENTS: Cash Crisis Detection (2.3% prevalence)
+        "total_liquidity_2023": "int",  # cash + short_term_investments (TSEK)
+        "total_liquidity_2022": "int",
+        "cash_to_debt_ratio_2023": "float",  # (total_liquidity / total_debt) * 100
+        "cash_to_debt_ratio_2022": "float",
+        "cash_to_debt_ratio_2021": "float",  # For 3-year trend
+        "cash_trend": "str",  # declining/stable/improving
+        "cash_crisis_flag": "bool",  # ratio <2% AND declining
+        "months_to_zero_cash": "int",  # Projection if declining, else null
+    },
+
+    "critical_analysis_agent": {
+        # NEW AGENT: Pattern classification and composite risk scoring
+        # PHASE 0 ENHANCEMENTS: Pattern Flags (various prevalence rates)
+        "pattern_b_new_flag": "bool",  # Young + chronic losses + positive cash flow (16.3%)
+        "interest_rate_victim_flag": "bool",  # Profit→loss from rate shock (2.3%)
+        "aggressive_management_flag": "bool",  # Single large increase + strong balance (20%)
+        "reactive_management_flag": "bool",  # Multiple increases, weak balance (40%)
+        "proactive_management_flag": "bool",  # Planned increase, stable ops (30%)
+        "distress_management_flag": "bool",  # Emergency increase + weak balance (10%)
+        "lokaler_dual_threshold_flag": "bool",  # Area <15% BUT revenue ≥30% (7%)
+        # Note: depreciation_paradox_flag is in key_metrics_agent
+        # PHASE 0 ENHANCEMENTS: Quantitative Scores (100% prevalence)
+        "management_quality_score": "float",  # 0-100 based on fee response + balance sheet
+        "stabilization_probability": "float",  # 0-100% predicted success rate
+        "operational_health_score": "float",  # 0-100 based on cash flow + soliditet
+        "structural_risk_score": "float",  # 0-100 composite risk (higher = more risk)
     },
 }
 

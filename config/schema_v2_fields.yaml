@@ -1,0 +1,702 @@
+# Schema v2 Fields - 59 New Fields for Enhanced BRF Extraction
+# Based on ULTRATHINKING_LEARNING_LOOP_ANOMALIES.md analysis
+# Phase 0 Validation Cycle - Week 1 Day 1
+
+version: "2.0"
+schema_upgrade: "197_fields_to_256_fields"
+total_new_fields: 59
+date_created: "2025-10-16"
+
+# ==================================================================================
+# CATEGORY 1: LOKALER REVENUE & DUAL THRESHOLD (property_agent)
+# Prevalence: 25.6% (11/43 PDFs)
+# Discovery: PDF 42 edge case (14.3% area BUT 39.3% revenue = hidden dependency)
+# ==================================================================================
+
+property_agent_lokaler:
+  description: "Commercial space (lokaler) revenue tracking for dual threshold assessment"
+  fields:
+    lokaler_revenue_2023:
+      type: int
+      nullable: true
+      description: "Revenue from commercial tenants (hyresintäkter lokaler) in 2023"
+      source: "Income statement (Resultaträkning)"
+      example: 1488000
+
+    lokaler_revenue_2022:
+      type: int
+      nullable: true
+      description: "Revenue from commercial tenants in 2022"
+      source: "Income statement"
+      example: 1425000
+
+    lokaler_revenue_percentage:
+      type: float
+      nullable: true
+      description: "Percentage of total revenue from commercial tenants"
+      calculation: "(lokaler_revenue_2023 / total_revenue) * 100"
+      example: 39.3
+
+    lokaler_efficiency_multiplier:
+      type: float
+      nullable: true
+      description: "Revenue efficiency (revenue% / area%)"
+      calculation: "lokaler_revenue_percentage / lokaler_area_percentage"
+      example: 2.74
+      threshold: "≥2.5x flags high efficiency (revenue disproportionate to area)"
+
+    lokaler_dependency_risk_tier:
+      type: str
+      nullable: true
+      enum: ["LOW", "MEDIUM", "MEDIUM-HIGH", "HIGH"]
+      description: "Commercial dependency risk assessment using dual threshold"
+      logic: |
+        IF (lokaler_area_percentage >= 15) AND (lokaler_revenue_percentage >= 30):
+          tier = "HIGH"
+        ELIF (lokaler_area_percentage >= 15) OR (lokaler_revenue_percentage >= 30) AND (efficiency_multiplier >= 2.5):
+          tier = "MEDIUM-HIGH"
+        ELIF (lokaler_area_percentage >= 15) OR (lokaler_revenue_percentage >= 30):
+          tier = "MEDIUM"
+        ELSE:
+          tier = "LOW"
+
+    residential_fee_impact_if_lokaler_lost:
+      type: float
+      nullable: true
+      description: "Percentage increase in residential fees if all commercial revenue lost"
+      calculation: "(lokaler_revenue_2023 / residential_fee_revenue) * 100"
+      example: 64.9
+
+# ==================================================================================
+# CATEGORY 2: FEE RESPONSE CLASSIFICATION (fees_agent)
+# Prevalence: 100% (43/43 PDFs)
+# Discovery: Management quality revealed through fee increase patterns
+# ==================================================================================
+
+fees_agent_response_classification:
+  description: "Fee increase pattern analysis and management quality classification"
+  fields:
+    fee_increase_count_2023:
+      type: int
+      nullable: true
+      description: "Number of separate fee adjustments in fiscal year"
+      source: "Förvaltningsberättelse, Note 17 (Väsentliga händelser)"
+      example: 1
+
+    fee_increase_dates:
+      type: list
+      item_type: str
+      nullable: true
+      description: "ISO dates of fee increases (YYYY-MM-DD format)"
+      example: ["2024-01-01"]
+
+    fee_increase_percentages:
+      type: list
+      item_type: float
+      nullable: true
+      description: "Percentage of each increase"
+      example: [25.0]
+
+    compound_fee_effect:
+      type: float
+      nullable: true
+      description: "Compound effect of multiple increases"
+      calculation: "(1 + r1/100) * (1 + r2/100) * ... - 1"
+      example: 18.45
+      note: "For [3%, 15%]: (1.03 * 1.15) - 1 = 0.1845 = 18.45%"
+
+    fee_response_classification:
+      type: str
+      nullable: true
+      enum: ["AGGRESSIVE", "REACTIVE", "PROACTIVE", "DISTRESS"]
+      description: "Management fee strategy classification"
+      definitions:
+        AGGRESSIVE: "Single large preemptive increase (≥20%), strong balance sheet (soliditet ≥80%, cash ≥3%)"
+        REACTIVE: "Multiple small increases or sequential years, weak balance sheet"
+        PROACTIVE: "Single planned increase (8-12%), stable operations"
+        DISTRESS: "Emergency increase (>25%) with weak balance sheet (soliditet <70%)"
+      example: "AGGRESSIVE"
+
+    fee_decision_soliditet:
+      type: float
+      nullable: true
+      description: "Soliditet (equity ratio) at time of fee decision"
+      source: "Balance sheet at decision time"
+      example: 82.0
+
+    fee_decision_cash_to_debt:
+      type: float
+      nullable: true
+      description: "Cash-to-debt ratio at time of fee decision"
+      calculation: "(cash + short_term_investments) / total_debt * 100"
+      example: 4.4
+
+    fee_stabilization_probability:
+      type: float
+      nullable: true
+      description: "Predicted success rate (0-100%) based on classification"
+      mapping:
+        AGGRESSIVE: 75.0  # 70-80% success rate
+        REACTIVE: 35.0    # 30-40% success rate
+        PROACTIVE: 90.0   # 85-95% success rate
+        DISTRESS: 15.0    # <20% success rate
+
+# ==================================================================================
+# CATEGORY 3: REFINANCING RISK (loans_agent)
+# Prevalence: 100% (43/43 PDFs)
+# Discovery: Maturity clustering and lender concentration critical for risk assessment
+# ==================================================================================
+
+loans_agent_refinancing:
+  description: "Enhanced refinancing risk assessment with maturity clusters and rate scenarios"
+  fields:
+    refinancing_risk_tier:
+      type: str
+      nullable: true
+      enum: ["NONE", "MEDIUM", "HIGH", "EXTREME"]
+      description: "Refinancing risk tier based on kortfristig debt ratio"
+      thresholds:
+        NONE: "<30%"
+        MEDIUM: "30-50%"
+        HIGH: "50-75%"
+        EXTREME: "≥75%"
+      example: "MEDIUM"
+
+    maturity_cluster_date:
+      type: str
+      nullable: true
+      description: "ISO date of earliest major loan maturity (>10% of total debt)"
+      format: "YYYY-MM-DD"
+      example: "2024-12-09"
+
+    maturity_cluster_months:
+      type: int
+      nullable: true
+      description: "Months from report date to maturity cluster"
+      example: 12
+
+    maturity_cluster_amount:
+      type: int
+      nullable: true
+      description: "Amount maturing in cluster (within 12 months of earliest), TSEK"
+      example: 14362260
+
+    lender_diversity_score:
+      type: float
+      nullable: true
+      description: "Lender concentration risk (unique lenders / total loans)"
+      calculation: "unique_lenders / total_loans"
+      range: "0.0 to 1.0"
+      interpretation: "0.25 = 100% concentration (1 lender, 4 loans), 0.75 = good diversification"
+      example: 0.25
+
+    interest_rate_scenario_plus1pct:
+      type: int
+      nullable: true
+      description: "Annual interest cost increase if rates +1%, TSEK"
+      calculation: "total_debt * 0.01"
+      example: 458329
+
+    interest_rate_scenario_plus2pct:
+      type: int
+      nullable: true
+      description: "Annual interest cost increase if rates +2%, TSEK"
+      calculation: "total_debt * 0.02"
+      example: 916658
+
+    interest_rate_scenario_plus3pct:
+      type: int
+      nullable: true
+      description: "Annual interest cost increase if rates +3%, TSEK"
+      calculation: "total_debt * 0.03"
+      example: 1374987
+
+    affordability_impact_plus1pct:
+      type: float
+      nullable: true
+      description: "Monthly fee increase per apartment if rates +1%, SEK/month/apt"
+      calculation: "(scenario_plus1pct - current_cost) / number_of_apartments / 12"
+      example: 2120.60
+
+# ==================================================================================
+# CATEGORY 4: DEPRECIATION PARADOX (key_metrics_agent)
+# Prevalence: 4.7% (2/43 PDFs)
+# Discovery: Strong cash flow + strong equity masked by K2 accounting depreciation
+# ==================================================================================
+
+key_metrics_depreciation_paradox:
+  description: "Depreciation paradox detection for BRFs with strong cash flow hidden by K2 depreciation"
+  fields:
+    result_without_depreciation_2023:
+      type: int
+      nullable: true
+      description: "Operating result before depreciation, TSEK"
+      calculation: "result_after_financial_2023 + avskrivningar_2023"
+      example: 1057000
+
+    result_without_depreciation_2022:
+      type: int
+      nullable: true
+      description: "Operating result before depreciation 2022, TSEK"
+      calculation: "result_after_financial_2022 + avskrivningar_2022"
+      example: 800000
+
+    depreciation_as_percent_of_revenue_2023:
+      type: float
+      nullable: true
+      description: "Depreciation burden (avskrivningar / revenue * 100)"
+      calculation: "(avskrivningar_2023 / revenue_2023) * 100"
+      example: 126.9
+      note: "Values >100% indicate depreciation exceeds revenue (common in K2)"
+
+    depreciation_paradox_flag:
+      type: bool
+      nullable: true
+      description: "True if both criteria met: result_wo_dep ≥500k AND soliditet ≥85%"
+      criteria:
+        threshold_1: "result_without_depreciation_2023 >= 500000"
+        threshold_2: "soliditet_2023 >= 85"
+        logic: "BOTH required (AND, not OR)"
+      example: true
+
+    depreciation_paradox_cash_flow_quality:
+      type: str
+      nullable: true
+      enum: ["EXCELLENT", "STRONG", "NONE"]
+      description: "Cash flow quality if paradox flagged"
+      thresholds:
+        EXCELLENT: "≥1,000,000 TSEK"
+        STRONG: "500,000-1,000,000 TSEK"
+        NONE: "Not paradox or <500,000"
+      example: "EXCELLENT"
+
+# ==================================================================================
+# CATEGORY 5: CASH CRISIS DETECTION (balance_sheet_agent)
+# Prevalence: 2.3% (1/43 PDFs)
+# Discovery: Terminal liquidity crisis (rare but catastrophic)
+# ==================================================================================
+
+balance_sheet_cash_crisis:
+  description: "Cash crisis detection for terminal liquidity failure"
+  fields:
+    total_liquidity_2023:
+      type: int
+      nullable: true
+      description: "Total liquid assets (cash + short-term investments), TSEK"
+      calculation: "cash_2023 + short_term_investments_2023"
+      example: 2024432
+
+    total_liquidity_2022:
+      type: int
+      nullable: true
+      description: "Total liquid assets 2022, TSEK"
+      calculation: "cash_2022 + short_term_investments_2022"
+      example: 1785512
+
+    cash_to_debt_ratio_2023:
+      type: float
+      nullable: true
+      description: "Liquidity ratio (total_liquidity / total_debt * 100)"
+      calculation: "(total_liquidity_2023 / total_debt_2023) * 100"
+      example: 4.4
+
+    cash_to_debt_ratio_2022:
+      type: float
+      nullable: true
+      description: "Liquidity ratio 2022"
+      example: 3.9
+
+    cash_to_debt_ratio_2021:
+      type: float
+      nullable: true
+      description: "Liquidity ratio 2021 (for 3-year trend)"
+      source: "Flerårsöversikt if available"
+      example: 3.2
+
+    cash_trend:
+      type: str
+      nullable: true
+      enum: ["declining", "stable", "improving"]
+      description: "3-year cash-to-debt trend"
+      logic: |
+        IF ratio_2023 < ratio_2022:
+          IF ratio_2022 < ratio_2021: trend = "declining" (2-year decline)
+          ELSE: trend = "declining" (1-year decline)
+        ELIF ratio_2023 > ratio_2022:
+          trend = "improving"
+        ELSE:
+          trend = "stable"
+      example: "improving"
+
+    cash_crisis_flag:
+      type: bool
+      nullable: true
+      description: "True if both criteria met: ratio <2% AND declining trend"
+      criteria:
+        threshold: "cash_to_debt_ratio_2023 < 2.0"
+        trend_required: "cash_trend == 'declining'"
+        logic: "BOTH required"
+      example: false
+
+    months_to_zero_cash:
+      type: int
+      nullable: true
+      description: "Projected months until cash = 0 (if declining, else null)"
+      calculation: "(total_liquidity_2023 / annual_burn_rate) * 12"
+      note: "annual_burn_rate = total_liquidity_2022 - total_liquidity_2023"
+      example: null
+
+# ==================================================================================
+# CATEGORY 6: ENERGY ANALYSIS (key_metrics_agent)
+# Prevalence: 14% efficiency exemplars (6/43 PDFs)
+# Discovery: Young buildings with >30% reduction = commissioning issues (fixable!)
+# ==================================================================================
+
+key_metrics_energy_analysis:
+  description: "Energy efficiency analysis with commissioning hypothesis"
+  fields:
+    building_age_at_report:
+      type: int
+      nullable: true
+      description: "Building age in years at report date"
+      calculation: "report_year - construction_year"
+      example: 7
+
+    electricity_reduction_percent:
+      type: float
+      nullable: true
+      description: "Year-over-year electricity cost change (%)"
+      calculation: "((elkostnad_2023 - elkostnad_2022) / elkostnad_2022) * 100"
+      note: "Negative = reduction, Positive = increase"
+      example: -36.4
+
+    total_energy_reduction_percent:
+      type: float
+      nullable: true
+      description: "Year-over-year total energy cost change (%)"
+      calculation: "((total_energy_2023 - total_energy_2022) / total_energy_2022) * 100"
+      example: -16.3
+
+    energy_reduction_hypothesis:
+      type: str
+      nullable: true
+      enum: ["commissioning", "retrofit", "renovation", "none"]
+      description: "Hypothesis for energy reduction based on building age + magnitude"
+      logic: |
+        IF age < 10 AND reduction <= -30%: hypothesis = "commissioning" (young building shouldn't have 30%+ savings)
+        ELIF 15 <= age <= 30 AND reduction <= -30%: hypothesis = "retrofit" (LED, HVAC, insulation)
+        ELIF age > 30 AND reduction <= -30%: hypothesis = "renovation" (major renovation with energy focus)
+        ELSE: hypothesis = "none"
+      example: "commissioning"
+
+    energy_commissioning_issue_flag:
+      type: bool
+      nullable: true
+      description: "True if young building (<10 years) with >30% reduction"
+      criteria: "building_age_at_report < 10 AND electricity_reduction_percent <= -30"
+      example: true
+
+    energy_best_practice_flag:
+      type: bool
+      nullable: true
+      description: "True if significant reduction achieved (≥25% electricity OR ≥20% total)"
+      criteria: "electricity_reduction_percent <= -25 OR total_energy_reduction_percent <= -20"
+      example: true
+
+    energy_measures_implemented:
+      type: str
+      nullable: true
+      description: "Text summary of energy improvement measures"
+      keywords: ["LED", "automation", "BMS", "värmepump", "bergvärme", "isolering", "FTX"]
+      example: "Energy audit conducted, systems reconfigured"
+
+    government_energy_support_2023:
+      type: int
+      nullable: true
+      description: "Government energy subsidies received, SEK"
+      keywords: ["elstöd", "energistöd", "ROT-avdrag energi"]
+      example: 74295
+
+# ==================================================================================
+# CATEGORY 7: TOMTRÄTT ANALYSIS (property_agent)
+# Prevalence: 16.3% tomträtt (7/43 PDFs), 100% benefit from comparison
+# Discovery: Äganderätt savings ~250k/year for small BRF, escalation risk for tomträtt
+# ==================================================================================
+
+property_agent_tomtratt:
+  description: "Tomträtt (ground lease) cost analysis with escalation risk and äganderätt advantage quantification"
+  fields:
+    tomtratt_annual_cost_2023:
+      type: int
+      nullable: true
+      description: "Tomträttsavgäld annual cost 2023, SEK"
+      source: "Fastighetskostnader (Note 4 or similar)"
+      example: 950000
+      note: "null for äganderätt properties"
+
+    tomtratt_annual_cost_2022:
+      type: int
+      nullable: true
+      description: "Tomträttsavgäld annual cost 2022, SEK"
+      example: 625000
+
+    tomtratt_escalation_percent:
+      type: float
+      nullable: true
+      description: "Year-over-year tomträtt cost change (%)"
+      calculation: "((cost_2023 - cost_2022) / cost_2022) * 100"
+      example: 52.0
+
+    tomtratt_percent_of_operating_costs:
+      type: float
+      nullable: true
+      description: "Tomträtt burden as % of total operating costs"
+      calculation: "(tomtratt_cost / total_operating_costs) * 100"
+      example: 18.5
+
+    tomtratt_escalation_risk_tier:
+      type: str
+      nullable: true
+      enum: ["NONE", "LOW", "MEDIUM", "HIGH", "EXTREME"]
+      description: "Tomträtt escalation risk tier"
+      thresholds:
+        EXTREME: "≥50%"
+        HIGH: "25-50%"
+        MEDIUM: "10-25%"
+        LOW: "0-10%"
+        NONE: "Negative or stable"
+      example: "EXTREME"
+
+    tomtratt_20year_projection_stable:
+      type: int
+      nullable: true
+      description: "20-year tomträtt cost assuming stable rate, SEK"
+      calculation: "current_annual_cost * 20"
+      example: 19000000
+
+    tomtratt_20year_projection_25pct_escalation:
+      type: int
+      nullable: true
+      description: "20-year cost with 25% escalation at year 10, SEK"
+      calculation: "(cost * 10) + (cost * 1.25 * 10)"
+      example: 21375000
+
+    tomtratt_20year_projection_50pct_escalation:
+      type: int
+      nullable: true
+      description: "20-year cost with 50% escalation at year 10, SEK"
+      calculation: "(cost * 10) + (cost * 1.50 * 10)"
+      example: 23750000
+
+    tomtratt_20year_projection_100pct_escalation:
+      type: int
+      nullable: true
+      description: "20-year cost with 100% escalation at year 10, SEK"
+      calculation: "(cost * 10) + (cost * 2.0 * 10)"
+      example: 28500000
+
+    savings_vs_tomtratt_baseline:
+      type: int
+      nullable: true
+      description: "Estimated annual savings vs hypothetical tomträtt (for äganderätt), SEK"
+      estimation_basis: "Size-based: ≤30 apts=250k, 31-60 apts=500k, >60 apts=1M"
+      example: 250000
+      note: "Only for äganderätt properties"
+
+    savings_vs_tomtratt_20year:
+      type: int
+      nullable: true
+      description: "20-year cumulative savings vs tomträtt (for äganderätt), SEK"
+      calculation: "savings_vs_tomtratt_baseline * 20"
+      example: 5000000
+
+    structural_advantage_percent:
+      type: float
+      nullable: true
+      description: "Äganderätt savings as % of residential fee revenue"
+      calculation: "(savings_vs_tomtratt_baseline / residential_fee_revenue) * 100"
+      example: 17.3
+
+# ==================================================================================
+# CATEGORY 8: PATTERN FLAGS (critical_analysis_agent)
+# Prevalence: Various (16.3% Pattern B-NEW, 20% AGGRESSIVE, 4.7% paradox, etc.)
+# Discovery: 5 new patterns identified across corpus
+# ==================================================================================
+
+critical_analysis_pattern_flags:
+  description: "Boolean flags for identified BRF patterns"
+  fields:
+    pattern_b_new_flag:
+      type: bool
+      nullable: true
+      description: "Pattern B-NEW: Young building (<15 years) + chronic losses + positive cash flow before depreciation"
+      criteria:
+        age: "building_age < 15"
+        losses: "consecutive_loss_years >= 3"
+        cash_flow: "result_without_depreciation > 0"
+      prevalence: "16.3% (7/43 PDFs)"
+      example: true
+
+    interest_rate_victim_flag:
+      type: bool
+      nullable: true
+      description: "Interest Rate Victim: Profit→loss from external rate shock, operations stable"
+      criteria:
+        profit_to_loss: "result_2022 > 0 AND result_2023 < 0"
+        interest_explosion: "interest_increase_percent > 50%"
+        operations_stable: "revenue_change_percent >= -5%"
+      prevalence: "2.3% (1/43 PDFs)"
+      example: false
+
+    aggressive_management_flag:
+      type: bool
+      nullable: true
+      description: "AGGRESSIVE Management: Single large preemptive increase, strong balance sheet"
+      criteria: "fee_response_classification == 'AGGRESSIVE'"
+      prevalence: "20% (9/43 PDFs)"
+      example: true
+
+    reactive_management_flag:
+      type: bool
+      nullable: true
+      description: "REACTIVE Management: Multiple small increases or sequential years, weak balance sheet"
+      criteria: "fee_response_classification == 'REACTIVE'"
+      prevalence: "40% (estimated)"
+      example: false
+
+    proactive_management_flag:
+      type: bool
+      nullable: true
+      description: "PROACTIVE Management: Single planned increase (8-12%), stable operations"
+      criteria: "fee_response_classification == 'PROACTIVE'"
+      prevalence: "30% (estimated)"
+      example: false
+
+    distress_management_flag:
+      type: bool
+      nullable: true
+      description: "DISTRESS Management: Emergency increase (>25%) with weak balance sheet"
+      criteria: "fee_response_classification == 'DISTRESS'"
+      prevalence: "10% (estimated)"
+      example: false
+
+    lokaler_dual_threshold_flag:
+      type: bool
+      nullable: true
+      description: "Lokaler Dual Threshold: Area <15% BUT revenue ≥30% (hidden dependency)"
+      criteria: "lokaler_dependency_risk_tier in ['MEDIUM-HIGH', 'HIGH']"
+      prevalence: "7% (3/43 PDFs)"
+      example: false
+
+# Note: depreciation_paradox_flag is already defined in key_metrics_depreciation_paradox
+
+# ==================================================================================
+# CATEGORY 9: QUANTITATIVE SCORES (critical_analysis_agent)
+# Prevalence: 100% (applies to all BRFs)
+# Discovery: Composite scores for management quality and risk assessment
+# ==================================================================================
+
+critical_analysis_quantitative_scores:
+  description: "Quantitative scores (0-100 scale) for BRF health assessment"
+  fields:
+    management_quality_score:
+      type: float
+      nullable: true
+      description: "Management quality score (0-100)"
+      calculation: |
+        base_score = 50
+        # Fee response quality (+/- 30 points)
+        IF fee_response_classification == "PROACTIVE": base_score += 30
+        ELIF fee_response_classification == "AGGRESSIVE": base_score += 20
+        ELIF fee_response_classification == "REACTIVE": base_score += 0
+        ELIF fee_response_classification == "DISTRESS": base_score -= 30
+        # Balance sheet strength (+/- 20 points)
+        IF soliditet >= 80: base_score += 20
+        ELIF soliditet >= 70: base_score += 10
+        ELIF soliditet < 60: base_score -= 20
+        management_quality_score = max(0, min(100, base_score))
+      example: 70.0
+
+    stabilization_probability:
+      type: float
+      nullable: true
+      description: "Predicted stabilization success rate (0-100%)"
+      source: "fee_stabilization_probability from fees_agent"
+      example: 75.0
+
+    operational_health_score:
+      type: float
+      nullable: true
+      description: "Operational health score (0-100)"
+      calculation: |
+        base_score = 50
+        # Cash flow before depreciation (+/- 30 points)
+        IF result_without_depreciation >= 1000000: base_score += 30
+        ELIF result_without_depreciation >= 500000: base_score += 20
+        ELIF result_without_depreciation >= 0: base_score += 10
+        ELIF result_without_depreciation < -500000: base_score -= 30
+        # Soliditet (+/- 20 points)
+        IF soliditet >= 85: base_score += 20
+        ELIF soliditet >= 75: base_score += 10
+        ELIF soliditet < 65: base_score -= 20
+        operational_health_score = max(0, min(100, base_score))
+      example: 60.0
+
+    structural_risk_score:
+      type: float
+      nullable: true
+      description: "Structural risk score (0-100, higher = more risk)"
+      calculation: |
+        risk_score = 0
+        # Refinancing risk (+0 to +40 points)
+        IF refinancing_risk_tier == "EXTREME": risk_score += 40
+        ELIF refinancing_risk_tier == "HIGH": risk_score += 25
+        ELIF refinancing_risk_tier == "MEDIUM": risk_score += 10
+        # Lokaler dependency (+0 to +25 points)
+        IF lokaler_dependency_risk_tier == "HIGH": risk_score += 25
+        ELIF lokaler_dependency_risk_tier == "MEDIUM-HIGH": risk_score += 15
+        ELIF lokaler_dependency_risk_tier == "MEDIUM": risk_score += 10
+        # Tomträtt escalation (+0 to +20 points)
+        IF tomtratt_escalation_risk_tier == "EXTREME": risk_score += 20
+        ELIF tomtratt_escalation_risk_tier == "HIGH": risk_score += 15
+        ELIF tomtratt_escalation_risk_tier == "MEDIUM": risk_score += 10
+        # Cash crisis (+0 to +15 points)
+        IF cash_crisis_flag: risk_score += 15
+        structural_risk_score = min(100, risk_score)
+      example: 10.0
+
+# ==================================================================================
+# SUMMARY
+# ==================================================================================
+
+summary:
+  total_new_fields: 59
+  schema_expansion: "197 fields → 256 fields (+30% expansion)"
+  field_breakdown:
+    lokaler_revenue_tracking: 6
+    fee_response_classification: 8
+    refinancing_risk: 9
+    depreciation_paradox: 5
+    cash_crisis_detection: 8
+    energy_analysis: 8
+    tomtratt_analysis: 13
+    pattern_flags: 7  # Not counting depreciation_paradox_flag duplicate
+    quantitative_scores: 4
+
+  prevalence_tiers:
+    tier_1_universal: ["loans_agent refinancing (100%)", "fee_response_classifier (100%)"]
+    tier_2_common: ["property_agent lokaler (25.6%)", "fees_multiple (18.6%)"]
+    tier_3_selective: ["energy_bidirectional (14%)", "tomtratt_escalation (16.3%)"]
+    tier_4_rare: ["depreciation_paradox (4.7%)", "cash_crisis (2.3%)"]
+
+  validation_edge_cases:
+    pdf42_lokaler_dual_threshold: "14.3% area BUT 39.3% revenue → MEDIUM-HIGH tier"
+    pdf43_aggressive_management: "+25% single increase + 82% soliditet → AGGRESSIVE classification"
+    pdf42_depreciation_paradox: "+1,057k cash flow + 85% soliditet → paradox flag TRUE"
+    pdf43_paradox_near_miss: "+486k (<500k) OR 82% (<85%) → paradox flag FALSE (correctly NOT flagged)"
+
+  success_criteria:
+    field_extraction: "All 59 fields extracting correctly"
+    enhancement_accuracy: "≥95% on ground truth (43 PDFs)"
+    edge_case_validation: "All 4 edge cases passing"
+    prevalence_match: "Actual extraction prevalence matches manual analysis (0% variance)"
