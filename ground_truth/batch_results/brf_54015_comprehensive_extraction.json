@@ -1,0 +1,520 @@
+{
+  "metadata_agent": {
+    "organization_number": "769616-6391",
+    "organization_name": "HSB bostadsrättsförening Lill-Jan i Stockholm",
+    "fiscal_year_start": "2023-01-01",
+    "fiscal_year_end": "2023-12-31",
+    "accounting_standard": "K2",
+    "pages_total": 20,
+    "property_manager": "HSB Stockholm",
+    "auditor": "Erik Karlsson",
+    "auditor_firm": "BoRevision i Sverige AB",
+    "hsb_appointed_auditor": "Andreas Holman",
+    "extraction_date": "2025-10-16",
+    "pdf_source": "brf_54015.pdf",
+    "completeness_note": "Annual report with comprehensive financial statements and multi-year overview"
+  },
+
+  "governance_agent": {
+    "chairman": "Ewa-Lena Hedrup",
+    "board_members": [
+      {"name": "Ewa-Lena Hedrup", "role": "Ordförande"},
+      {"name": "Bertil Metzger", "role": "Ledamot"},
+      {"name": "Christina Thomsen", "role": "Ledamot"},
+      {"name": "Dominique Grubestedt", "role": "Ledamot"},
+      {"name": "Annika Buckley", "role": "Ledamot"},
+      {"name": "Jacob Ridderstrand", "role": "Ledamot"},
+      {"name": "Sofia Hederstierna", "role": "Ledamot"}
+    ],
+    "board_suppleants": [
+      {"name": "Stavros Bilis", "role": "Suppleant"}
+    ],
+    "election_committee": ["Chris Lindberg (sammankallande)", "Pia Frostell", "Magnus Bellander"],
+    "signatory_rules": "Två i förening av Ewa-Lena Hedrup, Annika Buckley och Sofia Hederstierna",
+    "board_meetings_count": 10,
+    "annual_meeting_date": "2023-05-31",
+    "annual_meeting_attendance": 26,
+    "annual_meeting_proxies": 0,
+    "up_for_election": ["Sofia Hederstierna", "Annika Buckley", "Christina Thomsen", "Stavros Bilis"]
+  },
+
+  "financial_agent": {
+    "total_assets": 285718069,
+    "total_equity": 258732832,
+    "total_liabilities": 26985237,
+    "total_debt": 25361100,
+    "soliditet_pct": 91.0,
+    "profit_or_loss": -2007079,
+    "nettoomsattning": 4828275,
+    "operating_income": 5143951,
+    "operating_expenses": -6620576,
+    "operating_result": -1476625,
+    "financial_income": 80589,
+    "financial_expenses": -611043,
+    "depreciation": -2535928,
+    "cash_flow_from_operations": 953658,
+    "years_of_consecutive_losses": 5,
+    "multi_year_losses": [-1906, -1408, -1640, -2146, -2007],
+    "loss_note": "5 consecutive years of losses 2019-2023 totaling -9.1M kr"
+  },
+
+  "loans_agent": {
+    "total_debt": 25361100,
+    "long_term_debt": 7500000,
+    "short_term_debt": 17861100,
+    "loans": [
+      {
+        "lender": "Swedbank",
+        "amount": 6570900,
+        "interest_rate_pct": 0.56,
+        "maturity_date": "2024-04-25",
+        "amortization_next_year": 195600
+      },
+      {
+        "lender": "Stadshypotek AB",
+        "amount": 3764200,
+        "interest_rate_pct": 0.78,
+        "maturity_date": "2024-12-01",
+        "amortization_next_year": 319400
+      },
+      {
+        "lender": "Stadshypotek AB",
+        "amount": 7500000,
+        "interest_rate_pct": 3.83,
+        "maturity_date": "2025-03-01",
+        "loan_type": "långfristig",
+        "amortization_next_year": 0
+      },
+      {
+        "lender": "Stadshypotek AB",
+        "amount": 7526000,
+        "interest_rate_pct": 4.79,
+        "maturity_date": "2024-10-30",
+        "amortization_next_year": 0
+      }
+    ],
+    "average_interest_rate_pct": 2.81,
+    "annual_amortization": 515000,
+    "amortization_2_to_5_years": 2060000,
+    "interest_cost_annual": 608068,
+    "loans_to_be_converted_within_1_year": 17861100,
+    "lender_concentration": "Mixed - Swedbank 25.9%, Stadshypotek 74.1%",
+    "swap_agreements": "Nej"
+  },
+
+  "enhanced_loans_agent": {
+    "kortfristig_pct": 70.4,
+    "risk_assessment": {
+      "refinancing_risk": "HIGH",
+      "interest_rate_risk": "EXTREME",
+      "lender_concentration_risk": "MEDIUM",
+      "overall_risk": "HIGH"
+    },
+    "risk_factors": [
+      "70.4% of debt (17.9M kr) matures within 12 months - HIGHEST tier!",
+      "Three loans (17.9M kr) mature within 7 months (Apr-Oct 2024)",
+      "Interest rate range 0.56%-4.79% (8.6x spread = vulnerability)",
+      "5 consecutive years of losses (-9.1M total, -1.82M average)",
+      "Tomträtt renewal +25% phased in until 2027 (additional cost pressure)",
+      "91% soliditet provides buffer but losses erode equity annually"
+    ],
+    "refinancing_clusters": [
+      {
+        "period": "2024 Q2-Q4",
+        "amount": 17861100,
+        "percentage_of_total": 70.4,
+        "loans_count": 3,
+        "note": "Major refinancing cluster within 7 months"
+      }
+    ],
+    "rate_sensitivity_analysis": {
+      "current_weighted_rate": 2.81,
+      "if_all_at_5pct": {
+        "annual_cost": 1268055,
+        "increase": 660000,
+        "per_sqm_impact": 119
+      }
+    }
+  },
+
+  "fees_agent": {
+    "fee_per_sqm_annual": 703,
+    "fee_increase_pct_2023": 2.0,
+    "fee_increase_date_2023": "2023-01-01",
+    "fee_increase_pct_2024": 6.0,
+    "fee_increase_date_2024": "2024-01-01",
+    "fee_history": [
+      {"year": 2023, "fee_per_sqm": 703, "change_pct": 2.0},
+      {"year": 2022, "fee_per_sqm": 689, "change_pct": 0.0},
+      {"year": 2021, "fee_per_sqm": 689, "change_pct": 0.0},
+      {"year": 2020, "fee_per_sqm": 689, "change_pct": 0.0},
+      {"year": 2019, "fee_per_sqm": 663, "change_pct": null}
+    ],
+    "fee_increase_rationale_2024": "Hög inflation och ökade kostnader, höjda räntor samt en högre tomträttsavgäld. Avgift för el och bredband höjs i samband med detta för att bättre spegla kostnaderna.",
+    "fee_strategy_pattern": "Held constant 2020-2022, modest 2% (2023), then strategic 6% (2024) for refinancing + tomträtt + energy",
+    "fee_composition_note": "Includes individuell mätning of el, värme, vatten from 2023"
+  },
+
+  "energy_agent": {
+    "elkostnad_per_sqm": 78,
+    "varmekostnad_per_sqm": 69,
+    "vattenkostnad_per_sqm": 27,
+    "energikostnad_per_sqm_total": 173,
+    "electricity_increase_pct_2022_2023": 12.2,
+    "heating_increase_pct_2022_2023": 6.4,
+    "total_energy_increase_pct": 49.1,
+    "multi_year_energy_trends": [
+      {"year": 2023, "energi_per_sqm": 173, "el_kr": 429406, "varme_kr": 380320, "vatten_kr": 150197},
+      {"year": 2022, "energi_per_sqm": 116, "el_kr": 382788, "varme_kr": 357535, "vatten_kr": 124198},
+      {"year": 2021, "energi_per_sqm": 119},
+      {"year": 2020, "energi_per_sqm": 97},
+      {"year": 2019, "energi_per_sqm": 102}
+    ],
+    "energy_notes": "2023 includes individual metering (IMD) which increases reported per sqm cost compared to prior years. Energy crisis impact: +49.1% increase 2022→2023."
+  },
+
+  "property_agent": {
+    "property_designation": "Tresticklan 2",
+    "property_type": "Tomträtt (ground lease)",
+    "property_holder": "Stockholm kommun",
+    "tomtratt_term_years": 10,
+    "tomtratt_next_renewal": "2033-01-01",
+    "construction_year": 2014,
+    "building_age_years": 9,
+    "total_area_sqm": 5538,
+    "residential_area_sqm": 4964,
+    "commercial_area_sqm": 104,
+    "parking_area_sqm": 470,
+    "units_total": 107,
+    "units_residential": 70,
+    "units_parking": 35,
+    "units_commercial": 2,
+    "apartment_mix": "7 st 1 rok, 26 st 2 rok, 20 st 3 rok, 16 st 4 rok, 1 st 5 rok",
+    "taxeringsvarde_total": 316750000,
+    "taxeringsvarde_bostader": 160000000,
+    "taxeringsvarde_lokaler": 7400000,
+    "taxeringsvarde_mark_bostader": 148000000,
+    "taxeringsvarde_mark_lokaler": 1350000,
+    "fastighetsinteckning": 28609000,
+    "insurance_company": "Folksam",
+    "insurance_expiry": "2024-06-01",
+    "insurance_note": "Fullvärdesförsäkrad including styrelseansvar and collective bostadsrättstillägg"
+  },
+
+  "gemensamhetsanlaggningar_agent": {
+    "samfalligheter_count": 4,
+    "samfalligheter": [
+      {
+        "name": "Tresticklan GA:1",
+        "type": "Delägarförvaltad gemensamhetsanläggning",
+        "description": "Gemensamma byggnadsdelar med fastigheten Tresticklan 1 (andra halvan av byggnaden byggd av JM)",
+        "formation_date": "2012-05-15"
+      },
+      {
+        "name": "Tresticklan GA (gård/sopsugsanläggning/garage)",
+        "type": "Delägarförvaltad gemensamhetsanläggning",
+        "description": "Gård, sopsugsanläggning och garage inom kvarteret Tresticklan"
+      },
+      {
+        "name": "Tyresta GA (garage)",
+        "type": "Delägarförvaltad gemensamhetsanläggning",
+        "description": "Garage i kvarteret Tyresta tillsammans med brf Fiskartorpet, brf Spegeldammen och brf Laduviken",
+        "formation_date": "2016-12-14",
+        "brf_lilljan_share": "14 platser",
+        "access_date": "2015-12"
+      },
+      {
+        "name": "Kvarteret Tresticklan GA",
+        "type": "Delägarförvaltad gemensamhetsanläggning",
+        "description": "Additional shared infrastructure in Tresticklan block"
+      }
+    ],
+    "cluster_relationship": "Part of Tresticklan complex - shares infrastructure with Tresticklan 1 (JM-built) and connected to Tyresta garage with brf Fiskartorpet (PDF 28), brf Spegeldammen, brf Laduviken"
+  },
+
+  "tomtratt_agent": {
+    "tomtratt_cost_annual": 1298900,
+    "tomtratt_cost_previous_year": 1178000,
+    "tomtratt_increase_amount": 120900,
+    "tomtratt_increase_pct": 10.3,
+    "tomtratt_renewal_year": 2023,
+    "tomtratt_increase_total_pct": 25.0,
+    "tomtratt_phase_in_period": "2023-2027",
+    "tomtratt_phase_in_note": "25% increase being phased in gradually until 2027 for full effect",
+    "tomtratt_per_sqm": 235,
+    "tomtratt_pct_of_operating_costs": 34.4,
+    "tomtratt_term_years": 10,
+    "tomtratt_next_renewal": "2033-01-01"
+  },
+
+  "operating_costs_agent": {
+    "total_operating_costs": 3778606,
+    "operating_cost_per_sqm": 682,
+    "fastighetsskotsel_och_samf": -322459,
+    "sno_halk": -187636,
+    "reparationer": -307298,
+    "planerat_underhall": -78732,
+    "forsakringsskador": -13250,
+    "el": -429406,
+    "uppvarmning": -380320,
+    "vatten": -150197,
+    "sophamt": -128020,
+    "fastighetsforsakring": -65581,
+    "kabel_tv_bredband": -184521,
+    "fastighetsskatt_avgift": -87500,
+    "forvaltningsavtal": -131037,
+    "tomtrattsavgald": -1298900,
+    "ovriga_drift": -13750,
+    "major_cost_categories": {
+      "tomtratt": {"amount": 1298900, "pct_of_total": 34.4},
+      "energy_total": {"amount": 959923, "pct_of_total": 25.4},
+      "property_management": {"amount": 819195, "pct_of_total": 21.7},
+      "insurance_and_admin": {"amount": 468558, "pct_of_total": 12.4}
+    }
+  },
+
+  "commercial_tenants_agent": {
+    "commercial_units_count": 2,
+    "commercial_area_sqm": 104,
+    "commercial_area_pct": 1.9,
+    "commercial_rental_income": 194081,
+    "commercial_revenue_pct": 4.0,
+    "commercial_tenants": [
+      {
+        "name": "Stockholms Elitestäd HB",
+        "lease_type": "Hyresrätt",
+        "contract_length_years": 3,
+        "contract_start": "2023",
+        "note": "New tenant after previous tenant stopped paying rent in spring 2023"
+      },
+      {
+        "name": "Previous tenant (terminated)",
+        "status": "Contract terminated spring 2023 due to non-payment",
+        "note": "Premises advertised on open market and re-let"
+      }
+    ],
+    "lokaler_per_sqm_revenue": 1866,
+    "residential_fee_per_sqm": 703,
+    "commercial_premium_multiplier": 2.66
+  },
+
+  "reserves_and_funds_agent": {
+    "underhallsfond": 3610795,
+    "underhallsfond_previous_year": 2775527,
+    "reservation_to_fund_2023": 914000,
+    "utilization_from_fund_2023": 78732,
+    "net_fund_increase": 835268,
+    "balanserat_resultat": -18350884,
+    "arets_resultat": -2007079,
+    "total_accumulated_losses": -20357963,
+    "medlemsinsatser": 275480000,
+    "equity_breakdown": {
+      "bundet_eget_kapital": 279090795,
+      "fritt_eget_kapital": -20357963,
+      "total_eget_kapital": 258732832
+    },
+    "underhallsfond_decision_authority": "Styrelsen decides on reservations and utilization according to stadgar"
+  },
+
+  "maintenance_and_events_agent": {
+    "maintenance_plan_exists": true,
+    "latest_property_inspection": "2023-09-20",
+    "inspection_compliance": "In accordance with maintenance plan",
+    "planned_maintenance_cost_2023": 78732,
+    "major_events_2023": [
+      {
+        "event": "Plumbing investigation (avloppsrör i badrum)",
+        "date": "2023",
+        "outcome": "Stickprovsundersökning utförd av HSB Bostad - no loose pipes found between wall and sink",
+        "risk_mitigation": "Investigation performed to assess water damage risk during cleaning"
+      },
+      {
+        "event": "Tomträtt renewal",
+        "date": "2023",
+        "impact": "25% increase phased in 2023-2027",
+        "annual_cost_impact": "Full effect by 2027"
+      },
+      {
+        "event": "Commercial tenant change",
+        "date": "Spring 2023",
+        "description": "Previous tenant contract terminated due to non-payment, new 3-year contract with Stockholms Elitestäd HB"
+      },
+      {
+        "event": "New statutes (stadgar)",
+        "date": "2023 annual meeting decision",
+        "status": "Requires approval at 2 consecutive meetings - needs 2024 approval to take effect",
+        "purpose": "Align with new laws effective 2023"
+      }
+    ],
+    "upcoming_maintenance_5_years": "Följer underhållsplanen avseende renoveringar"
+  },
+
+  "nyckeltal_agent": {
+    "sparande_per_kvm": 86,
+    "skuldsattning_per_kvm": 4579,
+    "skuldsattning_bostadsratt_per_kvm": 5109,
+    "rantekans lighet_pct": 7.0,
+    "energikostnad_per_kvm": 173,
+    "arsavgifter_per_kvm": 703,
+    "arsavgifter_totala_intakter_pct": 68.0,
+    "totala_intakter_per_kvm": 929,
+    "nettoomsattning_tkr": 4828,
+    "resultat_efter_finansiella_poster_tkr": -2007,
+    "soliditet_pct": 91.0,
+    "kassaflode_fran_lopande_verksamhet": 953658,
+    "likvida_medel": 4660944,
+    "nyckeltal_note": "2023 calculations per BFNAR 2023:1 new rules - not directly comparable to prior years due to methodology changes (IMD included)"
+  },
+
+  "multi_year_comparison_agent": {
+    "years_tracked": 5,
+    "metrics_by_year": [
+      {
+        "year": 2023,
+        "sparande_kvm": 86,
+        "skuld_kvm": 4579,
+        "skuld_boyta_kvm": 5109,
+        "rantekanslig_pct": 7,
+        "energi_kvm": 173,
+        "avgift_kvm": 703,
+        "avgift_tot_pct": 68,
+        "tot_int_kvm": 929,
+        "netto_tkr": 4828,
+        "resultat_tkr": -2007,
+        "soliditet": 91
+      },
+      {
+        "year": 2022,
+        "sparande_kvm": 110,
+        "skuld_kvm": 5106,
+        "skuld_boyta_kvm": 5213,
+        "rantekanslig_pct": 8,
+        "energi_kvm": 116,
+        "avgift_kvm": 689,
+        "avgift_tot_pct": 66,
+        "tot_int_kvm": 930,
+        "netto_tkr": 5031,
+        "resultat_tkr": -2146,
+        "soliditet": 90
+      },
+      {
+        "year": 2021,
+        "sparande_kvm": 177,
+        "skuld_kvm": 5208,
+        "skuld_boyta_kvm": 5317,
+        "rantekanslig_pct": 8,
+        "energi_kvm": 119,
+        "avgift_kvm": 689,
+        "avgift_tot_pct": 67,
+        "tot_int_kvm": 947,
+        "netto_tkr": 5080,
+        "resultat_tkr": -1640,
+        "soliditet": 90
+      },
+      {
+        "year": 2020,
+        "sparande_kvm": 224,
+        "skuld_kvm": 5310,
+        "skuld_boyta_kvm": 5421,
+        "rantekanslig_pct": 8,
+        "energi_kvm": 97,
+        "avgift_kvm": 689,
+        "avgift_tot_pct": 68,
+        "tot_int_kvm": 945,
+        "netto_tkr": 5069,
+        "resultat_tkr": -1408,
+        "soliditet": 90
+      },
+      {
+        "year": 2019,
+        "sparande_kvm": 148,
+        "skuld_kvm": 5411,
+        "skuld_boyta_kvm": 5524,
+        "rantekanslig_pct": 8,
+        "energi_kvm": 102,
+        "avgift_kvm": 663,
+        "avgift_tot_pct": 66,
+        "tot_int_kvm": 912,
+        "netto_tkr": 4953,
+        "resultat_tkr": -1906,
+        "soliditet": 90
+      }
+    ],
+    "trend_analysis": {
+      "debt_decreasing": "Skuldsättning declining 5411 → 4579 kr/kvm (-15.4% over 5 years, annual amortization 515K)",
+      "energy_volatile": "Energy spiked 2023 (+49% to 173 kr/kvm) vs stable 2019-2022 (97-119)",
+      "fees_stable_then_increase": "Held 689 kr/kvm for 3 years (2020-2022), then +2% (2023), +6% approved (2024)",
+      "losses_consistent": "5 consecutive years of losses averaging -1.82M kr/year",
+      "sparande_declining": "Sparande per kvm declining 224 → 86 (-62%) as costs outpace revenue",
+      "soliditet_stable": "Soliditet maintained 90-91% despite losses (strong equity base)"
+    }
+  },
+
+  "financial_ratios_agent": {
+    "debt_to_equity_ratio": 0.098,
+    "debt_to_assets_ratio": 0.089,
+    "interest_coverage_ratio": -3.29,
+    "operating_margin_pct": -28.7,
+    "equity_ratio_pct": 91.0,
+    "current_ratio": 0.25,
+    "liquidity_analysis": "Poor current ratio (0.25) but strong cash position (4.7M kr) and high equity (91%)",
+    "solvency_note": "Extremely high soliditet (91%) provides strong buffer despite 5 years of losses"
+  },
+
+  "revenue_breakdown_agent": {
+    "total_revenue": 5143951,
+    "revenue_sources": {
+      "arsavgifter_bostader_andelstalsfordelad": 3490200,
+      "hyror_lokaler": 194081,
+      "hyror_garage_parkering": 607753,
+      "hyror_forbrukningsbaserad": 297012,
+      "hyror_informationsoverforing": 183960,
+      "ovriga_primara_intakter": 55269,
+      "forsakringsersattningar": 38001,
+      "ovriga_sekundara_intakter": 277675
+    },
+    "revenue_composition": {
+      "residential_fees_pct": 67.8,
+      "commercial_rent_pct": 3.8,
+      "parking_pct": 11.8,
+      "consumption_based_pct": 5.8,
+      "telecom_pct": 3.6,
+      "other_pct": 7.2
+    }
+  },
+
+  "cassaflode_agent": {
+    "cash_flow_operations": 953658,
+    "cash_flow_financing": -515000,
+    "net_cash_flow": 438658,
+    "cash_beginning_year": 4222286,
+    "cash_end_year": 4660944,
+    "cash_increase": 438658,
+    "working_capital_changes": 444595,
+    "depreciation_addback": 2535928,
+    "interest_received": 30109,
+    "interest_paid": -580350,
+    "operating_result_before_wc": 509063
+  },
+
+  "cluster_analysis_agent": {
+    "cluster_name": "Tresticklan",
+    "cluster_brfs_identified": [
+      "HSB brf Lill-Jan i Stockholm (Tresticklan 2) - this PDF",
+      "Brf Fiskartorpet (Tresticklan 1?) - PDF 28 (brf_53107)"
+    ],
+    "shared_infrastructure": [
+      "GA:1 - Shared building components with Tresticklan 1",
+      "GA - Yard, vacuum waste system, garage in Tresticklan block",
+      "Tyresta GA - Garage shared with Fiskartorpet, Spegeldammen, Laduviken"
+    ],
+    "cluster_characteristics": {
+      "construction_era": "2013-2014",
+      "developer": "JM (Tresticklan 1 half), unknown for Tresticklan 2",
+      "tomtratt_properties": "Both Tresticklan 1 and 2",
+      "shared_costs": "Samfällighetsavgifter for multiple GAs",
+      "geographic_proximity": "Same block (kvarteret Tresticklan)"
+    },
+    "comparative_notes": "PDF 28 (Fiskartorpet) has 40.9% tomträtt burden vs 34.4% for Lill-Jan. Both modern construction (2013-2014). Fiskartorpet has 4 consecutive losses, Lill-Jan has 5 consecutive losses."
+  }
+}
