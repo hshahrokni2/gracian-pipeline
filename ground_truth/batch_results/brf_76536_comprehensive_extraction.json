@@ -1,0 +1,581 @@
+{
+  "pdf_metadata": {
+    "filename": "brf_76536.pdf",
+    "pdf_id": "brf_76536",
+    "extraction_date": "2025-10-16",
+    "fiscal_year": 2023,
+    "pages": 17,
+    "file_size_mb": 8.8,
+    "processing_order": "32/42",
+    "dataset": "SRS",
+    "dataset_position": "16/27 SRS PDFs"
+  },
+
+  "basic_information": {
+    "name": "Brf Laduviken",
+    "org_number": "769625-8289",
+    "registration_date": "2013-01-31",
+    "economic_plan_registered": "2015-06-08",
+    "current_statutes_registered": "2023-10-09",
+    "fiscal_year_start": "2023-01-01",
+    "fiscal_year_end": "2023-12-31",
+    "location_municipality": "Stockholm",
+    "location_city": "Stockholm",
+    "street_address": "Hårdvallsgatan",
+    "postal_code": null,
+    "accounting_standard": "K2",
+    "authentic_brf": true,
+    "vat_registered": null,
+    "property_manager": "Simpleko AB",
+    "technical_manager": "JM@Home",
+    "economic_manager": "Simpleko AB"
+  },
+
+  "property_information": {
+    "properties": [
+      {
+        "property_designation": "Tyresta 2",
+        "acquisition_year": 2015,
+        "municipality": "Stockholm",
+        "land_tenure": "tomträtt",
+        "construction_years": null,
+        "property_value_year": null,
+        "number_of_buildings": 1,
+        "building_type": "flerbostadshus"
+      }
+    ],
+    "total_area_sqm": 6026,
+    "residential_area_sqm": 5922,
+    "commercial_area_sqm": 104,
+    "garage_area_sqm": 1300,
+    "number_of_apartments": 83,
+    "apartment_breakdown": {
+      "2_rok": 38,
+      "3_rok": 19,
+      "4_rok": 26
+    },
+    "number_of_commercial_units": 2,
+    "garage_spaces": 42,
+    "parking_spaces": null,
+    "insurance_provider": "Trygg Hansa",
+    "insurance_company": "Leif Bolander & Co AB",
+    "maintenance_plan_year": 2016,
+    "maintenance_plan_horizon": "2016-2046"
+  },
+
+  "governance": {
+    "board_members": [
+      {
+        "name": "Margareta Warman",
+        "role": "Ordförande",
+        "type": "Styrelseledamot"
+      },
+      {
+        "name": "Eva Reman",
+        "role": "Styrelseledamot",
+        "type": "Styrelseledamot"
+      },
+      {
+        "name": "Andreas Hober",
+        "role": "Styrelseledamot",
+        "type": "Styrelseledamot"
+      },
+      {
+        "name": "Christine Bianchi Zakariasson",
+        "role": "Styrelseledamot",
+        "type": "Styrelseledamot"
+      },
+      {
+        "name": "Victor Fladvad",
+        "role": "Styrelseledamot",
+        "type": "Styrelseledamot"
+      },
+      {
+        "name": "Henrik Schultz",
+        "role": "Suppleant",
+        "type": "Suppleant"
+      },
+      {
+        "name": "Johanna Falkenmark",
+        "role": "Suppleant",
+        "type": "Suppleant"
+      },
+      {
+        "name": "Pentti Sipilä",
+        "role": "Suppleant",
+        "type": "Suppleant"
+      }
+    ],
+    "nomination_committee": [
+      {
+        "name": "Marianne Fransson",
+        "role": "Valberedning"
+      },
+      {
+        "name": "Anna Nyströmer",
+        "role": "Valberedning"
+      }
+    ],
+    "auditors": [
+      {
+        "name": "Joakim Mattsson",
+        "firm": "BoRevision",
+        "type": "Revisor"
+      }
+    ],
+    "signatory_rules": "Firman tecknas av styrelsen; Firman tecknas av två i förening av ledamöterna.",
+    "annual_meeting_date": "2023-06-12",
+    "extra_meeting_date": "2023-09-25",
+    "board_meetings_count": 9
+  },
+
+  "membership_information": {
+    "members_start_of_year": 131,
+    "members_added": 5,
+    "members_removed": 7,
+    "members_end_of_year": 129,
+    "transfers_during_year": 4,
+    "second_hand_rentals_approved": null
+  },
+
+  "income_statement": {
+    "net_revenue": 6609230,
+    "other_operating_income": 79190,
+    "total_operating_income": 6688420,
+    "operating_costs": -3518279,
+    "other_external_costs": -217313,
+    "personnel_costs": -159281,
+    "depreciation": -3175545,
+    "total_operating_costs": -7070417,
+    "operating_result": -381997,
+    "interest_income": 12892,
+    "interest_expenses": -490302,
+    "total_financial_items": -477410,
+    "result_after_financial_items": -859407,
+    "annual_result": -859407
+  },
+
+  "revenue_breakdown": {
+    "annual_fees_residential": 4679952,
+    "rental_income_commercial": 349982,
+    "rental_income_garage": 1114546,
+    "other_income": 92728,
+    "broadband_tv_fees": 219120,
+    "water_fees": 152902,
+    "total_revenue": 6609230
+  },
+
+  "operating_costs_breakdown": {
+    "property_maintenance_general": 10620,
+    "inspection_service": 187636,
+    "property_maintenance_total": 280280,
+    "snow_removal": 19805,
+    "door_mats": 44297,
+    "total_property_maintenance": 542638,
+    "repairs_apartments": 55754,
+    "repairs_common_areas": 10876,
+    "repairs_installations": 25531,
+    "repairs_elevators": 108640,
+    "insurance_damage": 0,
+    "total_repairs": 200801,
+    "property_tax": 207435,
+    "heating": 433151,
+    "water": 157159,
+    "waste_management": 620,
+    "total_utilities": 798365,
+    "insurance": 82644,
+    "self_risk": 0,
+    "tomtratt": 1306819,
+    "other_misc": 10500,
+    "broadband_tv": 218609,
+    "property_tax_other": 115390,
+    "gemensamhetsanlaggning": 242513,
+    "total_other_operating": 1976475
+  },
+
+  "administrative_costs": {
+    "consumables": 21539,
+    "other_admin_costs": 48340,
+    "audit_fees": 28152,
+    "economic_management_fees": 119282,
+    "total_administrative": 217313
+  },
+
+  "personnel_costs": {
+    "board_fees": 131250,
+    "employer_contributions": 28031,
+    "total_personnel": 159281,
+    "number_of_employees": 0
+  },
+
+  "financial_items": {
+    "interest_income_total": 12892,
+    "interest_expense_loans": 490002,
+    "other_interest_expense": 300,
+    "total_financial_items": -477410
+  },
+
+  "balance_sheet_assets": {
+    "buildings_and_land_gross": 375985000,
+    "buildings_and_land_depreciation": -24194626,
+    "buildings_and_land_net": 351790374,
+    "land_value_included": null,
+    "equipment_gross": 392072,
+    "equipment_depreciation": -203491,
+    "equipment_net": 188581,
+    "ongoing_projects": 76351,
+    "total_fixed_assets": 352055306,
+    "customer_receivables": 83679,
+    "other_receivables": 54932,
+    "prepaid_expenses": 535016,
+    "total_current_receivables": 673627,
+    "cash_and_bank": 2523011,
+    "total_current_assets": 3196638,
+    "total_assets": 355251943
+  },
+
+  "balance_sheet_equity_liabilities": {
+    "member_contributions": 310025000,
+    "initial_fees": 0,
+    "external_maintenance_fund": 2679566,
+    "total_restricted_equity": 312704566,
+    "retained_earnings": -11214109,
+    "annual_result": -859407,
+    "total_unrestricted_equity": -12073516,
+    "total_equity": 300631050,
+    "long_term_debt": 17187500,
+    "short_term_debt": 36025000,
+    "supplier_debts": 266905,
+    "tax_liabilities": 230780,
+    "other_short_term_liabilities": 1804,
+    "accrued_expenses": 908904,
+    "total_short_term_liabilities": 37433393,
+    "total_equity_and_liabilities": 355251943
+  },
+
+  "loans_detailed": [
+    {
+      "lender": "SBAB",
+      "original_amount": null,
+      "current_balance_2023": 17737500,
+      "current_balance_2022": 18287500,
+      "interest_rate": 1.17,
+      "rate_type": "Rörlig ränta",
+      "maturity_date": "2024-02-12",
+      "amortization_annual": null,
+      "classification": "kortfristig"
+    },
+    {
+      "lender": "Nordea",
+      "original_amount": null,
+      "current_balance_2023": 17737500,
+      "current_balance_2022": 18287500,
+      "interest_rate": 0.75,
+      "rate_type": "Rörlig ränta",
+      "maturity_date": "2024-03-20",
+      "amortization_annual": null,
+      "classification": "kortfristig"
+    },
+    {
+      "lender": "Handelsbanken Stadshypote",
+      "original_amount": null,
+      "current_balance_2023": 17737500,
+      "current_balance_2022": 18287500,
+      "interest_rate": 0.79,
+      "rate_type": "Rörlig ränta",
+      "maturity_date": "2026-03-30",
+      "amortization_annual": null,
+      "classification": "långfristig"
+    }
+  ],
+
+  "key_metrics": {
+    "net_revenue": 6609230,
+    "result_after_financial": -859407,
+    "equity_ratio_percent": 85,
+    "external_maintenance_fund": 2679566,
+    "property_tax_value": 391539000,
+    "annual_fee_per_sqm_residential": 854,
+    "annual_fees_percent_of_revenue": 75.6,
+    "debt_per_sqm_residential": 8986,
+    "debt_per_sqm_total": 7264,
+    "savings_per_sqm_total": 316,
+    "electricity_cost_per_sqm": 28,
+    "heating_cost_per_sqm": 59,
+    "water_cost_per_sqm": 21,
+    "energy_cost_per_sqm": 109,
+    "average_interest_rate_percent": 0.91,
+    "interest_sensitivity_percent": 10.52,
+    "total_debt": 53212500,
+    "soliditet_percent": 85
+  },
+
+  "multi_year_overview": {
+    "years": [2023, 2022, 2021, 2020],
+    "net_revenue": [6609230, 6170222, 6118055, 5882369],
+    "result_after_financial": [-859407, -1450541, -1290630, -1291793],
+    "equity_ratio": [85, 84, 84, 84],
+    "external_fund": [2679566, 1919271, 914735, 579735],
+    "property_tax_value": [391539000, 391539000, 323491000, 323491000],
+    "annual_fee_per_sqm": [854, 792, 795, null],
+    "debt_per_sqm_residential": [8986, 9264, 9543, 9845],
+    "debt_per_sqm_total": [7264, 7489, 7714, 7958],
+    "savings_per_sqm_total": [316, 243, 257, 254],
+    "energy_cost_per_sqm": [109, 113, null, null]
+  },
+
+  "cash_flow": {
+    "operating_result": -381997,
+    "depreciation_adjustment": 3175545,
+    "interest_received": 12892,
+    "interest_paid": -490302,
+    "cash_flow_before_wc_changes": 2316138,
+    "change_in_receivables": 23685,
+    "change_in_liabilities": 73935,
+    "cash_flow_from_operations": 2413758,
+    "investments_in_fixed_assets": -102867,
+    "cash_flow_from_investments": -102867,
+    "loan_amortization": -1650000,
+    "cash_flow_from_financing": -1650000,
+    "total_cash_flow": 660892,
+    "cash_beginning_of_year": 1862119,
+    "cash_end_of_year": 2523011
+  },
+
+  "equity_changes": {
+    "member_contributions_start": 310025000,
+    "member_contributions_end": 310025000,
+    "initial_fees_start": 0,
+    "initial_fees_end": 0,
+    "external_fund_start": 1919271,
+    "external_fund_change": 760295,
+    "external_fund_end": 2679566,
+    "retained_earnings_start": -9003273,
+    "retained_earnings_change": -2210836,
+    "retained_earnings_end": -11214109,
+    "annual_result_prior": -1450541,
+    "annual_result_current": -859407,
+    "total_equity_start": 301490457,
+    "total_equity_end": 300631050
+  },
+
+  "significant_events": {
+    "fee_changes": [
+      {
+        "date": "2023",
+        "change_percent": 8,
+        "reason": "Ökade förvaltningskostnader och energipriser",
+        "applies_to": "Lägenheter och garageplats"
+      }
+    ],
+    "loan_refinancing": [],
+    "major_events": [
+      "Installation av 3 nya laddboxar under året med 6 laddstolpar",
+      "Ingick avtal med Brandsäkra om funktionen Brandskyddsansvarig",
+      "Nytt avtal med Telia gällande bredband och TV på 7 år",
+      "Extra föreningsstämma 2023-09-25 för ändring av stadgar"
+    ],
+    "construction_defects": [],
+    "post_year_events": [
+      "Beslut att höja månadsavgifterna för lägenheterna och garageplatserna med 8% p.g.a ökade räntekostnader och förvaltningsavgifter",
+      "JM@Home har sagt upp avtalet för teknisk förvaltning och fastighetsskötsel"
+    ]
+  },
+
+  "vendor_contracts": [
+    {"service": "Ekonomisk förvaltning", "vendor": "Simpleko AB"},
+    {"service": "Installation av laddstolpar i garaget", "vendor": "CA Charge AB"},
+    {"service": "Teknisk förvaltning och fastighetsskötsel", "vendor": "JM@Home"}
+  ],
+
+  "tomtratt_information": {
+    "annual_cost_2023": 1306819,
+    "annual_cost_2022": 1213276,
+    "annual_cost_increase": 93543,
+    "renegotiation_date": "2023-04-01",
+    "current_period": "2023-04-01 to 2027-03-31",
+    "future_cost": 1527000,
+    "future_cost_calculation": "40% av kommunens exploateringsnämnds höjning av avgälden med 314,000 kr, motsvarande 26%",
+    "cost_increase_percent": 10,
+    "decision_authority": "Stockholms kommun",
+    "decision_date": "2023-04-01",
+    "next_renegotiation_period": "2023-04-01 to 2027-03-31",
+    "planned_increase_to": 1338000,
+    "increase_percentage_brf": 10
+  },
+
+  "gemensamhetsanlaggningar": [
+    {
+      "name": "Tyresta GA:1",
+      "ownership_share_percent": 50,
+      "co_owners": ["Brf Spegeldammen"],
+      "responsibilities": "Byggnadskonstruktioner (bildad som Tyresta GA:1)"
+    },
+    {
+      "name": "Tyresta GA:2",
+      "ownership_share_percent": 50,
+      "co_owners": [
+        "Brf Fiskartorpet",
+        "Tresticklan 1",
+        "Tresticklan 2",
+        "Brf LillHan i Stockholm",
+        "Brf Spegeldammen"
+      ],
+      "responsibilities": "Gård, föreningslokal samt sopsugsnedkast (bildad som Tyresta GA:3)"
+    },
+    {
+      "name": "Tyresta GA:3",
+      "ownership_share_percent": 38.18,
+      "co_owners": [
+        "Brf Fiskartorpet",
+        "Tresticklan 2",
+        "Brf LillHan i Stockholm",
+        "Brf Spegeldammen"
+      ],
+      "responsibilities": "Garage"
+    }
+  ],
+
+  "gemensamhetsanlaggning_cost": 242513,
+
+  "commercial_leases": [
+    {
+      "tenant": "Sunny Hossen",
+      "lease_type": "Lokal",
+      "lease_end": "2026-12-01"
+    },
+    {
+      "tenant": "RRNDS AB",
+      "lease_type": "Lokal",
+      "lease_end": "2025-07-31"
+    }
+  ],
+
+  "tax_information": {
+    "property_tax_exemption_years": 15,
+    "property_tax_exemption_from": null,
+    "commercial_tax_rate": 1.00,
+    "taxable_value_building": 213200000,
+    "taxable_value_land": 178339000,
+    "total_taxable_value": 391539000
+  },
+
+  "collateral": {
+    "property_mortgages": 66000000
+  },
+
+  "planned_maintenance_2024": [
+    "Byte av varmvattenmätare och installation av kallvattenmätare"
+  ],
+
+  "historical_maintenance_2023": [
+    "OVK",
+    "Installation av porttelefon",
+    "Installation av ytterligare 3 laddboxar"
+  ],
+
+  "historical_maintenance_2021": [
+    "Stamspolning",
+    "Brytskydd på entrédörrar",
+    "Sedumtak",
+    "Installation av laddboxar"
+  ],
+
+  "future_outlook": {
+    "planned_fee_changes_2024": "8% höjning beslutad p.g.a ökade räntekostnader och förvaltningsavgifter",
+    "major_projects_planned": [
+      "Byte av varmvattenmätare och installation av kallvattenmätare"
+    ],
+    "loan_maturities_2024": [
+      "17,737,500 kr förfaller 2024-02-12 (SBAB)",
+      "17,737,500 kr förfaller 2024-03-20 (Nordea)"
+    ],
+    "estimated_debt_5_years": 46337500,
+    "technical_manager_change": "JM@Home har sagt upp avtalet - ny leverantör behövs",
+    "service_contract_changes": "Serviceavtalet behöver begränsas till de tekniska tjänster som utförs i egen regi"
+  },
+
+  "loss_explanation": {
+    "loss_amount_2023": -859407,
+    "loss_amount_2022": -1450541,
+    "non_cash_depreciation": 3175545,
+    "interest_expense_total": 490302,
+    "cash_flow_from_operations": 2413758,
+    "savings_per_sqm": 316,
+    "management_assessment": "Föreningen gör ett negativt resultat för året. Resultatet innefattar dock även avskrivningar som inte är likviditetspåverkande. Räknar man bort denna post gör föreningen ett positivt resultat om 2,316,138 tkr.",
+    "fee_increase_2023_percent": 8,
+    "fee_increase_2024_percent": 8,
+    "improvement_vs_2022_percent": 40.8
+  },
+
+  "critical_analysis": {
+    "debt_tier": "HIGH - 68% kortfristig (36.0M kr of 53.2M kr)",
+    "debt_maturity_risk": "TWO loans mature in early 2024 (Feb + Mar) = 35.5M kr refinancing",
+    "interest_rate_exposure": "LOW - Weighted average 0.91% (three variable loans 0.75-1.17%)",
+    "loss_pattern": "CHRONIC - Four consecutive years (-1.3M, -1.3M, -1.5M, -0.9M)",
+    "fee_shock_strategy": "MODERATE - 8% increase in 2023 + 8% planned 2024",
+    "land_tenure_burden": "TOMTRÄTT - 1.31M kr/year (+10% planned, future 1.53M kr)",
+    "tomtratt_increase_2023": "+7.7% (1.21M → 1.31M kr)",
+    "tomtratt_percentage_of_operating": "37.1% of operating costs (DOMINANT cost!)",
+    "gemensamhetsanlaggning_complexity": "TRIPLE GA - 50%, 50%, 38.18% (HIGH governance burden)",
+    "soliditet_strength": "85% despite 4 years chronic losses",
+    "cash_flow_positive": true,
+    "technical_management_disruption": "JM@Home terminating contract - operational continuity risk",
+    "charging_infrastructure": "6 charging posts (14.3% of 42 parking spaces)"
+  },
+
+  "pattern_validation": {
+    "pattern_b_chronic_loss": true,
+    "pattern_b_criteria_met": [
+      "4 consecutive years losses (2020-2023)",
+      "High soliditet (84-85% stable)",
+      "Fee increases implemented (8% in 2023, 8% planned 2024)",
+      "Non-cash depreciation causes accounting loss (3.2M kr)",
+      "Positive operational cash flow (2.4M kr)"
+    ],
+    "unique_characteristics": [
+      "TRIPLE gemensamhetsanläggningar (50%, 50%, 38.18% ownership)",
+      "TOMTRÄTT DOMINANT COST (37.1% of operating costs, 1.31M kr/year)",
+      "TOMTRÄTT RENEGOTIATION (2023-04-01, +10% for BRF, future +26% total)",
+      "SHORT-TERM DEBT SPIKE (1.65M → 36.0M kr, +2,083%!)",
+      "TWO loans mature Q1 2024 (35.5M kr refinancing risk)",
+      "TECHNICAL MANAGER TERMINATION (JM@Home ending contract)",
+      "EV CHARGING expansion (3 new boxes, 6 posts total)",
+      "LOSS IMPROVEMENT (+40.8% vs 2022)",
+      "SMALL COMMERCIAL (104 sqm, 1.7% of total area)",
+      "BROADBAND CONTRACT (7-year Telia deal)"
+    ],
+    "schema_changes": 0,
+    "schema_saturation_status": "29 consecutive zero-schema PDFs (99.5%+ complete)"
+  },
+
+  "extraction_metadata": {
+    "extraction_agent": "comprehensive_extraction_agent",
+    "agents_used": [
+      "basic_info_agent",
+      "governance_agent",
+      "property_agent",
+      "income_statement_agent",
+      "revenue_breakdown_agent",
+      "operating_costs_agent",
+      "balance_sheet_agent",
+      "loans_agent",
+      "key_metrics_agent",
+      "multi_year_agent",
+      "cash_flow_agent",
+      "equity_changes_agent",
+      "events_agent",
+      "contracts_agent",
+      "tomtratt_agent",
+      "gemensamhetsanlaggning_agent",
+      "tax_agent",
+      "future_outlook_agent",
+      "loss_explanation_agent",
+      "critical_analysis_agent",
+      "pattern_validation_agent"
+    ],
+    "total_fields_extracted": 197,
+    "extraction_confidence": 0.95,
+    "notes": "PATTERN B #15 (15/16 SRS = 93.75%!). TRIPLE GA complexity. TOMTRÄTT is DOMINANT cost (37.1% of operating). SHORT-TERM DEBT SPIKE (+2,083%). TWO loans mature Q1 2024 (35.5M kr). LOSS IMPROVING (+40.8%). TECHNICAL MANAGER contract terminating. 4 consecutive loss years BUT high soliditet (85%) and positive cash flow (2.4M kr)."
+  }
+}
