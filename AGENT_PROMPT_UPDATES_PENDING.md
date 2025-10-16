@@ -588,3 +588,252 @@ FINAL STATUS (after PDF 26 - GREEN LOANS & STRATEGIC FEE MANAGEMENT VALIDATED!):
 **Purpose**: Ensure agent prompt enhancements aren't lost across context windows
 
 **THIS FILE SHOULD BE READ AT START OF EVERY NEW SESSION AFTER PDF 15!**
+
+PDF 40 (brf_80193 - Brf Djurgårdsstaden 1 2022): ✅ COMPLETE - 🚨 CASH CRISIS DISCOVERY!
+[⚠️] Loan reclassification? (kortfristig 26.2% + 49.7% in 24mo - MEDIUM-HIGH!) YES (but CASH CRISIS!)
+[❌] Multiple fee increases? (FEE DECREASED -0.16% despite crisis!) NO (COUNTERPRODUCTIVE)
+[❌] Electricity increase >50%? (+37.6% single-year) MODERATE tier (below threshold)
+[❌] Lokaler >15% of area? (0% commercial, residential only) NO
+
+SCORE: 1 / 4 (25%)
+DETAILS:
+- Loans: **4.68M maturing Apr 2023 (4 months!) + 4.17M Mar 2024 = 49.7% in 24mo (MEDIUM-HIGH!)** - 100% Nordea concentration
+- **🚨 CASH CRISIS**: Only 588 kr in bank (-81.6% decline from 3,197 kr) = **CANNOT HANDLE 4.68M REFINANCING!**
+- **DEPRECIATION PARADOX**: Result WITHOUT K2 depreciation = -62k kr (losses persist even without accounting!)
+- **TOMTRÄTT BURDEN**: 687,200 kr = 31.6% of revenue (HIGHEST IN ENTIRE DATASET!)
+- Fees: **FEE DECREASED -0.16%** despite cash crisis + chronic losses = **PASSIVE/COUNTERPRODUCTIVE management!**
+- Energy: **MODERATE tier** - electricity +37.6% (358k → 493k), total energy +19.6%, below 50% threshold but significant
+- Lokaler: **0% commercial** (residential only, 30 units, 2,807 m²)
+- **8-YEAR BUILDING**: Pattern B-NEW candidate (2014 construction) but DISTRESSED subtype
+- **SOLIDITET PARADOX**: 88.6% equity (VERY HIGH) but 588 kr cash (CRITICAL CRISIS) = balance sheet strength ≠ liquidity
+
+🆕 **5 NEW PATTERNS DISCOVERED** (NOT covered by existing 4 enhancements):
+1. 💸 **CASH CRISIS**: 588 kr bank balance, 81.6% decline, 1,200x less than similar BRFs
+2. 📉 **DEPRECIATION PARADOX**: -62k loss even WITHOUT K2 depreciation (K2 not masking issue)
+3. 🏠 **TOMTRÄTT ESCALATION**: 31.6% of revenue, +9.5% annual increase, will hit 45% by 2027
+4. 🚫 **FEE RESPONSE FAILURE**: DECREASING fees despite multiple crises (passive management)
+5. 💰 **CASH-TO-DEBT RATIO**: 0.003% (588 kr / 17.8M debt) = refinancing impossible without external capital
+
+🎯 **NEW ENHANCEMENT PROPOSALS** (see below for specifications):
+- **Enhancement 5**: cash_crisis_agent (liquidity risk assessment)
+- **Enhancement 6**: depreciation_paradox_detector (Pattern B validation)
+- **Enhancement 7**: tomtratt_escalation_projector (ground rent burden analysis)
+- **Enhancement 8**: fee_response_classifier (management quality assessment)
+
+
+---
+
+## 🆕 NEW ENHANCEMENTS (Discovered from PDF 40 - brf_80193)
+
+### 5. **Cash Crisis Agent Enhancement** (Priority: HIGH)
+
+**File to Update**: `gracian_pipeline/prompts/agent_prompts.py` → Add to `critical_analysis_agent` or `balance_sheet_agent`
+
+**What to Add**: Liquidity risk assessment
+```python
+"CASH CRISIS DETECTION:
+1. Extract cash and bank balance from balance sheet:
+   - Kassa och bank (Balansräkning > Omsättningstillgångar)
+   - Current year and previous year for trend analysis
+2. Calculate liquidity metrics:
+   - Cash decline %: (current - previous) / previous * 100
+   - Cash-to-debt ratio: cash / total_debt * 100
+   - Cash-to-assets ratio: cash / total_assets * 100
+   - Months of operating expenses covered: cash / (monthly operating costs)
+3. Flag CASH CRISIS if:
+   - Cash < 10,000 kr AND total_assets > 100M kr
+   - OR cash decline > 50% year-over-year
+   - OR cash-to-debt ratio < 0.1%
+   - OR months of expenses covered < 0.1 months
+4. Assess refinancing capability:
+   - If kortfristig debt > cash * 100 → FLAG: Cannot handle refinancing
+   - Extract upcoming loan maturities from notes
+   - Calculate gap: (maturing debt - cash) = external capital needed
+5. Cross-reference with soliditet:
+   - If soliditet > 85% AND cash crisis → FLAG: 'High Soliditet, Low Cash Paradox'
+   - This pattern indicates balance sheet strength but liquidity danger
+6. Extract evidence:
+   - Exact cash balance (kr)
+   - % decline year-over-year
+   - Comparison to similar BRFs (if available)
+   - Board commentary on cash position (if mentioned)"
+```
+
+**Real Example**:
+- **brf_80193**: 588 kr cash, -81.6% decline, 88.6% soliditet, 4.68M refinancing in 4 months = CRISIS
+
+**Validation Criteria** (check on remaining 3 PDFs):
+- If ≥1 of 3 has cash < 10k kr → **IMPLEMENT** (critical risk indicator)
+- Track prevalence: Current 1/40 = 2.5% (rare but severe)
+
+---
+
+### 6. **Depreciation Paradox Detector** (Priority: MEDIUM)
+
+**File to Update**: `gracian_pipeline/prompts/agent_prompts.py` → Add to `critical_analysis_agent`
+
+**What to Add**: Pattern B validation enhancement
+```python
+"DEPRECIATION PARADOX ANALYSIS (Pattern B Deep Dive):
+1. For all BRFs with chronic losses (2+ consecutive years):
+   - Extract depreciation/avskrivningar from income statement
+   - Calculate: Result WITHOUT depreciation = Result + Depreciation
+2. Track 4-year trend (if available in flerårsöversikt):
+   - Year 1: Result w/o depreciation
+   - Year 2: Result w/o depreciation
+   - Year 3: Result w/o depreciation
+   - Year 4: Result w/o depreciation
+3. Identify inflection points:
+   - When did result w/o depreciation turn negative?
+   - What cost categories changed in that year?
+4. Flag DEPRECIATION PARADOX if:
+   - Chronic losses (Pattern B) BUT
+   - Result w/o depreciation is also negative (not just K2 accounting)
+   - This indicates real operational problems, not accounting artifact
+5. Root cause analysis:
+   - Compare cost categories year-over-year
+   - Identify which costs caused the inflection
+   - Typical culprits: energy (+), tomträtt (+), parking income (-)
+6. Strategic implications:
+   - Standard Pattern B: K2 creates paper loss, positive cash flow → LOW RISK
+   - Depreciation Paradox: Real operational deficit → HIGH RISK
+   - Board must address underlying costs, not just accept K2 excuse"
+```
+
+**Real Example**:
+- **brf_80193**: +267k (2019) → +345k (2020) → -21k (2021) → **-62k (2022)** w/o depreciation
+- Root cause: Energy +213k, tomträtt +117k, parking -31k = -361k swing
+
+**Validation Criteria**:
+- If ≥2 of 3 Pattern B BRFs show this → **IMPLEMENT**
+- Essential for accurate Pattern B classification
+
+---
+
+### 7. **Tomträtt Escalation Projector** (Priority: MEDIUM)
+
+**File to Update**: `gracian_pipeline/prompts/agent_prompts.py` → Add to `operating_costs_agent`
+
+**What to Add**: Ground rent burden analysis
+```python
+"TOMTRÄTT BURDEN ANALYSIS (For tomträtt properties only):
+1. Extract tomträtt costs:
+   - Tomträttsavgäld from operating costs (Note 3 or similar)
+   - Current year and previous years (if available)
+2. Calculate burden metrics:
+   - Tomträtt as % of total revenue
+   - Tomträtt as % of operating costs
+   - Tomträtt per sqm (kr/m²)
+   - Annual increase rate (%)
+3. Flag HIGH TOMTRÄTT BURDEN if:
+   - Tomträtt > 30% of total revenue
+   - OR tomträtt > 35% of operating costs
+   - OR tomträtt is single largest cost category
+4. Project 5-year escalation:
+   - If annual increase rate available, project forward
+   - Formula: Year N = Current * (1 + rate)^N
+   - Flag if projected to reach >40% of revenue within 5 years
+5. Compare to revenue growth:
+   - If tomträtt increase > revenue increase → FLAG: Unsustainable
+   - Calculate 'tomträtt squeeze': (tomträtt growth - revenue growth)
+6. Strategic implications:
+   - Tomträtt is EXTERNAL cost (cannot reduce internally)
+   - If burden >30%, BRF has limited ability to control costs
+   - Only options: (1) Raise fees, (2) Challenge tomträtt legally, (3) Purchase land rights
+7. Extract evidence:
+   - Exact tomträtt amount (kr)
+   - % of revenue
+   - Annual increase rate
+   - Renegotiation schedule (if mentioned)
+   - Legal challenges filed (if any)"
+```
+
+**Real Example**:
+- **brf_80193**: 687,200 kr = 31.6% of revenue, +9.5% annual → **45.2% by 2027**
+
+**Validation Criteria**:
+- Track all tomträtt properties (currently 7.5% of corpus)
+- If ≥2 more have >30% burden → **IMPLEMENT**
+
+---
+
+### 8. **Fee Response Classifier** (Priority: HIGH)
+
+**File to Update**: `gracian_pipeline/prompts/agent_prompts.py` → Add to `fees_agent`
+
+**What to Add**: Management quality assessment
+```python
+"FEE RESPONSE CLASSIFICATION (Management Quality):
+1. Identify financial context:
+   - Is BRF profitable or loss-making?
+   - Cash position: Strong (>1M), Adequate (100k-1M), Weak (<100k)
+   - Debt maturity: Upcoming refinancing? (next 12 months)
+2. Extract fee changes:
+   - Annual fee per sqm: Current year vs Previous year
+   - Calculate: % change = (current - previous) / previous * 100
+3. Classify fee response:
+   - AGGRESSIVE: +15%+ increase to address crisis
+   - MODERATE: +5-15% increase to address issues
+   - PASSIVE: 0-5% change despite problems
+   - COUNTERPRODUCTIVE: Decrease despite crisis
+   - STRATEGIC: Decrease from position of strength (soliditet >85%)
+4. Assess appropriateness:
+   - If chronic losses + fee decrease → FLAG: COUNTERPRODUCTIVE
+   - If cash crisis + no fee increase → FLAG: PASSIVE (high risk)
+   - If refinancing risk + fee decrease → FLAG: DANGEROUS
+   - If soliditet >85% + profitable + fee decrease → FLAG: STRATEGIC (good)
+5. Cross-reference with board commentary:
+   - Look for förvaltningsberättelse mentions of fee strategy
+   - Extract reasoning for fee changes (if stated)
+6. Predict sustainability:
+   - If losses persist + passive response → Calculate: Years until solvency risk
+   - If aggressive response → Calculate: Revenue increase generated
+   - Compare revenue increase to deficit (does it close gap?)"
+```
+
+**Real Examples**:
+- **brf_80193**: -0.16% fee change despite cash crisis + chronic losses = **COUNTERPRODUCTIVE**
+- **brf_79101**: +23% fee increase addressing chronic losses = **AGGRESSIVE**
+- **brf_48663**: Planned -5% decrease with 85% soliditet = **STRATEGIC**
+
+**Validation Criteria**:
+- Universal enhancement (applies to all BRFs)
+- **IMPLEMENT IMMEDIATELY** (discovered 3 pattern types in existing PDFs)
+
+---
+
+## 📊 UPDATED ENHANCEMENT SUMMARY (After PDF 40)
+
+| Enhancement | Priority | Prevalence | Status |
+|-------------|----------|------------|--------|
+| **1. loans_agent** | HIGH | 100% (40/40) | ✅ **IMPLEMENTED** |
+| **2. fees_agent (multiple)** | MEDIUM | 20% (8/40) | ✅ **IMPLEMENTED** |
+| **3. energy_agent** | MEDIUM | 100% (40/40) | ✅ **IMPLEMENTED** |
+| **4. property_agent (lokaler)** | LOW | ~25% (10/40) | ✅ **IMPLEMENTED** |
+| **5. cash_crisis_agent** 🆕 | **HIGH** | 2.5% (1/40) | ⏳ **PENDING** |
+| **6. depreciation_paradox** 🆕 | MEDIUM | TBD | ⏳ **PENDING** |
+| **7. tomtratt_escalation** 🆕 | MEDIUM | 7.5% (3/40) | ⏳ **PENDING** |
+| **8. fee_response_classifier** 🆕 | **HIGH** | 100% (40/40) | ⏳ **PENDING** |
+
+---
+
+## 🎯 IMPLEMENTATION ROADMAP (Updated After PDF 40)
+
+**Phase 1 - Already Implemented** (Enhancements 1-4):
+- ✅ loans_agent (refinancing risk)
+- ✅ fees_agent (multiple adjustments)
+- ✅ energy_agent (multi-year trends)
+- ✅ property_agent (lokaler analysis)
+
+**Phase 2 - High Priority** (Before PDF 41):
+- ⏳ Enhancement 8: fee_response_classifier (applies to ALL BRFs, critical for risk assessment)
+- ⏳ Enhancement 5: cash_crisis_agent (rare but severe, essential for refinancing risk)
+
+**Phase 3 - Medium Priority** (After validation on remaining 3 PDFs):
+- ⏳ Enhancement 6: depreciation_paradox_detector (validate on next Pattern B BRF)
+- ⏳ Enhancement 7: tomtratt_escalation_projector (if ≥2 more tomträtt BRFs found)
+
+---
+
+**Last Updated**: PDF 40/43 (brf_80193)
+**Next Action**: Implement Phase 2 enhancements (5 + 8) before processing PDF 41
