@@ -1,0 +1,400 @@
+{
+  "basic_info": {
+    "organization_name": "Bostadsrättsföreningen Sjöfallet",
+    "organization_number": "769628-4608",
+    "fiscal_year": 2023,
+    "report_date": "2023-12-31",
+    "k2_k3_regime": "K2",
+    "location": "Stockholm",
+    "pages": 17,
+    "file_size_mb": 1.1,
+    "document_id": "brf_78564",
+    "formation_date": "2014-07-01",
+    "registration_date": "2014-08-04",
+    "management_company": "Fastum AB (ekonomisk), Sjödalens Fastighetsservice AB (teknisk)"
+  },
+  "governance": {
+    "chairman": "Ingrid Nerell",
+    "chairman_start_date": null,
+    "board_members": [
+      {"name": "Ingrid Nerell", "role": "Ledamot", "start_date": null, "end_date": null},
+      {"name": "Philip Kouvatsis", "role": "Ledamot", "start_date": null, "end_date": null},
+      {"name": "Jonas Söderberg", "role": "Ledamot", "start_date": null, "end_date": null},
+      {"name": "Claes Göran Nilsson", "role": "Ledamot", "start_date": null, "end_date": null},
+      {"name": "Linda Kempe", "role": "Suppleant", "start_date": null, "end_date": null},
+      {"name": "Anna Larsson", "role": "Suppleant", "start_date": null, "end_date": null}
+    ],
+    "board_meetings": 10,
+    "annual_meeting_date": "2023-05-15",
+    "annual_meeting_attendance": null,
+    "auditor": "Sanna Lindqvist",
+    "auditor_company": "BOREV Revision AB",
+    "valberedning": ["Peter Boo (sammankallande)", "Christer Berg", "Sofia Sundi"],
+    "board_arvode": "Två prisbasbelopp exkl sociala avgifter"
+  },
+  "property": {
+    "fastigheter": [
+      {
+        "name": "Stora Sjöfallet 1",
+        "acquisition_date": null,
+        "construction_year": 2017,
+        "kommun": "Stockholm",
+        "completion_date": "2017-08-22"
+      }
+    ],
+    "total_properties": 1,
+    "apartments": 64,
+    "apartment_area_sqm": 5188,
+    "commercial_spaces": 2,
+    "commercial_area_sqm": 136,
+    "garage_spaces": 38,
+    "total_area_sqm": 5324,
+    "apartment_distribution": {
+      "1_rok": 0,
+      "2_rok": 22,
+      "3_rok": 30,
+      "4_rok": 12,
+      "total": 64
+    },
+    "property_insurance": "Trygg Hansa (from 2023-05-01, previously Moderna försäkringar)",
+    "insurance_includes_board_liability": true,
+    "taxeringsvarde_byggnad": 156738000,
+    "taxeringsvarde_mark": 180942000,
+    "taxeringsvarde_total": 337680000,
+    "taxeringsvarde_year": 2016
+  },
+  "income_statement": {
+    "revenue_2023": 4825933,
+    "revenue_2022": 4729670,
+    "other_operating_income_2023": 144263,
+    "other_operating_income_2022": 0,
+    "operating_result_2023": 242446,
+    "operating_result_2022": 85332,
+    "financial_income_2023": 8076,
+    "financial_income_2022": 275,
+    "financial_costs_2023": -1308946,
+    "financial_costs_2022": -931586,
+    "result_after_financial_2023": -1058424,
+    "result_after_financial_2022": -845979
+  },
+  "revenue_breakdown": {
+    "arsavgifter_2023": 3529910,
+    "arsavgifter_2022": 3361728,
+    "hyror_lokaler_2023": 426026,
+    "hyror_lokaler_2022": 388324,
+    "vatten_2023": 116392,
+    "vatten_2022": 104439,
+    "el_2023": 473258,
+    "el_2022": 480239,
+    "avgift_andrahandsupplatelse_2023": 5688,
+    "avgift_andrahandsupplatelse_2022": 5080,
+    "ga_garage_2023": 172400,
+    "ga_garage_2022": 386000,
+    "ovriga_2023": 102260,
+    "ovriga_2022": 3860
+  },
+  "operating_costs": {
+    "total_driftskostnader_2023": 2136314,
+    "total_driftskostnader_2022": 2064742,
+    "fastighetsskotsel_2023": 279850,
+    "fastighetsskotsel_2022": 265765,
+    "reparationer_2023": 143855,
+    "reparationer_2022": 115625,
+    "planerat_underhall_2023": 322145,
+    "planerat_underhall_2022": 55771,
+    "el_2023": 384801,
+    "el_2022": 683719,
+    "varme_2023": 366246,
+    "varme_2022": 329943,
+    "vatten_2023": 132239,
+    "vatten_2022": 104969,
+    "avfallshantering_2023": 70781,
+    "avfallshantering_2022": 80474,
+    "forsakring_2023": 38451,
+    "forsakring_2022": 34419,
+    "kabel_tv_2023": 38084,
+    "kabel_tv_2022": 59048,
+    "bredband_2023": 109447,
+    "bredband_2022": 137861,
+    "hiss_2023": 62109,
+    "hiss_2022": 61760,
+    "elstod_aterbetaling_2023": 90543,
+    "elstod_aterbetaling_2022": 0,
+    "depreciation_2023": 2165000,
+    "depreciation_2022": 2165000
+  },
+  "balance_sheet": {
+    "total_assets_2023": 412675426,
+    "total_assets_2022": 415196129,
+    "buildings_mark_2023": 411117000,
+    "buildings_mark_2022": 413282000,
+    "ovriga_fordringar_2023": 1081716,
+    "ovriga_fordringar_2022": 1266472,
+    "short_term_investments_2023": 250000,
+    "short_term_investments_2022": 0,
+    "cash_bank_2023": 201992,
+    "cash_bank_2022": 0,
+    "total_equity_2023": 348918808,
+    "total_equity_2022": 349977232,
+    "medlemsinsatser_2023": 353275000,
+    "medlemsinsatser_2022": 353275000,
+    "yttre_fond_2023": 863968,
+    "yttre_fond_2022": 761138,
+    "balanserat_resultat_2023": -4161736,
+    "balanserat_resultat_2022": -3212927,
+    "soliditet_2023": 84.55,
+    "soliditet_2022": 84.29
+  },
+  "loans_detailed": [
+    {
+      "lender": "SEB",
+      "loan_number": "Loan 1",
+      "current_balance_2023": 11850000,
+      "current_balance_2022": 12037500,
+      "interest_rate": 2.30,
+      "maturity_date": "2027-03-28",
+      "rate_change_date": "2027-03-28",
+      "classification": "långfristig"
+    },
+    {
+      "lender": "SEB",
+      "loan_number": "Loan 2",
+      "current_balance_2023": 18125000,
+      "current_balance_2022": 18125000,
+      "interest_rate": 1.41,
+      "maturity_date": "2025-03-28",
+      "rate_change_date": "2025-03-28",
+      "classification": "långfristig"
+    },
+    {
+      "lender": "SEB",
+      "loan_number": "Loan 3",
+      "current_balance_2023": 14625000,
+      "current_balance_2022": 15687500,
+      "interest_rate": 4.55,
+      "maturity_date": "2024-03-28",
+      "rate_change_date": "2024-03-28",
+      "classification": "kortfristig"
+    },
+    {
+      "lender": "SEB",
+      "loan_number": "Loan 4",
+      "current_balance_2023": 18125000,
+      "current_balance_2022": 18125000,
+      "interest_rate": 1.12,
+      "maturity_date": "2024-03-28",
+      "rate_change_date": "2024-03-28",
+      "classification": "kortfristig"
+    }
+  ],
+  "loan_summary": {
+    "total_debt_2023": 62725000,
+    "total_debt_2022": 63975000,
+    "long_term_portion_2023": 29787500,
+    "long_term_portion_2022": 48037500,
+    "short_term_portion_2023": 32937500,
+    "short_term_portion_2022": 15937500,
+    "loans_converting_within_1_year": 32937500,
+    "average_interest_rate_2023": 2.05,
+    "average_interest_rate_2022": 1.44,
+    "interest_costs_2023": 1308946,
+    "interest_costs_2022": 931586,
+    "amortization_2023": 1250000,
+    "extra_amortization_2023": 750000
+  },
+  "key_metrics": {
+    "debt_per_sqm_2023": 11782,
+    "debt_per_sqm_2022": 12016,
+    "annual_fees_per_sqm_2023": 794,
+    "annual_fees_per_sqm_2022": 761,
+    "energy_cost_per_sqm_2023": 166,
+    "energy_cost_per_sqm_2022": 210,
+    "sparande_per_sqm_2023": 268,
+    "sparande_per_sqm_2022": 258,
+    "rantekänslighet_2023": 15.23,
+    "rantekänslighet_2022": 16.21
+  },
+  "multi_year_data": {
+    "years_available": [2023, 2022, 2021, 2020],
+    "revenues": [4826000, 4730000, 4117000, 4260000],
+    "results_after_financial": [-1058000, -846000, -901000, -672000],
+    "soliditet": [84.55, 84.29, 84.06, 83.88],
+    "results_excl_depreciation": [1106000, 1319000, 1264000, 1493000],
+    "skuldränta": [2.05, 1.44, 1.16, 1.25]
+  },
+  "gemensamhetsanlaggningar": [
+    {
+      "name": "GA1-3",
+      "purpose": "Gård, garage samt ledningar för dagvatten och sopsug inom kvarteret",
+      "governance_model": "Samfällighetsförening",
+      "shares_owned": null,
+      "total_shares": null,
+      "ownership_percentage": null
+    },
+    {
+      "name": "GA4",
+      "purpose": "Sopsug inom Norra Djurgårdsstaden",
+      "governance_model": "Samfällighetsförening",
+      "shares_owned": null,
+      "total_shares": null,
+      "ownership_percentage": null
+    },
+    {
+      "name": "GA5",
+      "purpose": "Spillvattenledningar och miljörum",
+      "governance_model": "Delägarförvaltning",
+      "shares_owned": null,
+      "total_shares": null,
+      "ownership_percentage": null
+    }
+  ],
+  "commercial_tenants": [
+    {
+      "tenant_name": "Två Bönor AB",
+      "area_sqm": 96,
+      "momspliktig": true,
+      "lease_start": "2017-03-01",
+      "lease_end": "2026-02-28",
+      "annual_rent_2023": null
+    },
+    {
+      "tenant_name": "Real hälsa & massage",
+      "area_sqm": 40,
+      "momspliktig": true,
+      "lease_start": "2020-10-30",
+      "lease_end": "2026-10-31",
+      "annual_rent_2023": null
+    }
+  ],
+  "tax_info": {
+    "k2_k3_regime": "K2",
+    "tax_year": 2023,
+    "fastighetsskatt_2023": 126020,
+    "fastighetsskatt_2022": 126020,
+    "fastighetsavgift_exemption": true,
+    "exemption_years": "15 years from värdeår",
+    "fastighetsskatt_lokaler": "1% av taxeringsvärdet för lokaler"
+  },
+  "underhallsplan": {
+    "period": "2019-2072",
+    "updated": "Varje år",
+    "yttre_fond_minimum": 30,
+    "yttre_fond_actual_2023": 90,
+    "yttre_fond_increase_reason": "Efter noga övervägande i samråd med underhållsplanens konsult"
+  },
+  "events": {
+    "significant_events_2023": [
+      "Fee increase 5% from 2023-01-01",
+      "Fee increase 18% announced for 2024-01-01 (due to rate shock)",
+      "Result 1.05M kr excluding depreciation",
+      "Extra amortization 750k kr (beyond planned 500k kr)",
+      "Elstöd received and distributed to members/tenants",
+      "New Telia contract (faster internet, lower cost)",
+      "OVK (mandatory ventilation control) completed",
+      "LED lighting upgrade in common areas",
+      "Underhållsplan updated → yttre fond increased to 90 kr/kvm"
+    ],
+    "post_balance_events": [
+      "Fee increase +18% effective 2024-01-01",
+      "Reason: Rate shocks + increased operating/maintenance costs"
+    ]
+  },
+  "members": {
+    "members_end_2023": 108,
+    "members_end_2022": 105,
+    "new_members_2023": 12,
+    "departed_members_2023": 9,
+    "transfers_2023": 7
+  },
+  "cash_flow": {
+    "operating_cash_flow_2023": 18223974,
+    "operating_cash_flow_2022": -12171699,
+    "financing_cash_flow_2023": -18250000,
+    "financing_cash_flow_2022": 11787500,
+    "cash_change_2023": -26026,
+    "cash_change_2022": -384199,
+    "cash_beginning_2023": 984500,
+    "cash_beginning_2022": 1368700,
+    "cash_ending_2023": 958474,
+    "cash_ending_2022": 984501
+  },
+  "equity_changes": {
+    "equity_beginning_2023": 349977231,
+    "result_2023": -1058424,
+    "yttre_fond_increase_2023": 102829,
+    "equity_ending_2023": 348918807
+  },
+  "management_contracts": {
+    "ekonomisk_forvaltning": "Fastum AB",
+    "ekonomisk_contract_end": "2024-12-31",
+    "teknisk_forvaltning": "Sjödalens Fastighetsservice AB",
+    "teknisk_contract_end": "2024-03-31"
+  },
+  "depreciation": {
+    "total_depreciation_2023": 2165000,
+    "total_depreciation_2022": 2165000,
+    "accumulated_depreciation_2023": 14608000,
+    "accumulated_depreciation_2022": 12443000,
+    "building_acquisition_value": 215725000,
+    "mark_value": 210000000,
+    "depreciation_rate": "100 years (1% per year)"
+  },
+  "critical_analysis": {
+    "debt_tier": "MEDIUM - 52.5% kortfristig",
+    "loss_pattern": "CHRONIC - 4 consecutive years (2020-2023)",
+    "building_age": "RELATIVELY NEW - 2017 completion (6-7 years old)",
+    "formation_vs_occupancy": "Formed 2014, occupied 2017 (3-year development)",
+    "unique_characteristics": [
+      "RELATIVELY NEW (6-7 years) with 4-YEAR chronic loss pattern",
+      "Rate shock +40.5% (931k → 1,309k kr interest costs)",
+      "Energy costs DECREASED -21% (210 → 166 kr/m²) due to elstöd!",
+      "GA garage revenue COLLAPSED -55% (386k → 172k kr) - samfällighet issue",
+      "Extra amortization 750k kr (beyond 500k planned) despite losses",
+      "Fee increase +18% for 2024 (after +5% in 2023) - aggressive response",
+      "Yttre fond TRIPLED (30 → 90 kr/kvm) - proactive underhållsplan",
+      "Very low cash 959k kr (1.8 months operations) - liquidity concern",
+      "Short-term investments 250k kr (new in 2023) - cash management",
+      "5 GAs with complex governance (samfällighet + delägarförvaltning)"
+    ],
+    "red_flags": [
+      "4 consecutive loss years (2020-2023)",
+      "Chronic losses despite being RELATIVELY NEW building",
+      "52.5% kortfristig debt (32.9M kr matures March 2024)",
+      "Very low cash 959k kr (vs 984k in 2022)",
+      "GA garage revenue collapse -55% (samfällighet dependency risk)",
+      "18% fee increase needed for 2024 (member resistance risk)"
+    ],
+    "green_flags": [
+      "Soliditet stable 84.55% (strong despite losses)",
+      "Operating result POSITIVE 242k kr (excluding depreciation)",
+      "Result excl depreciation 1,106k kr (healthy cash generation)",
+      "Extra amortization 750k kr (proactive debt reduction)",
+      "Yttre fond tripled to realistic 90 kr/kvm",
+      "Energy costs decreased -21% (elstöd benefit)",
+      "New building (low near-term maintenance risk)",
+      "Underhållsplan to 2072 (53-year planning horizon)"
+    ]
+  },
+  "pattern_validation": {
+    "pattern_type": "Pattern B - Chronic Loss (4 years: 2020-2023)",
+    "sub_pattern": "Pattern B-NEW? (6-7 years old, borderline for <10 year threshold)",
+    "confidence": "MEDIUM-HIGH",
+    "supporting_evidence": [
+      "4 consecutive loss years: -672k (2020), -901k (2021), -846k (2022), -1,058k (2023)",
+      "RELATIVELY NEW building (2017 completion, 6-7 years old)",
+      "Rate shock +40.5% (931k → 1,309k kr, +377k impact)",
+      "Soliditet STABLE 84.55% (±0.3% variance over 4 years)",
+      "Cash flow from operations POSITIVE 18.2M kr (2023)",
+      "Depreciation creates 2.2M kr accounting/cash gap",
+      "Proactive board (extra amortization, tripled yttre fond, aggressive fees)"
+    ],
+    "deviations_from_typical": [
+      "Slightly OLDER than PDF 34-35 (6-7 years vs 3-5 years)",
+      "Energy costs DECREASED (vs increased in PDF 34-35) due to elstöd",
+      "GA dependency unique (garage revenue collapsed -55%)",
+      "Very low cash position (959k kr vs 2.8M+ in PDF 34-35)",
+      "5 GAs vs 1-2 in typical BRFs (complex structure)",
+      "Extra amortization despite losses (financially disciplined)"
+    ]
+  }
+}
