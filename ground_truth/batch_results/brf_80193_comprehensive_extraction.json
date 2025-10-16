@@ -1,0 +1,414 @@
+{
+  "metadata_agent": {
+    "pdf_filename": "brf_80193.pdf",
+    "brf_identifier": "brf_80193",
+    "organization_number": "769623-4702",
+    "organization_name": "Brf Djurgårdsstaden 1",
+    "fiscal_year": 2022,
+    "fiscal_year_start": "2022-01-01",
+    "fiscal_year_end": "2022-12-31",
+    "report_pages": 12,
+    "file_size_kb": 5625.5,
+    "accounting_standard": "K2",
+    "address": "Fågelhundsgatan 10 och Högviltsgatan 8, Norra Djurgårdsstaden, Stockholm",
+    "property_designation": "Abisko 3",
+    "municipality": "Stockholm",
+    "registration_date": null,
+    "construction_year": 2014,
+    "value_year": 2014,
+    "report_signed_date": "2023-05-23",
+    "agm_date": "2023-05-23",
+    "pdf_quality": "machine_readable",
+    "language": "Swedish",
+    "extraction_timestamp": "2025-10-16T11:39:04.207542",
+    "extractor_version": "v2.0_comprehensive"
+  },
+  "governance_agent": {
+    "chairman": "Per Håkansson",
+    "chairman_title": "Ordförande",
+    "board_members": [
+      {
+        "name": "Per Håkansson",
+        "role": "Ordförande"
+      },
+      {
+        "name": "Kevin Asgari",
+        "role": "Kassör"
+      },
+      {
+        "name": "Nina Gemvik",
+        "role": "Ledamot"
+      },
+      {
+        "name": "Stavros Bilis",
+        "role": "Suppleant"
+      },
+      {
+        "name": "Patrik Vilhemson",
+        "role": "Suppleant"
+      },
+      {
+        "name": "Oskar Nordmark",
+        "role": "Suppleant"
+      }
+    ],
+    "board_size": 6,
+    "board_meetings": 8,
+    "annual_meeting_date": "2023-05-23",
+    "auditor": "Peter Lindqvist",
+    "auditor_company": "BOREV Revision AB",
+    "auditor_type": "Extern auktoriserad revisor",
+    "valberedning": [
+      "Johan Simonsson",
+      "Stefan Pearson",
+      "Ingela Hallberg"
+    ],
+    "firma_tecknas": "Av styrelsen, av styrelsens ledamöter två i förening",
+    "board_protocols": 7,
+    "members_count_start": 55,
+    "members_count_end": 54,
+    "member_turnover": 4,
+    "member_exits": 3,
+    "member_joins": 2
+  },
+  "balance_sheet_agent": {
+    "total_assets_2022": 160847624,
+    "total_assets_2021": 162633696,
+    "total_equity_2022": 142493723,
+    "total_equity_2021": 144316138,
+    "retained_earnings_2022": -12142387,
+    "retained_earnings_2021": -10290566,
+    "current_year_result_2022": -1822415,
+    "current_year_result_2021": -1781646,
+    "soliditet_2022": 88.59,
+    "soliditet_2021": 88.74,
+    "buildings_book_value_2022": 119559031,
+    "buildings_book_value_2021": 120875763,
+    "land_book_value_2022": 40625943,
+    "land_book_value_2021": 41069943,
+    "cash_and_bank_2022": 588,
+    "cash_and_bank_2021": 3197,
+    "receivables_2022": 662062,
+    "receivables_2021": 684793,
+    "current_assets_2022": 662650,
+    "current_assets_2021": 687990,
+    "current_liabilities_2022": 5220194,
+    "current_liabilities_2021": 5172311,
+    "long_term_liabilities_2022": 13133707,
+    "long_term_liabilities_2021": 13145247
+  },
+  "income_statement_agent": {
+    "total_revenue_2022": 2177389,
+    "total_revenue_2021": 2141687,
+    "operating_expenses_2022": 3837348,
+    "operating_expenses_2021": 3754519,
+    "operating_result_2022": -1659959,
+    "operating_result_2021": -1612832,
+    "financial_income_2022": 12,
+    "financial_income_2021": 0,
+    "financial_expenses_2022": 162468,
+    "financial_expenses_2021": 168814,
+    "result_after_financial_2022": -1822415,
+    "result_after_financial_2021": -1781646,
+    "result_before_appropriations_2022": -1822415,
+    "result_before_appropriations_2021": -1781646,
+    "depreciation_2022": 1760732,
+    "depreciation_2021": 1760732,
+    "annual_fees_2022": 1815288,
+    "annual_fees_2021": 1815288,
+    "parking_fees_2022": 58500,
+    "parking_fees_2021": 88269,
+    "cable_tv_broadband_2022": 80640,
+    "cable_tv_broadband_2021": 80640,
+    "electricity_fees_2022": 158206,
+    "electricity_fees_2021": 95026,
+    "water_fees_2022": 62135,
+    "water_fees_2021": 50633,
+    "other_revenue_2022": 2620,
+    "other_revenue_2021": 11831
+  },
+  "loans_agent": {
+    "total_debt_2022": 17822855,
+    "total_debt_2021": 17849695,
+    "long_term_debt_2022": 13133707,
+    "long_term_debt_2021": 13145247,
+    "short_term_debt_2022": 4689148,
+    "short_term_debt_2021": 4704448,
+    "interest_costs_2022": 162468,
+    "interest_costs_2021": 168814,
+    "loans_detailed": [
+      {
+        "lender": "Nordea",
+        "balance_2022": 0,
+        "balance_2021": 4692908,
+        "interest_rate": 1.0,
+        "maturity_date": "2022-03-16",
+        "loan_type": "Matured/Paid off",
+        "classification_2022": "paid_off",
+        "classification_2021": "long_term"
+      },
+      {
+        "lender": "Nordea",
+        "balance_2022": 4671252,
+        "balance_2021": 4671252,
+        "interest_rate": 0.93,
+        "maturity_date": "2025-04-16",
+        "loan_type": "Långfristig",
+        "classification_2022": "long_term",
+        "classification_2021": "long_term"
+      },
+      {
+        "lender": "Nordea",
+        "balance_2022": 4299330,
+        "balance_2021": 4299330,
+        "interest_rate": 0.93,
+        "maturity_date": "2025-04-16",
+        "loan_type": "Långfristig",
+        "classification_2022": "long_term",
+        "classification_2021": "long_term"
+      },
+      {
+        "lender": "Nordea",
+        "balance_2022": 4174665,
+        "balance_2021": 4186205,
+        "interest_rate": 0.68,
+        "maturity_date": "2024-03-20",
+        "loan_type": "Långfristig (maturing within 2 years)",
+        "classification_2022": "long_term",
+        "classification_2021": "long_term"
+      },
+      {
+        "lender": "Nordea",
+        "balance_2022": 4677608,
+        "balance_2021": 0,
+        "interest_rate": 1.1,
+        "maturity_date": "2023-04-11",
+        "loan_type": "Kortfristig (maturing within 1 year)",
+        "classification_2022": "short_term",
+        "classification_2021": "not_yet_taken"
+      }
+    ],
+    "amortization_2022": 26840,
+    "amortization_2021": null,
+    "average_interest_rate_2022": 0.91,
+    "refinancing_risk_assessment": "MEDIUM-HIGH: 49.7% of debt maturing within 24 months (4.68M in Apr 2023 + 4.17M in Mar 2024)",
+    "lender_concentration": "EXTREME: 100% Nordea concentration - all 5 loans from single lender"
+  },
+  "property_agent": {
+    "properties": [
+      {
+        "name": "Abisko 3",
+        "ownership_type": "tomträtt",
+        "construction_year": 2014,
+        "value_year": 2014,
+        "municipality": "Stockholm",
+        "district": "Norra Djurgårdsstaden",
+        "addresses": [
+          "Fågelhundsgatan 10",
+          "Högviltsgatan 8"
+        ]
+      }
+    ],
+    "total_properties": 1,
+    "apartments_count": 30,
+    "commercial_spaces": 0,
+    "total_area_boa": 2807,
+    "apartment_area": 2807,
+    "commercial_area": 0,
+    "garage_spaces": 18,
+    "garage_details": "12 managed by Samfälligheten Abisko, 6 under BRF management",
+    "apartment_distribution": {
+      "2_rok": 11,
+      "3_rok": 2,
+      "4_rok": 7,
+      "5_rok": 10
+    },
+    "buildings_count": 2,
+    "stairwells_count": 6,
+    "basement_area": null,
+    "elevator_count": null
+  },
+  "fees_agent": {
+    "annual_fee_per_sqm_2022": 6349,
+    "annual_fee_per_sqm_2021": 6359,
+    "annual_fee_per_sqm_2020": 6513,
+    "annual_fee_per_sqm_2019": 6523,
+    "fee_change_2022": -0.16,
+    "fee_change_2021": -2.36,
+    "fee_change_2020": -0.15,
+    "yearly_fee_arsavgift_2022": 647,
+    "yearly_fee_arsavgift_2021": 647,
+    "yearly_fee_arsavgift_2020": 647,
+    "yearly_fee_arsavgift_2019": 647,
+    "fee_includes": "drift och underhåll av föreningens fastighet, räntekostnader och amorteringar av föreningens fastighetslån samt fondering av medel för framtida underhåll",
+    "fee_details": "Utöver detta debiteras avgift för bredband samt för tappvarmvatten och el efter förbrukning",
+    "parking_fee_2022": null,
+    "parking_fee_2021": null,
+    "parking_managed_by": "Samfälligheten Abisko (12 spaces) + BRF own (6 spaces)",
+    "fee_increase_announcements": []
+  },
+  "energy_agent": {
+    "electricity_cost_2022": 493148,
+    "electricity_cost_2021": 358354,
+    "heating_cost_2022": 205445,
+    "heating_cost_2021": 220647,
+    "water_cost_2022": 69522,
+    "water_cost_2021": 63371,
+    "total_energy_cost_2022": 768115,
+    "total_energy_cost_2021": 642372,
+    "energy_cost_per_sqm_2022": 274,
+    "energy_cost_per_sqm_2021": 229,
+    "electricity_increase_2022": 37.6,
+    "heating_increase_2022": -6.9,
+    "water_increase_2022": 9.7,
+    "total_energy_increase_2022": 19.6,
+    "electricity_billed_to_members_2022": 158206,
+    "electricity_billed_to_members_2021": 95026,
+    "water_billed_to_members_2022": 62135,
+    "water_billed_to_members_2021": 50633,
+    "energy_measures": null,
+    "energy_class": null
+  },
+  "operating_costs_agent": {
+    "total_operating_costs_2022": 1907305,
+    "total_operating_costs_2021": 1791581,
+    "property_maintenance_2022": 29463,
+    "property_maintenance_2021": 31640,
+    "cleaning_2022": 63666,
+    "cleaning_2021": 48264,
+    "repairs_2022": 99733,
+    "repairs_2021": 167853,
+    "elevator_repairs_2022": 46248,
+    "elevator_repairs_2021": 118593,
+    "planned_maintenance_2022": 35363,
+    "planned_maintenance_2021": 0,
+    "property_insurance_2022": 19916,
+    "property_insurance_2021": 18232,
+    "property_tax_2022": 493148,
+    "property_tax_2021": 358354,
+    "heating_2022": 205445,
+    "heating_2021": 220647,
+    "water_sewage_2022": 69522,
+    "water_sewage_2021": 63371,
+    "waste_management_2022": null,
+    "waste_management_2021": null,
+    "tomtratt_2022": 687200,
+    "tomtratt_2021": 627772,
+    "joint_facility_fees_2022": 18364,
+    "joint_facility_fees_2021": 17749,
+    "cable_tv_2022": 25248,
+    "cable_tv_2021": 25139,
+    "broadband_2022": 53640,
+    "broadband_2021": 53722,
+    "parking_income_2022": 3364,
+    "parking_income_2021": 10807
+  },
+  "tax_info_agent": {
+    "taxeringsvarde_total_2022": 174878000,
+    "taxeringsvarde_building_2022": 90878000,
+    "taxeringsvarde_land_2022": 84000000,
+    "taxeringsvarde_total_2021": 174878000,
+    "taxeringsvarde_building_2021": 90878000,
+    "taxeringsvarde_land_2021": 84000000,
+    "value_year": 2014,
+    "property_tax_basis": "Fastighetsskatt för lokaler är för närvarande 1% av taxeringsvärde för lokaler",
+    "tax_deductions": null
+  },
+  "service_providers_agent": {
+    "ekonomisk_forvaltare": "Fastum AB",
+    "teknisk_forvaltare": "Sveriges BostadsrättsCentrum",
+    "hiss_service": "Kone Care (contract until 2023-12-31)",
+    "insurance_provider": "Moderna Försäkringar",
+    "stadgar_registration": "Registered at Bolagsverket June 2018",
+    "ekonomisk_plan": "Registered 2013-06-24 at Bolagsverket"
+  },
+  "maintenance_agent": {
+    "planned_maintenance_2022": 35363,
+    "planned_maintenance_2021": 0,
+    "repairs_2022": 99733,
+    "repairs_2021": 167853,
+    "elevator_maintenance_2022": 46248,
+    "elevator_maintenance_2021": 118593,
+    "maintenance_fund_balance_2022": 490525,
+    "maintenance_fund_balance_2021": 420350,
+    "maintenance_fund_allocation_2022": 70175,
+    "maintenance_plan_exists": "Yes",
+    "maintenance_plan_details": "Avsättning till yttre fond sker enligt stadgarna enligt underhållsplan"
+  },
+  "shared_facilities_agent": {
+    "shared_facilities": [
+      {
+        "name": "GA1",
+        "type": "Garage",
+        "shared_with": "Samtliga fastigheter i kvarteret Abisko",
+        "description": "Består av ett garage gemensamt med samtliga fastigheter i kvarteret Abisko"
+      },
+      {
+        "name": "GA2",
+        "type": "Gård och avfallshantering",
+        "shared_with": "Kvarteret Abisko",
+        "description": "Gård och avfallshantering med samtliga fastigheter i kvarteret Abisko"
+      },
+      {
+        "name": "GA3",
+        "type": "Sopsugsanläggning",
+        "shared_with": "Norra Djurgårdsstaden",
+        "description": "Sopsugsanläggning, gemensam med övriga fastigheter inom Norra Djurgårdsstaden"
+      }
+    ],
+    "samfallighet_fees_2022": 18364,
+    "samfallighet_fees_2021": 17749,
+    "ownership_percentages": {
+      "Abisko_1": 22.7,
+      "Abisko_2": 23.1,
+      "Abisko_3": 17.6,
+      "Abisko_4": 15.9,
+      "Abisko_5": 20.7
+    }
+  },
+  "critical_analysis_agent": {
+    "debt_tier": "LOW - 10.2% av taxeringsvärde (17.8M / 174.9M)",
+    "loss_pattern": "CHRONIC - 4 consecutive years (-1.5M to -1.8M range)",
+    "loss_years": [
+      2019,
+      2020,
+      2021,
+      2022
+    ],
+    "loss_amounts": [
+      -1494,
+      -1416,
+      -1782,
+      -1822
+    ],
+    "loss_trend": "WORSENING - deteriorating from -1.4M to -1.8M",
+    "soliditet_status": "VERY STRONG - 88.6% (declining slightly from 88.7%)",
+    "cash_status": "CRITICAL CRISIS - 588 kr (down 81.6% from 3,197 kr)",
+    "refinancing_risk": "MEDIUM-HIGH - 49.7% maturing within 24 months",
+    "refinancing_details": "4.68M Apr 2023 (26.2%) + 4.17M Mar 2024 (23.4%) = 8.85M (49.7%)",
+    "lender_concentration": "EXTREME - 100% Nordea (all 5 loans)",
+    "tomtratt_burden": "EXTREME - 31.6% of total revenue",
+    "tomtratt_increase_2022": 9.5,
+    "fee_response": "NONE - Fee decreased slightly (-0.16%)",
+    "energy_crisis_impact": "SEVERE - Electricity +37.6%, total energy +19.6%",
+    "pattern_classification": "Pattern B - Chronic Loss (4 consecutive years)",
+    "pattern_b_new_candidate": "YES - Building age 8 years, soliditet 88.6%, debt/taxering 10.2%",
+    "building_age_years": 8,
+    "main_loss_driver": "K2 depreciation (1.76M kr) + high tomträtt + energy costs",
+    "result_without_depreciation": "-62k kr (still negative even without depreciation)",
+    "unique_characteristics": [
+      "CASH CRISIS: Only 588 kr in bank (81.6% decline!)",
+      "TOMTRÄTT BURDEN: 31.6% of revenue to ground rent",
+      "NO FEE RESPONSE: Despite chronic losses, fees decreased",
+      "REFINANCING CONCENTRATION: 49.7% debt maturing within 24 months",
+      "LENDER RISK: 100% Nordea concentration",
+      "ENERGY SHOCK: +37.6% electricity, +19.6% total energy",
+      "ELEVATOR SAVINGS: Repair costs down 61% (118k → 46k)",
+      "PLANNED MAINTENANCE STARTED: 0 → 35k kr in 2022",
+      "SHARED FACILITIES: Part of Abisko complex (5 properties)",
+      "DJURGÅRDSSTADEN: New development area, tomträtt properties",
+      "8-YEAR BUILDING: Pattern B-NEW candidate",
+      "DEPRECIATION PARADOX: Losses persist even without K2 depreciation"
+    ]
+  }
+}
