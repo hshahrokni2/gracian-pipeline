@@ -1,0 +1,412 @@
+{
+  "metadata_agent": {
+    "organization_number": "769622-7110",
+    "organization_name": "Brf Husarvikens Brygga",
+    "fiscal_year_start": "2023-01-01",
+    "fiscal_year_end": "2023-12-31",
+    "report_date": "2023-12-31",
+    "accounting_standard": "K2",
+    "pages_total": 16,
+    "report_type": "årsredovisning",
+    "property_manager": "Primär Fastighetsförvaltning AB",
+    "evidence_pages": [1, 2, 3, 4]
+  },
+
+  "governance_agent": {
+    "chairman": "Lars Widell",
+    "vice_chairman": null,
+    "treasurer": "Christina Johannisson",
+    "secretary": "Lars-Gunnar Svensson",
+    "board_members": [
+      {"name": "Lars Widell", "role": "Ordförande"},
+      {"name": "Lars-Gunnar Svensson", "role": "Sekreterare"},
+      {"name": "Christina Johannisson", "role": "Kassör"},
+      {"name": "Marie Lönnquist", "role": "Ledamot"},
+      {"name": "Björn Johansson", "role": "Ledamot"},
+      {"name": "Per Holmberg", "role": "Ledamot"},
+      {"name": "Kaela Borgman", "role": "Suppleant"},
+      {"name": "Virginia Arenius", "role": "Suppleant"}
+    ],
+    "board_size": 8,
+    "board_meetings_count": 9,
+    "annual_meeting_date": "2023-05-07",
+    "extra_meeting_dates": [],
+    "valberedning": ["Erik Eriksson", "Elisabeth Westerlund", "Martina Mellin"],
+    "firmateckning": "två ledamöter i förening",
+    "evidence_pages": [5, 16]
+  },
+
+  "audit_agent": {
+    "auditor_name": "Magnus Emilsson",
+    "auditor_firm": "BoRevision i Sverige AB",
+    "auditor_type": "Av föreningen vald revisor",
+    "audit_report_pages": 2,
+    "audit_opinion": "Utan anmärkning",
+    "evidence_pages": [5, 16, 18, 19]
+  },
+
+  "property_agent": {
+    "property_designation": "Skuleskogen 4",
+    "address": "Stockholm",
+    "acquisition_date": "2013-04-29",
+    "total_area_sqm": 3256,
+    "bostadsratter_count": 39,
+    "apartment_breakdown": {
+      "1_rok": 0,
+      "2_rok": 6,
+      "3_rok": 20,
+      "4_rok": 10,
+      "5_rok": 3,
+      "total": 39
+    },
+    "construction_year": 2013,
+    "construction_period": "2012-2013",
+    "property_insurance": "Folksam",
+    "taxeringsvarde_building": 105400000,
+    "taxeringsvarde_mark": 93911000,
+    "taxeringsvarde_total": 199311000,
+    "bostader_area_sqm": 3079,
+    "lokaler_area_sqm": 177,
+    "lokaler_tenant": "Restaurang (sedan 2015-12-01)",
+    "samfallighet_membership": "Dual: Skuleskogens Samfällighetsförening (GA:3) + Husarvikens Samfällighetsförening (GA:5)",
+    "samfallighet_share_pct_ga3": 30.0,
+    "samfallighet_share_pct_ga5": 37.0,
+    "samfallighet_description": "GA:3 (yttre miljö och sophus, sopsug och garage), GA:5 (VA, gemensamt vatten- och fjärrvärmeänläggning)",
+    "evidence_pages": [3, 4, 6, 14]
+  },
+
+  "financial_agent": {
+    "assets_total": 196162679,
+    "equity_total": 182324186,
+    "liabilities_total": 13838493,
+    "net_revenue": 3117028,
+    "profit_loss": -839561,
+    "soliditet_pct": 92.9,
+    "cash_and_bank": 2024996,
+    "nettoomsattning": 3117028,
+    "nettoomsattning_breakdown": {
+      "arsavgifter_bostader": 2118660,
+      "hyresintakter_lokaler": 531680,
+      "hyresintakter_garage": 439830,
+      "laddstolpar": 15752,
+      "solceller": 10049,
+      "ovrigt": 1057
+    },
+    "other_income": 857880,
+    "total_revenue": 3974908,
+    "balansomslutning": 196162679,
+    "kundfordringar": 38658,
+    "evidence_pages": [8, 9, 10, 12]
+  },
+
+  "operating_costs_agent": {
+    "total_driftskostnader": 3198180,
+    "fastighetsskotsel": 203787,
+    "reparationer_underhall": 864417,
+    "taxebundna_kostnader": null,
+    "ovriga_driftskostnader": 2307206,
+    "el": 99456,
+    "varme": null,
+    "vatten": null,
+    "sophamtning": null,
+    "fastighetsforsak​ringar": 56896,
+    "tomtrattsavgald": 719550,
+    "kabel_tv": 88346,
+    "fastighetsskatt": 83110,
+    "hiss_underhall": null,
+    "sotning_ventilation": null,
+    "samfallighetsavgifter": 1001666,
+    "serviceavtal": 54395,
+    "major_repairs_water_damage": 846177,
+    "evidence_pages": [13]
+  },
+
+  "loans_agent": {
+    "total_debt": 13000000,
+    "long_term_debt": 4500000,
+    "short_term_debt": 8500000,
+    "loans": [
+      {
+        "lender": "Nordea",
+        "loan_id": "Loan 1",
+        "amount": 4500000,
+        "interest_rate_pct": 4.24,
+        "maturity_date": "2025-05-21",
+        "villkorsandringsdag": "2025-05-21",
+        "maturity_classification": "long_term"
+      },
+      {
+        "lender": "Nordea",
+        "loan_id": "Loan 2",
+        "amount": 5000000,
+        "interest_rate_pct": 0.85,
+        "maturity_date": "2024-03-20",
+        "villkorsandringsdag": "2024-03-20",
+        "maturity_classification": "short_term"
+      },
+      {
+        "lender": "Nordea",
+        "loan_id": "Loan 3",
+        "amount": 3500000,
+        "interest_rate_pct": 4.54,
+        "maturity_date": "2024-06-13",
+        "villkorsandringsdag": "2024-06-13",
+        "maturity_classification": "short_term"
+      }
+    ],
+    "average_interest_rate_pct": 3.23,
+    "debt_per_sqm": 4225,
+    "projected_debt_5_years": null,
+    "loan_restructuring_note": null,
+    "evidence_pages": [15]
+  },
+
+  "fees_agent": {
+    "fee_per_sqm_annual": 688,
+    "fee_increase_pct": 0.0,
+    "fee_increase_date": null,
+    "fee_increase_reason": null,
+    "multiple_increases": false,
+    "fee_history": [
+      {"year": 2023, "fee_per_sqm": 688},
+      {"year": 2022, "fee_per_sqm": 688},
+      {"year": 2021, "fee_per_sqm": 688},
+      {"year": 2020, "fee_per_sqm": 688}
+    ],
+    "evidence_pages": [6]
+  },
+
+  "energy_agent": {
+    "elkostnad_per_sqm": null,
+    "varmekostnad_per_sqm": null,
+    "vattenkostnad_per_sqm": null,
+    "energikostnad_per_sqm_total": 127,
+    "multi_year_energy_trends": [
+      {"year": 2023, "energi_per_sqm": 127},
+      {"year": 2022, "energi_per_sqm": null},
+      {"year": 2021, "energi_per_sqm": null},
+      {"year": 2020, "energi_per_sqm": null}
+    ],
+    "electricity_increase_pct_2022_2023": null,
+    "electricity_increase_pct_3_year": null,
+    "heating_increase_pct_2022_2023": null,
+    "water_increase_pct_2022_2023": null,
+    "elstod_received": null,
+    "elstod_pct_offset": null,
+    "energy_initiatives": "Solceller (solar panels generating 10,049 kr revenue)",
+    "evidence_pages": [6, 12, 13]
+  },
+
+  "reserves_agent": {
+    "underhallsfond_balance": 4243959,
+    "underhallsfond_previous": 3709304,
+    "underhallsfond_change": 534655,
+    "reservering_till_fond": 561212,
+    "underhallsplan_exists": true,
+    "underhallsplan_period": "2018-2050",
+    "evidence_pages": [7, 10, 15]
+  },
+
+  "members_agent": {
+    "total_members_start": 65,
+    "new_members": null,
+    "departing_members": null,
+    "total_members_end": 65,
+    "transfers_during_year": 4,
+    "evidence_pages": [5]
+  },
+
+  "events_agent": {
+    "major_events": [
+      {
+        "event": "Brand/Fire in apartment and building",
+        "date": "2023",
+        "description": "Fire occurred in one apartment and building. Complete total renovation was completed. Major water damage repairs cost 846,177 kr",
+        "cost": 846177,
+        "impact": "Major expense causing annual loss"
+      },
+      {
+        "event": "10-year anniversary celebration",
+        "date": "2023",
+        "description": "10-year jubilee for the building with festivities including food, drink, games and prizes",
+        "impact": "Community engagement"
+      },
+      {
+        "event": "Fire safety information meetings",
+        "date": "2023",
+        "description": "Association organized information meetings to inform about fire safety and heart-start procedures",
+        "impact": "Safety improvement"
+      },
+      {
+        "event": "Restaurant assistance",
+        "date": "2023",
+        "description": "Earlier in the year the association offered assistance with financing to restaurant Norra Bryggan each month",
+        "impact": "Commercial tenant support"
+      }
+    ],
+    "evidence_pages": [4]
+  },
+
+  "notes_maintenance_agent": {
+    "major_maintenance_completed": [
+      {
+        "year": 2021,
+        "description": "OVK besiktning (ventilation inspection)"
+      },
+      {
+        "year": 2023,
+        "description": "Målning av portar (painting of doors)"
+      }
+    ],
+    "planned_maintenance": [
+      {
+        "period": "2024",
+        "description": "Stampolning, brandskydd och hissunderhåll (pipe lining, fire protection and elevator maintenance)"
+      }
+    ],
+    "maintenance_expenses_major": {
+      "total_major_repairs": 864417,
+      "water_fire_damage": 846177,
+      "periodiskt_underhall": 26557
+    },
+    "underhallsplan_period": "2018-2050",
+    "evidence_pages": [4, 13]
+  },
+
+  "insurance_agent": {
+    "insurance_provider": "Folksam",
+    "insurance_premium": 56896,
+    "property_coverage": null,
+    "liability_coverage": null,
+    "fastighetsinteckningar_sakerheter": 97000000,
+    "evidence_pages": [3, 13, 15]
+  },
+
+  "tax_agent": {
+    "fastighetsskatt": 83110,
+    "fastighetsavgift_exemption": false,
+    "exemption_years": null,
+    "skattekonto_balance": null,
+    "moms_avrakning": null,
+    "evidence_pages": [13]
+  },
+
+  "planned_actions_agent": {
+    "planned_actions": [
+      {
+        "action": "Fee increase approved",
+        "status": "Approved 2024-04-01",
+        "description": "Board has decided on a fee increase of 6% starting from 2024-04-01",
+        "timeline": "Effective April 1, 2024"
+      }
+    ],
+    "evidence_pages": [15]
+  },
+
+  "cashflow_agent": {
+    "cash_flow_statement_present": true,
+    "cash_start_of_year": 2825746,
+    "cash_end_of_year": 2024996,
+    "cash_change": -800750,
+    "cash_from_operations": 241894,
+    "cash_from_investments": 0,
+    "cash_from_financing": -1000000,
+    "evidence_pages": [11]
+  },
+
+  "depreciation_agent": {
+    "total_depreciation": 1055119,
+    "building_depreciation_rate_pct": null,
+    "property_improvements_depreciation_rate_pct": null,
+    "accumulated_depreciation": 10452032,
+    "ack_anskaffningsvarde": 203986000,
+    "restvarde_enligt_plan": 193533968,
+    "mark_value_included": null,
+    "evidence_pages": [14]
+  },
+
+  "driftskostnader_agent": {
+    "total_driftskostnader": 4502977,
+    "fastighetsskotsel": 203787,
+    "reparationer_underhall": 864417,
+    "el": 99456,
+    "uppvarmning": null,
+    "vatten": null,
+    "sophamtning": null,
+    "fastighetsforsak​ringar": 56896,
+    "tomtrattsavgald": 719550,
+    "kabel_tv": 88346,
+    "fastighetsskatt": 83110,
+    "ventilation_major": null,
+    "varmeanlaggning_major": null,
+    "ovriga_externa_kostnader": 199778,
+    "personalkostnader": 49900,
+    "samfallighetsavgifter": 1001666,
+    "serviceavtal": 54395,
+    "evidence_pages": [8, 13]
+  },
+
+  "commercial_tenants_agent": {
+    "has_commercial_space": true,
+    "total_commercial_area_sqm": 177,
+    "commercial_rent_collected": 531680,
+    "commercial_rent_pct_of_revenue": 17.1,
+    "tenant_name": "Restaurang (lokalutrymme)",
+    "tenant_since": "2015-12-01",
+    "evidence_pages": [3, 12]
+  },
+
+  "enhanced_loans_agent": {
+    "total_debt": 13000000,
+    "langfristig_debt": 4500000,
+    "kortfristig_debt": 8500000,
+    "kortfristig_pct": 65.4,
+    "lender_concentration": {
+      "Nordea": 100.0
+    },
+    "maturity_profile": {
+      "within_6_months": 8500000,
+      "6_12_months": 0,
+      "1_2_years": 4500000,
+      "2_5_years": 0,
+      "over_5_years": 0
+    },
+    "interest_rate_range": {
+      "min_rate_pct": 0.85,
+      "max_rate_pct": 4.54,
+      "weighted_avg_pct": 3.23
+    },
+    "risk_assessment": {
+      "refinancing_risk": "HIGH",
+      "interest_rate_risk": "HIGH",
+      "lender_concentration_risk": "HIGH",
+      "overall_risk": "HIGH"
+    },
+    "risk_factors": [
+      "65.4% of debt matures within 6 months (2 loans totaling 8.5M kr in March-June 2024)",
+      "100% concentration with single lender (Nordea)",
+      "Wide interest rate spread: 0.85% to 4.54% (3.69 percentage points)",
+      "Two loans (5M + 3.5M) maturing in Q1-Q2 2024"
+    ],
+    "evidence_pages": [15]
+  },
+
+  "revenue_breakdown_agent": {
+    "arsavgifter_bostader": 2118660,
+    "hyror_lokaler": 531680,
+    "hyror_garage": 439830,
+    "hyror_forrad": null,
+    "bredband": null,
+    "andrahandsuthyrning": null,
+    "uppvarmning_debitering": null,
+    "vatten_debitering": null,
+    "el_debitering": null,
+    "fastighetsskatt_debitering": null,
+    "ovriga_ror​elseintakter": 1057,
+    "elstod": null,
+    "solceller_revenue": 10049,
+    "laddstolpar_revenue": 15752,
+    "total_rorelseintakter": 3117028,
+    "evidence_pages": [12]
+  }
+}
