@@ -1,0 +1,364 @@
+{
+  "basic_info": {
+    "organization_name": "Brf Strandparken 1",
+    "organization_number": "769627-0409",
+    "fiscal_year": 2023,
+    "report_date": "2023-12-31",
+    "k2_k3_regime": "K2",
+    "location": "Stockholm",
+    "pages": 15,
+    "file_size_kb": 337,
+    "document_id": "brf_79510",
+    "registration_date": "2014-10-14",
+    "stadgar_date": "2021-01-07",
+    "economic_plan_date": "2016-04-12"
+  },
+  "governance": {
+    "chairman": "Björn Fridborn",
+    "chairman_title": "Ledamot",
+    "board_members": [
+      {"name": "Björn Fridborn", "role": "Ledamot"},
+      {"name": "Annie Fornelius", "role": "Ledamot"},
+      {"name": "Casper Byström", "role": "Ledamot"},
+      {"name": "Elin Övermo", "role": "Ledamot"},
+      {"name": "Johan Ljungdahl", "role": "Ledamot"},
+      {"name": "Susanne Kaarnimo", "role": "Suppleant"}
+    ],
+    "board_meetings": 11,
+    "annual_meeting_date": "2023-05-15",
+    "auditor": "Peter Lindqvist",
+    "auditor_company": "Borev Revisionsbyrå AB",
+    "auditor_type": "Revisor",
+    "governance_note": "Board of 5 ledamöter + 1 suppleant. 11 board meetings held during 2023. Firm signed by two board members jointly."
+  },
+  "property": {
+    "fastigheter": [
+      {
+        "name": "Stora Sjöfallet 2",
+        "construction_year": 2016,
+        "construction_start": 2014,
+        "completion_date": "2016-06",
+        "transfer_to_brf_date": "2016-10-01",
+        "vardear": 2016,
+        "kommun": "Stockholm",
+        "ownership_type": "äganderätt",
+        "developer": "Byggnadsfirman Viktor Hanson AB",
+        "acquisition_structure": "Underprisöverlåtelse from Stora Sjöfallet 2 Hanson AB (556979-4927) on 2014-10-15"
+      }
+    ],
+    "total_properties": 1,
+    "apartments": 30,
+    "apartment_distribution": {
+      "1_rok": 12,
+      "4_rok": 18
+    },
+    "total_area_sqm": 2777,
+    "apartment_area_sqm": 2621,
+    "biarea_sqm": 156,
+    "address": "Husarviksgatan 16, 115 47 Stockholm",
+    "insurance_provider": "Brandkontoret",
+    "insurance_type": "Fullvärdesförsäkrad",
+    "gemensamhetsanlaggningar": [
+      {"name": "Stockholm Stora Sjöfallet GA:1", "purpose": "garage"},
+      {"name": "Stockholm Stora Sjöfället GA:2", "purpose": "gård och dagvattenhantering"},
+      {"name": "Stockholm Stora Sjöfället GA:3", "purpose": "sopsugledning"}
+    ],
+    "servitut": "Ledningsrätt (last) för starkström",
+    "property_note": "Acquired via underprisöverlåtelse (below-market transfer) which creates deferred tax liability that only becomes payable if BRF sells the property. Member in 3 gemensamhetsanläggningar. Building constructed 2014-2016, inflyttning June 2016."
+  },
+  "income_statement": {
+    "revenue_2023": 2127333,
+    "revenue_2022": 1652212,
+    "operating_result_2023": -487682,
+    "operating_result_2022": -1048829,
+    "result_after_financial_2023": -1294225,
+    "result_after_financial_2022": -1464551
+  },
+  "revenue_breakdown": {
+    "arsavgifter_2023": 1448423,
+    "arsavgifter_2022": 1259580,
+    "overskott_garagesamfallighet_2023": 240907,
+    "overskott_garagesamfallighet_2022": 0,
+    "bredband_2023": 89280,
+    "bredband_2022": 89032,
+    "elavgifter_2023": 208404,
+    "elavgifter_2022": 221396,
+    "vattenavgifter_2023": 51850,
+    "vattenavgifter_2022": 58966,
+    "andrahandsupplatelse_2023": 17798,
+    "andrahandsupplatelse_2022": 22758,
+    "ovriga_intakter_2023": 165,
+    "ovriga_intakter_2022": 480,
+    "elprisstod_2023": 70506,
+    "elprisstod_2022": 0
+  },
+  "balance_sheet": {
+    "total_assets_2023": 229615838,
+    "total_assets_2022": 231235977,
+    "total_equity_2023": 195486571,
+    "total_equity_2022": 196780796,
+    "soliditet_2023": 85.14,
+    "soliditet_2022": 85.10,
+    "cash_2023": 422981,
+    "cash_2022": 361977
+  },
+  "loans_detailed": [
+    {
+      "lender": "Nordea",
+      "current_balance_2023": 8000000,
+      "interest_rate": 4.496,
+      "maturity_date": "2024-06-28",
+      "classification": "short-term (maturing 2024)"
+    },
+    {
+      "lender": "Nordea",
+      "current_balance_2023": 2020000,
+      "interest_rate": 4.476,
+      "maturity_date": "2024-12-06",
+      "classification": "short-term (maturing 2024)"
+    },
+    {
+      "lender": "Nordea",
+      "current_balance_2023": 11770000,
+      "interest_rate": 4.533,
+      "maturity_date": "2024-06-24",
+      "classification": "short-term (maturing 2024)"
+    },
+    {
+      "lender": "Nordea",
+      "current_balance_2023": 11778000,
+      "interest_rate": 0.6,
+      "maturity_date": "2024-09-02",
+      "classification": "short-term (maturing 2024)"
+    }
+  ],
+  "loan_summary": {
+    "total_debt_2023": 33568000,
+    "total_debt_2022": 33918000,
+    "long_term_portion_2023": 0,
+    "long_term_portion_2022": 11778000,
+    "short_term_portion_2023": 33568000,
+    "short_term_portion_2022": 22140000,
+    "interest_costs_2023": 807989,
+    "interest_costs_2022": 415795,
+    "amortization_2023": 350000,
+    "amortization_2022": 350000,
+    "lender_concentration": "100% Nordea (all 4 loans)",
+    "refinancing_note": "All loans classified as short-term due to 2024 maturities, but board considers financing to be long-term in character and expects to refinance at maturity."
+  },
+  "fastighetskostnader": {
+    "fastighetsskotsel_2023": 47997,
+    "fastighetsskotsel_2022": 38430,
+    "stadkostnader_2023": 51900,
+    "stadkostnader_2022": 51900,
+    "hiss_besiktning_2023": 47283,
+    "hiss_besiktning_2022": 39587,
+    "hiss_reparationer_2023": 15313,
+    "hiss_reparationer_2022": 13791,
+    "bevakning_2023": 5367,
+    "bevakning_2022": 6118,
+    "sopsug_2023": 0,
+    "sopsug_2022": 34931,
+    "gemensamhetsanlaggning_2023": 67359,
+    "gemensamhetsanlaggning_2022": 21000,
+    "reparationer_2023": 41228,
+    "reparationer_2022": 82167,
+    "planerat_underhall_2023": 27500,
+    "planerat_underhall_2022": 7694,
+    "el_2023": 190114,
+    "el_2022": 362201,
+    "uppvarmning_2023": 196993,
+    "uppvarmning_2022": 174218,
+    "vatten_2023": 72712,
+    "vatten_2022": 56495,
+    "avfallshantering_2023": 32140,
+    "avfallshantering_2022": 29209,
+    "forsakring_2023": 42669,
+    "forsakring_2022": 40473,
+    "kabel_tv_2023": 61970,
+    "kabel_tv_2022": 36052,
+    "bredband_2023": 48150,
+    "bredband_2022": 53640,
+    "forbrukningsinventarier_2023": 11875,
+    "forbrukningsinventarier_2022": 0,
+    "total_driftskostnader_2023": 960570,
+    "total_driftskostnader_2022": 1047905
+  },
+  "key_metrics": {
+    "debt_per_sqm_total_2023": 12807,
+    "debt_per_sqm_total_2022": 12941,
+    "debt_per_sqm_apartment_2023": 12807,
+    "debt_per_sqm_apartment_2022": 12941,
+    "annual_fees_per_sqm_2023": 686,
+    "annual_fees_per_sqm_2022": 622,
+    "energy_cost_per_sqm_2023": 175,
+    "energy_cost_per_sqm_2022": 226,
+    "sparande_per_sqm_2023": 67,
+    "sparande_per_sqm_2022": -5,
+    "avskrivningar_2023": 1443289,
+    "avskrivningar_2022": 1443286,
+    "avskrivningar_buildings_rate": "100 years",
+    "rentekänslighet_percent_2023": 18.67,
+    "rentekänslighet_percent_2022": 20.82,
+    "arsavgifternas_andel_percent_2023": 84.52,
+    "arsavgifternas_andel_percent_2022": 98.59
+  },
+  "taxering": {
+    "taxeringsvarde_total_2023": 168000000,
+    "taxeringsvarde_building_2023": 90000000,
+    "taxeringsvarde_mark_2023": 78000000,
+    "taxeringsvarde_total_2022": 168000000,
+    "taxeringsvarde_building_2022": 90000000,
+    "taxeringsvarde_mark_2022": 78000000
+  },
+  "critical_analysis": {
+    "debt_tier": "MEDIUM-HIGH - 20.0% av taxeringsvärde (33.6M / 168M)",
+    "loss_pattern": "CHRONIC - 4 consecutive years (2020-2023: -1.1M, -1.3M, -1.5M, -1.3M)",
+    "loss_trend": "STABLE - hovering around -1.1M to -1.5M annually",
+    "soliditet_status": "STRONG - 85.14% (stable 2020-2023: 85.17%, 85.26%, 85.10%, 85.14%)",
+    "cash_status": "ADEQUATE - 423k kr (up +16.9% from 362k)",
+    "main_loss_driver": "K2 avskrivningar (1.44M kr) creating paper losses",
+    "result_without_depreciation": "+149k kr (POSITIVE operating cash flow!)",
+    "fee_shock": "+20% for 2023 (622 → 686 kr/m²) THEN +35% for 2024! (EXTREME!)",
+    "fee_increase_cumulative_2023_2024": "+62% over 2 years (622 → 686 → 926 kr/m²)",
+    "fee_increase_2022_2023": "+10.3% (622 → 686 kr/m²)",
+    "interest_cost_explosion": "+94.3% (416k → 808k) - rate shock!",
+    "debt_refinancing_upcoming": "ALL 33.6M kr maturing in 2024 (100% of debt!)",
+    "interest_rate_risk": "Weighted avg rate increased from ~1.2% → ~2.4% (DOUBLED)",
+    "unique_characteristics": [
+      "NEW building (2016, only 8 years old) but chronic losses",
+      "35% fee increase announced for January 2024 (HIGHEST IN DATASET after 23%)!",
+      "Cumulative 62% fee increase over 2 years (2022-2024)",
+      "ALL debt classified as short-term (100% maturing in 2024)",
+      "100% Nordea concentration (all 4 loans with single lender)",
+      "Interest costs DOUBLED year-over-year (+94%)",
+      "Äganderätt (owns land outright, no tomträtt burden)",
+      "Government electricity support: 70.5k kr received in 2023",
+      "Garage samfällighet surplus: 241k kr (unusual revenue source)",
+      "Underprisöverlåtelse structure with deferred tax liability",
+      "Member in 3 gemensamhetsanläggningar",
+      "5 andrahandsuthyrningar approved",
+      "4-year chronic losses BUT positive cash flow before depreciation",
+      "K2 accounting creates -1.3M paper loss vs +149k actual cash flow",
+      "Electricity costs HALVED year-over-year (-47.5%): 362k → 190k",
+      "Energy cost per sqm improved 22.6%: 226 → 175 kr/m²"
+    ]
+  },
+  "underhall": {
+    "maintenance_plan_period": "Via Fastum Teknik AB",
+    "maintenance_plan_updated": "2020",
+    "underhallsplan_note": "Maintenance plan last updated in 2020. Avsättning to yttre fond required annually per maintenance plan or minimum 0.1% of taxeringsvärde."
+  },
+  "members": {
+    "members_start_2023": 49,
+    "members_end_2023": 46,
+    "members_joined_2023": 5,
+    "members_left_2023": 8,
+    "apartments_transferred_2023": 4,
+    "subletting_approved_2023": 5,
+    "subletting_active": 5
+  },
+  "forvaltning": {
+    "ekonomisk_forvaltning": "Fastum AB",
+    "teknisk_forvaltning": "Driftia",
+    "insurance": "Brandkontoret (fullvärdesförsäkrad)",
+    "forvaltning_note": "Economic management by Fastum AB, technical management by Driftia."
+  },
+  "critical_events_2023": {
+    "fee_increase_2023": "20% increase (622 → 686 kr/m²) from April 2023",
+    "fee_increase_2024_announced": "35% increase announced for January 2024",
+    "interest_rate_shock": "Interest costs +94.3% (416k → 808k)",
+    "government_electricity_support": "70,506 kr received (elprisstöd)",
+    "electricity_cost_improvement": "Fastighetsel -47.5% (362k → 190k)",
+    "garage_samfallighet_surplus": "240,907 kr received (first year)",
+    "all_loans_refinancing": "All 33.6M kr maturing in 2024",
+    "OVK_besiktning": "Completed during 2023",
+    "amortization": "350k kr paid (annual requirement)"
+  },
+  "notes": {
+    "note_2_revenue": {
+      "arsavgifter": 1448423,
+      "overskott_garagesamfallighet": 240907,
+      "bredband": 89280,
+      "elavgifter": 208404,
+      "vattenavgifter": 51850,
+      "andrahandsupplatelse": 17798,
+      "ovriga_intakter": 165,
+      "elprisstod": 70506,
+      "note": "Annual fees include heating, water, electricity, TV, and broadband. Electricity price support received in 2023."
+    },
+    "note_3_operating_costs": {
+      "total": 960570,
+      "major_items": {
+        "fastighetsel": 190114,
+        "uppvarmning": 196993,
+        "vatten": 72712,
+        "gemensamhetsanlaggning": 67359,
+        "kabel_tv_bredband": 110120,
+        "hiss_total": 62596
+      }
+    },
+    "note_9_loans": {
+      "total_debt": 33568000,
+      "all_nordea": true,
+      "all_mature_2024": true,
+      "loan_count": 4,
+      "short_term_classification_note": "Loans classified as short-term due to 2024 maturities, but board considers financing to be long-term in character and expects refinancing."
+    },
+    "note_11_post_balance_events": {
+      "fee_increase_2024": {
+        "effective_date": "2024-01-01",
+        "increase_percent": 35,
+        "reason": "För att klara de ökade räntorna på föreningens lån"
+      }
+    }
+  },
+  "comprehensive_summary": {
+    "critical_patterns": [
+      "NEW building (2016, 8 years old) with chronic losses",
+      "EXTREME fee increases: +20% (2023) then +35% (2024) = +62% cumulative!",
+      "ALL debt maturing in 2024 (100% refinancing risk)",
+      "Interest rate shock: costs DOUBLED (+94.3%)",
+      "Pattern B (general), NOT Pattern B-NEW due to 20% debt ratio (>15% threshold)",
+      "Soliditet stable at 85% despite losses",
+      "Positive cash flow before depreciation (+149k)",
+      "K2 depreciation 1.44M creates paper loss of -1.29M",
+      "100% Nordea lender concentration",
+      "Äganderätt (no tomträtt burden)"
+    ],
+    "financial_health": "CONCERNING - Despite strong 85% soliditet and positive cash flow before depreciation, association faces EXTREME challenges. Interest costs DOUBLED due to rate environment. Board responding with most aggressive fee strategy in dataset: +62% cumulative over 2 years. All debt refinancing in 2024.",
+    "key_strengths": [
+      "Strong soliditet at 85.14%",
+      "Positive cash flow before depreciation (+149k)",
+      "NEW building (2016, only 8 years old)",
+      "Owns land outright (no tomträtt burden)",
+      "Energy costs improved significantly (-47.5%)",
+      "Garage samfällighet provides surplus revenue (241k)",
+      "Low maintenance needs (new building)",
+      "Government support received (70.5k electricity)"
+    ],
+    "key_weaknesses": [
+      "EXTREME fee increases required (+62% over 2 years)",
+      "ALL debt refinancing in 2024 (100% exposure)",
+      "Interest costs DOUBLED year-over-year",
+      "4 years of chronic losses (-1.1M to -1.5M range)",
+      "20% debt ratio (MEDIUM-HIGH tier)",
+      "100% lender concentration (all Nordea)",
+      "Debt 20% of taxeringsvärde (above 15% Pattern B-NEW threshold)",
+      "Member exodus (49 → 46 members, -6.1%)"
+    ],
+    "outlook": "CHALLENGING - Association faces critical 2024 refinancing of ALL debt during elevated rate environment. Board has implemented most aggressive fee strategy in dataset (+35% for 2024 after +20% in 2023). If refinancing at current market rates (~4-5%), interest costs could remain elevated, requiring sustained high fees. Strong soliditet (85%) and positive operational cash flow provide buffer, but member affordability is concern with 62% cumulative fee increase.",
+    "unique_characteristics": [
+      "NEWEST building in dataset with chronic losses (2016, 8 years old)",
+      "MOST AGGRESSIVE fee response: +35% for 2024 (2nd highest after PDF 39's 23%)",
+      "Cumulative +62% fee increase over 2 years (HIGHEST IN DATASET)",
+      "100% debt refinancing in single year (2024)",
+      "Electricity costs HALVED (-47.5%) - major operational win",
+      "Garage samfällighet surplus revenue (unique income stream)",
+      "Underprisöverlåtelse acquisition structure (deferred tax)",
+      "Member in 3 gemensamhetsanläggningar (garage, courtyard, sopsug)",
+      "Interest costs DOUBLED in one year (+94.3%)",
+      "NO tomträtt burden (owns land outright)"
+    ]
+  }
+}
