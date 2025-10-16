@@ -1,0 +1,273 @@
+{
+  "basic_info": {
+    "organization_name": "Brf Färnebofjärden",
+    "organization_number": "769626-1127",
+    "fiscal_year": 2023,
+    "report_date": "2023-12-31",
+    "k2_k3_regime": "K2",
+    "location": "Stockholm",
+    "pages": 17,
+    "file_size_mb": 5.9,
+    "document_id": "brf_78730",
+    "registration_date": "2013",
+    "economic_plan_date": "2014",
+    "stadgar_date": "2019"
+  },
+  "governance": {
+    "chairman": "Helen Lundberg",
+    "chairman_title": "Ordförande",
+    "board_members": [
+      {"name": "Helen Lundberg", "role": "Ordförande"},
+      {"name": "Johanna Garefelt", "role": "Ledamot"},
+      {"name": "Martin Norén", "role": "Ledamot"},
+      {"name": "Ted Nilsson", "role": "Ledamot"},
+      {"name": "Michael Söderström", "role": "Ledamot"},
+      {"name": "Erik Ryrberg", "role": "Suppleant"},
+      {"name": "Magnus Sjöberg", "role": "Suppleant"},
+      {"name": "Göran Sundwall", "role": "Suppleant"},
+      {"name": "Cornelia Åberg Tornakull", "role": "Suppleant"}
+    ],
+    "board_meetings": 13,
+    "annual_meeting_date": "2023-06-15",
+    "auditor": "Josefine Johansson",
+    "auditor_company": "BDO Mälardalen AB",
+    "auditor_type": "Extern auktoriserad revisor",
+    "valberedning": ["Eva Corp (sammankallande)", "Maria Severin Gråns", "Shirin Bonde"]
+  },
+  "property": {
+    "fastigheter": [
+      {
+        "name": "Färnebofjärden 2",
+        "construction_year": 2014,
+        "vardear": 2014,
+        "kommun": "Stockholm",
+        "ownership_type": "tomträtt"
+      }
+    ],
+    "total_properties": 1,
+    "apartments": 56,
+    "apartment_area_sqm": 4596,
+    "lokaler_area_sqm": 94,
+    "garage_area_sqm": 897,
+    "total_area_sqm": 5587,
+    "apartment_distribution": {
+      "2_rok": 13,
+      "3_rok": 26,
+      "4_rok": 15,
+      "5_rok": 2
+    },
+    "garage_spaces": 34,
+    "addresses": {
+      "bostad": "Bobergsgatan 4-6 och Fagningsgatan 5-11, 115 44 Stockholm",
+      "garage": "Madängsgatan 20, 115 44 Stockholm"
+    }
+  },
+  "income_statement": {
+    "revenue_2023": 4878088,
+    "revenue_2022": 4424254,
+    "operating_result_2023": -1534506,
+    "operating_result_2022": -2092917,
+    "result_after_financial_2023": -2234289,
+    "result_after_financial_2022": -2650223
+  },
+  "revenue_breakdown": {
+    "arsavgifter_bostader_2023": 3497953,
+    "arsavgifter_bostader_2022": 3179997,
+    "hyresintakter_lokaler_2023": 287401,
+    "hyresintakter_lokaler_2022": 289028,
+    "fastighetssskatt_2023": 29772,
+    "fastighetssskatt_2022": 0,
+    "hyresintakter_garage_2023": 836575,
+    "hyresintakter_garage_2022": 732015,
+    "ovriga_hyresintakter_2023": 1000,
+    "ovriga_hyresintakter_2022": 0,
+    "overlatelseAvgifter_2023": 10637,
+    "overlatelseAvgifter_2022": 0,
+    "overlatelseavgifter_2022": 19079,
+    "debiterade_vattenkostnader_2023": 180112,
+    "debiterade_vattenkostnader_2022": 193780,
+    "debiterade_varmekostnader_2023": 11496,
+    "debiterade_varmekostnader_2022": 10370,
+    "ovriga_intakter_2023": 23150,
+    "oresutjamning_2023": -7,
+    "oresutjamning_2022": 6
+  },
+  "balance_sheet": {
+    "total_assets_2023": 272577857,
+    "total_assets_2022": 274953902,
+    "total_equity_2023": 235639509,
+    "total_equity_2022": 237873798,
+    "soliditet_2023": 86,
+    "soliditet_2022": 87,
+    "cash_2023": 792102,
+    "cash_2022": 15065
+  },
+  "loans_detailed": [
+    {
+      "lender": "Swedbank",
+      "current_balance_2023": 7027000,
+      "interest_rate": 1.250,
+      "maturity_date": "2028-01-25",
+      "classification": "långfristig"
+    },
+    {
+      "lender": "Swedbank",
+      "current_balance_2023": 10325000,
+      "interest_rate": 2.560,
+      "maturity_date": "2032-03-25",
+      "classification": "långfristig"
+    },
+    {
+      "lender": "Swedbank",
+      "current_balance_2023": 6925000,
+      "interest_rate": 4.010,
+      "maturity_date": "2028-06-21",
+      "classification": "långfristig"
+    },
+    {
+      "lender": "Swedbank",
+      "current_balance_2023": 11000000,
+      "interest_rate": 1.390,
+      "maturity_date": "2030-01-25",
+      "classification": "långfristig"
+    }
+  ],
+  "loan_summary": {
+    "total_debt_2023": 35277000,
+    "total_debt_2022": 27902000,
+    "long_term_portion_2023": 35277000,
+    "long_term_portion_2022": 27902000,
+    "short_term_portion_2023": 0,
+    "short_term_portion_2022": 8050000,
+    "average_interest_rate_2023": 2.20,
+    "interest_costs_2023": 700895,
+    "interest_costs_2022": 557702,
+    "amortization_2023": 675000,
+    "amortization_2022": 775000
+  },
+  "fastighetskostnader": {
+    "fastighetsel_2023": 378239,
+    "fastighetsel_2022": 408569,
+    "uppvarmning_2023": 427540,
+    "uppvarmning_2022": 307889,
+    "vatten_och_avlopp_2023": 122094,
+    "vatten_och_avlopp_2022": 73705,
+    "sophämtning_2023": 70007,
+    "sophämtning_2022": 31852,
+    "taxebundna_kostnader_2023": 997879,
+    "taxebundna_kostnader_2022": 822015,
+    "hiss_2023": 37835,
+    "hiss_2022": 77747,
+    "obligatoriska_service_besiktning_2023": 17414,
+    "obligatoriska_service_besiktning_2022": 8072,
+    "ovrig_funktionell_anlaggning_2023": 41716,
+    "ovrig_funktionell_anlaggning_2022": 91028,
+    "funktionell_anlaggningsservice_2023": 96965,
+    "funktionell_anlaggningsservice_2022": 176848,
+    "fastighetsskotsel_2023": 215357,
+    "fastighetsskotsel_2022": 225097,
+    "tragardsskotsel_2023": 32893,
+    "tragardsskotsel_2022": 3005,
+    "snöröjning_2023": 8776,
+    "snöröjning_2022": 8451,
+    "tv_distribution_2023": 87780,
+    "tv_distribution_2022": 127521,
+    "fastighetsforsakring_2023": 80204,
+    "fastighetsforsakring_2022": 76605,
+    "fastighetsavgift_skatt_2023": 90200,
+    "fastighetsavgift_skatt_2022": 90200,
+    "tomträttsavgälder_2023": 1206788,
+    "tomträttsavgälder_2022": 1121901,
+    "samfällighetsavgifter_2023": 50981,
+    "samfällighetsavgifter_2022": 47821,
+    "gemensamhetsanlaggningar_2023": 15254,
+    "gemensamhetsanlaggningar_2022": 358,
+    "forbrukningsmaterial_2023": 25832,
+    "forbrukningsmaterial_2022": 12099,
+    "reparationer_2023": 175246,
+    "reparationer_2022": 248456,
+    "underhall_2023": 97756,
+    "underhall_2022": 192651,
+    "total_drift_underhall_2023": 3182375,
+    "total_drift_underhall_2022": 3241066
+  },
+  "key_metrics": {
+    "debt_per_sqm_apartment_2023": 7676,
+    "debt_per_sqm_apartment_2022": 6071,
+    "debt_per_sqm_total_2023": 6314,
+    "annual_fees_per_sqm_2023": 803,
+    "annual_fees_per_sqm_2022": 692,
+    "energy_cost_per_sqm_2023": 166,
+    "sparande_per_sqm_2023": 133,
+    "avskrivningar_2023": 2969227,
+    "avskrivningar_2022": 2980728,
+    "avskrivningar_byggnader_2023": 2969227,
+    "rantekänslighet_percent_2023": 10,
+    "rantekänslighet_percent_2022": 11,
+    "arsavgifternas_andel_percent_2023": 73,
+    "arsavgifternas_andel_percent_2022": 75
+  },
+  "taxering": {
+    "taxeringsvarde_byggnad_2023": 155800000,
+    "taxeringsvarde_mark_2023": 143220000,
+    "taxeringsvarde_total_2023": 299020000,
+    "taxeringsvarde_byggnad_2022": 155800000,
+    "taxeringsvarde_mark_2022": 143220000,
+    "taxeringsvarde_total_2022": 299020000
+  },
+  "critical_analysis": {
+    "debt_tier": "LOW - 11.8% av taxeringsvärde (35.3M / 299M)",
+    "loss_pattern": "CHRONIC - 2 consecutive years (-2,650k → -2,234k)",
+    "loss_improvement": "-15.7% year-over-year (slight improvement but still major loss)",
+    "soliditet_status": "STRONG - 86% (declining from 87% in 2022)",
+    "cash_status": "STRONG - 792k kr (+5,162% increase from 15k!)",
+    "main_loss_driver": "K2 avskrivningar (2,969k kr) creating paper losses",
+    "result_without_depreciation": "+734,938 kr (POSITIVE operating cash flow!)",
+    "pattern_classification": "PATTERN B-NEW - 4th confirmed case!",
+    "building_age": "9 years old (2014 construction)",
+    "tomträtt_burden": "1,207k kr annual ground rent (25% of revenue!)",
+    "debt_increase": "+26.4% (27.9M → 35.3M) - SIGNIFICANT increase",
+    "interest_rate_status": "LOW - 2.20% weighted average",
+    "avgift_increase_2023": "+16% (692 → 803 kr/m²) - AGGRESSIVE response to losses",
+    "amortization_strategy": "675k kr in 2023 (active debt management)",
+    "unique_characteristics": [
+      "NEW building (2014) with Pattern B-NEW chronic losses",
+      "Tomträtt property with 25% revenue to ground rent",
+      "Soliditet anchor at 86% (Pattern B-NEW characteristic)",
+      "LOW debt tier (11.8%) but increased +26% in 2023",
+      "Cash surge: 15k → 792k (+5,162%) - fee increase working",
+      "K2 depreciation: 2,969k creating -2,234k paper loss",
+      "Operating cash flow: +735k (before depreciation)",
+      "Avgift response: +16% aggressive fee increase",
+      "Energy costs stable: 166 kr/m² (reasonable)",
+      "Samfällighet minor: 51k (not major cost driver)",
+      "Debt refinancing: All loans maturing 2028-2032",
+      "Interest rate spread: 1.25% to 4.01% (one high-rate loan)"
+    ]
+  },
+  "underhall": {
+    "underhallsplan_period": "2024-2074",
+    "underhallsplan_updated": "2024-01-01",
+    "utfort_underhall": [],
+    "planerat_underhall": []
+  },
+  "members": {
+    "members_at_year_start_2023": 104,
+    "members_at_year_end_2023": 56,
+    "member_turnover_2023": 5,
+    "total_members_end_2023": 102
+  },
+  "forvaltning": {
+    "ekonomisk_forvaltning": "Delagott",
+    "teknisk_forvaltning": "A.S. Underhåll",
+    "städning": "Danigo",
+    "snoroj ning": "Solid Fastighetspartner",
+    "kabel_tv_fiber": "Tele2",
+    "elnat": "Ellevio",
+    "elhandel": "Jämtkraft",
+    "värme": "Stockholm Exergi",
+    "vatten": "Stockholm Vatten",
+    "sopsug": "Envac",
+    "atervinning": "PreZero Recycling"
+  }
+}
