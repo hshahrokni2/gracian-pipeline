@@ -1,0 +1,412 @@
+{
+  "metadata_agent": {
+    "organization_number": "769622-7128",
+    "organization_name": "Brf Husarvikens Strand",
+    "fiscal_year_start": "2023-01-01",
+    "fiscal_year_end": "2023-12-31",
+    "report_date": "2023-12-31",
+    "accounting_standard": "K2",
+    "pages_total": 14,
+    "report_type": "årsredovisning",
+    "property_manager": "Primär Fastighetsförvaltning AB",
+    "auditor": "Magnus Anderström",
+    "auditor_firm": "Frejs Revisorer AB",
+    "evidence_pages": [1, 2, 4]
+  },
+
+  "governance_agent": {
+    "chairman": "Thomas Parmbäck",
+    "vice_chairman": "Ricard Larsson",
+    "treasurer": "Bert Conneryd",
+    "secretary": "Gunilla Edvinson",
+    "board_members": [
+      {"name": "Thomas Parmbäck", "role": "Ordförande"},
+      {"name": "Ricard Larsson", "role": "Vice ordförande/Fastighet"},
+      {"name": "Bert Conneryd", "role": "Kassör"},
+      {"name": "Gunilla Edvinson", "role": "Sekreterare"},
+      {"name": "Tomas Frank", "role": "Ledamot"},
+      {"name": "Stefan Söderström", "role": "Ledamot"},
+      {"name": "Andriy Zhokov", "role": "Suppleant"}
+    ],
+    "board_size": 7,
+    "board_meetings_count": 7,
+    "annual_meeting_date": "2023-05-23",
+    "extra_meeting_dates": [],
+    "valberedning": ["Stefan Killander (sammankallande)", "Daniel Granlycke"],
+    "firmateckning": "två ledamöter i förening",
+    "evidence_pages": [4]
+  },
+
+  "audit_agent": {
+    "auditor_name": "Magnus Anderström",
+    "auditor_firm": "Frejs Revisorer AB",
+    "auditor_type": "Auktoriserad revisor",
+    "audit_report_pages": 1,
+    "audit_opinion": "Utan anmärkning",
+    "evidence_pages": [4, 15]
+  },
+
+  "property_agent": {
+    "property_designation": "Skuleskogen 1",
+    "address": "Stockholm",
+    "acquisition_date": "2013-09-30",
+    "total_area_sqm": 3100,
+    "bostadsratter_count": 33,
+    "apartment_breakdown": {
+      "1_rok": null,
+      "2_rok": 10,
+      "3_rok": 10,
+      "4_rok": 12,
+      "5_rok": 1,
+      "total": 33
+    },
+    "construction_year": 2013,
+    "construction_period": "2012-2013",
+    "property_insurance": "Folksam",
+    "taxeringsvarde_building": 92733000,
+    "taxeringsvarde_mark": 84000000,
+    "taxeringsvarde_total": 176733000,
+    "bostader_area_sqm": 2800,
+    "lokaler_area_sqm": 0,
+    "lokaler_tenant": null,
+    "samfallighet_membership": "Dual: Skuleskogens Samfällighetsförening (GA:3 + GA:4) + Husarvikens Samfällighetsförening (GA:5)",
+    "samfallighet_share_pct": "GA:3 26%, GA:4 25%, GA:5 35%",
+    "samfallighet_description": "GA:3 (yttre miljö, sophantering), GA:4 (garage), GA:5 (vatten- och fjärrvärmeanläggning)",
+    "evidence_pages": [2, 3]
+  },
+
+  "financial_agent": {
+    "assets_total": 168106544,
+    "equity_total": 157148753,
+    "liabilities_total": 10957791,
+    "net_revenue": 2309707,
+    "profit_loss": -909600,
+    "soliditet_pct": 93.5,
+    "cash_and_bank": 1382742,
+    "nettoomsattning": 2309707,
+    "nettoomsattning_breakdown": {
+      "arsavgifter_bostader": 1921391,
+      "hyresintakter_garage": 352570,
+      "hyresintakter_forrad": 6000,
+      "laddstolpar": 29676,
+      "ovrigt": 70
+    },
+    "other_income": 26581,
+    "total_revenue": 2336288,
+    "balansomslutning": 168106544,
+    "kundfordringar": 11130,
+    "evidence_pages": [7, 8, 9]
+  },
+
+  "operating_costs_agent": {
+    "total_driftskostnader": 2030701,
+    "fastighetsskotsel": 181982,
+    "reparationer_underhall": 25804,
+    "taxebundna_kostnader": 107536,
+    "ovriga_driftskostnader": 1715379,
+    "el": 107536,
+    "varme": null,
+    "vatten": null,
+    "sophamtning": null,
+    "fastighetsforsakringar": 58689,
+    "tomtrattsavgald": 607800,
+    "kabel_tv": 74750,
+    "fastighetsskatt": 27330,
+    "hiss_underhall": 9221,
+    "sotning_ventilation": 11718,
+    "samfallighetsavgifter": 916441,
+    "serviceavtal": 18651,
+    "major_repairs_water_damage": null,
+    "evidence_pages": [12]
+  },
+
+  "loans_agent": {
+    "total_debt": 10200000,
+    "long_term_debt": 7000000,
+    "short_term_debt": 3200000,
+    "loans": [
+      {
+        "lender": "Nordea",
+        "loan_id": null,
+        "amount": 3200000,
+        "interest_rate_pct": 0.70,
+        "maturity_date": "2024-10-16",
+        "villkorsandringsdag": "2024-10-16",
+        "maturity_classification": "short_term"
+      },
+      {
+        "lender": "Nordea",
+        "loan_id": null,
+        "amount": 3400000,
+        "interest_rate_pct": 1.58,
+        "maturity_date": "2026-02-18",
+        "villkorsandringsdag": "2026-02-18",
+        "maturity_classification": "long_term"
+      },
+      {
+        "lender": "Nordea",
+        "loan_id": null,
+        "amount": 3600000,
+        "interest_rate_pct": 0.93,
+        "maturity_date": "2025-10-15",
+        "villkorsandringsdag": "2025-10-15",
+        "maturity_classification": "long_term"
+      }
+    ],
+    "average_interest_rate_pct": 1.04,
+    "debt_per_sqm": 3290,
+    "projected_debt_5_years": null,
+    "loan_restructuring_note": "One loan (3.2M) reclassified to short-term, matures Oct 2024 (10 months)",
+    "evidence_pages": [14]
+  },
+
+  "fees_agent": {
+    "fee_per_sqm_annual": 686,
+    "fee_increase_pct": 5.0,
+    "fee_increase_date": "2024-01-01",
+    "fee_increase_reason": "+5% från 2024, motiverad av låneomsättning (högre ränta) och ökade driftskostnader",
+    "multiple_increases": false,
+    "fee_history": [
+      {"year": 2023, "fee_per_sqm": 686},
+      {"year": 2022, "fee_per_sqm": 686},
+      {"year": 2021, "fee_per_sqm": 686},
+      {"year": 2020, "fee_per_sqm": 686}
+    ],
+    "evidence_pages": [5]
+  },
+
+  "energy_agent": {
+    "elkostnad_per_sqm": null,
+    "varmekostnad_per_sqm": null,
+    "vattenkostnad_per_sqm": null,
+    "energikostnad_per_sqm_total": 138,
+    "multi_year_energy_trends": [
+      {"year": 2023, "energi_per_sqm": 138}
+    ],
+    "electricity_increase_pct_2022_2023": null,
+    "electricity_increase_pct_3_year": null,
+    "heating_increase_pct_2022_2023": null,
+    "water_increase_pct_2022_2023": null,
+    "elstod_received": null,
+    "elstod_pct_offset": null,
+    "energy_initiatives": "Fjärrvärme efficiency project 2023 i samfälligheten, new control system installation 2024",
+    "evidence_pages": [5]
+  },
+
+  "reserves_agent": {
+    "underhallsfond_balance": 3733427,
+    "underhallsfond_previous": 3203228,
+    "underhallsfond_change": 530199,
+    "reservering_till_fond": 530199,
+    "underhallsplan_exists": true,
+    "underhallsplan_period": "2018-2048",
+    "evidence_pages": [2, 13]
+  },
+
+  "members_agent": {
+    "total_members_start": 58,
+    "new_members": null,
+    "departing_members": null,
+    "total_members_end": 58,
+    "transfers_during_year": 3,
+    "evidence_pages": [4]
+  },
+
+  "events_agent": {
+    "major_events": [
+      {
+        "event": "MVB warranty work completed",
+        "date": "2023-12",
+        "description": "Garantiarbeten av MVB i avlopps- och ventilationsschakt samt på fasader och balkonger mot Husarviken avslutades december 2023. Inga utestående frågor mot MVB återstår",
+        "impact": "Warranty completion, no outstanding issues"
+      },
+      {
+        "event": "Heating efficiency project in samfällighet",
+        "date": "2023",
+        "description": "Projekt i samfälligheten för fjärrvärme med fokus på att effektivisera styrning av fjärrvärme och kall/varmvatten för att minska förbrukningen. Nytt styrsystem installeras under 2024",
+        "impact": "Energy efficiency improvement"
+      },
+      {
+        "event": "Solar panel investigation approved",
+        "date": "2023-05-23",
+        "description": "Vid årsstämman 2023 togs beslut på att undersöka förutsättningarna för att installera solpaneler på våra tak",
+        "impact": "Renewable energy exploration"
+      }
+    ],
+    "evidence_pages": [3, 14]
+  },
+
+  "notes_maintenance_agent": {
+    "major_maintenance_completed": [
+      {
+        "period": "2022",
+        "description": "OVK besiktning"
+      },
+      {
+        "period": "2023",
+        "description": "MVB garantiarbeten: avlopps- och ventilationsschakt, fasader, balkonger mot Husarviken"
+      }
+    ],
+    "planned_maintenance": [
+      {
+        "period": "2024",
+        "description": "Utredning solpaneler (investigation completed Jan 2024, board recommendation pending)"
+      },
+      {
+        "period": "2024",
+        "description": "Installation nytt styrsystem för fjärrvärme och vatten (energy efficiency)"
+      }
+    ],
+    "maintenance_expenses_major": {
+      "total_major_repairs": 25804,
+      "water_fire_damage": null,
+      "periodiskt_underhall": 11718
+    },
+    "underhallsplan_period": "2018-2048",
+    "evidence_pages": [3, 12]
+  },
+
+  "insurance_agent": {
+    "insurance_provider": "Folksam",
+    "insurance_premium": 58689,
+    "property_coverage": "fullvärdesgaranti",
+    "liability_coverage": "ansvarsförsäkring för styrelsen och bostadsrättstillägg för föreningens medlemmar",
+    "fastighetsinteckningar_sakerheter": 91000000,
+    "evidence_pages": [2, 14]
+  },
+
+  "tax_agent": {
+    "fastighetsskatt": 27330,
+    "fastighetsavgift_exemption": false,
+    "exemption_years": null,
+    "skattekonto_balance": 27336,
+    "moms_avrakning": null,
+    "evidence_pages": [12]
+  },
+
+  "planned_actions_agent": {
+    "planned_actions": [
+      {
+        "action": "Solar panel installation decision",
+        "status": "Investigation completed Jan 2024, board recommendation to årsstämma 2024",
+        "description": "Utredningsgrupp för solpaneler färdigställde utredning januari 2024. Styrelsen kommer inför stämman 2024 att enas om en rekommendation",
+        "timeline": "2024"
+      },
+      {
+        "action": "New heating control system installation",
+        "status": "Approved, installation 2024",
+        "description": "Nytt styrsystem för fjärrvärme och kall/varmvatten installeras under 2024 för att minska förbrukningen",
+        "timeline": "2024"
+      }
+    ],
+    "evidence_pages": [3, 14]
+  },
+
+  "cashflow_agent": {
+    "cash_flow_statement_present": true,
+    "cash_start_of_year": 1178445,
+    "cash_end_of_year": 1382742,
+    "cash_change": 204297,
+    "cash_from_operations": 204298,
+    "cash_from_investments": 0,
+    "cash_from_financing": 0,
+    "evidence_pages": [10]
+  },
+
+  "depreciation_agent": {
+    "total_depreciation": 899311,
+    "building_depreciation_rate_pct": 0.5,
+    "property_improvements_depreciation_rate_pct": 20.0,
+    "accumulated_depreciation": 8849299,
+    "ack_anskaffningsvarde": 175188000,
+    "restvarde_enligt_plan": 166338701,
+    "mark_value_included": null,
+    "evidence_pages": [13]
+  },
+
+  "driftskostnader_agent": {
+    "total_driftskostnader": 2030701,
+    "fastighetsskotsel": 181982,
+    "reparationer_underhall": 25804,
+    "el": 107536,
+    "uppvarmning": null,
+    "vatten": null,
+    "sophamtning": null,
+    "fastighetsforsakringar": 58689,
+    "tomtrattsavgald": 607800,
+    "kabel_tv": 74750,
+    "fastighetsskatt": 27330,
+    "ventilation_major": 11718,
+    "varmeanlaggning_major": null,
+    "ovriga_externa_kostnader": 133420,
+    "personalkostnader": 72077,
+    "samfallighetsavgifter": 916441,
+    "serviceavtal": 18651,
+    "evidence_pages": [12]
+  },
+
+  "commercial_tenants_agent": {
+    "has_commercial_space": false,
+    "total_commercial_area_sqm": 0,
+    "commercial_rent_collected": 0,
+    "commercial_rent_pct_of_revenue": 0,
+    "tenant_name": null,
+    "tenant_since": null,
+    "evidence_pages": [2, 11]
+  },
+
+  "enhanced_loans_agent": {
+    "total_debt": 10200000,
+    "langfristig_debt": 7000000,
+    "kortfristig_debt": 3200000,
+    "kortfristig_pct": 31.4,
+    "lender_concentration": {
+      "Nordea": 100.0
+    },
+    "maturity_profile": {
+      "within_6_months": 0,
+      "6_12_months": 3200000,
+      "1_2_years": 3600000,
+      "2_5_years": 3400000,
+      "over_5_years": 0
+    },
+    "interest_rate_range": {
+      "min_rate_pct": 0.70,
+      "max_rate_pct": 1.58,
+      "weighted_avg_pct": 1.04
+    },
+    "risk_assessment": {
+      "refinancing_risk": "LOW",
+      "interest_rate_risk": "LOW",
+      "lender_concentration_risk": "HIGH",
+      "overall_risk": "LOW"
+    },
+    "risk_factors": [
+      "100% concentration with single lender (Nordea)",
+      "One loan (3.2M) matures Oct 2024 (10 months, 31.4% of debt)",
+      "Very low average interest rate (1.04%) - upside risk at refinancing",
+      "Board noted one loan refinancing at higher rate in 2024 (motivated +5% fee increase)",
+      "Staggered maturities reduce refinancing pressure (Oct 2024, Oct 2025, Feb 2026)"
+    ],
+    "evidence_pages": [14]
+  },
+
+  "revenue_breakdown_agent": {
+    "arsavgifter_bostader": 1921391,
+    "hyror_lokaler": 0,
+    "hyror_garage": 352570,
+    "hyror_forrad": 6000,
+    "bredband": null,
+    "andrahandsuthyrning": null,
+    "uppvarmning_debitering": null,
+    "vatten_debitering": null,
+    "el_debitering": null,
+    "fastighetsskatt_debitering": null,
+    "ovriga_rorelseintakter": 26651,
+    "elstod": null,
+    "solceller_revenue": null,
+    "laddstolpar_revenue": 29676,
+    "total_rorelseintakter": 2309707,
+    "evidence_pages": [11]
+  }
+}

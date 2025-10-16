@@ -308,7 +308,27 @@ DETAILS:
 - **STRATEGIC AMORTIZATION PAUSE**: Board pauses payments during low-rate period (0.68% locked until 2026), plans large paydown at maturity when rates higher - sophisticated cash management!
 ```
 
-**FINAL DECISION AFTER 10/10 SRS VALIDATION PDFs** (UPDATED AFTER PDF 26 - GREEN LOANS & STRATEGIC FEE MANAGEMENT!):
+PDF 27 (brf_52576 - Brf Husarvikens Strand 2023): ✅ COMPLETE - 🚨 SAMFÄLLIGHET COST EXPLOSION!
+[✅] Loan reclassification? (kortfristig 31.4% - MEDIUM tier!) YES (EXCELLENT!)
+[❌] Multiple fee increases? (+5% single increase 2024) NO (STRATEGIC INCREASE)
+[❌] Electricity increase >50%? (cannot calculate, no 2022 baseline) NO DATA
+[❌] Lokaler >15% of area? (0% = 0/3,100 m²) NONE (RESIDENTIAL ONLY)
+
+SCORE: 1 / 4 (25%)
+DETAILS:
+- Loans: **3.2M short-term / 10.2M total = 31.4% kortfristig (MEDIUM tier! 8th example)** - One loan (3.2M) matures Oct 2024 (10 months), 100% Nordea concentration, staggered maturities (Oct 2024, Oct 2025, Feb 2026), 1.04% average rate
+- **SAMFÄLLIGHET EXPLOSION**: 🚨 +103.5% increase (450K → 916K) = **LARGEST SINGLE-YEAR INCREASE IN ENTIRE CORPUS!** Root causes: (1) Accounting period change (one-time catchup), (2) Real cost increases, (3) Three GAs (Skuleskogens GA:3/GA:4 + Husarvikens GA:5)
+- **HUSARVIKEN CLUSTER**: Third BRF processed (Brygga, Park, Strand), 145% samfällighet cost variation vs neighbors (Park 373K vs Strand 916K), same developer (MVB), same manager (Primär), shared infrastructure
+- Fees: **HELD CONSTANT 4 YEARS** (686 kr/m², 2020-2023) then +5% planned 2024 (strategic response to samfällighet explosion + loan refinancing) ⭐ High soliditet (93.5%) enabled absorption of -909,600 kr loss!
+- Soliditet: **93.5%** (exceptional) - enables absorbing 2023 losses without emergency fee hikes
+- Energy: 138 kr/m², heating efficiency project (new control system 2024 via GA:5), solar investigation completed Jan 2024 (pending board decision)
+- Warranty: MVB work completed Dec 2023 (clean closure, no outstanding issues, 10-year warranty pattern)
+- Schema: **24th consecutive ZERO new fields** (99.5%+ complete)
+- **SAMFÄLLIGHET AS % OF OPERATING COSTS**: 45.1% (2023) vs ~22% (2022) - HIGHEST single line item!
+- **ACCOUNTING IMPACT**: Report notes "periodization routines changed, 2023 contains longer period than one year"
+- **STRATEGIC FEE MANAGEMENT**: Board absorbed costs 2020-2023, waited for multiple pressures (samfällighet + loans) before single +5% increase
+
+**FINAL DECISION AFTER 11/11 SRS VALIDATION PDFs** (UPDATED AFTER PDF 27 - SAMFÄLLIGHET COST VOLATILITY!):
 ```
 ✅ IMPLEMENT loans_agent (10/10 = 100% confirmation, NONE tier validated 3rd time, ALL tiers represented!)
 ✅ **IMPLEMENT fees_agent** (2/10 SRS = 20.0%, SRS 1.5x > Hjorthagen!) 🎯 **FULLY VALIDATED**
