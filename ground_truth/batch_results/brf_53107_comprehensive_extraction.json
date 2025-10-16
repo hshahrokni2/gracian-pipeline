@@ -1,0 +1,428 @@
+{
+  "metadata_agent": {
+    "organization_number": "769624-0105",
+    "organization_name": "Brf Fiskartorpet",
+    "fiscal_year_start": "2022-01-01",
+    "fiscal_year_end": "2022-12-31",
+    "report_date": "2022-12-31",
+    "accounting_standard": "K2",
+    "pages_total": 21,
+    "report_type": "årsredovisning",
+    "property_manager": "Simpleko AB",
+    "auditor": "Bengt Beergrehn",
+    "auditor_firm": "Finnhammars revisionsbyrå",
+    "evidence_pages": [1, 2, 6]
+  },
+
+  "governance_agent": {
+    "chairman": "Olof Persson",
+    "vice_chairman": null,
+    "treasurer": null,
+    "secretary": null,
+    "board_members": [
+      {"name": "Olof Persson", "role": "Ordförande"},
+      {"name": "Stefan Ryding-Berg", "role": "Ledamot"},
+      {"name": "Ola Lidehorn", "role": "Ledamot"},
+      {"name": "Caj Nilsson", "role": "Ledamot"},
+      {"name": "Linda Torssander Palmblad", "role": "Ledamot"},
+      {"name": "Edward Klompmarker", "role": "Suppleant"},
+      {"name": "Negra Alic", "role": "Suppleant"},
+      {"name": "Mattias Högström", "role": "Suppleant"}
+    ],
+    "board_size": 8,
+    "board_meetings_count": 11,
+    "annual_meeting_date": "2022-05-18",
+    "extra_meeting_dates": [],
+    "valberedning": ["Martin Appelqvist (sammankallande)", "Marcus Norman", "Suvad Nokto"],
+    "firmateckning": "två ledamöter i förening",
+    "evidence_pages": [5, 6]
+  },
+
+  "audit_agent": {
+    "auditor_name": "Bengt Beergrehn",
+    "auditor_firm": "Finnhammars revisionsbyrå",
+    "auditor_type": "Auktoriserad revisor",
+    "audit_report_pages": 2,
+    "audit_opinion": "Utan anmärkning",
+    "evidence_pages": [6, 20, 21]
+  },
+
+  "property_agent": {
+    "property_designation": "Tresticklan 1",
+    "address": "Stockholm",
+    "acquisition_date": "2014-02-10",
+    "total_area_sqm": 5286,
+    "bostadsratter_count": 64,
+    "apartment_breakdown": {
+      "1_rok": null,
+      "2_rok": 17,
+      "3_rok": 26,
+      "4_rok": 21,
+      "5_rok": null,
+      "total": 64
+    },
+    "construction_year": 2014,
+    "construction_period": "2014",
+    "property_insurance": "Brandförsäkringar (provider not named)",
+    "taxeringsvarde_building": 173200000,
+    "taxeringsvarde_mark": 155406000,
+    "taxeringsvarde_total": 328606000,
+    "bostader_area_sqm": 4962,
+    "lokaler_area_sqm": 324,
+    "lokaler_tenant": "HMS Sustainable AB, Puls & Träning, Soliga Automater AB",
+    "samfallighet_membership": "Tresticklan GA:1, GA:2, GA:3, GA:4",
+    "samfallighet_share_pct": null,
+    "samfallighet_description": "GA:1 och GA:2 (garage, gård, gemensamma byggnadskonstruktioner), GA:3 (garage med fastigheter), GA:4 (sopsugsanläggning)",
+    "evidence_pages": [4, 5, 6]
+  },
+
+  "financial_agent": {
+    "assets_total": 296389304,
+    "equity_total": 242028568,
+    "liabilities_total": 54360736,
+    "net_revenue": 4864052,
+    "profit_loss": -1700637,
+    "soliditet_pct": 82,
+    "cash_and_bank": 2330669,
+    "nettoomsattning": 4864052,
+    "nettoomsattning_breakdown": {
+      "arsavgifter_bostader": 2806212,
+      "hyresintakter_lokaler": 965148,
+      "hyresintakter_garage": 739600,
+      "intakter_bredband": 168960,
+      "intakter_vattenforbrukning": 97053,
+      "ovriga_intakter": 91183
+    },
+    "other_income": 4104,
+    "total_revenue": 4868156,
+    "balansomslutning": 296389304,
+    "kundfordringar": 94572,
+    "evidence_pages": [9, 10, 11]
+  },
+
+  "operating_costs_agent": {
+    "total_driftskostnader": 2990597,
+    "fastighetsskotsel": 379952,
+    "reparationer_underhall": 355519,
+    "taxebundna_kostnader": 587746,
+    "ovriga_driftskostnader": 1667380,
+    "el": 125587,
+    "varme": 334658,
+    "vatten": 91405,
+    "sophamtning": 36096,
+    "fastighetsforsakringar": 80415,
+    "tomtrattsavgald": 1222600,
+    "kabel_tv": 50166,
+    "fastighetsskatt": 176060,
+    "hiss_underhall": null,
+    "sotning_ventilation": null,
+    "samfallighetsavgifter": 194441,
+    "serviceavtal": null,
+    "major_repairs_water_damage": null,
+    "evidence_pages": [9, 14, 15]
+  },
+
+  "loans_agent": {
+    "total_debt": 53024804,
+    "long_term_debt": 52287217,
+    "short_term_debt": 737587,
+    "loans": [
+      {
+        "lender": "Stadshypotek AB",
+        "loan_id": null,
+        "amount": 14937000,
+        "interest_rate_pct": 0.63,
+        "maturity_date": "2026-01-30",
+        "villkorsandringsdag": "2026-01-30",
+        "maturity_classification": "long_term"
+      },
+      {
+        "lender": "SEB",
+        "loan_id": null,
+        "amount": 726875,
+        "interest_rate_pct": 2.88,
+        "maturity_date": "2023-01-28",
+        "villkorsandringsdag": "2023-01-28",
+        "maturity_classification": "short_term"
+      },
+      {
+        "lender": "SEB",
+        "loan_id": null,
+        "amount": 15214304,
+        "interest_rate_pct": 1.08,
+        "maturity_date": "2025-01-28",
+        "villkorsandringsdag": "2025-01-28",
+        "maturity_classification": "long_term"
+      },
+      {
+        "lender": "SEB",
+        "loan_id": null,
+        "amount": 1187500,
+        "interest_rate_pct": 1.37,
+        "maturity_date": "2025-03-28",
+        "villkorsandringsdag": "2025-03-28",
+        "maturity_classification": "long_term"
+      },
+      {
+        "lender": "Stadshypotek AB",
+        "loan_id": null,
+        "amount": 8250000,
+        "interest_rate_pct": 0.64,
+        "maturity_date": "2026-03-30",
+        "villkorsandringsdag": "2026-03-30",
+        "maturity_classification": "long_term"
+      },
+      {
+        "lender": "SEB",
+        "loan_id": null,
+        "amount": 12709125,
+        "interest_rate_pct": 0.76,
+        "maturity_date": "2024-01-28",
+        "villkorsandringsdag": "2024-01-28",
+        "maturity_classification": "long_term"
+      }
+    ],
+    "average_interest_rate_pct": 0.84,
+    "debt_per_sqm": 10029,
+    "projected_debt_5_years": null,
+    "loan_restructuring_note": "One loan (727K SEK) matures Jan 2023, planned to mature on schedule in 2023",
+    "evidence_pages": [11, 17]
+  },
+
+  "fees_agent": {
+    "fee_per_sqm_annual": 566,
+    "fee_increase_pct": 6.0,
+    "fee_increase_date": "2023-01-01",
+    "fee_increase_reason": "+6% fr.o.m. 1/1-2023, beslutad i samband med budgetarbetet för att täcka förluster",
+    "multiple_increases": false,
+    "fee_history": [
+      {"year": 2022, "fee_per_sqm": 566},
+      {"year": 2021, "fee_per_sqm": 566},
+      {"year": 2020, "fee_per_sqm": 566},
+      {"year": 2019, "fee_per_sqm": 565}
+    ],
+    "evidence_pages": [7]
+  },
+
+  "energy_agent": {
+    "elkostnad_per_sqm": 25,
+    "varmekostnad_per_sqm": 67,
+    "vattenkostnad_per_sqm": 18,
+    "energikostnad_per_sqm_total": 118,
+    "multi_year_energy_trends": [
+      {"year": 2022, "energi_per_sqm": 118},
+      {"year": 2021, "energi_per_sqm": 121}
+    ],
+    "electricity_increase_pct_2022_2023": null,
+    "electricity_increase_pct_3_year": null,
+    "heating_increase_pct_2022_2023": -3.7,
+    "water_increase_pct_2022_2023": 8.7,
+    "elstod_received": null,
+    "elstod_pct_offset": null,
+    "energy_initiatives": null,
+    "evidence_pages": [14]
+  },
+
+  "reserves_agent": {
+    "underhallsfond_balance": 480314,
+    "underhallsfond_previous": 348164,
+    "underhallsfond_change": 132150,
+    "reservering_till_fond": 132150,
+    "underhallsplan_exists": null,
+    "underhallsplan_period": null,
+    "evidence_pages": [8, 11, 13]
+  },
+
+  "members_agent": {
+    "total_members_start": 106,
+    "new_members": 5,
+    "departing_members": 7,
+    "total_members_end": 104,
+    "transfers_during_year": 4,
+    "evidence_pages": [7]
+  },
+
+  "events_agent": {
+    "major_events": [
+      {
+        "event": "Fourth consecutive year of losses",
+        "date": "2022-12-31",
+        "description": "Resultat efter finansiella poster -1,700,637 kr, fortsatt förlust sedan 2019",
+        "impact": "Prompted +6% fee increase for 2023"
+      },
+      {
+        "event": "Fee increase approved for 2023",
+        "date": "2022",
+        "description": "Styrelsen beslutade om avgiftshöjning på 6% fr.o.m. 1/1-2023 i samband med budgetarbetet",
+        "impact": "First fee increase after 4 years of stability (566 kr/m² 2019-2022)"
+      },
+      {
+        "event": "Investment in machinery and equipment",
+        "date": "2022",
+        "description": "Inköp av maskiner, inventarier och installationer för 101,500 kr",
+        "impact": "New capital investment"
+      }
+    ],
+    "evidence_pages": [6, 7, 16]
+  },
+
+  "notes_maintenance_agent": {
+    "major_maintenance_completed": [
+      {
+        "period": "2018",
+        "description": "Låssystem, Anläggning gräs & gård, Installation av kameror i garaget GA (50%), Installation värmekabel"
+      },
+      {
+        "period": "2020",
+        "description": "OVK"
+      }
+    ],
+    "planned_maintenance": [],
+    "maintenance_expenses_major": {
+      "total_major_repairs": 355519,
+      "water_fire_damage": null,
+      "periodiskt_underhall": null
+    },
+    "underhallsplan_period": null,
+    "evidence_pages": [6, 14]
+  },
+
+  "insurance_agent": {
+    "insurance_provider": "Not named (Brandförsäkringar)",
+    "insurance_premium": 80415,
+    "property_coverage": null,
+    "liability_coverage": null,
+    "fastighetsinteckningar_sakerheter": 60300000,
+    "evidence_pages": [15, 18]
+  },
+
+  "tax_agent": {
+    "fastighetsskatt": 176060,
+    "fastighetsavgift_exemption": false,
+    "exemption_years": null,
+    "skattekonto_balance": null,
+    "moms_avrakning": null,
+    "evidence_pages": [15]
+  },
+
+  "planned_actions_agent": {
+    "planned_actions": [
+      {
+        "action": "Fee increase implementation",
+        "status": "Approved, effective 2023-01-01",
+        "description": "+6% avgiftshöjning beslutad i samband med budgetarbetet",
+        "timeline": "2023-01-01"
+      }
+    ],
+    "evidence_pages": [7]
+  },
+
+  "cashflow_agent": {
+    "cash_flow_statement_present": true,
+    "cash_start_of_year": 2930565,
+    "cash_end_of_year": 2330669,
+    "cash_change": -599895,
+    "cash_from_operations": 914619,
+    "cash_from_investments": -101500,
+    "cash_from_financing": -1501212,
+    "evidence_pages": [12]
+  },
+
+  "depreciation_agent": {
+    "total_depreciation": 2601720,
+    "building_depreciation_rate_pct": 0.83,
+    "property_improvements_depreciation_rate_pct": 20.0,
+    "accumulated_depreciation": 20172228,
+    "ack_anskaffningsvarde": 313460000,
+    "restvarde_enligt_plan": 293287772,
+    "mark_value_included": null,
+    "evidence_pages": [13, 16]
+  },
+
+  "driftskostnader_agent": {
+    "total_driftskostnader": 2990597,
+    "fastighetsskotsel": 379952,
+    "reparationer_underhall": 355519,
+    "el": 125587,
+    "uppvarmning": 334658,
+    "vatten": 91405,
+    "sophamtning": 36096,
+    "fastighetsforsakringar": 80415,
+    "tomtrattsavgald": 1222600,
+    "kabel_tv": 50166,
+    "fastighetsskatt": 176060,
+    "ventilation_major": null,
+    "varmeanlaggning_major": null,
+    "ovriga_externa_kostnader": 382190,
+    "personalkostnader": 121488,
+    "samfallighetsavgifter": 194441,
+    "serviceavtal": null,
+    "evidence_pages": [9, 14, 15]
+  },
+
+  "commercial_tenants_agent": {
+    "has_commercial_space": true,
+    "total_commercial_area_sqm": 324,
+    "commercial_rent_collected": 965148,
+    "commercial_rent_pct_of_revenue": 19.8,
+    "tenant_name": "HMS Sustainable AB, Puls & Träning, Soliga Automater AB",
+    "tenant_since": null,
+    "evidence_pages": [5, 14]
+  },
+
+  "enhanced_loans_agent": {
+    "total_debt": 53024804,
+    "langfristig_debt": 52287217,
+    "kortfristig_debt": 737587,
+    "kortfristig_pct": 1.39,
+    "lender_concentration": {
+      "Stadshypotek AB": 43.7,
+      "SEB": 56.3
+    },
+    "maturity_profile": {
+      "within_6_months": 737587,
+      "6_12_months": 0,
+      "1_2_years": 12709125,
+      "2_5_years": 16401804,
+      "over_5_years": 23187000
+    },
+    "interest_rate_range": {
+      "min_rate_pct": 0.63,
+      "max_rate_pct": 2.88,
+      "weighted_avg_pct": 0.84
+    },
+    "risk_assessment": {
+      "refinancing_risk": "NONE",
+      "interest_rate_risk": "LOW",
+      "lender_concentration_risk": "MEDIUM",
+      "overall_risk": "LOW"
+    },
+    "risk_factors": [
+      "One loan (727K) matures Jan 2023 (1 month, but only 1.39% of debt)",
+      "Two lenders: Stadshypotek (43.7%) + SEB (56.3%) - better diversification",
+      "Very low average interest rate (0.84%) - upside risk at refinancing",
+      "Four consecutive years of losses (-1.7M kr 2022, -1.7M 2021, -1.9M 2020, -1.8M 2019)",
+      "+6% fee increase approved for 2023 to address financial situation"
+    ],
+    "evidence_pages": [11, 17]
+  },
+
+  "revenue_breakdown_agent": {
+    "arsavgifter_bostader": 2806212,
+    "hyror_lokaler": 965148,
+    "hyror_garage": 739600,
+    "hyror_forrad": null,
+    "bredband": 168960,
+    "andrahandsuthyrning": 5250,
+    "uppvarmning_debitering": null,
+    "vatten_debitering": 97053,
+    "el_debitering": null,
+    "fastighetsskatt_debitering": null,
+    "ovriga_rorelseintakter": 4104,
+    "elstod": null,
+    "solceller_revenue": null,
+    "laddstolpar_revenue": null,
+    "total_rorelseintakter": 4864052,
+    "evidence_pages": [9, 14]
+  }
+}
