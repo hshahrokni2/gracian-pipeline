@@ -391,7 +391,38 @@ DETAILS:
 - Lokaler: **MINIMAL 1.9% area** (131 m²) = negligible commercial, residential-focused
 - Schema: **27th consecutive ZERO new fields** (99.5%+ complete)
 
-**FINAL DECISION AFTER 14/14 SRS VALIDATION PDFs** (UPDATED AFTER PDF 30 - HIGH DEBT TIER VALIDATED + CHRONIC LOSS PATTERN!):
+PDF 31 (brf_57125 - Brf Abisko 2 2022): ✅ COMPLETE - 🔥 HIGH DEBT + EXPLICIT REFINANCING RATE SHOCK!
+[✅] Loan reclassification? (kortfristig 65.7% - HIGH tier!) YES (3rd HIGH example!)
+[❌] Multiple fee increases? (single +10% increase Jan 2023) NO (INADEQUATE RESPONSE)
+[❌] Electricity increase >50%? (electricity income +14.5%, not cost) NO (RENTAL INCOME)
+[❌] Lokaler >15% of area? (0% commercial, residential only) NO (RESIDENTIAL ONLY)
+
+SCORE: 1 / 4 (25%)
+DETAILS:
+- Loans: **17.3M short-term / 26.3M total = 65.7% kortfristig (HIGH tier! 3rd HIGH example validates pattern)** ⚡⚡⚡
+- **🔥 EXPLICIT RATE SHOCK**: Note 15 states "villkorsändring innebär **markant högre räntor**" (significantly higher rates) on 17.3M loans maturing Mar-Jun 2023 - **FIRST explicit confirmation in corpus!** 🔥🔥🔥
+- **Refinancing cluster (3.5 months!)**: 7.9M @ 0.56% matures Mar 15, 2023 + 9.4M @ 0.72% matures Jun 21, 2023
+- **Rate shock impact projection**: Current 111K/year interest → Projected 605K @ 3.5% = +492K annual (+441% financing costs!)
+- **100% Nordea concentration**: All 3 loans with same lender (no diversification)
+- **2 CONSECUTIVE YEARS OF LOSSES**: -6.0M total (2021-2022, -3.0M average), chronic structural deficit
+- **Fee increase inadequate**: +10% approved Jan 2023 generates 270K revenue vs 3M+ annual losses + 492K rate shock = **still -2.76M to -3.25M projected 2023 deficit!**
+- **Property tax explosion**: Taxeringsvärde +37.5% (167.9M → 231M) = **UNPRECEDENTED increase!** Land +50%, building +27.7%
+- **Tomträtt burden**: 902,100 kr (33.6% of operating costs, 3rd highest seen), +9.5% increase
+- Energy: **Rental income** (not cost) from residents, electricity income +14.5% reflects market pass-through
+- Lokaler: **0% commercial** (residential only, 42 units, 3,714 m²)
+- Schema: **28th consecutive ZERO new fields** (99.5%+ complete)
+- **Modern construction**: 2012-2014 (relatively new building with chronic issues)
+- **K3 accounting standard**: 17 pages, modern simplified format
+
+**CRITICAL INSIGHTS**:
+- ⚡ **HIGH debt tier pattern VALIDATED**: 6 PDFs (19.4% of corpus) confirms 50-74% kategori is real!
+- 🔥 **FIRST explicit rate shock documentation**: "Markant högre räntor" proves boards ARE aware of refinancing risks
+- 🚨 **Inadequate fee response pattern**: +10% generates 270K but needs 3M+ to cover losses + rate shock = chronic deficit continues!
+- 📊 **Property tax volatility**: +37.5% unprecedented, creates unpredictable fixed cost spikes
+- 🏗️ **Tomträtt structural burden**: 33.6% of ops (3rd highest) creates chronic deficit even in modern buildings
+- 💰 **Lender concentration risk**: 100% Nordea = all loans refinance at same time with same lender (no diversification benefit)
+
+**FINAL DECISION AFTER 15/15 SRS VALIDATION PDFs** (UPDATED AFTER PDF 31 - EXPLICIT RATE SHOCK CONFIRMED!):
 ```
 ✅ IMPLEMENT loans_agent (10/10 = 100% confirmation, NONE tier validated 3rd time, ALL tiers represented!)
 ✅ **IMPLEMENT fees_agent** (2/10 SRS = 20.0%, SRS 1.5x > Hjorthagen!) 🎯 **FULLY VALIDATED**
