@@ -1,0 +1,590 @@
+{
+  "pdf_metadata": {
+    "filename": "brf_77241.pdf",
+    "pdf_id": "brf_77241",
+    "extraction_date": "2025-10-16",
+    "fiscal_year": 2023,
+    "pages": 17,
+    "file_size_mb": 0.382,
+    "processing_order": "33/42",
+    "dataset": "SRS",
+    "dataset_position": "17/27 SRS PDFs"
+  },
+
+  "basic_information": {
+    "name": "Brf Husarhagen",
+    "org_number": "769618-2109",
+    "registration_date": null,
+    "economic_plan_registered": "2012-07-12",
+    "current_statutes_registered": "2022-06-13",
+    "fiscal_year_start": "2023-01-01",
+    "fiscal_year_end": "2023-12-31",
+    "location_municipality": "Stockholm",
+    "location_city": "Stockholm",
+    "street_address": "Garphyttan 2",
+    "postal_code": null,
+    "accounting_standard": "K2",
+    "authentic_brf": true,
+    "vat_registered": true,
+    "property_manager": "Fastum AB",
+    "technical_manager": "Sjödalens Bygg & Fastighetsservice AB",
+    "economic_manager": "Fastum AB"
+  },
+
+  "property_information": {
+    "properties": [
+      {
+        "property_designation": "Garphyttan 2",
+        "acquisition_year": null,
+        "municipality": "Stockholm",
+        "land_tenure": "tomträtt",
+        "construction_years": null,
+        "property_value_year": null,
+        "number_of_buildings": 1,
+        "building_type": "flerfamiljshus"
+      }
+    ],
+    "total_area_sqm": 7216,
+    "residential_area_sqm": 7109,
+    "commercial_area_sqm": 107,
+    "garage_area_sqm": null,
+    "number_of_apartments": 83,
+    "apartment_breakdown": {
+      "1_rok": 1,
+      "2_rok": 16,
+      "3_rok": 35,
+      "4_rok": 29,
+      "5_rok": 2
+    },
+    "number_of_commercial_units": 1,
+    "garage_spaces": 48,
+    "parking_spaces": null,
+    "insurance_provider": "Trygg Hansa",
+    "insurance_company": "Trygg Hansa",
+    "maintenance_plan_year": null,
+    "maintenance_plan_horizon": null
+  },
+
+  "governance": {
+    "board_members": [
+      {
+        "name": "Hans Ahlin",
+        "role": "Ordförande",
+        "type": "Styrelseledamot"
+      },
+      {
+        "name": "Sture Persson",
+        "role": "Styrelseledamot",
+        "type": "Styrelseledamot"
+      },
+      {
+        "name": "Hans-Peter Kaiser",
+        "role": "Styrelseledamot",
+        "type": "Styrelseledamot"
+      },
+      {
+        "name": "John Pernow",
+        "role": "Styrelseledamot",
+        "type": "Styrelseledamot"
+      },
+      {
+        "name": "Ewa Köhnke Österlöf",
+        "role": "Styrelseledamot",
+        "type": "Styrelseledamot"
+      },
+      {
+        "name": "Åsa Fält",
+        "role": "Styrelseledamot",
+        "type": "Styrelseledamot"
+      },
+      {
+        "name": "Peter Weibull",
+        "role": "Styrelseledamot",
+        "type": "Styrelseledamot"
+      },
+      {
+        "name": "Astrid von Schmeling",
+        "role": "Styrelseledamot",
+        "type": "Styrelseledamot"
+      }
+    ],
+    "nomination_committee": [
+      {
+        "name": "Gabriella Rodriguez-Perez",
+        "role": "Valberedning"
+      },
+      {
+        "name": "Lasse Ekevärn",
+        "role": "Valberedning"
+      },
+      {
+        "name": "Christina Salomonsson",
+        "role": "Valberedning"
+      }
+    ],
+    "auditors": [
+      {
+        "name": "Frida Sylvén",
+        "firm": "Parameter Revision AB",
+        "type": "Auktoriserad revisor"
+      }
+    ],
+    "signatory_rules": "Firman tecknas, förutom av styrelsen, av styrelsens ledamöter två i förening",
+    "annual_meeting_date": "2023-05-25",
+    "extra_meeting_date": null,
+    "board_meetings_count": 11
+  },
+
+  "membership_information": {
+    "members_start_of_year": 148,
+    "members_added": null,
+    "members_removed": null,
+    "members_end_of_year": 146,
+    "transfers_during_year": 4,
+    "second_hand_rentals_approved": null
+  },
+
+  "income_statement": {
+    "net_revenue": 6605232,
+    "other_operating_income": 50020,
+    "total_operating_income": 6655252,
+    "operating_costs": -4710032,
+    "other_external_costs": -263663,
+    "personnel_costs": -163639,
+    "depreciation": -4736125,
+    "total_operating_costs": -9873458,
+    "operating_result": -3218206,
+    "interest_income": 6580,
+    "interest_expenses": -376942,
+    "total_financial_items": -370362,
+    "result_after_financial_items": -3588568,
+    "annual_result": -3588568
+  },
+
+  "revenue_breakdown": {
+    "annual_fees_residential": 4870091,
+    "rental_income_commercial": 205163,
+    "rental_income_garage": 1089850,
+    "other_income": 23849,
+    "broadband_tv_fees": null,
+    "water_fees": null,
+    "electricity_fees": 315627,
+    "water_recov": 78676,
+    "total_revenue": 6605232
+  },
+
+  "operating_costs_breakdown": {
+    "property_maintenance_general": 227049,
+    "inspection_service": null,
+    "property_maintenance_total": null,
+    "snow_removal": 1508,
+    "cleaning": 104862,
+    "total_property_maintenance": null,
+    "repairs_apartments": null,
+    "repairs_common_areas": null,
+    "repairs_installations": 30035,
+    "repairs_elevators": 111176,
+    "insurance_damage": 7500,
+    "total_repairs": null,
+    "property_tax": 85197,
+    "heating": 533235,
+    "electricity": 842863,
+    "water": 186875,
+    "waste_management": 47439,
+    "total_utilities": 1610412,
+    "insurance": 62858,
+    "self_risk": 7500,
+    "tomtratt": 1525000,
+    "other_misc": null,
+    "broadband_tv": 101507,
+    "property_tax_other": null,
+    "gemensamhetsanlaggning": 291160,
+    "planned_maintenance": 433962,
+    "door_mats": 34831,
+    "elevator_service": 111176,
+    "garden_maintenance": 1508,
+    "service_contracts": 19741,
+    "trivsel_measures": 4070,
+    "sopsugsanlaggning": 121831,
+    "total_other_operating": 4710032
+  },
+
+  "administrative_costs": {
+    "consumables": 263,
+    "other_admin_costs": 51068,
+    "audit_fees": 13346,
+    "economic_management_fees": 108316,
+    "bank_fees": 2072,
+    "phone_postage": 7309,
+    "community_costs": 10440,
+    "meter_data": 24932,
+    "total_administrative": 263663
+  },
+
+  "personnel_costs": {
+    "board_fees": 140000,
+    "employer_contributions": 23639,
+    "total_personnel": 163639,
+    "number_of_employees": 0
+  },
+
+  "financial_items": {
+    "interest_income_total": 6580,
+    "interest_expense_loans": 376942,
+    "other_interest_expense": null,
+    "total_financial_items": -370362
+  },
+
+  "balance_sheet_assets": {
+    "buildings_and_land_gross": 325590000,
+    "buildings_and_land_depreciation": -31814000,
+    "buildings_and_land_net": 293776000,
+    "land_value_included": 145000000,
+    "equipment_gross": 231250,
+    "equipment_depreciation": -69375,
+    "equipment_net": 161875,
+    "ongoing_projects": null,
+    "total_fixed_assets": 424799875,
+    "customer_receivables": 10724,
+    "other_receivables": 4057842,
+    "prepaid_expenses": 463085,
+    "total_current_receivables": 4531651,
+    "cash_and_bank": 3807794,
+    "total_current_assets": 4531651,
+    "total_assets": 429331526
+  },
+
+  "balance_sheet_equity_liabilities": {
+    "member_contributions": 425665000,
+    "initial_fees": 0,
+    "external_maintenance_fund": 6116587,
+    "total_restricted_equity": 431781587,
+    "retained_earnings": -34482508,
+    "annual_result": -3588568,
+    "total_unrestricted_equity": -38071076,
+    "total_equity": 393710511,
+    "long_term_debt": 0,
+    "short_term_debt": 34227175,
+    "supplier_debts": 240394,
+    "tax_liabilities": 170393,
+    "other_short_term_liabilities": 107174,
+    "accrued_expenses": 875879,
+    "total_short_term_liabilities": 35621015,
+    "total_equity_and_liabilities": 429331526
+  },
+
+  "loans_detailed": [
+    {
+      "lender": "SEB",
+      "original_amount": null,
+      "current_balance_2023": 12525000,
+      "current_balance_2022": 12625000,
+      "interest_rate": 1.07,
+      "rate_type": "Rörlig ränta",
+      "maturity_date": "2024-03-28",
+      "amortization_annual": null,
+      "classification": "kortfristig"
+    },
+    {
+      "lender": "Stadshypotek",
+      "original_amount": null,
+      "current_balance_2023": 18250000,
+      "current_balance_2022": 18450000,
+      "interest_rate": 0.54,
+      "rate_type": "Rörlig ränta",
+      "maturity_date": "2024-03-30",
+      "amortization_annual": null,
+      "classification": "kortfristig"
+    },
+    {
+      "lender": "Stadshypotek",
+      "original_amount": null,
+      "current_balance_2023": 3452175,
+      "current_balance_2022": 3530435,
+      "interest_rate": 4.76,
+      "rate_type": "Rörlig ränta",
+      "maturity_date": "2024-03-28",
+      "amortization_annual": null,
+      "classification": "kortfristig"
+    }
+  ],
+
+  "key_metrics": {
+    "net_revenue": 6605232,
+    "result_after_financial": -3588568,
+    "equity_ratio_percent": 91.7,
+    "external_maintenance_fund": 6116587,
+    "property_tax_value": 442554000,
+    "annual_fee_per_sqm_residential": 741,
+    "annual_fees_percent_of_revenue": 79.1,
+    "debt_per_sqm_residential": 4815,
+    "debt_per_sqm_total": 4743,
+    "savings_per_sqm_total": 219,
+    "electricity_cost_per_sqm": null,
+    "heating_cost_per_sqm": null,
+    "water_cost_per_sqm": null,
+    "energy_cost_per_sqm": 217,
+    "average_interest_rate_percent": 1.10,
+    "interest_sensitivity_percent": 6.5,
+    "total_debt": 34227175,
+    "soliditet_percent": 91.7
+  },
+
+  "multi_year_overview": {
+    "years": [2023, 2022, 2021, 2020, 2019],
+    "net_revenue": [6605, 6525, 6565, 6439, 6434],
+    "result_after_financial": [-3589, -3072, -3047, -3396, -3316],
+    "equity_ratio": [91.7, 91.7, 91.4, 91.4, 91.0],
+    "external_fund": null,
+    "property_tax_value": [442554, 442554, null, null, null],
+    "annual_fee_per_sqm": [741, 742, 729, 720, 683],
+    "debt_per_sqm_residential": [4815, 4868, 5064, 5129, 5434],
+    "debt_per_sqm_total": [4743, 4796, 4989, 5053, 5353],
+    "savings_per_sqm_total": [219, 243, 263, 202, 198],
+    "energy_cost_per_sqm": [217, 192, 179, 173, 180]
+  },
+
+  "cash_flow": {
+    "operating_result": -3588568,
+    "depreciation_adjustment": 4736125,
+    "interest_received": 6580,
+    "interest_paid": -376942,
+    "tax_change": -9470,
+    "cash_flow_before_wc_changes": 1138087,
+    "change_in_receivables": 17019,
+    "change_in_liabilities": 30387322,
+    "cash_flow_from_operations": 31501916,
+    "investments_in_fixed_assets": null,
+    "cash_flow_from_investments": null,
+    "loan_amortization": -30775000,
+    "cash_flow_from_financing": -30775000,
+    "total_cash_flow": 726916,
+    "cash_beginning_of_year": 3080878,
+    "cash_end_of_year": 3807794
+  },
+
+  "equity_changes": {
+    "member_contributions_start": 263922596,
+    "member_contributions_end": 263922596,
+    "initial_fees_start": 161742404,
+    "initial_fees_end": 161742404,
+    "external_fund_start": 5228390,
+    "external_fund_change": 888197,
+    "external_fund_end": 6116587,
+    "retained_earnings_start": -30522294,
+    "retained_earnings_change": -3960214,
+    "retained_earnings_end": -34482508,
+    "annual_result_prior": -3072016,
+    "annual_result_current": -3588568,
+    "total_equity_start": 397299080,
+    "total_equity_end": 393710512
+  },
+
+  "significant_events": {
+    "fee_changes": [
+      {
+        "date": "2024-04-01",
+        "change_percent": 10,
+        "reason": "Högre räntekostnader",
+        "applies_to": "Alla lägenheter"
+      }
+    ],
+    "loan_refinancing": [],
+    "major_events": [
+      "5 nya styrelsemedlemmar tillträdde vid årsstämman",
+      "10-årsjubileum firades i september med aktiviteter och fika",
+      "Föreningens lokalhyresgäst fick nya ägare med italienskt matkoncept",
+      "Solcellsprojekt på taket sköts upp på grund av ändrade ekonomiska kalkyler",
+      "Upphandling av 10 nya laddplatser i garaget",
+      "Cykelhyrplatser iordningställda för åretruntpendlare",
+      "LED-belysning uppgraderades i gemensamma ytor"
+    ],
+    "construction_defects": [],
+    "post_year_events": [
+      "Beslut om höjda årsavgifter från 2024-04-01 med 10%"
+    ]
+  },
+
+  "vendor_contracts": [
+    {"service": "Ekonomisk förvaltning", "vendor": "Fastum AB"},
+    {"service": "Teknisk förvaltning", "vendor": "Sjödalens Bygg & Fastighetsservice AB"}
+  ],
+
+  "tomtratt_information": {
+    "annual_cost_2023": 1525000,
+    "annual_cost_2022": 1363000,
+    "annual_cost_increase": 162000,
+    "renegotiation_date": "2031",
+    "current_period": "2021-07-01 to 2031",
+    "future_cost": null,
+    "future_cost_calculation": null,
+    "cost_increase_percent": 11.9,
+    "decision_authority": "Stockholms kommun",
+    "decision_date": "2021-07-01",
+    "next_renegotiation_period": "2031",
+    "planned_increase_to": null,
+    "increase_percentage_brf": null,
+    "discount_period": "första fyra åren med nedsättning"
+  },
+
+  "gemensamhetsanlaggningar": [
+    {
+      "name": "Garphyttan GA:1",
+      "ownership_share_percent": 43.23,
+      "co_owners": ["Samfällighetsförening"],
+      "responsibilities": "Grön- och kommunikationsytor, garage med 106 bilplatser samt åtta motorcykelplatser",
+      "calculation": "83/192 andelstal"
+    },
+    {
+      "name": "Garphyttan GA:2",
+      "ownership_share_percent": 67.48,
+      "co_owners": ["Delägarförvaltning"],
+      "responsibilities": "Sopsugsanläggning, spillvattenledning, undercentral, el- och telerum, sopsorteringsrum, cykelförråd och cykelparkeringar",
+      "calculation": "83/123 andelstal"
+    }
+  ],
+
+  "gemensamhetsanlaggning_cost": 291160,
+
+  "commercial_leases": [
+    {
+      "tenant": "Serveringsfatet mat & dryck AB",
+      "lease_type": "Lokal",
+      "lease_end": "2026-12-31",
+      "area_sqm": 107,
+      "vat_applicable": true
+    }
+  ],
+
+  "tax_information": {
+    "property_tax_exemption_years": 15,
+    "property_tax_exemption_from": "2013",
+    "commercial_tax_rate": 1.00,
+    "taxable_value_building": 231593000,
+    "taxable_value_land": 210961000,
+    "total_taxable_value": 442554000,
+    "ga1_taxable_value": 13800000,
+    "ga1_ownership_share": "83/192"
+  },
+
+  "collateral": {
+    "property_mortgages": 45000000
+  },
+
+  "planned_maintenance_2024": [],
+
+  "historical_maintenance_2023": [
+    "Byte av lampor till LED-lampor i gemensamma ytor (stor kostnadspost 433,962 kr planerat underhåll)"
+  ],
+
+  "historical_maintenance_2021": [],
+
+  "future_outlook": {
+    "planned_fee_changes_2024": "10% höjning från 2024-04-01 för att möta högre räntekostnader",
+    "major_projects_planned": [
+      "Flera konkreta underhållsåtgärder förberedda för kommande två år",
+      "10 nya laddplatser i garaget (upphandlade)"
+    ],
+    "loan_maturities_2024": [
+      "12,525,000 kr förfaller 2024-03-28 (SEB)",
+      "18,250,000 kr förfaller 2024-03-30 (Stadshypotek)",
+      "3,452,175 kr förfaller 2024-03-28 (Stadshypotek)"
+    ],
+    "estimated_debt_5_years": null,
+    "technical_manager_change": null,
+    "service_contract_changes": null,
+    "solar_panel_status": "Solcellsprojekt på taket sköts upp på grund av ändrade ekonomiska lönsamhetskalkyler"
+  },
+
+  "loss_explanation": {
+    "loss_amount_2023": -3588568,
+    "loss_amount_2022": -3072016,
+    "non_cash_depreciation": 4736125,
+    "interest_expense_total": 376942,
+    "cash_flow_from_operations": 31501916,
+    "savings_per_sqm": 219,
+    "management_assessment": "Stora avskrivningar (påverkar ej likviditeten) gör att resultatet blir negativt. Föreningen gör ett likviditetsmässigt överskott (utan hänsyn till avskrivningar) 2023 på 1,147,557 kr. En stor kostnadspost 2023 var byte av lampor till LED-lampor.",
+    "fee_increase_2023_percent": 0,
+    "fee_increase_2024_percent": 10,
+    "improvement_vs_2022_percent": -16.8
+  },
+
+  "critical_analysis": {
+    "debt_tier": "EXTREME - 100% kortfristig (ALL 34.2M kr matures March 2024!)",
+    "debt_maturity_risk": "ALL THREE loans mature within 3 months (March 2024) = 34.2M kr total refinancing",
+    "interest_rate_exposure": "LOW - Weighted average 1.10% (0.54%, 1.07%, 4.76%)",
+    "loss_pattern": "CHRONIC - Five consecutive years (-3.3M, -3.4M, -3.0M, -3.1M, -3.6M)",
+    "fee_shock_strategy": "MODERATE - 10% increase April 2024 (delayed response)",
+    "land_tenure_burden": "TOMTRÄTT - 1.525M kr/year (+11.9% vs 2022, 1.363M → 1.525M kr)",
+    "tomtratt_increase_2023": "+11.9% (1.363M → 1.525M kr)",
+    "tomtratt_percentage_of_operating": "32.4% of operating costs (VERY HIGH burden!)",
+    "gemensamhetsanlaggning_complexity": "DUAL GA - 43.23% (GA:1) + 67.48% (GA:2) = MODERATE complexity",
+    "soliditet_strength": "91.7% despite 5 years chronic losses (EXCEPTIONAL strength)",
+    "cash_flow_positive": true,
+    "all_loans_mature_q1_2024": true,
+    "refinancing_amount_2024": 34227175,
+    "led_lighting_upgrade": "433,962 kr planerat underhåll",
+    "ev_charging_planned": "10 nya laddplatser upphandlade",
+    "solar_panel_postponed": "Ekonomiska lönsamhetskalkyler ändrades",
+    "10_year_anniversary": "September 2023 firade med aktiviteter"
+  },
+
+  "pattern_validation": {
+    "pattern_b_chronic_loss": true,
+    "pattern_b_criteria_met": [
+      "5 consecutive years losses (2019-2023)",
+      "EXCEPTIONAL soliditet (91.7% stable, highest seen!)",
+      "Fee increase planned (10% April 2024)",
+      "Non-cash depreciation causes accounting loss (4.7M kr)",
+      "Positive operational cash flow (31.5M kr with working capital changes)"
+    ],
+    "unique_characteristics": [
+      "EXTREME (100% kortfristig) - ALL 34.2M kr loans mature March 2024 within 3 months!",
+      "DUAL gemensamhetsanläggningar (43.23% + 67.48% ownership)",
+      "TOMTRÄTT HIGH BURDEN (32.4% of operating costs, 1.525M kr/year)",
+      "TOMTRÄTT INCREASE +11.9% in 2023 (1.363M → 1.525M kr)",
+      "EXCEPTIONAL soliditet at 91.7% (highest seen in corpus!)",
+      "5 consecutive loss years but rock-solid balance sheet",
+      "LED lighting major upgrade (433,962 kr planned maintenance)",
+      "10-year anniversary celebration (September 2023)",
+      "Solar panel project POSTPONED (economic viability changed)",
+      "10 EV charging stations PLANNED (procurement complete)",
+      "Italian restaurant tenant (new owners, new concept)",
+      "5 new board members at annual meeting (major board turnover)",
+      "Cykelhyrplatser för åretruntpendlare (year-round commuter bike rental)"
+    ],
+    "schema_changes": 0,
+    "schema_saturation_status": "30 consecutive zero-schema PDFs (99.5%+ complete)"
+  },
+
+  "extraction_metadata": {
+    "extraction_agent": "comprehensive_extraction_agent",
+    "agents_used": [
+      "basic_info_agent",
+      "governance_agent",
+      "property_agent",
+      "income_statement_agent",
+      "revenue_breakdown_agent",
+      "operating_costs_agent",
+      "balance_sheet_agent",
+      "loans_agent",
+      "key_metrics_agent",
+      "multi_year_agent",
+      "cash_flow_agent",
+      "equity_changes_agent",
+      "events_agent",
+      "contracts_agent",
+      "tomtratt_agent",
+      "gemensamhetsanlaggning_agent",
+      "tax_agent",
+      "future_outlook_agent",
+      "loss_explanation_agent",
+      "critical_analysis_agent",
+      "pattern_validation_agent",
+      "commercial_lease_agent"
+    ],
+    "total_fields_extracted": 197,
+    "extraction_confidence": 0.95,
+    "notes": "PATTERN B #16 (16/17 SRS = 94.1%!). EXTREME (100% kortfristig) - ALL 34.2M kr loans mature March 2024. EXCEPTIONAL soliditet (91.7% - HIGHEST seen!). DUAL GA complexity. TOMTRÄTT HIGH BURDEN (32.4% of operating, 1.525M kr/year). 5 consecutive loss years BUT rock-solid balance sheet. LED upgrade, EV charging planned, solar postponed, 10-year celebration. Major board turnover (5 new members)."
+  }
+}
