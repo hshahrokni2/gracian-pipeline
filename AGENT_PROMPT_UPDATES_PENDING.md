@@ -286,17 +286,38 @@ DETAILS:
 - Lokaler: **MINIMAL 5.2% area** (146 m²) but **10.2% revenue** (208,647 kr) = minimal commercial presence. Restaurant since 2015-11-01 (7+ years stable). Same Husarviken cluster as PDF 23!
 - **CLUSTER RELATIONSHIP**: 🏢 Neighboring BRF to PDF 23 (Skuleskogen 3 vs 4), same samfälligheter (48% vs 67% combined), same management (PRIMÄR), same auditor (Magnus Emilsson / BoRevision)
 - **BALCONY CONSTRUCTION**: 5 new balconies approved 2022-11-10, city permit obtained, construction starts 2023, financed from reserves (NO fee increase needed!)
+
+PDF 25 (brf_47903 - Brf Äril Båtbyggarparken 2023): ⏭️ **SKIPPED - DUPLICATE OF PDF 20**
+**Reason**: Same organization (769631-7028) and same fiscal year (2023) as PDF 20 (brf_276796)
+
+PDF 26 (brf_48663 - Brf Spegeldammen 2023): ✅ COMPLETE - ⭐ GREEN LOANS DISCOVERY!
+[✅] Loan reclassification? (kortfristig 0.6% - NONE tier!) YES (EXCELLENT!)
+[⚠️] Multiple fee increases? (+5% then planned -5%) NO - STRATEGIC REDUCTION PLANNED!
+[❌] Electricity increase >50%? (+13.7% = 117→133 kr/m²) NO (MODERATE LOW tier)
+[❌] Lokaler >15% of area? (5.3% = 340/6,455 m²) MINIMAL (14.4% revenue)
+
+SCORE: 1 / 4 (25%)
+DETAILS:
+- Loans: **342K short-term / 58.4M total = 0.6% kortfristig (NONE tier! ⭐⭐⭐)** - All 3 loans mature end of 2026 (synchronized), **GREEN LOANS @ 0.68% average rate (LOWEST OBSERVED!)**, 100% Stadshypotek concentration, strategic amortization pause
+- Fees: **PLANNED FEE REDUCTION!** +5% increase 2023 (build cash buffer) → planned -5% decrease 2024 (affordability priority) ⭐⭐ **SECOND REDUCTION/PLANNED DECREASE!** Garage fees also reduced -12.5%! High soliditet (85.0%) enables strategic fee management!
+- Energy: **MODERATE LOW tier** - total energy +13.7% (117 → 133 kr/m², 2022→2023) absorbed via cash buffer without fee reversion. Multi-year trend shows steady increase (90→106→117→133).
+- Lokaler: **MINIMAL 5.3% area** (340 m²) but **14.4% revenue** (960,659 kr) = above-average commercial presence. 3 tenants (Rockin Grill, D.N Malkey, Stockholm kommun) + antenna rental (Net4Mobility).
+- **TOMTRÄTT PROPERTY**: 🏗️ Ground lease with 1.527M annual cost (41.3% of operating costs! LARGEST single line item!), renegotiation completed 2021, staged increases 2023-2027
+- **4 GEMENSAMHETSANLÄGGNINGAR**: Most complex GA structure observed - Tyresta GA:1 (building), GA:2 (garage), GA:3 (courtyard/waste), GA:4 (vacuum waste system), 129,587 kr annual cost
+- **GREEN LOANS**: ⭐ First explicit "Gröna lån" mention, 0.68% average rate = LOWEST observed in entire corpus! Modern building (2016) likely has environmental certification
+- **STRATEGIC AMORTIZATION PAUSE**: Board pauses payments during low-rate period (0.68% locked until 2026), plans large paydown at maturity when rates higher - sophisticated cash management!
 ```
 
-**FINAL DECISION AFTER 9/9 SRS VALIDATION PDFs** (UPDATED AFTER PDF 24 - FEE REDUCTION DISCOVERY!):
+**FINAL DECISION AFTER 10/10 SRS VALIDATION PDFs** (UPDATED AFTER PDF 26 - GREEN LOANS & STRATEGIC FEE MANAGEMENT!):
 ```
-✅ IMPLEMENT loans_agent (9/9 = 100% confirmation, HIGH tier validated, EXTREME tier validated TWICE, MEDIUM tier validated 4x)
-✅ **IMPLEMENT fees_agent** (2/9 SRS = 22.2%, SRS 1.7x > Hjorthagen!) 🎯 **FULLY VALIDATED**
+✅ IMPLEMENT loans_agent (10/10 = 100% confirmation, NONE tier validated 3rd time, ALL tiers represented!)
+✅ **IMPLEMENT fees_agent** (2/10 SRS = 20.0%, SRS 1.5x > Hjorthagen!) 🎯 **FULLY VALIDATED**
 ✅ IMPLEMENT energy_agent with SEVERITY TIERS (all tiers represented: NONE/LOW/MODERATE/SEVERE)
 ⚠️ **REFINE property_agent lokaler** (DUAL THRESHOLD NEEDED: area >15% OR revenue >30%)
+⭐ **NEW: GREEN LOANS RECOGNITION** (1/24 = 4.2%, likely higher in 2015+ buildings, 0.68% rate!)
 
-FINAL STATUS (after PDF 24 - FEE REDUCTION DISCOVERY VALIDATED!):
-- Loans: 9/9 = 100% (✅ **ALREADY IMPLEMENTED** - Universal pattern, ALL tier diversity validated!)
+FINAL STATUS (after PDF 26 - GREEN LOANS & STRATEGIC FEE MANAGEMENT VALIDATED!):
+- Loans: 10/10 = 100% (✅ **ALREADY IMPLEMENTED** - Universal pattern, ALL tier diversity validated!)
   - brf_198532: 49.7% kortfristig (MEDIUM tier)
   - brf_275608: 37.2% kortfristig (MEDIUM tier)
   - brf_276507: 68.1% kortfristig (HIGH tier)
@@ -306,8 +327,9 @@ FINAL STATUS (after PDF 24 - FEE REDUCTION DISCOVERY VALIDATED!):
   - brf_282765: **33.3% kortfristig** (MEDIUM tier - HEALTHY BASELINE!)
   - **brf_43334: 65.4% kortfristig** (HIGH tier - 8.5M maturing Q1-Q2 2024, 100% Nordea, wide rate spread)
   - **brf_47809: 38.1% kortfristig** (MEDIUM tier - 5M maturing June 2023, 100% Nordea, wide rate spread 0.65%-4.0%)
+  - **brf_48663: 0.6% kortfristig** (NONE tier! ⭐ 3rd NONE case, green loans @ 0.68%, strategic amortization pause)
 
-- Fees: **2/9 SRS = 22.2%** (✅ **IMPLEMENTATION VALIDATED** - SRS 1.7x > Hjorthagen, pattern confirmed)
+- Fees: **2/10 SRS = 20.0%** (✅ **IMPLEMENTATION VALIDATED** - SRS 1.5x > Hjorthagen, pattern confirmed)
   - brf_198532: Single +5% ❌
   - brf_275608: Single +48.3% ❌
   - brf_276507: Single +8% ❌
@@ -316,20 +338,23 @@ FINAL STATUS (after PDF 24 - FEE REDUCTION DISCOVERY VALIDATED!):
   - brf_280938: **Triple +29% Jan + 9% Dec + extra 264K = 41.5%** ✅ (SECOND SRS CASE!)
   - brf_282765: **Single +5% March 2023** ❌ (FIRST CLEAN SRS PDF!)
   - **brf_43334: Single +6% approved 2024-04-01** ❌ (post-year strategic timing, held constant through fire crisis!)
-  - **brf_47809: FEE REDUCTION -10%** (692 → 623 kr/m²) ❌ (OPPOSITE pattern! High soliditet enables affordability, held 2021-2022)
+  - **brf_47809: FEE REDUCTION -10%** (692 → 623 kr/m²) ❌ (FIRST reduction! High soliditet 90.4% enables affordability)
+  - **brf_48663: PLANNED FEE REDUCTION** (+5% → planned -5%) ⭐ (SECOND reduction! High soliditet 85.0% enables strategic fee management)
 
-  **FINAL DECISION** (after PDF 24 - FEE REDUCTION VALIDATED, PATTERN STABLE!):
+  **FINAL DECISION** (after PDF 26 - STRATEGIC FEE MANAGEMENT VALIDATED!):
   ✅ **IMPLEMENT fees_agent** - **PATTERN FULLY VALIDATED!** 🎯
   **Rationale**:
-  - **SRS prevalence: 22.2%** (2/9 PDFs) - **SRS STILL 1.7x > HJORTHAGEN (13.3%)!**
+  - **SRS prevalence: 20.0%** (2/10 PDFs) - **SRS STILL 1.5x > HJORTHAGEN (13.3%)!**
   - **Overall: 16.7%** (4/24 PDFs) - material pattern confirmed, stabilizing
   - **Severity range**: -10% (reduction) to **+68%** compound (extreme member impact)
   - **Pattern CONFIRMED across both datasets** (urban + suburban, NOT location-specific!)
-  - **SRS HETEROGENEITY MAINTAINED**: PDFs 22-24 mostly clean (0-1/4) vs PDFs 20-21 extreme (2-3/4) = NOT UNIFORM RISK
+  - **SRS HETEROGENEITY MAINTAINED**: PDFs 22-24, 26 mostly clean (0-1/4) vs PDFs 20-21 extreme (2-3/4) = NOT UNIFORM RISK
   - **Extra payments detected**: PDF 21 shows 264K kr one-time payment (schema enhancement needed)
   - **Post-year fee timing**: PDFs 22-23 show strategic post-fiscal-year adjustments (2/7 cases = 28.6%)
   - **FIRE RESILIENCE**: PDF 23 held fee constant through 840k fire expense (92.9% soliditet absorbed without emergency fees!)
-  - **FEE REDUCTION**: PDF 24 shows high soliditet (90.4%) enables AFFORDABILITY improvements despite +59.4% electricity spike!
+  - **FEE REDUCTION PATTERN EMERGING**: PDF 24 (-10% actual) + PDF 26 (planned -5%) = 8.3% (2/24) show affordability priority!
+  - **STRATEGIC FEE MANAGEMENT**: PDF 26 shows temporary increase → cash buffer → planned decrease (sophisticated board governance!)
+  - **HIGH SOLIDITET ENABLES FLEXIBILITY**: Both reduction cases have soliditet >85% (90.4%, 85.0%)
 
 - Energy: 4/4 = 100% with 4 TIERS (✅ **ALREADY IMPLEMENTED** - Tier diversity validated)
   - brf_198532: MODERATE tier (+23% spike, -11% recovery)

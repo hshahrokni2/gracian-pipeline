@@ -1,0 +1,399 @@
+{
+  "metadata_agent": {
+    "organization_number": "769625-8248",
+    "organization_name": "Bostadsrättsföreningen Spegeldammen",
+    "fiscal_year_start": "2023-01-01",
+    "fiscal_year_end": "2023-12-31",
+    "report_date": "2023-12-31",
+    "accounting_standard": "K2",
+    "pages_total": 17,
+    "report_type": "årsredovisning",
+    "property_manager": "Botema Fastighets AB",
+    "auditor": "Sanna Lindqvist",
+    "auditor_firm": "BOREV Revision AB",
+    "evidence_pages": [1, 2, 4]
+  },
+
+  "governance_agent": {
+    "chairman": "Daniel Odervång",
+    "vice_chairman": "Sanny Starborg",
+    "treasurer": null,
+    "secretary": null,
+    "board_members": [
+      {"name": "Daniel Odervång", "role": "Ordförande"},
+      {"name": "Sanny Starborg", "role": "Vice ordförande"},
+      {"name": "Anna Johnsson", "role": "Ledamot"},
+      {"name": "Göran Engman", "role": "Ledamot"},
+      {"name": "Martin Andersson", "role": "Ledamot"}
+    ],
+    "board_size": 5,
+    "board_meetings_count": 7,
+    "annual_meeting_date": "2023-05-16",
+    "extra_meeting_dates": [],
+    "valberedning": ["Lennart Axelsson (sammankallande)", "Johan Nordlund"],
+    "firmateckning": "två av styrelseledamöterna i förening",
+    "evidence_pages": [4]
+  },
+
+  "audit_agent": {
+    "auditor_name": "Sanna Lindqvist",
+    "auditor_firm": "BOREV Revision AB",
+    "auditor_type": "Revisor",
+    "audit_report_pages": 0,
+    "audit_opinion": "Utan anmärkning",
+    "evidence_pages": [4, 17]
+  },
+
+  "property_agent": {
+    "property_designation": "Tyresta 1",
+    "address": "Stockholm",
+    "acquisition_date": null,
+    "total_area_sqm": 6455,
+    "bostadsratter_count": 82,
+    "apartment_breakdown": {
+      "1_rok": null,
+      "2_rok": null,
+      "3_rok": null,
+      "4_rok": null,
+      "5_rok": null,
+      "gruppbostad": 7,
+      "total": 82
+    },
+    "construction_year": 2016,
+    "construction_period": "2016",
+    "property_insurance": "Bostadsrätterna och Söderberg & Partners",
+    "taxeringsvarde_building": 224000000,
+    "taxeringsvarde_mark": 187406000,
+    "taxeringsvarde_total": 411406000,
+    "bostader_area_sqm": 6115,
+    "lokaler_area_sqm": 340,
+    "lokaler_tenant": "Rockin Grill AB, D.N Malkey AB, Stockholms kommun",
+    "samfallighet_membership": "4 gemensamhetsanläggningar: Tyresta GA:1, GA:2, GA:3, GA:4",
+    "samfallighet_share_pct": null,
+    "samfallighet_description": "GA:1 (byggnadskonstruktioner), GA:2 (garage), GA:3 (gård, föreningslokal, sopsugsnedkast), GA:4 (sopsugsanläggning)",
+    "evidence_pages": [2, 3]
+  },
+
+  "financial_agent": {
+    "assets_total": 405042862,
+    "equity_total": 344349890,
+    "liabilities_total": 60693072,
+    "net_revenue": 6674773,
+    "profit_loss": -1120663,
+    "soliditet_pct": 85.0,
+    "cash_and_bank": 5707739,
+    "nettoomsattning": 6674773,
+    "nettoomsattning_breakdown": {
+      "arsavgifter_bostader": 4123767,
+      "arsavgifter_IT_TV": 198240,
+      "arsavgifter_varmvatten": 126624,
+      "hyresintakter_lokaler": 960659,
+      "hyresintakter_garage": 1003320,
+      "fastighetsskatt_lokaler": 92676,
+      "overnattningslagenhet": 30267,
+      "el_laddstolpar": 4967,
+      "VA_lokaler": 89537,
+      "oresutjamning": 13
+    },
+    "other_income": 181041,
+    "total_revenue": 6855814,
+    "balansomslutning": 405042862,
+    "kundfordringar": 1100574,
+    "evidence_pages": [8, 9, 10]
+  },
+
+  "operating_costs_agent": {
+    "total_driftskostnader": 3695163,
+    "fastighetsskotsel": 87668,
+    "reparationer_underhall": 44666,
+    "taxebundna_kostnader": 2632631,
+    "ovriga_driftskostnader": 431450,
+    "el": 349491,
+    "varme": 476630,
+    "vatten": 203012,
+    "sophamtning": null,
+    "fastighetsforsak​ringar": 61028,
+    "tomtrattsavgald": 1527229,
+    "kabel_tv": 200342,
+    "fastighetsskatt": 184060,
+    "hiss_underhall": null,
+    "sotning_ventilation": null,
+    "samfallighetsavgifter": 129587,
+    "serviceavtal": null,
+    "major_repairs_water_damage": null,
+    "evidence_pages": [13]
+  },
+
+  "loans_agent": {
+    "total_debt": 58432000,
+    "long_term_debt": 58090000,
+    "short_term_debt": 342000,
+    "loans": [
+      {
+        "lender": "Stadshypotek",
+        "loan_id": null,
+        "amount": 19400000,
+        "interest_rate_pct": 0.620,
+        "maturity_date": "2026-09-30",
+        "villkorsandringsdag": "2026-09-30",
+        "maturity_classification": "long_term"
+      },
+      {
+        "lender": "Stadshypotek",
+        "loan_id": null,
+        "amount": 19400000,
+        "interest_rate_pct": 0.620,
+        "maturity_date": "2026-09-30",
+        "villkorsandringsdag": "2026-09-30",
+        "maturity_classification": "long_term"
+      },
+      {
+        "lender": "Stadshypotek",
+        "loan_id": null,
+        "amount": 19632000,
+        "interest_rate_pct": 0.780,
+        "maturity_date": "2026-12-30",
+        "villkorsandringsdag": "2026-12-30",
+        "maturity_classification": "long_term"
+      }
+    ],
+    "average_interest_rate_pct": 0.68,
+    "debt_per_sqm": 9556,
+    "projected_debt_5_years": null,
+    "loan_restructuring_note": "Gröna lån, bundna till slutet av 2026",
+    "evidence_pages": [16]
+  },
+
+  "fees_agent": {
+    "fee_per_sqm_annual": 727,
+    "fee_increase_pct": 5.0,
+    "fee_increase_date": "2023-01-01",
+    "fee_increase_reason": "+5% från 2023-01-01, planerad minskning -5% från 2024-01-01",
+    "multiple_increases": false,
+    "fee_history": [
+      {"year": 2023, "fee_per_sqm": 727},
+      {"year": 2022, "fee_per_sqm": 686},
+      {"year": 2021, "fee_per_sqm": 692},
+      {"year": 2020, "fee_per_sqm": 695}
+    ],
+    "evidence_pages": [5, 6]
+  },
+
+  "energy_agent": {
+    "elkostnad_per_sqm": null,
+    "varmekostnad_per_sqm": null,
+    "vattenkostnad_per_sqm": null,
+    "energikostnad_per_sqm_total": 133,
+    "multi_year_energy_trends": [
+      {"year": 2023, "energi_per_sqm": 133},
+      {"year": 2022, "energi_per_sqm": 117},
+      {"year": 2021, "energi_per_sqm": 106},
+      {"year": 2020, "energi_per_sqm": 90}
+    ],
+    "electricity_increase_pct_2022_2023": null,
+    "electricity_increase_pct_3_year": null,
+    "heating_increase_pct_2022_2023": null,
+    "water_increase_pct_2022_2023": null,
+    "elstod_received": null,
+    "elstod_pct_offset": null,
+    "energy_initiatives": null,
+    "evidence_pages": [5]
+  },
+
+  "reserves_agent": {
+    "underhallsfond_balance": 1022575,
+    "underhallsfond_previous": 869700,
+    "underhallsfond_change": 152875,
+    "reservering_till_fond": 411406,
+    "underhallsplan_exists": true,
+    "underhallsplan_period": "2016-2041 (25 år)",
+    "evidence_pages": [2, 7]
+  },
+
+  "members_agent": {
+    "total_members_start": 132,
+    "new_members": 20,
+    "departing_members": 20,
+    "total_members_end": 132,
+    "transfers_during_year": 11,
+    "evidence_pages": [4]
+  },
+
+  "events_agent": {
+    "major_events": [
+      {
+        "event": "Tomträttsavgäld renegotiation completed",
+        "date": "2023-03-31",
+        "description": "Ny tomträttsavgäld 1 773 100 kr efter omförhandling under 2021, stegvis höjning från mars 2023 till mars 2027",
+        "impact": "Significant cost increase in ground rent"
+      },
+      {
+        "event": "Loan amortization pause",
+        "date": "2023",
+        "description": "Styrelsen tog beslut om uppehåll av amorteringar på lånen med bakgrund att föreningen har bundna lån till en snittränta om 0,68% fram till år 2026",
+        "impact": "Improved cash flow management"
+      }
+    ],
+    "evidence_pages": [2, 6]
+  },
+
+  "notes_maintenance_agent": {
+    "major_maintenance_completed": [
+      {
+        "period": "2019-2022",
+        "description": "Inredning cykelrum, övervakningskameror, stamspolning, OVK, 10 garageplatser laddstolpar"
+      }
+    ],
+    "planned_maintenance": [],
+    "maintenance_expenses_major": {
+      "total_major_repairs": 44666,
+      "water_fire_damage": null,
+      "periodiskt_underhall": null
+    },
+    "underhallsplan_period": "2016-2041 (25 år)",
+    "evidence_pages": [4]
+  },
+
+  "insurance_agent": {
+    "insurance_provider": "Bostadsrätterna och Söderberg & Partners",
+    "insurance_premium": 61028,
+    "property_coverage": null,
+    "liability_coverage": "fastighetsförsäkring samt styrelseförsäkring",
+    "fastighetsinteckningar_sakerheter": 69200000,
+    "evidence_pages": [2, 17]
+  },
+
+  "tax_agent": {
+    "fastighetsskatt": 184060,
+    "fastighetsavgift_exemption": false,
+    "exemption_years": null,
+    "skattekonto_balance": null,
+    "moms_avrakning": 1562275,
+    "evidence_pages": [3, 13]
+  },
+
+  "planned_actions_agent": {
+    "planned_actions": [
+      {
+        "action": "Fee reduction for 2024",
+        "status": "Planned",
+        "description": "Årsavgifterna för lägenheterna kommer att sänkas från 2024-01-01 med knappt 5%. Avgifterna för garageplats sänks med 12,5%",
+        "timeline": "2024-01-01"
+      },
+      {
+        "action": "Large loan amortization when loans mature",
+        "status": "Planned",
+        "description": "När lånen löper ut under 2026 avser styrelsen göra en större amortering av lånen för att ytterligare sänka föreningens belåning och därmed räntekostnader",
+        "timeline": "2026"
+      }
+    ],
+    "evidence_pages": [6]
+  },
+
+  "cashflow_agent": {
+    "cash_flow_statement_present": true,
+    "cash_start_of_year": 3537947,
+    "cash_end_of_year": 5707739,
+    "cash_change": 2169792,
+    "cash_from_operations": 2511792,
+    "cash_from_investments": 0,
+    "cash_from_financing": -342000,
+    "evidence_pages": [11]
+  },
+
+  "depreciation_agent": {
+    "total_depreciation": 3550277,
+    "building_depreciation_rate_pct": 0.833,
+    "property_improvements_depreciation_rate_pct": 20.0,
+    "accumulated_depreciation": 25621388,
+    "ack_anskaffningsvarde": 423382244,
+    "restvarde_enligt_plan": 397760856,
+    "mark_value_included": null,
+    "evidence_pages": [15]
+  },
+
+  "driftskostnader_agent": {
+    "total_driftskostnader": 3695163,
+    "fastighetsskotsel": 87668,
+    "reparationer_underhall": 44666,
+    "el": 349491,
+    "uppvarmning": 476630,
+    "vatten": 203012,
+    "sophamtning": null,
+    "fastighetsforsak​ringar": 61028,
+    "tomtrattsavgald": 1527229,
+    "kabel_tv": 200342,
+    "fastighetsskatt": 184060,
+    "ventilation_major": null,
+    "varmeanlaggning_major": null,
+    "ovriga_externa_kostnader": 201617,
+    "personalkostnader": 154423,
+    "samfallighetsavgifter": 129587,
+    "serviceavtal": null,
+    "evidence_pages": [13, 14]
+  },
+
+  "commercial_tenants_agent": {
+    "has_commercial_space": true,
+    "total_commercial_area_sqm": 340,
+    "commercial_rent_collected": 960659,
+    "commercial_rent_pct_of_revenue": 14.4,
+    "tenant_name": "Rockin Grill AB, D.N Malkey AB, Stockholms kommun, Net4Mobility AB (antennbärare)",
+    "tenant_since": null,
+    "evidence_pages": [3, 13]
+  },
+
+  "enhanced_loans_agent": {
+    "total_debt": 58432000,
+    "langfristig_debt": 58090000,
+    "kortfristig_debt": 342000,
+    "kortfristig_pct": 0.6,
+    "lender_concentration": {
+      "Stadshypotek": 100.0
+    },
+    "maturity_profile": {
+      "within_6_months": 342000,
+      "6_12_months": 0,
+      "1_2_years": 0,
+      "2_5_years": 58090000,
+      "over_5_years": 0
+    },
+    "interest_rate_range": {
+      "min_rate_pct": 0.620,
+      "max_rate_pct": 0.780,
+      "weighted_avg_pct": 0.68
+    },
+    "risk_assessment": {
+      "refinancing_risk": "NONE",
+      "interest_rate_risk": "LOW",
+      "lender_concentration_risk": "HIGH",
+      "overall_risk": "LOW"
+    },
+    "risk_factors": [
+      "100% concentration with single lender (Stadshypotek)",
+      "All loans mature end of 2026 (synchronized refinancing risk)",
+      "Very low current interest rate (0.68% average) - significant upside risk at maturity",
+      "Green loans (gröna lån) may provide better refinancing terms"
+    ],
+    "evidence_pages": [16]
+  },
+
+  "revenue_breakdown_agent": {
+    "arsavgifter_bostader": 4123767,
+    "hyror_lokaler": 960659,
+    "hyror_garage": 1003320,
+    "hyror_forrad": null,
+    "bredband": 198240,
+    "andrahandsuthyrning": null,
+    "uppvarmning_debitering": null,
+    "vatten_debitering": 126624,
+    "el_debitering": null,
+    "fastighetsskatt_debitering": 92676,
+    "ovriga_ror​elseintakter": null,
+    "elstod": null,
+    "solceller_revenue": null,
+    "laddstolpar_revenue": 4967,
+    "total_rorelseintakter": 6674773,
+    "evidence_pages": [13]
+  }
+}
