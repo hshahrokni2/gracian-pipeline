@@ -898,3 +898,98 @@ DETAILS:
 6. **depreciation_paradox**: ❌ NO (standard Pattern B, not paradox)
 7. **tomtratt_escalation**: ❌ NO (DECREASED not increased, moderate burden)
 8. **fee_response_classifier**: ✅ YES (41/41 = 100%, MODERATE to PASSIVE classification validated)
+
+PDF 42 (brf_82839 - Brf Uggleviken 2023): ✅ COMPLETE - 🚨 INTEREST RATE SHOCK = PROFIT → LOSS REVERSAL!
+[✅] Loan reclassification? (kortfristig 60.6% - HIGH tier!) YES (5th HIGH example!)
+[❌] Multiple fee increases? (single +2% in 2023, +10% planned 2024) NO
+[❌] Electricity increase >50%? (el -18%, heating +9.5%, water +27%) NO (EFFICIENCY!)
+[⚠️] Lokaler >15% of area? (14.3% = 544/3,793 m²) JUST BELOW (but significant!)
+[❌] Cash crisis? (1,388 TSEK likvida medel, up from 0!) NO (STRONG improvement!)
+[✅] Depreciation paradox? (Result w/o depreciation +1,057 TSEK, soliditet 85%) YES (PARADOX!)
+[❌] Tomträtt escalation? (975 TSEK stable, -0.6% change) NO (STABLE)
+[✅] Fee response classifier? (+2% then +10% = REACTIVE to loss) YES
+
+SCORE: 3 / 8 (37.5%)
+
+DETAILS:
+- **Loans**: 16,641,666 TSEK short-term / 27,475,000 TSEK total = **60.6% kortfristig (HIGH tier! 5th example)** ⚡⚡⚡
+  - **MATURITY CLUSTER (2 months!)**: 3 loans mature 2024-02-28, 1 loan matures 2024-02-23 (16.64M in Feb 2024!)
+  - **5th HIGH TIER EXAMPLE**: Validates pattern prevalence (5/42 = 11.9% of corpus)
+  - **Rate spread**: 0.98% to 4.45% (4.5x = refinancing vulnerability!)
+  - **100% Swedbank concentration**: All 5 loans with single lender (no diversification)
+  - **Post-year refinancing**: 4M loan refinanced Feb 2024 @ 3.69% (7 years), rest floating
+- **TURNAROUND FAILURE**: +58,664 kr profit (2022) → -313,943 kr loss (2023) = **-638% reversal!**
+- **Interest rate shock**: 425,535 kr → 704,027 kr (+65.4%!) = **PRIMARY LOSS DRIVER**
+  - Operating result IMPROVED +388,917 kr (2023) vs +481,310 kr (2022) = -19% decline (moderate)
+  - BUT financial costs exploded +65.4% = profit → loss conversion
+- **Chronic losses**: NO - This is FIRST-YEAR loss (turnaround failure pattern, not chronic Pattern B)
+- **Soliditet**: 85% (stable from 2022, strong buffer)
+- **Cash improvement**: 0 kr (2022) → 1,388,143 kr (2023) = **+100% improvement!** (fee increases working!)
+- **Depreciation Paradox**: ✅ YES
+  - Result after financial 2023: -313,943 kr
+  - Avskrivningar 2023: +1,371,024 kr
+  - Result w/o depreciation: -313,943 + 1,371,024 = **+1,057,081 kr** (EXCELLENT operating cash flow!)
+  - Soliditet: 85% (meets ≥85% threshold)
+  - **MEETS BOTH CRITERIA**: +1,057k > +500k threshold AND soliditet 85% ≥ 85%
+  - Classification: **DEPRECIATION PARADOX** (strong operations, accounting loss)
+- **Tomträtt**: ❌ NO escalation - 975,175 kr (22.6% of revenue), -0.6% change (stable, relief vs increases)
+- **Fee Response**: ✅ **REACTIVE** classification
+  - +2% increase (2023): Generated moderate revenue
+  - +10% planned (2024): REACTIVE response to profit → loss reversal
+  - Cumulative: +12.2% compound increase
+  - **Assessment**: REACTIVE (responding to crisis AFTER it hit, not proactive)
+  - Context: Interest shock unanticipated, fee increase came after losses materialized
+- **Energy**: ❌ NO crisis - **EFFICIENCY GAINS!**
+  - El: -18% (238,263 → 195,479 kr) = LED upgrade working! ⚡
+  - Heating: +9.5% (194,527 → 213,151 kr) = moderate increase
+  - Water: +27% (59,936 → 76,092 kr) = moderate increase, small absolute
+  - Sophämtning: +339% (12,806 → 56,193 kr) = renhållning cost explosion!
+  - **Elstöd**: 44,444 kr received (government electricity support)
+  - **LED project 2023**: Armaturer bytta i trapphus/allmänna utrymmen = energy investment working
+- **Lokaler**: ⚠️ JUST BELOW threshold - 544 m² / 3,793 m² = **14.3%** (0.7% shy of 15%!)
+  - Revenue: 1,693,176 kr hyresintäkter lokaler (moms) = **39.3% of nettoomsättning!**
+  - **CRITICAL COMMERCIAL DEPENDENCY**: 14.3% area generates 39.3% revenue = **2.7x efficiency multiplier**
+  - Tenant: Förskola (preschool) noted in repairs (9,872 kr repairs 2023 vs 31,961 kr 2022)
+  - **RISK**: Losing förskola tenant requires **65% residential fee increase** to replace revenue!
+- **Samfällighet**: 22.7% share in Abisko Samfällighetsförening (markskötsel, sopsug, miljörrum, garage)
+- **Tomträtt property**: 975,175 kr annual (22.6% of revenue, stable vs 2022)
+- **Extra amortization**: 1,000,000 kr during 2023 (total 1,300,000 kr = aggressive debt reduction!)
+  - Plus another 1,000,000 kr Feb 2024 = **2,000,000 kr total aggressive paydown**
+- **Underhåll 2023**: LED upgrade + fasadtvätt + dörrautomatik justering + hiss improvements
+- **Underhållsplan**: 2015-2035 (20-year planning horizon)
+- **11 years old**: 2013 construction (modern building, Pattern B-NEW candidate but NOT chronic)
+- **K2 accounting**: 1,371,024 kr depreciation creates -313k paper loss vs +1,057k actual cash flow
+- Schema: **31st consecutive ZERO new fields** (99.5%+ complete)
+
+**CRITICAL INSIGHTS**:
+- 🚨 **INTEREST RATE VICTIM**: Profit → loss conversion ENTIRELY due to +65.4% interest shock (not operational failure!)
+- 📊 **5th HIGH TIER (60.6%)**: Validates pattern prevalence (11.9% of corpus) - refinancing risk is REAL
+- 💰 **100% Swedbank concentration**: All 5 loans with single lender = refinancing monopoly risk
+- ⚡ **Depreciation paradox CONFIRMED**: +1,057k cash flow vs -314k paper loss = K2 accounting artifact
+- 🏗️ **NOT Pattern B-NEW**: First-year loss (not chronic), caused by external shock (rates), strong operations (+1,057k)
+- 🎯 **Fee response timing**: REACTIVE (after loss) vs PROACTIVE (before crisis)
+- 📉 **Cash improvement paradox**: Despite loss, cash UP +1,388k (fee increases collected faster than expenses!)
+- 🏢 **Hidden commercial risk**: 14.3% area generates 39.3% revenue = losing förskola = catastrophic
+- ⚡ **LED investment working**: El costs DOWN -18% (238k → 195k) = sustainability investment paying off
+- 🗑️ **Sophämtning explosion**: +339% (12.8k → 56.2k) = waste management cost shock (Stockholm rates?)
+- 💸 **Aggressive debt reduction**: 2,000,000 kr total amortization (2023 + Feb 2024) despite losses = strategic
+- 🏦 **Post-year refinancing**: 4M @ 3.69% (7 years) shows board securing some rate protection after crisis hit
+
+**PATTERN CLASSIFICATION**: **INTEREST RATE VICTIM** (not Pattern B!)
+- Excellent operations (+1,057k cash flow)
+- Stable costs (energy improving, tomträtt stable)
+- FIRST-YEAR loss only (not chronic)
+- Loss ENTIRELY attributable to interest shock (+279k increase)
+- REACTIVE fee response (came after loss, not proactive)
+- Cash improving despite loss (shows fee increases working)
+- Strategic debt reduction (2M amortization to reduce future interest burden)
+
+**ENHANCEMENT VALIDATION STATUS** (After PDF 42):
+1. **loans_agent**: ✅ YES (42/42 = 100%, 5th HIGH tier validates pattern)
+2. **fees_agent (multiple)**: ❌ NO (still 8/42 = 19.0%, prevalence stable)
+3. **energy_agent**: ❌ NO (42/42 = 100% have energy data, but IMPROVEMENT not crisis)
+4. **property_agent (lokaler)**: ⚠️ EDGE CASE (14.3% just below 15%, but 39.3% revenue dependency = HIDDEN RISK!)
+5. **cash_crisis_agent**: ❌ NO (strong improvement 0 → 1,388k, not crisis)
+6. **depreciation_paradox**: ✅ YES (2nd confirmation! +1,057k > +500k, soliditet 85% ≥ 85%)
+7. **tomtratt_escalation**: ❌ NO (stable -0.6%, not escalation)
+8. **fee_response_classifier**: ✅ YES (42/42 = 100%, REACTIVE classification)
