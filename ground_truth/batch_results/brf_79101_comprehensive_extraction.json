@@ -1,0 +1,244 @@
+{
+  "basic_info": {
+    "organization_name": "Brf Älvängen i Djurgårdsstaden",
+    "organization_number": "769625-8800",
+    "fiscal_year": 2023,
+    "report_date": "2023-12-31",
+    "k2_k3_regime": "K2",
+    "location": "Stockholm (Djurgårdsstaden)",
+    "pages": 12,
+    "file_size_mb": 0.758,
+    "document_id": "brf_79101"
+  },
+  "governance": {
+    "chairman": "Andreas Rosengren",
+    "chairman_title": "Ordförande",
+    "board_members": [
+      {"name": "Andreas Rosengren", "role": "Ordförande"},
+      {"name": "Nadja Nordström", "role": "Sekreterare"},
+      {"name": "Mats Helgesson", "role": "Kassör"},
+      {"name": "Ida-Maria Eriksson", "role": "Ledamot (avtal/fastighet)"},
+      {"name": "Heiko Phillip", "role": "Suppleant"},
+      {"name": "Pontus Weström", "role": "Suppleant"}
+    ],
+    "board_members_leaving_2023": [
+      {"name": "Lisa Jonsson", "role": "Left October 2023 (moved)"},
+      {"name": "Kaj Säf", "role": "Left at 2023 meeting"},
+      {"name": "Marcus Almqvist", "role": "Left at 2023 meeting"}
+    ],
+    "board_meetings": 12,
+    "board_meetings_detail": "11 ordinarie + 1 extra",
+    "annual_meeting_date": "2023-05-23",
+    "extra_meeting_date": "2023-09-13",
+    "extra_meeting_purpose": "Fastställande av stadgeändringar",
+    "auditor": "Fredrik Åborg",
+    "auditor_company": "MT Revision AB",
+    "auditor_type": "Auktoriserad revisor",
+    "valberedning": ["Caroline Carlsson", "Antonia Lindmark"]
+  },
+  "property": {
+    "fastigheter": [
+      {
+        "name": "Färnebofjärden 1",
+        "construction_year": 2014,
+        "construction_year_start": 2013,
+        "completion_date": "2014 summer",
+        "slutbesiktning_date": "2015-07",
+        "transfer_to_brf_date": "2015-08-01",
+        "vardear": 2014,
+        "kommun": "Stockholm",
+        "ownership_type": "tomträtt",
+        "developer": "Einar Mattsson Projekt AB",
+        "developer_org_number": "5567894877"
+      }
+    ],
+    "total_properties": 1,
+    "apartments": 77,
+    "lokaler": 1,
+    "total_area_sqm": 5520,
+    "garage_spaces": 38,
+    "garage_charging_stations": 14,
+    "mc_spaces": 3,
+    "tomtratt_agreement_length": "10 years from 2023, renewable"
+  },
+  "income_statement": {
+    "revenue_2023": 6353878,
+    "revenue_2022": 5887034,
+    "operating_result_2023": -292994,
+    "operating_result_2022": -346564,
+    "result_after_financial_2023": -1140303,
+    "result_after_financial_2022": -1198725
+  },
+  "revenue_breakdown": {
+    "arsavgifter_inkl_bredband_el_varmvatten_2023": 5211412,
+    "arsavgifter_inkl_bredband_el_varmvatten_2022": 4743717,
+    "hyror_2023": 1098581,
+    "hyror_2022": 1004412,
+    "ovriga_intakter_2023": 43884,
+    "ovriga_intakter_2022": 138905,
+    "ovriga_rorelseintakter_2023": 217726,
+    "ovriga_rorelseintakter_2022": 0
+  },
+  "balance_sheet": {
+    "total_assets_2023": 347537771,
+    "total_assets_2022": 349447317,
+    "total_equity_2023": 279078001,
+    "total_equity_2022": 280218304,
+    "soliditet_2023": 80,
+    "soliditet_2022": 80,
+    "cash_2023": 1289346,
+    "cash_2022": 1425413
+  },
+  "loans_detailed": [
+    {
+      "lender": "SBAB",
+      "current_balance_2023": 22000000,
+      "interest_rate": 2.13,
+      "maturity_date": "2024-03-18",
+      "classification": "långfristig (but maturing soon)"
+    },
+    {
+      "lender": "Nordea",
+      "current_balance_2023": 23700000,
+      "interest_rate": 0.74,
+      "maturity_date": "2026-08-19",
+      "classification": "långfristig"
+    },
+    {
+      "lender": "Nordea",
+      "current_balance_2023": 21375000,
+      "interest_rate": 0.93,
+      "maturity_date": "2025-08-20",
+      "classification": "långfristig"
+    }
+  ],
+  "loan_summary": {
+    "total_debt_2023": 67075000,
+    "total_debt_2022": 67825000,
+    "long_term_portion_2023": 43575000,
+    "long_term_portion_2022": 67075000,
+    "short_term_portion_2023": 23500000,
+    "short_term_portion_2022": 750000,
+    "interest_costs_2023": 847309,
+    "interest_costs_2022": 852161,
+    "amortization_2023": 750000,
+    "amortization_2022": 750000
+  },
+  "fastighetskostnader": {
+    "fastighetsskotsel_lokavard_tradgard_2023": 436951,
+    "fastighetsskotsel_lokavard_tradgard_2022": 555789,
+    "reparationer_2023": 421258,
+    "reparationer_2022": 267480,
+    "planerat_underhall_2023": 141954,
+    "planerat_underhall_2022": 114404,
+    "forvaltningsarvode_2023": 430143,
+    "forvaltningsarvode_2022": 300351,
+    "forsakring_2023": 47544,
+    "forsakring_2022": 43025,
+    "fastighetsskatt_2023": 93930,
+    "fastighetsskatt_2022": 93930,
+    "el_2023": 835389,
+    "el_2022": 828985,
+    "uppvarmning_2023": 294850,
+    "uppvarmning_2022": 259307,
+    "vatten_2023": 161232,
+    "vatten_2022": 132450,
+    "sophamtning_2023": 216418,
+    "sophamtning_2022": 59312,
+    "kabel_tv_bredband_2023": 228740,
+    "kabel_tv_bredband_2022": 246018,
+    "tomtrattsavgald_2023": 1383900,
+    "tomtrattsavgald_2022": 1255300,
+    "ovriga_driftskostnader_2023": 16697,
+    "ovriga_driftskostnader_2022": 35716,
+    "total_driftskostnader_2023": 4709006,
+    "total_driftskostnader_2022": 4192067
+  },
+  "key_metrics": {
+    "debt_per_sqm_total_2023": 11967,
+    "debt_per_sqm_total_2022": 12101,
+    "debt_per_sqm_apartment_2023": 12151,
+    "debt_per_sqm_apartment_2022": 12287,
+    "annual_fees_per_sqm_2023": 944,
+    "annual_fees_per_sqm_2022": 859,
+    "energy_cost_per_sqm_2023": 230,
+    "energy_cost_per_sqm_2022": 218,
+    "sparande_per_sqm_2023": 89,
+    "sparande_per_sqm_2022": 111,
+    "avskrivningar_2023": 1705500,
+    "avskrivningar_2022": 1705500,
+    "avskrivningar_buildings_rate": "100 years",
+    "rentekänslighet_percent_2023": 13,
+    "rentekänslighet_percent_2022": 14,
+    "arsavgifternas_andel_percent_2023": 79,
+    "arsavgifternas_andel_percent_2022": 81
+  },
+  "taxering": {
+    "byggnadsvarde_2023": 170550000,
+    "byggnadsvarde_after_depreciation_2023": 156195375,
+    "markvarde_2023": 189610000,
+    "total_taxeringsvarde_2023": 360160000
+  },
+  "critical_analysis": {
+    "debt_tier": "MEDIUM - 18.6% av byggnadsvärde (67M / 360M)",
+    "loss_pattern": "CHRONIC - 5 consecutive years (-1.0M to -1.4M range)",
+    "loss_trend": "STABLE - hovering around -1.1M to -1.2M annually",
+    "soliditet_status": "STRONG - 80% (stable over 5 years 2019-2023)",
+    "cash_status": "ADEQUATE - 1.29M kr (down -9.5% from 1.43M)",
+    "main_loss_driver": "K2 avskrivningar (1.71M kr) creating paper losses",
+    "result_without_depreciation": "+565,197 kr (POSITIVE operating cash flow!)",
+    "fee_shock": "+23% for 2023/24 - EXTREME INCREASE (HIGHEST IN DATASET!)",
+    "fee_increase_2022_2023": "+9.9% (859 → 944 kr/m²)",
+    "tomtrattsavgald_increase": "+10.3% (1,255k → 1,384k kr)",
+    "tomtrattsavgald_as_percent_revenue": "21.8% (significant external dependency)",
+    "debt_refinancing_upcoming": "22M kr SBAB loan maturing 2024-03-18 (33% of total debt!)",
+    "interest_rate_risk": "SBAB @ 2.13% needs refinancing in 3 months",
+    "unique_characteristics": [
+      "Tomträtt property (perpetual ground rent, 10-year renewable agreement)",
+      "Same building age as PDF 38 (9 years old) but LOWER soliditet (80% vs 86%)",
+      "DOUBLE the debt of PDF 38 (67M vs 35M) explaining soliditet difference",
+      "23% fee increase - MOST AGGRESSIVE IN ENTIRE DATASET!",
+      "Government electricity support: 218k kr received in 2023",
+      "Ongoing facade issues with developer (legal support retained)",
+      "Ventilation guarantee work ongoing (intrimning delayed to 2015)",
+      "Tomträtt challenge filed (objecting to fjärrvärme tax increase)",
+      "Elevator contract terminated with Schindler (under renegotiation)",
+      "Sophämtning costs surged +265% (59k → 216k) - major cost driver!",
+      "5-year chronic losses BUT positive cash flow before depreciation",
+      "K2 accounting creates -1.1M paper loss vs +565k actual cash flow",
+      "Short-term debt explosion: 750k → 23.5M (31x increase!) due to upcoming refinancing",
+      "Quarterly electricity tariff adjustments implemented",
+      "Developer: Einar Mattsson (same as management company)"
+    ]
+  },
+  "underhall": {
+    "planerat_underhall_2024": "Fog och tätningsarbeten (s.k. hålkärl) i garaget"
+  },
+  "members": {
+    "members_start_2023": 123,
+    "members_end_2023": 123,
+    "lagenhetsoverlatelser_2023": 9
+  },
+  "forvaltning": {
+    "ekonomisk_forvaltning": "Einar Mattsson",
+    "teknisk_forvaltning_skotsel": "Einar Mattsson",
+    "forsakring": "Folksam (förmedlat av Söderberg & Partners)",
+    "el_handel": "Boo Energi",
+    "el_nat": "Ellevio",
+    "internet_tv": "Telenor",
+    "stadning": "RUT Putsarna och Städarna i Sverige AB",
+    "hissar": "Schindler (avtal uppsagt, under förhandling)",
+    "tradgard_snorojning": "Två Smålänningar"
+  },
+  "critical_events_2023": {
+    "fee_increase": "23% from 2023/24 (extreme response to losses)",
+    "garage_fee_increase": "5% from 2023/24",
+    "electricity_support": "218,000 kr government subsidy received",
+    "ventilation_guarantee_work": "Major summer work completed, ongoing issues",
+    "facade_investigation": "Continued work, results insufficient per BRF inspector",
+    "legal_support": "WA Advokatbyrå KB retained for facade issues",
+    "balcony_dividers": "Guarantee work completed",
+    "tomtratt_challenge": "Objection filed to fjärrvärme tax increase",
+    "quarterly_electricity_tariffs": "Implemented to manage volatile costs"
+  }
+}
