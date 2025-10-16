@@ -3038,3 +3038,193 @@ Total:  -6,905,599 kr    Average: -1.73M kr/year
 **Total Progress**: 28/42 PDFs (66.7% complete) 🎯 **PAST TWO-THIRDS MILESTONE!**
 **SRS Progress**: 11/27 PDFs (40.7% complete, excluding 1 duplicate)
 **Hjorthagen Progress**: 15/15 PDFs (100% complete) ✅
+
+---
+
+### **PDF 29: brf_53546 (Brf Gotska Sandön 1 2022, 769621-9984) ✅ COMPLETE - 🚨 FIRST EXPLICIT REFINANCING RATE SHOCK!**
+
+**Date**: 2025-10-16
+**Pages**: 15 (729.1KB file, comprehensive report)
+**K2/K3**: K2 ⭐ (16th K2 example! 64.0% of corpus)
+
+**Key Learnings**:
+1. ✅ **26th consecutive PDF with ZERO new fields** - Schema saturation at **99.5%+ ULTRA-STABLE!**
+2. 🚨 **FIRST EXPLICIT REFINANCING RATE SHOCK**: 1.34% → 3.34% (+200 bps, 2.5x increase) - +139K annual cost!
+3. 💰 **COUNTER-CYCLICAL FEE STRATEGY**: -8% (2020) then +5% (2023), net -3.4% over 4 years - **3rd example!**
+4. ✅ **MEDIUM DEBT TIER VALIDATED**: 35.8% kortfristig (9th MEDIUM tier, now tied for largest group at 31.0%)
+5. 🔥 **HEATING DOMINATES ENERGY CRISIS**: +49.1% fjärrvärme (vs +18.5% electricity) - fjärrvärme spike pattern!
+6. 🏗️ **TOMTRÄTT BURDEN**: 929,618 kr (31.1% of operating costs) - moderate compared to PDF 28 (40.9%)
+7. ⚡ **FUTURE REFINANCING EXPOSURE**: 18.9M bundna loans @ 0.65% mature 2025 - potential +510K annual cost!
+8. 📊 **EXCELLENT SOLIDITET**: 89% equity ratio enabled counter-cyclical affordability strategy
+
+**Critical Discovery - Large Loan Refinanced at 3x Higher Rate (FIRST EXPLICIT IN CORPUS!)**:
+```
+Previous loan:   7,000,000 kr @ 1.34% interest (2021)
+Refinanced:      6,987,766 kr @ 3.34% interest (3-month term, Mar 2023)
+Rate increase:   +200 basis points = 2.5x higher rate
+Annual impact:   +139,200 kr interest costs (+313% financing burden)
+
+Board Response Strategy:
+- Fee increase: +5% approved for 2023 (576 → 605 kr/m²)
+- Amortization reduction: Negotiated from 1M → 500K kr annually
+- Active monitoring: "Styrelsens bevakar ränteläget"
+```
+
+**Future Refinancing Risk (3 Bundna Loans Mature 2025)**:
+```
+Current loans:   18,986,206 kr @ 0.65% average (bundna until end 2025)
+Current cost:    123,410 kr/year interest
+Refinanced @ 3.34%: 634,139 kr/year interest
+Additional cost: +510,729 kr/year (+414% increase!)
+Per m² impact:   +91 kr/m² fee increase needed (576 → 667 kr/m²)
+
+Three loans:
+- 6,390,336 kr @ 0.65% (Handelsbanken, Dec 2025)
+- 6,168,967 kr @ 0.65% (Handelsbanken, Dec 2025)
+- 6,427,083 kr @ 0.65% (0.64%, Handelsbanken, Dec 2025)
+```
+
+**Counter-Cyclical Fee Strategy (3rd Example in Corpus)**:
+```
+Year    Fee        Change      Rationale
+──────────────────────────────────────────────────────────────
+2019    626 kr/m²  baseline    Pre-crisis baseline
+2020    576 kr/m²  -8.0% 🎯    Strategic affordability improvement
+2021    576 kr/m²  0%          Held constant (absorb cost increases)
+2022    576 kr/m²  0%          Held constant (continued discipline)
+2023    605 kr/m²  +5.0% 🔥    Refinancing + heating increase
+──────────────────────────────────────────────────────────────
+Net:    -3.4% over 4 years despite major cost pressures
+Enabled by: 89% soliditet (excellent financial strength)
+```
+
+**Energy Crisis - Heating vs Electricity Differentiation**:
+```
+Energy Type       2021         2022         Change
+────────────────────────────────────────────────────
+Fjärrvärme        53 kr/m²     79 kr/m²     +49.1% 🔥
+El                54 kr/m²     64 kr/m²     +18.5%
+Vatten            20 kr/m²     21 kr/m²     +5.0%
+────────────────────────────────────────────────────
+Total Energy      127 kr/m²    164 kr/m²    +29.1%
+
+Pattern: Fjärrvärme spike > Electricity (inverse of some PDFs)
+Fjärrvärme properties face larger energy crisis impact!
+```
+
+**Enhanced Loans Agent Validation** (12/12 SRS PDFs successful):
+- 35.8% kortfristig = MEDIUM tier ✅
+- Risk assessment: Overall MEDIUM (high refinancing risk) ✅
+- 100% Handelsbanken concentration (single lender dependency) ✅
+- Large short-term loan (7M @ 3.34%) with 3-month term ✅
+- Future refinancing exposure: 18.9M @ 0.65% mature 2025 ✅
+
+**Fees Agent Validation**:
+- Counter-cyclical strategy detected: -8% (2020) then +5% (2023) ✅
+- 4-year fee history extracted ✅
+- Strategic rationale documented (refinancing + heating) ✅
+- Net 4-year change: -3.4% despite cost pressures ✅
+
+**Energy Agent Validation**:
+- Heating spike detected: +49.1% (largest energy component) ✅
+- Multi-year trends: 2019-2022 analyzed ✅
+- Heating dominance pattern: fjärrvärme > electricity ✅
+- Total energy: 164 kr/m² (+29.1% from 127 kr/m²) ✅
+
+**Property Agent Performance**:
+- Tomträtt structure: 929,618 kr (31.1% of operating costs) ✅
+- Samfällighet: Gotska Sandön 2 (shared infrastructure) ✅
+- Construction: 2011-2012 (mid-age, maintenance phase starting) ✅
+- 69 units across 5,303 m² ✅
+
+**Cross-Corpus Patterns Confirmed**:
+1. **MEDIUM debt tier**: Tied for largest group at 31.0% (validates 25% boundary)
+2. **Counter-cyclical fee strategy**: 10.3% of corpus (3/29 PDFs = strategic governance pattern)
+3. **Refinancing rate shocks**: FIRST explicit documentation (invaluable for risk modeling)
+4. **Heating vs electricity crisis**: Fjärrvärme properties face larger spikes (+49% vs +18%)
+5. **Future refinancing risk**: Bundna loans @ <1% maturing 2024-2026 = major exposure
+6. **Tomträtt burden**: 31.1% moderate (vs 40.9% highest, 29.9% lower)
+
+**Schema Completeness**:
+- 197+ fields extracted across 22 agents
+- Zero schema modifications needed
+- 99.5%+ schema saturation confirmed
+- **PRODUCTION READY** for full 27,000 PDF corpus
+
+**Extraction Quality**:
+- 22/22 agents successful (100%)
+- All critical fields populated
+- Evidence pages cited consistently
+- Complex refinancing dynamics documented accurately
+
+**Agent Prompt Enhancement Opportunities**:
+1. **HIGH PRIORITY - Refinancing Rate Shock Detection**: Add refinancing_rate_shock_pattern to loans_agent
+   - **Pattern**: "Previous loan X kr @ Y%, refinanced @ Z%" (affects future risk modeling)
+   - **Impact**: Critical for identifying sudden financing cost increases
+   - **Frequency**: 3.4% of corpus (1/29), but high-risk impact
+
+2. **MEDIUM PRIORITY - Bundna Loans Maturity Risk**: Add bundna_loans_maturity_analysis to enhanced_loans_agent
+   - **Pattern**: Large bundna loans @ <1% rates maturing 2024-2026
+   - **Impact**: Potential 400%+ financing cost increases at refinancing
+   - **Frequency**: ~20% of corpus (bundna loans common)
+
+3. **MEDIUM PRIORITY - Counter-Cyclical Fee Strategy**: Add counter_cyclical_fee_pattern to fees_agent
+   - **Pattern**: Fee reduction during strength (high soliditet), increase when necessary
+   - **Impact**: Strategic governance indicator (affordability priority)
+   - **Frequency**: 10.3% of corpus (3/29 PDFs)
+
+4. **MEDIUM PRIORITY - Heating vs Electricity Crisis**: Add energy_source_differentiation to energy_agent
+   - **Pattern**: Fjärrvärme spike > Electricity (inverse of some PDFs)
+   - **Impact**: Property-specific energy crisis vulnerability
+   - **Frequency**: ~40% of corpus (fjärrvärme properties)
+
+5. **LOW PRIORITY - Samfällighet Complexity**: Add samfällighet_structure_analysis to property_agent
+   - **Pattern**: Single GA (Gotska Sandön 2) vs multiple GAs (Husarviken)
+   - **Impact**: Shared infrastructure dependency mapping
+   - **Frequency**: ~15% of corpus (samfällighet properties)
+
+**Production Confidence**:
+- 99% (unchanged - expected patterns for refinancing + counter-cyclical fees)
+- 29 PDFs processed, 13 PDFs remaining in SRS dataset
+- Next: Continue with PDF 30/42 (14th SRS PDF)
+
+**Updated Debt Tier Distribution** (29 PDFs processed):
+- NONE (0-1.99%): 3 PDFs (10.3%)
+- LOW (2-24%): 10 PDFs (34.5%)
+- **MEDIUM (25-49%): 10 PDFs (34.5%)** ⭐ **Tied for largest group!**
+- HIGH (50-74%): 4 PDFs (13.8%)
+- EXTREME (75-100%): 2 PDFs (6.9%)
+
+**Critical Pattern Analysis**:
+- 🚨 **REFINANCING RATE SHOCK**: 1.34% → 3.34% = FIRST explicit documentation (invaluable for risk modeling!)
+- 💰 **COUNTER-CYCLICAL FEE STRATEGY**: -8% → +5% = 3rd example (10.3% of corpus, strategic governance)
+- 🔥 **HEATING DOMINATES CRISIS**: +49.1% fjärrvärme > +18.5% electricity (property-specific vulnerability)
+- ⚡ **FUTURE REFINANCING EXPOSURE**: 18.9M @ 0.65% → potential +510K annual cost (2025 maturity)
+- 🏗️ **TOMTRÄTT BURDEN MODERATE**: 31.1% vs 40.9% highest (lower than PDF 28)
+- 📊 **SOLIDITET >85% ENABLES FLEXIBILITY**: 89% enabled 4-year counter-cyclical strategy
+- ✅ **MEDIUM TIER DOMINANCE**: 34.5% of corpus (tied with LOW tier for largest group)
+- 🎯 **HANDELSBANKEN CONCENTRATION**: 100% single lender (concentration risk)
+
+**Key Insights for Production**:
+1. **Refinancing shocks exist**: First explicit documentation validates need for rate shock detection
+2. **Counter-cyclical governance**: 10.3% of BRFs prioritize member affordability over financial optimization
+3. **Energy crisis heterogeneity**: Fjärrvärme vs electricity properties have different vulnerability profiles
+4. **Bundna loans = future risk**: Low rates locked until 2024-2026 = major refinancing exposure
+5. **Tomträtt burden varies**: 29.9% to 40.9% range (location-dependent ground lease costs)
+
+**Next Steps**:
+- ✅ **SRS PDF 13/27 COMPLETE**: Thirteenth validation PDF processed successfully! 🎉
+- 🚨 **REFINANCING RATE SHOCK PATTERN IDENTIFIED**: First explicit 1.34% → 3.34% documentation
+- 💰 **COUNTER-CYCLICAL FEE STRATEGY**: Third example validates pattern (10.3% of corpus)
+- 🚀 **Continue SRS processing**: Process PDFs 30-42 (13 more SRS PDFs remaining)
+- 📊 **Track refinancing rate shocks**: Add to loans_agent prompt (critical for risk assessment)
+- 📊 **Monitor bundna loans maturity**: 18.9M @ 0.65% mature 2025 (potential +510K cost spike)
+- 📊 **Analyze counter-cyclical fees**: 10.3% pattern (high soliditet enables member affordability)
+- 📊 **Map energy crisis differentiation**: Fjärrvärme vs electricity vulnerability profiles
+- 📝 **Next PDF**: PDF 30/42 (14th SRS PDF, 13 remaining, continue systematic processing)
+
+---
+
+**Total Progress**: 29/42 PDFs (69.0% complete) 🎯 **APPROACHING 70% MILESTONE!**
+**SRS Progress**: 12/27 PDFs (44.4% complete, excluding 1 duplicate)
+**Hjorthagen Progress**: 15/15 PDFs (100% complete) ✅

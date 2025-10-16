@@ -1,0 +1,450 @@
+{
+  "metadata_agent": {
+    "organization_number": "769621-9984",
+    "organization_name": "Brf Gotska Sandön 1",
+    "fiscal_year_start": "2022-01-01",
+    "fiscal_year_end": "2022-12-31",
+    "report_date": "2022-12-31",
+    "accounting_standard": "K2",
+    "pages_total": 15,
+    "report_type": "årsredovisning",
+    "property_manager": "SBC Sveriges BostadsrättsCentrum AB",
+    "auditor": "Per Andersson",
+    "auditor_firm": "Öhrlings PricewaterhouseCoopers AB (PwC)",
+    "evidence_pages": [1, 2, 15]
+  },
+
+  "governance_agent": {
+    "chairman": "Jan-Olav Törner",
+    "vice_chairman": null,
+    "treasurer": null,
+    "secretary": null,
+    "board_members": [
+      {"name": "Jan-Olav Törner", "role": "Ordförande"},
+      {"name": "Lotta Haak", "role": "Ledamot"},
+      {"name": "Helena Kristersson", "role": "Ledamot"},
+      {"name": "Fredrik Olbers", "role": "Ledamot"},
+      {"name": "Karl-Erik Wahlberg", "role": "Ledamot"},
+      {"name": "Niklas Björken", "role": "Suppleant"},
+      {"name": "Kerstin Anna-Karin Ellerberg Hassel", "role": "Suppleant"},
+      {"name": "Lars Åberg", "role": "Suppleant"}
+    ],
+    "board_size": 8,
+    "board_meetings_count": 13,
+    "annual_meeting_date": "2022-06-07",
+    "extra_meeting_dates": [],
+    "valberedning": ["Hans Persson"],
+    "firmateckning": "två av styrelseledamöterna i förening",
+    "evidence_pages": [1, 2]
+  },
+
+  "audit_agent": {
+    "auditor_name": "Per Andersson",
+    "auditor_firm": "Öhrlings PricewaterhouseCoopers AB (PwC)",
+    "auditor_type": "Auktoriserad revisor",
+    "audit_report_pages": 1,
+    "audit_opinion": "Utan anmärkning (implied, audit report signed)",
+    "evidence_pages": [2, 15]
+  },
+
+  "property_agent": {
+    "property_designation": "Gotska Sandön 1",
+    "address": "Stockholm",
+    "acquisition_date": "2012",
+    "total_area_sqm": 5704,
+    "bostadsratter_count": 69,
+    "apartment_breakdown": {
+      "1_rok": 0,
+      "2_rok": 24,
+      "3_rok": 27,
+      "4_rok": 13,
+      "5_rok": 5,
+      "total": 69
+    },
+    "construction_year": 2011,
+    "construction_period": "2011-2012",
+    "property_insurance": "Trygg-Hansa",
+    "taxeringsvarde_building": 184263000,
+    "taxeringsvarde_mark": 169907000,
+    "taxeringsvarde_total": 354170000,
+    "bostader_area_sqm": 5634,
+    "lokaler_area_sqm": 70,
+    "lokaler_tenant": "Östermalms Stadsdelsförvaltning (70 m²), H3G Access (1 m² antenna)",
+    "samfallighet_membership": "Gotska Sandön 2",
+    "samfallighet_share_pct": "40%",
+    "samfallighet_description": "Förvaltar garage, innergård, anläggning sopsug till fastighetsgräns, dagvattenbrunnar och elmätare",
+    "evidence_pages": [1, 2, 13]
+  },
+
+  "financial_agent": {
+    "assets_total": 292163954,
+    "equity_total": 261482582,
+    "liabilities_total": 30681372,
+    "net_revenue": 4624043,
+    "profit_loss": -1568964,
+    "soliditet_pct": 89,
+    "cash_and_bank": 64972,
+    "nettoomsattning": 4624043,
+    "nettoomsattning_breakdown": {
+      "arsavgifter_bostader": 3244218,
+      "hyresintakter_lokaler": 221068,
+      "hyresintakter_garage": 811561,
+      "bredbandsintakter": 182160,
+      "vattenintakter": 522,
+      "varmvattenintakter": 65404,
+      "elintakter": 13133,
+      "overlatelseintakter": 24633,
+      "gastlagenhet": 44900,
+      "oresutjamning": 4
+    },
+    "other_income": 86683,
+    "total_revenue": 4710726,
+    "balansomslutning": 292163954,
+    "kundfordringar": 94612,
+    "evidence_pages": [7, 8, 9, 10]
+  },
+
+  "operating_costs_agent": {
+    "total_driftskostnader": 2984990,
+    "fastighetsskotsel": 301100,
+    "reparationer_underhall": 219747,
+    "taxebundna_kostnader": 968954,
+    "ovriga_driftskostnader": 1219332,
+    "el": 364877,
+    "varme": 451178,
+    "vatten": 120190,
+    "sophamtning": 32709,
+    "fastighetsforsakringar": 104504,
+    "tomtrattsavgald": 929618,
+    "kabel_tv": null,
+    "fastighetsskatt": 89340,
+    "hiss_underhall": null,
+    "sotning_ventilation": null,
+    "samfallighetsavgifter": null,
+    "serviceavtal": 53899,
+    "periodiskt_underhall": 250886,
+    "major_repairs_water_damage": null,
+    "evidence_pages": [11]
+  },
+
+  "loans_agent": {
+    "total_debt": 29598999,
+    "long_term_debt": 18986206,
+    "short_term_debt": 10612793,
+    "loans": [
+      {
+        "lender": "Handelsbanken",
+        "loan_id": null,
+        "amount": 6987766,
+        "interest_rate_pct": 3.340,
+        "maturity_date": "2023-03-30",
+        "villkorsandringsdag": "2023-03-30",
+        "maturity_classification": "short_term"
+      },
+      {
+        "lender": "Handelsbanken",
+        "loan_id": null,
+        "amount": 6390336,
+        "interest_rate_pct": 0.650,
+        "maturity_date": "2025-12-30",
+        "villkorsandringsdag": "2025-12-30",
+        "maturity_classification": "long_term"
+      },
+      {
+        "lender": "Handelsbanken",
+        "loan_id": null,
+        "amount": 6373160,
+        "interest_rate_pct": 0.650,
+        "maturity_date": "2025-12-30",
+        "villkorsandringsdag": "2025-12-30",
+        "maturity_classification": "long_term"
+      },
+      {
+        "lender": "Handelsbanken",
+        "loan_id": null,
+        "amount": 6222710,
+        "interest_rate_pct": 0.650,
+        "maturity_date": "2025-12-30",
+        "villkorsandringsdag": "2025-12-30",
+        "maturity_classification": "long_term"
+      },
+      {
+        "lender": "Handelsbanken",
+        "loan_id": null,
+        "amount": 3625027,
+        "interest_rate_pct": 1.340,
+        "maturity_date": "2023-09-30",
+        "villkorsandringsdag": "2023-09-30",
+        "maturity_classification": "short_term"
+      }
+    ],
+    "average_interest_rate_pct": 1.18,
+    "debt_per_sqm": 5253,
+    "projected_debt_5_years": 24480979,
+    "loan_restructuring_note": "One large loan (7M kr) refinanced at 3x higher rate (1.34% → 3.34%) with 3-month term, amortization reduced from 1M kr to 500K kr annually from 2023",
+    "evidence_pages": [14]
+  },
+
+  "fees_agent": {
+    "fee_per_sqm_annual": 576,
+    "fee_increase_pct": 5.0,
+    "fee_increase_date": "2023-01-01",
+    "fee_increase_reason": "+5% från 2023-01-01, motiverad av låneomsättning (högre ränta) och kostnadsökning",
+    "multiple_increases": false,
+    "fee_history": [
+      {"year": 2022, "fee_per_sqm": 576},
+      {"year": 2021, "fee_per_sqm": 576},
+      {"year": 2020, "fee_per_sqm": 626},
+      {"year": 2019, "fee_per_sqm": 626}
+    ],
+    "evidence_pages": [4, 5]
+  },
+
+  "energy_agent": {
+    "elkostnad_per_sqm": 64,
+    "varmekostnad_per_sqm": 79,
+    "vattenkostnad_per_sqm": 21,
+    "energikostnad_per_sqm_total": 164,
+    "multi_year_energy_trends": [
+      {"year": 2022, "energi_per_sqm": 164},
+      {"year": 2021, "energi_per_sqm": 127},
+      {"year": 2020, "energi_per_sqm": 111},
+      {"year": 2019, "energi_per_sqm": 129}
+    ],
+    "electricity_increase_pct_2022_2023": null,
+    "electricity_increase_pct_3_year": null,
+    "heating_increase_pct_2022_2023": 49.1,
+    "water_increase_pct_2022_2023": 4.4,
+    "elstod_received": null,
+    "elstod_pct_offset": null,
+    "energy_initiatives": "LED belysning i entréhall samt trapphus installerat 2022 för energieffektivitet, översyn värmepumpar planerad 2023",
+    "evidence_pages": [5, 11]
+  },
+
+  "reserves_agent": {
+    "underhallsfond_balance": 2917724,
+    "underhallsfond_previous": 2387226,
+    "underhallsfond_change": 530498,
+    "reservering_till_fond": 877500,
+    "ianspraktagande_fond": 347002,
+    "underhallsplan_exists": true,
+    "underhallsplan_period": "2022-2031",
+    "evidence_pages": [1, 5, 13]
+  },
+
+  "members_agent": {
+    "total_members_start": 114,
+    "new_members": 25,
+    "departing_members": 24,
+    "total_members_end": 115,
+    "transfers_during_year": 12,
+    "evidence_pages": [5]
+  },
+
+  "events_agent": {
+    "major_events": [
+      {
+        "event": "Large loan refinanced at significantly higher rate",
+        "date": "2022",
+        "description": "Ett lån om ca 7 000 000 kr har omsatts till 3 månaders ränta om fn ca 3% från 1,34%",
+        "impact": "Interest rate increased from 1.34% to 3.34% (2.5x increase)"
+      },
+      {
+        "event": "Fee increase approved for 2023",
+        "date": "2022",
+        "description": "Beslut om att höja avgiften med 5% from 2023-01-01",
+        "impact": "First fee increase since 2020 (reduced from 626 to 576 in 2020, now +5% to 605 kr/m²)"
+      },
+      {
+        "event": "Amortization reduction agreed with bank",
+        "date": "2023",
+        "description": "Föreningen har avtalat med banken om att minska amorteringarna till ca 500 000 kr under 2023",
+        "impact": "Amortization reduced from 1M kr to 500K kr annually"
+      },
+      {
+        "event": "LED lighting upgrade",
+        "date": "2022",
+        "description": "Befintlig belysning i trapphallarna har bytts mot ledbelysning för ökad energieffektivitet",
+        "impact": "Energy efficiency improvement"
+      },
+      {
+        "event": "10-year stamspolning completed",
+        "date": "2022",
+        "description": "Stamspolning efter 10 år med bra resultat",
+        "impact": "Maintenance milestone"
+      }
+    ],
+    "evidence_pages": [3, 5]
+  },
+
+  "notes_maintenance_agent": {
+    "major_maintenance_completed": [
+      {
+        "period": "2022",
+        "description": "Hissar, LED belysning i entréhall och trapphus, hisstelefon utbytt (gammalt 3G system), stamspolning (10-årsintervall)"
+      }
+    ],
+    "planned_maintenance": [
+      {
+        "period": "2023",
+        "description": "Översyn värmepumpar (effekthöjande), energideklaration (myndighetskrav)"
+      }
+    ],
+    "maintenance_expenses_major": {
+      "total_major_repairs": 219747,
+      "water_fire_damage": null,
+      "periodiskt_underhall": 250886
+    },
+    "underhallsplan_period": "2022-2031",
+    "evidence_pages": [1, 3, 11]
+  },
+
+  "insurance_agent": {
+    "insurance_provider": "Trygg-Hansa",
+    "insurance_premium": 104504,
+    "property_coverage": "Fullvärdesförsäkring",
+    "liability_coverage": "Kollektivt bostadsrättstillägg för medlemmarna samt ansvarsförsäkring för styrelsen",
+    "fastighetsinteckningar_sakerheter": 38800000,
+    "evidence_pages": [2, 14]
+  },
+
+  "tax_agent": {
+    "fastighetsskatt": 89340,
+    "fastighetsavgift_exemption": false,
+    "exemption_years": null,
+    "skattekonto_balance": 101822,
+    "moms_avrakning": null,
+    "evidence_pages": [11, 13]
+  },
+
+  "planned_actions_agent": {
+    "planned_actions": [
+      {
+        "action": "Heat pump review for efficiency improvement",
+        "status": "Planned 2023",
+        "description": "Översyn värmepumpar 2023 (effekthöjande)",
+        "timeline": "2023"
+      },
+      {
+        "action": "Energy declaration (regulatory requirement)",
+        "status": "Planned 2023",
+        "description": "Energideklaration 2023 (myndighetskrav)",
+        "timeline": "2023"
+      }
+    ],
+    "evidence_pages": [3]
+  },
+
+  "cashflow_agent": {
+    "cash_flow_statement_present": true,
+    "cash_start_of_year": 1529010,
+    "cash_end_of_year": 1291373,
+    "cash_change": -237637,
+    "cash_from_operations": -237637,
+    "cash_from_investments": 0,
+    "cash_from_financing": -1023604,
+    "evidence_pages": [4]
+  },
+
+  "depreciation_agent": {
+    "total_depreciation": 2622903,
+    "building_depreciation_rate_pct": 0.83,
+    "property_improvements_depreciation_rate_pct": 10.0,
+    "accumulated_depreciation": 23765987,
+    "ack_anskaffningsvarde": 314442134,
+    "restvarde_enligt_plan": 290676147,
+    "mark_value_included": null,
+    "evidence_pages": [10, 13]
+  },
+
+  "driftskostnader_agent": {
+    "total_driftskostnader": 2984990,
+    "fastighetsskotsel": 301100,
+    "reparationer_underhall": 219747,
+    "el": 364877,
+    "uppvarmning": 451178,
+    "vatten": 120190,
+    "sophamtning": 32709,
+    "fastighetsforsakringar": 104504,
+    "tomtrattsavgald": 929618,
+    "kabel_tv": null,
+    "fastighetsskatt": 89340,
+    "ventilation_major": null,
+    "varmeanlaggning_major": null,
+    "ovriga_externa_kostnader": 191561,
+    "personalkostnader": 174942,
+    "samfallighetsavgifter": null,
+    "serviceavtal": 53899,
+    "bredband": 181041,
+    "periodiskt_underhall": 250886,
+    "evidence_pages": [11, 12]
+  },
+
+  "commercial_tenants_agent": {
+    "has_commercial_space": true,
+    "total_commercial_area_sqm": 70,
+    "commercial_rent_collected": 221068,
+    "commercial_rent_pct_of_revenue": 4.8,
+    "tenant_name": "Östermalms Stadsdelsförvaltning (70 m²), H3G Access (1 m² antenna)",
+    "tenant_since": null,
+    "evidence_pages": [2, 10]
+  },
+
+  "enhanced_loans_agent": {
+    "total_debt": 29598999,
+    "langfristig_debt": 18986206,
+    "kortfristig_debt": 10612793,
+    "kortfristig_pct": 35.8,
+    "lender_concentration": {
+      "Handelsbanken": 100.0
+    },
+    "maturity_profile": {
+      "within_6_months": 6987766,
+      "6_12_months": 3625027,
+      "1_2_years": 0,
+      "2_5_years": 18986206,
+      "over_5_years": 0
+    },
+    "interest_rate_range": {
+      "min_rate_pct": 0.650,
+      "max_rate_pct": 3.340,
+      "weighted_avg_pct": 1.18
+    },
+    "risk_assessment": {
+      "refinancing_risk": "MEDIUM",
+      "interest_rate_risk": "HIGH",
+      "lender_concentration_risk": "HIGH",
+      "overall_risk": "MEDIUM"
+    },
+    "risk_factors": [
+      "Large loan (7M kr) refinanced at 3x higher rate (1.34% → 3.34%) with short 3-month term",
+      "35.8% of debt matures within 12 months (10.6M kr total kortfristig)",
+      "100% concentration with single lender (Handelsbanken)",
+      "Three bundna loans at 0.65% mature end of 2025 - significant upside risk at refinancing",
+      "Amortization reduced from 1M kr to 500K kr annually (weakens debt reduction trajectory)",
+      "Board notes monitoring interest rate environment for potential actions"
+    ],
+    "evidence_pages": [4, 14]
+  },
+
+  "revenue_breakdown_agent": {
+    "arsavgifter_bostader": 3244218,
+    "hyror_lokaler": 221068,
+    "hyror_garage": 811561,
+    "hyror_forrad": null,
+    "bredband": 182160,
+    "andrahandsuthyrning": null,
+    "uppvarmning_debitering": null,
+    "vatten_debitering": 65926,
+    "el_debitering": 13133,
+    "fastighetsskatt_debitering": null,
+    "overlatelseintakter": 24633,
+    "gastlagenhet": 44900,
+    "ovriga_rorelseintakter": 86683,
+    "elstod": null,
+    "solceller_revenue": null,
+    "laddstolpar_revenue": null,
+    "total_rorelseintakter": 4624043,
+    "evidence_pages": [10]
+  }
+}
