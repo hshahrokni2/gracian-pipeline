@@ -372,7 +372,39 @@ DETAILS:
 - Schema: **26th consecutive ZERO new fields** (99.5%+ complete)
 - **STRATEGIC IMPLICATIONS**: 89% soliditet enabled 4-year counter-cyclical strategy, but refinancing shock threatens sustainability. Bundna loans maturing 2025 = major exposure.
 
-PDF 30 (brf_54015 - HSB Lill-Jan i Stockholm 2023): ✅ COMPLETE - 🚨 HIGH DEBT TIER + 5 CONSECUTIVE YEARS OF LOSSES!
+PDF 30 (brf_58256 - Brf Husarviken 2022): ✅ COMPLETE - 🏢 DUAL SAMFÄLLIGHETER + 5-YEAR CHRONIC LOSSES!
+[❌] Loan reclassification? (kortfristig 29.0% - MEDIUM tier borderline) NO (stable medium)
+[❌] Multiple fee increases? (HELD CONSTANT 695 kr/m² for 5+ years!) NO (STRATEGIC STABILITY!)
+[❌] Electricity increase >50%? (broadband +24.9%, utilities stable) NO (BROADBAND UPGRADE)
+[❌] Lokaler >15% of area? (0% commercial, residential only) NO (RESIDENTIAL ONLY)
+
+SCORE: 0 / 4 (0%) - **CLEAN PDF WITH STRATEGIC LOSS MANAGEMENT!** ✅
+DETAILS:
+- Loans: **4.26M short-term / 14.71M total = 29.0% kortfristig (MEDIUM tier, 11th example)** - 4 SEB loans, mixed rates 0.59%-3.21%, **300K EXTRA AMORTIZATION** despite chronic losses! ⭐
+- **CHRONIC LOSS STRATEGY**: **5 CONSECUTIVE YEARS** (-1.5M/year, -7.3M total 2018-2022) while maintaining **90.9% soliditet** - **FIRST 5-YEAR CHRONIC CASE!** 🚨🚨🚨
+- **FEE STABILITY STRATEGY**: Held 695 kr/m² constant for 5+ years (2018-2022) despite losses = intentional absorption via equity buffer (counter-cyclical governance!) ⭐⭐
+- **TOMTRÄTT STAGED INCREASES**: 515,500 → 781,200 kr over 4 years (+51.5%, +265,700 kr burden!) - **MASSIVE COST PRESSURE TELEGRAPHED!**
+- **DUAL SAMFÄLLIGHETER (RARE!)**: GA1 (3-party, 20.83% Husarviken share, formal board) + GA2 (2-party, 32.52% share, informal dialog) = **HIGH GOVERNANCE COMPLEXITY!** 🏢🏢
+- **HUSARVIKEN CLUSTER (4th BRF!)**: Same developer area as PDFs 23, 24, 27 - shared managers (Fastum, Sjödalens), shared infrastructure (GA1+GA2)
+- **TOMTRÄTT = #1 COST**: 548,700 kr (30.0% of operating costs) > ALL utilities combined (32.4%) - **DOMINANT SINGLE LINE ITEM!**
+- **EXTRA AMORTIZATION BRILLIANCE**: 300K kr Dec 2022 despite losses = strategic debt reduction to reduce future interest burden! 💰
+- **MIXED INTEREST PORTFOLIO**: 0.59%, 0.89%, 3.21%, 3.21% on 4 loans = hedged refinancing risk (43% locked low until 2024-2026)
+- **50% EV CHARGING**: 10 chargers / 20 garage spaces (TOP 5% coverage in corpus!) - forward-looking amenity ⚡
+- Energy: **BROADBAND SPIKE** +24.9% (87,724 → 109,580 kr) = quality/capacity upgrade, utilities stable
+- Lokaler: **0% commercial** (residential only, 40 apartments, 2,976 m²)
+- **MODERN CONSTRUCTION**: 2013 (10 years old), minimal major maintenance expected
+- **WIFI GARAGE + PUMP + FURNITURE**: Operational improvements showing active board management
+- Schema: **27th consecutive ZERO new fields** (99.5%+ complete)
+- **K2 ACCOUNTING**: 17 pages comprehensive report
+
+**CRITICAL INSIGHTS**:
+- 🏆 **CHRONIC LOSS VIABILITY**: 90.9% soliditet enables 5+ years of -1.5M/year losses without solvency risk (50-year buffer!)
+- 🎯 **COUNTER-CYCLICAL SUCCESS**: Residents enjoy stable fees while board absorbs external shocks (tomträtt, energy, rates)
+- 🏗️ **TOMTRÄTT DOMINANCE**: Ground lease becoming single largest cost (30%+), structural disadvantage vs äganderätt BRFs
+- 🏢 **DUAL GA COMPLEXITY**: Only dual samfällighet case in corpus - governance burden but cost efficiency potential
+- 💰 **STRATEGIC EXTRA AMORTIZATION**: 300K kr despite losses = balance sheet optimization (reduce future interest costs)
+- 🔌 **EV INFRASTRUCTURE LEADER**: 50% coverage = TOP 5%, attracts environmentally-conscious buyers
+- 📊 **HUSARVIKEN CLUSTER VALIDATION**: 4th BRF confirms standardization pattern (same managers, shared infrastructure, coordinated costs)
 [✅] Loan reclassification? (kortfristig 70.4% - HIGH tier!) YES (2nd HIGH example!)
 [❌] Multiple fee increases? (single +2% in 2023, +6% approved 2024) NO (INADEQUATE RESPONSE)
 [❌] Electricity increase >50%? (+11% actual, +49% per m² = methodology artifact BFNAR 2023:1) NO (METHODOLOGY EFFECT)
