@@ -835,5 +835,66 @@ DETAILS:
 
 ---
 
-**Last Updated**: PDF 40/43 (brf_80193)
-**Next Action**: Implement Phase 2 enhancements (5 + 8) before processing PDF 41
+**Last Updated**: PDF 41/43 (brf_81732)
+**Next Action**: Continue scoring remaining 2 PDFs (42, 43) against 8 enhancements
+
+PDF 41 (brf_81732 - Brf Norra Djurgårdsstaden 2023): ✅ COMPLETE - 🚨 EXTREME REFINANCING CRISIS!
+[✅] Loan reclassification? (kortfristig 69.5% - HIGH tier!) YES (4th HIGH example!)
+[❌] Multiple fee increases? (single +4% in 2023, +10% planned 2024) NO
+[❌] Electricity increase >50%? (el -8.7%, heating +41.4%, water +106%) PARTIAL (water only, small absolute)
+[❌] Lokaler >15% of area? (1.41% = 78/5,533 m²) MINIMAL (NEGLIGIBLE)
+[❌] Cash crisis? (995 TSEK likvida medel, 4.2% cash-to-debt ratio) NO (ADEQUATE)
+[❌] Depreciation paradox? (Result w/o depreciation +474 TSEK) NO (STANDARD Pattern B)
+[❌] Tomträtt escalation? (21.1% of revenue, DECREASED -26% from 1,300→962 TSEK!) NO
+[✅] Fee response classifier? (+4% then +10% = MODERATE, but INADEQUATE) YES
+
+SCORE: 2 / 8 (25%)
+
+DETAILS:
+- **Loans**: 16,514 TSEK short-term / 23,758 TSEK total = **69.5% kortfristig (HIGH tier! 4th example)** ⚡⚡⚡
+  - **EXTREME REFINANCING CRISIS**: 3 loans (16,514 TSEK = 69.5%) mature **2024-02-28 (2 months from fiscal year end!)**
+  - **HIGHEST SHORT-TERM CLUSTER YET**: 69.5% exceeds PDF 18 (68.1%), PDF 23 (65.4%), PDF 31 (65.7%)
+  - **Rate spread**: 0.80% to 4.62% (5.8x = EXTREME vulnerability!)
+  - **100% SEB concentration**: All 4 loans with single lender (no diversification)
+  - **2-month refinancing window**: 16.5M must refinance in Feb 2024 at likely MUCH higher rates!
+- **Chronic Losses**: 4 consecutive years (-1.76M → -2.01M → -1.94M → -2.19M), Pattern B-NEW (11 years old, 2012)
+- **Soliditet**: 92% (EXCELLENT - paradox of high equity ratio but extreme refinancing pressure)
+- **Cash Crisis**: ❌ NO - 995 TSEK likvida medel (adequate, 4.2% of debt, includes klientmedel)
+- **Depreciation Paradox**: ❌ NO - Result w/o depreciation = -2,194 + 2,668 = +474 TSEK (POSITIVE cash flow, standard Pattern B)
+- **Tomträtt**: ❌ NO escalation - 962 TSEK (21.1% of revenue), DECREASED -26% from 1,300 TSEK (2022), renewal 2031
+- **Fee Response**: ✅ MODERATE to PASSIVE classification
+  - +4% increase (2023): 644 → 717 kr/m² generates ~398 TSEK revenue (covers only 18% of deficit)
+  - +10% planned (2024): adds ~391 TSEK = total 789 TSEK cumulative revenue increase
+  - **Still only covers 36% of 2,194 TSEK deficit + does NOT address refinancing shock!**
+  - **Assessment**: INADEQUATE response given EXTREME refinancing crisis (16.5M in 2 months) + chronic losses
+- Energy: ❌ NO crisis - El -8.7% (274 → 300 TSEK), Heating +41.4% (557 → 394 TSEK), Water +106% (101 → 49 TSEK, small absolute)
+- Lokaler: ❌ MINIMAL - 78 m² (1.41%), one lokal only
+- **Samfällighet**: Garphyttans SFF (35.9% share, 310 TSEK cost), GA1 manages gård/garage
+- **Management Changes**: Triple switch - SBC → Nabo (economic 1.10.2023, technical 1.2.2024, property 1.7.2024)
+- **Insurance Switch**: TryggHansa → Bostadsrätterna
+- **Elprisstöd**: 70 TSEK received (government electricity support)
+- **K2 Accounting**: 21 pages, simplified framework
+- Schema: **30th consecutive ZERO new fields** (99.5%+ complete)
+
+**CRITICAL INSIGHTS**:
+- 🚨 **EXTREME REFINANCING CRISIS**: 69.5% maturing in 2 months = HIGHEST short-term concentration yet!
+- 📊 **HIGH TIER PATTERN VALIDATION**: 4th HIGH tier (>50% kortfristig) confirms this is real risk category (13.3% of corpus)
+- 🎯 **FEE INADEQUACY EXTREME**: +14.4% cumulative increase covers only 36% of deficit + IGNORES refinancing shock
+- 💰 **100% SEB SINGLE POINT OF FAILURE**: All debt with one lender = must negotiate all refinancing simultaneously
+- ⚡ **RATE VULNERABILITY**: 5.8x rate spread (0.80%-4.62%) = some loans already at crisis rates, others will spike
+- 🏗️ **PATTERN B-NEW**: 11 years old (2012) with chronic losses but POSITIVE cash flow (+474k) before K2 depreciation
+- 🎖️ **SOLIDITET PARADOX**: 92% equity ratio (EXCELLENT) but extreme refinancing pressure = balance sheet ≠ liquidity safety
+- 🏢 **SAMFÄLLIGHET SHIFT**: 310 TSEK (2023) vs 229 TSEK (2022) = +35.4% increase (shared infrastructure burden growing)
+- 📉 **TOMTRÄTT RELIEF**: Rare case of DECREASING tomträtt (-26%) provides some cost relief (but still 21% of revenue)
+- 🔧 **OPERATIONAL IMPROVEMENTS**: Porttelefon upgrade, LED lighting, NDS laddboxar, brytskydd, rat sanitation completed
+- 🔄 **MANAGEMENT CONTINUITY RISK**: Triple administrator change in 4 months may affect refinancing negotiations
+
+**ENHANCEMENT VALIDATION STATUS** (After PDF 41):
+1. **loans_agent**: ✅ YES (41/41 = 100%, universal pattern, HIGH tier 4th example)
+2. **fees_agent (multiple)**: ❌ NO (still 8/41 = 19.5%, stable prevalence)
+3. **energy_agent**: ❌ NO (41/41 = 100% have energy data, but this PDF has no crisis-level increase)
+4. **property_agent (lokaler)**: ❌ NO (still ~25% prevalence, this PDF minimal commercial)
+5. **cash_crisis_agent**: ❌ NO (still 1/41 = 2.4%, this PDF has adequate cash)
+6. **depreciation_paradox**: ❌ NO (standard Pattern B, not paradox)
+7. **tomtratt_escalation**: ❌ NO (DECREASED not increased, moderate burden)
+8. **fee_response_classifier**: ✅ YES (41/41 = 100%, MODERATE to PASSIVE classification validated)
