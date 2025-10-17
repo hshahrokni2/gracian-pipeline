@@ -1,0 +1,310 @@
+# Pattern Classification Rules for BRF Financial Analysis
+# Defines thresholds and logic for 8 key patterns validated on 43-PDF corpus
+
+patterns:
+  # ============================================================================
+  # PATTERN 1: Refinancing Risk (100% prevalence - universal)
+  # ============================================================================
+  refinancing_risk:
+    name: "Refinancing Risk Assessment"
+    description: "Assesses refinancing risk based on debt maturity structure"
+    type: "categorical"
+    output_field: "refinancing_risk_tier"
+
+    tiers:
+      EXTREME:
+        description: ">60% short-term debt with <12 month maturity cluster"
+        conditions:
+          - field: "kortfristig_skulder_ratio"
+            operator: ">"
+            value: 60
+          - field: "maturity_cluster_months"
+            operator: "<"
+            value: 12
+        logic: "ALL"
+
+      HIGH:
+        description: ">50% short-term debt AND (low equity OR unprofitable)"
+        conditions:
+          - field: "kortfristig_skulder_ratio"
+            operator: ">"
+            value: 50
+          - OR:
+              - field: "soliditet_pct"
+                operator: "<"
+                value: 75
+              - field: "net_income"
+                operator: "<"
+                value: 0
+        logic: "COMPLEX"
+
+      MEDIUM:
+        description: "30-50% short-term debt"
+        conditions:
+          - field: "kortfristig_skulder_ratio"
+            operator: "BETWEEN"
+            value: [30, 50]
+        logic: "ALL"
+
+      NONE:
+        description: "<30% short-term with healthy balance sheet"
+        default: true
+
+  # ============================================================================
+  # PATTERN 2: Fee Response Classification (100% prevalence)
+  # ============================================================================
+  fee_response:
+    name: "Fee Response Classification"
+    description: "Classifies management's fee adjustment strategy"
+    type: "categorical"
+    output_field: "fee_response_classification"
+
+    tiers:
+      DISTRESS:
+        description: "Emergency increases + weak balance sheet"
+        conditions:
+          - field: "fee_increase_count_current_year"
+            operator: ">="
+            value: 2
+          - field: "soliditet_pct"
+            operator: "<"
+            value: 60
+          - OR:
+              - field: "cash_to_debt_ratio_current_year"
+                operator: "<"
+                value: 5
+              - field: "consecutive_loss_years"
+                operator: ">="
+                value: 2
+        logic: "COMPLEX"
+
+      REACTIVE:
+        description: "Multiple increases responding to financial stress"
+        conditions:
+          - field: "fee_increase_count_current_year"
+            operator: ">="
+            value: 2
+          - OR:
+              - field: "soliditet_pct"
+                operator: "<"
+                value: 75
+              - field: "net_income"
+                operator: "<"
+                value: 0
+        logic: "COMPLEX"
+
+      AGGRESSIVE:
+        description: "Single large increase with strong balance sheet"
+        conditions:
+          - field: "fee_increase_count_current_year"
+            operator: "=="
+            value: 1
+          - field: "fee_increase_total_pct"
+            operator: ">="
+            value: 20
+          - field: "soliditet_pct"
+            operator: ">="
+            value: 75
+        logic: "ALL"
+
+      PROACTIVE:
+        description: "Planned increases with stable operations"
+        default: true
+
+  # ============================================================================
+  # PATTERN 3: Depreciation Paradox (4.7% prevalence)
+  # ============================================================================
+  depreciation_paradox:
+    name: "Depreciation Paradox Detection"
+    description: "Paper losses but strong cash flow due to K2/K3 accounting"
+    type: "boolean"
+    output_field: "depreciation_paradox_detected"
+
+    conditions:
+      - field: "result_without_depreciation_current_year"
+        operator: ">="
+        value: 500000
+      - field: "soliditet_pct"
+        operator: ">="
+        value: 85
+    logic: "ALL"
+
+  # ============================================================================
+  # PATTERN 4: Cash Crisis (2.3% prevalence)
+  # ============================================================================
+  cash_crisis:
+    name: "Cash Crisis Detection"
+    description: "Rapid cash depletion + refinancing pressure"
+    type: "boolean"
+    output_field: "cash_crisis_detected"
+
+    conditions:
+      - field: "cash_to_debt_ratio_current_year"
+        operator: "<"
+        value: 5
+      - AND:
+          - field: "cash_to_debt_ratio_current_year"
+            operator: "<"
+            value: "cash_to_debt_ratio_prior_year"  # Special case: compare to prior
+      - field: "short_term_debt_pct"
+        operator: ">"
+        value: 50
+    logic: "ALL"
+
+  # ============================================================================
+  # PATTERN 5: Lokaler Dependency Risk (25.6% prevalence)
+  # ============================================================================
+  lokaler_dependency:
+    name: "Commercial Space Dependency Risk"
+    description: "Risk from commercial tenant revenue dependency"
+    type: "categorical"
+    output_field: "lokaler_dependency_risk_tier"
+
+    tiers:
+      HIGH:
+        description: "Dual threshold: <15% area BUT ≥30% revenue"
+        conditions:
+          - field: "lokaler_area_percentage"
+            operator: "<"
+            value: 15
+          - field: "lokaler_revenue_percentage"
+            operator: ">="
+            value: 30
+        logic: "ALL"
+
+      MEDIUM_HIGH:
+        description: "≥30% revenue or ≥20% area"
+        conditions:
+          - OR:
+              - field: "lokaler_revenue_percentage"
+                operator: ">="
+                value: 30
+              - field: "lokaler_area_percentage"
+                operator: ">="
+                value: 20
+        logic: "COMPLEX"
+
+      MEDIUM:
+        description: "15-30% revenue or 10-20% area"
+        conditions:
+          - OR:
+              - field: "lokaler_revenue_percentage"
+                operator: "BETWEEN"
+                value: [15, 30]
+              - field: "lokaler_area_percentage"
+                operator: "BETWEEN"
+                value: [10, 20]
+        logic: "COMPLEX"
+
+      LOW:
+        description: "<15% revenue and <10% area"
+        default: true
+
+  # ============================================================================
+  # PATTERN 6: Tomträtt Escalation Risk (16.3% prevalence)
+  # ============================================================================
+  tomtratt_escalation:
+    name: "Tomträtt (Ground Lease) Escalation Risk"
+    description: "Risk from escalating ground lease costs"
+    type: "categorical"
+    output_field: "tomtratt_escalation_risk_tier"
+
+    tiers:
+      EXTREME:
+        description: "≥100% YoY increase or ≥25% of operating costs"
+        conditions:
+          - OR:
+              - field: "tomtratt_escalation_percent"
+                operator: ">="
+                value: 100
+              - field: "tomtratt_percent_of_operating_costs"
+                operator: ">="
+                value: 25
+        logic: "COMPLEX"
+
+      HIGH:
+        description: "50-100% YoY increase or 15-25% of costs"
+        conditions:
+          - OR:
+              - field: "tomtratt_escalation_percent"
+                operator: "BETWEEN"
+                value: [50, 100]
+              - field: "tomtratt_percent_of_operating_costs"
+                operator: "BETWEEN"
+                value: [15, 25]
+        logic: "COMPLEX"
+
+      MEDIUM:
+        description: "25-50% YoY increase or 10-15% of costs"
+        conditions:
+          - OR:
+              - field: "tomtratt_escalation_percent"
+                operator: "BETWEEN"
+                value: [25, 50]
+              - field: "tomtratt_percent_of_operating_costs"
+                operator: "BETWEEN"
+                value: [10, 15]
+        logic: "COMPLEX"
+
+      LOW:
+        description: "<25% YoY increase and <10% of costs"
+        conditions:
+          - field: "tomtratt_escalation_percent"
+            operator: "<"
+            value: 25
+          - field: "tomtratt_percent_of_operating_costs"
+            operator: "<"
+            value: 10
+        logic: "ALL"
+
+      NONE:
+        description: "No tomträtt (full ownership)"
+        default: true
+
+  # ============================================================================
+  # PATTERN 7: Pattern B (Young + Chronic Losses) - 16.3% prevalence
+  # ============================================================================
+  pattern_b:
+    name: "Pattern B: Young BRF with Chronic Losses"
+    description: "Recently converted (<10 years) with persistent losses despite positive cash flow"
+    type: "boolean"
+    output_field: "pattern_b_detected"
+
+    conditions:
+      - field: "building_age_at_report"
+        operator: "<="
+        value: 10
+      - field: "consecutive_loss_years"
+        operator: ">="
+        value: 3
+      - field: "result_without_depreciation_current_year"
+        operator: ">"
+        value: 0
+      - field: "soliditet_pct"
+        operator: ">="
+        value: 80
+    logic: "ALL"
+
+  # ============================================================================
+  # PATTERN 8: Interest Rate Victim (2.3% prevalence)
+  # ============================================================================
+  interest_rate_victim:
+    name: "Interest Rate Shock Victim"
+    description: "Profitable → Loss due to interest rate increases"
+    type: "boolean"
+    output_field: "interest_rate_victim_detected"
+
+    conditions:
+      - field: "net_income"
+        operator: "<"
+        value: 0
+      - field: "net_income_prior_year"
+        operator: ">"
+        value: 0
+      - field: "interest_expense_yoy_increase_pct"
+        operator: ">="
+        value: 50
+      - field: "operating_income"
+        operator: ">"
+        value: 0
+    logic: "ALL"
