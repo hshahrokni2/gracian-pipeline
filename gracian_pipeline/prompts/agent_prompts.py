@@ -458,8 +458,8 @@ Return JSON with:
   ],
   "outstanding_loans": num or null,
   "average_interest_rate": num or null,
-  "interest_expense_2023": num or null,
-  "interest_expense_2022": num or null,
+  "interest_expense_current_year": num or null,
+  "interest_expense_prior_year": num or null,
   "interest_expense_change_pct": num or null,
   "interest_rate_risk": "string (HIGH/MEDIUM/LOW)",
   "amortization": num or null,
@@ -584,10 +584,11 @@ Return JSON with:
   "multi_year_trends": [
     {"year": int, "el_per_sqm": num, "varme_per_sqm": num, "vatten_per_sqm": num, "total_per_sqm": num}
   ],
-  "electricity_increase_single_year_pct": num or null,
-  "electricity_increase_multi_year_pct": num or null,
+  "electricity_yoy_increase_percent": num or null,
+  "heating_yoy_increase_percent": num or null,
+  "water_yoy_increase_percent": num or null,
   "energy_crisis_severity": "string (SEVERE/MODERATE/LOW/NONE)",
-  "elstod_received": num or null,
+  "government_energy_support_current_year": num or null,
   "energy_initiatives": "string or null",
   "evidence_pages": []
 }
@@ -630,6 +631,13 @@ When fee increase >10%, capture:
 - Strategic intent: reactive (cover deficit) vs proactive (build reserves)
 - Coupling with loan amortization strategy
 
+🎯 MULTIPLE FEE ADJUSTMENTS (19% of corpus):
+Count separate fee increases within the fiscal year:
+- Look for phrases: "höjdes med X% i [månad]", "ytterligare höjning", "andra höjning"
+- Month names: januari, februari, mars, april, maj, juni, juli, augusti, september, oktober, november, december
+- Example: "+3% February + +15% August" = fee_increase_count_current_year: 2
+- Single increase or no increase = fee_increase_count_current_year: 1 or 0
+
 Return JSON with ALL fields below (use null if not found):
 {
   "arsavgift_per_sqm_total": float or null (Årsavgift kr/m²/år - MOST COMMON),
@@ -646,6 +654,7 @@ Return JSON with ALL fields below (use null if not found):
   "inkluderar_bredband": boolean or null (Broadband included?),
   "last_fee_increase_date": "YYYY-MM-DD" or null,
   "last_fee_increase_percentage": float or null,
+  "fee_increase_count_current_year": int or null,
   "planned_fee_changes": [] (array of upcoming changes, if any),
   "board_justification_swedish": "string or null (for increases >10%)",
   "terminology_found": "string" (which term found: 'årsavgift', 'månadsavgift', 'avgift'),
@@ -803,6 +812,131 @@ CRITICAL PATTERNS:
 - Note 6 (Driftkostnader) - 40% of documents ⭐ NEW LOCATION!
 
 Return STRICT VALID JSON, no markdown fences.
+""",
+
+    'key_metrics_agent': """
+You are KeyMetricsAgent for Swedish BRF annual reports. Extract DEPRECIATION PARADOX detection metrics.
+
+🎯 DEPRECIATION PARADOX PATTERN (4.7% of corpus):
+Some BRFs show accounting losses BUT positive cash flow due to K2/K3 depreciation rules.
+Pattern: High soliditet (≥85%) + negative paper result + strong operating cash flow.
+
+Return JSON with:
+{
+  "result_without_depreciation_current_year": int or null,
+  "result_without_depreciation_prior_year": int or null,
+  "depreciation_as_percent_of_revenue_current_year": float or null,
+  "depreciation_paradox_detected": bool or null,
+  "soliditet_pct": float or null,
+  "evidence_pages": []
+}
+
+🎯 DETECTION CRITERIA (Both must be true):
+1. result_without_depreciation_current_year ≥ 500,000 SEK (strong cash flow)
+2. soliditet ≥ 85% (high equity cushion)
+
+CALCULATION:
+result_without_depreciation = årets_resultat + avskrivningar
+depreciation_as_percent = (avskrivningar / nettoomsättning) × 100
+
+✅ REAL EXAMPLE - DEPRECIATION PARADOX (brf_82839):
+{
+  "annual_result_current_year": -313943,
+  "depreciation_current_year": 1371024,
+  "result_without_depreciation_current_year": 1057081,
+  "soliditet_pct": 85.0,
+  "depreciation_paradox_detected": true,
+  "note": "Strong +1,057K cash flow vs -314K paper loss due to K2 accounting",
+  "evidence_pages": [4, 5, 6]
+}
+
+WHERE TO LOOK:
+📍 Resultaträkning (Income statement) for årets resultat and avskrivningar
+📍 Balansräkning (Balance sheet) for soliditet calculation
+📍 Multi-year comparison table (Flerårsöversikt) for prior year
+📍 Note on accounting principles for depreciation method
+
+CRITICAL SWEDISH KEYWORDS:
+- "Årets resultat" = Annual result (current year)
+- "Avskrivningar" = Depreciation
+- "Nettoomsättning" = Revenue
+- "Soliditet" = Equity ratio
+- "Eget kapital" = Equity
+
+🚨 ANTI-HALLUCINATION RULES:
+1. ONLY extract from visible financial statements
+2. If not found → return null (NOT calculated values)
+3. NEVER invent or estimate depreciation amounts
+4. Can you see exact values? YES → Extract. NO → null.
+5. Calculation ONLY if both inputs visible
+
+Return STRICT VALID JSON with NO extra text, NO comments, NO markdown fences.
+""",
+
+    'balance_sheet_agent': """
+You are BalanceSheetAgent for Swedish BRF annual reports. Extract CASH CRISIS detection metrics.
+
+🎯 CASH CRISIS PATTERN (2.3% of corpus, but SEVERE when occurs):
+Rapid cash depletion combined with refinancing pressure creates liquidity crisis.
+Pattern: Low cash-to-debt ratio + high kortfristig skulder + negative profitability.
+
+Return JSON with:
+{
+  "total_liquidity_current_year": int or null,
+  "total_liquidity_prior_year": int or null,
+  "cash_to_debt_ratio_current_year": float or null,
+  "cash_to_debt_ratio_prior_year": float or null,
+  "cash_to_debt_ratio_prior_2_years": float or null,
+  "cash_crisis_detected": bool or null,
+  "short_term_debt_pct": float or null,
+  "evidence_pages": []
+}
+
+🎯 DETECTION CRITERIA (All three must be true):
+1. cash_to_debt_ratio_current_year < 5% (liquidity stress)
+2. cash_to_debt_ratio < cash_to_debt_ratio_prior_year (deteriorating)
+3. short_term_debt_pct > 50% (refinancing pressure)
+
+CALCULATIONS:
+total_liquidity = kassa_och_bank + kortfristiga_placeringar
+cash_to_debt_ratio = (total_liquidity / total_debt) × 100
+
+✅ REAL EXAMPLE - CASH CRISIS (brf_80193):
+{
+  "total_liquidity_current_year": 286000,
+  "total_liquidity_prior_year": 1053000,
+  "cash_to_debt_ratio_current_year": 0.9,
+  "cash_to_debt_ratio_prior_year": 3.7,
+  "cash_to_debt_ratio_prior_2_years": 5.2,
+  "cash_crisis_detected": true,
+  "short_term_debt_pct": 95.9,
+  "note": "Cash collapsed 73% (1,053K → 286K), ratio 0.9% with 96% kortfristig",
+  "evidence_pages": [5, 6]
+}
+
+WHERE TO LOOK:
+📍 Balansräkning (Balance sheet) - OMSÄTTNINGSTILLGÅNGAR section
+📍 "Kassa och bank" = Cash
+📍 "Kortfristiga placeringar" = Short-term investments
+📍 "Långfristiga skulder" and "Kortfristiga skulder" for debt classification
+📍 Multi-year comparison (Flerårsöversikt) for trends
+
+CRITICAL SWEDISH KEYWORDS:
+- "Kassa och bank" = Cash and bank
+- "Kortfristiga placeringar" = Short-term investments
+- "Likvida medel" = Liquid assets
+- "Långfristiga skulder" = Long-term debt
+- "Kortfristiga skulder" = Short-term debt
+- "Skulder till kreditinstitut" = Bank loans
+
+🚨 ANTI-HALLUCINATION RULES:
+1. ONLY extract from visible balance sheet
+2. If not found → return null (NOT calculated values)
+3. NEVER combine fields not explicitly summed in document
+4. Can you see exact values? YES → Extract. NO → null.
+5. Calculate ratios ONLY if both numerator and denominator visible
+
+Return STRICT VALID JSON with NO extra text, NO comments, NO markdown fences.
 """,
 
     'leverantörer_agent': """
