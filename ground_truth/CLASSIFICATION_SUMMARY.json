@@ -1,0 +1,40 @@
+{
+  "pattern_distribution": [
+    39,
+    38,
+    38,
+    3,
+    0,
+    2,
+    0,
+    0,
+    5,
+    "0.05",
+    "1.90"
+  ],
+  "high_risk_brfs": [
+    [
+      "brf_280938",
+      "Brf Unit\u00e9",
+      "UNKNOWN",
+      1,
+      1
+    ],
+    [
+      "brf_54015",
+      "HSB bostadsr\u00e4ttsf\u00f6rening Lill-Jan i Stockholm",
+      "UNKNOWN",
+      1,
+      2
+    ]
+  ],
+  "overall_statistics": [
+    39,
+    "0E-20",
+    0,
+    0,
+    0,
+    0
+  ],
+  "timestamp": "2025-10-17T21:51:55.074852"
+}

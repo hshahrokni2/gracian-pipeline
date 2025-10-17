@@ -9,40 +9,72 @@
     "pages_total": 16,
     "report_type": "årsredovisning",
     "property_manager": "SBC",
-    "evidence_pages": [1, 2, 3, 4]
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4
+    ]
   },
-
   "governance_agent": {
     "chairman": "Yvonne Halling",
     "vice_chairman": "Christofer Ljunggren",
     "treasurer": "Bo Halling",
     "secretary": "Christopher Lillthors",
     "board_members": [
-      {"name": "Yvonne Halling", "role": "Ordförande"},
-      {"name": "Christofer Ljunggren", "role": "Vice Ordförande"},
-      {"name": "Bo Halling", "role": "Kassör"},
-      {"name": "Christopher Lillthors", "role": "Sekreterare"},
-      {"name": "Cecilia Malmsten", "role": "Suppleant"},
-      {"name": "Hanna Santesson", "role": "Suppleant"}
+      {
+        "name": "Yvonne Halling",
+        "role": "Ordförande"
+      },
+      {
+        "name": "Christofer Ljunggren",
+        "role": "Vice Ordförande"
+      },
+      {
+        "name": "Bo Halling",
+        "role": "Kassör"
+      },
+      {
+        "name": "Christopher Lillthors",
+        "role": "Sekreterare"
+      },
+      {
+        "name": "Cecilia Malmsten",
+        "role": "Suppleant"
+      },
+      {
+        "name": "Hanna Santesson",
+        "role": "Suppleant"
+      }
     ],
     "board_size": 6,
     "board_meetings_count": 14,
     "annual_meeting_date": "2022-12-15",
-    "extra_meeting_dates": ["2023-02-22"],
-    "valberedning": ["Tilde Lindén", "Jacob Nermark Hjelm"],
+    "extra_meeting_dates": [
+      "2023-02-22"
+    ],
+    "valberedning": [
+      "Tilde Lindén",
+      "Jacob Nermark Hjelm"
+    ],
     "firmateckning": "Firman tecknas av två ledamöter ur styrelsen",
-    "evidence_pages": [4, 5]
+    "evidence_pages": [
+      4,
+      5
+    ]
   },
-
   "audit_agent": {
     "auditor_name": "Ole Deurell",
     "auditor_firm": "Parameter Revision AB",
     "auditor_type": "Auktoriserad revisor",
     "audit_report_pages": 2,
     "audit_opinion": "Utan anmärkning",
-    "evidence_pages": [5, 18, 19]
+    "evidence_pages": [
+      5,
+      18,
+      19
+    ]
   },
-
   "property_agent": {
     "property_designation": "Stora Sjöfallet 4",
     "total_area_sqm": 1768,
@@ -63,9 +95,11 @@
     "samfallighet_membership": "Stora Sjöfallet",
     "samfallighet_share_pct": 9.0,
     "samfallighet_description": "Förvaltar garage och innergård",
-    "evidence_pages": [4, 14]
+    "evidence_pages": [
+      4,
+      14
+    ]
   },
-
   "financial_agent": {
     "assets_total": 146192555,
     "equity_total": 120455975,
@@ -92,9 +126,14 @@
     "total_revenue": 1957017,
     "balansomslutning": 146192555,
     "kundfordringar": 4949,
-    "evidence_pages": [6, 7, 8, 9, 10]
+    "evidence_pages": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
   },
-
   "operating_costs_agent": {
     "total_driftskostnader": 1341985,
     "fastighetsskotsel": 84137,
@@ -105,9 +144,7 @@
     "varme": 177399,
     "vatten": 72402,
     "sophamtning": 26450,
-    "fastighetsforsak
-
-ringar": 17022,
+    "fastighetsforsak_ringar": 17022,
     "tomtrattsavgald": 16346,
     "kabel_tv": 116794,
     "fastighetsskatt": 22932,
@@ -115,9 +152,11 @@ ringar": 17022,
     "sotning_ventilation": null,
     "ventilation_major_work": 420215,
     "varmeanlaggning_major_work": 122500,
-    "evidence_pages": [12, 13]
+    "evidence_pages": [
+      12,
+      13
+    ]
   },
-
   "loans_agent": {
     "total_debt": 25433286,
     "long_term_debt": 15974980,
@@ -182,9 +221,10 @@ ringar": 17022,
     "debt_per_sqm": 14385,
     "projected_debt_5_years": 24166826,
     "loan_restructuring_note": "August 2022: Split large loan (~15.7M kr) into two equal parts. Rates: 3.69% (2yr) and 3.79% (3yr), previous rate 1.3%",
-    "evidence_pages": [15]
+    "evidence_pages": [
+      15
+    ]
   },
-
   "fees_agent": {
     "fee_per_sqm_annual": 917,
     "fee_increase_pct": 48.3,
@@ -192,24 +232,57 @@ ringar": 17022,
     "fee_increase_reason": "Täcka ökade ränte- och energikostnader",
     "multiple_increases": false,
     "fee_history": [
-      {"year": 2023, "fee_per_sqm": 917},
-      {"year": 2022, "fee_per_sqm": 661},
-      {"year": 2021, "fee_per_sqm": 650},
-      {"year": 2020, "fee_per_sqm": 650}
+      {
+        "year": 2023,
+        "fee_per_sqm": 917
+      },
+      {
+        "year": 2022,
+        "fee_per_sqm": 661
+      },
+      {
+        "year": 2021,
+        "fee_per_sqm": 650
+      },
+      {
+        "year": 2020,
+        "fee_per_sqm": 650
+      }
     ],
-    "evidence_pages": [6]
+    "evidence_pages": [
+      6
+    ]
   },
-
   "energy_agent": {
     "elkostnad_per_sqm": 129,
     "varmekostnad_per_sqm": 100,
     "vattenkostnad_per_sqm": 41,
     "energikostnad_per_sqm_total": 270,
     "multi_year_energy_trends": [
-      {"year": 2023, "el_per_sqm": 129, "varme_per_sqm": 100, "vatten_per_sqm": 41},
-      {"year": 2022, "el_per_sqm": 106, "varme_per_sqm": 87, "vatten_per_sqm": 35},
-      {"year": 2021, "el_per_sqm": 71, "varme_per_sqm": 82, "vatten_per_sqm": 32},
-      {"year": 2020, "el_per_sqm": 57, "varme_per_sqm": 83, "vatten_per_sqm": 31}
+      {
+        "year": 2023,
+        "el_per_sqm": 129,
+        "varme_per_sqm": 100,
+        "vatten_per_sqm": 41
+      },
+      {
+        "year": 2022,
+        "el_per_sqm": 106,
+        "varme_per_sqm": 87,
+        "vatten_per_sqm": 35
+      },
+      {
+        "year": 2021,
+        "el_per_sqm": 71,
+        "varme_per_sqm": 82,
+        "vatten_per_sqm": 32
+      },
+      {
+        "year": 2020,
+        "el_per_sqm": 57,
+        "varme_per_sqm": 83,
+        "vatten_per_sqm": 31
+      }
     ],
     "electricity_increase_pct_2022_2023": 21.7,
     "electricity_increase_pct_3_year": 126.3,
@@ -218,9 +291,12 @@ ringar": 17022,
     "elstod_received": 47010,
     "elstod_pct_offset": null,
     "energy_initiatives": "Possible solar panels discussed (El av Sol AB contacted Sept 2023)",
-    "evidence_pages": [6, 12, 16]
+    "evidence_pages": [
+      6,
+      12,
+      16
+    ]
   },
-
   "reserves_agent": {
     "underhallsfond_balance": 538554,
     "underhallsfond_previous": 541678,
@@ -228,18 +304,20 @@ ringar": 17022,
     "reservering_till_fond": -538554,
     "underhallsplan_exists": true,
     "underhallsplan_period": "2021-2070",
-    "evidence_pages": [7]
+    "evidence_pages": [
+      7
+    ]
   },
-
   "members_agent": {
     "total_members_start": 68,
     "new_members": 6,
     "departing_members": 9,
     "total_members_end": 65,
     "transfers_during_year": 6,
-    "evidence_pages": [6]
+    "evidence_pages": [
+      6
+    ]
   },
-
   "events_agent": {
     "major_events": [
       {
@@ -286,16 +364,27 @@ ringar": 17022,
         "impact": "Facility arrangement update"
       }
     ],
-    "evidence_pages": [5, 6]
+    "evidence_pages": [
+      5,
+      6
+    ]
   },
-
   "notes_maintenance_agent": {
     "major_maintenance_completed": [
-      {"year": 2023, "description": "OVK (ventilationskontroll)"},
-      {"year": 2023, "description": "Rensning av ventilationskanaler"}
+      {
+        "year": 2023,
+        "description": "OVK (ventilationskontroll)"
+      },
+      {
+        "year": 2023,
+        "description": "Rensning av ventilationskanaler"
+      }
     ],
     "planned_maintenance": [
-      {"period": "2023-2024", "description": "Spolning avloppstammar"}
+      {
+        "period": "2023-2024",
+        "description": "Spolning avloppstammar"
+      }
     ],
     "maintenance_expenses_major": {
       "varmeanlaggning": 122500,
@@ -304,26 +393,33 @@ ringar": 17022,
       "total_major_repairs": 561703
     },
     "underhallsplan_period": "2021-2070",
-    "evidence_pages": [5, 12]
+    "evidence_pages": [
+      5,
+      12
+    ]
   },
-
   "insurance_agent": {
     "insurance_provider": "Trygg-Hansa Försäkring Filial",
     "insurance_premium": 17022,
     "property_coverage": null,
     "liability_coverage": null,
-    "evidence_pages": [4, 13]
+    "evidence_pages": [
+      4,
+      13
+    ]
   },
-
   "tax_agent": {
     "fastighetsskatt": 22932,
     "fastighetsavgift_exemption": true,
     "exemption_years": "First 15 years from construction",
     "skattekonto_balance": 24815,
     "moms_avrakning": 12462,
-    "evidence_pages": [11, 13, 14]
+    "evidence_pages": [
+      11,
+      13,
+      14
+    ]
   },
-
   "planned_actions_agent": {
     "planned_actions": [
       {
@@ -357,9 +453,10 @@ ringar": 17022,
         "description": "Negotiated to bind 2 loans (~4.8M and ~4.4M) for 3 years at 4.62%, previous rates 0.87% and 0.64%"
       }
     ],
-    "evidence_pages": [16]
+    "evidence_pages": [
+      16
+    ]
   },
-
   "cashflow_agent": {
     "cash_flow_statement_present": false,
     "cash_start_of_year": 3431,
@@ -368,9 +465,10 @@ ringar": 17022,
     "cash_from_operations": null,
     "cash_from_investments": -61250,
     "cash_from_financing": null,
-    "evidence_pages": [9]
+    "evidence_pages": [
+      9
+    ]
   },
-
   "depreciation_agent": {
     "total_depreciation": 364915,
     "building_depreciation_rate_pct": 0.5,
@@ -379,9 +477,10 @@ ringar": 17022,
     "ack_anskaffningsvarde": 147991218,
     "restvarde_enligt_plan": 145485834,
     "mark_value_included": 76580968,
-    "evidence_pages": [14]
+    "evidence_pages": [
+      14
+    ]
   },
-
   "driftskostnader_agent": {
     "total_driftskostnader": 1341985,
     "fastighetsskotsel": 84137,
@@ -390,9 +489,7 @@ ringar": 17022,
     "uppvarmning": 177399,
     "vatten": 72402,
     "sophamtning": 26450,
-    "fastighetsforsak
-
-ringar": 17022,
+    "fastighetsforsak_ringar": 17022,
     "tomtrattsavgald": 16346,
     "kabel_tv": 116794,
     "fastighetsskatt": 22932,
@@ -400,9 +497,11 @@ ringar": 17022,
     "varmeanlaggning_major": 122500,
     "ovriga_externa_kostnader": 273635,
     "personalkostnader": 50446,
-    "evidence_pages": [12, 13]
+    "evidence_pages": [
+      12,
+      13
+    ]
   },
-
   "commercial_tenants_agent": {
     "has_commercial_space": false,
     "total_commercial_area_sqm": 0,
