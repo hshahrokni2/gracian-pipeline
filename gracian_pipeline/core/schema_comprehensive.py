@@ -62,15 +62,15 @@ COMPREHENSIVE_TYPES: Dict[str, Dict[str, str]] = {
         "hyresrätt_count": "int",  # Number of rental apartments (hyresrätt)
         "parking_info": "str",  # Parking availability ("None", count, or description)
         # PHASE 0 ENHANCEMENTS: Lokaler Revenue & Dual Threshold (25.6% prevalence)
-        "lokaler_revenue_2023": "int",  # Revenue from commercial tenants (hyresintäkter lokaler)
-        "lokaler_revenue_2022": "int",
+        "lokaler_revenue_current_year": "int",  # Revenue from commercial tenants (current fiscal year)
+        "lokaler_revenue_prior_year": "int",  # Revenue from commercial tenants (prior fiscal year)
         "lokaler_revenue_percentage": "float",  # (lokaler_revenue / total_revenue) * 100
         "lokaler_efficiency_multiplier": "float",  # revenue% / area%
         "lokaler_dependency_risk_tier": "str",  # LOW/MEDIUM/MEDIUM-HIGH/HIGH
         "residential_fee_impact_if_lokaler_lost": "float",  # % increase if all lokaler lost
         # PHASE 0 ENHANCEMENTS: Tomträtt Analysis (16.3% prevalence)
-        "tomtratt_annual_cost_2023": "int",  # Tomträttsavgäld annual cost
-        "tomtratt_annual_cost_2022": "int",
+        "tomtratt_annual_cost_current_year": "int",  # Tomträttsavgäld annual cost (current year)
+        "tomtratt_annual_cost_prior_year": "int",  # Tomträttsavgäld annual cost (prior year)
         "tomtratt_escalation_percent": "float",  # YoY change %
         "tomtratt_percent_of_operating_costs": "float",  # Burden ratio
         "tomtratt_escalation_risk_tier": "str",  # NONE/LOW/MEDIUM/HIGH/EXTREME
@@ -167,10 +167,10 @@ COMPREHENSIVE_TYPES: Dict[str, Dict[str, str]] = {
         **BASE_TYPES["energy_agent"],
         # Energy data typically in separate documents
         "energy_source": "str",  # If mentioned in årsredovisning
-        # NEW from brf_48574: Energy crisis impact tracking
-        "electricity_increase_percent_2021_2022": "float",  # % increase electricity cost
-        "heating_increase_percent_2021_2022": "float",  # % increase heating cost
-        "water_increase_percent_2021_2022": "float",  # % increase water cost
+        # FIXED: Year-over-year energy cost changes (no hardcoded years)
+        "electricity_yoy_increase_percent": "float",  # % YoY change electricity cost
+        "heating_yoy_increase_percent": "float",  # % YoY change heating cost
+        "water_yoy_increase_percent": "float",  # % YoY change water cost
         # PHASE 0 ENHANCEMENTS: Energy Efficiency Analysis (14% efficiency prevalence)
         "building_age_at_report": "int",  # report_year - construction_year
         "electricity_reduction_percent": "float",  # YoY electricity cost change %
@@ -179,7 +179,7 @@ COMPREHENSIVE_TYPES: Dict[str, Dict[str, str]] = {
         "energy_commissioning_issue_flag": "bool",  # age <10 AND reduction >30%
         "energy_best_practice_flag": "bool",  # reduction ≥25% electricity OR ≥20% total
         "energy_measures_implemented": "str",  # Text: LED, automation, BMS, etc.
-        "government_energy_support_2023": "int",  # elstöd or other subsidies (SEK)
+        "government_energy_support_current_year": "int",  # elstöd or other subsidies (current year SEK)
     },
 
     "fees_agent": {
@@ -192,7 +192,7 @@ COMPREHENSIVE_TYPES: Dict[str, Dict[str, str]] = {
         # NEW from brf_268882: Transaction fees
         "transaction_fees": "dict",  # Detailed breakdown of various transaction fees
         # PHASE 0 ENHANCEMENTS: Fee Response Classification (100% prevalence)
-        "fee_increase_count_2023": "int",  # Number of separate fee adjustments in year
+        "fee_increase_count_current_year": "int",  # Number of separate fee adjustments in current year
         "fee_increase_dates": "list",  # List of ISO dates ["2024-01-01", ...]
         "fee_increase_percentages": "list",  # List of % for each increase [25.0, ...]
         "compound_fee_effect": "float",  # Compound effect of multiple increases
@@ -254,9 +254,9 @@ COMPREHENSIVE_TYPES: Dict[str, Dict[str, str]] = {
     "key_metrics_agent": {
         # NEW AGENT: Key financial metrics and calculated fields
         # PHASE 0 ENHANCEMENTS: Depreciation Paradox Detection (4.7% prevalence)
-        "result_without_depreciation_2023": "int",  # result + avskrivningar (TSEK)
-        "result_without_depreciation_2022": "int",
-        "depreciation_as_percent_of_revenue_2023": "float",  # (avskrivningar / revenue) * 100
+        "result_without_depreciation_current_year": "int",  # result + avskrivningar (current year TSEK)
+        "result_without_depreciation_prior_year": "int",  # result + avskrivningar (prior year TSEK)
+        "depreciation_as_percent_of_revenue_current_year": "float",  # (avskrivningar / revenue) * 100
         "depreciation_paradox_flag": "bool",  # result_wo_dep ≥500k AND soliditet ≥85%
         "depreciation_paradox_cash_flow_quality": "str",  # EXCELLENT/STRONG/NONE
         # Energy analysis fields (moved here from energy_agent for calculation convenience)
@@ -269,11 +269,11 @@ COMPREHENSIVE_TYPES: Dict[str, Dict[str, str]] = {
         # NEW AGENT: Balance sheet analysis and liquidity monitoring
         # Base balance sheet fields would come from BASE_TYPES if they exist
         # PHASE 0 ENHANCEMENTS: Cash Crisis Detection (2.3% prevalence)
-        "total_liquidity_2023": "int",  # cash + short_term_investments (TSEK)
-        "total_liquidity_2022": "int",
-        "cash_to_debt_ratio_2023": "float",  # (total_liquidity / total_debt) * 100
-        "cash_to_debt_ratio_2022": "float",
-        "cash_to_debt_ratio_2021": "float",  # For 3-year trend
+        "total_liquidity_current_year": "int",  # cash + short_term_investments (current year TSEK)
+        "total_liquidity_prior_year": "int",  # cash + short_term_investments (prior year TSEK)
+        "cash_to_debt_ratio_current_year": "float",  # (total_liquidity / total_debt) * 100
+        "cash_to_debt_ratio_prior_year": "float",  # (total_liquidity / total_debt) * 100 prior year
+        "cash_to_debt_ratio_prior_2_years": "float",  # For 3-year trend (2 years before current)
         "cash_trend": "str",  # declining/stable/improving
         "cash_crisis_flag": "bool",  # ratio <2% AND declining
         "months_to_zero_cash": "int",  # Projection if declining, else null

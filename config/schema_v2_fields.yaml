@@ -16,25 +16,27 @@ date_created: "2025-10-16"
 property_agent_lokaler:
   description: "Commercial space (lokaler) revenue tracking for dual threshold assessment"
   fields:
-    lokaler_revenue_2023:
+    lokaler_revenue_current_year:
       type: int
       nullable: true
-      description: "Revenue from commercial tenants (hyresintäkter lokaler) in 2023"
+      description: "Revenue from commercial tenants (hyresintäkter lokaler) in current fiscal year"
       source: "Income statement (Resultaträkning)"
       example: 1488000
+      note: "Fiscal year from metadata.fiscal_year"
 
-    lokaler_revenue_2022:
+    lokaler_revenue_prior_year:
       type: int
       nullable: true
-      description: "Revenue from commercial tenants in 2022"
+      description: "Revenue from commercial tenants in prior fiscal year"
       source: "Income statement"
       example: 1425000
+      note: "One year before current fiscal year"
 
     lokaler_revenue_percentage:
       type: float
       nullable: true
       description: "Percentage of total revenue from commercial tenants"
-      calculation: "(lokaler_revenue_2023 / total_revenue) * 100"
+      calculation: "(lokaler_revenue_current_year / total_revenue) * 100"
       example: 39.3
 
     lokaler_efficiency_multiplier:
@@ -64,7 +66,7 @@ property_agent_lokaler:
       type: float
       nullable: true
       description: "Percentage increase in residential fees if all commercial revenue lost"
-      calculation: "(lokaler_revenue_2023 / residential_fee_revenue) * 100"
+      calculation: "(lokaler_revenue_current_year / residential_fee_revenue) * 100"
       example: 64.9
 
 # ==================================================================================
@@ -76,12 +78,13 @@ property_agent_lokaler:
 fees_agent_response_classification:
   description: "Fee increase pattern analysis and management quality classification"
   fields:
-    fee_increase_count_2023:
+    fee_increase_count_current_year:
       type: int
       nullable: true
-      description: "Number of separate fee adjustments in fiscal year"
+      description: "Number of separate fee adjustments in current fiscal year"
       source: "Förvaltningsberättelse, Note 17 (Väsentliga händelser)"
       example: 1
+      note: "Fiscal year from metadata.fiscal_year"
 
     fee_increase_dates:
       type: list
@@ -227,25 +230,27 @@ loans_agent_refinancing:
 key_metrics_depreciation_paradox:
   description: "Depreciation paradox detection for BRFs with strong cash flow hidden by K2 depreciation"
   fields:
-    result_without_depreciation_2023:
+    result_without_depreciation_current_year:
       type: int
       nullable: true
       description: "Operating result before depreciation, TSEK"
-      calculation: "result_after_financial_2023 + avskrivningar_2023"
+      calculation: "result_after_financial_current + avskrivningar_current"
       example: 1057000
+      note: "Fiscal year from metadata.fiscal_year"
 
-    result_without_depreciation_2022:
+    result_without_depreciation_prior_year:
       type: int
       nullable: true
-      description: "Operating result before depreciation 2022, TSEK"
-      calculation: "result_after_financial_2022 + avskrivningar_2022"
+      description: "Operating result before depreciation prior year, TSEK"
+      calculation: "result_after_financial_prior + avskrivningar_prior"
       example: 800000
+      note: "One year before current fiscal year"
 
-    depreciation_as_percent_of_revenue_2023:
+    depreciation_as_percent_of_revenue_current_year:
       type: float
       nullable: true
       description: "Depreciation burden (avskrivningar / revenue * 100)"
-      calculation: "(avskrivningar_2023 / revenue_2023) * 100"
+      calculation: "(avskrivningar_current / revenue_current) * 100"
       example: 126.9
       note: "Values >100% indicate depreciation exceeds revenue (common in K2)"
 
@@ -254,8 +259,8 @@ key_metrics_depreciation_paradox:
       nullable: true
       description: "True if both criteria met: result_wo_dep ≥500k AND soliditet ≥85%"
       criteria:
-        threshold_1: "result_without_depreciation_2023 >= 500000"
-        threshold_2: "soliditet_2023 >= 85"
+        threshold_1: "result_without_depreciation_current_year >= 500000"
+        threshold_2: "soliditet_current_year >= 85"
         logic: "BOTH required (AND, not OR)"
       example: true
 
@@ -279,39 +284,43 @@ key_metrics_depreciation_paradox:
 balance_sheet_cash_crisis:
   description: "Cash crisis detection for terminal liquidity failure"
   fields:
-    total_liquidity_2023:
+    total_liquidity_current_year:
       type: int
       nullable: true
       description: "Total liquid assets (cash + short-term investments), TSEK"
-      calculation: "cash_2023 + short_term_investments_2023"
+      calculation: "cash_current + short_term_investments_current"
       example: 2024432
+      note: "Fiscal year from metadata.fiscal_year"
 
-    total_liquidity_2022:
+    total_liquidity_prior_year:
       type: int
       nullable: true
-      description: "Total liquid assets 2022, TSEK"
-      calculation: "cash_2022 + short_term_investments_2022"
+      description: "Total liquid assets prior year, TSEK"
+      calculation: "cash_prior + short_term_investments_prior"
       example: 1785512
+      note: "One year before current fiscal year"
 
-    cash_to_debt_ratio_2023:
+    cash_to_debt_ratio_current_year:
       type: float
       nullable: true
       description: "Liquidity ratio (total_liquidity / total_debt * 100)"
-      calculation: "(total_liquidity_2023 / total_debt_2023) * 100"
+      calculation: "(total_liquidity_current_year / total_debt_current_year) * 100"
       example: 4.4
 
-    cash_to_debt_ratio_2022:
+    cash_to_debt_ratio_prior_year:
       type: float
       nullable: true
-      description: "Liquidity ratio 2022"
+      description: "Liquidity ratio prior year"
       example: 3.9
+      note: "One year before current fiscal year"
 
-    cash_to_debt_ratio_2021:
+    cash_to_debt_ratio_prior_2_years:
       type: float
       nullable: true
-      description: "Liquidity ratio 2021 (for 3-year trend)"
+      description: "Liquidity ratio 2 years prior (for 3-year trend)"
       source: "Flerårsöversikt if available"
       example: 3.2
+      note: "Two years before current fiscal year"
 
     cash_trend:
       type: str
@@ -319,10 +328,10 @@ balance_sheet_cash_crisis:
       enum: ["declining", "stable", "improving"]
       description: "3-year cash-to-debt trend"
       logic: |
-        IF ratio_2023 < ratio_2022:
-          IF ratio_2022 < ratio_2021: trend = "declining" (2-year decline)
+        IF ratio_current < ratio_prior:
+          IF ratio_prior < ratio_prior_2: trend = "declining" (2-year decline)
           ELSE: trend = "declining" (1-year decline)
-        ELIF ratio_2023 > ratio_2022:
+        ELIF ratio_current > ratio_prior:
           trend = "improving"
         ELSE:
           trend = "stable"
@@ -333,7 +342,7 @@ balance_sheet_cash_crisis:
       nullable: true
       description: "True if both criteria met: ratio <2% AND declining trend"
       criteria:
-        threshold: "cash_to_debt_ratio_2023 < 2.0"
+        threshold: "cash_to_debt_ratio_current_year < 2.0"
         trend_required: "cash_trend == 'declining'"
         logic: "BOTH required"
       example: false
@@ -342,8 +351,8 @@ balance_sheet_cash_crisis:
       type: int
       nullable: true
       description: "Projected months until cash = 0 (if declining, else null)"
-      calculation: "(total_liquidity_2023 / annual_burn_rate) * 12"
-      note: "annual_burn_rate = total_liquidity_2022 - total_liquidity_2023"
+      calculation: "(total_liquidity_current_year / annual_burn_rate) * 12"
+      note: "annual_burn_rate = total_liquidity_prior_year - total_liquidity_current_year"
       example: null
 
 # ==================================================================================
@@ -410,12 +419,13 @@ key_metrics_energy_analysis:
       keywords: ["LED", "automation", "BMS", "värmepump", "bergvärme", "isolering", "FTX"]
       example: "Energy audit conducted, systems reconfigured"
 
-    government_energy_support_2023:
+    government_energy_support_current_year:
       type: int
       nullable: true
       description: "Government energy subsidies received, SEK"
       keywords: ["elstöd", "energistöd", "ROT-avdrag energi"]
       example: 74295
+      note: "Fiscal year from metadata.fiscal_year"
 
 # ==================================================================================
 # CATEGORY 7: TOMTRÄTT ANALYSIS (property_agent)
@@ -426,25 +436,26 @@ key_metrics_energy_analysis:
 property_agent_tomtratt:
   description: "Tomträtt (ground lease) cost analysis with escalation risk and äganderätt advantage quantification"
   fields:
-    tomtratt_annual_cost_2023:
+    tomtratt_annual_cost_current_year:
       type: int
       nullable: true
-      description: "Tomträttsavgäld annual cost 2023, SEK"
+      description: "Tomträttsavgäld annual cost current year, SEK"
       source: "Fastighetskostnader (Note 4 or similar)"
       example: 950000
-      note: "null for äganderätt properties"
+      note: "null for äganderätt properties; Fiscal year from metadata.fiscal_year"
 
-    tomtratt_annual_cost_2022:
+    tomtratt_annual_cost_prior_year:
       type: int
       nullable: true
-      description: "Tomträttsavgäld annual cost 2022, SEK"
+      description: "Tomträttsavgäld annual cost prior year, SEK"
       example: 625000
+      note: "One year before current fiscal year"
 
     tomtratt_escalation_percent:
       type: float
       nullable: true
       description: "Year-over-year tomträtt cost change (%)"
-      calculation: "((cost_2023 - cost_2022) / cost_2022) * 100"
+      calculation: "((cost_current - cost_prior) / cost_prior) * 100"
       example: 52.0
 
     tomtratt_percent_of_operating_costs:
