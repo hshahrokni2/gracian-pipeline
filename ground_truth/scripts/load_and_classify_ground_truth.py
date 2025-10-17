@@ -373,11 +373,11 @@ class GroundTruthLoader:
             pattern_b = classifications.get('pattern_b')
             interest_victim = classifications.get('interest_rate_victim')
 
-            # Calculate 4 risk scores (placeholder - implement later)
-            mgmt_quality = {'score': 0, 'grade': 'N/A', 'factors': {}}
-            financial_stability = {'score': 0, 'grade': 'N/A', 'factors': {}}
-            stabilization = {'score': 0, 'grade': 'N/A', 'timeframe_years': None}
-            overall_risk = {'score': 0, 'grade': 'N/A', 'category': 'UNKNOWN'}
+            # Calculate 4 risk scores
+            mgmt_quality = self._calculate_management_quality(normalized_data, classifications)
+            financial_stability = self._calculate_financial_stability(normalized_data, classifications)
+            stabilization = self._calculate_stabilization_probability(normalized_data, classifications)
+            overall_risk = self._calculate_overall_risk(mgmt_quality, financial_stability, stabilization, classifications)
 
             # Insert classification results
             insert_sql = """
@@ -686,6 +686,581 @@ class GroundTruthLoader:
 
         self.cursor.execute(insert_sql, values)
 
+    def _calculate_management_quality(self, data: Dict, patterns: Dict) -> Dict:
+        """
+        Calculate Management Quality Score (0-100, higher is better)
+
+        Factors:
+        1. Fee response timing (proactive vs reactive vs distress)
+        2. Loss response (consecutive losses show poor management)
+        3. Evidence of planning (budgets, forecasts, maintenance plans)
+        4. Board meeting frequency (engagement)
+        5. Soliditet maintenance (financial stewardship)
+        6. Debt management (refinancing risk tier)
+        7. Cash buffer (operational prudence)
+        8. Transparency (reporting quality - assume 100% for ground truth)
+        """
+        score = 0
+        factors = {}
+
+        # Factor 1: Fee Response Timing (25 points)
+        fee_response = patterns.get('fee_response')
+        if fee_response:
+            if fee_response.tier == 'PROACTIVE':
+                score += 25
+                factors['fee_response'] = 'Proactive fee increases (+25)'
+            elif fee_response.tier == 'AGGRESSIVE':
+                score += 20
+                factors['fee_response'] = 'Aggressive fee management (+20)'
+            elif fee_response.tier == 'REACTIVE':
+                score += 10
+                factors['fee_response'] = 'Reactive to problems (+10)'
+            elif fee_response.tier == 'DISTRESS':
+                score += 0
+                factors['fee_response'] = 'Crisis management (0)'
+
+        # Factor 2: Loss Management (15 points)
+        consecutive_losses = data.get('consecutive_loss_years', 0)
+        if consecutive_losses == 0:
+            score += 15
+            factors['loss_management'] = 'No consecutive losses (+15)'
+        elif consecutive_losses == 1:
+            score += 10
+            factors['loss_management'] = '1 year loss (+10)'
+        elif consecutive_losses == 2:
+            score += 5
+            factors['loss_management'] = '2 years consecutive losses (+5)'
+        else:
+            factors['loss_management'] = f'{consecutive_losses}+ years losses (0)'
+
+        # Factor 3: Soliditet Maintenance (20 points)
+        soliditet = data.get('soliditet_pct', 0)
+        if soliditet >= 50:
+            score += 20
+            factors['soliditet'] = f'{soliditet:.1f}% soliditet - Excellent (+20)'
+        elif soliditet >= 30:
+            score += 15
+            factors['soliditet'] = f'{soliditet:.1f}% soliditet - Good (+15)'
+        elif soliditet >= 20:
+            score += 10
+            factors['soliditet'] = f'{soliditet:.1f}% soliditet - Acceptable (+10)'
+        elif soliditet >= 10:
+            score += 5
+            factors['soliditet'] = f'{soliditet:.1f}% soliditet - Low (+5)'
+        else:
+            factors['soliditet'] = f'{soliditet:.1f}% soliditet - Critical (0)'
+
+        # Factor 4: Debt Management (20 points)
+        refinancing = patterns.get('refinancing_risk')
+        if refinancing:
+            if refinancing.tier == 'NONE':
+                score += 20
+                factors['debt_management'] = 'No refinancing risk (+20)'
+            elif refinancing.tier == 'MEDIUM':
+                score += 12
+                factors['debt_management'] = 'Medium refinancing risk (+12)'
+            elif refinancing.tier == 'HIGH':
+                score += 5
+                factors['debt_management'] = 'High refinancing risk (+5)'
+            elif refinancing.tier == 'EXTREME':
+                score += 0
+                factors['debt_management'] = 'Extreme refinancing risk (0)'
+
+        # Factor 5: Cash Buffer (10 points)
+        cash_ratio = data.get('cash_to_debt_ratio_current_year', 0)
+        if cash_ratio >= 10:
+            score += 10
+            factors['cash_buffer'] = f'{cash_ratio:.1f}% cash/debt - Strong (+10)'
+        elif cash_ratio >= 5:
+            score += 7
+            factors['cash_buffer'] = f'{cash_ratio:.1f}% cash/debt - Adequate (+7)'
+        elif cash_ratio >= 2:
+            score += 4
+            factors['cash_buffer'] = f'{cash_ratio:.1f}% cash/debt - Minimal (+4)'
+        else:
+            factors['cash_buffer'] = f'{cash_ratio:.1f}% cash/debt - Insufficient (0)'
+
+        # Factor 6: Transparency (10 points - assume 100% for ground truth)
+        score += 10
+        factors['transparency'] = 'Complete reporting (+10)'
+
+        # Convert to grade
+        if score >= 90:
+            grade = 'A'
+        elif score >= 80:
+            grade = 'B'
+        elif score >= 70:
+            grade = 'C'
+        elif score >= 60:
+            grade = 'D'
+        else:
+            grade = 'F'
+
+        return {
+            'score': score,
+            'grade': grade,
+            'factors': factors
+        }
+
+    def _calculate_financial_stability(self, data: Dict, patterns: Dict) -> Dict:
+        """
+        Calculate Financial Stability Score (0-100, higher is better)
+
+        Factors:
+        1. Soliditet (equity ratio)
+        2. Liquidity (cash to debt ratio)
+        3. Profitability (net income vs assets)
+        4. Debt burden (debt to assets ratio)
+        5. Short-term debt risk
+        6. Operating efficiency
+        7. Cash crisis patterns
+        8. Interest coverage (operating income vs interest expense)
+        """
+        score = 0
+        factors = {}
+
+        # Factor 1: Soliditet (25 points)
+        soliditet = data.get('soliditet_pct', 0)
+        if soliditet >= 50:
+            score += 25
+            factors['soliditet'] = f'{soliditet:.1f}% - Excellent (+25)'
+        elif soliditet >= 30:
+            score += 20
+            factors['soliditet'] = f'{soliditet:.1f}% - Strong (+20)'
+        elif soliditet >= 20:
+            score += 12
+            factors['soliditet'] = f'{soliditet:.1f}% - Adequate (+12)'
+        elif soliditet >= 10:
+            score += 5
+            factors['soliditet'] = f'{soliditet:.1f}% - Weak (+5)'
+        else:
+            factors['soliditet'] = f'{soliditet:.1f}% - Critical (0)'
+
+        # Factor 2: Liquidity (20 points)
+        cash_ratio = data.get('cash_to_debt_ratio_current_year', 0)
+        if cash_ratio >= 15:
+            score += 20
+            factors['liquidity'] = f'{cash_ratio:.1f}% cash/debt - Excellent (+20)'
+        elif cash_ratio >= 10:
+            score += 15
+            factors['liquidity'] = f'{cash_ratio:.1f}% cash/debt - Strong (+15)'
+        elif cash_ratio >= 5:
+            score += 10
+            factors['liquidity'] = f'{cash_ratio:.1f}% cash/debt - Adequate (+10)'
+        elif cash_ratio >= 2:
+            score += 5
+            factors['liquidity'] = f'{cash_ratio:.1f}% cash/debt - Weak (+5)'
+        else:
+            factors['liquidity'] = f'{cash_ratio:.1f}% cash/debt - Critical (0)'
+
+        # Factor 3: Profitability (15 points)
+        net_income = data.get('net_income', 0)
+        assets = data.get('assets_total', 1)
+        roa = (net_income / assets * 100) if assets > 0 else 0
+
+        if roa >= 2:
+            score += 15
+            factors['profitability'] = f'{roa:.2f}% ROA - Profitable (+15)'
+        elif roa >= 0:
+            score += 10
+            factors['profitability'] = f'{roa:.2f}% ROA - Breakeven (+10)'
+        elif roa >= -2:
+            score += 5
+            factors['profitability'] = f'{roa:.2f}% ROA - Small loss (+5)'
+        else:
+            factors['profitability'] = f'{roa:.2f}% ROA - Significant loss (0)'
+
+        # Factor 4: Debt Burden (15 points)
+        total_debt = data.get('total_debt', 0)
+        debt_to_assets = (total_debt / assets * 100) if assets > 0 else 0
+
+        if debt_to_assets <= 30:
+            score += 15
+            factors['debt_burden'] = f'{debt_to_assets:.1f}% debt/assets - Low (+15)'
+        elif debt_to_assets <= 50:
+            score += 12
+            factors['debt_burden'] = f'{debt_to_assets:.1f}% debt/assets - Moderate (+12)'
+        elif debt_to_assets <= 70:
+            score += 7
+            factors['debt_burden'] = f'{debt_to_assets:.1f}% debt/assets - High (+7)'
+        else:
+            score += 2
+            factors['debt_burden'] = f'{debt_to_assets:.1f}% debt/assets - Very High (+2)'
+
+        # Factor 5: Short-term Debt Risk (10 points)
+        short_term_pct = data.get('short_term_debt_pct', 0)
+        if short_term_pct <= 20:
+            score += 10
+            factors['short_term_debt'] = f'{short_term_pct:.1f}% short-term - Low risk (+10)'
+        elif short_term_pct <= 40:
+            score += 7
+            factors['short_term_debt'] = f'{short_term_pct:.1f}% short-term - Moderate (+7)'
+        elif short_term_pct <= 60:
+            score += 3
+            factors['short_term_debt'] = f'{short_term_pct:.1f}% short-term - High (+3)'
+        else:
+            factors['short_term_debt'] = f'{short_term_pct:.1f}% short-term - Very High (0)'
+
+        # Factor 6: Cash Crisis Check (10 points)
+        cash_crisis = patterns.get('cash_crisis')
+        if cash_crisis and cash_crisis.detected:
+            factors['cash_crisis'] = 'Cash crisis detected (0)'
+        else:
+            score += 10
+            factors['cash_crisis'] = 'No cash crisis (+10)'
+
+        # Factor 7: Depreciation Paradox (5 points - bonus for positive trends)
+        depreciation = patterns.get('depreciation_paradox')
+        if depreciation and depreciation.detected:
+            score += 5
+            factors['depreciation_paradox'] = 'Positive without depreciation (+5)'
+
+        # Convert to grade
+        if score >= 90:
+            grade = 'A'
+        elif score >= 80:
+            grade = 'B'
+        elif score >= 70:
+            grade = 'C'
+        elif score >= 60:
+            grade = 'D'
+        else:
+            grade = 'F'
+
+        return {
+            'score': score,
+            'grade': grade,
+            'factors': factors
+        }
+
+    def _calculate_stabilization_probability(self, data: Dict, patterns: Dict) -> Dict:
+        """
+        Calculate Stabilization Probability Score (0-100, higher is better)
+
+        Factors:
+        1. Current trajectory (losses vs profits)
+        2. Management response (fee increases, cost cuts)
+        3. Structural issues (lokaler, tomträtt, building age)
+        4. Financial cushion (soliditet, cash)
+        5. Debt structure (refinancing risk)
+        6. Time to stabilize (estimated years)
+        """
+        score = 0
+        factors = {}
+        timeframe_years = None
+
+        # Factor 1: Current State (20 points)
+        net_income = data.get('net_income', 0)
+        if net_income > 0:
+            score += 20
+            factors['current_state'] = 'Currently profitable (+20)'
+            timeframe_years = 0  # Already stable
+        elif net_income > -500000:
+            score += 10
+            factors['current_state'] = 'Small loss (+10)'
+            timeframe_years = 1
+        elif net_income > -1000000:
+            score += 5
+            factors['current_state'] = 'Moderate loss (+5)'
+            timeframe_years = 2
+        else:
+            factors['current_state'] = 'Large loss (0)'
+            timeframe_years = 3
+
+        # Factor 2: Management Response (25 points)
+        fee_response = patterns.get('fee_response')
+        if fee_response:
+            if fee_response.tier == 'PROACTIVE':
+                score += 25
+                factors['management_response'] = 'Proactive management (+25)'
+            elif fee_response.tier == 'AGGRESSIVE':
+                score += 20
+                factors['management_response'] = 'Aggressive action (+20)'
+            elif fee_response.tier == 'REACTIVE':
+                score += 10
+                factors['management_response'] = 'Reactive measures (+10)'
+            else:  # DISTRESS
+                score += 5
+                factors['management_response'] = 'Distress mode (+5)'
+                if timeframe_years:
+                    timeframe_years += 1
+
+        # Factor 3: Structural Issues (20 points - deductions)
+        structural_score = 20
+
+        lokaler = patterns.get('lokaler_dependency')
+        if lokaler and lokaler.tier in ['HIGH', 'MEDIUM_HIGH']:
+            structural_score -= 8
+            factors['lokaler_risk'] = f'{lokaler.tier} lokaler dependency (-8)'
+            if timeframe_years:
+                timeframe_years += 1
+
+        tomtratt = patterns.get('tomtratt_escalation')
+        if tomtratt and tomtratt.tier in ['EXTREME', 'HIGH']:
+            structural_score -= 7
+            factors['tomtratt_risk'] = f'{tomtratt.tier} tomträtt escalation (-7)'
+            if timeframe_years:
+                timeframe_years += 1
+
+        building_age = data.get('building_age_at_report', 0)
+        if building_age < 10:
+            # Young building issues are temporary
+            factors['building_age'] = f'{building_age} years - commissioning phase'
+        elif building_age > 50:
+            structural_score -= 5
+            factors['building_age'] = f'{building_age} years - high maintenance (-5)'
+
+        score += max(0, structural_score)
+
+        # Factor 4: Financial Cushion (20 points)
+        soliditet = data.get('soliditet_pct', 0)
+        cash_ratio = data.get('cash_to_debt_ratio_current_year', 0)
+
+        cushion_score = 0
+        if soliditet >= 30:
+            cushion_score += 10
+            factors['equity_cushion'] = f'{soliditet:.1f}% soliditet (+10)'
+        elif soliditet >= 20:
+            cushion_score += 6
+            factors['equity_cushion'] = f'{soliditet:.1f}% soliditet (+6)'
+        else:
+            cushion_score += 2
+            factors['equity_cushion'] = f'{soliditet:.1f}% soliditet (+2)'
+
+        if cash_ratio >= 5:
+            cushion_score += 10
+            factors['cash_cushion'] = f'{cash_ratio:.1f}% cash/debt (+10)'
+        elif cash_ratio >= 2:
+            cushion_score += 6
+            factors['cash_cushion'] = f'{cash_ratio:.1f}% cash/debt (+6)'
+        else:
+            cushion_score += 2
+            factors['cash_cushion'] = f'{cash_ratio:.1f}% cash/debt (+2)'
+
+        score += cushion_score
+
+        # Factor 5: Refinancing Risk (15 points)
+        refinancing = patterns.get('refinancing_risk')
+        if refinancing:
+            if refinancing.tier == 'NONE':
+                score += 15
+                factors['refinancing'] = 'No refinancing risk (+15)'
+            elif refinancing.tier == 'MEDIUM':
+                score += 10
+                factors['refinancing'] = 'Medium refinancing risk (+10)'
+            elif refinancing.tier == 'HIGH':
+                score += 5
+                factors['refinancing'] = 'High refinancing risk (+5)'
+                if timeframe_years:
+                    timeframe_years += 1
+            else:  # EXTREME
+                factors['refinancing'] = 'Extreme refinancing risk (0)'
+                if timeframe_years:
+                    timeframe_years += 2
+
+        # Adjust timeframe based on final score
+        if score < 40:
+            if timeframe_years:
+                timeframe_years = max(timeframe_years, 4)  # Very difficult
+        elif score < 60:
+            if timeframe_years:
+                timeframe_years = max(timeframe_years, 3)  # Challenging
+
+        # Cap timeframe at 5 years
+        if timeframe_years:
+            timeframe_years = min(timeframe_years, 5)
+
+        # Convert to grade
+        if score >= 90:
+            grade = 'A'
+        elif score >= 75:
+            grade = 'B'
+        elif score >= 60:
+            grade = 'C'
+        elif score >= 45:
+            grade = 'D'
+        else:
+            grade = 'F'
+
+        return {
+            'score': score,
+            'grade': grade,
+            'timeframe_years': timeframe_years,
+            'factors': factors
+        }
+
+    def _calculate_overall_risk(self, mgmt: Dict, financial: Dict, stabilization: Dict, patterns: Dict) -> Dict:
+        """
+        Calculate Overall Risk Score (0-100, lower is better)
+
+        Weighted combination of:
+        - Financial Stability (40%) - inverted
+        - Management Quality (30%) - inverted
+        - Stabilization Probability (20%) - inverted
+        - Pattern Risk Flags (10%) - additive
+        """
+        # Invert component scores (since high scores are good, but we want high risk score = bad)
+        financial_risk = 100 - financial.get('score', 50)
+        mgmt_risk = 100 - mgmt.get('score', 50)
+        stabilization_risk = 100 - stabilization.get('score', 50)
+
+        # Pattern risk (0-10 points based on critical patterns)
+        pattern_risk = 0
+
+        cash_crisis = patterns.get('cash_crisis')
+        if cash_crisis and cash_crisis.detected:
+            pattern_risk += 5
+
+        refinancing = patterns.get('refinancing_risk')
+        if refinancing and refinancing.tier == 'EXTREME':
+            pattern_risk += 3
+        elif refinancing and refinancing.tier == 'HIGH':
+            pattern_risk += 2
+
+        fee_response = patterns.get('fee_response')
+        if fee_response and fee_response.tier == 'DISTRESS':
+            pattern_risk += 2
+
+        # Weighted score
+        score = (
+            financial_risk * 0.40 +
+            mgmt_risk * 0.30 +
+            stabilization_risk * 0.20 +
+            pattern_risk
+        )
+
+        # Convert to grade
+        if score >= 80:
+            grade = 'F'
+            category = 'CRITICAL'
+        elif score >= 65:
+            grade = 'D'
+            category = 'HIGH'
+        elif score >= 45:
+            grade = 'C'
+            category = 'MEDIUM'
+        elif score >= 25:
+            grade = 'B'
+            category = 'LOW'
+        else:
+            grade = 'A'
+            category = 'LOW'
+
+        return {
+            'score': score,
+            'grade': grade,
+            'category': category
+        }
+
+    def _calculate_percentiles(self):
+        """
+        Calculate comparative intelligence percentiles for all BRFs.
+
+        Percentiles calculated:
+        1. soliditet_percentile - Equity ratio relative to population
+        2. debt_per_sqm_percentile - Debt burden per square meter
+        3. fee_per_sqm_percentile - Monthly fee per square meter
+        4. energy_cost_percentile - Energy cost per square meter
+
+        Higher percentile = better performance (lower debt, lower costs)
+        """
+        # Calculate soliditet percentile
+        self.cursor.execute("""
+            WITH soliditet_ranks AS (
+                SELECT
+                    e.extraction_id,
+                    e.soliditet_pct,
+                    PERCENT_RANK() OVER (ORDER BY e.soliditet_pct) AS percentile
+                FROM ground_truth_extractions e
+                WHERE e.soliditet_pct IS NOT NULL
+            )
+            UPDATE ground_truth_classifications c
+            SET soliditet_percentile = ROUND((r.percentile * 100)::numeric, 2)
+            FROM soliditet_ranks r
+            WHERE c.extraction_id = r.extraction_id;
+        """)
+
+        # Calculate debt per sqm percentile (lower is better, so invert)
+        self.cursor.execute("""
+            WITH debt_sqm_ranks AS (
+                SELECT
+                    e.extraction_id,
+                    (e.total_debt::float / NULLIF(e.total_area_sqm, 0)) as debt_per_sqm,
+                    PERCENT_RANK() OVER (ORDER BY (e.total_debt::float / NULLIF(e.total_area_sqm, 0)) DESC) AS percentile
+                FROM ground_truth_extractions e
+                WHERE e.total_debt IS NOT NULL
+                  AND e.total_area_sqm IS NOT NULL
+                  AND e.total_area_sqm > 0
+            )
+            UPDATE ground_truth_classifications c
+            SET debt_per_sqm_percentile = ROUND((r.percentile * 100)::numeric, 2)
+            FROM debt_sqm_ranks r
+            WHERE c.extraction_id = r.extraction_id;
+        """)
+
+        # Calculate fee per sqm percentile (lower is better, so invert)
+        # Note: Fee data is in extraction JSON, need to extract from JSONB
+        self.cursor.execute("""
+            WITH fee_data AS (
+                SELECT
+                    e.extraction_id,
+                    e.total_area_sqm,
+                    -- Try to extract fee from various possible locations in JSON
+                    COALESCE(
+                        (e.extraction_json->'fees_agent'->>'monthly_fee_per_sqm')::numeric,
+                        (e.extraction_json->'financial_agent'->>'fee_per_sqm')::numeric,
+                        -- Calculate from total fee if available
+                        CASE
+                            WHEN (e.extraction_json->'fees_agent'->>'total_monthly_fee')::numeric IS NOT NULL
+                                 AND e.total_area_sqm > 0
+                            THEN (e.extraction_json->'fees_agent'->>'total_monthly_fee')::numeric / e.total_area_sqm
+                            ELSE NULL
+                        END
+                    ) as fee_per_sqm
+                FROM ground_truth_extractions e
+                WHERE e.total_area_sqm IS NOT NULL AND e.total_area_sqm > 0
+            ),
+            fee_ranks AS (
+                SELECT
+                    extraction_id,
+                    fee_per_sqm,
+                    PERCENT_RANK() OVER (ORDER BY fee_per_sqm DESC) AS percentile
+                FROM fee_data
+                WHERE fee_per_sqm IS NOT NULL
+            )
+            UPDATE ground_truth_classifications c
+            SET fee_per_sqm_percentile = ROUND((r.percentile * 100)::numeric, 2)
+            FROM fee_ranks r
+            WHERE c.extraction_id = r.extraction_id;
+        """)
+
+        # Calculate energy cost percentile (lower is better, so invert)
+        self.cursor.execute("""
+            WITH energy_data AS (
+                SELECT
+                    e.extraction_id,
+                    e.total_area_sqm,
+                    (COALESCE(e.el_cost, 0) + COALESCE(e.varme_cost, 0)) as total_energy_cost,
+                    ((COALESCE(e.el_cost, 0) + COALESCE(e.varme_cost, 0))::float / NULLIF(e.total_area_sqm, 0)) as energy_per_sqm
+                FROM ground_truth_extractions e
+                WHERE e.total_area_sqm IS NOT NULL
+                  AND e.total_area_sqm > 0
+                  AND (e.el_cost IS NOT NULL OR e.varme_cost IS NOT NULL)
+            ),
+            energy_ranks AS (
+                SELECT
+                    extraction_id,
+                    energy_per_sqm,
+                    PERCENT_RANK() OVER (ORDER BY energy_per_sqm DESC) AS percentile
+                FROM energy_data
+                WHERE energy_per_sqm IS NOT NULL
+            )
+            UPDATE ground_truth_classifications c
+            SET energy_cost_percentile = ROUND((r.percentile * 100)::numeric, 2)
+            FROM energy_ranks r
+            WHERE c.extraction_id = r.extraction_id;
+        """)
+
     def generate_summary(self) -> Dict:
         """Generate summary report of classification results"""
         # Get pattern distribution
@@ -777,7 +1352,18 @@ class GroundTruthLoader:
 
         print(f"\n✅ Processing complete!")
 
-        # Step 5: Generate summary
+        # Step 5: Calculate comparative intelligence (percentiles)
+        if classification_count > 0:
+            print("\n📊 Calculating comparative intelligence (percentiles)...")
+            try:
+                self._calculate_percentiles()
+                self.conn.commit()
+                print("✅ Percentiles calculated successfully")
+            except Exception as e:
+                print(f"⚠️  Percentile calculation failed: {e}")
+                self.conn.rollback()
+
+        # Step 6: Generate summary
         print("\n📊 Generating summary report...")
         summary = self.generate_summary()
 

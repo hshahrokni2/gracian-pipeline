@@ -14,27 +14,27 @@
   ],
   "high_risk_brfs": [
     [
-      "brf_280938",
-      "Brf Unit\u00e9",
-      "UNKNOWN",
-      1,
-      1
-    ],
-    [
       "brf_54015",
       "HSB bostadsr\u00e4ttsf\u00f6rening Lill-Jan i Stockholm",
-      "UNKNOWN",
+      "MEDIUM",
       1,
       2
+    ],
+    [
+      "brf_280938",
+      "Brf Unit\u00e9",
+      "LOW",
+      1,
+      1
     ]
   ],
   "overall_statistics": [
     39,
-    "0E-20",
+    "53.3974358974358974",
     0,
     0,
-    0,
-    0
+    33,
+    6
   ],
-  "timestamp": "2025-10-17T21:51:55.074852"
+  "timestamp": "2025-10-17T22:32:29.960730"
 }
