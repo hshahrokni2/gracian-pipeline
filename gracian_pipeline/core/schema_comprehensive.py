@@ -257,8 +257,10 @@ COMPREHENSIVE_TYPES: Dict[str, Dict[str, str]] = {
         "result_without_depreciation_current_year": "int",  # result + avskrivningar (current year TSEK)
         "result_without_depreciation_prior_year": "int",  # result + avskrivningar (prior year TSEK)
         "depreciation_as_percent_of_revenue_current_year": "float",  # (avskrivningar / revenue) * 100
-        "depreciation_paradox_flag": "bool",  # result_wo_dep ≥500k AND soliditet ≥85%
+        "depreciation_paradox_detected": "bool",  # result_wo_dep ≥500k AND soliditet ≥85%
         "depreciation_paradox_cash_flow_quality": "str",  # EXCELLENT/STRONG/NONE
+        "soliditet_pct": "float",  # Soliditet percentage (for pattern detection)
+        "evidence_pages": "list",  # Source pages for extracted data
         # Energy analysis fields (moved here from energy_agent for calculation convenience)
         "building_age_at_report_calculated": "int",  # Calculated: report_year - construction_year
         "electricity_reduction_calculated": "float",  # Calculated: YoY change %
@@ -274,9 +276,11 @@ COMPREHENSIVE_TYPES: Dict[str, Dict[str, str]] = {
         "cash_to_debt_ratio_current_year": "float",  # (total_liquidity / total_debt) * 100
         "cash_to_debt_ratio_prior_year": "float",  # (total_liquidity / total_debt) * 100 prior year
         "cash_to_debt_ratio_prior_2_years": "float",  # For 3-year trend (2 years before current)
+        "cash_crisis_detected": "bool",  # ratio <5% AND declining AND short_term >50%
+        "short_term_debt_pct": "float",  # (short_term_debt / total_debt) * 100
         "cash_trend": "str",  # declining/stable/improving
-        "cash_crisis_flag": "bool",  # ratio <2% AND declining
         "months_to_zero_cash": "int",  # Projection if declining, else null
+        "evidence_pages": "list",  # Source pages for extracted data
     },
 
     "critical_analysis_agent": {
